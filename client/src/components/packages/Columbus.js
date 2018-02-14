@@ -1,14 +1,14 @@
 import React from "react";
 
-import property_img from "./../../images/columbus/image1.png";
-import map_img from "./../../images/columbus/image2.png";
-import acquisition_img from "./../../images/columbus/image3.png";
-import rent_roll_img_1 from "./../../images/columbus/image4.png";
-import rent_roll_img_2 from "./../../images/columbus/image5.png";
-import income_expenses_img from "./../../images/columbus/image6.png";
-import financial_projection_img from "./../../images/columbus/image7.png";
-import equity_return_img from "./../../images/columbus/image8.png";
-import projected_cash_flow_img from "./../../images/columbus/image10.png";
+import property_img from "../../images/columbus/image1.png";
+import map_img from "../../images/columbus/image2.png";
+import acquisition_img from "../../images/columbus/image3.png";
+import rent_roll_img_1 from "../../images/columbus/image4.png";
+import rent_roll_img_2 from "../../images/columbus/image5.png";
+import income_expenses_img from "../../images/columbus/image6.png";
+import financial_projection_img from "../../images/columbus/image7.png";
+import equity_return_img from "../../images/columbus/image8.png";
+import projected_cash_flow_img from "../../images/columbus/image10.png";
 
 
 const Columbus = () => {
