@@ -6,6 +6,8 @@ import Services from "./Services";
 import Resources from "./Resources";
 import FAQ from "./FAQ";
 import Contact from "./Contact";
+import Columbus from "./packages/Columbus";
+import Ecorse from "./packages/Ecorse";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 class App extends Component {
@@ -18,6 +20,8 @@ class App extends Component {
             <Route path="/about" component={About}/>
             <Route path="/contact" component={Contact}/>
             <Route path="/faq" component={FAQ}/>
+            <Route path="/packages/columbus" component={Columbus}/>
+            <Route path="/packages/ecorse" component={Ecorse}/>
             <Route path="/resources" component={Resources}/>
             <Route path="/services" component={Services}/>
             <Route path="/" component={Home}/>
