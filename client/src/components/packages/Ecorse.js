@@ -28,7 +28,7 @@ const Ecorse = () => {
           <div>
             <div style={{margin: "20px 0 20px 0", fontSize: "12px"}}>
               <small className="text-muted">
-                This information is authorized for use only by a limited number of persons with an existing relationship with Limitless Estates, LLC and who have been qualified and accepted as sophisticated investors by Limitless Estates, LLC, by furnishing proof of extensive investment experience. Neither the Securities and Exchange Commission nor any state securities commission has approved or disapproved of the real estate interests in this property package, or passed upon the adequacy or accuracy of this document. Any representation to the contrary is a criminal offence.
+                This information is authorized for use only by a limited number of persons with an existing relationship with Limitless Estates, LLC and who have been qualified and accepted as sophisticated investors by Limitless Estates, LLC, by furnishing proof of extensive investment experience. Neither the Securities and Exchange Commission nor any state securities commission has approved or disapproved of the real estate interests in this property package, or passed upon the adequacy or accuracy of this document. Any representation to the contrary is a criminal offense.
               </small>
             </div>
             <h6>
@@ -119,6 +119,26 @@ const Ecorse = () => {
           <h6><strong>Lalita Patipaksiri, Managing Member</strong></h6>
           <h6><strong>Luis Cruz, Managing Member</strong></h6>
         </div>
+
+        <div style={{padding: "80px"}}>
+          <h6 className="text-danger">
+            Metro Detroit Property Management (MDPM), Property Management. MDPM has hundreds of units under management in Metro Detroit Area and over 100 years of overall staff experience.
+
+            Drew Kniffin, Advisor.  Mr. Kniffin advises the managing members….
+
+            Michael Gross, Real Estate Attorney. Mr. Gross handles all legal matters related to the real estate transaction.
+          </h6>
+          <h6>Steven Rinaldi, SEC Attorney. Mr. Rinaldi handles all legal matters related to SEC compliance.</h6>
+        </div>
+
+        <div style={{padding: "80px"}}>
+          <h1>CONTACT</h1>
+          <h6>
+            Questions should be directed to Limitless Estates, LLC, c/o Kyle Mitchell, (562) 833-5010 or kylemitchellrea@gmail.com.
+          </h6>
+        </div>
+
+        <small className="text-danger">Confidential - Don't distribute without permissions from Limitless Estates, LLC</small>
 
       </div>
     </div>
