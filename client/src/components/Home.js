@@ -1,22 +1,23 @@
 import React from "react";
-import background from "../images/background/la.jpg";
-import { Link } from "react-router-dom";
 
+import { Link } from "react-router-dom";
+const background = "/images/background/la.jpg";
+const style = {
+  homeStyles: {
+    minHeight: "100vh",
+    minWidth: "100%",
+    backgroundImage: `url(${background})`,
+    backgroundSize: "cover",
+    backgroundRepeat: "no-repeat",
+    padding: "120px"
+  }
+}
 const Home = () => {
 
-  const style = {
-    background: {
-      minHeight: "100vh",
-      minWidth: "100%",
-      backgroundImage: `url(${background})`,
-      backgroundSize: "cover",
-      backgroundRepeat: "no-repeat",
-      padding: "120px"
-    }
-}
+
 
   return (
-    <div style={style.background}>
+    <div style={style.homeStyles}>
       <ul className="list-group" style={{maxWidth: "250px"}}>
         <Link to="/packages/ecorse" className="list-group-item" style={{color: "black"}}>Ecorse, MI</Link>
         <Link to="/packages/columbus" className="list-group-item" style={{color: "black"}}>Columbus, OH</Link>
