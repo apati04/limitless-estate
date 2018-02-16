@@ -40,11 +40,11 @@ const About = () => {
         <h1>CONTENT 4</h1>
         <div className="d-flex justify-content-center align-items-center" style={{marginTop:"2%"}}>
           <div style={{marginRight: "3%"}}>
-            <img src="http://via.placeholder.com/300x350" className="img-fluid" alt="headshot1"/>
+            <img src="https://via.placeholder.com/300x350" className="img-fluid" alt="headshot1"/>
             <p>About person 1</p>
           </div>
           <div style={{marginLeft: "3%"}}>
-            <img src="http://via.placeholder.com/300x350" className="img-fluid" alt="headshot2"/>
+            <img src="https://via.placeholder.com/300x350" className="img-fluid" alt="headshot2"/>
             <p>About person 2</p>
           </div>
         </div>
