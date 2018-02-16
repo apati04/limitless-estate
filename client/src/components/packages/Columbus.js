@@ -1,14 +1,14 @@
 import React from "react";
 
-import property_img from "../../images/columbus/image1.png";
-import map_img from "../../images/columbus/image2.png";
-import acquisition_img from "../../images/columbus/image3.png";
-import rent_roll_img_1 from "../../images/columbus/image4.png";
-import rent_roll_img_2 from "../../images/columbus/image5.png";
-import income_expenses_img from "../../images/columbus/image6.png";
-import financial_projection_img from "../../images/columbus/image7.png";
-import equity_return_img from "../../images/columbus/image8.png";
-import projected_cash_flow_img from "../../images/columbus/image10.png";
+const property_img ="/images/columbus/image1.png";
+const map_img ="/images/columbus/image2.png";
+const acquisition_img = "/images/columbus/image3.png";
+const rent_roll_img_1 = "/images/columbus/image4.png";
+const rent_roll_img_2 = "/images/columbus/image5.png";
+const income_expenses_img = "/images/columbus/image6.png";
+const financial_projection_img = "/images/columbus/image7.png";
+const equity_return_img = "/images/columbus/image8.png";
+const projected_cash_flow_img = "/images/columbus/image10.png";
 
 
 const Columbus = () => {

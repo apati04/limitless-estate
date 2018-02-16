@@ -1,9 +1,9 @@
 const express = require("express");
-
+const path = require('path');
 
 const app = express();
 
-
+app.use(express.static('client/public'));
 // Send every request to the React app
 // Define any API routes before this runs
 app.get("*", function(req, res) {

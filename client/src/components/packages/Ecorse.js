@@ -1,13 +1,13 @@
 import React from "react";
 
-import property_img from "../../images/ecorse/image1.png";
-import map_img from "../../images/ecorse/image2.png";
-import acquisition_img from "../../images/ecorse/image3.png";
-import rent_roll_img from "../../images/ecorse/image4.png";
-import income_expenses_img from "../../images/ecorse/image5.png";
-import financial_projection_img from "../../images/ecorse/image6.png";
-import equity_return_img from "../../images/ecorse/image7.png";
-import projected_cash_flow_img from "../../images/ecorse/image8.png";
+const property_img = "/images/ecorse/image1.png";
+const map_img = "/images/ecorse/image2.png";
+const acquisition_img = "/images/ecorse/image3.png";
+const rent_roll_img = "/images/ecorse/image4.png";
+const income_expenses_img = "/images/ecorse/image5.png";
+const financial_projection_img = "/images/ecorse/image6.png";
+const equity_return_img = "/images/ecorse/image7.png";
+const projected_cash_flow_img = "/images/ecorse/image8.png";
 
 
 const Ecorse = () => {
