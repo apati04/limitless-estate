@@ -15,16 +15,16 @@ const About = () => {
         <h1>CONTENT 2 (with background image)</h1>
         <div className="d-flex justify-content-center align-items-center" style={{marginTop:"2%"}}>
           <div style={{marginRight: "3%"}}>
-            <img src="http://via.placeholder.com/300x350" className="img-fluid" alt="card1"/>
+            <img src="https://via.placeholder.com/300x350" className="img-fluid" alt="card1"/>
           </div>
           <div style={{marginLeft: "3%"}}>
-            <img src="http://via.placeholder.com/300x350" className="img-fluid" alt="card2"/>
+            <img src="https://via.placeholder.com/300x350" className="img-fluid" alt="card2"/>
           </div>
           <div style={{marginLeft: "3%"}}>
-            <img src="http://via.placeholder.com/300x350" className="img-fluid" alt="card2"/>
+            <img src="https://via.placeholder.com/300x350" className="img-fluid" alt="card2"/>
           </div>
           <div style={{marginLeft: "3%"}}>
-            <img src="http://via.placeholder.com/300x350" className="img-fluid" alt="card2"/>
+            <img src="https://via.placeholder.com/300x350" className="img-fluid" alt="card2"/>
           </div>
         </div>
       </div>
