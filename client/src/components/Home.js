@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const Home = () => {
 
   const style = {
-    background: {
+    homeStyles: {
       minHeight: "100vh",
       minWidth: "100%",
       backgroundImage: `url(${background})`,
@@ -16,7 +16,7 @@ const Home = () => {
 }
 
   return (
-    <div style={style.background}>
+    <div style={style.homeStyles}>
       <ul className="list-group" style={{maxWidth: "250px"}}>
         <Link to="/packages/ecorse" className="list-group-item" style={{color: "black"}}>Ecorse, MI</Link>
         <Link to="/packages/columbus" className="list-group-item" style={{color: "black"}}>Columbus, OH</Link>
