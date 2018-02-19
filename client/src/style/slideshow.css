@@ -6,15 +6,15 @@
 
 
 .carousel-image-1 {
-  background: url("/img/img4.jpg") no-repeat center 12%;
+  background: url("/img/floor.jpg") no-repeat space center;
   background-size: cover; }
 
 .carousel-image-2 {
-  background: url("/img/img1.jpg") no-repeat center 50%;
+  background: url("/img/urban.jpg") no-repeat center 15%;
   background-size: cover; }
 
 .carousel-image-3 {
-  background: url("/img/image5.jpg") no-repeat center 70%;
+  background: url("/img/imageLA.jpg") no-repeat center 26%;
   background-size: cover; }
 
 /* #myCarousel {
@@ -25,7 +25,7 @@
 }
 .dark-overlay {
   position: absolute;
-  background-color: rgba(0,0,0,0.55);
+  background-color: rgba(0,0,0,0.54);
   top: 0;
   left: 0;
   width: 100%;
