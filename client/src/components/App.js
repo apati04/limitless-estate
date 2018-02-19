@@ -8,15 +8,17 @@ import FAQ from "./FAQ";
 import Contact from "./Contact";
 import Columbus from "./packages/Columbus";
 import Ecorse from "./packages/Ecorse";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route } from "react-router-dom";
 
+/* Version 2 */
+import LandingPage from './v2/LandingPage';
 class App extends Component {
   render() {
     return (
       <BrowserRouter>
         <div>
           <Navbar/>
-          <Switch>
+            <Route exact path="/" component={LandingPage}/>
             <Route path="/about" component={About}/>
             <Route path="/contact" component={Contact}/>
             <Route path="/faq" component={FAQ}/>
@@ -24,8 +26,6 @@ class App extends Component {
             <Route path="/packages/ecorse" component={Ecorse}/>
             <Route path="/resources" component={Resources}/>
             <Route path="/services" component={Services}/>
-            <Route path="/" component={Home}/>
-          </Switch>
         </div>
       </BrowserRouter>
     );
