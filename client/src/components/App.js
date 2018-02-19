@@ -12,14 +12,14 @@ import { BrowserRouter, Route } from "react-router-dom";
 
 /* Version 2 */
 import LandingPage from './v2/LandingPage';
-import Navbar from './v2/Navbar-v2';
+import Navbar from './Navbar';
 
 class App extends Component {
   render() {
     return (
       <BrowserRouter>
         <div>
-          <Navbar/>
+          <Navbar />
             <Route exact path="/" component={LandingPage} />
             {/* <Route path="/about" component={About}/>
             <Route path="/contact" component={Contact}/>
