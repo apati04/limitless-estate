@@ -7,8 +7,8 @@ import About from "./About";
 // import Resources from "./Resources";
 // import FAQ from "./FAQ";
 // import Contact from "./Contact";
-// import Columbus from "./packages/Columbus";
-// import Ecorse from "./packages/Ecorse";
+import Columbus from "./packages/Columbus";
+import Ecorse from "./packages/Ecorse";
 import { BrowserRouter, Route } from "react-router-dom";
 
 /* Version 2 */
@@ -21,6 +21,7 @@ class App extends Component {
       <BrowserRouter>
         <div>
           <Navbar />
+<<<<<<< HEAD
             <Route exact path="/" component={LandingPage} />
             <Route path="/about" component={About}/>
             {/* <Route path="/contact" component={Contact}/>
@@ -29,6 +30,16 @@ class App extends Component {
             <Route path="/packages/ecorse" component={Ecorse}/>
             <Route path="/resources" component={Resources}/>
             <Route path="/services" component={Services}/> */}
+=======
+          <Route exact path="/" component={LandingPage} />
+          {/* <Route path="/about" component={About}/>
+            <Route path="/contact" component={Contact}/>
+          <Route path="/faq" component={FAQ}/> */}
+          <Route path="/packages/columbus" component={Columbus}/>
+          <Route path="/packages/ecorse" component={Ecorse}/>
+          {/* <Route path="/resources" component={Resources}/>
+          <Route path="/services" component={Services}/> */}
+>>>>>>> isaac-feat
         </div>
       </BrowserRouter>
     );
