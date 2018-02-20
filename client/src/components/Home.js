@@ -46,16 +46,16 @@ const Home = () => {
                   </div>
                   <div className="p-4 align-self-end">
                     <Link className="h3" style={{color: '#fff'}} to="/packages/ecorse">Ecorse, MI</Link>
-                </div>
-                </div>
+                  </div>
+                  </div>
 
-                <div className="d-flex flex-row">
+                  <div className="d-flex flex-row">
                   <div className="p-4 align-self-start">
                     <i style={styles.iconStyles} className="fa fa-home"></i>
                   </div>
                   <div className="p-4 align-self-end">
                     <Link className="h3" style={{ color: '#fff' }} to="/packages/columbus">Columbus, OH</Link>
-                </div>
+                  </div>
                 </div> */}
                 <div>
                   <h2 style={{ color: '#fff', textAlign: 'right' }}>~ Lalita Patipaksiri, 2018 </h2>
@@ -74,4 +74,3 @@ const Home = () => {
 }
 
 export default Home;
-
