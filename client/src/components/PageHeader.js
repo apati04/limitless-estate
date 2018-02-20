@@ -1,12 +1,12 @@
 import React from 'react';
 
 
-const PageHeader = ({title, description, img}) => {
+const PageHeader = ({title, bgPos='0px -360px', description, img}) => {
   const style = {
     pageHeader: {
       height: '200px',
       background: `url(${img})`,
-      backgroundPosition: '0 -360px',
+      backgroundPosition: `${bgPos}`,
       backgroundAttachment: 'fixed',
       color: '#fff',
       borderBottom: '1px #eee solid',

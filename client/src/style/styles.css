@@ -17,9 +17,6 @@
 .fab {
   font-size: 40px;
 }
-.carousel-image-0 {
-  background: url("/img/kulula.jpg") no-repeat center 1%;
-  background-size: cover; }
 
 .carousel-image-1 {
   background: url("/img/floor.jpg") no-repeat center;
@@ -64,7 +61,7 @@
   }
   .dark-overlay {
   position: absolute;
-  background-color: rgba(0,0,0,0.6);
+  background-color: rgba(0,0,0,0.56);
   top: 0;
   left: 0;
   width: 100%;
@@ -155,5 +152,4 @@
 		text-align: center;
 	}
 }
-
 
