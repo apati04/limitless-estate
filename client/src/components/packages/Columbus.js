@@ -37,9 +37,9 @@ const Columbus = () => {
           </div>
         </div>
 
+        <hr/>
         <div style={{padding: "80px"}}>
           <h1>EXECUTIVE SUMMARY</h1>
-          <hr/>
           <h6 style={{fontWeight: "100"}}>
             Limitless Estates, LLC a California Limited Liability company with offices in Long Beach, CA, is arranging for the acquisition of undivided real estate interests in the above property by a limited number of sophisticated and qualified investors. The property consists of 58 units. The purchase price is $2.25M.
 
@@ -50,11 +50,11 @@ const Columbus = () => {
             Please see below for more information about the property, its current performance, our strategy to increase income and our financial projections.
           </h6>
         </div>
+        <hr/>
 
         <div style={{padding: "80px"}} className="row">
           <div className="col-lg-6">
             <h1>ABOUT THIS PROPERTY</h1>
-            <hr/>
             <h6 style={{fontWeight: "100"}}>
               The subject property is a 58-unit multifamily walk-up apartment building located at 2201 Riverside Drive. The building is comprised of 3 Two Bedroom/One Bath, 1 Office, and 54 One Bedroom/One Bath units. The Lot and building sit on 2.16 acres, 45,430 rentable square feet and 104 parking spaces. At three stories tall, the building itself totals 37,958 gross square feet. 2201 Riverside Drive was built in 1970 with an effervescent red brick exterior that adds vibrancy to the plush green way via Riverside Drive.
             </h6>
@@ -63,11 +63,11 @@ const Columbus = () => {
             <img src={map_img} className="img-fluid" alt="property" style={{marginTop: "20px", border: "2px solid black"}}/>
           </div>
         </div>
+        <hr/>
 
         <div style={{padding: "80px"}}>
           <div>
             <h1>THE OPPORTUNITY AND BUSINESS PLAN</h1>
-            <hr/>
             <h6 style={{fontWeight: "100"}}>
               This property is a true value add with current average rents more than 30% below directly competitive comparable properties. A more aggressive approach to leasing will translate into rents at the higher end of Arlington Heights’ one bedroom in-place rent range. Sub-market vacancy of one-bedroom units is less than 5%. There is constant renter demand from OSU students and medical center staff as well as millennials seeking moderately priced housing in the red-hot Grandview/Upper Arlington rental market. The building will thrive under the expertise of our property management company (Rickert Property Management).
             </h6>
@@ -79,11 +79,11 @@ const Columbus = () => {
             </h6>
           </div>
         </div>
+        <hr/>
 
         <div style={{padding: "80px"}} className="row">
           <div className="col-lg-6">
             <h1>ACQUISITION SUMMARY</h1>
-            <hr/>
             <h6 style={{fontWeight: "100"}}>
               Closing costs includes origination fees, appraisal, property inspection, legal fees, recording fees, and transfer taxes. The acquisition fee is payable to Limitless Estates, LLC at closing. Repair escrows are kept in the operating account until needed.
             </h6>
@@ -92,21 +92,21 @@ const Columbus = () => {
             <img src={acquisition_img} className="img-fluid" alt="property" style={{marginTop: "20px"}}/>
           </div>
         </div>
+        <hr/>
 
         <div style={{padding: "80px"}}>
           <h1>SELLER-DISCLOSED FINANCIALS</h1>
-          <hr/>
           <h4>Rent Roll</h4>
           <img src={rent_roll_img_1} className="img-fluid" alt="property" style={{marginLeft: "18px"}}/>
           <img src={rent_roll_img_2} className="img-fluid" alt="property"/>
           <h4>Income and Expenses - Actual</h4>
           <img src={income_expenses_img} className="img-fluid" alt="property"/>
         </div>
+        <hr/>
 
         <div style={{padding: "80px"}}>
           <div>
             <h1>FINANCIAL PROJECTIONS</h1>
-            <hr/>
             <h4>Here is the 7 Year P&L Projection:</h4>
             <img src={financial_projection_img} className="img-fluid" alt="property"/>
           </div>
@@ -116,11 +116,11 @@ const Columbus = () => {
             </small>
           </div>
         </div>
+        <hr/>
 
         <div style={{padding: "80px"}}>
           <div style={{marginBottom: "20px"}}>
             <h1>EQUITY RETURN AT RESALE</h1>
-            <hr/>
             <h6 style={{fontWeight: "100"}}>
               We assume we will be able to sell the building at 50 basis points less than the going cap rate of 8% for a well-performing asset in this area of Columbus, OH. All investor capital is returned first before the remaining proceeds are split according to the investors’ equity share.
             </h6>
@@ -128,10 +128,10 @@ const Columbus = () => {
           </div>
           <img src={projected_cash_flow_img} className="img-fluid" alt="property"/>
         </div>
+        <hr/>
 
         <div style={{padding: "80px"}}>
           <h1>MANAGEMENT AND ADVISORS</h1>
-          <hr/>
           <h6 style={{fontWeight: "100"}}>
             <strong>Kyle Mitchell, President, Managing Member.</strong> Kyle has personally invested in income producing real estate valued at over $1.2M in multiple states throughout the West Coast and Mid West.  He continues to actively seek investments in apartment communities in multiple states.  In addition to his own investing activities, Kyle is also a California licensed Realtor. His expertise in all facets of real estate investing gives us, and our investing partners, confidence that all of our acquisitions are carefully evaluated so that we achieve consistent returns for our investors.
           </h6>
@@ -141,7 +141,7 @@ const Columbus = () => {
           </div>
         </div>
 
-        <div style={{padding: "0 80px 0 80px"}}>
+        <div style={{padding: "0 80px 80px 80px"}}>
           <h6 className="text-danger" style={{fontWeight: "100"}}>
             Metro Detroit Property Management (MDPM), Property Management. MDPM has hundreds of units under management in Metro Detroit Area and over 100 years of overall staff experience.
 
@@ -151,14 +151,15 @@ const Columbus = () => {
           </h6>
           <h6 style={{fontWeight: "100"}}>Steven Rinaldi, SEC Attorney. Mr. Rinaldi handles all legal matters related to SEC compliance.</h6>
         </div>
+        <hr/>
 
         <div style={{padding: "80px"}}>
           <h1>CONTACT</h1>
-          <hr/>
           <h6 style={{fontWeight: "100"}}>
             Questions should be directed to Limitless Estates, LLC, c/o Kyle Mitchell, (562) 833-5010 or kylemitchellrea@gmail.com.
           </h6>
         </div>
+        <hr/>
 
         <div style={{padding: "80px"}} className="text-center">
           <small className="text-danger" style={{fontWeight: "900"}}>Confidential - Don't distribute without permissions from Limitless Estates, LLC</small>
