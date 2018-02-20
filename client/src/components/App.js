@@ -21,16 +21,6 @@ class App extends Component {
       <BrowserRouter>
         <div>
           <Navbar />
-<<<<<<< HEAD
-            <Route exact path="/" component={LandingPage} />
-            <Route path="/about" component={About}/>
-            {/* <Route path="/contact" component={Contact}/>
-            <Route path="/faq" component={FAQ}/>
-            <Route path="/packages/columbus" component={Columbus}/>
-            <Route path="/packages/ecorse" component={Ecorse}/>
-            <Route path="/resources" component={Resources}/>
-            <Route path="/services" component={Services}/> */}
-=======
           <Route exact path="/" component={LandingPage} />
           {/* <Route path="/about" component={About}/>
             <Route path="/contact" component={Contact}/>
@@ -39,7 +29,6 @@ class App extends Component {
           <Route path="/packages/ecorse" component={Ecorse}/>
           {/* <Route path="/resources" component={Resources}/>
           <Route path="/services" component={Services}/> */}
->>>>>>> isaac-feat
         </div>
       </BrowserRouter>
     );
