@@ -1,4 +1,3 @@
-import '../../style/icons.css';
 import React from 'react';
 
 const IconTemplate = ({ icon, title, content }) => {

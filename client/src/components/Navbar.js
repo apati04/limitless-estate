@@ -1,4 +1,3 @@
-import '../style/navbar.css';
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import MenuItem from './navMenuItem';
@@ -6,7 +5,7 @@ import MenuItem from './navMenuItem';
 
 class Navbar extends Component {
   renderMenu() {
-    const fields = ['home', 'about us', 'markets', 'resources', 'contact'];
+    const fields = ['about', 'markets', 'resources', 'contact'];
     return fields.map((item) => (
       <li key={item} className="nav-item">
         <MenuItem field={item} className="nav-link"/>
@@ -15,7 +14,7 @@ class Navbar extends Component {
   }
   render() {
     return (
-      <nav className="navbar navbar-expand-sm navbar-dark bg-dark">
+      <nav className="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
         <div className="container">
           <Link to="/" className="navbar-brand">
             Limitless Estates, LLC
@@ -27,6 +26,11 @@ class Navbar extends Component {
 
           <div className="collapse navbar-collapse" id="nbNav">
             <ul className="navbar-nav ml-auto">
+              <li key='home' className="nav-item">
+                <Link to="/" className="nav-link">
+                  HOME
+                </Link>
+              </li>
               {this.renderMenu()}
             </ul>
           </div>
