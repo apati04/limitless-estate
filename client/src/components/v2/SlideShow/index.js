@@ -1,4 +1,3 @@
-import '../../../style/slideshow.css';
 import React, { Component } from 'react';
 
 class SlideShow extends Component {
