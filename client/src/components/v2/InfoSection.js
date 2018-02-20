@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const InfoSection = () =>{
   return (
@@ -8,7 +9,9 @@ const InfoSection = () =>{
           <div className="col-md-6 align-self-center">
             <h3>Lorem Ipsum</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium beatae eaque quos eligendi, laboriosam. Culpa consequuntur illum facere id molestias.</p>
-            <button className="btn btn-outline-danger btn-lg">Learn More</button>
+            <Link to='/packages'>
+              <button className="btn btn-outline-danger btn-lg">See Packages</button>
+            </Link>
           </div>
           <div className="col-md-6">
             <img src="/img/chart2.jpg" className="img-fluid" alt=""/>

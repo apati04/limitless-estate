@@ -8,41 +8,41 @@ const Footer = () => {
           <div className="col-sm-3 myCols">
             <h5>Get started</h5>
             <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">Sign up</a></li>
-              <li><a href="#">Downloads</a></li>
+              <li><a>Home</a></li>
+              <li><a>Sign up</a></li>
+              <li><a>Downloads</a></li>
             </ul>
           </div>
           <div className="col-sm-3 myCols">
             <h5>About us</h5>
             <ul>
-              <li><a href="#">Company Information</a></li>
-              <li><a href="#">Contact us</a></li>
-              <li><a href="#">Reviews</a></li>
+              <li><a >Company Information</a></li>
+              <li><a >Contact us</a></li>
+              <li><a >Reviews</a></li>
             </ul>
           </div>
           <div className="col-sm-3 myCols">
             <h5>Support</h5>
             <ul>
-              <li><a href="#">FAQ</a></li>
-              <li><a href="#">Help desk</a></li>
-              <li><a href="#">Forums</a></li>
+              <li><a >FAQ</a></li>
+              <li><a >Help desk</a></li>
+              <li><a >Forums</a></li>
             </ul>
           </div>
           <div className="col-sm-3 myCols">
             <h5>Legal</h5>
             <ul>
-              <li><a href="#">Terms of Service</a></li>
-              <li><a href="#">Terms of Use</a></li>
-              <li><a href="#">Privacy Policy</a></li>
+              <li><a >Terms of Service</a></li>
+              <li><a >Terms of Use</a></li>
+              <li><a >Privacy Policy</a></li>
             </ul>
           </div>
         </div>
       </div>
-      <div class="social-networks">
-        <a href="#" className="twitter"><i className="fab fa-twitter"></i></a>
-        <a href="#" className="facebook"><i className="fab fa-facebook"></i></a>
-        <a href="#" className="google"><i className="fab fa-google-plus-g"></i></a>
+      <div className="social-networks">
+        <a  className="twitter"><i className="fab fa-twitter"></i></a>
+        <a  className="facebook"><i className="fab fa-facebook"></i></a>
+        <a className="google"><i className="fab fa-google-plus-g"></i></a>
       </div>
       <div className="footer-copyright">
         <p>© 2018 Limitless Estates, LLC</p>
