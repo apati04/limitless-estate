@@ -58,7 +58,7 @@ class LandingPage extends Component {
             <a href="#" className="google"><i className="fab fa-google-plus-g"></i></a>
           </div>
           <div className="footer-copyright">
-            <p>© 2016 Copyright Text </p>
+            <p>© 2018 Limitless Estates, LLC </p>
           </div>
         </footer>
       </div>
