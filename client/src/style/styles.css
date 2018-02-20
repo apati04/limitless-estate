@@ -42,7 +42,21 @@
   text-align: center;
   color: #fff; }
   
-.dark-overlay {
+
+  #ldVid {
+    position: relative;
+    min-height: 200px;
+    background: url("/img/network.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: 0 -300px;
+    text-align: center;
+    color: #fff;
+  }
+  #ldVid a {
+    color: #fff
+  }
+  .dark-overlay {
   position: absolute;
   background-color: rgba(0,0,0,0.5);
   top: 0;
