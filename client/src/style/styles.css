@@ -15,6 +15,10 @@
   font-size: 55px;
 }
 
+.carousel-image-0 {
+  background: url("/img/kulula.jpg") no-repeat space center 18%;
+  background-size: cover; }
+
 .carousel-image-1 {
   background: url("/img/floor.jpg") no-repeat space center;
   background-size: cover; }

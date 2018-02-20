@@ -9,11 +9,24 @@ class SlideShow extends Component {
         <ol className="carousel-indicators">
           <li data-target="#myCarousel" data-slide-to="0" className="active"></li>
           <li data-target="#myCarousel" data-slide-to="1"></li>
-          <li data-target="#myCarousel" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+          <li data-target="#myCarousel" data-slide-to="3"></li>
         </ol>
         {/* main slide show */}
         <div className="carousel-inner">
-          <div className="carousel-item carousel-image-1 active">
+            <div className="carousel-item carousel-image-0 active">
+              <div className="dark-overlay">
+                <div className="container">
+                  <div className="carousel-caption d-none d-sm-block text-right mb-5">
+                    <h1 className="display-3">Heading</h1>
+                    <p className="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <button className="btn btn-outline-warning btn-lg">Learn More</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          <div className="carousel-item carousel-image-1">
             <div className="dark-overlay">
               <div className="container">
                   <div className="carousel-caption d-none d-sm-block text-right mb-5">
@@ -30,7 +43,7 @@ class SlideShow extends Component {
               <div className="carousel-caption d-none d-sm-block text-right mb-5">
                 <h1 className="display-3">"Mission Statement Here"</h1>
                 <p className="lead">~Lalita Patipaksiri, Co-Founder</p>
-                    <button className="btn btn-outline-danger btn-lg">Learn More</button>
+                    <button className="btn btn-primary btn-lg">Learn More</button>
               </div>
             </div>
               </div>
