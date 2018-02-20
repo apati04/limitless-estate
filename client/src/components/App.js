@@ -1,3 +1,4 @@
+import '../style/styles.css';
 import React, { Component } from 'react';
 // import Navbar from "./Navbar";
 // import Home from "./Home";
