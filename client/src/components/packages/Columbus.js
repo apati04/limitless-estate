@@ -20,11 +20,10 @@ const Columbus = () => {
           <div>
             <h1 className="display-4"><i className="fas fa-home"></i> 2201 Riverside Drive</h1>
             <h1>Columbus, OH</h1>
-            <h3>58 Units</h3>
-            <h5>$2.25M</h5>
+            <h3>58 Units | $2.25M</h3>
           </div>
           <div style={{marginTop: "20px"}}>
-            <img src={property_img} className="img-fluid" alt="property"/>
+            <img src={property_img} className="img-fluid" alt="property" style={{border: "2px solid black"}}/>
           </div>
           <div>
             <div style={{margin: "20px 0 20px 0", fontSize: "12px"}}>
@@ -61,7 +60,7 @@ const Columbus = () => {
             </h6>
           </div>
           <div className="col-lg-6">
-            <img src={map_img} className="img-fluid" alt="property"/>
+            <img src={map_img} className="img-fluid" alt="property" style={{marginTop: "20px", border: "2px solid black"}}/>
           </div>
         </div>
 
@@ -90,7 +89,7 @@ const Columbus = () => {
             </h6>
           </div>
           <div className="col-lg-6">
-            <img src={acquisition_img} className="img-fluid" alt="property"/>
+            <img src={acquisition_img} className="img-fluid" alt="property" style={{marginTop: "20px"}}/>
           </div>
         </div>
 
