@@ -4,6 +4,7 @@ class SlideShow extends Component {
   render() {
     return (
       <section id="asdf">
+<<<<<<< HEAD
       <div id="myCarousel" className="carousel slide" data-ride="carousel">
         {/* ___ bottom of slideshow */}
         <ol className="carousel-indicators">
@@ -29,13 +30,29 @@ class SlideShow extends Component {
           <div className="carousel-item carousel-image-1">
             <div className="dark-overlay">
               <div className="container">
+=======
+        <div id="myCarousel" className="carousel slide" data-ride="carousel">
+          {/* ___ bottom of slideshow */}
+          <ol className="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" className="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+          </ol>
+          {/* main slide show */}
+          <div className="carousel-inner">
+            <div className="carousel-item carousel-image-1 active">
+              <div className="dark-overlay">
+                <div className="container">
+>>>>>>> isaac-feat
                   <div className="carousel-caption d-none d-sm-block text-right mb-5">
                     <h1 className="display-3">Heading One</h1>
                     <p className="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae consequuntur architecto eius magni nobis nulla eaque. Deserunt sunt, distinctio quos.</p>
                     <button className="btn btn-outline-warning btn-lg">Meet The Team</button>
                   </div>
+                </div>
               </div>
             </div>
+<<<<<<< HEAD
           </div>
           <div className="carousel-item carousel-image-2">
             <div className="dark-overlay">
@@ -44,17 +61,26 @@ class SlideShow extends Component {
                 <h1 className="display-3">"Mission Statement Here"</h1>
                 <p className="lead">~Lalita Patipaksiri, Co-Founder</p>
                     <button className="btn btn-primary btn-lg">Learn More</button>
+=======
+            <div className="carousel-item carousel-image-2">
+              <div className="dark-overlay">
+                <div className="container">
+                  <div className="carousel-caption d-none d-sm-block text-right mb-5">
+                    <h1 className="display-3">"Mission Statement Here"</h1>
+                    <p className="lead">~Lalita Patipaksiri, Co-Founder</p>
+                    <button className="btn btn-outline-danger btn-lg">Learn More</button>
+                  </div>
+                </div>
+>>>>>>> isaac-feat
               </div>
             </div>
-              </div>
-          </div>
-          <div className="carousel-item carousel-image-3">
-            <div className="dark-overlay">
-              <div className="container">
-                <div className="carousel-caption d-none d-sm-block text-right mb-5">
-                  <h1 className="display-3">Heading Three</h1>
-                  <p className="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae consequuntur architecto eius magni nobis nulla eaque. Deserunt sunt, distinctio quos.</p>
-                  <a href="#" className="btn btn-success btn-lg">Learn More</a>
+            <div className="carousel-item carousel-image-3">
+              <div className="dark-overlay">
+                <div className="container">
+                  <div className="carousel-caption d-none d-sm-block text-right mb-5">
+                    <h1 className="display-3">Heading Three</h1>
+                    <p className="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae consequuntur architecto eius magni nobis nulla eaque. Deserunt sunt, distinctio quos.</p>
+                    <a href="#" className="btn btn-success btn-lg">Learn More</a>
                 </div>
               </div>
               </div>
