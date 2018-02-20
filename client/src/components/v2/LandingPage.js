@@ -3,27 +3,10 @@ import SlideShow from './SlideShow';
 import IconSection from './IconSection';
 import LandingParallax from './LandingParallax';
 import InfoSection from './InfoSection';
-import LandingCommercial from './LandingCommercial';
+import NewsLetter from './NewsLetter';
 
 class LandingPage extends Component {
-  state = {
-    videoClicked: false
-  }
-  renderVideo() {
-    let controls = "?modestbranding=1&rel=0&controls=0&showinfo=0&html5=1&autoplay=1";
-    let videosrc = "https://www.youtube.com/embed/btPJPFnesV4?list=RDdQw4w9WgXcQ"
-    if (this.state.videoClicked) {
-      return (
-        <iframe src={`${videosrc}${controls}`} height="350" width="100%" frameBorder="0" allowFullScreen allow="autoplay; encrypted-media"></iframe>
-      )
-    }
-    else {
-      return (
-        <iframe src="" height="350" width="100%" frameBorder="0" allowFullScreen></iframe>  
-    )
-    }
 
-  }
   render() {
     return (
       <div>
@@ -31,18 +14,51 @@ class LandingPage extends Component {
         <IconSection />
         <LandingParallax />
         <InfoSection />
-        <LandingCommercial />
-       
-        <div className="modal fade" id="videoModal">
-          <div className="modal-dialog">
-            <div className="modal-content">
-              <div className="modal-body">
-                <button onClick={()=>{ this.setState({ videoClicked: false})}}className="close" data-dismiss="modal"><span>&times;</span></button>
-                {this.renderVideo()}
+        <NewsLetter />
+        <footer id="myFooter">
+          <div className="container">
+            <div className="row">
+              <div className="col-sm-3">
+                <h2 className="logo text-center"><a href="#">Limitless Logo</a></h2>
+              </div>
+              <div className="col-sm-2">
+                <h5>Get started</h5>
+                <ul>
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">Sign up</a></li>
+                  <li><a href="#">Downloads</a></li>
+                </ul>
+              </div>
+              <div className="col-sm-2">
+                <h5>About us</h5>
+                <ul>
+                  <li><a href="#">Company Information</a></li>
+                  <li><a href="#">Contact us</a></li>
+                  <li><a href="#">Reviews</a></li>
+                </ul>
+              </div>
+              <div className="col-sm-2">
+                <h5>Support</h5>
+                <ul>
+                  <li><a href="#">FAQ</a></li>
+                  <li><a href="#">Help desk</a></li>
+                  <li><a href="#">Forums</a></li>
+                </ul>
+              </div>
+              <div className="col-sm-3">
+                <div className="social-networks">
+                  <a href="#" className="twitter"><i className="fab fa-twitter"></i></a>
+                  <a href="#" className="facebook"><i className="fab fa-facebook"></i></a>
+                  <a href="#" className="google"><i className="fab fa-google-plus"></i></a>
+                </div>
+                <button type="button" className="btn btn-default">Contact us</button>
               </div>
             </div>
           </div>
-        </div>
+          <div className="footer-copyright">
+            <p>© 2018 Limitless Estates, LLC</p>
+          </div>
+        </footer>
       </div>
     )
   }

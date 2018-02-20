@@ -11,7 +11,7 @@ const InfoSection = () =>{
             <button className="btn btn-outline-danger btn-lg">Learn More</button>
           </div>
           <div className="col-md-6">
-            <img src="img/columbus/image2.png" className="img-fluid" alt=""/>
+            <img src="/img/chart2.jpg" className="img-fluid" alt=""/>
           </div>
           </div>
         </div>
