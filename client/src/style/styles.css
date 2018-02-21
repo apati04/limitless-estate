@@ -155,13 +155,10 @@
 
 .buildBox {
   cursor: pointer;
-  transition: background-color 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out;
 }
 
 .buildBox:hover {
-  border: 2px solid #fff;
-  border-radius: 2px;
-  color: #dc3546;
-  background-color: rgb(255, 255, 255);
-  outline: 0;
+  color: #17a2b8;
+  background-color: rgb(245, 245, 245);
 }
