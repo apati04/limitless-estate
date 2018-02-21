@@ -54,7 +54,7 @@ const Columbus = () => {
                   <div className="card-body">
                     <div>
                       <div style={{ backgroundColor: 'black' }}>
-                        <h4 style={{ padding: '10px' }} className="text-white text-center">THE OPPORTUNITY AND BUSINESS PLAN</h4>
+                        <h4 style={{ padding: '10px' }} className="text-white text-left">THE OPPORTUNITY AND BUSINESS PLAN</h4>
                       </div>
                       <p className="lead">
                         This property is a true value add with current average rents more than 30% below directly competitive comparable properties. A more aggressive approach to leasing will translate into rents at the higher end of Arlington Heights’ one bedroom in-place rent range. Sub-market vacancy of one-bedroom units is less than 5%. There is constant renter demand from OSU students and medical center staff as well as millennials seeking moderately priced housing in the red-hot Grandview/Upper Arlington rental market. The building will thrive under the expertise of our property management company (Rickert Property Management).
@@ -62,7 +62,7 @@ const Columbus = () => {
                     </div>
                     <div>
                       <div style={{ backgroundColor: 'black' }}>
-                        <h4 style={{ padding: '10px' }} className="text-white text-center">THE NEIGHBORHOOD</h4>
+                        <h4 style={{ padding: '10px' }} className="text-white text-left">THE NEIGHBORHOOD</h4>
                       </div>
                       <p className="lead">
                         The subject property is located in The City of Upper Arlington an affluent first-ring suburb of Central Ohio. Upper Arlington has a population of 34,465 people with a median household income of $102,094 almost twice the national average. The property is directly across the street from the prestigious Scioto Country Club designed by acclaimed architect Donald Ross. The City enjoys a convenient location, with easy access to downtown Columbus, the Columbus airport and major highways. Value levels of development in Upper Arlington are above the median for Central Ohio, with numerous dwellings in excess of $1,000,000. The higher value dwellings are in close proximity to Scioto Country Club.  Along with having a low crime rate and strong sense of community, Upper Arlington also offers highly ranked services and institutions, such as its renowned schools and library system. Its school district is one of the best in the region, with the high school receiving a gold medal designation from U.S. News and World Report’s 2017 “Best High Schools” report where it was also ranked the #12 high school in Ohio. The library system is consistently recognized as one of the best in the country among communities of a similar size.
@@ -70,7 +70,7 @@ const Columbus = () => {
                     </div>
                     <div>
                         <div style={{ backgroundColor: 'black' }}>
-                          <h4 style={{ padding: '10px' }} className="text-white text-center">ACQUISITION SUMMARY</h4>
+                          <h4 style={{ padding: '10px' }} className="text-white text-left">ACQUISITION SUMMARY</h4>
                         </div>
 
                         <p className="lead">
@@ -80,7 +80,7 @@ const Columbus = () => {
                     </div>
                     <div>
                       <div style={{ backgroundColor: 'black' }}>
-                        <h4 style={{ padding: '10px' }} className="text-white text-center">SELLER-DISCLOSED FINANCIALS</h4>
+                        <h4 style={{ padding: '10px' }} className="text-white text-left">SELLER-DISCLOSED FINANCIALS</h4>
                       </div>
                       <p>Rent Roll</p>
                       <img src={rent_roll_img_1} className="img-fluid" alt="property" style={{ marginLeft: "18px" }} />
@@ -91,7 +91,7 @@ const Columbus = () => {
                      
                     <div>
                       <div style={{ backgroundColor: 'black' }}>
-                        <h4 style={{ padding: '10px' }} className="text-white text-center">FINANCIAL PROJECTIONS</h4>
+                        <h4 style={{ padding: '10px' }} className="text-white text-left">FINANCIAL PROJECTIONS</h4>
                       </div>
 
                       <p className="lead">
@@ -107,7 +107,7 @@ const Columbus = () => {
 
                     <div>
                       <div style={{ backgroundColor: 'black' }}>
-                        <h4 style={{ padding: '10px' }} className="text-white text-center">EQUITY RETURN AT RESALE</h4>
+                        <h4 style={{ padding: '10px' }} className="text-white text-left">EQUITY RETURN AT RESALE</h4>
                       </div>
                       <p className="lead">
                            We assume we will be able to sell the building at 50 basis points less than the going cap rate of 8% for a well-performing asset in this area of Columbus, OH. All investor capital is returned first before the remaining proceeds are split according to the investors’ equity share.
