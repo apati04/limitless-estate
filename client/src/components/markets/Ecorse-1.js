@@ -1,26 +1,25 @@
 import React from "react";
 
-const property_img ="/img/columbus/image1.png";
-const map_img ="/img/columbus/image2.png";
-const acquisition_img = "/img/columbus/image3.png";
-const rent_roll_img_1 = "/img/columbus/image4.png";
-const rent_roll_img_2 = "/img/columbus/image5.png";
-const income_expenses_img = "/img/columbus/image6.png";
-const financial_projection_img = "/img/columbus/image7.png";
-const equity_return_img = "/img/columbus/image8.png";
-const projected_cash_flow_img = "/img/columbus/image10.png";
+const property_img = "/img/ecorse/image1.png";
+const map_img = "/img/ecorse/image2.png";
+const acquisition_img = "/img/ecorse/image3.png";
+const rent_roll_img = "/img/ecorse/image4.png";
+const income_expenses_img = "/img/ecorse/image5.png";
+const financial_projection_img = "/img/ecorse/image6.png";
+const equity_return_img = "/img/ecorse/image7.png";
+const projected_cash_flow_img = "/img/ecorse/image8.png";
 
 
-const Columbus = () => {
+const Ecorse = () => {
   return (
     <div className="d-flex justify-content-center align-items-center container">
       <div>
 
         <div style={{padding: "80px"}} className="text-center">
           <div>
-            <h1 className="display-4"><i className="fas fa-home"></i> 2201 Riverside Drive</h1>
-            <h1>Columbus, OH</h1>
-            <h3>58 Units | $2.25M</h3>
+            <h1 className="display-4"><i className="fas fa-home"></i> 4471 & 4581 High Street</h1>
+            <h1>Ecorse, MI</h1>
+            <h3>72 Units | $3.175M</h3>
           </div>
           <div style={{marginTop: "20px"}}>
             <img src={property_img} className="img-fluid" alt="property" style={{border: "2px solid black"}}/>
@@ -36,17 +35,14 @@ const Columbus = () => {
             </small>
           </div>
         </div>
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-Launch demo modal
-</button>
 
         <hr/>
         <div style={{padding: "80px"}}>
-          <h1 className="text-muted lead" style={{fontWeight: "bold"}}>EXECUTIVE SUMMARY</h1>
+          <h1 className="text-muted lead" style={{fontWeight: "bold"}} style={{fontWeight: "bold"}}>EXECUTIVE SUMMARY</h1>
           <h6 style={{fontWeight: "100"}}>
-            Limitless Estates, LLC a California Limited Liability company with offices in Long Beach, CA, is arranging for the acquisition of undivided real estate interests in the above property by a limited number of sophisticated and qualified investors. The property consists of 58 units. The purchase price is $2.25M.
+            Limitless Estates, LLC a California Limited Liability company with offices in Long Beach, CA, is arranging for the acquisition of undivided real estate interests in the above property by a limited number of sophisticated and qualified investors. The property consists of 72 units. The purchase price is $3.175M.
 
-            We are seeking a total investment of $900,000 with a minimum of $50,000 per investor. Investors receive 70% equity with projected average annual returns of 12%-17%. Cash flow distributions are made at the end of each calendar.
+            We are seeking a total investment of $1.2M with a minimum of $50,000 per investor. Investors receive 70% equity with projected average annual returns of 12%-17%. Cash flow distributions are made at the end of each calendar year.
 
             Investors should be prepared to leave their money in for a minimum of 7 years, even though there is a possibility to re-finance and repay the investor’s principal before then. Investors have the option of getting cashed out of their investment between year 4 and 5 at 90% of fair market value of their shares. If we re-finance or sell the property, investors first receive their principal back, then receive 70% of any profits.
 
@@ -59,7 +55,7 @@ Launch demo modal
           <div className="col-lg-6">
             <h1 className="text-muted lead" style={{fontWeight: "bold"}}>ABOUT THIS PROPERTY</h1>
             <h6 style={{fontWeight: "100"}}>
-              The subject property is a 58-unit multifamily walk-up apartment building located at 2201 Riverside Drive. The building is comprised of 3 Two Bedroom/One Bath, 1 Office, and 54 One Bedroom/One Bath units. The Lot and building sit on 2.16 acres, 45,430 rentable square feet and 104 parking spaces. At three stories tall, the building itself totals 37,958 gross square feet. 2201 Riverside Drive was built in 1970 with an effervescent red brick exterior that adds vibrancy to the plush green way via Riverside Drive.
+              The subject property is a 72-unit multifamily low-rise garden style apartment divided into 4 buildings located at 4471 & 4581 High Street. There is a 24 unit building and a 12 unit building to make up River Park and two 18 unit buildings to make up Jefferson Manor.  The buildings are comprised of 67 Two Bedroom/One Bath and 5 One Bedroom/One Bath units. The buildings sit on 1.67 acres and 57,100 rentable square feet. These properties were built between 1971-1973 and provide views of the Detroit River.
             </h6>
           </div>
           <div className="col-lg-6">
@@ -72,13 +68,13 @@ Launch demo modal
           <div>
             <h1 className="text-muted lead" style={{fontWeight: "bold"}}>THE OPPORTUNITY AND BUSINESS PLAN</h1>
             <h6 style={{fontWeight: "100"}}>
-              This property is a true value add with current average rents more than 30% below directly competitive comparable properties. A more aggressive approach to leasing will translate into rents at the higher end of Arlington Heights’ one bedroom in-place rent range. Sub-market vacancy of one-bedroom units is less than 5%. There is constant renter demand from OSU students and medical center staff as well as millennials seeking moderately priced housing in the red-hot Grandview/Upper Arlington rental market. The building will thrive under the expertise of our property management company (Rickert Property Management).
+              This property is a value add opportunity with potential upside through management as well as increasing current rents to reflect the local multifamily market.  Our plan is to complete interior and exterior renovations, increase the asking rents and rebrand and remarket. We believe that after the completion of the necessary upgrades (roughly $216,000 in improvements) rents can be increased by an average of $92 per unit as well as fundamentally serve as a comfortable living establishment for tenants.  The building will thrive under the expertise of our property management company (Metro Detroit Property Management).
             </h6>
           </div>
           <div style={{marginTop: "30px"}}>
             <h4 className="lead">The Neighborhood</h4>
             <h6 style={{fontWeight: "100"}}>
-              The subject property is located in The City of Upper Arlington an affluent first-ring suburb of Central Ohio. Upper Arlington has a population of 34,465 people with a median household income of $102,094 almost twice the national average. The property is directly across the street from the prestigious Scioto Country Club designed by acclaimed architect Donald Ross. The City enjoys a convenient location, with easy access to downtown Columbus, the Columbus airport and major highways. Value levels of development in Upper Arlington are above the median for Central Ohio, with numerous dwellings in excess of $1,000,000. The higher value dwellings are in close proximity to Scioto Country Club.  Along with having a low crime rate and strong sense of community, Upper Arlington also offers highly ranked services and institutions, such as its renowned schools and library system. Its school district is one of the best in the region, with the high school receiving a gold medal designation from U.S. News and World Report’s 2017 “Best High Schools” report where it was also ranked the #12 high school in Ohio. The library system is consistently recognized as one of the best in the country among communities of a similar size.
+              The subject property is located in the southwest suburbs of Detroit.  (DDOT), which is the largest bus transit carrier in Michigan has 44 fixed route bus lines offering services to Detroit and its 23 surrounding communities.  Through a coalition of some of Detroit’s largest employers, worldwide investors, as well as passionate and driven city leaders, Detroit’s revival has become an unprecedented success story bound to make history. The buzz and excitement generated by Detroit’s “Live Downtown”, has attracted thousands of new residents that are seeking housing in the Detroit area, which are sending apartment rents soaring and vacancy rates to historic lows. The city has been reborn with passionate entrepreneurs, determined to not only make their new start-ups succeed, but Detroit succeed as a whole as well. Detroit has the “cool factor” again, with fresh college grads and young people flocking to the city with excitement. And according to Quicken Loans founder Dan Gilbert, who invested $2.2 billion, purchased 95 buildings, and moved 15,000 employees downtown, the sizzle is just beginning.  The significant developments occurring in the area coupled with the property's access to transit make this an ideal investment to capitalize on the area's momentum.
             </h6>
           </div>
         </div>
@@ -99,11 +95,14 @@ Launch demo modal
 
         <div style={{padding: "80px"}}>
           <h1 className="text-muted lead" style={{fontWeight: "bold"}}>SELLER-DISCLOSED FINANCIALS</h1>
-          <p>Rent Roll</p>
-          <img src={rent_roll_img_1} className="img-fluid" alt="property" style={{marginLeft: "18px"}}/>
-          <img src={rent_roll_img_2} className="img-fluid" alt="property"/>
-          <p>Income and Expenses - Actual</p>
-          <img src={income_expenses_img} className="img-fluid" alt="property"/>
+          <div>
+            <p>Rent Roll</p>
+            <img src={rent_roll_img} className="img-fluid" alt="property"/>
+          </div>
+          <div style={{marginTop: "20px"}}>
+            <p>Income and Expenses - Actual</p>
+            <img src={income_expenses_img} className="img-fluid" alt="property"/>
+          </div>
         </div>
         <hr/>
 
@@ -125,7 +124,7 @@ Launch demo modal
           <div style={{marginBottom: "20px"}}>
             <h1 className="text-muted lead" style={{fontWeight: "bold"}}>EQUITY RETURN AT RESALE</h1>
             <h6 style={{fontWeight: "100"}}>
-              We assume we will be able to sell the building at 50 basis points less than the going cap rate of 8% for a well-performing asset in this area of Columbus, OH. All investor capital is returned first before the remaining proceeds are split according to the investors’ equity share.
+              We assume we will be able to sell the building at 50 basis points less than the going cap rate of 8% for a well-performing asset in this area of Ecorse, Mi. All investor capital is returned first before the remaining proceeds are split according to the investors’ equity share.
             </h6>
             <img src={equity_return_img} className="img-fluid" alt="property"/>
           </div>
@@ -186,4 +185,4 @@ Launch demo modal
   );
 }
 
-export default Columbus;
+export default Ecorse;

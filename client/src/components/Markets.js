@@ -11,12 +11,13 @@ class Markets extends Component {
       <div>
         <PageHeader title={title} bgPos='800px -430px' description={description} img={imgURL} />
         <div className="container p-5">
-          <div className="row mb-4 ">
+          <div className="row mb-4">
             <div className="col-md-6">
                 <Link style={{ textDecoration: 'none' }} to="/markets/columbus"><PageBox icon="building" title="Columbus" bgColor="bg-dark" description="description"/></Link>
             </div>
             <div className="col-md-6">
-              <PageBox icon="building" title="Ecorse" bgColor="bg-secondary" description="description" />
+              <Link style={{ textDecoration: 'none'}} to="/markets/ecorse">
+              <PageBox icon="building" title="Ecorse" bgColor="bg-dark" description="description" /></Link>
             </div>
             </div>
             </div>

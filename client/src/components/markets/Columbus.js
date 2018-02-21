@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
-import PageHeader from '../PageHeader';
-import PageBox from '../PageBox';
+import PageHeader from '../PageHeader'
 
 const property_img = "/img/columbus/image1.png";
 const map_img = "/img/columbus/image2.png";
