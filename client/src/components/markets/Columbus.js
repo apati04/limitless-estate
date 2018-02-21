@@ -24,19 +24,22 @@ const Columbus = () => {
         <section className="py-3">
           <div style={{padding: '2%'}}>
             <div className="row">
-              <div  className="col-md-4">
+              <div  className="col-md-2">
                 <div className="card p-3">
                   <div className="card-body">
                     <h4>Building Type</h4>
                     <p>Walk-up Apartment Building</p>
-                    <h4>Units</h4>
-                    <p>58 Units</p>
-                    3 Two Beedroom/One Bath | 
-                      1 Office | 54 One Bedroom/One Bath
                     <h4>Address</h4>
                     <p>2201 Riverside Drive</p>
                     <h4>City, State</h4>
                     <p>Columbus, Ohio</p>
+                    <h4>Units: 58</h4>
+                    <ul style={{ padding: 0, margin: 0, listStylePosition: 'inside' }}>
+                      <li>54 One Bedroom/One Bath</li>
+                      <li>3 Two Bedroom/One Bath</li>
+                      <li>1 Office</li>
+                    </ul>
+                 
                     <h4>Parking Spaces</h4>
                     <p>104</p>
                     <h4>Stats:</h4>
@@ -48,7 +51,7 @@ const Columbus = () => {
                   </div>
                 </div>
               </div>
-              <div className="col-md-8">
+              <div className="col-md-10">
                 <div className="card p-3">
                   
                   <div className="card-body">
