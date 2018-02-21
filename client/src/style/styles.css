@@ -160,4 +160,8 @@
 
 .buildBox:hover {
   background-color: rgba(255, 255, 255, 0.253);
+  outline:0;
+}
+*:focus {
+  outline: 0;
 }

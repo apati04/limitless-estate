@@ -9,6 +9,7 @@ import Navbar from './Navbar';
 import About from "./About";
 import Columbus from "./markets/Columbus";
 import Ecorse from "./markets/Ecorse";
+import Test from './markets/Test';
 // import Home from "./Home";
 // import Services from "./Services";
 // import Resources from "./Resources";
@@ -28,6 +29,7 @@ class App extends Component {
           <Route exact path="/markets" component={Markets} />
           <Route path="/markets/columbus" component={Columbus}/>
           <Route path="/markets/ecorse" component={Ecorse}/>
+          <Route pat="/test" component={Test} />
           {/* <Route path="/resources" component={Resources}/>
           <Route path="/services" component={Services}/> */}
         </div>
