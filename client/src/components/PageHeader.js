@@ -4,7 +4,7 @@ import React from 'react';
 const PageHeader = ({title, bgPos='0px -360px', bgRepeat='repeat', description, img}) => {
   const style = {
     pageHeader: {
-      minHeight: '360px',
+      minHeight: '240px',
       background: `url(${img})`,
       backgroundRepeat: "space",
       backgroundAttachment: 'center',
