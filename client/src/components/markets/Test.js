@@ -8,6 +8,7 @@ const acquisition_img = "/img/columbus/image3.png";
 const rent_roll_img_1 = "/img/columbus/image4.png";
 const rent_roll_img_2 = "/img/columbus/image5.png";
 const income_expenses_img = "/img/columbus/image6.png";
+const rent_roll_final = "/img/columbus/renroll_final.png";
 const financial_projection_img = "/img/columbus/image7.png";
 const equity_return_img = "/img/columbus/image8.png";
 const projected_cash_flow_img = "/img/columbus/image10.png";
@@ -96,14 +97,14 @@ const Test = () => {
               <ul className="list-group list-group-flush">
                 <li className="list-group-item">
                   <div className="d-flex justify-content-between">
-                    <div><i className="icon-tools mr-1"></i> Department</div>
-                    <span>Engineering</span>
+                    <div><i className="icon-tools mr-1"></i>Building</div>
+                    <span>Apartment</span>
                   </div>
                 </li>
                 <li className="list-group-item">
                   <div className="d-flex justify-content-between">
                     <div><i className="icon-home mr-1"></i> Location</div>
-                    <span>Melbourne, AU</span>
+                    <span>ohio</span>
                   </div>
                 </li>
                 <li className="list-group-item">
@@ -114,86 +115,63 @@ const Test = () => {
                 </li>
               </ul>
             </div>
-
-            <div className="card">
-              <div className="card-header d-flex justify-content-between">
-                <div>
-                  <span className="h6">Development</span>
-                  <span className="badge badge-secondary">6</span>
-                </div>
-             
-              </div>
-              <div className="card-body">
-                <ul className="list-unstyled list-spacing-sm">
-                  <li>
-                    <i className="icon-text-document text-muted mr-1"></i>
-                    <a href="#">Setting up API end-points</a>
-                  </li>
-                  <li>
-                    <i className="icon-text-document text-muted mr-1"></i>
-                    <a href="#">Importing contacts via CSV</a>
-                  </li>
-                  <li>
-                    <i className="icon-text-document text-muted mr-1"></i>
-                    <a href="#">Integrating your Gulp workflow</a>
-                  </li>
-                  <li>
-                    <i className="icon-text-document text-muted mr-1"></i>
-                    <a href="#">Forking a repo</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
             <div className="card">
               <div className="card-header">
-                <span className="h6">Categories</span>
+                <span className="h6">Data</span>
               </div>
 
               <div className="list-group list-group-flush">
-
                 <a className="list-group-item d-flex justify-content-between" data-toggle="modal" href="#acuqisition">
                   <div>
                     <i className="far fa-list-alt"></i>
                     <span style={{marginLeft: '10px'}}>Aquisition Summary</span>
                   </div>
                 </a>
-                 <a className="list-group-item d-flex justify-content-between" data-toggle="modal" href="#incomeSummary">
+                <a className="list-group-item d-flex justify-content-between" data-toggle="modal" href="#disclosedfinance">
                   <div>
                     <i className="far fa-list-alt"></i>
-                    <span style={{marginLeft: '10px'}}>Income Expenses</span>
+                    <span style={{ marginLeft: '10px' }}>Income Expenses</span>
                   </div>
                 </a>
-               
               </div>
+              
+            </div>
+         
             <RegisterModal
               id="acuqisition"
               title="Acquisition Summary"
               body={
-                <img src={acq_sum} className="img-fluid" />
+                <div>
+                  <img src={acq_sum} className="img-fluid" />
+                  <hr />
+                  <small>Closing costs includes origination fees, appraisal, property inspection, legal fees, recording fees, and transfer taxes. The acquisition fee is payable to Limitless Estates, LLC at closing. Repair escrows are kept in the operating account until needed. </small>
+                </div>
               }
             />
             <RegisterModal
               id="incomeSummary"
               title="Income Expenses"
+              size="modal-lg"
               body={
-                <img src={income_expenses_img} />
+                <div>
+                  <img src={income_expenses_img} />
+
+                </div>
               }
             />
-            </div>
+            <RegisterModal
+              id="disclosedfinance"
+              title="Rent Roll"
+              size="modal-lg"
+              body={<div>
+                <img src="/img/columbus/rentroll1.jpg" className="img-fluid" />
+                <img src="/img/columbus/rentroll.jpg" className="img-fluid" />
+                </div>}
+            />
           </div>
-
         </div>
       </div>
     </section>
-    
-
-               
-
-
-
-
-
     </div>
   )
 }
