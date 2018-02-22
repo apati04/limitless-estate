@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
 import PageHeader from '../PageHeader';
-import PageBox from '../PageBox';
+import RegisterModal from '../RegisterModal';
 
 const property_img = "/img/ecorse/image1.png";
 const map_img = "/img/ecorse/image2.png";
@@ -22,7 +22,34 @@ const Ecorse = () => {
       <PageHeader title={title} bgPos='800px -430px' description={description} img={imgURL} />
       <section className="py-3">
         <div className="container">
-          <div className="row justtify-content-between"></div>
+          <div className="row justify-content-between">
+            {/* main body section */}
+            <div className="col-12 col-md-8 col-lg-7">
+              <article>
+
+              </article>
+              <hr />
+              <small>
+
+              </small>
+              <hr />
+              <h5 className="mb-4">Sound like the right investment for you?</h5>
+              <form className="d-flex justify-content-between align-items-center">
+                <div>
+                  <Link to="/applyNow"><button className="btn btn-success">Contact Us</button></Link>
+                </div>
+                <div>
+                  <Link to="/markets">Back To Markets</Link>
+                </div>
+              </form>
+            </div>
+            {/* SideBar */}
+            <div className="col-12 col-md-4">
+            
+            </div>
+            {/* Modal Registration Below */}
+
+          </div>
         </div>
       </section>
     </div>

@@ -27,6 +27,7 @@ const Columbus = () => {
       <section className="py-3">
         <div className="container">
           <div className="row justify-content-between">
+            {/* Main content */}
             <div className="col-12 col-md-8 col-lg-7">
               <article>
                 <h5>The Opportunity and Business Plan</h5>
@@ -85,7 +86,7 @@ const Columbus = () => {
                 This information is authorized for use only by a limited number of persons with an existing relationship with Limitless Estates, LLC and who have been qualified and accepted as sophisticated investors by Limitless Estates, LLC, by furnishing proof of extensive investment experience. Neither the Securities and Exchange Commission nor any state securities commission has approved or disapproved of the real estate interests in this property package, or passed upon the adequacy or accuracy of this document. Any representation to the contrary is a criminal offense.
               </small>
               <hr />
-              <h5 className="mb-4">Sound like the property for you?</h5>
+              <h5 className="mb-4">Sound like the right investment for you?</h5>
               <form className="d-flex justify-content-between align-items-center">
                 <div>
                   <Link to="/applyNow"><button className="btn btn-success">Contact Us</button></Link>
@@ -95,6 +96,8 @@ const Columbus = () => {
                 </div>
               </form>
             </div>
+
+            {/* Sidebar */}
             <div className="col-12 col-md-4">
               <div className="card">
                 <ul className="list-group list-group-flush">
@@ -157,7 +160,6 @@ const Columbus = () => {
                   <a className="list-group-item d-flex justify-content-between" data-toggle="modal" href="#acquisition">
                     <span>Acquisition Summary</span>
                     <i style={{ fontSize: '24px' }} className="far fa-file-alt"></i>
-
                   </a>
                   <a className="list-group-item d-flex justify-content-between" data-toggle="modal" href="#profit-loss">
                     <span>5 Year Profit & Loss Projection</span>
