@@ -2,25 +2,28 @@ import React from 'react';
 
 
 const PageHeader = ({title, bgPos='0px -360px', bgRepeat='repeat', description, img}) => {
-  const style = {
+  const styles = {
     pageHeader: {
-      minHeight: '240px',
+      minHeight: '252px',
       background: `url(${img})`,
-      backgroundRepeat: "space",
-      backgroundAttachment: 'center',
+      backgroundRepeat: "initial",
+      backgroundAttachment: 'initial',
       backgroundSize: '100% 100%',
       color: '#fff',
       borderBottom: '1px #eee solid',
       paddingTop: '50px'
+    },
+    titleText: {
+      marginTop: '4px'
     }
   }
 
   return (
-    <header style={style.pageHeader} id="pageHeader">
+    <header style={styles.pageHeader} id="pageHeader">
       <div className="container">
         <div className="row">
           <div className="col-md-6 m-auto text-center">
-            <h1>{title}</h1>
+            <h1 style={styles.titleText}>{title}</h1>
             <p>{description || ''}</p>
           </div>
         </div>

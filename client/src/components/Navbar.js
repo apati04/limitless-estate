@@ -7,9 +7,8 @@ class Navbar extends Component {
   renderMenu() {
     const fields = ['about', 'markets', 'resources', 'contact'];
     return fields.map((item) => (
-      <li key={item} className="nav-item">
+      
         <MenuItem field={item} className="nav-link"/>
-      </li>
     ));
   }
   render() {

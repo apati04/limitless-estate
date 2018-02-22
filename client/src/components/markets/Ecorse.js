@@ -15,8 +15,8 @@ const projected_cash_flow_img = "/img/ecorse/image8.png";
 const Ecorse = () => {
 
   const imgURL = '/img/ecorse/ec2.jpg';
-  const description = "optional info"
-  const title = "Ecorse, MI"
+  const description = "Ecorse, MI"
+  const title = "4471 & 4581 High Street"
   return (
     <div>
       <PageHeader title={title} bgPos='800px -430px' description={description} img={imgURL} />
