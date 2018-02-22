@@ -162,7 +162,7 @@ const Test = () => {
             <RegisterModal
               id="disclosedfinance"
               title="Rent Roll"
-              size="modal-lg"
+              size="modal-xl"
               body={<div>
                 <img src="/img/columbus/rentroll1.jpg" className="img-fluid" />
                 <img src="/img/columbus/rentroll.jpg" className="img-fluid" />
