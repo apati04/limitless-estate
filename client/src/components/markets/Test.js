@@ -1,8 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
 import PageHeader from '../PageHeader';
-import ModalContainer from '../ModalContainer';
-import ModalListItem from '../ModalListItem';
+import RegisterModal from '../RegisterModal';
 const property_img ="/img/columbus/image1.png";
 const map_img ="/img/columbus/image2.png";
 const acquisition_img = "/img/columbus/image3.png";
@@ -12,7 +11,7 @@ const income_expenses_img = "/img/columbus/image6.png";
 const financial_projection_img = "/img/columbus/image7.png";
 const equity_return_img = "/img/columbus/image8.png";
 const projected_cash_flow_img = "/img/columbus/image10.png";
-
+const acq_sum = "/img/columbus/acq_sum.png";
 const Test = () => {
   const imgURL = '/img/pageheader.jpg';
   const description = "optional info"
@@ -151,106 +150,45 @@ const Test = () => {
                 <span className="h6">Categories</span>
               </div>
 
-              {/* <div className="list-group list-group-flush">
-                  <ImageModal 
-                  
-                    title="Acquisition Summary"
-                    iconClassName="far fa-list-alt"
-                  />
-                  <ModalRegister title="Acquisition Summary" imgSrc={acquisition_img} />
-                <a className="list-group-item d-flex justify-content-between" href="#">
-                  <div>
-                    <i className="icon-power-plug mr-1"></i>
-                    <span>API Integration</span>
-                  </div>
-                  <div>
-                    <i className="icon-chevron-right"></i>
-                  </div>
-                </a>
+              <div className="list-group list-group-flush">
 
-                <a className="list-group-item d-flex justify-content-between" href="#">
+                <a className="list-group-item d-flex justify-content-between" data-toggle="modal" href="#acuqisition">
                   <div>
-                    <i className="icon-credit-card mr-1"></i>
-                    <span>Billing</span>
-                  </div>
-                  <div>
-                    <i className="icon-chevron-right"></i>
+                    <i className="far fa-list-alt"></i>
+                    <span style={{marginLeft: '10px'}}>Aquisition Summary</span>
                   </div>
                 </a>
-
-                <a className="list-group-item d-flex justify-content-between" href="#">
+                 <a className="list-group-item d-flex justify-content-between" data-toggle="modal" href="#incomeSummary">
                   <div>
-                    <i className="icon-code mr-1"></i>
-                    <span>Development</span>
-                  </div>
-                  <div>
-                    <i className="icon-chevron-right"></i>
+                    <i className="far fa-list-alt"></i>
+                    <span style={{marginLeft: '10px'}}>Income Expenses</span>
                   </div>
                 </a>
-                <a className="list-group-item d-flex justify-content-between" href="#">
-                  <div>
-                    <i className="icon-shield mr-1"></i>
-                    <span>Security</span>
-                  </div>
-                  <div>
-                    <i className="icon-chevron-right"></i>
-                  </div>
-                </a>
-                <a className="list-group-item d-flex justify-content-between" href="#">
-                  <div>
-                    <i className="icon-folder mr-1"></i>
-                    <span>Storage</span>
-                  </div>
-                  <div>
-                    <i className="icon-chevron-right"></i>
-                  </div>
-                </a>
-              </div> */}
-              <ModalContainer>
-                <ModalListItem 
-                  listTitle="Acqusitions"
-                  iconClassName="far fa-list-alt"
-                  modalID="imgModal"
-                  modalTitle="Hello"
-                  imgSrc={acquisition_img}
-                />
-                <ModalListItem 
-                  listTitle="Acqusitions"
-                  iconClassName="far fa-list-alt"
-                  modalID="imgModal"
-                  modalTitle="Hello"
-                  imgSrc={acquisition_img}
-                />
-                <ModalListItem 
-                  listTitle="Acqusitions"
-                  iconClassName="far fa-list-alt"
-                  modalID="imgModal"
-                  modalTitle="Hello"
-                  imgSrc={acquisition_img}
-                />
-                <ModalListItem 
-                  listTitle="Acqusitions"
-                  iconClassName="far fa-list-alt"
-                  modalID="imgModal"
-                  modalTitle="Hello"
-                  imgSrc={acquisition_img}
-                />
-                <ModalListItem 
-                  listTitle="Acqusitions"
-                  iconClassName="far fa-list-alt"
-                  modalID="imgModal"
-                  modalTitle="Hello"
-                  imgSrc={acquisition_img}
-                />
-              </ModalContainer>
+               
+              </div>
+            <RegisterModal
+              id="acuqisition"
+              title="Acquisition Summary"
+              body={
+                <img src={acq_sum} className="img-fluid" />
+              }
+            />
+            <RegisterModal
+              id="incomeSummary"
+              title="Income Expenses"
+              body={
+                <img src={income_expenses_img} />
+              }
+            />
             </div>
           </div>
-      
+
         </div>
       </div>
     </section>
-   
+    
 
+               
 
 
 
