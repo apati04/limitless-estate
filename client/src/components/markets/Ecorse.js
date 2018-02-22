@@ -14,7 +14,7 @@ const projected_cash_flow_img = "/img/ecorse/image8.png";
 
 const Ecorse = () => {
 
-  const imgURL = '/img/pageheader.jpg';
+  const imgURL = '/img/ecorse/ec2.jpg';
   const description = "optional info"
   const title = "Ecorse, MI"
   return (

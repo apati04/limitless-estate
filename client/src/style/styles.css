@@ -165,3 +165,7 @@
 *:focus {
   outline: 0;
 }
+
+.modal-xl {
+  max-width: 1200px;
+}
