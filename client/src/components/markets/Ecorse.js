@@ -26,11 +26,20 @@ const Ecorse = () => {
             {/* main body section */}
             <div className="col-12 col-md-8 col-lg-7">
               <article>
-
+                {/* section one */}
+                <h5>The Opportunity and Business Plan</h5>
+                {/* section two */}
+                <h5>About this Propery</h5>
+                {/* section three */}
+                <h5>The Neighboorhood</h5>
               </article>
               <hr />
               <small>
-
+                This material does not constitute an offer or a solicitation to purchase securities. An offer can only be made by the private placement memorandum. This document is an informational summary and is authorized for use only by sophisticated investors with an existing relationship with Limitless Estates, LLC and have been accepted as qualified and sophisticated investors by virtue of their experience and financial circumstance.
+              </small>
+              <hr />
+              <small className="text-muted">
+                This information is authorized for use only by a limited number of persons with an existing relationship with Limitless Estates, LLC and who have been qualified and accepted as sophisticated investors by Limitless Estates, LLC, by furnishing proof of extensive investment experience. Neither the Securities and Exchange Commission nor any state securities commission has approved or disapproved of the real estate interests in this property package, or passed upon the adequacy or accuracy of this document. Any representation to the contrary is a criminal offense.
               </small>
               <hr />
               <h5 className="mb-4">Sound like the right investment for you?</h5>

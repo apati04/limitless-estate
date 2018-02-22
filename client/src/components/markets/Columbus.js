@@ -30,6 +30,7 @@ const Columbus = () => {
             {/* Main content */}
             <div className="col-12 col-md-8 col-lg-7">
               <article>
+                {/* section one */}
                 <h5>The Opportunity and Business Plan</h5>
                 <p>
                   This property is a true value add with current average rents more than 30% below directly competitive comparable properties. A more aggressive approach to leasing will translate into rents at the higher end of Arlington Heights’ one bedroom in-place rent range. Sub-market vacancy of one-bedroom units is less than 5%.
@@ -37,19 +38,20 @@ const Columbus = () => {
                 <p>
                   There is constant renter demand from OSU students and medical center staff as well as millennials seeking moderately priced housing in the red-hot Grandview/Upper Arlington rental market. The building will thrive under the expertise of our property management company (Rickert Property Management).
                 </p>
+                {/* section two */}
                 <h5>About This Property</h5>
                 <p>
                   The subject property is a 58-unit multifamily walk-up apartment building located at 2201 Riverside Drive.
                   The Lot and building sit on 2.16 acres, 45,430 rentable square feet and 104 parking spaces. At three stories tall, the building itself totals 37,958 gross square feet. 2201 Riverside Drive was built in 1970 with an effervescent red brick exterior that adds vibrancy to the plush green way via Riverside Drive.
                 </p>
                 <p>The 58-unit multifamily walk-up apartment building breakdown:
-
                 </p>
                 <ul>
                   <li>54 One Bedroom/One Bath</li>
                   <li>3 Two Bedroom/One Bath</li>
                   <li>1 Office</li>
                 </ul>
+                {/* section three*/}
                 <h5>The Neighborhood</h5>
                 <p>The subject property is located in The City of Upper Arlington an affluent first-ring suburb of Central Ohio.
                 </p>
@@ -65,22 +67,12 @@ const Columbus = () => {
                   Along with having a low crime rate and strong sense of community, Upper Arlington also offers highly ranked services and institutions, such as its renowned schools and library system.
                       </p>
                 <p>Its school district is one of the best in the region, with the high school receiving a gold medal designation from U.S. News and World Report’s 2017 “Best High Schools” report where it was also ranked the #12 high school in Ohio. The library system is consistently recognized as one of the best in the country among communities of a similar size.
-                      </p>
-                <h5>Acquisition Summary</h5>
-                <p>
-                  Closing costs includes origination fees, appraisal, property inspection, legal fees, recording fees, and transfer taxes. The acquisition fee is payable to Limitless Estates, LLC at closing. Repair escrows are kept in the operating account until needed.
-                </p>
-                <h5>
-                  Equity Return At Resale
-                </h5>
-                <p>
-                  We assume we will be able to sell the building at 50 basis points less than the going cap rate of 8% for a well-performing asset in this area of Columbus, OH. All investor capital is returned first before the remaining proceeds are split according to the investors’ equity share.
                 </p>
               </article>
               <hr />
               <small>
                 This material does not constitute an offer or a solicitation to purchase securities. An offer can only be made by the private placement memorandum. This document is an informational summary and is authorized for use only by sophisticated investors with an existing relationship with Limitless Estates, LLC and have been accepted as qualified and sophisticated investors by virtue of their experience and financial circumstance.
-                </small>
+              </small>
               <hr />
               <small className="text-muted">
                 This information is authorized for use only by a limited number of persons with an existing relationship with Limitless Estates, LLC and who have been qualified and accepted as sophisticated investors by Limitless Estates, LLC, by furnishing proof of extensive investment experience. Neither the Securities and Exchange Commission nor any state securities commission has approved or disapproved of the real estate interests in this property package, or passed upon the adequacy or accuracy of this document. Any representation to the contrary is a criminal offense.
