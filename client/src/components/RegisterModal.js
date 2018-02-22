@@ -1,10 +1,10 @@
 import React from 'react';
 
-const RegisterModal = ({id, title, body}) => {
+const RegisterModal = ({id, title, body, size = null}) => {
   return(
 
 <div className="modal fade" id={id} tabIndex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div className="modal-dialog modal-dialog-centered modal-lg" role="document">
+  <div className={`modal-dialog modal-dialog-centered ${size}`} role="document">
     <div className="modal-content">
       <div className="modal-header">
         <h5 className="modal-title text-center" id="exampleModalLongTitle">{title}</h5>
