@@ -5,12 +5,11 @@ import PageBox from './PageBox';
 /*bgPos='800px -430px'*/
 class Markets extends Component {
   render() {
-    const imgURL = '';
-    const description = "optional info"
+    const imgURL = '/img/pageheader.jpg';
     const title = "Markets"
     return (
       <div>
-        <PageHeader title={title} bgRepeat="no-repeat" description={description} img={imgURL} />
+        <PageHeader title={title} bgRepeat="no-repeat" img={imgURL} />
         <div className="container p-5">
           <div className="row mb-4">
             <div className="col-md-6">

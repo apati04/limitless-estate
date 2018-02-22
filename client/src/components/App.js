@@ -29,7 +29,7 @@ class App extends Component {
           <Route exact path="/markets" component={Markets} />
           <Route path="/markets/columbus" component={Columbus}/>
           <Route path="/markets/ecorse" component={Ecorse}/>
-          <Route pat="/test" component={Test} />
+          <Route path="/test" component={Test} />
           {/* <Route path="/resources" component={Resources}/>
           <Route path="/services" component={Services}/> */}
         </div>
