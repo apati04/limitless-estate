@@ -8,7 +8,7 @@ const PageHeader = ({title, bgPos='0px -360px', bgRepeat='repeat', description, 
       background: `url(${img})`,
       backgroundRepeat: "initial",
       backgroundAttachment: 'initial',
-      backgroundSize: '100% 100%',
+      backgroundSize: '100% 123%',
       color: '#fff',
       borderBottom: '1px #eee solid',
       paddingTop: '50px'
