@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom'
 import PageHeader from '../PageHeader';
 import RegisterModal from '../RegisterModal';
-
+import StickyBox from 'react-sticky-box';
 const property_img = "/img/ecorse/image1.png";
 const map_img = "/img/ecorse/image2.png";
 const acquisition_img = "/img/ecorse/image3.png";
@@ -19,18 +19,77 @@ const Ecorse = () => {
   const title = "Ecorse, MI"
   return (
     <div>
-      <PageHeader title={title} bgPos='800px -430px' description={description} img={imgURL} />
+      <PageHeader height="320px" title={title} bgPos='800px -430px' description={description} img={imgURL} />
       <section className="py-3">
-        <div className="container">
+        <div className="container-fluid">
           <div className="row justify-content-between">
+            <div className="col-12 col-md-3 mt-4">
+              {/* building stats */}
+          
+                <div className="card">
+                  <div className="card-header">
+                    <span className="h6">Financial Reports</span>
+                  </div>
+                <ul className="list-group list-group-flush">
+                  <li className="list-group-item">
+                    <div className="d-flex justify-content-between">
+                      <div><i className="icon-tools mr-1"></i>Building</div>
+                      <span>Apartment</span>
+                    </div>
+                  </li>
+                  <li className="list-group-item">
+                    <div className="d-flex justify-content-between">
+                      <div><i className="icon-home mr-1"></i> Location</div>
+                      <span>ohio</span>
+                    </div>
+                  </li>
+                  <li className="list-group-item">
+                    <div className="d-flex justify-content-between">
+                      <div><i className="icon-stopwatch mr-1"></i> Basis</div>
+                      <span>stat</span>
+                    </div>
+                  </li>
+                  <li className="list-group-item">
+                    <div className="d-flex justify-content-between">
+                      <div><i className="icon-stopwatch mr-1"></i> Basis</div>
+                      <span>stat</span>
+                    </div>
+                  </li>
+                  <li className="list-group-item">
+                    <div className="d-flex justify-content-between">
+                      <div><i className="icon-stopwatch mr-1"></i> Basis</div>
+                      <span>stat</span>
+                    </div>
+                  </li>
+                  <li className="list-group-item">
+                    <div className="d-flex justify-content-between">
+                      <div><i className="icon-stopwatch mr-1"></i> Basis</div>
+                      <span>stat</span>
+                    </div>
+                  </li>
+                  <li className="list-group-item">
+                    <div className="d-flex justify-content-between">
+                      <div><i className="icon-stopwatch mr-1"></i> Basis</div>
+                      <span>stat</span>
+                    </div>
+                  </li>
+                  <li className="list-group-item">
+                    <div className="d-flex justify-content-between">
+                      <div><i className="icon-stopwatch mr-1"></i> Basis</div>
+                      <span>stat</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
             {/* main body section */}
-            <div style={{paddingRight: '0px'}} className="col-12 col-md-8 col-lg-7 mt-4">
+            <div className="col-12 col-md-6 mt-4">
               <article>
                 {/* section one */}
-                <div style={{marginLeft: '-10px', backgroundColor: '#000'}}>
-                  <h5 style={{padding: '10px'}} className="text-white">EXECUTIVE SUMMARY</h5>
+                <div style={{ backgroundColor: '#000'}}>
+                  <h5 style={{padding: '8px'}} className="text-white">EXECUTIVE SUMMARY</h5>
                 </div>
-                <div style={{marginTop: '14px'}}>
+                <div style={{marginLeft: '8px', marginTop: '14px'}}>
                   <p>
                     Limitless Estates, LLC a California Limited Liability company with offices in Long Beach, CA, is arranging for the acquisition of undivided real estate interests in the above property by a limited number of sophisticated and qualified investors. The property consists of 72 units. The purchase price is $3.175M.
                   </p>
@@ -94,62 +153,12 @@ const Ecorse = () => {
               </form>
             </div>
             {/* SideBar */}
-            <div className="col-12 col-md-4 mt-4">
-              {/* building stats */}
-              <div className="card">
-                <ul className="list-group list-group-flush">
-                  <li className="list-group-item">
-                    <div className="d-flex justify-content-between">
-                      <div><i className="icon-tools mr-1"></i>Building</div>
-                      <span>Apartment</span>
-                    </div>
-                  </li>
-                  <li className="list-group-item">
-                    <div className="d-flex justify-content-between">
-                      <div><i className="icon-home mr-1"></i> Location</div>
-                      <span>ohio</span>
-                    </div>
-                  </li>
-                  <li className="list-group-item">
-                    <div className="d-flex justify-content-between">
-                      <div><i className="icon-stopwatch mr-1"></i> Basis</div>
-                      <span>stat</span>
-                    </div>
-                  </li>
-                  <li className="list-group-item">
-                    <div className="d-flex justify-content-between">
-                      <div><i className="icon-stopwatch mr-1"></i> Basis</div>
-                      <span>stat</span>
-                    </div>
-                  </li>
-                  <li className="list-group-item">
-                    <div className="d-flex justify-content-between">
-                      <div><i className="icon-stopwatch mr-1"></i> Basis</div>
-                      <span>stat</span>
-                    </div>
-                  </li>
-                  <li className="list-group-item">
-                    <div className="d-flex justify-content-between">
-                      <div><i className="icon-stopwatch mr-1"></i> Basis</div>
-                      <span>stat</span>
-                    </div>
-                  </li>
-                  <li className="list-group-item">
-                    <div className="d-flex justify-content-between">
-                      <div><i className="icon-stopwatch mr-1"></i> Basis</div>
-                      <span>stat</span>
-                    </div>
-                  </li>
-                  <li className="list-group-item">
-                    <div className="d-flex justify-content-between">
-                      <div><i className="icon-stopwatch mr-1"></i> Basis</div>
-                      <span>stat</span>
-                    </div>
-                  </li>
-                </ul>
-              </div>
+            <div className="col-12 col-md-3 mt-4">
+            <StickyBox style={{marginTop: '-100px',paddingTop: '100px'}}>
+              
+         
               {/* Financial Data */}
-              <div className="card mt-4">
+                <div className="card">
                 <div className="card-header">
                   <span className="h6">Financial Reports</span>
                 </div>
@@ -176,6 +185,7 @@ const Ecorse = () => {
                   </a>
                 </div>
               </div>
+              </StickyBox>
             </div>
             {/* Modal Registration Below */}
 

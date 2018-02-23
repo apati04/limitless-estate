@@ -1,9 +1,10 @@
 import React from 'react';
 
 
-const PageHeader = ({title, bgPos='0px -360px', bgRepeat='repeat', description, img}) => {
+const PageHeader = ({title, height= null, bgPos='0px -360px', bgRepeat='repeat', description, img}) => {
   const styles = {
     pageHeader: {
+      height,
       minHeight: '252px',
       background: `url(${img})`,
       backgroundRepeat: "initial",

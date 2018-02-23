@@ -16,11 +16,13 @@ import Resources from "./Resources";
 import FAQ from "./FAQ";
 import Contact from "./Contact";
 import Footer from "./v2/Footer";
+import ScrollToTop from './ScrollToTop';
+
 class App extends Component {
   render() {
     return (
       <BrowserRouter>
-        <div>
+        <ScrollToTop>
           <Navbar />
           <Route exact path="/" component={LandingPage} />
           <Route path="/about" component={About}/>
@@ -33,7 +35,7 @@ class App extends Component {
           {/* <Route path="/resources" component={Resources}/>
           <Route path="/services" component={Services}/> */}
           <Footer />
-        </div>
+        </ScrollToTop>
       </BrowserRouter>
     );
   }
