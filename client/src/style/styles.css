@@ -71,7 +71,10 @@
 	background-color: rgba(0, 0, 0, 0.945);
   color:white;
   border-top: #008ed6 2px solid;
-  opacity: 0.8
+  opacity: 0.8;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
 }
 
 #myFooter .footer-copyright{
