@@ -3,14 +3,12 @@ import React from "react";
 const About = () => {
   return (
     <div className="text-center">
-
       <div style={{padding: "10% 3%", backgroundColor: "powderblue"}}>
         <h1>CONTENT 1</h1>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque felis tellus, pharetra sed tortor eu, varius condimentum leo. Nulla et nulla rutrum, fringilla elit non, facilisis nibh. Aliquam non consectetur purus, in tristique est. Nunc id lorem eget urna venenatis hendrerit a quis metus. Ut blandit maximus dui, vitae porttitor sem congue tempor. Ut vitae augue et nisl interdum dictum. Aenean suscipit mauris nisi, vitae rutrum sapien semper eu.
         </p>
       </div>
-
       <div style={{padding: "5% 3%", backgroundColor: "#e9c97e"}}>
         <h1>CONTENT 2 (with background image)</h1>
         <div className="d-flex justify-content-center align-items-center" style={{marginTop:"2%"}}>
