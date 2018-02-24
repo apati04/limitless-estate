@@ -1,56 +1,85 @@
-import React from "react";
+import React from 'react';
+import EmployeeCard from './EmployeeCard';
+import PageHeader from './PageHeader';
 
 const About = () => {
   return (
-    <div className="text-center">
-
-      <div style={{padding: "10% 3%", backgroundColor: "powderblue"}}>
-        <h1>CONTENT 1</h1>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque felis tellus, pharetra sed tortor eu, varius condimentum leo. Nulla et nulla rutrum, fringilla elit non, facilisis nibh. Aliquam non consectetur purus, in tristique est. Nunc id lorem eget urna venenatis hendrerit a quis metus. Ut blandit maximus dui, vitae porttitor sem congue tempor. Ut vitae augue et nisl interdum dictum. Aenean suscipit mauris nisi, vitae rutrum sapien semper eu.
-        </p>
-      </div>
-
-      <div style={{padding: "5% 3%", backgroundColor: "#e9c97e"}}>
-        <h1>CONTENT 2 (with background image)</h1>
-        <div className="d-flex justify-content-center align-items-center" style={{marginTop:"2%"}}>
-          <div style={{marginRight: "3%"}}>
-            <img src="https://via.placeholder.com/300x350" className="img-fluid" alt="card1"/>
-          </div>
-          <div style={{marginLeft: "3%"}}>
-            <img src="https://via.placeholder.com/300x350" className="img-fluid" alt="card2"/>
-          </div>
-          <div style={{marginLeft: "3%"}}>
-            <img src="https://via.placeholder.com/300x350" className="img-fluid" alt="card2"/>
-          </div>
-          <div style={{marginLeft: "3%"}}>
-            <img src="https://via.placeholder.com/300x350" className="img-fluid" alt="card2"/>
+    <div>
+      <PageHeader 
+        title="About Us"
+        description="Check out what we do"
+        img="/img/imageLA.jpg"
+      />
+    <section id="about" className="py-3">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-6">
+              <h1>What We Do</h1>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum sequi necessitatibus deleniti accusamus provident dignissimos numquam fuga nulla quia voluptatibus, dolore voluptate excepturi accusantium dolores temporibus fugit, voluptas velit omnis!</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum sequi necessitatibus deleniti accusamus provident dignissimos numquam fuga nulla quia voluptatibus, dolore voluptate excepturi accusantium dolores temporibus fugit, voluptas velit omnis!</p>
+            </div>
+            <div className="col-md-6">
+              <img src="http://lorempixel.com/400/400" alt="" class="about-img img-fluid rounded-circle d-none d-md-block"/>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div style={{padding: "10% 3%", backgroundColor: "tomato"}}>
-        <h1>CONTENT 3</h1>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras quis rutrum dolor, ut rutrum ante. Phasellus rhoncus elit sed nunc iaculis, eget volutpat mauris condimentum. Praesent nec enim ex. Donec lacinia consectetur posuere. Pellentesque at ullamcorper ipsum. Curabitur quis ipsum semper, maximus risus eu, sodales lorem. Pellentesque eget bibendum nunc, quis faucibus neque. Nullam pretium dui at lorem varius ultricies. Etiam tellus quam, cursus vel gravida egestas, scelerisque at turpis. Proin tellus massa, accumsan vel lacinia quis, blandit quis diam. Phasellus sollicitudin fermentum diam id eleifend. Curabitur hendrerit arcu eros. Duis rutrum interdum nibh id facilisis. Donec dapibus mi orci, non consequat sem porta vitae. Proin porta dolor leo. Fusce dictum sagittis lacinia. Aenean sagittis eros ac metus sagittis, quis finibus orci eleifend. Pellentesque molestie malesuada urna nec sollicitudin. Quisque at vehicula lectus. Fusce consectetur a sem a dapibus. Sed volutpat nulla eu pharetra dapibus. Sed euismod faucibus nisl, in sagittis quam interdum et. Sed sit amet volutpat urna. Mauris hendrerit dignissim ligula, quis molestie erat scelerisque in. Sed imperdiet sit amet enim id facilisis. Donec a ullamcorper risus, in bibendum eros. Ut eget elementum odio.
-        </p>
-      </div>
-
-      <div style={{padding: "10% 3%", backgroundColor: "#dddddd"}}>
-        <h1>CONTENT 4</h1>
-        <div className="d-flex justify-content-center align-items-center" style={{marginTop:"2%"}}>
-          <div style={{marginRight: "3%"}}>
-            <img src="https://via.placeholder.com/300x350" className="img-fluid" alt="headshot1"/>
-            <p>About person 1</p>
-          </div>
-          <div style={{marginLeft: "3%"}}>
-            <img src="https://via.placeholder.com/300x350" className="img-fluid" alt="headshot2"/>
-            <p>About person 2</p>
+       <section id="home-icons" className="py-5">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-4 mb-4 text-center">
+              <i className="fa fa-cog mb-2"></i>
+              <h3>Turning Gears</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, maxime.</p>
+            </div>
+            <div className="col-md-4 mb-4 text-center">
+              <i className="fa fa-cloud mb-2"></i>
+              <h3>Sending Data</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, maxime.</p>
+            </div>
+            <div className="col-md-4 mb-4 text-center">
+              <i className="fa fa-cart-plus mb-2"></i>
+              <h3>Making Money</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, maxime.</p>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
+
+      <div id="staff" className="py-5 text-center bg-secondary text-white">
+        <div className="container">
+        <h1>Our Staff</h1>
+        <hr/>
+        <div className="row">
+          <div className="col-lg-4">
+            <EmployeeCard
+              title="andrew"
+              name="bob"
+              imgSrc="/img/cartoon.png"
+            />
+          </div>
+          <div className="col-lg-4">
+            <EmployeeCard
+              title="andrew"
+              name="bob"
+              imgSrc="/img/cartoon.png"
+            />
+          </div>
+          <div className="col-lg-4">
+            <EmployeeCard
+              title="andrew"
+              name="bob"
+              imgSrc="/img/cartoon.png"
+            />
+            </div>
+           </div>
+         </div>
+       </div>
     </div>
-  );
+   
+  )
 }
+
 
 export default About;

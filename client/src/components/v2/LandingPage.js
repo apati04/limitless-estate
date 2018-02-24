@@ -4,7 +4,6 @@ import IconSection from './IconSection';
 import LandingParallax from './LandingParallax';
 import InfoSection from './InfoSection';
 import NewsLetter from './NewsLetter';
-import Footer from './Footer';
 class LandingPage extends Component {
 
   render() {
@@ -15,7 +14,6 @@ class LandingPage extends Component {
         <LandingParallax />
         <InfoSection />
         <NewsLetter />
-        <Footer />
       </div>
     )
   }

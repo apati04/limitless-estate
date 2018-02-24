@@ -9,7 +9,7 @@ const InfoSection = () =>{
           <div className="col-md-6 align-self-center">
             <h3>Pitch Title</h3>
             <p>Insert pitch here Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium beatae eaque quos eligendi, laboriosam. Culpa consequuntur illum facere id molestias.</p>
-              <Link  to='/packages'>
+              <Link  to='/markets'>
               <button  className="btn btn-outline-danger btn-lg mt-5">See Markets</button>
               </Link>
           </div>
