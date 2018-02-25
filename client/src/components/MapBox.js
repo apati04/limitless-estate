@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import keys from '../config/keys';
 import axios from "axios";
 import mapboxgl from "mapbox-gl";
 
@@ -10,7 +11,7 @@ class MapBox extends Component {
 
   renderMap = async () => {
     const mapboxUrl = 'https://api.mapbox.com/geocoding/v5/mapbox.places';
-    const mapboxToken = 'pk.eyJ1IjoiaXNhYWMxMTA0IiwiYSI6ImNqZDgwYjJ5MTI1dXUycWw5M3E5bnpldDcifQ.tRpvJ9X5wq7ke4t9KGd4yg';
+    const mapboxToken = keys.mapboxToken;
     const request = await axios.get(`${mapboxUrl}/${this.props.address}.json?access_token=${mapboxToken}`);
     const { data } = request;
 
