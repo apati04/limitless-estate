@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import axios from "axios";
-import mapboxgl from "mapbox-gl";
 import { Link } from 'react-router-dom';
+import MapBox from '../../components/MapBox';
 import Content from '../../components/Content';
 import PageHeader from '../../components/PageHeader';
 import RegisterModal from '../../components/RegisterModal';
@@ -18,31 +17,6 @@ const projected_cash_flow_img = "/img/ecorse/image8.png";
 class Ecorse extends Component {
   state = {
     content: "EXECUTIVE_SUMMARY"
-  }
-
-  componentDidMount() {
-    this.renderMap();
-  }
-
-  renderMap = async () => {
-    const mapboxUrl = 'https://api.mapbox.com/geocoding/v5/mapbox.places';
-    const zillowKey = 'X1-ZWz18sa4dxcwln_8jmj2';
-    const mapboxToken = 'pk.eyJ1IjoiaXNhYWMxMTA0IiwiYSI6ImNqZDgwYjJ5MTI1dXUycWw5M3E5bnpldDcifQ.tRpvJ9X5wq7ke4t9KGd4yg';
-    const location = "4471 & 4581 High Street, Ecorse, MI";
-    const request = await axios.get(`${mapboxUrl}/${location}.json?access_token=${mapboxToken}`);
-    const { data } = request;
-
-    const lng = data.features[0].center[0];
-    const lat = data.features[0].center[1];
-
-    mapboxgl.accessToken = "pk.eyJ1IjoiaXNhYWMxMTA0IiwiYSI6ImNqZDgwYjJ5MTI1dXUycWw5M3E5bnpldDcifQ.tRpvJ9X5wq7ke4t9KGd4yg";
-    const map = new mapboxgl.Map({
-      container: "mapbox",
-      style: "mapbox://styles/mapbox/outdoors-v10",
-      center: [ lng, lat ],
-      zoom: 15
-    });
-    new mapboxgl.Marker().setLngLat([ lng, lat ]).addTo(map);
   }
 
   renderData = () => {
@@ -198,7 +172,10 @@ class Ecorse extends Component {
                 <StickyBox style={{marginTop: '-100px',paddingTop: '100px'}}>
 
                   {/* Financial Data */}
-                  <div className="mb-3" id="mapbox" style={{ height: "30vh", width: "100%" }}></div>
+                  <MapBox
+                    address="4471 & 4581 High Street, Ecorse, MI"
+                  />
+
                   <div className="card">
                     <div className="card-header">
                       <span className="h6">Financial Reports</span>
