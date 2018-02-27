@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import keys from '../config/keys';
 import axios from 'axios';
 import mapboxgl from 'mapbox-gl';
 
