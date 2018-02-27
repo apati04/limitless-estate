@@ -59,14 +59,9 @@ const About = () => {
           <h1>Our Team</h1>
           <hr />
           <div className="row">
-            <MemberCard photo="/img/advisors/OldCapital4.jpg" title="Kyle Mitchell" position="President" bio={kyle} />
-            <MemberCard
-              title="Lalita Patipaksiri"
-              position="Member"
-              bio={lalita}
-              photo="/img/advisors/OldCapital4.jpg"
-            />
-            <MemberCard title="Luis Cruz" bio={luis} position="member" photo="/img/advisors/OldCapital4.jpg" />
+            <MemberCard photo="/img/advisors/OldCapital4.jpg" title="Kyle Mitchell" position="President" bio="km" />
+            <MemberCard title="Lalita Patipaksiri" position="Member" bio="lp" photo="/img/advisors/OldCapital4.jpg" />
+            <MemberCard title="Luis Cruz" bio="lc" position="member" photo="/img/advisors/OldCapital4.jpg" />
           </div>
         </div>
       </div>

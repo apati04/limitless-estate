@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 export default ({ title, position, photo, bio }) => {
   return (
     <div className="col-lg-4">
@@ -9,9 +10,9 @@ export default ({ title, position, photo, bio }) => {
           <small>{position}</small>
           <div className="d-flex flex-row justify-content-center">
             <div className="p-4">
-              <a target="_blank" href={bio}>
+              <Link to={'/resume/' + bio}>
                 <i className="fas fa-file-pdf text-white" />
-              </a>
+              </Link>
             </div>
             <div className="p-4">
               <a data-toggle="modal" href="">
