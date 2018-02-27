@@ -2,7 +2,11 @@
   "name": "mern",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:3001/",
+  "proxy": {
+    "/api/pdf": {
+      "target": "http://localhost:3000"
+    }
+  },
   "dependencies": {
     "axios": "^0.18.0",
     "formik": "^0.11.11",

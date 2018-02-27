@@ -4,6 +4,8 @@ import { kyle } from '../../api/bios';
 import Sidebar from '../../components/Sidebar';
 export default class KMResume extends Component {
   render() {
+    const linker =
+      'https://doc-0s-4s-apps-viewer.googleusercontent.com/viewer/secure/pdf/3a2g2ns52tf47lhteqe552kpsosl5ocn/5rul10l1qsf8qie0nkrm8lrm46rp8ud8/1519774425000/drive/01176241258975972643/ACFrOgDsTzup77WR-abrDmMglPadKnJ87t3sKZpkvGA_8Ynl3FBVPV8e09voTqvvS3BNjZX06sxibZ9fEDJtptrVZMdHuWckbdG2JBiktCDKit9HGWNohvIwNcfVLpc=?nonce=lquqghcqr65mu&user=01176241258975972643&hash=60bv66v2k0utq3pu9c99i6ekd8siia4j';
     return (
       <div className="container-fluid bg-dark">
         <div className="row justify-content-between">
@@ -12,7 +14,7 @@ export default class KMResume extends Component {
             <div className="container-fluid">
               <div className="row">
                 <div className="col-12">
-                  <object data={kyle} type="application/pdf">
+                  <object data={linker} type="application/pdf">
                     resume
                   </object>
                 </div>
