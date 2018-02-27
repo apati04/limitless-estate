@@ -86,7 +86,7 @@ class Columbus extends Component {
   render() {
     return (
       <div>
-        <PageHeader height="320px" title={title} description={description} img={imgURL} />
+        <PageHeader title={title} description={description} img={imgURL} />
         <section className="py-3">
           <div className="container-fluid">
             <div className="row justify-content-between">
