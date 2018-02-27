@@ -4,15 +4,10 @@ import PageHeader from '../components/PageHeader';
 import RegisterModal from '../components/RegisterModal';
 import { kyle, lalita, luis } from '../api/bios';
 import { browserHistory } from 'react-router-dom';
-import axios from 'axios';
+
 const jamie =
   'https://media-exp2.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAKmAAAAJGJlNGIzZjYxLTNiNGEtNGFiNS1iYjU2LTI3MzMyN2FkYmRhNg.jpg';
 export default class About extends Component {
-  getResume() {
-    axios.get('/api/pdf').then(res => {
-      console.log('done');
-    });
-  }
   render() {
     return (
       <div>
@@ -67,13 +62,6 @@ export default class About extends Component {
             <h1>Our Team</h1>
             <hr />
             <div className="row">
-              <button
-                onClick={() => {
-                  this.getResume();
-                }}
-              >
-                TESTER
-              </button>
               <MemberCard photo="/img/advisors/OldCapital4.jpg" title="Kyle Mitchell" position="President" bio="km" />
               <MemberCard title="Lalita Patipaksiri" position="Member" bio="lp" photo="/img/advisors/OldCapital4.jpg" />
               <MemberCard title="Luis Cruz" bio="lc" position="member" photo="/img/advisors/OldCapital4.jpg" />
