@@ -1,6 +1,8 @@
 import React from 'react';
-import EmployeeCard from '../components/EmployeeCard';
+import MemberCard from '../components/MemberCard';
 import PageHeader from '../components/PageHeader';
+import RegisterModal from '../components/RegisterModal';
+import { kyle, lalita, luis } from '../api/bios';
 const jamie =
   'https://media-exp2.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAKmAAAAJGJlNGIzZjYxLTNiNGEtNGFiNS1iYjU2LTI3MzMyN2FkYmRhNg.jpg';
 const About = () => {
@@ -57,15 +59,14 @@ const About = () => {
           <h1>Our Team</h1>
           <hr />
           <div className="row">
-            <div className="col-lg-4">
-              <EmployeeCard title="andrew" name="bob" imgSrc="/img/cartoon.png" />
-            </div>
-            <div className="col-lg-4">
-              <EmployeeCard title="andrew" name="bob" imgSrc="/img/cartoon.png" />
-            </div>
-            <div className="col-lg-4">
-              <EmployeeCard title="andrew" name="bob" imgSrc="/img/cartoon.png" />
-            </div>
+            <MemberCard photo="/img/advisors/OldCapital4.jpg" title="Kyle Mitchell" position="President" bio={kyle} />
+            <MemberCard
+              title="Lalita Patipaksiri"
+              position="Member"
+              bio={lalita}
+              photo="/img/advisors/OldCapital4.jpg"
+            />
+            <MemberCard title="Luis Cruz" bio={luis} position="member" photo="/img/advisors/OldCapital4.jpg" />
           </div>
         </div>
       </div>
@@ -74,19 +75,9 @@ const About = () => {
           <h1>Advisors</h1>
           <hr />
           <div className="row">
-            <div className="col-lg-4">
-              <EmployeeCard title="Advisor" name="Jamie Doraughy" imgSrc={jamie} />
-            </div>
-            <div className="col-lg-4">
-              <EmployeeCard title="Advisor" name="Drew Kniffin" imgSrc="/img/advisors/drew-kniffin.jpg" />
-            </div>
-            <div className="col-lg-4">
-              <EmployeeCard
-                title="Commercial Real Estate"
-                name="Old Capital Lending"
-                imgSrc="/img/advisors/OldCapital4.jpg"
-              />
-            </div>
+            <MemberCard />
+            <MemberCard />
+            <MemberCard />
           </div>
         </div>
       </div>
