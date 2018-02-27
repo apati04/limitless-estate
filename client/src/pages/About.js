@@ -1,7 +1,8 @@
 import React from 'react';
 import EmployeeCard from '../components/EmployeeCard';
 import PageHeader from '../components/PageHeader';
-
+const jamie =
+  'https://media-exp2.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAKmAAAAJGJlNGIzZjYxLTNiNGEtNGFiNS1iYjU2LTI3MzMyN2FkYmRhNg.jpg';
 const About = () => {
   return (
     <div>
@@ -23,11 +24,7 @@ const About = () => {
               </p>
             </div>
             <div className="col-md-6">
-              <img
-                src="http://lorempixel.com/400/400"
-                alt=""
-                className="about-img img-fluid rounded-circle d-none d-md-block"
-              />
+              <img src="" alt="" className="about-img img-fluid rounded-circle d-none d-md-block" />
             </div>
           </div>
         </div>
@@ -57,7 +54,7 @@ const About = () => {
 
       <div id="staff" className="py-5 text-center bg-secondary text-white">
         <div className="container">
-          <h1>Our Staff</h1>
+          <h1>Our Team</h1>
           <hr />
           <div className="row">
             <div className="col-lg-4">
@@ -68,6 +65,27 @@ const About = () => {
             </div>
             <div className="col-lg-4">
               <EmployeeCard title="andrew" name="bob" imgSrc="/img/cartoon.png" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style={{ marginBottom: '-20px' }} className="py-5 text-center bg-secondary text-white">
+        <div className="container">
+          <h1>Advisors</h1>
+          <hr />
+          <div className="row">
+            <div className="col-lg-4">
+              <EmployeeCard title="Advisor" name="Jamie Doraughy" imgSrc={jamie} />
+            </div>
+            <div className="col-lg-4">
+              <EmployeeCard title="Advisor" name="Drew Kniffin" imgSrc="/img/advisors/drew-kniffin.jpg" />
+            </div>
+            <div className="col-lg-4">
+              <EmployeeCard
+                title="Commercial Real Estate"
+                name="Old Capital Lending"
+                imgSrc="/img/advisors/OldCapital4.jpg"
+              />
             </div>
           </div>
         </div>
