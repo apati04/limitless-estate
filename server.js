@@ -1,10 +1,23 @@
 const express = require('express');
 const path = require('path');
-
+const bodyParser = require('body-parser');
 const app = express();
 // Send every request to the React app
 // Define any API routes before this runs
+app.use(bodyParser.json());
 
+app.get('/api/pdf', (req, res) => {
+  const file = path.resolve(__dirname, 'KM.pdf');
+  res.download(file, err => {
+    console.log('file: ', file);
+    if (err) {
+      console.log('Err');
+      console.log(err);
+    } else {
+      console.log('success');
+    }
+  });
+});
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static('client/build'));
