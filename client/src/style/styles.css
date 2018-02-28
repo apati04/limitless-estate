@@ -208,14 +208,10 @@ object {
   .sidebar {
     display: none;
   }
-  #resume {
-    position: relative;
-  }
-  object {
-    position: absolute;
+
+  #bioObj {
+    position: fixed;
     /* bring your own prefixes */
-    width: 100%;
-    padding-left: 25px;
   }
 }
 @media (min-width: 992px) {

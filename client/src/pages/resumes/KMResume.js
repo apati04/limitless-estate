@@ -12,7 +12,7 @@ export default class KMResume extends Component {
             <div className="container-fluid">
               <div className="row align-self-center">
                 <div id="resume" className="col-12">
-                  <object data={kyle} type="application/pdf">
+                  <object id="bioObj" width="100%" height="850px" data={kyle} type="application/pdf">
                     resume
                   </object>
                 </div>
