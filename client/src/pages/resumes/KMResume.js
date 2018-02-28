@@ -8,16 +8,10 @@ export default class KMResume extends Component {
       <div className="container-fluid bg-dark">
         <div className="row justify-content-between">
           <Sidebar />
-          <main className="col-md-10 ml-sm-auto col-lg-10 pt-2">
-            <div className="container-fluid">
-              <div className="row align-self-center">
-                <div id="resume" className="col-12">
-                  <object id="bioObj" width="100%" height="850px" data={kyle} type="application/pdf">
-                    resume
-                  </object>
-                </div>
-              </div>
-            </div>
+          <main id="resume" className="container-fluid align-items-center col-md-10 ml-sm-auto col-lg-10 pt-2">
+            <object id="bioObj" width="100%" height="850px" data={kyle} type="application/pdf">
+              resume
+            </object>
           </main>
         </div>
       </div>

@@ -178,8 +178,11 @@ footer {
 *:focus {
   outline: 0;
 }
-object {
-  height: 850px;
+#resume {
+  left: 73;
+}
+#bioObj {
+  margin: auto;
 }
 /* // Extra small devices (portrait phones, less than 576px)
 // No media query since this is the default in Bootstrap
@@ -204,14 +207,8 @@ object {
     min-height: 100%;
     background-color: #525659;
   }
-
   .sidebar {
     display: none;
-  }
-
-  #bioObj {
-    position: fixed;
-    /* bring your own prefixes */
   }
 }
 @media (min-width: 992px) {
