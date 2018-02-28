@@ -3,7 +3,6 @@ html {
 }
 body {
   min-height: 100%;
-  background-color: #343a40 !important;
 }
 
 .navbar .nav-link {
@@ -195,21 +194,11 @@ footer {
 @media (min-width: 1200px) { ... } */
 
 @media only screen and (max-width: 768px) {
-  body {
-    background-color: #525659;
-  }
   .sidebar {
     visibility: hidden;
   }
 }
 @media (min-width: 992px) {
-  html {
-    height: 100%;
-  }
-  body {
-    min-height: 100%;
-    background-color: #343a40 !important;
-  }
   .modal-lg {
     max-width: 800px;
   }
