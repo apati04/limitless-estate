@@ -199,12 +199,8 @@ footer {
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) { ... } */
 
-@media (max-width: 768px) {
-  html {
-    height: 100%;
-  }
+@media only screen and (max-width: 768px) {
   body {
-    min-height: 100%;
     background-color: #525659;
   }
   .sidebar {
