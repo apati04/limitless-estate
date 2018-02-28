@@ -1,3 +1,11 @@
+html {
+  height: 100%;
+}
+body {
+  min-height: 100%;
+  background-color: #343a40 !important;
+}
+
 .navbar .nav-link {
   font-size: 14px;
   padding-left: 1em !important;
@@ -189,21 +197,35 @@ object {
 @media (min-width: 1200px) { ... } */
 
 @media (max-width: 768px) {
-  html,
-  body {
+  html {
     height: 100%;
-    background-color: #343a40 !important;
   }
+  body {
+    min-height: 100%;
+    background-color: #525659;
+  }
+
   .sidebar {
     display: none;
   }
+  #resume {
+    position: relative;
+  }
   object {
-    position: fixed;
-    margin-left: auto;
-    margin-right: auto;
+    position: absolute;
+    /* bring your own prefixes */
+    width: 100%;
+    padding-left: 25px;
   }
 }
 @media (min-width: 992px) {
+  html {
+    height: 100%;
+  }
+  body {
+    min-height: 100%;
+    background-color: #343a40 !important;
+  }
   .modal-lg {
     max-width: 800px;
   }
