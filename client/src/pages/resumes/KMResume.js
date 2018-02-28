@@ -8,10 +8,10 @@ export default class KMResume extends Component {
       <div className="container-fluid bg-dark">
         <div className="row justify-content-between">
           <Sidebar />
-          <main style={{ height: '100vh' }} className="col-md-10 ml-sm-auto col-lg-10 pt-2">
+          <main className="col-md-10 ml-sm-auto col-lg-10 pt-2">
             <div className="container-fluid">
-              <div className="row">
-                <div className="col-12">
+              <div className="row align-self-center">
+                <div id="resume" className="col-12">
                   <object data={kyle} type="application/pdf">
                     resume
                   </object>
