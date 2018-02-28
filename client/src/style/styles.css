@@ -195,7 +195,7 @@ footer {
 
 @media only screen and (max-width: 768px) {
   .sidebar {
-    visibility: hidden;
+    display: none;
   }
 }
 @media (min-width: 992px) {
