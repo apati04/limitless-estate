@@ -16,7 +16,15 @@ import Resources from '../pages/Resources';
 import KMResume from '../pages/resumes/KMResume';
 import LCResume from '../pages/resumes/LCResume';
 import LPResume from '../pages/resumes/LPResume';
-
+const Construction = () => {
+  return (
+    <div style={{ height: '100vh' }} className="container-fluid bg-dark">
+      <h2 style={{ padding: '100px' }} className="text-center text-white">
+        Under Construction, Coming Soon!
+      </h2>
+    </div>
+  );
+};
 class App extends Component {
   render() {
     return (
@@ -26,6 +34,7 @@ class App extends Component {
             <Route path="/resume/km" component={KMResume} />
             <Route path="/resume/lp" component={LPResume} />
             <Route path="/resume/lc" component={LCResume} />
+            <Route exact path="/" component={Construction} />
             <ScrollToTop>
               <Navbar />
               <Route path="/about" component={About} />
@@ -34,7 +43,8 @@ class App extends Component {
               <Route exact path="/markets" component={Markets} />
               <Route path="/markets/ecorse" component={Ecorse} />
               <Route path="/markets/columbus" component={Columbus} />
-              <Route exact path="/" component={LandingPage} />
+              <Route exact path="/api/home" component={LandingPage} />
+
               <Footer />
             </ScrollToTop>
           </Switch>
