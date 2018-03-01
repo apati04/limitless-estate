@@ -41,8 +41,8 @@ class App extends Component {
               <Route path="/contact" component={Contact} />
               <Route path="/resources" component={Resources} />
               <Route exact path="/markets" component={Markets} />
-              <Route path="/markets/ecorse" component={Ecorse} />
-              <Route path="/markets/columbus" component={Columbus} />
+              <Route path="/markets/riverparkjefferson" component={Ecorse} />
+              <Route path="/markets/arlingtonheights" component={Columbus} />
               <Route exact path="/api/home" component={LandingPage} />
 
               <Footer />

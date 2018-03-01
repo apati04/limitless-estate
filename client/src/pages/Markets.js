@@ -34,6 +34,7 @@ class Markets extends Component {
                   bodyText="57 Unit Multifamily Investment Opportunity"
                   supportText={[<div>text area</div>, <div>More info below...</div>]}
                   photo={arlington}
+                  marketRoute="arlingtonheights"
                 />
               </div>
             </div>
@@ -41,7 +42,7 @@ class Markets extends Component {
           {/* Detriot  */}
           <main role="main" className="container">
             <div className="row">
-              <div className="col-md-12">
+              <div className=" col-md-12">
                 <h2 className="display-4 pb-3 mb-4 font-italic border-bottom">Detriot, MI</h2>
               </div>
             </div>
@@ -53,6 +54,7 @@ class Markets extends Component {
                   bodyText="72 Unit Multifamily Investment Opportunity"
                   supportText={[<div>text area</div>, <div>More info below...</div>]}
                   photo={ecorse}
+                  marketRoute="riverparkjefferson"
                 />
               </div>
             </div>
