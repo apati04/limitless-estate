@@ -16,13 +16,8 @@ const style = {
 export default ({ firstName, lastName, position, photo, bio }) => {
   return (
     <div style={style.card} className="col-lg-4">
-<<<<<<< HEAD
-      <img class="rounded-circle" src={photo} alt="Generic placeholder" width="230" height="230" />
-=======
-   
         <img style={{border: '3px outset #eee'}} className="rounded-circle" src={photo} alt="Generic placeholder" width="230" height="230" />
-   
->>>>>>> about/style
+
       <h2>{`${firstName} ${lastName}`}</h2>
       <p>{position}</p>
       <p>

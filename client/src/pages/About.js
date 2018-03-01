@@ -60,35 +60,17 @@ export default class About extends Component {
           </div>
         </section>
 
-<<<<<<< HEAD
-        <div style={{ marginBottom: '-20px' }} className="py-5 text-center bg-secondary text-white">
-          <div className="container">
-            <h1>Meet The Team</h1>
-            <hr />
-            <div className="row">
-              <MemberCard firstName="Kyle" lastName="Mitchell" position="President" photo="" bio="" />
-              <MemberCard firstName="Lalita" lastName="Patipaksiri" />
-              <MemberCard firstName="Luis" lastName="Cruz" />
-            </div>
-          </div>
-        </div>
-=======
 
->>>>>>> about/style
         <div style={{ marginBottom: '-20px' }} className="py-5 text-center bg-secondary text-white">
           <div className="container">
             <h1 className="display-4">Meet the Team</h1>
             <hr />
             <div className="row">
-<<<<<<< HEAD
-              <MemberCard firstName="Kyle" lastName="Mitchell" position="President" photo="" bio="" />
-              <MemberCard firstName="Lalita" lastName="Patipaksiri" />
-              <MemberCard firstName="Luis" lastName="Cruz" />
-=======
+
               <MemberCard firstName="Kyle" lastName="Mitchell" position="President" photo={kyleImg} bio="" />
               <MemberCard firstName="Lalita" lastName="Patipaksiri" photo={lalitaImg} position="Managing Member" />
               <MemberCard firstName="Luis" lastName="Cruz" position="Managing Member" photo={luisImg} />
->>>>>>> about/style
+
             </div>
           </div>
         </div>
