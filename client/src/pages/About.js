@@ -81,6 +81,9 @@ export default class About extends Component {
             <div className="row">
               <div style={style.card} className="col-lg-4">
                 <img
+                  style={{
+                    borderRadius: '20%',
+                  }}
                   className="img-fluid"
                   src="/img/team/KMitchell.jpg"
                   alt="Generic placeholder"
