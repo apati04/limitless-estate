@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from "react-router-dom";
 
 class SlideShow extends Component {
   render() {
@@ -17,9 +18,9 @@ class SlideShow extends Component {
               <div className="dark-overlay">
                 <div className="container">
                   <div className="carousel-caption d-none d-sm-block text-right mb-5">
-                    <h1 className="display-3">Heading</h1>
-                    <p className="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                    <button className="btn btn-outline-warning btn-lg">Learn More</button>
+                    <h1 className="display-3">Turn Your Dreams Into Reality</h1>
+                    <p className="lead">- Limitless Is Where Dreams Come Home</p>
+                    <Link to="/about" className="btn btn-outline-light btn-lg">Learn More</Link>
                   </div>
                 </div>
               </div>
@@ -29,9 +30,9 @@ class SlideShow extends Component {
               <div className="dark-overlay">
                 <div className="container">
                   <div className="carousel-caption d-none d-sm-block text-right mb-5">
-                    <h1 className="display-3">"Mission Statement Here"</h1>
-                    <p className="lead">~Lalita Patipaksiri, Co-Founder</p>
-                    <button className="btn btn-primary btn-lg">Learn More</button>
+                    <h1 className="display-3">We Will Take You On A Journey</h1>
+                    <p className="lead">- Limitless Is Here To Help</p>
+                    <Link to="/resources" className="btn btn-outline-light btn-lg">Learn More</Link>
                   </div>
                 </div>
               </div>
@@ -40,14 +41,9 @@ class SlideShow extends Component {
               <div className="dark-overlay">
                 <div className="container">
                   <div className="carousel-caption d-none d-sm-block text-right mb-5">
-                    <h1 className="display-3">Heading Three</h1>
-                    <p className="lead">
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae consequuntur architecto eius
-                      magni nobis nulla eaque. Deserunt sunt, distinctio quos.
-                    </p>
-                    <a href="#" className="btn btn-success btn-lg">
-                      Learn More
-                    </a>
+                    <h1 className="display-3">Opportunities Are Limitless</h1>
+                    <p className="lead">- Limitless Can Guide You Home</p>
+                    <Link to="/markets" className="btn btn-outline-light btn-lg">Learn More</Link>
                   </div>
                 </div>
               </div>

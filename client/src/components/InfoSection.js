@@ -7,11 +7,11 @@ const InfoSection = () =>{
       <div className="container">
         <div className="row">
           <div className="col-md-6 align-self-center">
-            <h3>Pitch Title</h3>
-            <p>Insert pitch here Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium beatae eaque quos eligendi, laboriosam. Culpa consequuntur illum facere id molestias.</p>
-              <Link  to='/markets'>
-              <button  className="btn btn-outline-danger btn-lg mt-5">See Markets</button>
-              </Link>
+            <h3>Your Next Chapter Starts With Us</h3>
+            <p>Check out all the Limitless opportunities that are waiting for you!</p>
+            <Link to='/markets'>
+              <button className="btn btn-outline-dark btn-lg mt-5">See Markets</button>
+            </Link>
           </div>
           <div className="col-md-6">
             <img src="/img/chart2.jpg" className="img-fluid" alt=""/>

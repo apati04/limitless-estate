@@ -8,7 +8,7 @@ const LandingParallax = () => {
           <div className="col">
             <div className="container pt-5">
               <h1>Are you ready to invest with us?</h1>
-              <p className="d-none d-md-block">No, rip in pieces</p>
+              <p className="d-none d-md-block">We Will Guide You</p>
             </div>
           </div>
         </div>
