@@ -10,7 +10,7 @@ const InfoSection = () =>{
             <h3>Your Next Chapter Starts With Us</h3>
             <p>Check out all the Limitless opportunities that are waiting for you!</p>
             <Link to='/markets'>
-              <button className="btn btn-outline-danger btn-lg mt-5">See Markets</button>
+              <button className="btn btn-outline-dark btn-lg mt-5">See Markets</button>
             </Link>
           </div>
           <div className="col-md-6">
