@@ -14,7 +14,7 @@ const NewsLetter = () => {
               <label className="sr-only" htmlFor="email">Email</label>
               <input type="email" className="form-control mb-2 mr-sm-2 mb-sm-0" placeholder="Enter Email"/>
               <div>
-                <Link to="/"><button type="button" className="btn btn-outline-warning btn-block">Subscribe</button></Link>
+                <Link to="/" className="btn btn-outline-light btn-block">Subscribe</Link>
               </div>
             </form>
           </div>
