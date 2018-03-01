@@ -4,21 +4,14 @@ import PageHeader from '../components/PageHeader';
 import RegisterModal from '../components/RegisterModal';
 import { kyle, lalita, luis } from '../api/bios';
 import { browserHistory } from 'react-router-dom';
-const style = {
-  card: {
-    marginBottom: '1.5em',
-    textAlign: 'center',
-  },
-  headline: { fontWeight: '400' },
-  subText: {
-    marginRight: '.75em',
-    marginLeft: '.75em',
-  },
-};
+
 const jamie =
   'https://media-exp2.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAKmAAAAJGJlNGIzZjYxLTNiNGEtNGFiNS1iYjU2LTI3MzMyN2FkYmRhNg.jpg';
 export default class About extends Component {
   render() {
+    const kyleImg = '/img/team/KMitchell.jpg';
+    const luisImg = '/img/team/LCruz.jpg';
+    const lalitaImg = '/img/team/LPatipak.jpg';
     return (
       <div>
         <PageHeader title="About Us" description="Check out what we do" img="/img/imageLA.jpg" />
@@ -67,94 +60,17 @@ export default class About extends Component {
           </div>
         </section>
 
-        <div id="staff" className="py-5 text-center">
-          {/* <div className="container">
-            <h1>Our Team</h1>
-            <hr />
-            <div className="row">
-              <MemberCard photo="/img/team/KMitchell.jpg" title="Kyle Mitchell" position="President" bio="km" />
-              <MemberCard title="Lalita Patipaksiri" position="Member" bio="lp" photo="/img/advisors/OldCapital4.jpg" />
-              <MemberCard title="Luis Cruz" bio="lc" position="member" photo="/img/team/LCruz.jpg" />
-            </div>
-          </div> */}
-          <div className="container">
-            <div className="row">
-              <div style={style.card} className="col-lg-4">
-                <img
-                  style={{
-                    borderRadius: '20%',
-                  }}
-                  className="img-fluid"
-                  src="/img/team/KMitchell.jpg"
-                  alt="Generic placeholder"
-                  width="400"
-                  height="400"
-                />
-                <h2>Heading</h2>
-                <p>
-                  Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies
-                  vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo
-                  cursus magna.
-                </p>
-                <p>
-                  <a className="btn btn-secondary" href="#" role="button">
-                    View details &raquo;
-                  </a>
-                </p>
-              </div>
 
-              <div style={style.card} className="col-lg-4">
-                <img
-                  class="rounded-circle"
-                  src="http://lorempixel.com/400/200/"
-                  alt="Generic placeholder"
-                  width="230"
-                  height="230"
-                />
-                <h2>Heading</h2>
-                <p>
-                  Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies
-                  vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo
-                  cursus magna.
-                </p>
-                <p>
-                  <a className="btn btn-secondary" href="#" role="button">
-                    View details &raquo;
-                  </a>
-                </p>
-              </div>
-
-              <div style={style.card} className="col-lg-4">
-                <img
-                  class="rounded-circle"
-                  src="http://lorempixel.com/400/200/"
-                  alt="Generic placeholder"
-                  width="230"
-                  height="230"
-                />
-                <h2>Heading</h2>
-                <p>
-                  Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies
-                  vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo
-                  cursus magna.
-                </p>
-                <p>
-                  <a className="btn btn-secondary" href="#" role="button">
-                    View details &raquo;
-                  </a>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
         <div style={{ marginBottom: '-20px' }} className="py-5 text-center bg-secondary text-white">
           <div className="container">
-            <h1>Advisors</h1>
+            <h1 className="display-4">Meet the Team</h1>
             <hr />
             <div className="row">
-              <MemberCard />
-              <MemberCard />
-              <MemberCard />
+
+              <MemberCard firstName="Kyle" lastName="Mitchell" position="President" photo={kyleImg} bio="" />
+              <MemberCard firstName="Lalita" lastName="Patipaksiri" photo={lalitaImg} position="Managing Member" />
+              <MemberCard firstName="Luis" lastName="Cruz" position="Managing Member" photo={luisImg} />
+
             </div>
           </div>
         </div>
