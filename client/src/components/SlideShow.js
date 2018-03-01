@@ -18,8 +18,8 @@ class SlideShow extends Component {
               <div className="dark-overlay">
                 <div className="container">
                   <div className="carousel-caption d-none d-sm-block text-right mb-5">
-                    <h1 className="display-3">"Where Dreams Come Home"</h1>
-                    <p className="lead">- Turn Your Dreams Into Reality</p>
+                    <h1 className="display-3">Turn Your Dreams Into Reality</h1>
+                    <p className="lead">- Limitless Is Where Dreams Come Home</p>
                     <Link to="/about" className="btn btn-outline-light btn-lg">Learn More</Link>
                   </div>
                 </div>
@@ -30,9 +30,9 @@ class SlideShow extends Component {
               <div className="dark-overlay">
                 <div className="container">
                   <div className="carousel-caption d-none d-sm-block text-right mb-5">
-                    <h1 className="display-3">"We're Here To Help"</h1>
-                    <p className="lead">- Limitless Estates Will Take You On A Journey</p>
-                    <Link to="/resources" className="btn btn-outline-warning btn-lg">Learn More</Link>
+                    <h1 className="display-3">We Will Take You On A Journey</h1>
+                    <p className="lead">- Limitless Is Here To Help</p>
+                    <Link to="/resources" className="btn btn-outline-light btn-lg">Learn More</Link>
                   </div>
                 </div>
               </div>
@@ -41,9 +41,9 @@ class SlideShow extends Component {
               <div className="dark-overlay">
                 <div className="container">
                   <div className="carousel-caption d-none d-sm-block text-right mb-5">
-                    <h1 className="display-3">"We Can Guide You Home"</h1>
-                    <p className="lead">- Live Who You Are! Opportunities Are Limitless</p>
-                    <Link to="/markets" className="btn btn-outline-info btn-lg">Learn More</Link>
+                    <h1 className="display-3">Opportunities Are Limitless</h1>
+                    <p className="lead">- Limitless Can Guide You Home</p>
+                    <Link to="/markets" className="btn btn-outline-light btn-lg">Learn More</Link>
                   </div>
                 </div>
               </div>
