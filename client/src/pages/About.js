@@ -9,6 +9,9 @@ const jamie =
   'https://media-exp2.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAKmAAAAJGJlNGIzZjYxLTNiNGEtNGFiNS1iYjU2LTI3MzMyN2FkYmRhNg.jpg';
 export default class About extends Component {
   render() {
+    const kyleImg = '/img/team/KMitchell.jpg';
+    const luisImg = '/img/team/LCruz.jpg';
+    const lalitaImg = '/img/team/LPatipak.jpg';
     return (
       <div>
         <PageHeader title="About Us" description="Check out what we do" img="/img/imageLA.jpg" />
@@ -57,6 +60,7 @@ export default class About extends Component {
           </div>
         </section>
 
+<<<<<<< HEAD
         <div style={{ marginBottom: '-20px' }} className="py-5 text-center bg-secondary text-white">
           <div className="container">
             <h1>Meet The Team</h1>
@@ -68,14 +72,23 @@ export default class About extends Component {
             </div>
           </div>
         </div>
+=======
+
+>>>>>>> about/style
         <div style={{ marginBottom: '-20px' }} className="py-5 text-center bg-secondary text-white">
           <div className="container">
-            <h1>Advisors</h1>
+            <h1 className="display-4">Meet the Team</h1>
             <hr />
             <div className="row">
+<<<<<<< HEAD
               <MemberCard firstName="Kyle" lastName="Mitchell" position="President" photo="" bio="" />
               <MemberCard firstName="Lalita" lastName="Patipaksiri" />
               <MemberCard firstName="Luis" lastName="Cruz" />
+=======
+              <MemberCard firstName="Kyle" lastName="Mitchell" position="President" photo={kyleImg} bio="" />
+              <MemberCard firstName="Lalita" lastName="Patipaksiri" photo={lalitaImg} position="Managing Member" />
+              <MemberCard firstName="Luis" lastName="Cruz" position="Managing Member" photo={luisImg} />
+>>>>>>> about/style
             </div>
           </div>
         </div>
