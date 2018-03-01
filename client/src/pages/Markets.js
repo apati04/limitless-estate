@@ -19,7 +19,6 @@ class Markets extends Component {
       <div>
         <PageHeader title={title} bgRepeat="no-repeat" img={imgURL} />
         <div style={style.marketStyle} className="mt-2 py-5">
-          {/* Columbus */}
           <main role="main" className="container">
             <div className="row">
               <div className="col-md-12">
