@@ -14,7 +14,9 @@ export default ({ marketRoute, headlineText, titleText, bodyText, photo, support
           </h3>
           <div className="mb-1 text-muted">{bodyText}</div>
           <div className="card-text mb-auto">{supportText}</div>
-          <Link to={'/markets/' + marketRoute}>Continue Reading</Link>
+          <Link to={'/markets/' + marketRoute}>
+            <p className="">Continue Reading...</p>
+          </Link>
         </div>
         <img
           src={photo}

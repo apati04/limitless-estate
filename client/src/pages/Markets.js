@@ -31,7 +31,12 @@ class Markets extends Component {
                   titleText="ARLINGTON HEIGHTS"
                   headlineText="2201 Riverside Drive"
                   bodyText="57 Unit Multifamily Investment Opportunity"
-                  supportText={[<div>text area</div>, <div>More info below...</div>]}
+                  supportText={
+                    <ul className="pt-3">
+                      <li key="aar">17% average annual return</li>
+                      <li key="coc">10%+ cash on cash</li>
+                    </ul>
+                  }
                   photo={arlington}
                   marketRoute="arlingtonheights"
                 />
@@ -51,7 +56,12 @@ class Markets extends Component {
                   titleText="RIVER PARK & JEFFERSON MANOR"
                   headlineText="4471 & 4581 High Street"
                   bodyText="72 Unit Multifamily Investment Opportunity"
-                  supportText={[<div>text area</div>, <div>More info below...</div>]}
+                  supportText={
+                    <ul className="pt-3">
+                      <li key="aar">17% average annual return</li>
+                      <li key="coc">10%+ cash on cash</li>
+                    </ul>
+                  }
                   photo={ecorse}
                   marketRoute="riverparkjefferson"
                 />
