@@ -5,14 +5,25 @@ import Content from '../../components/Content';
 import PageHeader from '../../components/PageHeader';
 import RegisterModal from '../../components/RegisterModal';
 import StickyBox from 'react-sticky-box';
-const property_img = '/img/ecorse/image1.png';
-const map_img = '/img/ecorse/image2.png';
-const acquisition_img = '/img/ecorse/image3.png';
-const rent_roll_img = '/img/ecorse/image4.png';
-const income_expenses_img = '/img/ecorse/image5.png';
-const financial_projection_img = '/img/ecorse/image6.png';
-const equity_return_img = '/img/ecorse/image7.png';
-const projected_cash_flow_img = '/img/ecorse/image8.png';
+// const property_img = '/img/ecorse/image1.png';
+// const map_img = '/img/ecorse/image2.png';
+// const acquisition_img = '/img/ecorse/image3.png';
+// const rent_roll_img = '/img/ecorse/image4.png';
+// const income_expenses_img = '/img/ecorse/image5.png';
+// const financial_projection_img = '/img/ecorse/image6.png';
+// const equity_return_img = '/img/ecorse/image7.png';
+// const projected_cash_flow_img = '/img/ecorse/image8.png';
+
+/**
+ * Finacial Statements
+ */
+const FINANCE = '/img/ecorse/financials';
+const acquisitionSummary = `${FINANCE}/acq_sum.jpg`;
+const rentRoll = `${FINANCE}/rentRoll.jpg`;
+const incomeActual = `${FINANCE}/incomeActual.jpg`;
+const fiveYearPL = `${FINANCE}/fiveYearPL.jpg`;
+const equityReturn = `${FINANCE}/equityReturn.jpg`;
+const projectedCashFlows = `${FINANCE}/projectedCashFlows.jpg`;
 
 class Ecorse extends Component {
   render() {
@@ -110,6 +121,42 @@ class Ecorse extends Component {
                     </p>
                   </div>
                 </article>
+                <div>
+                  <h2 className="pb-3 pt-3 mb-3 border-top border-bottom">Acquisition Summary</h2>
+                </div>
+                <div style={{ marginTop: '14px' }}>
+                  <img src={acquisitionSummary} height="200px" alt="" className="img-fluid" />
+                </div>
+                <div>
+                  <h2 className="pb-3 pt-3 mb-3 border-top border-bottom">Rent Roll</h2>
+                </div>
+                <div style={{ marginTop: '14px' }}>
+                  <img src={rentRoll} alt="" className="img-fluid" />
+                </div>
+                <div>
+                  <h2 className="pb-3 pt-3 mb-3 border-top border-bottom">Income And Expenses - Actual</h2>
+                </div>
+                <div style={{ marginTop: '14px' }}>
+                  <img src={incomeActual} alt="" className="img-fluid" />
+                </div>
+                <div>
+                  <h2 className="pb-3 pt-3 mb-3 border-top border-bottom">Five Year Projection</h2>
+                </div>
+                <div style={{ marginTop: '14px' }}>
+                  <img src={fiveYearPL} alt="" className="img-fluid" />
+                </div>
+                <div>
+                  <h2 className="pb-3 pt-3 mb-3 border-top border-bottom">Equity Return at Resale</h2>
+                </div>
+                <div style={{ marginTop: '14px' }}>
+                  <img src={equityReturn} alt="" className="img-fluid border-bottom" />
+                  <div className="border-top mt-4 pt-2">
+                    <p className="lead font-italic">
+                      <strong>Summary of Projected Member Cash Flows and Returns</strong>
+                    </p>
+                    <img src={equityReturn} alt="" className="img-fluid" />
+                  </div>
+                </div>
                 <hr />
                 <small>
                   This material does not constitute an offer or a solicitation to purchase securities. An offer can only
