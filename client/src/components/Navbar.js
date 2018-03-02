@@ -4,13 +4,8 @@ import MenuItem from './navMenuItem';
 
 class Navbar extends Component {
   renderMenu() {
-    const fields = [
-      'about',
-      'markets',
-      'resources',
-      'contact',
-    ];
-    return fields.map((item) => {
+    const fields = ['about', 'markets', 'resources', 'contact'];
+    return fields.map(item => {
       if (item === 'markets') {
         return (
           <li key={item} className="nav-item dropdown">
@@ -25,10 +20,10 @@ class Navbar extends Component {
               MARKETS
             </a>
             <div style={{ backgroundColor: '#eee' }} className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <Link to="/markets/columbus" className="dropdown-item">
+              <Link to="/markets/arlingtonheights" className="dropdown-item">
                 Columbus, OH
               </Link>
-              <Link to="/markets/ecorse" className="dropdown-item">
+              <Link to="/markets/riverparkjefferson" className="dropdown-item">
                 Detroit, MI
               </Link>
               <div style={{ borderTop: '1px solid #c0c3c6' }} className="dropdown-divider" />
@@ -48,7 +43,10 @@ class Navbar extends Component {
   }
   render() {
     return (
-      <nav className="navbar navbar-expand-sm navbar-dark bg-dark sticky-top">
+      <nav
+        style={{ borderBottom: '#008ed6 2px solid' }}
+        className="navbar navbar-expand-sm navbar-dark bg-dark sticky-top"
+      >
         <div className="container">
           <Link to="/" className="navbar-brand">
             Limitless Estates, LLC

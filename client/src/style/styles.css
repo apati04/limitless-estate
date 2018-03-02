@@ -48,7 +48,7 @@ body {
 }
 #landingParallax {
   position: relative;
-  min-height: 204px;
+  min-height: 300px;
   background: url('/img/lobby.jpg') center;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -71,7 +71,7 @@ body {
 }
 .dark-overlay {
   position: absolute;
-  background-color: rgba(0, 0, 0, 0.56);
+  background-color: rgba(0, 0, 0, 0.6);
   top: 0;
   left: 0;
   width: 100%;
@@ -204,5 +204,14 @@ footer {
   }
   .modal-xl {
     max-width: 1000px;
+  }
+}
+
+.display-4 {
+  font-size: 2.5rem;
+}
+@media (min-width: 768px) {
+  .display-4 {
+    font-size: 3rem;
   }
 }

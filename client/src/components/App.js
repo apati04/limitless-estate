@@ -12,10 +12,7 @@ import Contact from '../pages/Contact';
 import Columbus from '../pages/markets/Columbus';
 import Ecorse from '../pages/markets/Ecorse';
 import Resources from '../pages/Resources';
-/* PDF Resumes */
-import KMResume from '../pages/resumes/KMResume';
-import LCResume from '../pages/resumes/LCResume';
-import LPResume from '../pages/resumes/LPResume';
+
 const Construction = () => {
   return (
     <div style={{ height: '100vh' }} className="container-fluid bg-dark">
@@ -31,20 +28,15 @@ class App extends Component {
       <BrowserRouter>
         <div>
           <Switch>
-            <Route path="/resume/km" component={KMResume} />
-            <Route path="/resume/lp" component={LPResume} />
-            <Route path="/resume/lc" component={LCResume} />
-            <Route exact path="/" component={Construction} />
             <ScrollToTop>
               <Navbar />
               <Route path="/about" component={About} />
               <Route path="/contact" component={Contact} />
-              <Route path="/resources" component={Resources} />
+              <Route path="/resources" component={Construction} />
               <Route exact path="/markets" component={Markets} />
               <Route path="/markets/riverparkjefferson" component={Ecorse} />
               <Route path="/markets/arlingtonheights" component={Columbus} />
-              <Route exact path="/api/home" component={LandingPage} />
-
+              <Route exact path="/" component={LandingPage} />
               <Footer />
             </ScrollToTop>
           </Switch>
