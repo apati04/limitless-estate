@@ -5,6 +5,9 @@ import PropertyCard from '../components/PropertyCard';
 const arlington = '/img/columbus/arlingtonHeights.jpg';
 const ecorse = '/img/ecorse/rjmanor.jpg';
 
+const SDP_Columbus = 'https://drive.google.com/file/d/1teIUZKadttGDSCj7Tg26rivLIODfr7ma/view?usp=sharing';
+
+const SDP_Detroit = 'https://drive.google.com/file/d/1z0czV_7QrojZY1YHKazDI1XRtVy0cU2f/view?usp=sharing';
 const style = {
   marketStyle: {
     backgroundImage: 'linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%)',
@@ -23,7 +26,14 @@ class Markets extends Component {
           <main role="main" className="container">
             <div className="row">
               <div className="col-md-12">
-                <h2 className="display-4 pb-3 mb-4 font-italic border-bottom">Columbus, Ohio</h2>
+                <h2 className="pb-3 mb-4  border-bottom">
+                  Columbus, Ohio{' '}
+                  <span className="lead ml-2 font-italic">
+                    (<a target="_blank" href={SDP_Columbus}>
+                      View PDF
+                    </a>)
+                  </span>
+                </h2>
               </div>
             </div>
             <div className="container">
@@ -48,7 +58,14 @@ class Markets extends Component {
           <main role="main" className="container">
             <div className="row">
               <div className=" col-md-12">
-                <h2 className="display-4 pb-3 mb-4 font-italic border-bottom">Detroit, MI</h2>
+                <h2 className="pb-3 mb-4  border-bottom">
+                  Detroit, MI{' '}
+                  <span className="lead ml-2 font-italic">
+                    (<a target="_blank" href={SDP_Detroit}>
+                      View PDF
+                    </a>)
+                  </span>
+                </h2>
               </div>
             </div>
             <div className="container">
