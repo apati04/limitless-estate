@@ -22,6 +22,31 @@ const Construction = () => {
     </div>
   );
 };
+
+const ContactContruction = () => {
+  return (
+    <div style={{ height: '100vh' }} className="container-fluid bg-dark">
+      <h2 style={{ padding: '80px' }} className="text-center text-white">
+        Under Construction, Coming Soon!
+      </h2>
+      <div style={{ color: '#eee' }}>
+        <h2 style={{ fontSize: '30px' }} className="lead text-center">
+          For business inquiries please contact{' '}
+          <a className="text-white" href="mailto:kmitchell@limitless-estates.com">
+            Kyle Mitchell
+          </a>{' '}
+          at
+        </h2>
+        <h2 style={{ fontSize: '30px' }} className="lead text-center">
+          <a href="mailto:kmitchell@limitless-estates.com">kmitchell@limitless-estates.com</a>
+        </h2>
+        <h2 style={{ fontSize: '30px' }} className="lead text-center">
+          Thank you!
+        </h2>
+      </div>
+    </div>
+  );
+};
 class App extends Component {
   render() {
     return (
@@ -30,9 +55,9 @@ class App extends Component {
           <Switch>
             <ScrollToTop>
               <Navbar />
-              <Route path="/about" component={About} />
-              <Route path="/contact" component={Contact} />
-              <Route path="/resources" component={Construction} />
+              <Route exact path="/about" component={About} />
+              <Route exact path="/contact" component={ContactContruction} />
+              <Route exact path="/resources" component={Construction} />
               <Route exact path="/markets" component={Markets} />
               <Route path="/markets/riverparkjefferson" component={Ecorse} />
               <Route path="/markets/arlingtonheights" component={Columbus} />
