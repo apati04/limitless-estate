@@ -143,7 +143,7 @@ class Ecorse extends Component {
                   <h2 className="pb-3 pt-3 mb-3 border-top border-bottom">Five Year Projection</h2>
                 </div>
                 <div style={{ marginTop: '14px' }}>
-                  <img src={fiveYearPL} alt="" className="img-fluid" />
+                  <img src={fiveYearPL} alt="fiveYearPL" className="img-fluid" />
                 </div>
                 <div>
                   <h2 className="pb-3 pt-3 mb-3 border-top border-bottom">Equity Return at Resale</h2>
