@@ -18,7 +18,7 @@ const FINANCE = '/img/columbus/financials';
 const acquisitionSummary = `${FINANCE}/acq_sum.jpg`;
 const rentRoll = `${FINANCE}/rentRoll.png`;
 const incomeActual = `${FINANCE}/incomeActual.jpg`;
-const fiveYearPL = `${FINANCE}/fiveYearPL.jpg`;
+const PLFiveYears = `${FINANCE}/PLFiveYears.jpg`;
 const equityReturn = `${FINANCE}/equityReturn.jpg`;
 const projectedCashFlows = `${FINANCE}/projectedCashFlows.jpg`;
 
@@ -124,7 +124,7 @@ class Columbus extends Component {
                   <h2 className="pb-3 pt-3 mb-3 border-top border-bottom">Five Year Projection</h2>
                 </div>
                 <div style={{ marginTop: '14px' }}>
-                  <img src={fiveYearPL} alt="" className="img-fluid" />
+                  <img src={PLFiveYears} alt="" className="img-fluid" />
                 </div>
                 <div>
                   <h2 className="pb-3 pt-3 mb-3 border-top border-bottom">Equity Return at Resale</h2>
