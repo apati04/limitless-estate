@@ -215,3 +215,8 @@ footer {
     font-size: 3rem;
   }
 }
+.btn:focus,
+.btn:active {
+  outline: none !important;
+  box-shadow: none;
+}

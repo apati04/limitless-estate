@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer style={{ marginTop: '20px' }} className="footer" id="myFooter">
+    <footer style={{ marginTop: '20px', borderBottom: '2px solid black' }} className="footer" id="myFooter">
       <div className="container">
         <div className="row">
           <div className="col-sm-3 myCols">

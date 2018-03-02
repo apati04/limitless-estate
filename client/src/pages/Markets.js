@@ -48,7 +48,7 @@ class Markets extends Component {
           <main role="main" className="container">
             <div className="row">
               <div className=" col-md-12">
-                <h2 className="display-4 pb-3 mb-4 font-italic border-bottom">Detriot, MI</h2>
+                <h2 className="display-4 pb-3 mb-4 font-italic border-bottom">Detroit, MI</h2>
               </div>
             </div>
             <div className="container">
