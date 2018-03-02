@@ -19,12 +19,16 @@ import React from 'react';
 const PageHeader = ({ title, bgPos = '0px -360px', bgRepeat = 'repeat', description }) => {
   return (
     <header id="pageHeader">
-      <div style={{ top: 56, minHeight: '252px' }} className="jumbotron-fluid bg-secondary text-white">
+      <div
+        style={{ top: 56, minHeight: '252px' }}
+        className="border-bottom border-secondary jumbotron-fluid bg-dark text-white"
+      >
         <div className="container">
-          <div className="row">{''}</div>
           <div className="row">
             <div className="col-md-4 m-auto text-center">
-              <h1 className="display-3 mt-5">{title}</h1>
+              <h1 style={{ marginTop: '22%' }} className="display-3">
+                {title}
+              </h1>
               <p>{description || ''}</p>
             </div>
           </div>

@@ -206,3 +206,12 @@ footer {
     max-width: 1000px;
   }
 }
+
+.display-4 {
+  font-size: 2.5rem;
+}
+@media (min-width: 768px) {
+  .display-4 {
+    font-size: 3rem;
+  }
+}
