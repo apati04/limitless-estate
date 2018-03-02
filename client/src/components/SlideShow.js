@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 class SlideShow extends Component {
   render() {
@@ -18,9 +18,11 @@ class SlideShow extends Component {
               <div className="dark-overlay">
                 <div className="container">
                   <div className="carousel-caption d-none d-sm-block text-right mb-5">
-                    <h1 className="display-3">Turn Your Dreams Into Reality</h1>
-                    <p className="lead">- Limitless Is Where Dreams Come Home</p>
-                    <Link to="/about" className="btn btn-outline-light btn-lg">Learn More</Link>
+                    <h1 className="display-4">Turn Your Investments Into Profits</h1>
+                    <p className="lead">- We Can Help Get you there</p>
+                    <Link to="/about" className="btn btn-outline-warning btn-lg">
+                      Meet The Team
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -28,22 +30,28 @@ class SlideShow extends Component {
 
             <div className="carousel-item carousel-image-2">
               <div className="dark-overlay">
-                <div className="container">
-                  <div className="carousel-caption d-none d-sm-block text-right mb-5">
-                    <h1 className="display-3">We Will Take You On A Journey</h1>
-                    <p className="lead">- Limitless Is Here To Help</p>
-                    <Link to="/resources" className="btn btn-outline-light btn-lg">Learn More</Link>
+                <div className="container text-align-top-center">
+                  <div className="justify-content-end carousel-caption d-none d-sm-block mb-5 text-center">
+                    <h1 className="display-4">90% of millionaires have been created by investing in real estate</h1>
+                    <p className="lead" />
+                    <Link to="/about">
+                      <button className="btn btn-lg btn-primary">Learn More</button>
+                    </Link>
                   </div>
                 </div>
               </div>
             </div>
             <div className="carousel-item carousel-image-3">
               <div className="dark-overlay">
-                <div className="container">
-                  <div className="carousel-caption d-none d-sm-block text-right mb-5">
-                    <h1 className="display-3">Opportunities Are Limitless</h1>
-                    <p className="lead">- Limitless Can Guide You Home</p>
-                    <Link to="/markets" className="btn btn-outline-light btn-lg">Learn More</Link>
+                <div className="container text-align-top-center">
+                  <div className="justify-content-end carousel-caption d-none d-sm-block mb-5 text-right">
+                    <div style={{ marginBottom: '80px' }}>
+                      <h1 className="display-4">Invest In Multifamily, Be Financially Free</h1>
+                      <p className="lead" />
+                      <Link to="/markets">
+                        <button className="btn btn-lg btn-info">See Packages</button>
+                      </Link>
+                    </div>
                   </div>
                 </div>
               </div>

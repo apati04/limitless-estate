@@ -28,17 +28,15 @@ class App extends Component {
       <BrowserRouter>
         <div>
           <Switch>
-            <Route exact path="/" component={Construction} />
             <ScrollToTop>
               <Navbar />
               <Route path="/about" component={About} />
               <Route path="/contact" component={Contact} />
-              <Route path="/resources" component={Resources} />
+              <Route path="/resources" component={Construction} />
               <Route exact path="/markets" component={Markets} />
               <Route path="/markets/riverparkjefferson" component={Ecorse} />
               <Route path="/markets/arlingtonheights" component={Columbus} />
-              <Route exact path="/api/home" component={LandingPage} />
-
+              <Route exact path="/" component={LandingPage} />
               <Footer />
             </ScrollToTop>
           </Switch>

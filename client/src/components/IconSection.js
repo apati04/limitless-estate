@@ -3,9 +3,9 @@ import IconTemplate from './IconTemplate';
 
 const IconSection = () => {
   return (
-    <section id="landingIcons" className="py-5">
+    <section style={{ minHeight: '300px' }} id="landingIcons" className="py-5">
       <div className="container">
-        <div className="row">
+        <div style={{ marginTop: '5%' }} className="row">
           <IconTemplate icon="users" title="Community" fontSize="60px" />
           <IconTemplate icon="tasks" title="Honesty" fontSize="60px" />
           <IconTemplate icon="chart-line" title="Integrity" fontSize="60px" />

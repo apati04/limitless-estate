@@ -20,10 +20,10 @@ class Navbar extends Component {
               MARKETS
             </a>
             <div style={{ backgroundColor: '#eee' }} className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <Link to="/markets/columbus" className="dropdown-item">
+              <Link to="/markets/arlingtonheights" className="dropdown-item">
                 Columbus, OH
               </Link>
-              <Link to="/markets/ecorse" className="dropdown-item">
+              <Link to="/markets/riverparkjefferson" className="dropdown-item">
                 Detroit, MI
               </Link>
               <div style={{ borderTop: '1px solid #c0c3c6' }} className="dropdown-divider" />

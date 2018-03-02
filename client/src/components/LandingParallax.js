@@ -7,13 +7,15 @@ const LandingParallax = () => {
         <div className="row">
           <div className="col">
             <div className="container pt-5">
-              <h1>Are you ready to invest with us?</h1>
-              <p className="d-none d-md-block">We Will Guide You</p>
+              <h1 style={{ color: '#f7f7f7', marginTop: '8%' }} className="display-4">
+                Are you ready to invest with us?
+              </h1>
+              <p className="d-none d-md-block" />
             </div>
           </div>
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 export default LandingParallax;
