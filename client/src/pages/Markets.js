@@ -14,7 +14,7 @@ const style = {
 class Markets extends Component {
   render() {
     const imgURL = '/img/pageheader.jpg';
-    const title = 'Markets';
+    const title = 'Sample Deal Packages';
     return (
       <div>
         <PageHeader title={title} bgRepeat="no-repeat" img={imgURL} />

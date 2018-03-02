@@ -31,9 +31,9 @@ class App extends Component {
       <BrowserRouter>
         <div>
           <Switch>
-            <Route path="/resume/km" component={KMResume} />
-            <Route path="/resume/lp" component={LPResume} />
-            <Route path="/resume/lc" component={LCResume} />
+            <Route path="/resume/Kyle" component={KMResume} />
+            <Route path="/resume/Lalita" component={LPResume} />
+            <Route path="/resume/Luis" component={LCResume} />
             <Route exact path="/" component={Construction} />
             <ScrollToTop>
               <Navbar />

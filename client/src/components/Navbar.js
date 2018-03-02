@@ -4,13 +4,8 @@ import MenuItem from './navMenuItem';
 
 class Navbar extends Component {
   renderMenu() {
-    const fields = [
-      'about',
-      'markets',
-      'resources',
-      'contact',
-    ];
-    return fields.map((item) => {
+    const fields = ['about', 'markets', 'resources', 'contact'];
+    return fields.map(item => {
       if (item === 'markets') {
         return (
           <li key={item} className="nav-item dropdown">
@@ -48,7 +43,10 @@ class Navbar extends Component {
   }
   render() {
     return (
-      <nav className="navbar navbar-expand-sm navbar-dark bg-dark sticky-top">
+      <nav
+        style={{ borderBottom: '#008ed6 2px solid' }}
+        className="navbar navbar-expand-sm navbar-dark bg-dark sticky-top"
+      >
         <div className="container">
           <Link to="/" className="navbar-brand">
             Limitless Estates, LLC
