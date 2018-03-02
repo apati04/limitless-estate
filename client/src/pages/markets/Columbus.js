@@ -7,18 +7,20 @@ import PageHeader from '../../components/PageHeader';
 import RegisterModal from '../../components/RegisterModal';
 const property_img = '/img/columbus/image1.png';
 const map_img = '/img/columbus/image2.png';
-const acquisition_img = '/img/columbus/image3.png';
-const rent_roll_img_1 = '/img/columbus/image4.png';
-const rent_roll_img_2 = '/img/columbus/image5.png';
-const income_expenses_img = '/img/columbus/image6.png';
-const rent_roll_final = '/img/columbus/renroll_final.png';
-const financial_projection_img = '/img/columbus/image7.png';
-const equity_return_img = '/img/columbus/image8.png';
-const projected_cash_flow_img = '/img/columbus/image10.png';
-const acq_sum = '/img/columbus/acq_sum.png';
+
 const imgURL = '/img/pageheader.jpg';
 const description = 'Sample Deal Package';
 const title = 'Arlington Heights';
+/**
+ * Finacial Statements
+ */
+const FINANCE = '/img/columbus/financials';
+const acquisitionSummary = `${FINANCE}/acq_sum.jpg`;
+const rentRoll = `${FINANCE}/rentRoll.png`;
+const incomeActual = `${FINANCE}/incomeActual.jpg`;
+const fiveYearPL = `${FINANCE}/fiveYearPL.jpg`;
+const equityReturn = `${FINANCE}/equityReturn.jpg`;
+const projectedCashFlows = `${FINANCE}/projectedCashFlows.jpg`;
 
 class Columbus extends Component {
   render() {
@@ -28,79 +30,6 @@ class Columbus extends Component {
         <section className="py-3">
           <div className="container">
             <div className="row justify-content-between">
-              {/* <div className="col-12 col-md-3 mt-4">
-
-                <StickyBox style={{ marginTop: '-100px', paddingTop: '100px' }}>
-                  <div className="card">
-                    <div className="card-header">
-                      <span className="h6">Navigation</span>
-                    </div>
-                    <ul className="list-group list-group-flush">
-                      <li className="list-group-item list-group-item-action">
-                        <div className="d-flex justify-content-between" onClick={this.handleClick}>
-                          <a href="#content-1">EXECUTIVE SUMMARY</a>
-                        </div>
-                      </li>
-                      <li className="list-group-item list-group-item-action">
-                        <div className="d-flex justify-content-between" onClick={this.handleClick}>
-                          <a href="#content-2">ABOUT THIS PROPERTY</a>
-                        </div>
-                      </li>
-                      <li className="list-group-item list-group-item-action">
-                        <div className="d-flex justify-content-between" onClick={this.handleClick}>
-                          <a href="#content-3">OPPORTUNITY AND BUSINESS PLAN</a>
-                        </div>
-                      </li>
-                      <li className="list-group-item list-group-item-action">
-                        <div className="d-flex justify-content-between" onClick={this.handleClick}>
-                          <a href="#content-4">THE NEIGHBORHOOD</a>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                  <div className="mt-2 card">
-                    <div className="card-header">
-                      <span className="h6">Financial Reports</span>
-                    </div>
-                    <div className="list-group list-group-flush">
-                      <a className="list-group-item d-flex" data-toggle="modal" href="#acquisition">
-                        <i style={{ fontSize: '24px' }} className="far fa-file-alt" />
-                        <span className="ml-2 text-uppercase">Acquisition Summary</span>
-                      </a>
-                      <a
-                        className="list-group-item d-flex justify-content-between"
-                        data-toggle="modal"
-                        href="#profit-loss"
-                      >
-                        <span>5 Year Profit & Loss Projection</span>
-                        <i style={{ fontSize: '24px' }} className="far fa-file-alt" />
-                      </a>
-                      <a className="list-group-item d-flex justify-content-between" data-toggle="modal" href="#inc-exp">
-                        <span>Income And Expenses</span>
-                        <i style={{ fontSize: '24px' }} className="far fa-file-alt" />
-                      </a>
-                      <a
-                        className="list-group-item d-flex justify-content-between"
-                        data-toggle="modal"
-                        href="#equity-return"
-                      >
-                        <span>Equity Return At Resale</span>
-                        <i style={{ fontSize: '24px' }} className="far fa-file-alt" />
-                      </a>
-                      <a
-                        className="list-group-item d-flex justify-content-between"
-                        data-toggle="modal"
-                        href="#rentroll"
-                      >
-                        <span>Rent Roll</span>
-                        <i style={{ fontSize: '24px' }} className="far fa-file-alt" />
-                      </a>
-                    </div>
-                  </div>
-                </StickyBox>
-              </div> 
-              */}
-
               <div className="col-12 col-md-8 mt-4">
                 {/* building stats */}
                 <article>
@@ -173,7 +102,44 @@ class Columbus extends Component {
                     </p>
                   </div>
                 </article>
+                <div>
+                  <h2 className="pb-3 pt-3 mb-3 border-top border-bottom">Acquisition Summary</h2>
+                </div>
+                <div style={{ marginTop: '14px' }}>
+                  <img src={acquisitionSummary} height="200px" alt="" className="img-fluid" />
+                </div>
+                <div>
+                  <h2 className="pb-3 pt-3 mb-3 border-top border-bottom">Rent Roll</h2>
+                </div>
+                <div style={{ marginTop: '14px' }}>
+                  <img src={rentRoll} alt="" className="img-fluid" />
+                </div>
+                <div>
+                  <h2 className="pb-3 pt-3 mb-3 border-top border-bottom">Income And Expenses - Actual</h2>
+                </div>
+                <div style={{ marginTop: '14px' }}>
+                  <img src={incomeActual} alt="" className="img-fluid" />
+                </div>
+                <div>
+                  <h2 className="pb-3 pt-3 mb-3 border-top border-bottom">Five Year Projection</h2>
+                </div>
+                <div style={{ marginTop: '14px' }}>
+                  <img src={fiveYearPL} alt="" className="img-fluid" />
+                </div>
+                <div>
+                  <h2 className="pb-3 pt-3 mb-3 border-top border-bottom">Equity Return at Resale</h2>
+                </div>
+                <div style={{ marginTop: '14px' }}>
+                  <img src={equityReturn} alt="" className="img-fluid border-bottom" />
+                  <div className="border-top mt-4 pt-2">
+                    <p className="lead font-italic">
+                      <strong>Summary of Projected Member Cash Flows and Returns</strong>
+                    </p>
+                    <img src={equityReturn} alt="" className="img-fluid" />
+                  </div>
+                </div>
                 <hr />
+                {/* Legal  */}
                 <small>
                   This material does not constitute an offer or a solicitation to purchase securities. An offer can only
                   be made by the private placement memorandum. This document is an informational summary and is
@@ -204,15 +170,14 @@ class Columbus extends Component {
                 </form>
               </div>
 
-              <div className="col-12 col-md-4 mt-4">
+              <div className="col-md-4 mt-4">
                 <StickyBox style={{ marginTop: '-100px', paddingTop: '100px' }}>
-                  {/* Financial Data  */}
                   <MapBox address="2201 Riverside Drive, Columbus, OH" />
                 </StickyBox>
               </div>
 
               {/* Each modal must be registered below */}
-              <RegisterModal
+              {/* <RegisterModal
                 id="acquisition"
                 title="Acquisition Summary"
                 body={
@@ -222,7 +187,7 @@ class Columbus extends Component {
                     <small>
                       Closing costs includes origination fees, appraisal, property inspection, legal fees, recording
                       fees, and transfer taxes. The acquisition fee is payable to Limitless Estates, LLC at closing.
-                      Repair escrows are kept in the operating account until needed.{' '}
+                      Repair escrows are kept in the operating account until needed.
                     </small>
                   </div>
                 }
@@ -247,7 +212,7 @@ class Columbus extends Component {
                     <img src="/img/columbus/rentroll.jpg" className="img-fluid" />
                   </div>
                 }
-              />
+              /> */}
             </div>
           </div>
         </section>

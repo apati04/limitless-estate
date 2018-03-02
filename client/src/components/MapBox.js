@@ -21,18 +21,10 @@ class MapBox extends Component {
     const map = new mapboxgl.Map({
       container: 'mapbox',
       style: 'mapbox://styles/mapbox/outdoors-v10',
-      center: [
-        lng,
-        lat,
-      ],
-      zoom: 15,
+      center: [lng, lat],
+      zoom: 11.7,
     });
-    new mapboxgl.Marker()
-      .setLngLat([
-        lng,
-        lat,
-      ])
-      .addTo(map);
+    new mapboxgl.Marker().setLngLat([lng, lat]).addTo(map);
   };
 
   render() {
@@ -41,11 +33,10 @@ class MapBox extends Component {
         className="mb-3"
         id="mapbox"
         style={{
-          height: '30vh',
+          height: '280px',
           width: '100%',
-          border: '3px outset',
-          boxShadow: '0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)',
-          transition: 'all 0.3s cubic-bezier(.25,.8,.25,1)',
+          border: '2px outset #f8f9fa',
+          boxShadow: ' 0 1px 2px rgba(0,0,0,0.24)',
         }}
       />
     );
