@@ -24,91 +24,15 @@ class Ecorse extends Component {
       <div>
         <PageHeader height="320px" title={title} bgPos="800px -430px" description={description} img={imgURL} />
         <section className="py-3">
-          <div className="container-fluid">
+          <div className="container">
             <div className="row justify-content-between">
-              <div className="col-12 col-md-3 mt-4">
-                {/* building stats */}
-                <StickyBox style={{ marginTop: '-100px', paddingTop: '100px' }}>
-                  <div className="card">
-                    <div className="card-header">
-                      <span className="h6">Navigation</span>
-                    </div>
-                    <ul className="list-group list-group-flush">
-                      <li className="list-group-item list-group-item-action">
-                        <div className="d-flex justify-content-between" onClick={this.handleClick}>
-                          <a href="#content-1">EXECUTIVE SUMMARY</a>
-                        </div>
-                      </li>
-                      <li className="list-group-item list-group-item-action">
-                        <div className="d-flex justify-content-between" onClick={this.handleClick}>
-                          <a href="#content-2">ABOUT THIS PROPERTY</a>
-                        </div>
-                      </li>
-                      <li className="list-group-item list-group-item-action">
-                        <div className="d-flex justify-content-between" onClick={this.handleClick}>
-                          <a href="#content-3">OPPORTUNITY AND BUSINESS PLAN</a>
-                        </div>
-                      </li>
-                      <li className="list-group-item list-group-item-action">
-                        <div className="d-flex justify-content-between" onClick={this.handleClick}>
-                          <a href="#content-4">THE NEIGHBORHOOD</a>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-
-                  {/* <div className="mt-2 card">
-                    <div className="card-header">
-                      <span className="h6">Financial Reports</span>
-                    </div>
-                    <div className="list-group list-group-flush">
-                      <a
-                        className="list-group-item d-flex justify-content-between"
-                        data-toggle="modal"
-                        href="#acquisition"
-                      >
-                        <span>Acquisition Summary</span>
-                        <i style={{ fontSize: '24px' }} className="far fa-file-alt" />
-                      </a>
-                      <a
-                        className="list-group-item d-flex justify-content-between"
-                        data-toggle="modal"
-                        href="#profit-loss"
-                      >
-                        <span>5 Year Profit & Loss Projection</span>
-                        <i style={{ fontSize: '24px' }} className="far fa-file-alt" />
-                      </a>
-                      <a className="list-group-item d-flex justify-content-between" data-toggle="modal" href="#inc-exp">
-                        <span>Income And Expenses</span>
-                        <i style={{ fontSize: '24px' }} className="far fa-file-alt" />
-                      </a>
-                      <a
-                        className="list-group-item d-flex justify-content-between"
-                        data-toggle="modal"
-                        href="#equity-return"
-                      >
-                        <span>Equity Return At Resale</span>
-                        <i style={{ fontSize: '24px' }} className="far fa-file-alt" />
-                      </a>
-                      <a
-                        className="list-group-item d-flex justify-content-between"
-                        data-toggle="modal"
-                        href="#rentroll"
-                      >
-                        <span>Rent Roll</span>
-                        <i style={{ fontSize: '24px' }} className="far fa-file-alt" />
-                      </a>
-                    </div>  
-    </div> */}
-                </StickyBox>
-              </div>
               {/* main body section */}
-              <div className="col-12 col-md-6 mt-4">
+              <div className="col-12 col-md-8 mt-4">
                 <article>
                   <div id="content-1">
                     <h2 className="pb-3 mb-3 border-bottom">Executive Summary</h2>
                   </div>
-                  <div style={{ marginLeft: '8px', marginTop: '14px' }}>
+                  <div style={{ marginTop: '14px' }}>
                     <p>
                       Limitless Estates, LLC a California Limited Liability company with offices in Long Beach, CA, is
                       arranging for the acquisition of undivided real estate interests in the above property by a
@@ -139,7 +63,7 @@ class Ecorse extends Component {
                   <div id="content-2">
                     <h2 className="pb-3 mb-3 pt-3 border-top border-bottom">About This Property</h2>
                   </div>
-                  <div style={{ marginLeft: '8px', marginTop: '14px' }}>
+                  <div style={{ marginTop: '14px' }}>
                     <p>
                       The subject property is a 72-unit multifamily low-rise garden style apartment divided into 4
                       buildings located at 4471 & 4581 High Street. There is a 24 unit building and a 12 unit building
@@ -152,7 +76,7 @@ class Ecorse extends Component {
                   <div id="content-3">
                     <h2 className="pb-3 pt-3 mb-3 border-top border-bottom">Opportunity and Business Plan</h2>
                   </div>
-                  <div style={{ marginLeft: '8px', marginTop: '14px' }}>
+                  <div style={{ marginTop: '14px' }}>
                     <p>
                       This property is a value add opportunity with potential upside through management as well as
                       increasing current rents to reflect the local multifamily market. Our plan is to complete interior
@@ -167,7 +91,7 @@ class Ecorse extends Component {
                   <div>
                     <h2 className="pb-3 pt-3 mb-3 border-top border-bottom">The Neighborhood</h2>
                   </div>
-                  <div style={{ marginLeft: '8px', marginTop: '14px' }}>
+                  <div style={{ marginTop: '14px' }}>
                     <p>
                       The subject property is located in the southwest suburbs of Detroit. (DDOT), which is the largest
                       bus transit carrier in Michigan has 44 fixed route bus lines offering services to Detroit and its
@@ -207,7 +131,7 @@ class Ecorse extends Component {
                 <h5 className="mb-4">Sound like the right investment for you?</h5>
                 <form className="d-flex justify-content-between align-items-center">
                   <div>
-                    <a type="button" href="mailto:kmitchell@limitless-estates.com" className="btn btn-success">
+                    <a role="button" href="mailto:kmitchell@limitless-estates.com" className="btn btn-success">
                       Contact Us
                     </a>
                   </div>
@@ -217,7 +141,7 @@ class Ecorse extends Component {
                 </form>
               </div>
               {/* SideBar */}
-              <div className="col-12 col-md-3 mt-4">
+              <div className="col-12 col-md-4 mt-4">
                 <StickyBox style={{ marginTop: '-100px', paddingTop: '100px' }}>
                   {/* Financial Data */}
                   <MapBox address="4471 & 4581 High Street, Ecorse, MI" />

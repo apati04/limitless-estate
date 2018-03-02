@@ -26,10 +26,10 @@ class Columbus extends Component {
       <div>
         <PageHeader title={title} description={description} img={imgURL} />
         <section className="py-3">
-          <div className="container-fluid">
+          <div className="container">
             <div className="row justify-content-between">
-              <div className="col-12 col-md-3 mt-4">
-                {/* building stats */}
+              {/* <div className="col-12 col-md-3 mt-4">
+
                 <StickyBox style={{ marginTop: '-100px', paddingTop: '100px' }}>
                   <div className="card">
                     <div className="card-header">
@@ -58,7 +58,7 @@ class Columbus extends Component {
                       </li>
                     </ul>
                   </div>
-                  {/* <div className="mt-2 card">
+                  <div className="mt-2 card">
                     <div className="card-header">
                       <span className="h6">Financial Reports</span>
                     </div>
@@ -96,19 +96,18 @@ class Columbus extends Component {
                         <i style={{ fontSize: '24px' }} className="far fa-file-alt" />
                       </a>
                     </div>
-                  </div> */}
+                  </div>
                 </StickyBox>
-              </div>
+              </div> 
+              */}
 
-              <div className="col-12 col-md-6 mt-4">
+              <div className="col-12 col-md-8 mt-4">
                 {/* building stats */}
                 <article>
-                  <div style={{ backgroundColor: '#000' }} id="content-1">
-                    <h5 style={{ padding: '8px' }} className="text-white">
-                      EXECUTIVE SUMMARY
-                    </h5>
+                  <div id="content-1">
+                    <h2 className="pb-3 mb-3 border-bottom">Executive Summary</h2>
                   </div>
-                  <div style={{ marginLeft: '8px', marginTop: '14px' }}>
+                  <div style={{ marginTop: '14px' }}>
                     <p>
                       Limitless Estates, LLC a California Limited Liability company with offices in Long Beach, CA, is
                       arranging for the acquisition of undivided real estate interests in the above property by a
@@ -126,12 +125,10 @@ class Columbus extends Component {
                       our financial projections.
                     </p>
                   </div>
-                  <div style={{ backgroundColor: '#000' }} id="content-2">
-                    <h5 style={{ padding: '8px' }} className="text-white">
-                      ABOUT THIS PROPERTY
-                    </h5>
+                  <div id="content-2">
+                    <h2 className="pb-3 pt-3 mb-3 border-top border-bottom">About This Property</h2>
                   </div>
-                  <div style={{ marginLeft: '8px', marginTop: '14px' }}>
+                  <div style={{ marginTop: '14px' }}>
                     <p>
                       The subject property is a 58-unit multifamily walk-up apartment building located at 2201 Riverside
                       Drive. The building is comprised of 3 Two Bedroom/One Bath, 1 Office, and 54 One Bedroom/One Bath
@@ -141,10 +138,8 @@ class Columbus extends Component {
                       way via Riverside Drive.
                     </p>
                   </div>
-                  <div style={{ backgroundColor: '#000' }} id="content-3">
-                    <h5 style={{ padding: '8px' }} className="text-white">
-                      OPPORTUNIY AND BUSINESS PLAN
-                    </h5>
+                  <div id="content-3">
+                    <h2 className="pb-3 pt-3 mb-3 border-top border-bottom">Opportunity and Business Plan</h2>
                   </div>
                   <div style={{ marginLeft: '8px', marginTop: '14px' }}>
                     <p>
@@ -157,13 +152,10 @@ class Columbus extends Component {
                       property management company (Panzera Realty).
                     </p>
                   </div>
-                  <div id="content-4" />
-                  <div style={{ backgroundColor: '#000' }}>
-                    <h5 style={{ padding: '8px' }} className="text-white">
-                      THE NEIGHBORHOOD
-                    </h5>
+                  <div id="content-4">
+                    <h2 className="pb-3 pt-3 mb-3 border-top border-bottom">Neighborhood</h2>
                   </div>
-                  <div style={{ marginLeft: '8px', marginTop: '14px' }}>
+                  <div style={{ marginTop: '14px' }}>
                     <p>
                       The subject property is located in The City of Upper Arlington an affluent first-ring suburb of
                       Central Ohio. Upper Arlington has a population of 34,465 people with a median household income of
@@ -202,7 +194,7 @@ class Columbus extends Component {
                 <h5 className="mb-4">Sound like the right investment for you?</h5>
                 <form className="d-flex justify-content-between align-items-center">
                   <div>
-                    <a type="button" href="mailto:kmitchell@limitless-estates.com" className="btn btn-success">
+                    <a role="button" href="mailto:kmitchell@limitless-estates.com" className="btn btn-success">
                       Contact Us
                     </a>
                   </div>
@@ -212,7 +204,7 @@ class Columbus extends Component {
                 </form>
               </div>
 
-              <div className="col-12 col-md-3 mt-4">
+              <div className="col-12 col-md-4 mt-4">
                 <StickyBox style={{ marginTop: '-100px', paddingTop: '100px' }}>
                   {/* Financial Data  */}
                   <MapBox address="2201 Riverside Drive, Columbus, OH" />
