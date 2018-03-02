@@ -8,6 +8,7 @@ const ecorse = '/img/ecorse/rjmanor.jpg';
 const style = {
   marketStyle: {
     backgroundImage: 'linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%)',
+    marginBottom: '-20px',
   },
 };
 /*bgPos='800px -430px'*/
@@ -18,7 +19,7 @@ class Markets extends Component {
     return (
       <div>
         <PageHeader title={title} bgRepeat="no-repeat" img={imgURL} />
-        <div style={style.marketStyle} className="mt-2 py-5">
+        <div style={style.marketStyle} className="py-5">
           <main role="main" className="container">
             <div className="row">
               <div className="col-md-12">

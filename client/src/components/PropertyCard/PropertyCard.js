@@ -6,12 +6,10 @@ export default ({ marketRoute, headlineText, titleText, bodyText, photo, support
     <div className="col mb-6">
       <div className="card flex-md-row mb-4 box-shadow h-md-250">
         <div className="card-body d-flex flex-column align-items-start">
-          <strong className="d-inline-block mb-2 text-primary">{titleText}</strong>
-          <h3 className="pb-2 mb-0">
-            <a href="/f" className="text-dark">
-              {headlineText}
-            </a>
-          </h3>
+          <Link to={'/markets/' + marketRoute} className="text-dark">
+            <strong className="d-inline-block mb-2 text-primary">{titleText}</strong>
+          </Link>
+          <h3 className="pb-2 mb-0">{headlineText}</h3>
           <div className="mb-1 text-muted">{bodyText}</div>
           <div className="card-text mb-auto">{supportText}</div>
           <Link to={'/markets/' + marketRoute}>

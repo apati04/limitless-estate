@@ -25,11 +25,10 @@ const PageHeader = ({ title, bgPos = '0px -360px', bgRepeat = 'repeat', descript
       >
         <div className="container">
           <div className="row">
-            <div className="col-md-4 m-auto text-center">
-              <h1 style={{ marginTop: '22%' }} className="display-3">
+            <div className="col-md-6 m-auto text-center">
+              <h1 style={{ marginTop: '2em' }} className="display-4">
                 {title}
               </h1>
-              <p>{description || ''}</p>
             </div>
           </div>
         </div>
