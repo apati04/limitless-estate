@@ -25,7 +25,10 @@ export default class About extends Component {
                 <div className="blog-post">
                   <h2 className="blog-post-title mb-2">Why Invest In Multifamily?</h2>
                   <p className="blog-post-meta">
-                    March 2018, by <Link to="/">Kyle Mitchell, CEO</Link>
+                    March 2018, by{' '}
+                    <a target="_blank" href={kyle}>
+                      Kyle Mitchell, CEO
+                    </a>
                   </p>
                   <div className="border-top">
                     <div className="mt-4">
@@ -124,7 +127,7 @@ export default class About extends Component {
         </section>
 
         <div style={{ marginBottom: '-20px' }} className="py-5 text-center text-white bg-secondary">
-          <div style={{ color: '#e7e7e7' }} className="container">
+          <div style={{ color: '#f7f7f7' }} className="container">
             <h1 className="display-4">Meet the Team</h1>
             <hr />
             <div className="row">
