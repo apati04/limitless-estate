@@ -30,7 +30,7 @@ class Columbus extends Component {
         <section className="py-3">
           <div className="container">
             <div className="row justify-content-between">
-              <div className="col-12 col-md-8 mt-4">
+              <div className="col-12 col-lg-8 mt-4">
                 {/* building stats */}
                 <article>
                   <div id="content-1">
@@ -170,7 +170,7 @@ class Columbus extends Component {
                 </form>
               </div>
 
-              <div className="col-md-4 mt-4 d-none d-lg-block">
+              <div className="col-12 col-lg-4 mt-4 d-none d-lg-block">
                 <StickyBox style={{ marginTop: '-100px', paddingTop: '100px' }}>
                   <MapBox address="2201 Riverside Drive, Columbus, OH" />
                 </StickyBox>
