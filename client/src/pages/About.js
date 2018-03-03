@@ -20,7 +20,7 @@ export default class About extends Component {
         <section id="about" className="py-3">
           <div className="container">
             <div className="row">
-              <div className="p-1 col-md-8">
+              <div className="p-1 col-lg-8 col-md-12">
                 <h3 className="pb-3 mb-4 font-italic border-bottom">Message from the Team</h3>
                 <div className="blog-post">
                   <h2 className="blog-post-title mb-2">Why Invest In Multifamily?</h2>
@@ -92,7 +92,7 @@ export default class About extends Component {
                   </div>
                 </div>
               </div>
-              <div className="m-0 p-0 col-md-4">
+              <div className="m-0 p-0 col-lg-4">
                 <img
                   style={{ marginTop: '-50px' }}
                   src={finance}
