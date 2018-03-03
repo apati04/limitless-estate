@@ -12,6 +12,7 @@ import Contact from '../pages/Contact';
 import Columbus from '../pages/markets/Columbus';
 import Ecorse from '../pages/markets/Ecorse';
 import Resources from '../pages/Resources';
+import Legal from '../pages/Legal';
 
 const Construction = () => {
   return (
@@ -59,6 +60,7 @@ class App extends Component {
               <Route exact path="/contact" component={ContactContruction} />
               <Route exact path="/resources" component={Resources} />
               <Route exact path="/markets" component={Markets} />
+              <Route exact path="/legal" component={Legal} />
               <Route path="/markets/riverparkjefferson" component={Ecorse} />
               <Route path="/markets/arlingtonheights" component={Columbus} />
               <Route exact path="/" component={LandingPage} />
