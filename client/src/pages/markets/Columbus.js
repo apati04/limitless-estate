@@ -135,7 +135,7 @@ class Columbus extends Component {
                     <p className="lead font-italic">
                       <strong>Summary of Projected Member Cash Flows and Returns</strong>
                     </p>
-                    <img src={equityReturn} alt="" className="img-fluid" />
+                    <img src={projectedCashFlows} alt="" className="img-fluid" />
                   </div>
                 </div>
                 <hr />

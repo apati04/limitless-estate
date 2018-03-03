@@ -30,12 +30,12 @@ class MapBox extends Component {
   render() {
     return (
       <div
-        className="mb-3"
+        className="mb-3 rounded-circle"
         id="mapbox"
         style={{
-          height: '280px',
-          width: '100%',
-          border: '2px outset #f8f9fa',
+          height: '300px',
+          width: '300px',
+          border: '1px outset #f8f9fa',
           boxShadow: ' 0 1px 2px rgba(0,0,0,0.24)',
         }}
       />
