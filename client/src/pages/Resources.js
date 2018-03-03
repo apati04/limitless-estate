@@ -9,14 +9,20 @@ export default () => {
       <PageHeader title="Resources" bgRepeat="no-repeat" img=""/>
       <div className="container">
         <div className="row">
-          <ul className="list-group" style={{ marginTop: "10px" }}>
-            <h4 className="display-4"><i className="fas fa-home mb-2"/> PACKAGES</h4>
-            <a href="#" className="list-group-item list-group-item-action">Columbus, OH</a>
-            <a href="#" className="list-group-item list-group-item-action">Ecorse, MI</a>
+          <ul style={{ marginTop: "10px" }}>
+            <h4 className="display-4"><i className="fas fa-home mb-2"/> Sample Deal Packages</h4>
+            <li><a href="https://www.dropbox.com/s/0ua23v4ny7n0av5/SDP_Columbus.pdf?dl=1">Columbus, OH</a></li>
+            <li><a href="https://www.dropbox.com/s/xde07c46jyd07fm/SDP_Detroit.pdf?dl=1">Ecorse, MI</a></li>
+          </ul>
+        </div>
+        <div className="row">
+          <ul style={{ marginTop: "10px" }}>
+            <h4 className="display-4"><i className="fas fa-link mb-2"/> Additional Information</h4>
+            <li><a href="https://udirectira.com/">Learn about how you can invest using your 401k or IRA</a></li>
           </ul>
         </div>
         <div className="text-right">
-          <Link to="/" className="btn btn-outline-danger">BACK TO HOME</Link> 
+          <Link to="/" className="btn btn-outline-danger">BACK TO HOME</Link>
         </div>
       </div>
     </div>
