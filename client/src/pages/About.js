@@ -20,7 +20,7 @@ export default class About extends Component {
         <section id="about" className="py-3">
           <div className="container">
             <div className="row">
-              <div className="p-1 col-md-8">
+              <div className="p-1 col-lg-8 col-md-12">
                 <h3 className="pb-3 mb-4 font-italic border-bottom">Message from the Team</h3>
                 <div className="blog-post">
                   <h2 className="blog-post-title mb-2">Why Invest In Multifamily?</h2>
@@ -78,7 +78,7 @@ export default class About extends Component {
                     </p>
                     <p>Here are even more reasons to invest in Multifamily Real Estate:</p>
                     <ul>
-                      <li key="mccr">-More Control over Returns</li>
+                      <li key="mccr">More Control over Returns</li>
                       <li key="cashFl">Cash Flow</li>
                       <li key="adcs">Accelerated Depreciation &amp; Cost Segregation</li>
                       <li key="taxbenefits">Tax Benefits</li>
@@ -92,12 +92,12 @@ export default class About extends Component {
                   </div>
                 </div>
               </div>
-              <div className="m-0 p-0 col-md-4">
+              <div className="m-0 p-0 col-lg-4">
                 <img
                   style={{ marginTop: '-50px' }}
                   src={finance}
                   alt="LimitLess"
-                  className="border border-bottom-0 border-secondary p-0 about-img img-fluid rounded-circle d-none d-md-block"
+                  className="border border-bottom-0 border-secondary p-0 about-img img-fluid rounded-circle d-none d-lg-block"
                 />
               </div>
             </div>
@@ -126,7 +126,7 @@ export default class About extends Component {
           </div> */}
         </section>
 
-        <div className="py-5 text-center text-white bg-secondary">
+        <div className="py-3 text-center text-white bg-secondary">
           <div style={{ color: '#fff' }} className="container">
             <h1 className="display-4">Meet the Team</h1>
             <hr />

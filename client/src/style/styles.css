@@ -202,11 +202,7 @@ footer {
 .display-4 {
   font-size: 2.5rem;
 }
-@media (min-width: 768px) {
-  .display-4 {
-    font-size: 3rem;
-  }
-}
+
 .btn:focus,
 .btn:active {
   outline: none !important;
@@ -214,6 +210,16 @@ footer {
 }
 
 @media only screen and (max-width: 768px) {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  .blog-post-meta {
+    text-align: center;
+  }
+
   .mobileBackground {
     display: block;
     min-height: 300px;
@@ -225,20 +231,11 @@ footer {
     text-align: center;
   }
   .display-4 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     text-align: center;
   }
   .sidebar {
     display: none;
-  }
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-size: 1.5rem;
-    text-align: center;
   }
 
   .btn {
