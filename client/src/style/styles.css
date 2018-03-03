@@ -48,9 +48,10 @@ body {
 }
 #landingParallax {
   position: relative;
-  min-height: 300px;
+  min-height: 252px;
   background: url('/img/lobby.jpg') center;
   background-attachment: fixed;
+  background-size: cover;
   background-repeat: no-repeat;
   text-align: center;
   color: #fff;
