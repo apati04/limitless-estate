@@ -97,7 +97,7 @@ export default class About extends Component {
                   style={{ marginTop: '-50px' }}
                   src={finance}
                   alt="LimitLess"
-                  className="border border-bottom-0 border-secondary p-0 about-img img-fluid rounded-circle d-none d-md-block"
+                  className="border border-bottom-0 border-secondary p-0 about-img img-fluid rounded-circle d-none d-lg-block"
                 />
               </div>
             </div>

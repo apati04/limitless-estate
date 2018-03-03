@@ -188,7 +188,7 @@ class Ecorse extends Component {
                 </form>
               </div>
               {/* SideBar */}
-              <div className="col-12 col-md-4 mt-4">
+              <div className="col-12 col-md-4 mt-4 d-none d-lg-block">
                 <StickyBox style={{ marginTop: '-100px', paddingTop: '100px' }}>
                   {/* Financial Data */}
                   <MapBox address="4471 & 4581 High Street, Ecorse, MI" />

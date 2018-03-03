@@ -170,7 +170,7 @@ class Columbus extends Component {
                 </form>
               </div>
 
-              <div className="col-md-4 mt-4">
+              <div className="col-md-4 mt-4 d-none d-lg-block">
                 <StickyBox style={{ marginTop: '-100px', paddingTop: '100px' }}>
                   <MapBox address="2201 Riverside Drive, Columbus, OH" />
                 </StickyBox>

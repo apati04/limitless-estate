@@ -13,7 +13,7 @@ const InfoSection = () => {
               <button className="btn btn-outline-dark btn-lg mt-5">Sample Deal Packages</button>
             </Link>
           </div>
-          <div className="col col-md-6">
+          <div className="col col-md-6 d-none d-lg-block">
             <img src="/img/chart2.jpg" className="img-fluid" alt="" />
           </div>
         </div>
