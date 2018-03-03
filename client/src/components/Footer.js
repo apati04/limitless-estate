@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -8,28 +9,22 @@ const Footer = () => {
           <div className="col-sm-3 myCols">
             <h5>Get started</h5>
             <ul>
-              <li>
-                <a>Home</a>
+              <li key="fHome">
+                <Link to="/">Home</Link>
               </li>
-              <li>
-                <a>Sign up</a>
-              </li>
-              <li>
-                <a>Downloads</a>
+              <li key="fDl">
+                <Link to="/resources">Downloads</Link>
               </li>
             </ul>
           </div>
           <div className="col-sm-3 myCols">
             <h5>About us</h5>
             <ul>
-              <li>
-                <a>Company Information</a>
+              <li key="fCi">
+                <Link to="/about">Company Information</Link>
               </li>
-              <li>
-                <a>Contact us</a>
-              </li>
-              <li>
-                <a>Reviews</a>
+              <li key="fcon">
+                <a href="mailto:kmitchell@limitless-estates.com">Contact us</a>
               </li>
             </ul>
           </div>
@@ -37,27 +32,21 @@ const Footer = () => {
             <h5>Support</h5>
             <ul>
               <li>
-                <a>FAQ</a>
-              </li>
-              <li>
-                <a>Help desk</a>
-              </li>
-              <li>
-                <a>Forums</a>
+                <Link to="/resources">FAQ</Link>
               </li>
             </ul>
           </div>
           <div className="col-sm-3 myCols">
             <h5>Legal</h5>
             <ul>
-              <li>
-                <a>Terms of Service</a>
+              <li key="lTOS">
+                <Link to="/legal">Terms of Service</Link>
               </li>
-              <li>
-                <a>Terms of Use</a>
+              <li key="ltou">
+                <Link to="/legal">Terms of Use</Link>
               </li>
-              <li>
-                <a>Privacy Policy</a>
+              <li key="lpp">
+                <Link to="/legal">Privacy Policy</Link>
               </li>
             </ul>
           </div>
