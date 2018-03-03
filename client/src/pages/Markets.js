@@ -11,7 +11,6 @@ const SDP_Detroit = 'https://drive.google.com/file/d/1z0czV_7QrojZY1YHKazDI1XRtV
 const style = {
   marketStyle: {
     backgroundImage: 'linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%)',
-    marginBottom: '-20px',
   },
 };
 /*bgPos='800px -430px'*/

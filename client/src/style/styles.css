@@ -80,6 +80,7 @@ body {
 
 footer {
   bottom: 0;
+  min-height: 250px;
 }
 #myFooter {
   background-color: rgba(0, 0, 0, 0.945);

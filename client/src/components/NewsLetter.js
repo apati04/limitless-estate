@@ -25,10 +25,10 @@ import { Link } from 'react-router-dom';
 // </div>;
 const NewsLetter = () => {
   return (
-    <section style={{ marginBottom: '-20px' }} id="newsletter" className="text-center p-5 bg-dark text-white">
+    <section style={{ height: '258px' }} id="newsletter" className="text-center p-5 bg-dark text-white">
       <div className="container">
         <div className="row">
-          <div className="col-12">
+          <div className="mt-4 col-12">
             <h1 className="display-4">Have any questions?</h1>
             <div>
               <h1>
