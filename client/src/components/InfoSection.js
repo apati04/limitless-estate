@@ -6,7 +6,7 @@ const InfoSection = () => {
     <section id="info" className="py-3">
       <div className="container">
         <div className="row">
-          <div className="col-md-6 align-self-center">
+          <div style={{ height: '320px' }} className="col-md-6 align-self-center">
             <h3>Your Next Chapter Starts With Us!</h3>
             <p>Check out the opportunities that are waiting for you</p>
             <Link to="/markets">

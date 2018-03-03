@@ -126,8 +126,8 @@ export default class About extends Component {
           </div> */}
         </section>
 
-        <div style={{ marginBottom: '-20px' }} className="py-5 text-center text-white bg-secondary">
-          <div style={{ color: '#f7f7f7' }} className="container">
+        <div className="py-5 text-center text-white bg-secondary">
+          <div style={{ color: '#fff' }} className="container">
             <h1 className="display-4">Meet the Team</h1>
             <hr />
             <div className="row">

@@ -5,6 +5,8 @@ class SlideShow extends Component {
   render() {
     return (
       <section id="asdf">
+        <div className="mobileBackground" />
+
         <div id="myCarousel" className="carousel slide" data-ride="carousel">
           {/* ___ bottom of slideshow */}
           <ol className="carousel-indicators">
