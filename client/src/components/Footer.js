@@ -6,7 +6,7 @@ const Footer = () => {
     <footer style={{ borderBottom: '2px solid black' }} className="footer" id="myFooter">
       <div className="container">
         <div className="row">
-          <div className="col-sm-3 myCols">
+          <div className="col col-sm-3 myCols">
             <h5>Get started</h5>
             <ul>
               <li key="fHome">
@@ -17,7 +17,7 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="col-sm-3 myCols">
+          <div className="col col-sm-3 myCols">
             <h5>About us</h5>
             <ul>
               <li key="fCi">
@@ -28,7 +28,7 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="col-sm-3 myCols">
+          <div className="col col-sm-3 myCols">
             <h5>Support</h5>
             <ul>
               <li>
@@ -36,7 +36,7 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="col-sm-3 myCols">
+          <div className="col col-sm-3 myCols">
             <h5>Legal</h5>
             <ul>
               <li key="lTOS">

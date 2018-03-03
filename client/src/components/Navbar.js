@@ -4,7 +4,7 @@ import MenuItem from './navMenuItem';
 
 class Navbar extends Component {
   renderMenu() {
-    const fields = ['about', 'markets', 'resources', 'legal', 'contact'];
+    const fields = ['about', 'markets', 'resources', 'contact'];
     return fields.map(item => {
       if (item === 'markets') {
         return (
@@ -45,7 +45,7 @@ class Navbar extends Component {
     return (
       <nav
         style={{ borderBottom: '#008ed6 2px solid' }}
-        className="navbar navbar-expand-sm navbar-dark bg-dark sticky-top"
+        className="navbar navbar-toggleble-sm navbar-expand-sm navbar-dark bg-dark sticky-top"
       >
         <div className="container">
           <Link to="/" className="navbar-brand">

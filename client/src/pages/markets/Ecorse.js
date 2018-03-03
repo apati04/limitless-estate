@@ -38,10 +38,10 @@ class Ecorse extends Component {
           <div className="container">
             <div className="row justify-content-between">
               {/* main body section */}
-              <div className="col-12 col-md-8 mt-4">
+              <div className="col-12 col-lg-8 mt-4">
                 <article>
                   <div id="content-1">
-                    <h2 className="pb-3 mb-3 border-bottom">Executive Summary</h2>
+                    <h2 className="pb-2 mb-3 text-left border-bottom">Executive Summary</h2>
                   </div>
                   <div style={{ marginTop: '14px' }}>
                     <p>
@@ -72,7 +72,7 @@ class Ecorse extends Component {
                     </p>
                   </div>
                   <div id="content-2">
-                    <h2 className="pb-3 mb-3 pt-3 border-top border-bottom">About This Property</h2>
+                    <h2 className="pb-2 mb-3 pt-3 text-left border-bottom">About This Property</h2>
                   </div>
                   <div style={{ marginTop: '14px' }}>
                     <p>
@@ -85,7 +85,7 @@ class Ecorse extends Component {
                     </p>
                   </div>
                   <div id="content-3">
-                    <h2 className="pb-3 pt-3 mb-3 border-top border-bottom">Opportunity and Business Plan</h2>
+                    <h2 className="pb-2 pt-3 mb-3 text-left border-bottom">Opportunity and Business Plan</h2>
                   </div>
                   <div style={{ marginTop: '14px' }}>
                     <p>
@@ -98,9 +98,9 @@ class Ecorse extends Component {
                       Management).
                     </p>
                   </div>
-                  <div id="content-4" />
+
                   <div>
-                    <h2 className="pb-3 pt-3 mb-3 border-top border-bottom">The Neighborhood</h2>
+                    <h2 className="pb-2 pt-3 mb-3 text-left border-bottom">The Neighborhood</h2>
                   </div>
                   <div style={{ marginTop: '14px' }}>
                     <p>
@@ -121,36 +121,36 @@ class Ecorse extends Component {
                     </p>
                   </div>
                 </article>
-                <div>
-                  <h2 className="pb-3 pt-3 mb-3 border-top border-bottom">Acquisition Summary</h2>
+                <div className="border-top">
+                  <h2 className="text-left pb-2 pt-3 mb-3 border-bottom">Acquisition Summary</h2>
                 </div>
                 <div style={{ marginTop: '14px' }}>
                   <img src={acquisitionSummary} height="200px" alt="" className="img-fluid" />
                 </div>
                 <div>
-                  <h2 className="pb-3 pt-3 mb-3 border-top border-bottom">Rent Roll</h2>
+                  <h2 className="pb-2 pt-3 mb-3 text-left border-bottom">Rent Roll</h2>
                 </div>
                 <div style={{ marginTop: '14px' }}>
                   <img src={rentRoll} alt="" className="img-fluid" />
                 </div>
                 <div>
-                  <h2 className="pb-3 pt-3 mb-3 border-top border-bottom">Income And Expenses - Actual</h2>
+                  <h2 className="pb-2 pt-3 mb-3 text-left border-bottom">Income And Expenses - Actual</h2>
                 </div>
                 <div style={{ marginTop: '14px' }}>
                   <img src={incomeActual} alt="" className="img-fluid" />
                 </div>
                 <div>
-                  <h2 className="pb-3 pt-3 mb-3 border-top border-bottom">Five Year Projection</h2>
+                  <h2 className="pb-2 pt-3 mb-3 text-left border-bottom">Five Year Projection</h2>
                 </div>
                 <div style={{ marginTop: '14px' }}>
                   <img src={fiveYearPL} alt="fiveYearPL" className="img-fluid" />
                 </div>
                 <div>
-                  <h2 className="pb-3 pt-3 mb-3 border-top border-bottom">Equity Return at Resale</h2>
+                  <h2 className="pb-2 pt-3 mb-3 text-left border-bottom">Equity Return at Resale</h2>
                 </div>
                 <div style={{ marginTop: '14px' }}>
                   <img src={equityReturn} alt="" className="img-fluid border-bottom" />
-                  <div className="border-top mt-4 pt-2">
+                  <div className="text-left mt-4 pt-2">
                     <p className="lead font-italic">
                       <strong>Summary of Projected Member Cash Flows and Returns</strong>
                     </p>
@@ -188,7 +188,7 @@ class Ecorse extends Component {
                 </form>
               </div>
               {/* SideBar */}
-              <div className="col-12 col-md-4 mt-4">
+              <div className="col-12 col-lg-4 mt-4 d-none d-lg-block">
                 <StickyBox style={{ marginTop: '-100px', paddingTop: '100px' }}>
                   {/* Financial Data */}
                   <MapBox address="4471 & 4581 High Street, Ecorse, MI" />

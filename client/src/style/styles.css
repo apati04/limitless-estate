@@ -1,8 +1,14 @@
 html {
   height: 100%;
 }
-body {
-  min-height: 100%;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
 }
 
 .navbar .nav-link {
@@ -193,7 +199,27 @@ footer {
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) { ... } */
 
+.display-4 {
+  font-size: 2.5rem;
+}
+
+.btn:focus,
+.btn:active {
+  outline: none !important;
+  box-shadow: none;
+}
+
 @media only screen and (max-width: 768px) {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  .blog-post-meta {
+    text-align: center;
+  }
+
   .mobileBackground {
     display: block;
     min-height: 300px;
@@ -204,7 +230,18 @@ footer {
   #myFooter {
     text-align: center;
   }
+  .display-4 {
+    font-size: 2.5rem;
+    text-align: center;
+  }
   .sidebar {
+    display: none;
+  }
+
+  .btn {
+    text-align: center;
+  }
+  #mapbox {
     display: none;
   }
 }
@@ -215,18 +252,4 @@ footer {
   .modal-xl {
     max-width: 1000px;
   }
-}
-
-.display-4 {
-  font-size: 2.5rem;
-}
-@media (min-width: 768px) {
-  .display-4 {
-    font-size: 3rem;
-  }
-}
-.btn:focus,
-.btn:active {
-  outline: none !important;
-  box-shadow: none;
 }
