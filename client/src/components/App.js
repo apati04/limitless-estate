@@ -55,9 +55,9 @@ class App extends Component {
           <Switch>
             <ScrollToTop>
               <Navbar />
+              <Route exact path="/resources" component={Resources} />
               <Route exact path="/about" component={About} />
               <Route exact path="/contact" component={ContactContruction} />
-              <Route exact path="/resources" component={Resources} />
               <Route exact path="/markets" component={Markets} />
               <Route path="/markets/riverparkjefferson" component={Ecorse} />
               <Route path="/markets/arlingtonheights" component={Columbus} />

@@ -17,7 +17,7 @@ export default ({ firstName, lastName, position, photo, resume }) => {
   return (
     <div style={style.card} className="col-lg-4">
       <img
-        style={{ border: '2px outset #eee' }}
+        style={{ border: '2px solid lightgrey' }}
         className="rounded-circle"
         src={photo}
         alt="Generic placeholder"
