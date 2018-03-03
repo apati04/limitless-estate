@@ -34,7 +34,11 @@ body {
   background: url('/img/urban.jpg') no-repeat center 15%;
   background-size: cover;
 }
-
+.mobileBackground {
+  display: none;
+  background: url('/img/urban.jpg') no-repeat center 15%;
+  background-size: cover;
+}
 .carousel-image-3 {
   background: url('/img/imageLA.jpg') no-repeat center 26%;
   background-size: cover;
@@ -161,12 +165,6 @@ footer {
   color: #00aced;
 }
 
-@media screen and (max-width: 767px) {
-  #myFooter {
-    text-align: center;
-  }
-}
-
 .buildBox {
   cursor: pointer;
   transition: background-color 0.2s ease-in-out;
@@ -196,6 +194,16 @@ footer {
 @media (min-width: 1200px) { ... } */
 
 @media only screen and (max-width: 768px) {
+  .mobileBackground {
+    display: block;
+    min-height: 300px;
+  }
+  #myCarousel {
+    display: none;
+  }
+  #myFooter {
+    text-align: center;
+  }
   .sidebar {
     display: none;
   }
