@@ -78,7 +78,7 @@ export default class About extends Component {
                     </p>
                     <p>Here are even more reasons to invest in Multifamily Real Estate:</p>
                     <ul>
-                      <li key="mccr">-More Control over Returns</li>
+                      <li key="mccr">More Control over Returns</li>
                       <li key="cashFl">Cash Flow</li>
                       <li key="adcs">Accelerated Depreciation &amp; Cost Segregation</li>
                       <li key="taxbenefits">Tax Benefits</li>
@@ -126,7 +126,7 @@ export default class About extends Component {
           </div> */}
         </section>
 
-        <div className="py-5 text-center text-white bg-secondary">
+        <div className="py-3 text-center text-white bg-secondary">
           <div style={{ color: '#fff' }} className="container">
             <h1 className="display-4">Meet the Team</h1>
             <hr />

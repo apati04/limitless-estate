@@ -34,7 +34,7 @@ class Columbus extends Component {
                 {/* building stats */}
                 <article>
                   <div id="content-1">
-                    <h2 className="pb-3 mb-3 border-bottom">Executive Summary</h2>
+                    <h2 className="pb-2 mb-3 text-left border-bottom">Executive Summary</h2>
                   </div>
                   <div style={{ marginTop: '14px' }}>
                     <p>
@@ -55,7 +55,7 @@ class Columbus extends Component {
                     </p>
                   </div>
                   <div id="content-2">
-                    <h2 className="pb-3 pt-3 mb-3 border-top border-bottom">About This Property</h2>
+                    <h2 className="pb-2 pt-3 mb-3 text-left border-bottom">About This Property</h2>
                   </div>
                   <div style={{ marginTop: '14px' }}>
                     <p>
@@ -68,7 +68,7 @@ class Columbus extends Component {
                     </p>
                   </div>
                   <div id="content-3">
-                    <h2 className="pb-3 pt-3 mb-3 border-top border-bottom">Opportunity and Business Plan</h2>
+                    <h2 className="pb-2 pt-3 mb-3 text-left border-bottom">Opportunity and Business Plan</h2>
                   </div>
                   <div style={{ marginLeft: '8px', marginTop: '14px' }}>
                     <p>
@@ -82,7 +82,7 @@ class Columbus extends Component {
                     </p>
                   </div>
                   <div id="content-4">
-                    <h2 className="pb-3 pt-3 mb-3 border-top border-bottom">Neighborhood</h2>
+                    <h2 className="pb-2 pt-3 mb-3 text-left border-bottom">Neighborhood</h2>
                   </div>
                   <div style={{ marginTop: '14px' }}>
                     <p>
@@ -103,35 +103,35 @@ class Columbus extends Component {
                   </div>
                 </article>
                 <div>
-                  <h2 className="pb-3 pt-3 mb-3 border-top border-bottom">Acquisition Summary</h2>
+                  <h2 className="pb-2 pt-3 mb-3 text-left border-bottom">Acquisition Summary</h2>
                 </div>
                 <div style={{ marginTop: '14px' }}>
                   <img src={acquisitionSummary} height="200px" alt="" className="img-fluid" />
                 </div>
                 <div>
-                  <h2 className="pb-3 pt-3 mb-3 border-top border-bottom">Rent Roll</h2>
+                  <h2 className="pb-2 pt-3 mb-3 text-left border-bottom">Rent Roll</h2>
                 </div>
                 <div style={{ marginTop: '14px' }}>
                   <img src={rentRoll} alt="" className="img-fluid" />
                 </div>
                 <div>
-                  <h2 className="pb-3 pt-3 mb-3 border-top border-bottom">Income And Expenses - Actual</h2>
+                  <h2 className="pb-2 pt-3 mb-3 text-left border-bottom">Income And Expenses - Actual</h2>
                 </div>
                 <div style={{ marginTop: '14px' }}>
                   <img src={incomeActual} alt="" className="img-fluid" />
                 </div>
                 <div>
-                  <h2 className="pb-3 pt-3 mb-3 border-top border-bottom">Five Year Projection</h2>
+                  <h2 className="pb-2 pt-3 mb-3 text-left border-bottom">Five Year Projection</h2>
                 </div>
                 <div style={{ marginTop: '14px' }}>
                   <img src={PLFiveYears} alt="" className="img-fluid" />
                 </div>
                 <div>
-                  <h2 className="pb-3 pt-3 mb-3 border-top border-bottom">Equity Return at Resale</h2>
+                  <h2 className="pb-2 pt-3 mb-3 text-left border-bottom">Equity Return at Resale</h2>
                 </div>
                 <div style={{ marginTop: '14px' }}>
                   <img src={equityReturn} alt="" className="img-fluid border-bottom" />
-                  <div className="border-top mt-4 pt-2">
+                  <div className="text-left mt-4 pt-2">
                     <p className="lead font-italic">
                       <strong>Summary of Projected Member Cash Flows and Returns</strong>
                     </p>
