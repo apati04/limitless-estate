@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import LazyLoad from "react-lazyload";
+// import LazyLoad from "react-lazyload";
+import { FadeIn } from "react-lazyload-fadein";
 import MapBox from '../../components/MapBox';
 import Content from '../../components/Content';
 import StickyBox from 'react-sticky-box';
@@ -103,61 +104,68 @@ class Columbus extends Component {
                     </p>
                   </div>
                 </article>
+
                 <div>
                   <h2 className="pb-2 pt-3 mb-3 text-left border-bottom">Acquisition Summary</h2>
                 </div>
-
-                <LazyLoad height={200} offset={[-200, 0]}>
-                  <div style={{ marginTop: '14px' }}>
-                    <img src={acquisitionSummary} height="200px" alt="" className="img-fluid" />
-                  </div>
-                </LazyLoad>
+                <FadeIn height={600}>
+                  {onload => (
+                    <div style={{ marginTop: '14px' }}>
+                      <img src={acquisitionSummary} height="200px" alt="" className="img-fluid" onLoad={onload}/>
+                    </div>
+                  )}
+                </FadeIn>
 
                 <div>
                   <h2 className="pb-2 pt-3 mb-3 text-left border-bottom">Rent Roll</h2>
                 </div>
-
-                <LazyLoad height={200} offset={[-200, 0]}>
-                  <div style={{ marginTop: '14px' }}>
-                    <img src={rentRoll} alt="" className="img-fluid" />
-                  </div>
-                </LazyLoad>
+                <FadeIn height={600}>
+                  {onload => (
+                    <div style={{ marginTop: '14px' }}>
+                      <img src={rentRoll} alt="" className="img-fluid" onLoad={onload}/>
+                    </div>
+                  )}
+                </FadeIn>
 
                 <div>
                   <h2 className="pb-2 pt-3 mb-3 text-left border-bottom">Income And Expenses - Actual</h2>
                 </div>
-
-                <LazyLoad height={200} offset={[-200, 0]}>
-                  <div style={{ marginTop: '14px' }}>
-                    <img src={incomeActual} alt="" className="img-fluid" />
-                  </div>
-                </LazyLoad>
+                <FadeIn height={600}>
+                  {onload => (
+                    <div style={{ marginTop: '14px' }}>
+                      <img src={incomeActual} alt="" className="img-fluid" onLoad={onload}/>
+                    </div>
+                  )}
+                </FadeIn>
 
                 <div>
                   <h2 className="pb-2 pt-3 mb-3 text-left border-bottom">Five Year Projection</h2>
                 </div>
+                <FadeIn height={600}>
+                  {onload => (
+                    <div style={{ marginTop: '14px' }}>
+                      <img src={PLFiveYears} alt="" className="img-fluid" onLoad={onload}/>
+                    </div>
+                  )}
+                </FadeIn>
 
-                <LazyLoad height={200} offset={[-200, 0]}>
-                  <div style={{ marginTop: '14px' }}>
-                    <img src={PLFiveYears} alt="" className="img-fluid" />
-                  </div>
-                </LazyLoad>
                 <div>
-
                   <h2 className="pb-2 pt-3 mb-3 text-left border-bottom">Equity Return at Resale</h2>
                 </div>
-
-                <LazyLoad height={200} offset={[-200, 0]}>
-                  <div style={{ marginTop: '14px' }}>
-                    <img src={equityReturn} alt="" className="img-fluid border-bottom" />
-                    <div className="text-left mt-4 pt-2">
-                      <p className="lead font-italic">
-                        <strong>Summary of Projected Member Cash Flows and Returns</strong>
-                      </p>
-                      <img src={equityReturn} alt="" className="img-fluid" />
+                <FadeIn height={600}>
+                  {onload => (
+                    <div style={{ marginTop: '14px' }}>
+                      <img src={equityReturn} alt="" className="img-fluid border-bottom" />
+                      <div className="text-left mt-4 pt-2">
+                        <p className="lead font-italic">
+                          <strong>Summary of Projected Member Cash Flows and Returns</strong>
+                        </p>
+                        <img src={equityReturn} alt="" className="img-fluid" onLoad={onload}/>
+                      </div>
                     </div>
-                  </div>
-                </LazyLoad>
+                  )}
+                </FadeIn>
+
                 <hr />
                 {/* Legal  */}
                 <small>

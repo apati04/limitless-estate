@@ -14,11 +14,10 @@
     "mapbox-gl": "^0.44.1",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
-    "react-lazyload": "^2.3.0",
+    "react-lazyload-fadein": "^1.0.1",
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.0.14",
-    "react-sticky-box": "^0.6.1",
-    "react-transition-group": "^2.2.1"
+    "react-sticky-box": "^0.6.1"
   },
   "scripts": {
     "start": "react-scripts start",
