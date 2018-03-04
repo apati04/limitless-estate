@@ -29,16 +29,16 @@ const NewsLetter = () => {
       <div className="container">
         <div className="row">
           <div className="mt-4 col-12">
-            <h1 className="display-4">Have any questions?</h1>
+            <h2 className="display-4 news-title">Have any questions?</h2>
             <div>
-              <h1>
+              <h2 className="news-text">
                 Send us an email
                 <span style={{ marginLeft: '20px' }}>
                   <a href="mailto:kmitchell@limitless-estates.com">
                     <i style={{ fontSize: '45px' }} className="far fa-envelope" />
                   </a>
                 </span>
-              </h1>
+              </h2>
             </div>
           </div>
         </div>
