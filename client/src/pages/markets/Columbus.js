@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+// import { FadeIn } from "react-lazyload-fadein";
+import FadeIn from '../../components/FadeIn';
 import MapBox from '../../components/MapBox';
 import Content from '../../components/Content';
 import StickyBox from 'react-sticky-box';
@@ -105,39 +107,55 @@ class Columbus extends Component {
                 <div>
                   <h2 className="pb-2 pt-3 mb-3 text-left border-bottom">Acquisition Summary</h2>
                 </div>
-                <div style={{ marginTop: '14px' }}>
-                  <img src={acquisitionSummary} height="200px" alt="" className="img-fluid" />
-                </div>
+
+                <FadeIn>
+                  <div style={{ marginTop: '14px' }}>
+                    <img src={acquisitionSummary} alt="" className="img-fluid"/>
+                  </div>
+                </FadeIn>
+
                 <div>
                   <h2 className="pb-2 pt-3 mb-3 text-left border-bottom">Rent Roll</h2>
                 </div>
-                <div style={{ marginTop: '14px' }}>
-                  <img src={rentRoll} alt="" className="img-fluid" />
-                </div>
+                <FadeIn>
+                  <div style={{ marginTop: '14px' }}>
+                    <img src={rentRoll} alt="" className="img-fluid"/>
+                  </div>
+                </FadeIn>
+
                 <div>
                   <h2 className="pb-2 pt-3 mb-3 text-left border-bottom">Income And Expenses - Actual</h2>
                 </div>
-                <div style={{ marginTop: '14px' }}>
-                  <img src={incomeActual} alt="" className="img-fluid" />
-                </div>
+                <FadeIn>
+                  <div style={{ marginTop: '14px' }}>
+                    <img src={incomeActual} alt="" className="img-fluid"/>
+                  </div>
+                </FadeIn>
+
                 <div>
                   <h2 className="pb-2 pt-3 mb-3 text-left border-bottom">Five Year Projection</h2>
                 </div>
-                <div style={{ marginTop: '14px' }}>
-                  <img src={PLFiveYears} alt="" className="img-fluid" />
-                </div>
+                <FadeIn>
+                  <div style={{ marginTop: '14px' }}>
+                    <img src={PLFiveYears} alt="" className="img-fluid"/>
+                  </div>
+                </FadeIn>
+
                 <div>
                   <h2 className="pb-2 pt-3 mb-3 text-left border-bottom">Equity Return at Resale</h2>
                 </div>
-                <div style={{ marginTop: '14px' }}>
-                  <img src={equityReturn} alt="" className="img-fluid border-bottom" />
-                  <div className="text-left mt-4 pt-2">
-                    <p className="lead font-italic">
-                      <strong>Summary of Projected Member Cash Flows and Returns</strong>
-                    </p>
-                    <img src={projectedCashFlows} alt="" className="img-fluid" />
+                <FadeIn>
+                  <div style={{ marginTop: '14px' }}>
+                    <img src={equityReturn} alt="" className="img-fluid border-bottom" />
+                    <div className="text-left mt-4 pt-2">
+                      <p className="lead font-italic">
+                        <strong>Summary of Projected Member Cash Flows and Returns</strong>
+                      </p>
+                      <img src={projectedCashFlows} alt="" className="img-fluid" />
+                    </div>
                   </div>
-                </div>
+                </FadeIn>
+
                 <hr />
                 {/* Legal  */}
                 <small>
@@ -182,27 +200,27 @@ class Columbus extends Component {
                 title="Acquisition Summary"
                 body={
                   <div>
-                    <img src={acq_sum} className="img-fluid" />
-                    <hr />
-                    <small>
-                      Closing costs includes origination fees, appraisal, property inspection, legal fees, recording
-                      fees, and transfer taxes. The acquisition fee is payable to Limitless Estates, LLC at closing.
-                      Repair escrows are kept in the operating account until needed.
-                    </small>
+                <img src={acq_sum} className="img-fluid" />
+                <hr />
+                <small>
+                Closing costs includes origination fees, appraisal, property inspection, legal fees, recording
+                fees, and transfer taxes. The acquisition fee is payable to Limitless Estates, LLC at closing.
+                Repair escrows are kept in the operating account until needed.
+                </small>
                   </div>
                 }
-              />
-              <RegisterModal
+                />
+                <RegisterModal
                 id="incomeSummary"
                 title="Income Expenses"
                 size="modal-lg"
                 body={
                   <div>
-                    <img src={income_expenses_img} />
+                <img src={income_expenses_img} />
                   </div>
                 }
-              />
-              <RegisterModal
+                />
+                <RegisterModal
                 id="rentroll"
                 title="Rent Roll"
                 size="modal-xl"
