@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import FadeIn from '../../components/FadeIn';
 import MapBox from '../../components/MapBox';
 import Content from '../../components/Content';
 import PageHeader from '../../components/PageHeader';
@@ -121,42 +122,57 @@ class Ecorse extends Component {
                     </p>
                   </div>
                 </article>
-                <div className="border-top">
+
+                <div>
                   <h2 className="text-left pb-2 pt-3 mb-3 border-bottom">Acquisition Summary</h2>
                 </div>
-                <div style={{ marginTop: '14px' }}>
-                  <img src={acquisitionSummary} height="200px" alt="" className="img-fluid" />
-                </div>
+                <FadeIn>
+                  <div style={{ marginTop: '14px' }}>
+                    <img src={acquisitionSummary} height="200px" alt="" className="img-fluid" />
+                  </div>
+                </FadeIn>
+
                 <div>
                   <h2 className="pb-2 pt-3 mb-3 text-left border-bottom">Rent Roll</h2>
                 </div>
-                <div style={{ marginTop: '14px' }}>
-                  <img src={rentRoll} alt="" className="img-fluid" />
-                </div>
+                <FadeIn>
+                  <div style={{ marginTop: '14px' }}>
+                    <img src={rentRoll} alt="" className="img-fluid" />
+                  </div>
+                </FadeIn>
+
                 <div>
                   <h2 className="pb-2 pt-3 mb-3 text-left border-bottom">Income And Expenses - Actual</h2>
                 </div>
-                <div style={{ marginTop: '14px' }}>
-                  <img src={incomeActual} alt="" className="img-fluid" />
-                </div>
+                <FadeIn>
+                  <div style={{ marginTop: '14px' }}>
+                    <img src={incomeActual} alt="" className="img-fluid" />
+                  </div>
+                </FadeIn>
+
                 <div>
                   <h2 className="pb-2 pt-3 mb-3 text-left border-bottom">Five Year Projection</h2>
                 </div>
-                <div style={{ marginTop: '14px' }}>
-                  <img src={fiveYearPL} alt="fiveYearPL" className="img-fluid" />
-                </div>
+                <FadeIn>
+                  <div style={{ marginTop: '14px' }}>
+                    <img src={fiveYearPL} alt="fiveYearPL" className="img-fluid" />
+                  </div>
+                </FadeIn>
+
                 <div>
                   <h2 className="pb-2 pt-3 mb-3 text-left border-bottom">Equity Return at Resale</h2>
                 </div>
-                <div style={{ marginTop: '14px' }}>
-                  <img src={equityReturn} alt="" className="img-fluid border-bottom" />
-                  <div className="text-left mt-4 pt-2">
-                    <p className="lead font-italic">
-                      <strong>Summary of Projected Member Cash Flows and Returns</strong>
-                    </p>
-                    <img src={equityReturn} alt="" className="img-fluid" />
+                <FadeIn>
+                  <div style={{ marginTop: '14px' }}>
+                    <img src={equityReturn} alt="" className="img-fluid border-bottom" />
+                    <div className="text-left mt-4 pt-2">
+                      <p className="lead font-italic">
+                        <strong>Summary of Projected Member Cash Flows and Returns</strong>
+                      </p>
+                      <img src={equityReturn} alt="" className="img-fluid" />
+                    </div>
                   </div>
-                </div>
+                </FadeIn>
                 <hr />
                 <small>
                   This material does not constitute an offer or a solicitation to purchase securities. An offer can only
