@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-// import { FadeIn } from "react-lazyload-fadein";
 import FadeIn from '../../components/FadeIn';
 import MapBox from '../../components/MapBox';
 import Content from '../../components/Content';
