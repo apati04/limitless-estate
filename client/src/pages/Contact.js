@@ -8,7 +8,7 @@ class Contact extends Component {
       <div>
         <PageHeader
           title="Contact Us"
-          description="Feel free to ask us any questions!!"
+          description="Feel free to ask us any questions!!!!"
           img="/img/urban.jpg"
         />
         <Form />
