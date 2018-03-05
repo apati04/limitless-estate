@@ -4,7 +4,10 @@
   "private": true,
   "proxy": {
     "/api/pdf": {
-      "target": "http://localhost:3000"
+      "target": "http://localhost:3001"
+    },
+    "/api/sendmail": {
+      "target": "http://localhost:3001"
     }
   },
   "dependencies": {

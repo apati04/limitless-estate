@@ -51,8 +51,10 @@ export default withFormik({
       .required('Field is required'),
     message: Yup.string().required('Field is required'),
   }),
-  handleSubmit(values, { resetForm, setErrors, setSubmitting }) {
-    console.log(arguments);
+  async handleSubmit(values, { resetForm, setErrors, setSubmitting }) {
+    const payload = await axios.post('/api/sendmail', values);
+    console.log('payload: ', payload);
+
     resetForm();
     setSubmitting(false);
   },
