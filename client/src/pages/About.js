@@ -13,6 +13,9 @@ export default class About extends Component {
     const kyleImg = '/img/team/KMitchell.jpg';
     const luisImg = '/img/team/LCruz.jpg';
     const lalitaImg = '/img/team/LPatipak.jpg';
+    const huashaImg ='/img/advisors/huasha-liu.jpeg';
+    const michaelImg ='/img/advisors/michael-blank.jpg';
+    const drewImg = '/img/advisors/drew-kniffin.jpg';
     const finance = '/img/background/financial.jpg';
     return (
       <div>
@@ -110,19 +113,19 @@ export default class About extends Component {
           {/* <div className="container">
             <div className="row">
               <div className="col-md-4 mb-4 text-center">
-                <i className="fa fa-cog mb-2" />
-                <h3>Turning Gears</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, maxime.</p>
+            <i className="fa fa-cog mb-2" />
+            <h3>Turning Gears</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, maxime.</p>
               </div>
               <div className="col-md-4 mb-4 text-center">
-                <i className="fa fa-cloud mb-2" />
-                <h3>Sending Data</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, maxime.</p>
+            <i className="fa fa-cloud mb-2" />
+            <h3>Sending Data</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, maxime.</p>
               </div>
               <div className="col-md-4 mb-4 text-center">
-                <i className="fa fa-cart-plus mb-2" />
-                <h3>Making Money</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, maxime.</p>
+            <i className="fa fa-cart-plus mb-2" />
+            <h3>Making Money</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, maxime.</p>
               </div>
             </div>
           </div> */}
@@ -148,6 +151,33 @@ export default class About extends Component {
                 resume={lalita}
               />
               <MemberCard firstName="Luis" lastName="Cruz" position="Vice President" photo={luisImg} resume={luis} />
+            </div>
+          </div>
+          <div style={{ color: '#fff' }} className="container">
+            <h1 className="display-4">Advisors</h1>
+            <hr />
+            <div className="d-flex justify-content-center">
+              <MemberCard
+                firstName="Drew"
+                lastName="Kniffin"
+                photo={drewImg}
+                position="Coach"
+                resume='https://www.ultimateapartmentinvestingguide.com/coach-drew-kniffin/'
+              />
+              <MemberCard
+                firstName="Huasha"
+                lastName="Liu"
+                photo={huashaImg}
+                position="Director at Southern California Association of Governments"
+                resume='https://www.linkedin.com/in/huasha-liu-1207a412/'
+              />
+              <MemberCard
+                firstName="Michael"
+                lastName="Blank"
+                photo={michaelImg}
+                position="Full-Time Entreprenuer, Investor and Coach"
+                resume='http://www.themichaelblank.com/about/'
+              />
             </div>
           </div>
         </div>
