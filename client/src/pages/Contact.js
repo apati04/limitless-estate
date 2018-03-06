@@ -4,7 +4,7 @@ import ContactForm from '../components/Forms/ContactForm';
 
 const styles = {
   formStyle: {
-    height: '60vh',
+    height: '100vh',
   },
 };
 class Contact extends Component {
@@ -14,12 +14,10 @@ class Contact extends Component {
         <PageHeader title="Contact Us" description="Feel free to ask us any questions!!" img="/img/urban.jpg" />
         <div style={styles.formStyle}>
           <div className="container mt-5">
-            <div className="row">
-              <div className="col">
-                <div className="card bg-light border-primary border p-5">
-                  <div className="card-body">
-                    <ContactForm />
-                  </div>
+            <div className="row d-flex justify-content-center">
+              <div className="card bg-light border-info border p-5">
+                <div className="card-body">
+                  <ContactForm />
                 </div>
               </div>
             </div>
