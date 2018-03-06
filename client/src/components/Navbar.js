@@ -44,8 +44,8 @@ class Navbar extends Component {
   render() {
     return (
       <nav
-        style={{ borderBottom: '#008ed6 2px solid' }}
-        className="navbar navbar-toggleble-sm navbar-expand-sm navbar-dark bg-dark"
+        style={{ opacity: '0.8', backgroundColor: 'black', borderBottom: '#008ed6 2px solid' }}
+        className="navbar navbar-toggleble-sm navbar-expand-sm navbar-dark"
       >
         <div className="container">
           <Link to="/" className="navbar-brand">

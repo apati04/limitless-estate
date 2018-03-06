@@ -6,17 +6,17 @@ import RegisterModal from '../components/RegisterModal';
 import { kyle, lalita, luis } from '../api/resume';
 import { browserHistory, Link } from 'react-router-dom';
 
-const jamie =
-  'https://media-exp2.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAKmAAAAJGJlNGIzZjYxLTNiNGEtNGFiNS1iYjU2LTI3MzMyN2FkYmRhNg.jpg';
 export default class About extends Component {
   render() {
+    const jamie = '/img/advisors/jamie.jpg';
     const kyleImg = '/img/team/KMitchell.jpg';
     const luisImg = '/img/team/LCruz.jpg';
     const lalitaImg = '/img/team/LPatipak.jpg';
-    const huashaImg ='/img/advisors/huasha-liu.jpeg';
-    const michaelImg ='/img/advisors/michael-blank.jpg';
+    const huashaImg = '/img/advisors/huasha-liu.jpeg';
+    const michaelImg = '/img/advisors/michael-blank.jpg';
     const drewImg = '/img/advisors/drew-kniffin.jpg';
     const finance = '/img/background/financial.jpg';
+    const oldCapital = '/img/advisors/OldCapital4.jpg';
     return (
       <div>
         <PageHeader title="About Us" description="" img="/img/imageLA.jpg" />
@@ -131,9 +131,9 @@ export default class About extends Component {
           </div> */}
         </section>
 
-        <div className="py-3 text-center text-white bg-secondary">
+        <section className="py-3 text-center text-white bg-secondary">
           <div style={{ color: '#fff' }} className="container">
-            <h1 className="display-4">Meet the Team</h1>
+            <h1 className="display-4 font-italic ">Meet the Team</h1>
             <hr />
             <div className="row">
               <MemberCard
@@ -153,34 +153,37 @@ export default class About extends Component {
               <MemberCard firstName="Luis" lastName="Cruz" position="Vice President" photo={luisImg} resume={luis} />
             </div>
           </div>
+        </section>
+        <section style={{ opacity: '0.9' }} className="py-3 text-center text-white border-top bg-dark">
           <div style={{ color: '#fff' }} className="container">
-            <h1 className="display-4">Advisors</h1>
+            <h1 className="display-4 font-italic">Advisors</h1>
             <hr />
-            <div className="d-flex justify-content-center">
-              <MemberCard
-                firstName="Drew"
-                lastName="Kniffin"
-                photo={drewImg}
-                position="Coach"
-                resume='https://www.ultimateapartmentinvestingguide.com/coach-drew-kniffin/'
-              />
-              <MemberCard
-                firstName="Huasha"
-                lastName="Liu"
-                photo={huashaImg}
-                position="Director at Southern California Association of Governments"
-                resume='https://www.linkedin.com/in/huasha-liu-1207a412/'
-              />
-              <MemberCard
-                firstName="Michael"
-                lastName="Blank"
-                photo={michaelImg}
-                position="Full-Time Entreprenuer, Investor and Coach"
-                resume='http://www.themichaelblank.com/about/'
-              />
+            <div className="row d-flex flex-wrap">
+              <MemberCard firstName="Jamie" lastName="Douraghy" photo={jamie} width="180px" height="180px" />
+              <MemberCard firstName="Drew" lastName="Kniffin" photo={drewImg} width="180px" height="180px" />
+              <MemberCard firstName="Huasha" lastName="Liu" photo={huashaImg} width="180px" height="180px" />
+            </div>
+            <div className="container">
+              <div className="row d-flex justify-content-center">
+                <MemberCard
+                  className="col-auto"
+                  firstName="Michael"
+                  lastName="Blank"
+                  photo={michaelImg}
+                  width="180px"
+                  height="180px"
+                />
+                <MemberCard
+                  firstName="Old Capital"
+                  lastName="Lending"
+                  width="180px"
+                  height="180px"
+                  photo={oldCapital}
+                />
+              </div>
             </div>
           </div>
-        </div>
+        </section>
       </div>
     );
   }
