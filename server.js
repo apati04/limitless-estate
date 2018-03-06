@@ -37,13 +37,15 @@ app.post('/api/sendmail', (req, res) => {
       <head>
       </head>
       <body style="text-align: left;">
-        <h3>New Inquiry from</h3> 
-        <p><strong>First name</strong>: ${firstname}</p>
-        <p><strong>Last name</strong>: ${lastname}</p>
-        <p><strong>Company</strong>: ${company}</p>
-        <p><strong>Email</strong>: ${email}</p>
-        <h3 style="border-bottom: '2px solid grey'; margin-top: 1em;"><strong>message</strong></h3>
-        <p style="margin-top: 0.5em">${message}</p>
+        <div style="border: 1px solid black;">
+        <h2>New Message!</h2> 
+        <h3><strong>First name</strong>:${firstname}</span> </h3>
+        <h3><strong>Last name</strong>: <span>${lastname}</span></h3>
+        <h3><strong>Company</strong>: <span>${company}</span></h3>
+        <h3><strong>Email</strong>: <span>${email}</span></h3>
+        <h3><strong>Message</strong>: <span>${email}</span></h3>
+        </div>
+        <p style="margin-top: 10px">${message}</p>
       </body>
       </html>
     `,

@@ -10,46 +10,45 @@ class ContactForm extends Component {
       <Form>
         <div className="row">
           <div className="col-md-6">
+            <label htmlFor="firstname">First name</label>
             <div className="form-group">
-              {touched.firstname && errors.firstname && <p>{errors.firstname}</p>}
-              <Field className="form-control" type="text" name="firstname" placeholder="First Name" />
+              <Field className="form-control" type="text" name="firstname" />
+              {touched.firstname && errors.firstname && <small className="text-danger">{errors.firstname}</small>}
             </div>
           </div>
           <div className="col-md-6">
+            <label htmlFor="lastname">Last Name</label>
             <div className="form-group">
-              {touched.lastname && errors.lastname && <p>{errors.lastname}</p>}
+              <Field className="form-control" type="text" name="lastname" />
+              {touched.lastname && errors.lastname && <small className="text-danger">{errors.lastname}</small>}
+            </div>
+          </div>
+          <div className="col-md-6">
+            <label htmlFor="email">Email Address</label>
+            {touched.email &&
+              errors.email && <small className="ml-2 font-bold font-italic text-danger">{errors.email}</small>}
+            <div className="form-group">
+              <Field className="form-control" type="email" name="email" />
+            </div>
+          </div>
+          <div className="col-md-6">
+            <label htmlFor="company">Company Name (optional)</label>
 
-              <Field className="form-control" type="text" name="lastname" placeholder="Last Name" />
-            </div>
-          </div>
-          <div className="col-md-6">
             <div className="form-group">
-              <Field className="form-control" type="email" name="email" placeholder="Email Address" />
-              {touched.email && errors.email && <p>{errors.email}</p>}
-            </div>
-          </div>
-          <div className="col-md-6">
-            <div className="form-group">
-              <Field className="form-control" type="text" name="company" placeholder="Company Name" />
+              <Field className="form-control" type="text" name="company" />
             </div>
           </div>
         </div>
         <div className="row">
           <div className="col-md-12">
+            <label htmlFor="message">Your message to us</label>
             <div className="form-group">
-              {touched.message && errors.message && <p>{errors.message}</p>}
-
-              <Field
-                className="form-control"
-                component="textarea"
-                type="text"
-                name="message"
-                placeholder="Your message"
-              />
+              {touched.message && errors.message && <small className="text-danger">{errors.message}</small>}
+              <Field className="form-control" component="textarea" type="text" name="message" />
             </div>
           </div>
-          <div className="col-md-12">
-            <button className="btn btn-outline-info btn-sm" disabled={isSubmitting}>
+          <div className="col-md-12 text-right">
+            <button className="btn btn-outline-info" disabled={isSubmitting}>
               Submit <i className="ml-1 far fa-paper-plane" />
             </button>
           </div>
@@ -78,7 +77,6 @@ export default withFormik({
   async handleSubmit(values, { resetForm, setErrors, setSubmitting }) {
     const payload = await axios.post('/api/sendmail', values);
     console.log('payload: ', payload);
-
     resetForm();
     setSubmitting(false);
   },
