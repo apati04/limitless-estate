@@ -4,7 +4,10 @@
   "private": true,
   "proxy": {
     "/api/pdf": {
-      "target": "http://localhost:3000"
+      "target": "http://localhost:3001"
+    },
+    "/api/sendmail": {
+      "target": "http://localhost:3001"
     }
   },
   "dependencies": {
@@ -17,7 +20,8 @@
     "react-lazyload-fadein": "^1.0.1",
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.0.14",
-    "react-sticky-box": "^0.6.1"
+    "react-sticky-box": "^0.6.1",
+    "yup": "^0.24.1"
   },
   "scripts": {
     "start": "react-scripts start",
