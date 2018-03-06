@@ -58,9 +58,7 @@ class App extends Component {
               <Navbar />
               <Route exact path="/resources" component={Resources} />
               <Route exact path="/about" component={About} />
-              <Route exact path="/contact" component={ContactContruction} />
-              <Route exact path="/contact/test" component={ContactForm} />
-
+              <Route exact path="/contact" component={Contact} />
               <Route exact path="/markets" component={Markets} />
               <Route exact path="/legal" component={Legal} />
               <Route path="/markets/riverparkjefferson" component={Ecorse} />

@@ -8,28 +8,52 @@ class ContactForm extends Component {
     const { values, errors, touched, isSubmitting } = this.props;
     return (
       <Form>
-        <div>
-          {touched.firstname && errors.firstname && <p>{errors.firstname}</p>}
-          <Field type="text" name="firstname" placeholder="First Name" />
-        </div>
-        <div>
-          {touched.lastname && errors.lastname && <p>{errors.lastname}</p>}
+        <div className="row">
+          <div className="col-md-6">
+            <div className="form-group">
+              {touched.firstname && errors.firstname && <p>{errors.firstname}</p>}
+              <Field className="form-control" type="text" name="firstname" placeholder="First Name" />
+            </div>
+          </div>
+          <div className="col-md-6">
+            <div className="form-group">
+              {touched.lastname && errors.lastname && <p>{errors.lastname}</p>}
 
-          <Field type="text" name="lastname" placeholder="Last Name" />
+              <Field className="form-control" type="text" name="lastname" placeholder="Last Name" />
+            </div>
+          </div>
+          <div className="col-md-6">
+            <div className="form-group">
+              <Field className="form-control" type="email" name="email" placeholder="Email Address" />
+              {touched.email && errors.email && <p>{errors.email}</p>}
+            </div>
+          </div>
+          <div className="col-md-6">
+            <div className="form-group">
+              <Field className="form-control" type="text" name="company" placeholder="Company Name" />
+            </div>
+          </div>
         </div>
-        <div>
-          <Field type="text" name="company" placeholder="Company Name" />
-        </div>
-        <div>
-          {touched.email && errors.email && <p>{errors.email}</p>}
+        <div className="row">
+          <div className="col-md-12">
+            <div className="form-group">
+              {touched.message && errors.message && <p>{errors.message}</p>}
 
-          <Field type="email" name="email" placeholder="Email Address" />
+              <Field
+                className="form-control"
+                component="textarea"
+                type="text"
+                name="message"
+                placeholder="Your message"
+              />
+            </div>
+          </div>
+          <div className="col-md-12">
+            <button className="btn btn-outline-info btn-sm" disabled={isSubmitting}>
+              Submit <i className="ml-1 far fa-paper-plane" />
+            </button>
+          </div>
         </div>
-        <div>
-          {touched.message && errors.message && <p>{errors.message}</p>}
-          <Field type="text" name="message" placeholder="Your message" />
-        </div>
-        <button disabled={isSubmitting}>Submit</button>
       </Form>
     );
   }

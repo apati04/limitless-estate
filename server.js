@@ -19,8 +19,8 @@ app.post('/api/sendmail', (req, res) => {
     secure: true,
     service: 'gmail',
     auth: {
-      // user: 'aitech9188@gmail.com',
-      // pass: '<uncomment and enter pass>',
+      user: 'aitech9188@gmail.com',
+      pass: 'makeithappen9188',
     },
   });
 
