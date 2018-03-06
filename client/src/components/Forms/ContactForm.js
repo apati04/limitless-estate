@@ -57,10 +57,6 @@ class ContactForm extends Component {
     );
   }
 }
-const mapPropsToValues = () => {};
-const handleSubmit = (values, { resetForm, setErrors, setSubmitting }) => {
-  console.log('values: ', values);
-};
 
 export default withFormik({
   mapPropsToValues({ firstname = '', lastname = '', company = '', email = '', message = '' }) {
