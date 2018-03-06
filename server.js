@@ -51,16 +51,15 @@ app.post('/api/sendmail', (req, res) => {
 
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === 'production') {
-  app.use(express.static('client/build'));
+  app.use(express.static(path.resolve(__dirname, 'client', 'build')));
   app.get('*', (req, res) => {
     res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
   });
-} else {
-  app.use(express.static('client/public'));
-  app.get('*', function(req, res) {
-    res.sendFile(path.resolve(__dirname, 'client', 'public', 'index.html'));
-  });
 }
+app.use(express.static('client/public'));
+app.get('*', function(req, res) {
+  res.sendFile(path.resolve(__dirname, 'client', 'public', 'index.html'));
+});
 
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, function() {
