@@ -15,6 +15,7 @@ export default class About extends Component {
     const lalitaImg = '/img/team/LPatipak.jpg';
     const huashaImg ='/img/advisors/huasha-liu.jpeg';
     const michaelImg ='/img/advisors/michael-blank.jpg';
+    const drewImg = '/img/advisors/drew-kniffin.jpg';
     const finance = '/img/background/financial.jpg';
     return (
       <div>
@@ -156,6 +157,13 @@ export default class About extends Component {
             <h1 className="display-4">Advisors</h1>
             <hr />
             <div className="d-flex justify-content-center">
+              <MemberCard
+                firstName="Drew"
+                lastName="Kniffin"
+                photo={drewImg}
+                position="Coach"
+                resume='https://www.ultimateapartmentinvestingguide.com/coach-drew-kniffin/'
+              />
               <MemberCard
                 firstName="Huasha"
                 lastName="Liu"
