@@ -1,7 +1,7 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap';
+import 'bootstrap-material-design/dist/css/bootstrap-material-design.min.css';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import './style/styles.css';
-import 'bootstrap';
 import 'mapbox-gl/dist/mapbox-gl';
 import React from 'react';
 import ReactDOM from 'react-dom';
