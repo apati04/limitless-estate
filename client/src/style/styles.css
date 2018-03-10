@@ -208,6 +208,10 @@ footer {
   box-shadow: none;
 }
 
+a.info-popover:hover {
+  cursor: pointer;
+  background: 0px;
+}
 @media only screen and (max-width: 768px) {
   h1,
   h2,
