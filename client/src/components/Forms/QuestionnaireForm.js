@@ -5,7 +5,7 @@ import Yup from 'yup';
 
 class ContactForm extends Component {
   render() {
-    const { values, errors, touched, isSubmitting } = this.props;
+    const { values, errors, touched, isSubmitting, handleChange, handleBlur } = this.props;
     return (
       <Form>
         <div className="row">
@@ -52,10 +52,30 @@ class ContactForm extends Component {
             <div className="mb-4">
               <label htmlFor="question3">3. Do you want to invest in multifamily, value-add projects?</label>
               <div className="form-group">
-                <Field type="radio" name="question3" value="Yes" className="m-2" />
-                <label htmlFor="question3">Yes</label>
-                <Field type="radio" name="question3" value="No" className="m-2" />
-                <label htmlFor="question3">No</label>
+                <label>
+                  <input
+                    name="question3"
+                    type="radio"
+                    value="Yes"
+                    checked={values.question3 === 'Yes'}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    className="m-2"
+                  />
+                  Yes
+                </label>
+                <label>
+                  <input
+                    name="question3"
+                    type="radio"
+                    value="No"
+                    checked={values.question3 === 'No'}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    className="m-2"
+                  />
+                  No
+                </label>
               </div>
             </div>
             <div className="mb-4">
@@ -95,59 +115,189 @@ class ContactForm extends Component {
               <label htmlFor="question7">7. Are you an accredited investor?</label>
               <p><small className="text-muted">(Makes more than $200k annually for the past 2 years and will do so in this current year or have a net worth of $1M excluding your primary residence)</small></p>
               <div className="form-group">
-                <Field type="radio" name="question7" value="Yes" className="m-2" />
-                <label htmlFor="question7">Yes</label>
-                <Field type="radio" name="question7" value="No" className="m-2" />
-                <label htmlFor="question7">No</label>
+                <label>
+                  <input
+                    name="question7"
+                    type="radio"
+                    value="Yes"
+                    checked={values.question7 === 'Yes'}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    className="m-2"
+                  />
+                  Yes
+                </label>
+                <label>
+                  <input
+                    name="question7"
+                    type="radio"
+                    value="No"
+                    checked={values.question7 === 'No'}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    className="m-2"
+                  />
+                  No
+                </label>
               </div>
             </div>
             <div className="mb-4">
               <label htmlFor="question8">8. Can you show proof of funds?</label>
               <div className="form-group">
-                <Field type="radio" name="question8" value="Yes" className="m-2" />
-                <label htmlFor="question8">Yes</label>
-                <Field type="radio" name="question8" value="No" className="m-2" />
-                <label htmlFor="question8">No</label>
+                <label>
+                  <input
+                    name="question8"
+                    type="radio"
+                    value="Yes"
+                    checked={values.question8 === 'Yes'}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    className="m-2"
+                  />
+                  Yes
+                </label>
+                <label>
+                  <input
+                    name="question8"
+                    type="radio"
+                    value="No"
+                    checked={values.question8 === 'No'}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    className="m-2"
+                  />
+                  No
+                </label>
               </div>
             </div>
             <div className="mb-4">
               <label htmlFor="question9">9. How would you rate your risk tolerance?</label>
               <div className="form-group">
-                <Field type="radio" name="question9" value="Low" className="m-2" />
-                <label htmlFor="question9">Low</label>
-                <Field type="radio" name="question9" value="Moderate" className="m-2" />
-                <label htmlFor="question9">Moderate</label>
-                <Field type="radio" name="question9" value="High" className="m-2" />
-                <label htmlFor="question9">High</label>
+                <label>
+                  <input
+                    name="question9"
+                    type="radio"
+                    value="Low"
+                    checked={values.question9 === 'Low'}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    className="m-2"
+                  />
+                  Low
+                </label>
+                <label>
+                  <input
+                    name="question9"
+                    type="radio"
+                    value="Moderate"
+                    checked={values.question9 === 'Moderate'}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    className="m-2"
+                  />
+                  Moderate
+                </label>
+                <label>
+                  <input
+                    name="question9"
+                    type="radio"
+                    value="High"
+                    checked={values.question9 === 'High'}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    className="m-2"
+                  />
+                  High
+                </label>
               </div>
             </div>
             <div className="mb-4">
               <label htmlFor="question10">10. If you are out of the country, have you invested in the US real estate market in the past?
               </label>
               <div className="form-group">
-                <Field type="radio" name="question10" value="Yes" className="m-2" />
-                <label htmlFor="question10">Yes</label>
-                <Field type="radio" name="question10" value="No" className="m-2" />
-                <label htmlFor="question10">No</label>
+                <label>
+                  <input
+                    name="question10"
+                    type="radio"
+                    value="Yes"
+                    checked={values.question10 === 'Yes'}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    className="m-2"
+                  />
+                  Yes
+                </label>
+                <label>
+                  <input
+                    name="question10"
+                    type="radio"
+                    value="No"
+                    checked={values.question10 === 'No'}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    className="m-2"
+                  />
+                  No
+                </label>
               </div>
             </div>
             <div className="mb-4">
               <label htmlFor="question11">11. Have you invested as a limited partner (LP) on a syndication deal in the past?</label>
               <div className="form-group">
-                <Field type="radio" name="question11" value="Yes" className="m-2" />
-                <label htmlFor="question11">Yes</label>
-                <Field type="radio" name="question11" value="No" className="m-2" />
-                <label htmlFor="question11">No</label>
+                <label>
+                  <input
+                    name="question11"
+                    type="radio"
+                    value="Yes"
+                    checked={values.question11 === 'Yes'}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    className="m-2"
+                  />
+                  Yes
+                </label>
+                <label>
+                  <input
+                    name="question11"
+                    type="radio"
+                    value="No"
+                    checked={values.question11 === 'No'}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    className="m-2"
+                  />
+                  No
+                </label>
               </div>
             </div>
             <div className="mb-4">
               <label htmlFor="question12">12. Are you comfortable investing with other LPs or would you require to be the only LP in this investment?</label>
               <p><small className="text-muted">If you’re a substantial portion of the equity being invested in the deal, we would ask for you to commit non-refundable equity to create an alignment of interest to close.</small></p>
               <div className="form-group">
-                <Field type="radio" name="question12" value="Yes" className="m-2" />
-                <label htmlFor="question12">Yes</label>
-                <Field type="radio" name="question12" value="No" className="m-2" />
-                <label htmlFor="question12">No</label>
+                <label>
+                  <input
+                    name="question12"
+                    type="radio"
+                    value="Yes"
+                    checked={values.question12 === 'Yes'}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    className="m-2"
+                  />
+                  Yes
+                </label>
+                <label>
+                  <input
+                    name="question12"
+                    type="radio"
+                    value="No"
+                    checked={values.question12 === 'No'}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    className="m-2"
+                  />
+                  No
+                </label>
               </div>
             </div>
             <div className="mb-4">
