@@ -13,6 +13,8 @@ import Ecorse from '../pages/markets/Ecorse';
 import Resources from '../pages/Resources';
 import Legal from '../pages/Legal';
 import ContactForm from '../components/Forms/ContactForm';
+import Questionnaire from '../pages/Questionnaire';
+
 const Construction = () => {
   return (
     <div style={{ height: '100vh' }} className="container-fluid bg-dark">
@@ -63,6 +65,7 @@ class App extends Component {
               <Route path="/markets/riverparkjefferson" component={Ecorse} />
               <Route path="/markets/arlingtonheights" component={Columbus} />
               <Route exact path="/" component={LandingPage} />
+              <Route exact path="/questionnaire" component={Questionnaire} />
               <Footer />
             </ScrollToTop>
           </Switch>
