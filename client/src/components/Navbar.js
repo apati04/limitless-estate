@@ -4,8 +4,8 @@ import MenuItem from './navMenuItem';
 
 class Navbar extends Component {
   renderMenu() {
-    const fields = ['about', 'markets', 'resources', 'contact'];
-    return fields.map(item => {
+    const fields = [ 'about', 'markets', 'resources', 'contact' ];
+    return fields.map((item) => {
       if (item === 'markets') {
         return (
           <li key={item} className="nav-item dropdown">
@@ -19,14 +19,21 @@ class Navbar extends Component {
             >
               MARKETS
             </a>
-            <div style={{ backgroundColor: '#eee' }} className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <div
+              style={{ backgroundColor: '#eee' }}
+              className="dropdown-menu"
+              aria-labelledby="navbarDropdownMenuLink"
+            >
               <Link to="/markets/arlingtonheights" className="dropdown-item">
                 Columbus, OH
               </Link>
               <Link to="/markets/riverparkjefferson" className="dropdown-item">
                 Detroit, MI
               </Link>
-              <div style={{ borderTop: '1px solid #c0c3c6' }} className="dropdown-divider" />
+              <div
+                style={{ borderTop: '1px solid #c0c3c6' }}
+                className="dropdown-divider"
+              />
               <Link to="/markets" className="dropdown-item">
                 Overview
               </Link>
@@ -41,6 +48,7 @@ class Navbar extends Component {
       );
     });
   }
+
   render() {
     return (
       <nav
@@ -52,7 +60,11 @@ class Navbar extends Component {
             Limitless Estates, LLC
           </Link>
 
-          <button className="navbar-toggler" data-toggle="collapse" data-target="#nbNav">
+          <button
+            className="navbar-toggler"
+            data-toggle="collapse"
+            data-target="#nbNav"
+          >
             <span className="navbar-toggler-icon" />
           </button>
 
