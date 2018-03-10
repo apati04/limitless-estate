@@ -2,59 +2,33 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const style = {
-  card     : {
-    marginBottom : '1.5em',
-    textAlign    : 'center'
+  card: {
+    marginBottom: '1.5em',
+    textAlign: 'center'
   },
-  headline : { fontWeight: '400' },
-  subText  : {
-    marginRight : '.75em',
-    marginLeft  : '.75em'
+  headline: { fontWeight: '400' },
+  subText: {
+    marginRight: '.75em',
+    marginLeft: '.75em'
   }
 };
 
-export default ({
-  firstName,
-  lastName,
-  position,
-  photo,
-  resume,
-  width = '204',
-  height = '204',
-  children
-}) => {
+export default ({ name, title = '', photo, type, content, children }) => {
+  console.log('photo: ', photo);
   return (
     <div style={style.card} className="col-md-4">
       <img
         style={{ border: '2px solid lightgrey' }}
         className="mr-2 rounded-circle"
-        src={photo}
+        src={photo.url}
         alt="Generic placeholder"
-        width={width}
-        height={height}
+        width={photo.size}
+        height={photo.size}
       />
-      {resume ? (
-        <div className="pt-2 text-center">
-          <h4>{`${firstName} ${lastName}`}</h4>
-          <p className="lead font-italic">{position}</p>
-
-          <p>
-            <a
-              target="_blank"
-              className="btn  btn-outline-warning"
-              href={resume}
-              role="button"
-            >
-              View Bio &raquo;
-            </a>
-          </p>
-        </div>
-      ) : (
-        <div className="pt-2 d-flex justify-content-center">
-          <h4>{`${firstName} ${lastName}`}</h4>
-          <div style={{ marginLeft: '8px' }}>{children}</div>
-        </div>
-      )}
+      <div className="pt-2 d-flex justify-content-center">
+        <h4>{name}</h4>
+        <div style={{ marginLeft: '8px' }}>{children}</div>
+      </div>
     </div>
   );
 };

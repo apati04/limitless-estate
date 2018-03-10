@@ -5,24 +5,33 @@ import PageHeader from '../components/PageHeader';
 import RegisterModal from '../components/RegisterModal';
 import { kyle, lalita, luis } from '../api/resume';
 import { browserHistory, Link } from 'react-router-dom';
-
-const style = {
-  popoverStyle : {
-    fontSize : '24px',
-    color    : '#f7f7f7'
-  }
-};
+/** api array of objects*/
+import Advisors from '../api/advisors';
+import Team from '../api/team';
+// accepts props: name type content
+import PopoverBio from '../components/personel/PopoverBio';
 export default class About extends Component {
+  renderCards = (items) => {
+    return items.map((llcProps) => {
+      const { name, type } = llcProps;
+      const content = llcProps.content || llcProps.resume;
+      return (
+        <MemberCard {...llcProps}>
+          {type === 'Team' ? (
+            <button>link</button>
+          ) : (
+            <PopoverBio name={name} type={type} content={content} />
+          )}
+        </MemberCard>
+      );
+    });
+  };
   render() {
-    const jamie = '/img/advisors/jamie.jpg';
+    // staff
     const kyleImg = '/img/team/KMitchell.jpg';
     const luisImg = '/img/team/LCruz.jpg';
     const lalitaImg = '/img/team/LPatipak.jpg';
-    const huashaImg = '/img/advisors/huasha-liu.jpeg';
-    const michaelImg = '/img/advisors/michael-blank.jpg';
-    const drewImg = '/img/advisors/drew-kniffin.jpg';
     const finance = '/img/background/financial.jpg';
-    const oldCapital = '/img/advisors/OldCapital4.jpg';
     return (
       <div>
         <PageHeader title="About Us" description="" img="/img/imageLA.jpg" />
@@ -163,36 +172,15 @@ export default class About extends Component {
             </div>
           </div> */}
         </section>
-
+        {/* ----------  MEMBERS SECTION ----------- */}
         <section className="py-3 text-center text-white bg-secondary">
           <div style={{ color: '#fff' }} className="container">
             <h1 className="display-4 font-italic ">Meet the Team</h1>
             <hr />
-            <div className="row">
-              <MemberCard
-                firstName="Kyle"
-                lastName="Mitchell"
-                position="CEO, President"
-                photo={kyleImg}
-                resume={kyle}
-              />
-              <MemberCard
-                firstName="Lalita"
-                lastName="Patipaksiri"
-                photo={lalitaImg}
-                position="Vice President"
-                resume={lalita}
-              />
-              <MemberCard
-                firstName="Luis"
-                lastName="Cruz"
-                position="Vice President"
-                photo={luisImg}
-                resume={luis}
-              />
-            </div>
+            <div className="row">{this.renderCards(Team)}</div>
           </div>
         </section>
+        {/* ----------    ADVISOR SECTION ----------- */}
         <section
           style={{ opacity: '0.9' }}
           className="py-3 text-center text-white border-top bg-dark"
@@ -201,29 +189,9 @@ export default class About extends Component {
             <h1 className="display-4 font-italic">Advisors</h1>
             <hr />
             <div className="row d-flex flex-wrap">
-              <MemberCard
-                firstName="Jamie"
-                lastName="Douraghy"
-                photo={jamie}
-                width="180px"
-                height="180px"
-              />
-              <MemberCard
-                firstName="Drew"
-                lastName="Kniffin"
-                photo={drewImg}
-                width="180px"
-                height="180px"
-              />
-              <MemberCard
-                firstName="Huasha"
-                lastName="Liu"
-                photo={huashaImg}
-                width="180px"
-                height="180px"
-              />
+              {this.renderCards(Advisors)}
             </div>
-            <div className="container">
+            {/* <div className="container">
               <div className="row d-flex justify-content-center">
                 <MemberCard
                   className="col-auto"
@@ -233,20 +201,7 @@ export default class About extends Component {
                   width="180px"
                   height="180px"
                 >
-                  <a
-                    tabIndex="0"
-                    className="info-popover"
-                    role="button"
-                    data-toggle="popover"
-                    data-trigger="focus"
-                    title="Dismissible popover"
-                    data-content="And here's some amazing content. It's very engaging. Right?"
-                  >
-                    <i
-                      style={style.popoverStyle}
-                      className="fas fa-info-circle"
-                    />
-                  </a>
+      
                 </MemberCard>
                 <MemberCard
                   firstName="Old Capital"
@@ -254,9 +209,11 @@ export default class About extends Component {
                   width="180px"
                   height="180px"
                   photo={oldCapital}
-                />
+                >
+          
+                </MemberCard>
               </div>
-            </div>
+            </div> */}
           </div>
         </section>
       </div>
