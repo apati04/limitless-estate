@@ -2,6 +2,8 @@ const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
+const keys = require('./config/keys');
+
 const app = express();
 // Send every request to the React app
 // Define any API routes before this runs
@@ -9,41 +11,34 @@ app.use(bodyParser.json());
 
 app.post('/api/sendmail', (req, res) => {
   const { firstname, lastname, email, company, message } = req.body;
-  const poolConfig = {
-    pool: true,
-    host: 'smtp.gmail.com',
-    secure: true,
-  };
   const transporter = nodemailer.createTransport({
     host: 'smtp.gmail.com',
     secure: true,
     service: 'gmail',
     auth: {
-      user: 'aitech9188@gmail.com',
-      pass: 'makeithappen9188',
+      user: keys.userGmail,
+      pass: keys.passGmail,
     },
   });
-
   const sender = {
-    name: `Inquiry- ${firstname} ${lastname}`,
+    name: `New Message- ${firstname} ${lastname}`,
     address: email,
   };
   const mailOptions = {
     from: sender,
     to: 'apax714@gmail.com',
-    subject: `Question- ${firstname}`,
+    subject: `contactform- ${firstname}`,
     html: `
       <html>
       <head>
       </head>
       <body style="text-align: left;">
-        <div style="border: 1px solid black;">
-        <h2>New Message!</h2> 
-        <h3><strong>First name</strong>:${firstname}</span> </h3>
-        <h3><strong>Last name</strong>: <span>${lastname}</span></h3>
-        <h3><strong>Company</strong>: <span>${company}</span></h3>
-        <h3><strong>Email</strong>: <span>${email}</span></h3>
-        <h3><strong>Message</strong>: <span>${email}</span></h3>
+        <div style="border-bottom": 1px solid black;">
+        <h4>First and Last Name:  ${firstname} ${lastname}</h4>
+     
+        <h4>Company (optional): ${company}</h4>
+        <h4>Email: ${email}</h4>
+        <h4>Message:</h4>
         </div>
         <p style="margin-top: 10px">${message}</p>
       </body>
@@ -56,16 +51,15 @@ app.post('/api/sendmail', (req, res) => {
 
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === 'production') {
-  app.use(express.static('client/build'));
+  app.use(express.static(path.resolve(__dirname, 'client', 'build')));
   app.get('*', (req, res) => {
     res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
   });
-} else {
-  app.use(express.static('client/public'));
-  app.get('*', function(req, res) {
-    res.sendFile(path.resolve(__dirname, 'client', 'public', 'index.html'));
-  });
 }
+app.use(express.static('client/public'));
+app.get('*', function(req, res) {
+  res.sendFile(path.resolve(__dirname, 'client', 'public', 'index.html'));
+});
 
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, function() {

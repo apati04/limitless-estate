@@ -8,19 +8,21 @@ class ContactForm extends Component {
     const { values, errors, touched, isSubmitting } = this.props;
     return (
       <Form>
-        <div className="row">
+        <div className="row m-2">
           <div className="col-md-6">
             <label htmlFor="firstname">First name</label>
+            {touched.firstname &&
+              errors.firstname && <small className="ml-2 font-italic text-danger">{errors.firstname}</small>}
             <div className="form-group">
               <Field className="form-control" type="text" name="firstname" />
-              {touched.firstname && errors.firstname && <small className="text-danger">{errors.firstname}</small>}
             </div>
           </div>
           <div className="col-md-6">
             <label htmlFor="lastname">Last Name</label>
+            {touched.lastname &&
+              errors.lastname && <small className="ml-2 font-italic text-danger">{errors.lastname}</small>}
             <div className="form-group">
               <Field className="form-control" type="text" name="lastname" />
-              {touched.lastname && errors.lastname && <small className="text-danger">{errors.lastname}</small>}
             </div>
           </div>
           <div className="col-md-6">
@@ -39,11 +41,12 @@ class ContactForm extends Component {
             </div>
           </div>
         </div>
-        <div className="row">
+        <div className="row m-2">
           <div className="col-md-12">
             <label htmlFor="message">Your message to us</label>
+            {touched.message &&
+              errors.message && <small className="ml-2 font-italic text-danger">{errors.message}</small>}
             <div className="form-group">
-              {touched.message && errors.message && <small className="text-danger">{errors.message}</small>}
               <Field className="form-control" component="textarea" type="text" name="message" />
             </div>
           </div>
@@ -57,10 +60,6 @@ class ContactForm extends Component {
     );
   }
 }
-const mapPropsToValues = () => {};
-const handleSubmit = (values, { resetForm, setErrors, setSubmitting }) => {
-  console.log('values: ', values);
-};
 
 export default withFormik({
   mapPropsToValues({ firstname = '', lastname = '', company = '', email = '', message = '' }) {

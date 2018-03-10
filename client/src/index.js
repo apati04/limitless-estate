@@ -1,7 +1,12 @@
+import 'bootstrap';
+import 'bootstrap-material-design/dist/css/bootstrap-material-design.min.css';
+import 'mapbox-gl/dist/mapbox-gl.css';
+import './style/styles.css';
+import 'mapbox-gl/dist/mapbox-gl';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './components/App';
-import registerServiceWorker from './registerServiceWorker';
+import { unregister } from './registerServiceWorker';
 
 ReactDOM.render(<App />, document.getElementById('root'));
-registerServiceWorker();
+unregister();

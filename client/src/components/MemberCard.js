@@ -13,7 +13,7 @@ const style = {
   },
 };
 
-export default ({ firstName, lastName, position, photo, resume }) => {
+export default ({ firstName, lastName, position, photo, resume, width = '204', height = '204' }) => {
   return (
     <div style={style.card} className="col-md-4">
       <img
@@ -21,16 +21,20 @@ export default ({ firstName, lastName, position, photo, resume }) => {
         className="rounded-circle"
         src={photo}
         alt="Generic placeholder"
-        width="204"
-        height="204"
+        width={width}
+        height={height}
       />
       <div className="pt-2 text-center">
         <h4>{`${firstName} ${lastName}`}</h4>
         <p className="lead font-italic">{position}</p>
         <p>
-          <a target="_blank" className="btn  btn-outline-warning" href={resume} role="button">
-            View Bio &raquo;
-          </a>
+          {resume ? (
+            <a target="_blank" className="btn  btn-outline-warning" href={resume} role="button">
+              View Bio &raquo;
+            </a>
+          ) : (
+            ''
+          )}
         </p>
       </div>
     </div>

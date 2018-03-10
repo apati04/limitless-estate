@@ -45,7 +45,7 @@ class Navbar extends Component {
     return (
       <nav
         style={{ borderBottom: '#008ed6 2px solid' }}
-        className="navbar navbar-toggleble-sm navbar-expand-sm navbar-dark bg-dark sticky-top"
+        className="navbar navbar-toggleble-sm navbar-expand-sm navbar-dark bg-dark"
       >
         <div className="container">
           <Link to="/" className="navbar-brand">

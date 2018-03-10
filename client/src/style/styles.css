@@ -18,7 +18,7 @@ h6 {
 }
 
 .navbar .nav-item.active {
-  border-left: #444 3px solid;
+  border-left: #eee 3px solid;
 }
 
 .carousel-item {
@@ -91,7 +91,6 @@ h6 {
 
 footer {
   bottom: 0;
-  min-height: 250px;
 }
 #myFooter {
   background-color: rgba(0, 0, 0, 0.945);
