@@ -27,7 +27,7 @@ export default ({
     <div style={style.card} className="col-md-4">
       <img
         style={{ border: '2px solid lightgrey' }}
-        className="rounded-circle"
+        className="mr-2 rounded-circle"
         src={photo}
         alt="Generic placeholder"
         width={width}
@@ -50,9 +50,9 @@ export default ({
           </p>
         </div>
       ) : (
-        <div className="pt-2 d-flex justify-content-around">
+        <div className="pt-2 d-flex justify-content-center">
           <h4>{`${firstName} ${lastName}`}</h4>
-          {children}
+          <div style={{ marginLeft: '8px' }}>{children}</div>
         </div>
       )}
     </div>

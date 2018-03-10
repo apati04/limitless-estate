@@ -6,6 +6,12 @@ import RegisterModal from '../components/RegisterModal';
 import { kyle, lalita, luis } from '../api/resume';
 import { browserHistory, Link } from 'react-router-dom';
 
+const style = {
+  popoverStyle : {
+    fontSize : '24px',
+    color    : '#f7f7f7'
+  }
+};
 export default class About extends Component {
   render() {
     const jamie = '/img/advisors/jamie.jpg';
@@ -228,15 +234,18 @@ export default class About extends Component {
                   height="180px"
                 >
                   <a
-                    tabindex="0"
-                    className="btn btn-lg btn-danger"
+                    tabIndex="0"
+                    className="info-popover"
                     role="button"
                     data-toggle="popover"
                     data-trigger="focus"
                     title="Dismissible popover"
                     data-content="And here's some amazing content. It's very engaging. Right?"
                   >
-                    <i className="fas fa-info-circle" />
+                    <i
+                      style={style.popoverStyle}
+                      className="fas fa-info-circle"
+                    />
                   </a>
                 </MemberCard>
                 <MemberCard
