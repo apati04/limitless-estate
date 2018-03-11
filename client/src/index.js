@@ -11,7 +11,7 @@ import { unregister } from './registerServiceWorker';
 
 $(function() {
   $('[data-toggle="popover"]').popover({
-    trigger : 'focus'
+    trigger: 'focus'
   });
 });
 ReactDOM.render(<App />, document.getElementById('root'));

@@ -18,7 +18,19 @@ export default class About extends Component {
       return (
         <MemberCard key={name} {...llcProps}>
           {type === 'Team' ? (
-            <button>link</button>
+            <div className="mt-2">
+              <h3 className="p-0">{name}</h3>
+              <p className="p-0 font-weight-bold">{llcProps.title}</p>
+              <a
+                style={{ opacity: '0.9', backgroundColor: '#2979FF' }}
+                target="_blank"
+                href={content}
+                role="button"
+                className="m-0 btn btn-raised text-white rounded"
+              >
+                View Bio >>
+              </a>
+            </div>
           ) : (
             <PopoverBio name={name} type={type} content={content} />
           )}
@@ -190,7 +202,7 @@ export default class About extends Component {
           <div style={{ color: '#fff' }} className="container">
             <h1 className="display-4 font-italic">Advisors</h1>
             <hr />
-            <div className="container d-flex justify-content-around flex-wrap">
+            <div className="container d-flex flex column justify-content-around flex-wrap">
               {this.renderCards(Advisors)}
             </div>
             {/* <div className="container">

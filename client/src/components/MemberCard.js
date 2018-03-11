@@ -15,22 +15,16 @@ const style = {
 
 export default ({ name, title = '', photo, type, content, children }) => {
   return (
-    <div style={style.card}>
+    <div style={style.card} className="align-items-center">
       <img
         style={{ border: '2px solid lightgrey' }}
-        className="mr-2 rounded-circle"
+        className="mr-2 mb-1 rounded-circle"
         src={photo.url}
         alt="Generic placeholder"
         width={photo.size}
         height={photo.size}
       />
-      <div className="d-flex justify-content-center m-2">
-        <div>
-          <h5>{name}</h5>
-          <h6>{title}</h6>
-        </div>
-        <div className="ml-1">{children}</div>
-      </div>
+      {children}
     </div>
   );
 };
