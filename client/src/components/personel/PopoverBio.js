@@ -3,7 +3,8 @@ import React from 'react';
 const style = {
   popoverStyle: {
     fontSize: '24px',
-    color: '#f7f7f7'
+    color: '#2196F3',
+    opacity: '0.86'
   }
 };
 export default ({ name, type, content }) => {
@@ -17,10 +18,7 @@ export default ({ name, type, content }) => {
       title={`${name}, ${type}`}
       data-content={content}
     >
-      <i
-        style={style.popoverStyle}
-        className="fas fa-info-circle align-self-end"
-      />
+      <i style={style.popoverStyle} className="fas fa-info-circle box-shadow" />
     </a>
   );
 };

@@ -3,7 +3,7 @@ const img_path = '/img/team';
 module.exports = [
   {
     name: 'Kyle Mitchell',
-    title: 'CEO',
+    title: 'CEO, President',
     type: 'Team',
     photo: {
       url: `${img_path}/KMitchell.jpg`,

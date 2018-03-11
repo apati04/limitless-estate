@@ -16,7 +16,7 @@ export default class About extends Component {
       const { name, type } = llcProps;
       const content = llcProps.content || llcProps.resume;
       return (
-        <MemberCard {...llcProps}>
+        <MemberCard key={name} {...llcProps}>
           {type === 'Team' ? (
             <button>link</button>
           ) : (
@@ -177,7 +177,9 @@ export default class About extends Component {
           <div style={{ color: '#fff' }} className="container">
             <h1 className="display-4 font-italic ">Meet the Team</h1>
             <hr />
-            <div className="row">{this.renderCards(Team)}</div>
+            <div className="container d-flex justify-content-around flex-wrap">
+              {this.renderCards(Team)}
+            </div>
           </div>
         </section>
         {/* ----------    ADVISOR SECTION ----------- */}
@@ -188,7 +190,7 @@ export default class About extends Component {
           <div style={{ color: '#fff' }} className="container">
             <h1 className="display-4 font-italic">Advisors</h1>
             <hr />
-            <div className="row d-flex flex-wrap">
+            <div className="container d-flex justify-content-around flex-wrap">
               {this.renderCards(Advisors)}
             </div>
             {/* <div className="container">

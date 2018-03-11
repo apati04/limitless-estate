@@ -14,9 +14,8 @@ const style = {
 };
 
 export default ({ name, title = '', photo, type, content, children }) => {
-  console.log('photo: ', photo);
   return (
-    <div style={style.card} className="col-md-4">
+    <div style={style.card}>
       <img
         style={{ border: '2px solid lightgrey' }}
         className="mr-2 rounded-circle"
@@ -25,9 +24,12 @@ export default ({ name, title = '', photo, type, content, children }) => {
         width={photo.size}
         height={photo.size}
       />
-      <div className="pt-2 d-flex justify-content-center">
-        <h4>{name}</h4>
-        <div style={{ marginLeft: '8px' }}>{children}</div>
+      <div className="d-flex justify-content-center m-2">
+        <div>
+          <h5>{name}</h5>
+          <h6>{title}</h6>
+        </div>
+        <div className="ml-1">{children}</div>
       </div>
     </div>
   );
