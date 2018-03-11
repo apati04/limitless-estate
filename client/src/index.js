@@ -10,7 +10,8 @@ import App from './components/App';
 import { unregister } from './registerServiceWorker';
 
 $(function() {
-  $('[data-toggle="popover"]').popover({
+  $('[data-toggle="popover"]').popover();
+  $('.popover-dismiss').popover({
     trigger: 'focus'
   });
 });
