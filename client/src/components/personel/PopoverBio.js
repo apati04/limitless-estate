@@ -13,7 +13,7 @@ export default ({ name, type, content }) => {
       <h5>{name}</h5>
       <a
         tabIndex="0"
-        className="ml-2 info-popover"
+        className="poppy popover-dismiss ml-2 info-popover"
         role="button"
         data-toggle="popover"
         data-trigger="focus"

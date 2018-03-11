@@ -11,11 +11,11 @@ import { unregister } from './registerServiceWorker';
 window.jQuery = window.$ = $;
 window.Popper = Popper;
 require('bootstrap');
-require('bootstrap-material-design');
-$('body').bootstrapMaterialDesign();
 $(function() {
-  $('[data-toggle="popover"]').popover({
-    container: 'body',
+  $('.poppy').popover({
+    container: 'body'
+  });
+  $('.popover-dismiss').popover({
     trigger: 'focus'
   });
 });
