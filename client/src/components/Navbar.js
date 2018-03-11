@@ -56,18 +56,12 @@ class Navbar extends Component {
         className="navbar navbar-toggleble-sm navbar-expand-sm navbar-dark bg-dark"
       >
         <div className="container">
-          {/* <Link to="/" className="navbar-brand">
+          <Link to="/" className="navbar-brand">
             Limitless Estates, LLC
-          </Link> */}
-          <a href="#" className="navbar-brand">
-            <img
-              src="https://tmpfilecdn.freelogodesign.org/f473b27e-8f10-45f2-99b0-95a4d6c558e9.png"
-              width="30"
-              height="30"
-              alt=""
-            />
-            Limitless Estates, LLC
-          </a>
+          </Link>
+          {/* <a href="#" className="p-0 navbar-brand">
+            <img src="/img/logo.png" width="60" height="60" alt="" />
+          </a> */}
           <button
             className="navbar-toggler"
             data-toggle="collapse"

@@ -22,11 +22,11 @@ export default class About extends Component {
               <h3 className="p-0">{name}</h3>
               <p className="p-0 font-weight-bold">{llcProps.title}</p>
               <a
-                style={{ opacity: '0.9', backgroundColor: '#2979FF' }}
+                style={{ backgroundColor: '#303F9F', color: '#f7f7f7' }}
                 target="_blank"
                 href={content}
                 role="button"
-                className="m-0 btn btn-raised text-white rounded"
+                className="m-0 btn btn-raised"
               >
                 View Bio >>
               </a>
@@ -186,8 +186,10 @@ export default class About extends Component {
         </section>
         {/* ----------  MEMBERS SECTION ----------- */}
         <section className="py-3 text-center text-white bg-secondary">
-          <div style={{ color: '#fff' }} className="container">
-            <h1 className="display-4 font-italic ">Meet the Team</h1>
+          <div style={{ color: '#f7f7f7' }} className="container">
+            <h1 className="display-4 font-weight-500 font-italic ">
+              Meet the Team
+            </h1>
             <hr />
             <div className="container d-flex justify-content-around flex-wrap">
               {this.renderCards(Team)}
@@ -195,12 +197,9 @@ export default class About extends Component {
           </div>
         </section>
         {/* ----------    ADVISOR SECTION ----------- */}
-        <section
-          style={{ opacity: '0.9' }}
-          className="py-3 text-center text-white border-top bg-dark"
-        >
-          <div style={{ color: '#fff' }} className="container">
-            <h1 className="display-4 font-italic">Advisors</h1>
+        <section className="py-3 text-center text-white border-top bg-secondary">
+          <div style={{ color: '#f7f7f7' }} className="container">
+            <h1 className="display-4 font-weight-500 font-italic">Advisors</h1>
             <hr />
             <div className="container d-flex flex column justify-content-around flex-wrap">
               {this.renderCards(Advisors)}

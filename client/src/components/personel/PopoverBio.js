@@ -3,8 +3,8 @@ import React from 'react';
 const style = {
   popoverStyle: {
     fontSize: '24px',
-    color: '#fff',
-    opacity: '0.86'
+    color: '#f7f7f7',
+    opacity: '0.92'
   }
 };
 export default ({ name, type, content }) => {
@@ -18,12 +18,9 @@ export default ({ name, type, content }) => {
         data-toggle="popover"
         data-trigger="focus"
         title={`${name}, ${type}`}
-        data-content={content}
+        data-content={`${content}`}
       >
-        <i
-          style={style.popoverStyle}
-          className="fas fa-info-circle box-shadow"
-        />
+        <i style={style.popoverStyle} className="fas fa-info-circle" />
       </a>
     </div>
   );
