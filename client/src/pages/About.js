@@ -1,3 +1,4 @@
+import * as $ from 'jquery';
 import '../style/blog.css';
 import React, { Component } from 'react';
 import MemberCard from '../components/MemberCard';
@@ -9,8 +10,17 @@ import { browserHistory, Link } from 'react-router-dom';
 import Advisors from '../api/advisors';
 import Team from '../api/team';
 // accepts props: name type content
-import PopoverBio from '../components/personel/PopoverBio';
 export default class About extends Component {
+  componentDidMount() {
+    $(function() {
+      $('.poppy').popover({
+        container: 'body'
+      });
+      $('.popover-dismiss').popover({
+        trigger: 'focus'
+      });
+    });
+  }
   renderCards = (items) => {
     return items.map((llcProps) => {
       const { name, type } = llcProps;
@@ -32,7 +42,26 @@ export default class About extends Component {
               </a>
             </div>
           ) : (
-            <PopoverBio name={name} type={type} content={content} />
+            <div className="d-flex justify-content-center mt-2">
+              <h5>{name}</h5>
+              <a
+                tabIndex="0"
+                className="poppy popover-dismiss ml-2 info-popover"
+                data-toggle="popover"
+                data-trigger="focus"
+                title={`${name}, ${type}`}
+                data-content={`${content}`}
+              >
+                <i
+                  style={{
+                    fontSize: '24px',
+                    color: '#f7f7f7',
+                    opacity: '0.92'
+                  }}
+                  className="fas fa-info-circle"
+                />
+              </a>
+            </div>
           )}
         </MemberCard>
       );
