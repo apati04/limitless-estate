@@ -14,7 +14,7 @@ import Resources from '../pages/Resources';
 import Legal from '../pages/Legal';
 import ContactForm from '../components/Forms/ContactForm';
 import Questionnaire from '../pages/Questionnaire';
-
+import Faq from '../pages/Faq';
 const Construction = () => {
   return (
     <div style={{ height: '100vh' }} className="container-fluid bg-dark">
@@ -34,13 +34,18 @@ const ContactContruction = () => {
       <div style={{ color: '#eee' }}>
         <h2 style={{ fontSize: '30px' }} className="lead text-center">
           For business inquiries please contact{' '}
-          <a className="text-white" href="mailto:kmitchell@limitless-estates.com">
+          <a
+            className="text-white"
+            href="mailto:kmitchell@limitless-estates.com"
+          >
             Kyle Mitchell
           </a>{' '}
           at
         </h2>
         <h2 style={{ fontSize: '30px' }} className="lead text-center">
-          <a href="mailto:kmitchell@limitless-estates.com">kmitchell@limitless-estates.com</a>
+          <a href="mailto:kmitchell@limitless-estates.com">
+            kmitchell@limitless-estates.com
+          </a>
         </h2>
         <h2 style={{ fontSize: '30px' }} className="lead text-center">
           Thank you!
@@ -66,6 +71,7 @@ class App extends Component {
               <Route path="/markets/arlingtonheights" component={Columbus} />
               <Route exact path="/" component={LandingPage} />
               <Route exact path="/questionnaire" component={Questionnaire} />
+              <Route path="/route/faq" component={Faq} />
               <Footer />
             </ScrollToTop>
           </Switch>
