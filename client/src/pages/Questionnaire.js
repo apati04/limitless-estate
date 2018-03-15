@@ -8,13 +8,14 @@ const Questionnaire = () => {
       <div>
         <div className="container">
           <div className="row">
-            <div className="card m-4">
+            <div className="card">
               <div className="bg-dark">
                 <h1 className="p-5 card-header text-center text-white">
                   Questionnaire
                 </h1>
               </div>
-              <div className="card-body m-4">
+
+              <div className="card-body">
                 <QuestionnaireForm />
               </div>
             </div>
