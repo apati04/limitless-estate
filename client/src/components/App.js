@@ -14,6 +14,7 @@ import Resources from '../pages/Resources';
 import Legal from '../pages/Legal';
 import ContactForm from '../components/Forms/ContactForm';
 import Questionnaire from '../pages/Questionnaire';
+import Faq from '../pages/Faq';
 
 const Construction = () => {
   return (
@@ -34,13 +35,18 @@ const ContactContruction = () => {
       <div style={{ color: '#eee' }}>
         <h2 style={{ fontSize: '30px' }} className="lead text-center">
           For business inquiries please contact{' '}
-          <a className="text-white" href="mailto:kmitchell@limitless-estates.com">
+          <a
+            className="text-white"
+            href="mailto:kmitchell@limitless-estates.com"
+          >
             Kyle Mitchell
           </a>{' '}
           at
         </h2>
         <h2 style={{ fontSize: '30px' }} className="lead text-center">
-          <a href="mailto:kmitchell@limitless-estates.com">kmitchell@limitless-estates.com</a>
+          <a href="mailto:kmitchell@limitless-estates.com">
+            kmitchell@limitless-estates.com
+          </a>
         </h2>
         <h2 style={{ fontSize: '30px' }} className="lead text-center">
           Thank you!
@@ -58,6 +64,7 @@ class App extends Component {
             <ScrollToTop>
               <Navbar />
               <Route exact path="/resources" component={Resources} />
+              <Route path="/faq" component={Faq} />
               <Route exact path="/about" component={About} />
               <Route exact path="/contact" component={Contact} />
               <Route exact path="/markets" component={Markets} />
