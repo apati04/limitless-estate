@@ -1,18 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
 html {
   height: 100%;
 }
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+body {
+  font-size: 100%;
+  line-height: 1.25;
 }
 
+p {
+  font-family: 'Open Sans';
+  font-size: 1em;
+}
+
+input[type="radio"] {
+  margin-left: 1em;
+}
 .navbar .nav-link {
-  font-size: 14px;
   padding-left: 1em !important;
   padding-right: 1em !important;
 }
@@ -118,7 +121,6 @@ footer {
 }
 
 #myFooter h5 {
-  font-size: 18px;
   color: white;
   font-weight: bold;
   margin-top: 30px;
@@ -146,7 +148,6 @@ footer {
 }
 
 #myFooter .social-networks a {
-  font-size: 32px;
   margin-right: 5px;
   margin-left: 5px;
   color: #f9f9f9;
@@ -200,7 +201,7 @@ footer {
 @media (min-width: 1200px) { ... } */
 
 .display-4 {
-  font-size: 2.5rem;
+  font-size: 2.5em;
 }
 
 .btn:focus,
@@ -258,6 +259,26 @@ a.info-popover:hover {
   }
 }
 @media (min-width: 992px) {
+  body {
+    line-height: 1.375em;
+  }
+  h1 {
+    font-size: 3em;
+    line-height: .1.05em;
+  }
+  h2 {
+    font-size: 2.25em;
+    line-height: 1.25em;
+  }
+  h3 {
+    font-size: 1.75em;
+    line-height: 1.25em;
+  }
+  h4 {
+    font-size: 1.25em;
+    line-height: 1.22em;
+  }
+
   .modal-lg {
     max-width: 800px;
   }

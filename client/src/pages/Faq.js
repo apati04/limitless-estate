@@ -6,8 +6,8 @@ export default class Faq extends Component {
     return faq.map(({ title, body }, i) => {
       return (
         <div key={i} className="mt-3 border-bottom text-left">
-          <h2 style={{ fontFamily: 'Open Sans' }}>{title}</h2>
-          <p style={{ fontSize: '1.2rem' }} className="font-weight-light">
+          <h3>{title}</h3>
+          <p>
             {body}
           </p>
         </div>
@@ -17,10 +17,10 @@ export default class Faq extends Component {
   render() {
     return (
       <div>
-        <div class="jumbotron jumbotron-fluid">
-          <div class="container text-center">
-            <h1 class="display-4">F.A.Q</h1>
-            <p class="lead mt-1">Frequently Asked Questions and Answers</p>
+        <div className="jumbotron jumbotron-fluid">
+          <div className="container text-center">
+            <h1 className="display-4">F.A.Q</h1>
+            <p className="lead mt-1">Frequently Asked Questions and Answers</p>
           </div>
         </div>
         <section id="faq">
