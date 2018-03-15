@@ -1,6 +1,5 @@
 module.exports = {
-  kyle:
-    'https://drive.google.com/file/d/1NCk8oNsXsn_iz6ve7ZSDsDdqvvV2P8QU/view?usp=sharing',
+  kyle: 'https://drive.google.com/open?id=1BHpQ2cgwuPV4_yvj8sMcvdSDR33_rVwm',
   lalita:
     'https://drive.google.com/file/d/1oDWKQPmAYxKjJMULoS-Rg1bOEbM6YJR8/view?usp=sharing',
   luis:

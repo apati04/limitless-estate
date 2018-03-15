@@ -20,7 +20,7 @@ export default class Faq extends Component {
         <div class="jumbotron jumbotron-fluid">
           <div class="container text-center">
             <h1 class="display-4">F.A.Q</h1>
-            <p class="lead mt-1">Commonly asked Questions and Answers</p>
+            <p class="lead mt-1">Frequently Asked Questions and Answers</p>
           </div>
         </div>
         <section id="faq">

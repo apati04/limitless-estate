@@ -15,6 +15,7 @@ import Legal from '../pages/Legal';
 import ContactForm from '../components/Forms/ContactForm';
 import Questionnaire from '../pages/Questionnaire';
 import Faq from '../pages/Faq';
+
 const Construction = () => {
   return (
     <div style={{ height: '100vh' }} className="container-fluid bg-dark">
@@ -63,6 +64,7 @@ class App extends Component {
             <ScrollToTop>
               <Navbar />
               <Route exact path="/resources" component={Resources} />
+              <Route path="/faq" component={Faq} />
               <Route exact path="/about" component={About} />
               <Route exact path="/contact" component={Contact} />
               <Route exact path="/markets" component={Markets} />
@@ -71,7 +73,6 @@ class App extends Component {
               <Route path="/markets/arlingtonheights" component={Columbus} />
               <Route exact path="/" component={LandingPage} />
               <Route exact path="/questionnaire" component={Questionnaire} />
-              <Route path="/route/faq" component={Faq} />
               <Footer />
             </ScrollToTop>
           </Switch>

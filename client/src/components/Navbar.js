@@ -4,7 +4,7 @@ import MenuItem from './navMenuItem';
 
 class Navbar extends Component {
   renderMenu() {
-    const fields = [ 'about', 'markets', 'resources', 'contact' ];
+    const fields = [ 'about', 'markets', 'faq', 'contact' ];
     return fields.map((item) => {
       if (item === 'markets') {
         return (
