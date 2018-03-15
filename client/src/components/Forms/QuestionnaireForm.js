@@ -2,40 +2,44 @@ import React, { Component } from 'react';
 import { withFormik, Form, Field } from 'formik';
 import axios from 'axios';
 import Yup from 'yup';
-
-class ContactForm extends Component {
+const style = {
+  radioButton: {
+    marginLeft: '1em'
+  }
+}
+class QuestionnaireForm extends Component {
   render() {
     const { values, errors, touched, isSubmitting, handleChange, handleBlur } = this.props;
     return (
+      <div  className="d-flex flex-column align-items-start justify-content-around m-4">
+             <p className="font-italic text-center card-text pt-1 mb-4">Please fill out the questions below to let us know more about you!</p>
+
       <Form>
-        <div className="row">
-          <div className="col-md-4">
+
             <label htmlFor="firstname">First name</label>
             {touched.firstname &&
               errors.firstname && <small className="ml-2 font-italic text-danger">{errors.firstname}</small>}
             <div className="form-group">
               <Field className="form-control" type="text" name="firstname" />
             </div>
-          </div>
-          <div className="col-md-4">
+
+
             <label htmlFor="lastname">Last Name</label>
             {touched.lastname &&
-              errors.lastname && <small className="ml-2 font-italic text-danger">{errors.lastname}</small>}
+              errors.lastname && <small className="font-italic text-danger">{errors.lastname}</small>}
             <div className="form-group">
               <Field className="form-control" type="text" name="lastname" />
             </div>
-          </div>
-          <div className="col-md-4">
+
+
             <label htmlFor="email">Email Address</label>
             {touched.email &&
-              errors.email && <small className="ml-2 font-bold font-italic text-danger">{errors.email}</small>}
+              errors.email && <small className="font-bold font-italic text-danger">{errors.email}</small>}
             <div className="form-group">
               <Field className="form-control" type="email" name="email" />
             </div>
-          </div>
-        </div>
-        <div className="row m-4">
-          <div className="col-md-6">
+
+
             <div className="mb-4">
               <label htmlFor="firstname">1. Why are you interested in investing in Real Estate?</label>
               <div className="form-group">
@@ -50,6 +54,7 @@ class ContactForm extends Component {
               </div>
             </div>
             <div className="mb-4">
+                  {touched.question3 && errors.question3 && <small className="ml-2 font-italic text-danger">{errors.question3}</small>}
               <label htmlFor="question3">3. Do you want to invest in multifamily, value-add projects?</label>
               <div className="form-group">
                 <label>
@@ -57,10 +62,8 @@ class ContactForm extends Component {
                     name="question3"
                     type="radio"
                     value="Yes"
-                    checked={values.question3 === 'Yes'}
                     onChange={handleChange}
                     onBlur={handleBlur}
-                    className="m-2"
                   />
                   Yes
                 </label>
@@ -72,7 +75,6 @@ class ContactForm extends Component {
                     checked={values.question3 === 'No'}
                     onChange={handleChange}
                     onBlur={handleBlur}
-                    className="m-2"
                   />
                   No
                 </label>
@@ -109,8 +111,9 @@ class ContactForm extends Component {
                 <Field className="form-control" type="text" name="question6" />
               </div>
             </div>
-          </div>
-          <div className="col-md-6">
+
+
+
             <div className="mb-4">
               <label htmlFor="question7">7. Are you an accredited investor?</label>
               <p><small className="text-muted">(Makes more than $200k annually for the past 2 years and will do so in this current year or have a net worth of $1M excluding your primary residence)</small></p>
@@ -123,7 +126,6 @@ class ContactForm extends Component {
                     checked={values.question7 === 'Yes'}
                     onChange={handleChange}
                     onBlur={handleBlur}
-                    className="m-2"
                   />
                   Yes
                 </label>
@@ -135,7 +137,7 @@ class ContactForm extends Component {
                     checked={values.question7 === 'No'}
                     onChange={handleChange}
                     onBlur={handleBlur}
-                    className="m-2"
+
                   />
                   No
                 </label>
@@ -152,7 +154,7 @@ class ContactForm extends Component {
                     checked={values.question8 === 'Yes'}
                     onChange={handleChange}
                     onBlur={handleBlur}
-                    className="m-2"
+
                   />
                   Yes
                 </label>
@@ -164,7 +166,7 @@ class ContactForm extends Component {
                     checked={values.question8 === 'No'}
                     onChange={handleChange}
                     onBlur={handleBlur}
-                    className="m-2"
+
                   />
                   No
                 </label>
@@ -181,7 +183,7 @@ class ContactForm extends Component {
                     checked={values.question9 === 'Low'}
                     onChange={handleChange}
                     onBlur={handleBlur}
-                    className="m-2"
+
                   />
                   Low
                 </label>
@@ -193,7 +195,7 @@ class ContactForm extends Component {
                     checked={values.question9 === 'Moderate'}
                     onChange={handleChange}
                     onBlur={handleBlur}
-                    className="m-2"
+
                   />
                   Moderate
                 </label>
@@ -205,7 +207,7 @@ class ContactForm extends Component {
                     checked={values.question9 === 'High'}
                     onChange={handleChange}
                     onBlur={handleBlur}
-                    className="m-2"
+
                   />
                   High
                 </label>
@@ -223,7 +225,7 @@ class ContactForm extends Component {
                     checked={values.question10 === 'Yes'}
                     onChange={handleChange}
                     onBlur={handleBlur}
-                    className="m-2"
+
                   />
                   Yes
                 </label>
@@ -235,7 +237,7 @@ class ContactForm extends Component {
                     checked={values.question10 === 'No'}
                     onChange={handleChange}
                     onBlur={handleBlur}
-                    className="m-2"
+
                   />
                   No
                 </label>
@@ -252,7 +254,7 @@ class ContactForm extends Component {
                     checked={values.question11 === 'Yes'}
                     onChange={handleChange}
                     onBlur={handleBlur}
-                    className="m-2"
+
                   />
                   Yes
                 </label>
@@ -264,7 +266,7 @@ class ContactForm extends Component {
                     checked={values.question11 === 'No'}
                     onChange={handleChange}
                     onBlur={handleBlur}
-                    className="m-2"
+
                   />
                   No
                 </label>
@@ -282,7 +284,7 @@ class ContactForm extends Component {
                     checked={values.question12 === 'Yes'}
                     onChange={handleChange}
                     onBlur={handleBlur}
-                    className="m-2"
+
                   />
                   Yes
                 </label>
@@ -294,7 +296,7 @@ class ContactForm extends Component {
                     checked={values.question12 === 'No'}
                     onChange={handleChange}
                     onBlur={handleBlur}
-                    className="m-2"
+
                   />
                   No
                 </label>
@@ -312,14 +314,15 @@ class ContactForm extends Component {
                 <Field className="form-control" type="text" name="question14" component="textarea"/>
               </div>
             </div>
-          </div>
-        </div>
+        
+
         <div className="text-right">
           <button className="btn btn-outline-info" disabled={isSubmitting}>
             Submit <i className="ml-1 far fa-paper-plane" />
           </button>
         </div>
       </Form>
+      </div>
     );
   }
 }
@@ -333,11 +336,27 @@ export default withFormik({
     lastname: Yup.string().required('Field is required'),
     email: Yup.string()
       .email('Email is not valid')
-      .required('Field is required')
+      .required('Field is required'),
+    question1: Yup.mixed().required('Field is required'), 
+    question2: Yup.mixed().required('Field is required'), 
+    question3: Yup.mixed().required('Field is required'), 
+    question4a: Yup.mixed().required('Field is required'), 
+    question4b: Yup.mixed().required('Field is required'), 
+    question4c: Yup.mixed().required('Field is required'), 
+    question5: Yup.mixed().required('Field is required'), 
+    question6: Yup.mixed().required('Field is required'), 
+    question7: Yup.mixed().required('Field is required'), 
+    question8: Yup.mixed().required('Field is required'), 
+    question9: Yup.mixed().required('Field is required'), 
+    question10: Yup.mixed().required('Field is required'), 
+    question11: Yup.mixed().required('Field is required'), 
+    question12: Yup.mixed().required('Field is required'),
+    question13: Yup.mixed().required('Field is required'), 
+    question14: Yup.mixed().required('Field is required')
   }),
   handleSubmit(values, { resetForm, setErrors, setSubmitting }) {
     console.log(values);
     resetForm();
     setSubmitting(false);
   },
-})(ContactForm);
+})(QuestionnaireForm);
