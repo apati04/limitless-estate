@@ -5,12 +5,17 @@ import PageHeader from '../components/PageHeader';
 const Questionnaire = () => {
   return (
     <div>
-      <PageHeader title="Questionnaire" description="Please fill out the questions below to let us know more about you!" img="/img/urban.jpg" />
       <div>
-        <div className="container mt-5">
-          <div className="row d-flex justify-content-center">
-            <div className="card bg-light border-info border p-5">
+        <div className="container">
+          <div className="row">
+            <div className="card">
+              <div className="bg-dark">
+
+                <h1 className="p-5 card-header text-center text-white">Questionnaire</h1>
+              </div>
+
               <div className="card-body">
+           
                 <QuestionnaireForm />
               </div>
             </div>
