@@ -9,8 +9,8 @@ body {
 }
 
 p {
-  font-size: 1rem;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans";
+  font-size: 1em;
 }
 
 input[type="radio"] {
