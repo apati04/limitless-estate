@@ -14,21 +14,17 @@ const style = {
 };
 
 export default ({ name, title = '', photo, type, content, children }) => {
-  console.log('photo: ', photo);
   return (
-    <div style={style.card} className="col-md-4">
+    <div style={style.card} className="align-items-center">
       <img
         style={{ border: '2px solid lightgrey' }}
-        className="mr-2 rounded-circle"
+        className="mr-2 mb-1 rounded-circle"
         src={photo.url}
         alt="Generic placeholder"
         width={photo.size}
         height={photo.size}
       />
-      <div className="pt-2 d-flex justify-content-center">
-        <h4>{name}</h4>
-        <div style={{ marginLeft: '8px' }}>{children}</div>
-      </div>
+      {children}
     </div>
   );
 };

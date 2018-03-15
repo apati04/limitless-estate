@@ -1,3 +1,4 @@
+import * as $ from 'jquery';
 import '../style/blog.css';
 import React, { Component } from 'react';
 import MemberCard from '../components/MemberCard';
@@ -9,18 +10,58 @@ import { browserHistory, Link } from 'react-router-dom';
 import Advisors from '../api/advisors';
 import Team from '../api/team';
 // accepts props: name type content
-import PopoverBio from '../components/personel/PopoverBio';
 export default class About extends Component {
+  componentDidMount() {
+    $(function() {
+      $('.poppy').popover({
+        container: 'body'
+      });
+      $('.popover-dismiss').popover({
+        trigger: 'focus'
+      });
+    });
+  }
   renderCards = (items) => {
     return items.map((llcProps) => {
       const { name, type } = llcProps;
       const content = llcProps.content || llcProps.resume;
       return (
-        <MemberCard {...llcProps}>
+        <MemberCard key={name} {...llcProps}>
           {type === 'Team' ? (
-            <button>link</button>
+            <div className="mt-2">
+              <h3 className="p-0">{name}</h3>
+              <p className="p-0 font-weight-bold">{llcProps.title}</p>
+              <a
+                style={{ backgroundColor: '#303F9F', color: '#f7f7f7' }}
+                target="_blank"
+                href={content}
+                role="button"
+                className="m-0 btn btn-raised"
+              >
+                View Bio >>
+              </a>
+            </div>
           ) : (
-            <PopoverBio name={name} type={type} content={content} />
+            <div className="d-flex justify-content-center mt-2">
+              <h5>{name}</h5>
+              <a
+                tabIndex="0"
+                className="poppy popover-dismiss ml-2 info-popover"
+                data-toggle="popover"
+                data-trigger="focus"
+                title={`${name}, ${type}`}
+                data-content={`${content}`}
+              >
+                <i
+                  style={{
+                    fontSize: '24px',
+                    color: '#f7f7f7',
+                    opacity: '0.92'
+                  }}
+                  className="fas fa-info-circle"
+                />
+              </a>
+            </div>
           )}
         </MemberCard>
       );
@@ -174,21 +215,22 @@ export default class About extends Component {
         </section>
         {/* ----------  MEMBERS SECTION ----------- */}
         <section className="py-3 text-center text-white bg-secondary">
-          <div style={{ color: '#fff' }} className="container">
-            <h1 className="display-4 font-italic ">Meet the Team</h1>
+          <div style={{ color: '#f7f7f7' }} className="container">
+            <h1 className="display-4 font-weight-500 font-italic ">
+              Meet the Team
+            </h1>
             <hr />
-            <div className="row">{this.renderCards(Team)}</div>
+            <div className="container d-flex justify-content-around flex-wrap">
+              {this.renderCards(Team)}
+            </div>
           </div>
         </section>
         {/* ----------    ADVISOR SECTION ----------- */}
-        <section
-          style={{ opacity: '0.9' }}
-          className="py-3 text-center text-white border-top bg-dark"
-        >
-          <div style={{ color: '#fff' }} className="container">
-            <h1 className="display-4 font-italic">Advisors</h1>
+        <section className="py-3 text-center text-white border-top bg-secondary">
+          <div style={{ color: '#f7f7f7' }} className="container">
+            <h1 className="display-4 font-weight-500 font-italic">Advisors</h1>
             <hr />
-            <div className="row d-flex flex-wrap">
+            <div className="container d-flex flex column justify-content-around flex-wrap">
               {this.renderCards(Advisors)}
             </div>
             {/* <div className="container">

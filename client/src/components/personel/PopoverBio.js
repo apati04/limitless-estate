@@ -3,24 +3,25 @@ import React from 'react';
 const style = {
   popoverStyle: {
     fontSize: '24px',
-    color: '#f7f7f7'
+    color: '#f7f7f7',
+    opacity: '0.92'
   }
 };
 export default ({ name, type, content }) => {
   return (
-    <a
-      tabIndex="0"
-      className="info-popover"
-      role="button"
-      data-toggle="popover"
-      data-trigger="focus"
-      title={`${name}, ${type}`}
-      data-content={content}
-    >
-      <i
-        style={style.popoverStyle}
-        className="fas fa-info-circle align-self-end"
-      />
-    </a>
+    <div className="d-flex justify-content-center mt-2">
+      <h5>{name}</h5>
+      <a
+        tabIndex="0"
+        className="poppy popover-dismiss ml-2 info-popover"
+        role="button"
+        data-toggle="popover"
+        data-trigger="focus"
+        title={`${name}, ${type}`}
+        data-content={`${content}`}
+      >
+        <i style={style.popoverStyle} className="fas fa-info-circle" />
+      </a>
+    </div>
   );
 };

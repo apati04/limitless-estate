@@ -59,7 +59,9 @@ class Navbar extends Component {
           <Link to="/" className="navbar-brand">
             Limitless Estates, LLC
           </Link>
-
+          {/* <a href="#" className="p-0 navbar-brand">
+            <img src="/img/logo.png" width="60" height="60" alt="" />
+          </a> */}
           <button
             className="navbar-toggler"
             data-toggle="collapse"
