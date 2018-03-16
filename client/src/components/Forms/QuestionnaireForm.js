@@ -18,27 +18,30 @@ class QuestionnaireForm extends Component {
       handleBlur
     } = this.props;
     return (
-      <Form>
-        <div className="form-group row">
-          <div className="col">
-            <label htmlFor="firstname">Firstname</label>
-            <Field className="form-control" type="text" name="firstname" />
-            {touched.firstname &&
-              errors.firstname && (
-                <small className="ml-2 font-italic text-danger">
-                  {errors.firstname}
-                </small>
-              )}
-          </div>
-          <div className="col">
-            <label htmlFor="lastname">Lastname</label>
-            <Field className="form-control" type="text" name="lastname" />
-            {touched.lastname &&
-              errors.lastname && (
-                <small className="font-italic text-danger">
-                  {errors.lastname}
-                </small>
-              )}
+      <Form className="container">
+        <div>
+          <label className="display-4 mb-3">Basic Information</label>
+          <div className="form-group row">
+            <div className="col">
+              <label htmlFor="firstname">Firstname</label>
+              <Field className="form-control" type="text" name="firstname" />
+              {touched.firstname &&
+                errors.firstname && (
+                  <small className="ml-2 font-italic text-danger">
+                    {errors.firstname}
+                  </small>
+                )}
+            </div>
+            <div className="col">
+              <label htmlFor="lastname">Lastname</label>
+              <Field className="form-control" type="text" name="lastname" />
+              {touched.lastname &&
+                errors.lastname && (
+                  <small className="font-italic form-text text-danger">
+                    {errors.lastname}
+                  </small>
+                )}
+            </div>
           </div>
         </div>
         <div className="form-group row">
@@ -53,124 +56,131 @@ class QuestionnaireForm extends Component {
               )}
           </div>
         </div>
-
-        <div className="mb-4">
-          <h1>Main Questions</h1>
-          <div className="form-group row">
-            <div className="col">
-              <label htmlFor="q1">
-                1. Why are you interested in investing in Real Estate?
-              </label>
-              <Field className="form-control" type="text" name="q1" />
+        <div className="form-group">
+          <div className="mb-4">
+            <label className="display-4 mb-4">Investor Information</label>
+            <div className="form-group row">
+              <div className="col">
+                <label htmlFor="q1">
+                  1. Why are you interested in investing in Real Estate?
+                </label>
+                <Field className="form-control" type="text" name="q1" />
+              </div>
             </div>
           </div>
-        </div>
-        <div className="mb-4">
-          <div className="form-group row">
-            <div className="col">
-              <label htmlFor="lastname">
-                2. What is the biggest hurdle you are trying to overcome by
-                investing in Real Estate?
-              </label>
+          <div className="mb-4">
+            <div className="form-group row">
+              <div className="col">
+                <label htmlFor="lastname">
+                  2. What is the biggest hurdle you are trying to overcome by
+                  investing in Real Estate?
+                </label>
+                <Field className="form-control" type="text" name="question2" />
+              </div>
+            </div>
+          </div>
+          <div className="mb-4">
+            {touched.question3 &&
+              errors.question3 && (
+                <small className="ml-2 font-italic text-danger">
+                  {errors.question3}
+                </small>
+              )}
+            <label htmlFor="question3">
+              3. Do you want to invest in multifamily, value-add projects?
+            </label>
+            <div className="form-group">
               <Field className="form-control" type="text" name="question2" />
             </div>
           </div>
         </div>
-        <div className="mb-4">
-          {touched.question3 &&
-            errors.question3 && (
-              <small className="ml-2 font-italic text-danger">
-                {errors.question3}
-              </small>
-            )}
-          <label htmlFor="question3">
-            3. Do you want to invest in multifamily, value-add projects?
-          </label>
-          <div className="form-group">
-            <Field className="form-control" type="text" name="question2" />
-          </div>
-        </div>
-        <div className="mb-4 form-group">
-          <label>4. What are your return expectations?</label>
-          <div className="form-row">
-            <div className="form-inline">
-              <label htmlFor="q4a">a. Annual Return Percentage:</label>
-              <div className="input-group">
-                <Field
-                  className="ml-2 col-4 form-control input-group-text text-center"
-                  type="text"
-                  name="q4a"
-                />
-                <div className="input-group-prepend">%</div>
+        <div>
+          <div className="mb-4 d-flex flex-column align-items-middle form-group">
+            <label>4. What are your return expectations?</label>
+            <div className="container d-flex flex-column">
+              <div className="form-group">
+                <label htmlFor="q4a">a. Annual Return Percentage:</label>
+                <div className="form-row">
+                  <div className="input-group-inline p-0">
+                    <Field
+                      className="ml-2 col-4 form-control input-group-text text-center"
+                      type="text"
+                      name="q4a"
+                    />
+                    <div className="input-group-append">%</div>
+                  </div>
+                </div>
+              </div>
+              <div className="form-row">
+                <label htmlFor="q4b">b. Internal rate of return (IRR): </label>
+                <div className="input-group m-0">
+                  <Field
+                    className="ml-2 pl-2 col-4 form-control input-group-text text-center"
+                    type="text"
+                    name="q4b"
+                  />
+                  <div className="input-group-prepend p-0">%</div>
+                </div>
+              </div>
+
+              <div className="form-row">
+                <div className="form-inline">
+                  <label htmlFor="q4c">c. cash on cash return: </label>
+                  <div className="input-group">
+                    <Field
+                      className="col-4 ml-2 text-center form-control"
+                      type="text"
+                      name="q4c"
+                    />
+                    <div className="input-group-prepend">%</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="mb-4 form-group">
+              <label htmlFor="question5">
+                5.{" "}
+                <span className="ml-2">
+                  What is your investment minimum and maximum hold time ?
+                </span>
+              </label>
+              <div className="form-row">
+                <div className="input-group container">
+                  <div className="lead input-group-prepend">$</div>
+                  <Field
+                    className="lead form-control col-3 p-0 ml-2"
+                    type="text"
+                    name="question5"
+                  />
+                  <div className="h5 input-group-prepend">for</div>
+
+                  <Field
+                    className="lead form-control col-3 p-0 ml-2"
+                    type="text"
+                    name="q5time"
+                  />
+                  <div className="h5 m-0 input-group-prepend">days</div>
+                </div>
               </div>
             </div>
           </div>
-          <div className="form-row">
-            <div className="form-inline">
-              <label htmlFor="q4b">b. Internal rate of return (IRR): </label>
-              <div className="input-group">
+
+          <div className="mb-4 form-group">
+            <div className="form-group">
+              <label htmlFor="question6">
+                6.<span className="ml-2">
+                  What is the minimum dollar amount you are willing to invest ?
+                </span>
+              </label>
+              <div className="input-group ml-4 p-0">
+                <div className="lead input-group-prepend">$</div>
                 <Field
-                  className="ml-2 col-4 form-control input-group-text text-center"
+                  className="lead form-control col-3 ml-2 p-0"
                   type="text"
-                  name="q4b"
+                  name="question6"
                 />
-                <div className="input-group-prepend">%</div>
               </div>
-            </div>
-          </div>
-          <div className="form-row">
-            <div className="form-inline">
-              <label htmlFor="q4c">c. cash on cash return: </label>
-              <div className="input-group">
-                <Field
-                  className="col-4 ml-2 text-center form-control"
-                  type="text"
-                  name="q4c"
-                />
-                <div className="input-group-prepend">%</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="mb-4 form-row">
-          <label htmlFor="question5">
-            5. What is your investment minimum and maximum hold time?
-          </label>
-          <div className="form-inline">
-            <div className="input-group">
-              <div className="h5 m-0 input-group-prepend">$</div>
-              <Field
-                className="lead form-control col-3 p-0 ml-2"
-                type="text"
-                name="question5"
-              />
-              <div className="h5 input-group-prepend">for</div>
-
-              <Field
-                className="lead form-control col-3 p-0 ml-2"
-                type="text"
-                name="q5time"
-              />
-              <div className="h5 m-0 input-group-prepend">days</div>
-            </div>
-          </div>
-        </div>
-
-        <div className="mb-4 form-group">
-          <div className="form-group">
-            <label htmlFor="question6">
-              6.<span className="ml-2">
-                What is the minimum dollar amount you are willing to invest ?
-              </span>
-            </label>
-            <div className="input-group ml-4 p-0">
-              <div className="lead input-group-prepend">$</div>
-              <Field
-                className="lead form-control col-3 ml-2 p-0"
-                type="text"
-                name="question6"
-              />
             </div>
           </div>
         </div>
