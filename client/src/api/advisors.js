@@ -52,5 +52,35 @@ module.exports = [
     },
     content:
       'Since 1998, Old Capital has been a premier provider of commercial Capital solutions and advisory services for commercial real estate investors.'
+  },
+  {
+    name: 'Michael Gross',
+    type: 'Real Estate Attorney',
+    photo: {
+      url: `${img_path}/OldCapital4.jpg`,
+      size: '186px'
+    },
+    content:
+      'Mr. Gross handles all legal matters related to the real estate transaction.'
+  },
+  {
+    name: 'Steven Rinaldi',
+    type: 'SEC Attorney',
+    photo: {
+      url: `${img_path}/steve-rinaldi.png`,
+      size: '186px'
+    },
+    content:
+      'Mr. Rinaldi handles all legal matters related to SEC compliance.'
+  },
+  {
+    name: 'Panzera Realty',
+    type: 'Property Management',
+    photo: {
+      url: `${img_path}/panzera-realty.jpeg`,
+      size: '186px'
+    },
+    content:
+    '​Panzera Realty has several hundred units under management in Columbus, OH. Their experience in managing and owning their own multifamily apartments will be a great asset to the team.'
   }
 ];
