@@ -1,24 +1,13 @@
-import 'bootstrap';
-import 'bootstrap-material-design/dist/css/bootstrap-material-design.min.css';
-import 'mapbox-gl/dist/mapbox-gl.css';
-import './style/styles.css';
-import 'mapbox-gl/dist/mapbox-gl';
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
-import { createStore, applyMiddleware, compose } from 'redux';
-import reduxThunk from 'redux-thunk';
-import rootReducer from './reducers';
-import App from './components/App';
-import { unregister } from './registerServiceWorker';
+import "bootstrap";
+import "bootstrap-material-design/dist/css/bootstrap-material-design.min.css";
+import "mapbox-gl/dist/mapbox-gl.css";
+import "./style/styles.css";
+import "mapbox-gl/dist/mapbox-gl";
+import Popper from "popper.js";
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./components/App";
+import { unregister } from "./registerServiceWorker";
 
-const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
-
-const store = createStore(rootReducer, {}, composeEnhancer(applyMiddleware(reduxThunk)));
-
-ReactDOM.render(
-  <Provider store={store}>
-    <App />
-  </Provider>
-    , document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById("root"));
 unregister();
