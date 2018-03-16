@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { withFormik, Form, Field } from "formik";
+import { Input } from "mdbreact";
 import axios from "axios";
 import Yup from "yup";
 const style = {
@@ -19,31 +20,39 @@ class QuestionnaireForm extends Component {
     } = this.props;
     return (
       <Form className="container">
-        <div>
-          <label className="display-4 mb-3">Basic Information</label>
-          <div className="form-group row">
-            <div className="col">
-              <label htmlFor="firstname">Firstname</label>
-              <Field className="form-control" type="text" name="firstname" />
-              {touched.firstname &&
-                errors.firstname && (
-                  <small className="ml-2 font-italic text-danger">
-                    {errors.firstname}
-                  </small>
-                )}
-            </div>
-            <div className="col">
-              <label htmlFor="lastname">Lastname</label>
-              <Field className="form-control" type="text" name="lastname" />
-              {touched.lastname &&
-                errors.lastname && (
-                  <small className="font-italic form-text text-danger">
-                    {errors.lastname}
-                  </small>
-                )}
-            </div>
+        <div className="row">
+          <div className="col-md-6">
+            <Input
+              className="form-control"
+              label="Firstname"
+              type="text"
+              name="firstname"
+              id="firstname"
+            />
+            {touched.firstname &&
+              errors.firstname && (
+                <small className="ml-2 font-italic text-danger">
+                  {errors.firstname}
+                </small>
+              )}
+          </div>
+          <div className="col-md-6">
+            <Input
+              className="form-control"
+              id="lastname"
+              label="Lastname"
+              type="text"
+              name="lastname"
+            />
+            {touched.lastname &&
+              errors.lastname && (
+                <small className="font-italic form-text text-danger">
+                  {errors.lastname}
+                </small>
+              )}
           </div>
         </div>
+
         <div className="form-group row">
           <div className="col">
             <label htmlFor="email">Email Address</label>

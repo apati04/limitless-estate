@@ -1,38 +1,27 @@
-import * as $ from 'jquery';
-import '../style/blog.css';
-import React, { Component } from 'react';
-import MemberCard from '../components/MemberCard';
-import PageHeader from '../components/PageHeader';
-import RegisterModal from '../components/RegisterModal';
-import { kyle, lalita, luis } from '../api/resume';
-import { browserHistory, Link } from 'react-router-dom';
+import "../style/blog.css";
+import React, { Component } from "react";
+import MemberCard from "../components/MemberCard";
+import PageHeader from "../components/PageHeader";
+import RegisterModal from "../components/RegisterModal";
+import { kyle, lalita, luis } from "../api/resume";
+import { browserHistory, Link } from "react-router-dom";
 /** api array of objects*/
-import Advisors from '../api/advisors';
-import Team from '../api/team';
+import Advisors from "../api/advisors";
+import Team from "../api/team";
 // accepts props: name type content
 export default class About extends Component {
-  componentDidMount() {
-    $(function() {
-      $('.poppy').popover({
-        container: 'body'
-      });
-      $('.popover-dismiss').popover({
-        trigger: 'focus'
-      });
-    });
-  }
-  renderCards = (items) => {
-    return items.map((llcProps) => {
+  renderCards = items => {
+    return items.map(llcProps => {
       const { name, type } = llcProps;
       const content = llcProps.content || llcProps.resume;
       return (
         <MemberCard key={name} {...llcProps}>
-          {type === 'Team' ? (
+          {type === "Team" ? (
             <div className="mt-2">
               <h3 className="p-0">{name}</h3>
               <p className="p-0 font-weight-bold">{llcProps.title}</p>
               <a
-                style={{ backgroundColor: '#303F9F', color: '#f7f7f7' }}
+                style={{ backgroundColor: "#303F9F", color: "#f7f7f7" }}
                 target="_blank"
                 href={content}
                 role="button"
@@ -54,9 +43,9 @@ export default class About extends Component {
               >
                 <i
                   style={{
-                    fontSize: '24px',
-                    color: '#f7f7f7',
-                    opacity: '0.92'
+                    fontSize: "24px",
+                    color: "#f7f7f7",
+                    opacity: "0.92"
                   }}
                   className="fas fa-info-circle"
                 />
@@ -69,10 +58,10 @@ export default class About extends Component {
   };
   render() {
     // staff
-    const kyleImg = '/img/team/KMitchell.jpg';
-    const luisImg = '/img/team/LCruz.jpg';
-    const lalitaImg = '/img/team/LPatipak.jpg';
-    const finance = '/img/background/financial.jpg';
+    const kyleImg = "/img/team/KMitchell.jpg";
+    const luisImg = "/img/team/LCruz.jpg";
+    const lalitaImg = "/img/team/LPatipak.jpg";
+    const finance = "/img/background/financial.jpg";
     return (
       <div>
         <PageHeader title="About Us" description="" img="/img/imageLA.jpg" />
@@ -88,7 +77,7 @@ export default class About extends Component {
                     Why Invest In Multifamily?
                   </h2>
                   <p className="blog-post-meta">
-                    March 2018, by{' '}
+                    March 2018, by{" "}
                     <a target="_blank" href={kyle}>
                       Kyle Mitchell, CEO
                     </a>
@@ -145,13 +134,13 @@ export default class About extends Component {
                     <p>
                       An article for more tips on ways to increase rents (some
                       may not apply to all of our investments) that our team
-                      will implement to drive the value of our properties{' '}
+                      will implement to drive the value of our properties{" "}
                       <strong>can be found</strong>
                       <a
                         target="_blank"
                         href="https://www.biggerpockets.com/renewsblog/13-ways-increase-rent-add-rental-property/"
                       >
-                        {' '}
+                        {" "}
                         here
                       </a>
                     </p>
@@ -180,7 +169,7 @@ export default class About extends Component {
               </div>
               <div className="m-0 p-0 col-lg-4">
                 <img
-                  style={{ marginTop: '-50px' }}
+                  style={{ marginTop: "-50px" }}
                   src={finance}
                   width="320px"
                   height="320px"
@@ -215,7 +204,7 @@ export default class About extends Component {
         </section>
         {/* ----------  MEMBERS SECTION ----------- */}
         <section className="py-3 text-center text-white bg-secondary">
-          <div style={{ color: '#f7f7f7' }} className="container">
+          <div style={{ color: "#f7f7f7" }} className="container">
             <h1 className="display-4 font-weight-500 font-italic ">
               Meet the Team
             </h1>
@@ -227,7 +216,7 @@ export default class About extends Component {
         </section>
         {/* ----------    ADVISOR SECTION ----------- */}
         <section className="py-3 text-center text-white border-top bg-secondary">
-          <div style={{ color: '#f7f7f7' }} className="container">
+          <div style={{ color: "#f7f7f7" }} className="container">
             <h1 className="display-4 font-weight-500 font-italic">Advisors</h1>
             <hr />
             <div className="container d-flex flex column justify-content-around flex-wrap">
