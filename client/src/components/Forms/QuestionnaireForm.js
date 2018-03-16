@@ -53,16 +53,29 @@ class QuestionnaireForm extends Component {
           </div>
         </div>
 
-        <div className="form-group row">
-          <div className="col">
-            <label htmlFor="email">Email Address</label>
-            <Field className="form-control" type="email" name="email" />
+        <div className="row">
+          <div className="col-md-6">
+            <Input
+              className="form-control"
+              label="Email Address"
+              type="email"
+              id="email"
+              name="email"
+            />
             {touched.email &&
               errors.email && (
                 <small className="font-bold font-italic text-danger">
                   {errors.email}
                 </small>
               )}
+          </div>
+          <div className="col-md-6">
+            <Input
+              className="form-control"
+              label="Phone Number"
+              type="tel"
+              id="phonenumber"
+            />
           </div>
         </div>
         <div className="form-group">
