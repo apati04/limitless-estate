@@ -15,6 +15,7 @@ import Legal from '../pages/Legal';
 import ContactForm from '../components/Forms/ContactForm';
 import Questionnaire from '../pages/Questionnaire';
 import Faq from '../pages/Faq';
+import SupportCo from '../pages/SupportCo';
 
 const Construction = () => {
   return (
@@ -66,16 +67,17 @@ class App extends Component {
               <Route exact path="/resources" component={Resources} />
               <Route path="/faq" component={Faq} />
               <Route exact path="/about" component={About} />
-              <Route exact path="/contact" component={Contact} />
               <Route exact path="/markets" component={Markets} />
               <Route exact path="/legal" component={Legal} />
               <Route path="/markets/riverparkjefferson" component={Ecorse} />
               <Route path="/markets/arlingtonheights" component={Columbus} />
+              <Route exact path="/info/contact" component={Contact} />
+              <Route exact path="/info/questionnaire" component={Questionnaire} />
+              <Route exact path="/info" component={SupportCo} />
               <Route exact path="/" component={LandingPage} />
-              <Route exact path="/questionnaire" component={Questionnaire} />
-              <Footer />
             </ScrollToTop>
           </Switch>
+              <Footer />
         </div>
       </BrowserRouter>
     );

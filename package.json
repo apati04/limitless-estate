@@ -4,16 +4,18 @@
   "description": "Mern Demo",
   "main": "server.js",
   "engines": {
-  "node": "9.4.0",
-  "npm": "5.6.0"
-},
+    "node": "9.8.0",
+    "npm": "5.6.0"
+  },
   "scripts": {
     "server": "node server.js",
     "client": "cd client && npm run start",
     "start": "concurrently \"npm run server\" \"npm run client\"",
     "build": "cd client && npm run build",
-    "deploy": "yarn build && git add . && git commit -m \"Building for production\" && git push heroku master",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client",
+    "deploy":
+      "yarn build && git add . && git commit -m \"Building for production\" && git push heroku master",
+    "heroku-postbuild":
+      "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
