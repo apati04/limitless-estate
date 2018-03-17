@@ -222,101 +222,6 @@ class QuestionnaireForm extends Component {
             </li>
             <li>
               <div className="form-group">
-<<<<<<< HEAD
-                <label>
-                  <input
-                    name="question9"
-                    type="radio"
-                    value="Low"
-                    checked={values.question9 === 'Low'}
-                    onChange={handleChange}
-                    onBlur={handleBlur}
-
-                  />
-                  Low
-                </label>
-                <label>
-                  <input
-                    name="question9"
-                    type="radio"
-                    value="Moderate"
-                    checked={values.question9 === 'Moderate'}
-                    onChange={handleChange}
-                    onBlur={handleBlur}
-
-                  />
-                  Moderate
-                </label>
-                <label>
-                  <input
-                    name="question9"
-                    type="radio"
-                    value="High"
-                    checked={values.question9 === 'High'}
-                    onChange={handleChange}
-                    onBlur={handleBlur}
-
-                  />
-                  High
-                </label>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="mb-4">
-          <div className="form-group">
-            <label htmlFor="question8">
-              8. <span className="ml-2">Can you show proof of funds?</span>
-            </label>
-            <div className="ml-2 mt-2 input-form-group">
-              <label>
-                <input
-                  className="lead mr-1"
-                  name="question8"
-                  type="radio"
-                  value="Yes"
-                  onChange={handleChange}
-                  onBlur={handleBlur}
-                />
-                Yes
-              </label>
-              <label>
-                <input
-                  className="lead mr-1"
-                  name="question8"
-                  type="radio"
-                  value="No"
-                  onChange={handleChange}
-                  onBlur={handleBlur}
-                />
-                No
-              </label>
-              <div className="form-group">
-                <label>
-                  <input
-                    name="question10"
-                    type="radio"
-                    value="Yes"
-                    checked={values.question10 === 'Yes'}
-                    onChange={handleChange}
-                    onBlur={handleBlur}
-
-                  />
-                  Yes
-                </label>
-                <label>
-                  <input
-                    name="question10"
-                    type="radio"
-                    value="No"
-                    checked={values.question10 === 'No'}
-                    onChange={handleChange}
-                    onBlur={handleBlur}
-
-                  />
-                  No
-                </label>
-=======
                 <div className="row">
                   <div className="col">
                     <label className="col-form-label" htmlFor="q7">
@@ -380,37 +285,11 @@ class QuestionnaireForm extends Component {
                     />
                   </div>
                 </div>
->>>>>>> 3728fc05cf8c5dc1a709a3da74c0b1b8fe12dba7
               </div>
             </li>
 
             <li>
               <div className="form-group">
-<<<<<<< HEAD
-                <label>
-                  <input
-                    name="question11"
-                    type="radio"
-                    value="Yes"
-                    checked={values.question11 === 'Yes'}
-                    onChange={handleChange}
-                    onBlur={handleBlur}
-
-                  />
-                  Yes
-                </label>
-                <label>
-                  <input
-                    name="question11"
-                    type="radio"
-                    value="No"
-                    checked={values.question11 === 'No'}
-                    onChange={handleChange}
-                    onBlur={handleBlur}
-
-                  />
-                  No
-=======
                 <label htmlFor="q9">
                   How would you rate your risk tolerance?
                 </label>
@@ -447,73 +326,6 @@ class QuestionnaireForm extends Component {
                   type="radio"
                 />
               </div>
-<<<<<<< HEAD
-            </div>
-            <div className="mb-4">
-              <label htmlFor="question12">12. Are you comfortable investing with other LPs or would you require to be the only LP in this investment?</label>
-              <p><small className="text-muted">If you’re a substantial portion of the equity being invested in the deal, we would ask for you to commit non-refundable equity to create an alignment of interest to close.</small></p>
-              <div className="form-group">
-                <label>
-                  <input
-                    name="question12"
-                    type="radio"
-                    value="Yes"
-                    checked={values.question12 === 'Yes'}
-                    onChange={handleChange}
-                    onBlur={handleBlur}
-
-                  />
-                  Yes
-                </label>
-                <label>
-                  <input
-                    name="question12"
-                    type="radio"
-                    value="No"
-                    checked={values.question12 === 'No'}
-                    onChange={handleChange}
-                    onBlur={handleBlur}
-
-                  />
-                  No
-                </label>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="mb-4">
-          <div className="form-group row">
-            <div className="col">
-              <label htmlFor="q11">
-                11. Have you invested as a limited partner (LP) on a syndication
-                deal in the past?
-              </label>
-              <Field className="form-control" type="text" name="q11" />
-            </div>
-          </div>
-        </div>
-
-        <div className="mb-4">
-          <div className="form-group row">
-            <div className="col">
-              <label htmlFor="q12">
-                12. Are you comfortable investing with other LPs or would you
-                require to be the only LP in this investment?
-              </label>
-              <small className="form-text text-muted">
-                If you’re a substantial portion of the equity being invested in
-                the deal, we would ask for you to commit non-refundable equity
-                to create an alignment of interest to close.
-              </small>
-
-              <Field className="form-control" type="text" name="q12" />
-            </div>
-        
-
-        <div className="text-right">
-          <button className="btn btn-outline-info" disabled={isSubmitting}>
-=======
             </li>
             <li>
               <div className="mt-4">
@@ -581,7 +393,7 @@ class QuestionnaireForm extends Component {
                     type="textarea"
                     id="q13"
                     name="q13"
-                  />
+                  />{" "}
                 </div>
               </div>
             </li>
@@ -607,12 +419,10 @@ class QuestionnaireForm extends Component {
 
         <div className="text-center">
           <Button disabled={isSubmitting} size="lg" rounded gradient="blue">
->>>>>>> 3728fc05cf8c5dc1a709a3da74c0b1b8fe12dba7
             Submit <i className="ml-1 far fa-paper-plane" />
           </Button>
         </div>
       </Form>
-      </div>
     );
   }
 }
@@ -665,26 +475,6 @@ export default withFormik({
     firstname: Yup.string().required("Field is required"),
     lastname: Yup.string().required("Field is required"),
     email: Yup.string()
-<<<<<<< HEAD
-      .email('Email is not valid')
-      .required('Field is required'),
-    question1: Yup.mixed().required('Field is required'), 
-    question2: Yup.mixed().required('Field is required'), 
-    question3: Yup.mixed().required('Field is required'), 
-    question4a: Yup.mixed().required('Field is required'), 
-    question4b: Yup.mixed().required('Field is required'), 
-    question4c: Yup.mixed().required('Field is required'), 
-    question5: Yup.mixed().required('Field is required'), 
-    question6: Yup.mixed().required('Field is required'), 
-    question7: Yup.mixed().required('Field is required'), 
-    question8: Yup.mixed().required('Field is required'), 
-    question9: Yup.mixed().required('Field is required'), 
-    question10: Yup.mixed().required('Field is required'), 
-    question11: Yup.mixed().required('Field is required'), 
-    question12: Yup.mixed().required('Field is required'),
-    question13: Yup.mixed().required('Field is required'), 
-    question14: Yup.mixed().required('Field is required')
-=======
       .email("Email is not valid")
       .required("Field is required"),
     question1: Yup.mixed().required("Field is required"),
@@ -703,15 +493,10 @@ export default withFormik({
     question12: Yup.mixed().required("Field is required"),
     question13: Yup.mixed().required("Field is required"),
     question14: Yup.mixed().required("Field is required")
->>>>>>> 3728fc05cf8c5dc1a709a3da74c0b1b8fe12dba7
   }),
   handleSubmit(values, { resetForm, setErrors, setSubmitting }) {
     console.log(values);
     resetForm();
     setSubmitting(false);
-<<<<<<< HEAD
-  },
-=======
   }
->>>>>>> 3728fc05cf8c5dc1a709a3da74c0b1b8fe12dba7
 })(QuestionnaireForm);
