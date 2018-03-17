@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-import React, { Component } from 'react';
-import { withFormik, Form, Field } from 'formik';
-import axios from 'axios';
-import Yup from 'yup';
-const style = {
-  radioButton: {
-    marginLeft: '1em'
-  }
-}
-class QuestionnaireForm extends Component {
-=======
 import React, { Component } from "react";
 import { withFormik, Form, Field } from "formik";
 import { Input, Button } from "mdbreact";
@@ -26,7 +14,6 @@ class QuestionnaireForm extends Component {
     proofOfFunds: false,
     riskTolerance: false
   };
->>>>>>> 3728fc05cf8c5dc1a709a3da74c0b1b8fe12dba7
   render() {
     const {
       values,
@@ -36,19 +23,6 @@ class QuestionnaireForm extends Component {
       handleChange,
       handleBlur
     } = this.props;
-<<<<<<< HEAD
-    return (
-      <div  className="d-flex flex-column align-items-start justify-content-around m-4">
-             <p className="font-italic text-center card-text pt-1 mb-4">Please fill out the questions below to let us know more about you!</p>
-
-      <Form>
-
-            <label htmlFor="firstname">First name</label>
-            {touched.firstname &&
-              errors.firstname && <small className="ml-2 font-italic text-danger">{errors.firstname}</small>}
-            <div className="form-group">
-              <Field className="form-control" type="text" name="firstname" />
-=======
     const { riskTolerance } = this.state;
     return (
       <Form className="p-4 container d-flex flex-column justify-content-around">
@@ -67,80 +41,12 @@ class QuestionnaireForm extends Component {
                 name="firstname"
                 id="firstname"
               />
->>>>>>> 3728fc05cf8c5dc1a709a3da74c0b1b8fe12dba7
               {touched.firstname &&
                 errors.firstname && (
                   <small className="ml-2 font-italic text-danger">
                     {errors.firstname}
                   </small>
                 )}
-<<<<<<< HEAD
-            </div>
-
-
-            <label htmlFor="lastname">Last Name</label>
-            {touched.lastname &&
-              errors.lastname && <small className="font-italic text-danger">{errors.lastname}</small>}
-            <div className="form-group">
-              <Field className="form-control" type="text" name="lastname" />
-              {touched.lastname &&
-                errors.lastname && (
-                  <small className="font-italic form-text text-danger">
-                    {errors.lastname}
-                  </small>
-                )}
-            </div>
-
-
-            <label htmlFor="email">Email Address</label>
-            <Field className="form-control" type="email" name="email" />
-            {touched.email &&
-              errors.email && <small className="font-bold font-italic text-danger">{errors.email}</small>}
-            <div className="form-group">
-              <Field className="form-control" type="email" name="email" />
-            </div>
-
-
-            <div className="mb-4">
-              <label htmlFor="firstname">1. Why are you interested in investing in Real Estate?</label>
-              <div className="form-group">
-                <Field className="form-control" type="text" name="question1" />
-              </div>
-            </div>
-          </div>
-          <div className="mb-4">
-            <div className="form-group row">
-              <div className="col">
-                <label htmlFor="lastname">
-                  2. What is the biggest hurdle you are trying to overcome by
-                  investing in Real Estate?
-                </label>
-                <Field className="form-control" type="text" name="question2" />
-              </div>
-            </div>
-            <div className="mb-4">
-                  {touched.question3 && errors.question3 && <small className="ml-2 font-italic text-danger">{errors.question3}</small>}
-              <label htmlFor="question3">3. Do you want to invest in multifamily, value-add projects?</label>
-              <div className="form-group">
-                <label>
-                  <input
-                    name="question3"
-                    type="radio"
-                    value="Yes"
-                    onChange={handleChange}
-                    onBlur={handleBlur}
-                  />
-                  Yes
-                </label>
-                <label>
-                  <input
-                    name="question3"
-                    type="radio"
-                    value="No"
-                    checked={values.question3 === 'No'}
-                    onChange={handleChange}
-                    onBlur={handleBlur}
-=======
             </div>
             <div className="col-md-6">
               <Input
@@ -205,87 +111,9 @@ class QuestionnaireForm extends Component {
                     type="textarea"
                     id="q1"
                     name="q1"
->>>>>>> 3728fc05cf8c5dc1a709a3da74c0b1b8fe12dba7
                   />
                 </div>
               </div>
-<<<<<<< HEAD
-            </div>
-          </div>
-        </div>
-        <div>
-          <div className="mb-4 d-flex flex-column align-items-middle form-group">
-            <label>4. What are your return expectations?</label>
-            <div className="container d-flex flex-column">
-              <div className="form-group">
-                <label htmlFor="q4a">a. Annual Return Percentage:</label>
-                <div className="form-row">
-                  <div className="input-group-inline p-0">
-                    <Field
-                      className="ml-2 col-4 form-control input-group-text text-center"
-                      type="text"
-                      name="q4a"
-                    />
-                    <div className="input-group-append">%</div>
-                  </div>
-                </div>
-              </div>
-              <div className="form-row">
-                <label htmlFor="q4b">b. Internal rate of return (IRR): </label>
-                <div className="input-group m-0">
-                  <Field
-                    className="ml-2 pl-2 col-4 form-control input-group-text text-center"
-                    type="text"
-                    name="q4b"
-                  />
-                  <div className="input-group-prepend p-0">%</div>
-                </div>
-              </div>
-
-              <div className="form-row">
-                <div className="form-inline">
-                  <label htmlFor="q4c">c. cash on cash return: </label>
-                  <div className="input-group">
-                    <Field
-                      className="col-4 ml-2 text-center form-control"
-                      type="text"
-                      name="q4c"
-                    />
-                    <div className="input-group-prepend">%</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-
-
-            <div className="mb-4">
-              <label htmlFor="question7">7. Are you an accredited investor?</label>
-              <p><small className="text-muted">(Makes more than $200k annually for the past 2 years and will do so in this current year or have a net worth of $1M excluding your primary residence)</small></p>
-              <div className="form-group">
-                <label>
-                  <input
-                    name="question7"
-                    type="radio"
-                    value="Yes"
-                    checked={values.question7 === 'Yes'}
-                    onChange={handleChange}
-                    onBlur={handleBlur}
-                  />
-                  Yes
-                </label>
-                <label>
-                  <input
-                    name="question7"
-                    type="radio"
-                    value="No"
-                    checked={values.question7 === 'No'}
-                    onChange={handleChange}
-                    onBlur={handleBlur}
-
-                  />
-                  <div className="h5 m-0 input-group-prepend">days</div>
-=======
             </li>
             <li>
               <div className="form-group row">
@@ -376,38 +204,11 @@ class QuestionnaireForm extends Component {
                       type="text"
                     />
                   </div>
->>>>>>> 3728fc05cf8c5dc1a709a3da74c0b1b8fe12dba7
                 </div>
               </div>
             </li>
             <li>
               <div className="form-group">
-<<<<<<< HEAD
-                <label>
-                  <input
-                    name="question8"
-                    type="radio"
-                    value="Yes"
-                    checked={values.question8 === 'Yes'}
-                    onChange={handleChange}
-                    onBlur={handleBlur}
-
-                  />
-                  Yes
-                </label>
-                <label>
-                  <input
-                    name="question8"
-                    type="radio"
-                    value="No"
-                    checked={values.question8 === 'No'}
-                    onChange={handleChange}
-                    onBlur={handleBlur}
-
-                  />
-                  No
-                </label>
-=======
                 <div className="row">
                   <div className="col">
                     <label className="col-form-label" htmlFor="q6">
@@ -417,7 +218,6 @@ class QuestionnaireForm extends Component {
                     <Input name="q6" type="text" className="form-control p-0" />
                   </div>
                 </div>
->>>>>>> 3728fc05cf8c5dc1a709a3da74c0b1b8fe12dba7
               </div>
             </li>
             <li>
@@ -613,9 +413,7 @@ class QuestionnaireForm extends Component {
 =======
                 <label htmlFor="q9">
                   How would you rate your risk tolerance?
->>>>>>> 3728fc05cf8c5dc1a709a3da74c0b1b8fe12dba7
                 </label>
-
                 <Input
                   gap
                   onClick={() =>
