@@ -5,3 +5,4 @@ node_modules
 dev.js
 build/
 
+yarn-error.log
