@@ -25,45 +25,48 @@ class QuestionnaireForm extends Component {
     } = this.props;
     const { riskTolerance } = this.state;
     return (
-      <Form className="p-4 container d-flex flex-column justify-content-around">
+      <Form className="p-4 container d-flex flex-column justify-content-between">
         <div className="form-group row">
           <div className="col">
             <label className="display-4 mb-2">Basic Information</label>
           </div>
         </div>
-        <div className="form-group">
-          <div className="row">
-            <div className="col-md-6">
-              <Input
-                className="form-control icon icons-sm"
-                label="Firstname"
-                type="text"
-                name="firstname"
-                id="firstname"
-              />
-              {touched.firstname &&
-                errors.firstname && (
-                  <small className="ml-2 font-italic text-danger">
-                    {errors.firstname}
-                  </small>
-                )}
-            </div>
-            <div className="col-md-6">
-              <Input
-                className="form-control"
-                id="lastname"
-                label="Lastname"
-                type="text"
-                name="user"
-              />
-              {touched.lastname &&
-                errors.lastname && (
-                  <small className="font-italic form-text text-danger">
-                    {errors.lastname}
-                  </small>
-                )}
-            </div>
-          </div>
+        <div className="form-group row">
+          <ol>
+            <li className="form-group row d-flex align-content-center  justify-content-between">
+              <div className="col-md-6 d-flex align-content-end">
+                <Input
+                  className="align-self-stretch form-control icon"
+                  label="Firstname"
+                  type="text"
+                  name="firstname"
+                  id="firstname"
+                  icon="user"
+                />
+                {touched.firstname &&
+                  errors.firstname && (
+                    <small className="ml-2 font-italic text-danger">
+                      {errors.firstname}
+                    </small>
+                  )}
+              </div>
+              <div className="col-md-6">
+                <Input
+                  className="form-control"
+                  id="lastname"
+                  label="Lastname"
+                  type="text"
+                  name="user"
+                />
+                {touched.lastname &&
+                  errors.lastname && (
+                    <small className="font-italic form-text text-danger">
+                      {errors.lastname}
+                    </small>
+                  )}
+              </div>
+            </li>
+          </ol>
         </div>
 
         <div className="mt-2 form-group">
@@ -98,7 +101,7 @@ class QuestionnaireForm extends Component {
             <label className="display-4 mb-2">Investor Information</label>
           </div>
         </div>
-        <div className="form-group">
+        <div className="form-group row">
           <ol>
             <li>
               <div className="form-group row">

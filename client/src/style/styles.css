@@ -9,13 +9,6 @@ body {
   line-height: 1.25;
 }
 
-.md-form label.active {
-  font-size: 1em;
-}
-.md-form label {
-  color: #212121;
-  font-size: 1em;
-}
 p {
   font-size: 1rem;
 }
