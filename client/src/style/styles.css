@@ -1,16 +1,36 @@
+<<<<<<< HEAD
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
+=======
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+>>>>>>> 3728fc05cf8c5dc1a709a3da74c0b1b8fe12dba7
 html {
   height: 100%;
   font-size: 100%;
 }
 body {
+<<<<<<< HEAD
+=======
+  font-family: "Roboto", sans-serif;
+>>>>>>> 3728fc05cf8c5dc1a709a3da74c0b1b8fe12dba7
   font-size: 100%;
   line-height: 1.25;
 }
 
+<<<<<<< HEAD
 p {
   font-family: "Open Sans";
   font-size: 1em;
+=======
+.md-form label.active {
+  font-size: 1em;
+}
+.md-form label {
+  color: #212121;
+  font-size: 1em;
+}
+p {
+  font-size: 1rem;
+>>>>>>> 3728fc05cf8c5dc1a709a3da74c0b1b8fe12dba7
 }
 
 input[type="radio"] {
