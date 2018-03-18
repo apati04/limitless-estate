@@ -3,7 +3,11 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
-    <footer style={{ borderBottom: '2px solid black' }} className="footer" id="myFooter">
+    <footer
+      style={{ borderBottom: '2px solid black' }}
+      className="footer"
+      id="myFooter"
+    >
       <div className="container">
         <div className="row">
           <div className="col col-sm-3 myCols">
@@ -15,6 +19,9 @@ const Footer = () => {
               <li key="fDl">
                 <Link to="/resources">Downloads</Link>
               </li>
+              <li key="fDl">
+                <Link to="/info/questionnaire">Questionnaire</Link>
+              </li>
             </ul>
           </div>
           <div className="col col-sm-3 myCols">
@@ -24,7 +31,7 @@ const Footer = () => {
                 <Link to="/about">Company Information</Link>
               </li>
               <li key="fcon">
-                <a href="mailto:kmitchell@limitless-estates.com">Contact us</a>
+                <Link to="/info/contact">Contact us</Link>
               </li>
             </ul>
           </div>
@@ -32,7 +39,10 @@ const Footer = () => {
             <h5>Support</h5>
             <ul>
               <li>
-                <Link to="/resources">FAQ</Link>
+                <Link to="/faq">FAQ</Link>
+              </li>
+              <li key="nuvu">
+                <Link to="/info">NuView</Link>
               </li>
             </ul>
           </div>
