@@ -8,6 +8,8 @@ import { browserHistory, Link } from "react-router-dom";
 /** api array of objects*/
 import Advisors from "../api/advisors";
 import Team from "../api/team";
+import { Button } from "mdbreact";
+
 // accepts props: name type content
 export default class About extends Component {
   renderCards = items => {
@@ -20,14 +22,9 @@ export default class About extends Component {
             <div className="mt-2">
               <h3 className="p-0">{name}</h3>
               <p className="p-0 font-weight-bold">{llcProps.title}</p>
-              <a
-                style={{ backgroundColor: "#303F9F", color: "#f7f7f7" }}
-                target="_blank"
-                href={content}
-                role="button"
-                className="m-0 btn btn-raised"
-              >
-                View Bio >>
+
+              <a style={{ color: "#f7f7f7" }} target="_blank" href={content}>
+                <Button color="indigo">View Bio >></Button>
               </a>
             </div>
           ) : (
@@ -203,7 +200,7 @@ export default class About extends Component {
           </div> */}
         </section>
         {/* ----------  MEMBERS SECTION ----------- */}
-        <section className="py-3 text-center text-white bg-secondary">
+        <section className="py-3 text-center text-white stylish-color">
           <div style={{ color: "#f7f7f7" }} className="container">
             <h1 className="display-4 font-weight-500 font-italic ">
               Meet the Team
@@ -215,7 +212,7 @@ export default class About extends Component {
           </div>
         </section>
         {/* ----------    ADVISOR SECTION ----------- */}
-        <section className="py-3 text-center text-white border-top bg-secondary">
+        <section className="py-3 text-center text-white border-top stylish-color">
           <div style={{ color: "#f7f7f7" }} className="container">
             <h1 className="display-4 font-weight-500 font-italic">Advisors</h1>
             <hr />
