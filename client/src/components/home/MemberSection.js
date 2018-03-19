@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Advisors from '../../api/advisors';
+import Advisors2 from '../../api/advisors2';
 import Team from '../../api/team';
 import MemberCard from '../MemberCard';
 import { Button } from 'mdbreact';
@@ -47,14 +48,26 @@ class MemberSection extends Component {
   };
   render() {
     return (
-      <section className="py-3 text-center text-white stylish-color">
+      <section className="py-3 pt-4 text-center text-white stylish-color">
         <div style={{ color: '#f7f7f7' }} className="container">
           <h1 className="display-4 font-weight-500 font-italic ">
             Meet the Team
           </h1>
           <hr />
-          <div className="container d-flex justify-content-around flex-wrap">
+          <div className="container pt-4 d-flex justify-content-between flex-wrap">
             {this.renderCards(Team)}
+          </div>
+        </div>
+        <div style={{ color: '#f7f7f7' }} className="mt-4 container">
+          <h1 className="display-4 font-weight-500 font-italic ">
+            Our Advisors
+          </h1>
+          <hr />
+          <div className="container pt-4 d-flex justify-content-between">
+            {this.renderCards(Advisors)}
+          </div>
+          <div className="container pt-4 d-flex justify-content-between">
+            {this.renderCards(Advisors2)}
           </div>
         </div>
       </section>
