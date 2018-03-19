@@ -1,18 +1,38 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto");
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 html {
   height: 100%;
   font-size: 100%;
 }
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 100%;
 }
 
 p {
   font-size: 1rem;
 }
+/* navbar styles */
+.view {
+  background: url('https://mdbootstrap.com/img/Photos/Others/img(40).jpg')
+    no-repeat center center;
+  background-size: cover;
+}
 
-input[type="radio"] {
+.navbar {
+  background-color: transparent;
+}
+
+.top-nav-collapse {
+  background-color: #4285f4;
+}
+
+@media only screen and (max-width: 768px) {
+  .navbar {
+    background-color: #4285f4;
+  }
+}
+
+input[type='radio'] {
   margin-left: 1em;
 }
 .navbar .nav-link {
@@ -35,21 +55,21 @@ input[type="radio"] {
 }
 
 .carousel-image-1 {
-  background: url("/img/floor.jpg") no-repeat center;
+  background: url('/img/floor.jpg') no-repeat center;
   background-size: cover;
 }
 
 .carousel-image-2 {
-  background: url("/img/urban.jpg") no-repeat center 15%;
+  background: url('/img/urban.jpg') no-repeat center 15%;
   background-size: cover;
 }
 .mobileBackground {
   display: none;
-  background: url("/img/urban.jpg") no-repeat center 15%;
+  background: url('/img/urban.jpg') no-repeat center 15%;
   background-size: cover;
 }
 .carousel-image-3 {
-  background: url("/img/imageLA.jpg") no-repeat center 26%;
+  background: url('/img/imageLA.jpg') no-repeat center 26%;
   background-size: cover;
 }
 
@@ -62,7 +82,7 @@ input[type="radio"] {
 #landingParallax {
   position: relative;
   min-height: 252px;
-  background: url("/img/lobby.jpg") center;
+  background: url('/img/lobby.jpg') center;
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
@@ -73,7 +93,7 @@ input[type="radio"] {
 #ldVid {
   position: relative;
   min-height: 200px;
-  background: url("/img/network.jpg");
+  background: url('/img/network.jpg');
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: 0 -300px;
