@@ -1,6 +1,6 @@
-import React, { Component } from "react";
-import { BrowserRouter as Router, Link } from "react-router-dom";
-import MenuItem from "./navMenuItem";
+import React, { Component } from 'react';
+import { BrowserRouter as Router, Link } from 'react-router-dom';
+import MenuItem from './navMenuItem';
 import {
   Navbar,
   NavbarBrand,
@@ -14,7 +14,7 @@ import {
   DropdownMenu,
   DropdownItem,
   Container
-} from "mdbreact";
+} from 'mdbreact';
 
 class Navigation extends Component {
   state = {
@@ -29,12 +29,12 @@ class Navigation extends Component {
   };
   toggle = () => {
     this.setState({ dropdownOpen: !this.state.dropdownOpen });
-    console.log("clicked, ", this);
+    console.log('clicked, ', this);
   };
   renderMenu() {
-    const fields = ["about", "markets", "faq", "contact"];
+    const fields = ['about', 'markets', 'faq', 'contact'];
     return fields.map(item => {
-      if (item === "markets") {
+      if (item === 'markets') {
         return (
           <li key={item} className="nav-item dropdown">
             <a
@@ -48,7 +48,7 @@ class Navigation extends Component {
               MARKETS
             </a>
             <div
-              style={{ backgroundColor: "#eee" }}
+              style={{ backgroundColor: '#eee' }}
               className="dropdown-menu"
               aria-labelledby="navbarDropdownMenuLink"
             >
@@ -59,7 +59,7 @@ class Navigation extends Component {
                 Detroit, MI
               </Link>
               <div
-                style={{ borderTop: "1px solid #c0c3c6" }}
+                style={{ borderTop: '1px solid #c0c3c6' }}
                 className="dropdown-divider"
               />
               <Link to="/markets" className="dropdown-item">
