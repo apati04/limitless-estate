@@ -91,10 +91,7 @@ export default class About extends Component {
     const finance = '/img/background/financial.jpg';
     return (
       <div>
-        <div style={style.headerStyle} className="container-fluid">
-          asdf
-        </div>
-        <section id="about" className="py-3">
+        <section id="about" className="d-flex py-3">
           <div className="p-1 col-lg-8 col-md-12">
             <h3 className="pb-3 mb-4 font-italic border-bottom">
               Message from the Team
@@ -195,73 +192,6 @@ export default class About extends Component {
               alt="LimitLess"
               className="border border-bottom-0 border-secondary p-0 about-img img-fluid rounded-circle d-none d-lg-block"
             />
-          </div>
-        </section>
-
-        <section id="home-icons" className="py-5">
-          {/* <div className="container">
-            <div className="row">
-              <div className="col-md-4 mb-4 text-center">
-            <i className="fa fa-cog mb-2" />
-            <h3>Turning Gears</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, maxime.</p>
-              </div>
-              <div className="col-md-4 mb-4 text-center">
-            <i className="fa fa-cloud mb-2" />
-            <h3>Sending Data</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, maxime.</p>
-              </div>
-              <div className="col-md-4 mb-4 text-center">
-            <i className="fa fa-cart-plus mb-2" />
-            <h3>Making Money</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, maxime.</p>
-              </div>
-            </div>
-          </div> */}
-        </section>
-        {/* ----------  MEMBERS SECTION ----------- */}
-        <section className="py-3 text-center text-white stylish-color">
-          <div style={{ color: '#f7f7f7' }} className="container">
-            <h1 className="display-4 font-weight-500 font-italic ">
-              Meet the Team
-            </h1>
-            <hr />
-            <div className="container d-flex justify-content-around flex-wrap">
-              {this.renderCards(Team)}
-            </div>
-          </div>
-        </section>
-        {/* ----------    ADVISOR SECTION ----------- */}
-        <section className="py-3 text-center text-white border-top stylish-color">
-          <div style={{ color: '#f7f7f7' }} className="container">
-            <h1 className="display-4 font-weight-500 font-italic">Advisors</h1>
-            <hr />
-            <div className="container d-flex flex column justify-content-around flex-wrap">
-              {this.renderCards(Advisors)}
-            </div>
-            {/* <div className="container">
-              <div className="row d-flex justify-content-center">
-                <MemberCard
-                  className="col-auto"
-                  firstName="Michael"
-                  lastName="Blank"
-                  photo={michaelImg}
-                  width="180px"
-                  height="180px"
-                >
-      
-                </MemberCard>
-                <MemberCard
-                  firstName="Old Capital"
-                  lastName="Lending"
-                  width="180px"
-                  height="180px"
-                  photo={oldCapital}
-                >
-          
-                </MemberCard>
-              </div>
-            </div> */}
           </div>
         </section>
       </div>
