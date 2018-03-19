@@ -10,7 +10,7 @@ module.exports = [
       size: '204px'
     },
     resume:
-      'https://drive.google.com/file/d/1NCk8oNsXsn_iz6ve7ZSDsDdqvvV2P8QU/view?usp=sharing'
+      'https://drive.google.com/file/d/1AkzYG9obV9Lsa6JTWlitH9bgDC_SL3I7/view?usp=sharing'
   },
   {
     name: 'Lalita Patipaksiri',
