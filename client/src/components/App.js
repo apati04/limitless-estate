@@ -66,7 +66,7 @@ class App extends Component {
         <div>
           <Switch>
             <ScrollToTop>
-              <Navbar />
+              {/* <Navbar /> */}
               <Route exact path="/resources" component={Resources} />
               <Route path="/faq" component={Faq} />
               <Route exact path="/about" component={About} />
