@@ -1,3 +1,4 @@
+import '../style/navStyle.css';
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Link } from 'react-router-dom';
 import MenuItem from './navMenuItem';
@@ -29,12 +30,11 @@ class Navigation extends Component {
   }
   toggle() {
     this.setState({ dropdownOpen: !this.state.dropdownOpen });
-    console.log('clicked, ', this);
   }
 
   render() {
     return (
-      <Navbar color="stylish-color-dark" dark expand="lg" scrolling>
+      <Navbar dark expand="md" fixed="top" scrolling right>
         <Container>
           <NavbarBrand href="/">
             <strong>Limitless-Estates</strong>
@@ -42,11 +42,12 @@ class Navigation extends Component {
           {!this.state.isWideEnough && (
             <NavbarToggler onClick={this.onClick.bind(this)} />
           )}
+
           <Collapse isOpen={this.state.collapse} navbar>
-            <NavbarNav className="ml-auto" right>
+            <NavbarNav onClick={this.onClick.bind(this)}>
               <NavItem>
                 <NavLink className="nav-link" to="/">
-                  Home{' '}
+                  Home
                 </NavLink>
               </NavItem>
               <NavItem>

@@ -3,15 +3,15 @@ import React, { Component } from 'react';
 import IconSection from '../components/IconSection';
 import LandingParallax from '../components/LandingParallax';
 import InfoSection from '../components/InfoSection';
-import MemberSection from '../components/home/MemberSection';
+import MemberSection from '../components/landing_section/MemberSection';
 import Test from '../components/templates/LandingSection';
-const SlideShow = () => <div>slideshow</div>;
+import Header from '../components/landing_section/Header';
 
 class LandingPage extends Component {
   render() {
     return (
       <div>
-        <SlideShow />
+        <Header />
         <IconSection />
         <LandingParallax />
         <InfoSection />
