@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import PostTemplate from '../components/templates/PostTemplate';
+import Article from '../../components/templates/Article';
 const postData = {
   title: 'post title',
   text: [<div>asdfasdfasdf</div>, <h1>asdfasdfasdfasdf</h1>],
@@ -9,7 +9,7 @@ export default class ImpactInvesting extends Component {
   render() {
     return (
       <div>
-        <PostTemplate
+        <Article
           headerImage="https://i.imgur.com/YXieUK4.jpg"
           overlayColor="hm-purple-slight"
           post={postData}
