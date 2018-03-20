@@ -6,7 +6,7 @@ import ScrollToTop from './ScrollToTop';
 /* Pages */
 import LandingPage from '../pages/LandingPage';
 import Markets from '../pages/Markets';
-import About from '../pages/About';
+import Overview from '../pages/Overview';
 import Contact from '../pages/Contact';
 import Columbus from '../pages/markets/Columbus';
 import Ecorse from '../pages/markets/Ecorse';
@@ -16,7 +16,8 @@ import ContactForm from '../components/Forms/ContactForm';
 import Questionnaire from '../pages/Questionnaire';
 import Faq from '../pages/Faq';
 import SupportCo from '../pages/SupportCo';
-
+import ImpactInvesting from '../pages/ImpactInvesting';
+import InvestingRisks from '../pages/InvestingRisks';
 const Construction = () => {
   return (
     <div style={{ height: '100vh' }} className="container-fluid bg-dark">
@@ -66,12 +67,19 @@ class App extends Component {
         <div>
           <Switch>
             <ScrollToTop>
-              {/* <Navbar /> */}
-              <Route exact path="/resources" component={Resources} />
-              <Route path="/faq" component={Faq} />
-              <Route exact path="/about" component={About} />
-              <Route exact path="/markets" component={Markets} />
+              <Navbar />
+              <Route exact path="/resources" component={Overview} />
+              <Route
+                path="/resources/investingrisks"
+                component={InvestingRisks}
+              />
+              <Route
+                path="/resources/impactinvesting"
+                component={ImpactInvesting}
+              />
+              <Route path="/resources/faq" component={Faq} />
               <Route exact path="/legal" component={Legal} />
+              <Route exact path="/markets" component={Markets} />
               <Route path="/markets/riverparkjefferson" component={Ecorse} />
               <Route path="/markets/arlingtonheights" component={Columbus} />
               <Route exact path="/info/contact" component={Contact} />
