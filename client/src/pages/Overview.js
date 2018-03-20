@@ -1,3 +1,4 @@
+import '../style/blog.css';
 import React, { Component } from 'react';
 import PageHeader from '../components/PageHeader';
 import RegisterModal from '../components/RegisterModal';
@@ -10,23 +11,25 @@ import {
   CardBody,
   CardImage,
   CardText,
-  CardTitle
+  CardTitle,
+  View,
+  Mask
 } from 'mdbreact';
-
-const style = {
-  headerStyle: {
-    paddingTop: '50px',
-    background:
-      'url("https://millerjohnson.com/wp-content/uploads/2018/01/Uncapping-1.jpg") no-repeat center'
-  }
-};
 
 export default class Overview extends Component {
   render() {
     const finance = '/img/background/financial.jpg';
     return (
-      <div>
-        <section id="about" className="d-flex py-3">
+      <section id="overview">
+        <View className="hm-indigo-slight">
+          <img
+            className="img-fluid"
+            src="https://millerjohnson.com/wp-content/uploads/2018/01/Uncapping-1.jpg"
+            alt=""
+          />
+          <Mask className="flex-center display-4 white-text pattern-6">Overview</Mask>
+        </View>
+        <div className="container d-flex justify-content-around py-3">
           <div className="p-1 col-lg-8 col-md-12">
             <h3 className="pb-3 mb-4 font-italic border-bottom">
               Message from the Team
@@ -128,8 +131,8 @@ export default class Overview extends Component {
               className="border border-bottom-0 border-secondary p-0 about-img img-fluid rounded-circle d-none d-lg-block"
             />
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
     );
   }
 }
