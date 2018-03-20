@@ -12,36 +12,9 @@ p {
   font-size: 1rem;
 }
 /* navbar styles */
-.view {
-  background: url('https://mdbootstrap.com/img/Photos/Others/img(40).jpg')
-    no-repeat center center;
-  background-size: cover;
-}
-
-.navbar {
-  background-color: transparent;
-}
-
-.top-nav-collapse {
-  background-color: #4285f4;
-}
-
-@media only screen and (max-width: 768px) {
-  .navbar {
-    background-color: #4285f4;
-  }
-}
 
 input[type='radio'] {
   margin-left: 1em;
-}
-.navbar .nav-link {
-  padding-left: 1em !important;
-  padding-right: 1em !important;
-}
-
-.navbar .nav-item.active {
-  border-left: #eee 3px solid;
 }
 
 .carousel-item {
@@ -234,6 +207,9 @@ a.info-popover:hover {
   background: 0px;
 }
 @media only screen and (max-width: 768px) {
+  .navbar {
+    background-color: #4285f4;
+  }
   h1,
   h2,
   h3,
