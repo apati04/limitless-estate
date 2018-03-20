@@ -19,10 +19,10 @@ export default class HeaderSection extends Component {
   }
   render() {
     return (
-      <View className="hm-black-strong">
+      <View className="hm-blue-slight">
         <img
-          className="img-fluid"
-          src=" https://images.pexels.com/photos/936715/pexels-photo-936715.jpeg"
+          className="img-fluid w-100"
+          src="https://static1.squarespace.com/static/59de45142994cabf2c18b636/t/59f282b8652deaab9521c562/1509065425627/ebs-home.png"
           alt=""
         />
         <Mask className="d-flex full-bg-img flex-center ">
