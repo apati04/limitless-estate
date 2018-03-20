@@ -1,12 +1,9 @@
-import '../style/blog.css';
 import React, { Component } from 'react';
-import MemberCard from '../components/MemberCard';
 import PageHeader from '../components/PageHeader';
 import RegisterModal from '../components/RegisterModal';
 import { browserHistory, Link } from 'react-router-dom';
 /** api array of objects*/
-import Advisors from '../api/advisors';
-import Team from '../api/team';
+
 import {
   Button,
   Card,
@@ -19,75 +16,13 @@ import {
 const style = {
   headerStyle: {
     paddingTop: '50px',
-
     background:
       'url("https://millerjohnson.com/wp-content/uploads/2018/01/Uncapping-1.jpg") no-repeat center'
   }
 };
-// const style = {
-//   headerStyle: {
 
-//       height: '200px',
-//       background: 'url("https://born2invest.com/wp-content/uploads/2018/01/In-Athens%E2%80%99-commercial-real-estate-market-office-buildings-are-being-converted-to-cater-to-the-growing-number-of-tourists.jpg")',
-//       backgroundPosition: '0 -360px',
-//       background-attachment: fixed,
-//       color: '#fff',
-//       border-bottom: 1px #eee solid,
-//       padding-top: 50px; }
-
-//     #about img {
-//       margin-top: -50px; }
-//   }
-// }
-// accepts props: name type content
-
-export default class About extends Component {
-  renderCards = items => {
-    return items.map(llcProps => {
-      const { name, type } = llcProps;
-      const content = llcProps.content || llcProps.resume;
-      return (
-        <MemberCard key={name} {...llcProps}>
-          {type === 'Team' ? (
-            <div className="mt-2">
-              <h3 className="p-0">{name}</h3>
-              <p className="p-0 font-weight-bold">{llcProps.title}</p>
-
-              <a style={{ color: '#f7f7f7' }} target="_blank" href={content}>
-                <Button color="indigo">View Bio >></Button>
-              </a>
-            </div>
-          ) : (
-            <div className="d-flex justify-content-center mt-2">
-              <h5>{name}</h5>
-              <a
-                tabIndex="0"
-                className="poppy popover-dismiss ml-2 info-popover"
-                data-toggle="popover"
-                data-trigger="focus"
-                title={`${name}, ${type}`}
-                data-content={`${content}`}
-              >
-                <i
-                  style={{
-                    fontSize: '24px',
-                    color: '#f7f7f7',
-                    opacity: '0.92'
-                  }}
-                  className="fas fa-info-circle"
-                />
-              </a>
-            </div>
-          )}
-        </MemberCard>
-      );
-    });
-  };
+export default class Overview extends Component {
   render() {
-    // staff
-    const kyleImg = '/img/team/KMitchell.jpg';
-    const luisImg = '/img/team/LCruz.jpg';
-    const lalitaImg = '/img/team/LPatipak.jpg';
     const finance = '/img/background/financial.jpg';
     return (
       <div>
