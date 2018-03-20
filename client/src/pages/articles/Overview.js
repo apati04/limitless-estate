@@ -1,7 +1,7 @@
-import '../style/blog.css';
+import '../../style/blog.css';
 import React, { Component } from 'react';
-import PageHeader from '../components/PageHeader';
-import RegisterModal from '../components/RegisterModal';
+import PageHeader from '../../components/PageHeader';
+import RegisterModal from '../../components/RegisterModal';
 import { browserHistory, Link } from 'react-router-dom';
 /** api array of objects*/
 
@@ -21,23 +21,23 @@ export default class Overview extends Component {
     const finance = '/img/background/financial.jpg';
     return (
       <section id="overview">
-        <View className="hm-indigo-slight">
+        <View className="hm-indigo-light">
           <img
             className="img-fluid"
             src="https://millerjohnson.com/wp-content/uploads/2018/01/Uncapping-1.jpg"
             alt=""
           />
-          <Mask className="flex-center display-4 white-text pattern-6">Overview</Mask>
+          <Mask className="d-flex flex-center align-items-center " />
         </View>
         <div className="container d-flex justify-content-around py-3">
           <div className="p-1 col-lg-8 col-md-12">
-            <h3 className="pb-3 mb-4 font-italic border-bottom">
-              Message from the Team
-            </h3>
+            <h2 className="pb-3 mb-4 blog-post-title font-italic border-bottom">
+              Overview
+            </h2>
             <div className="blog-post">
-              <h2 className="blog-post-title mb-2">
+              <h3 className="blog-post-title mb-2">
                 Why Invest In Multifamily?
-              </h2>
+              </h3>
               <div className="border-top">
                 <div className="mt-4">
                   <p>

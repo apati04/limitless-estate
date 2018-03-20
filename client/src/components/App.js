@@ -6,7 +6,6 @@ import ScrollToTop from './ScrollToTop';
 /* Pages */
 import LandingPage from '../pages/LandingPage';
 import Markets from '../pages/Markets';
-import Overview from '../pages/Overview';
 import Contact from '../pages/Contact';
 import Columbus from '../pages/markets/Columbus';
 import Ecorse from '../pages/markets/Ecorse';
@@ -16,8 +15,9 @@ import ContactForm from '../components/Forms/ContactForm';
 import Questionnaire from '../pages/Questionnaire';
 import Faq from '../pages/Faq';
 import SupportCo from '../pages/SupportCo';
-import ImpactInvesting from '../pages/ImpactInvesting';
-import InvestingRisks from '../pages/InvestingRisks';
+import Overview from '../pages/articles/Overview';
+import ImpactInvesting from '../pages/articles/ImpactInvesting';
+import InvestingRisks from '../pages/articles/InvestingRisks';
 const Construction = () => {
   return (
     <div style={{ height: '100vh' }} className="container-fluid bg-dark">
