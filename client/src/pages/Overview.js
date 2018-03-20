@@ -1,12 +1,9 @@
-import '../style/blog.css';
 import React, { Component } from 'react';
-import MemberCard from '../components/MemberCard';
 import PageHeader from '../components/PageHeader';
 import RegisterModal from '../components/RegisterModal';
 import { browserHistory, Link } from 'react-router-dom';
 /** api array of objects*/
-import Advisors from '../api/advisors';
-import Team from '../api/team';
+
 import {
   Button,
   Card,
@@ -19,82 +16,17 @@ import {
 const style = {
   headerStyle: {
     paddingTop: '50px',
-
     background:
       'url("https://millerjohnson.com/wp-content/uploads/2018/01/Uncapping-1.jpg") no-repeat center'
   }
 };
-// const style = {
-//   headerStyle: {
 
-//       height: '200px',
-//       background: 'url("https://born2invest.com/wp-content/uploads/2018/01/In-Athens%E2%80%99-commercial-real-estate-market-office-buildings-are-being-converted-to-cater-to-the-growing-number-of-tourists.jpg")',
-//       backgroundPosition: '0 -360px',
-//       background-attachment: fixed,
-//       color: '#fff',
-//       border-bottom: 1px #eee solid,
-//       padding-top: 50px; }
-
-//     #about img {
-//       margin-top: -50px; }
-//   }
-// }
-// accepts props: name type content
-
-export default class About extends Component {
-  renderCards = items => {
-    return items.map(llcProps => {
-      const { name, type } = llcProps;
-      const content = llcProps.content || llcProps.resume;
-      return (
-        <MemberCard key={name} {...llcProps}>
-          {type === 'Team' ? (
-            <div className="mt-2">
-              <h3 className="p-0">{name}</h3>
-              <p className="p-0 font-weight-bold">{llcProps.title}</p>
-
-              <a style={{ color: '#f7f7f7' }} target="_blank" href={content}>
-                <Button color="indigo">View Bio >></Button>
-              </a>
-            </div>
-          ) : (
-            <div className="d-flex justify-content-center mt-2">
-              <h5>{name}</h5>
-              <a
-                tabIndex="0"
-                className="poppy popover-dismiss ml-2 info-popover"
-                data-toggle="popover"
-                data-trigger="focus"
-                title={`${name}, ${type}`}
-                data-content={`${content}`}
-              >
-                <i
-                  style={{
-                    fontSize: '24px',
-                    color: '#f7f7f7',
-                    opacity: '0.92'
-                  }}
-                  className="fas fa-info-circle"
-                />
-              </a>
-            </div>
-          )}
-        </MemberCard>
-      );
-    });
-  };
+export default class Overview extends Component {
   render() {
-    // staff
-    const kyleImg = '/img/team/KMitchell.jpg';
-    const luisImg = '/img/team/LCruz.jpg';
-    const lalitaImg = '/img/team/LPatipak.jpg';
     const finance = '/img/background/financial.jpg';
     return (
       <div>
-        <div style={style.headerStyle} className="container-fluid">
-          asdf
-        </div>
-        <section id="about" className="py-3">
+        <section id="about" className="d-flex py-3">
           <div className="p-1 col-lg-8 col-md-12">
             <h3 className="pb-3 mb-4 font-italic border-bottom">
               Message from the Team
@@ -195,73 +127,6 @@ export default class About extends Component {
               alt="LimitLess"
               className="border border-bottom-0 border-secondary p-0 about-img img-fluid rounded-circle d-none d-lg-block"
             />
-          </div>
-        </section>
-
-        <section id="home-icons" className="py-5">
-          {/* <div className="container">
-            <div className="row">
-              <div className="col-md-4 mb-4 text-center">
-            <i className="fa fa-cog mb-2" />
-            <h3>Turning Gears</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, maxime.</p>
-              </div>
-              <div className="col-md-4 mb-4 text-center">
-            <i className="fa fa-cloud mb-2" />
-            <h3>Sending Data</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, maxime.</p>
-              </div>
-              <div className="col-md-4 mb-4 text-center">
-            <i className="fa fa-cart-plus mb-2" />
-            <h3>Making Money</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, maxime.</p>
-              </div>
-            </div>
-          </div> */}
-        </section>
-        {/* ----------  MEMBERS SECTION ----------- */}
-        <section className="py-3 text-center text-white stylish-color">
-          <div style={{ color: '#f7f7f7' }} className="container">
-            <h1 className="display-4 font-weight-500 font-italic ">
-              Meet the Team
-            </h1>
-            <hr />
-            <div className="container d-flex justify-content-around flex-wrap">
-              {this.renderCards(Team)}
-            </div>
-          </div>
-        </section>
-        {/* ----------    ADVISOR SECTION ----------- */}
-        <section className="py-3 text-center text-white border-top stylish-color">
-          <div style={{ color: '#f7f7f7' }} className="container">
-            <h1 className="display-4 font-weight-500 font-italic">Advisors</h1>
-            <hr />
-            <div className="container d-flex flex column justify-content-around flex-wrap">
-              {this.renderCards(Advisors)}
-            </div>
-            {/* <div className="container">
-              <div className="row d-flex justify-content-center">
-                <MemberCard
-                  className="col-auto"
-                  firstName="Michael"
-                  lastName="Blank"
-                  photo={michaelImg}
-                  width="180px"
-                  height="180px"
-                >
-      
-                </MemberCard>
-                <MemberCard
-                  firstName="Old Capital"
-                  lastName="Lending"
-                  width="180px"
-                  height="180px"
-                  photo={oldCapital}
-                >
-          
-                </MemberCard>
-              </div>
-            </div> */}
           </div>
         </section>
       </div>
