@@ -6,7 +6,6 @@ import ScrollToTop from './ScrollToTop';
 /* Pages */
 import LandingPage from '../pages/LandingPage';
 import Markets from '../pages/Markets';
-import About from '../pages/About';
 import Contact from '../pages/Contact';
 import Columbus from '../pages/markets/Columbus';
 import Ecorse from '../pages/markets/Ecorse';
@@ -16,7 +15,9 @@ import ContactForm from '../components/Forms/ContactForm';
 import Questionnaire from '../pages/Questionnaire';
 import Faq from '../pages/Faq';
 import SupportCo from '../pages/SupportCo';
-
+import Overview from '../pages/articles/Overview';
+import ImpactInvesting from '../pages/articles/ImpactInvesting';
+import InvestingRisks from '../pages/articles/InvestingRisks';
 const Construction = () => {
   return (
     <div style={{ height: '100vh' }} className="container-fluid bg-dark">
@@ -29,7 +30,10 @@ const Construction = () => {
 
 const ContactContruction = () => {
   return (
-    <div style={{ height: '100vh' }} className="container-fluid bg-dark">
+    <div
+      style={{ fontFamily: 'Roboto', height: '100vh' }}
+      className="container-fluid bg-dark"
+    >
       <h2 style={{ padding: '80px' }} className="text-center text-white">
         Under Construction, Coming Soon!
       </h2>
@@ -64,20 +68,31 @@ class App extends Component {
           <Switch>
             <ScrollToTop>
               <Navbar />
-              <Route exact path="/resources" component={Resources} />
-              <Route path="/faq" component={Faq} />
-              <Route exact path="/about" component={About} />
-              <Route exact path="/markets" component={Markets} />
+              <Route exact path="/resources" component={Overview} />
+              <Route
+                path="/resources/investingrisks"
+                component={InvestingRisks}
+              />
+              <Route
+                path="/resources/impactinvesting"
+                component={ImpactInvesting}
+              />
+              <Route path="/resources/faq" component={Faq} />
               <Route exact path="/legal" component={Legal} />
+              <Route exact path="/markets" component={Markets} />
               <Route path="/markets/riverparkjefferson" component={Ecorse} />
               <Route path="/markets/arlingtonheights" component={Columbus} />
               <Route exact path="/info/contact" component={Contact} />
-              <Route exact path="/info/questionnaire" component={Questionnaire} />
+              <Route
+                exact
+                path="/info/questionnaire"
+                component={Questionnaire}
+              />
               <Route exact path="/info" component={SupportCo} />
               <Route exact path="/" component={LandingPage} />
             </ScrollToTop>
           </Switch>
-              <Footer />
+          <Footer />
         </div>
       </BrowserRouter>
     );
