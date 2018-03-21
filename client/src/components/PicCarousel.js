@@ -48,19 +48,19 @@ goToIndex(item) {
         <CarouselInner>
           <CarouselItem itemId="1">
             <div className="view hm-black-light">
-              <img className="d-block w-100" src="https://i.imgur.com/ZdmIZpe.jpg" alt="First Slide" />
+              <img className="d-block w-100" src="https://i.imgur.com/ZdmIZpe.jpg?2" alt="First Slide" />
               <div className="mask"></div>
             </div>
           </CarouselItem>
           <CarouselItem itemId="2">
             <div className="view hm-black-slight">
-              <img className="d-block w-100" src="/img/background/sunset.jpg" alt="Second Slide" />
+              <img className="d-block w-100" src="https://i.imgur.com/WjS34vz.jpg?1" alt="Second Slide" />
               <div className="mask"></div>
             </div>
           </CarouselItem>
           <CarouselItem itemId="3">
             <div className="view hm-black-slight">
-              <img className="d-block w-100" src="/img/background/globe.jpg" alt="Third Slide" />
+              <img className="d-block w-100" src="https://i.imgur.com/gCWlQRW.jpg?2" alt="Third Slide" />
               <div className="mask"></div>
             </div>
           </CarouselItem>
