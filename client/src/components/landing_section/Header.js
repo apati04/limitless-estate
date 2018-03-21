@@ -2,6 +2,8 @@
 import React, { Component } from 'react';
 import { View, Mask, Button } from 'mdbreact';
 import { NavLink } from 'react-router-dom';
+import PicCarousel from '../PicCarousel';
+
 export default class HeaderSection extends Component {
   constructor(props) {
     super(props);
@@ -20,11 +22,7 @@ export default class HeaderSection extends Component {
   render() {
     return (
       <View className="hm-stylish-slight">
-        <img
-          className="img-fluid w-100"
-          src="https://scontent-ort2-1.cdninstagram.com/vp/7eab7610543caa80a5a82f3d41fc860f/5B313D26/t51.2885-15/e35/28763645_775007869372653_7749070619253145600_n.jpg"
-          alt=""
-        />
+        <PicCarousel/>
         <Mask className="d-flex full-bg-img flex-center ">
           <div className="d-flex container justify-content-around p-0 text-left white-text wow fadeInUp">
             <div className="text-center">
