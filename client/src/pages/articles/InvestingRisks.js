@@ -1,13 +1,9 @@
 import React, { Component } from 'react';
 import Article from '../../components/templates/Article';
-
+import { risk } from '../../api/postData';
 class RisksWithInvesting extends Component {
-  renderPost = () => {
-    return {
-      title: 'asdf',
-      text: 'asdfasdf',
-      image: 'https://i.imgur.com/uDTyJkf.jpg'
-    };
+  renderPost = risk => {
+    return { body: risk.body };
   };
   render() {
     return (
@@ -17,7 +13,7 @@ class RisksWithInvesting extends Component {
           headerImage="https://i.imgur.com/42LNLAg.jpg"
           pattern=""
           overlayText=""
-          post={this.renderPost()}
+          post={{ body: JSON.parse(risk.body) }}
         />
       </div>
     );
