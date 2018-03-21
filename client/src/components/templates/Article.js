@@ -26,7 +26,7 @@ export default ({
         <div className="p-1 col-lg-8 col-md-12">
           <div className="blog-post">
             <h2 className="blog-post-title mb-2">{post.title}</h2>
-            <div className="border-top">{post.text}</div>
+            <div className="border-top">{post.body}</div>
           </div>
         </div>
         <div className="m-0 p-0 col-lg-4">
