@@ -19,7 +19,7 @@ const Footer = () => {
               <li key="fDl">
                 <Link to="/resources">Downloads</Link>
               </li>
-              <li key="fDl">
+              <li key="fDl3">
                 <Link to="/info/questionnaire">Questionnaire</Link>
               </li>
             </ul>

@@ -34,7 +34,7 @@ class Navigation extends Component {
 
   render() {
     return (
-      <Navbar dark expand="md" fixed="top" scrolling right>
+      <Navbar dark expand="md" fixed="top" scrolling>
         <Container>
           <NavbarBrand href="/">
             <strong>Limitless-Estates</strong>
@@ -44,7 +44,7 @@ class Navigation extends Component {
           )}
 
           <Collapse isOpen={this.state.collapse} navbar>
-            <NavbarNav onClick={this.onClick.bind(this)}>
+            <NavbarNav>
               <NavItem>
                 <NavLink className="nav-link" to="/">
                   Home
@@ -58,7 +58,9 @@ class Navigation extends Component {
               <NavItem>
                 <Dropdown
                   isOpen={this.state.dropdownOpen}
-                  toggle={this.toggle.bind(this)}
+                  toggle={() => {
+                    this.toggle();
+                  }}
                 >
                   <DropdownToggle nav caret>
                     Resources
