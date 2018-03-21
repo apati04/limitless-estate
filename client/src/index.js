@@ -12,7 +12,7 @@ import reduxThunk from 'redux-thunk';
 import rootReducer from './reducers';
 import App from './components/App';
 import { unregister } from './registerServiceWorker';
-import { Document } from 'react-pdf/dist/entry.noworker';
+
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const store = createStore(

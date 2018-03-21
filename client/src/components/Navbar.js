@@ -77,7 +77,7 @@ class Navigation extends Component {
                       </NavLink>
                     </DropdownItem>
                     <DropdownItem>
-                      <NavLink to="/resources/investingrisks">Risks</NavLink>
+                      <NavLink to="/resources/investingrisks/1">Risks</NavLink>
                     </DropdownItem>
                     <DropdownItem>
                       <NavLink to="/resources/faq">FAQ</NavLink>

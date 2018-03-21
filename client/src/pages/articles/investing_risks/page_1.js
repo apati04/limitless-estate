@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import Article from '../../components/templates/Article';
-import { Document, Page } from 'react-pdf';
+import Article from '../../../components/templates/Article';
 class RisksWithInvesting extends Component {
   state = {
     numPages: null,
@@ -20,7 +19,7 @@ class RisksWithInvesting extends Component {
           pattern=""
           overlayText=""
           title="Risks with Investing in Real Estate"
-          circleImage=""
+          circleImage="https://i.imgur.com/uDTyJkf.jpg"
           body={[
             <p key="1">
               Investing in real estate along with any type of investing involves
@@ -128,8 +127,20 @@ class RisksWithInvesting extends Component {
               increase it may reduce the amount available for distribution to
               investors.
             </p>,
-            <p key="9" />
+            <p key="9">
+              <strong className="font-italic">
+                Reliance on Third Parties:{' '}
+              </strong>
+              If a third party on-site property management and construction
+              performs poorly or becomes unable to fulfill its obligations, the
+              business could be severely disrupted and our financial condition
+              could be adversely affected. Disputes between us and our third
+              party service providers could disrupt our business and may result
+              in litigation or other forms of legal proceedings.
+            </p>
           ]}
+          pageNumber="1"
+          numPages="2"
         />
       </div>
     );
