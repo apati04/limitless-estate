@@ -25,7 +25,31 @@ export default class HeaderSection extends Component {
         <PicCarousel/>
         <Mask className="d-flex full-bg-img flex-center ">
           <div className="d-flex container justify-content-around p-0 text-left white-text wow fadeInUp">
-            <h1>Hello</h1>
+            <div className="text-center">
+              <h2 className="mb-4">
+                Our <strong>vision</strong> at Limitless Estates is to provide A
+                class living to lower income housing by putting our residents
+                first and instilling a sense of community while inspiring others
+                to do the same.
+              </h2>
+
+              <h2 className="mt-4 text-center">
+                Our <strong>mission</strong> is to positively impact the lives
+                of the people in our local neighborhoods through{' '}
+                <NavLink
+                  style={{ color: 'bluegrey' }}
+                  to="/resources/impactinvesting"
+                >
+                  impact investing
+                </NavLink>{' '}
+                while achieving double digit returns for our investors.
+              </h2>
+              <div className="text-center">
+                <Button className="text-right" size="lg" color="primary">
+                  Make An Impact
+                </Button>
+              </div>
+            </div>
           </div>
         </Mask>
       </View>
@@ -41,28 +65,3 @@ https://images.pexels.com/photos/7277/sunset-water-clouds-lake.jpg?w=1260&h=750&
 
 
 */
-{/* <div className="text-center">
-  <h2 className="mb-4">
-    Our <strong>vision</strong> at Limitless Estates is to provide A
-    class living to lower income housing by putting our residents
-    first and instilling a sense of community while inspiring others
-    to do the same.
-  </h2>
-
-  <h2 className="mt-4 text-center">
-    Our <strong>mission</strong> is to positively impact the lives
-    of the people in our local neighborhoods through{' '}
-    <NavLink
-  style={{ color: 'bluegrey' }}
-  to="/resources/impactinvesting"
-    >
-  impact investing
-    </NavLink>{' '}
-    while achieving double digit returns for our investors.
-  </h2>
-  <div className="text-center">
-    <Button className="text-right" size="lg" color="primary">
-  Make An Impact
-    </Button>
-  </div>
-</div> */}

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Carousel, CarouselInner, CarouselItem, CarouselCaption, CarouselControl } from 'mdbreact';
+import { Carousel, CarouselInner, CarouselItem, CarouselControl } from 'mdbreact';
 
 class PicCarousel extends Component {
   constructor(props) {
@@ -51,40 +51,24 @@ goToIndex(item) {
               <img className="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(68).jpg" alt="First slide" />
               <div className="mask"></div>
             </div>
-            <CarouselCaption>
-              <h3 className="h3-responsive">Light mask</h3>
-              <p>First text</p>
-            </CarouselCaption>
           </CarouselItem>
           <CarouselItem itemId="2">
             <div className="view hm-black-strong">
               <img className="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(99).jpg" alt="First slide" />
               <div className="mask"></div>
             </div>
-            <CarouselCaption>
-              <h3 className="h3-responsive">Strong mask</h3>
-              <p>Second text</p>
-            </CarouselCaption>
           </CarouselItem>
           <CarouselItem itemId="3">
             <div className="view hm-black-slight">
               <img className="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(17).jpg" alt="First slide" />
               <div className="mask"></div>
             </div>
-            <CarouselCaption>
-              <h3 className="h3-responsive">Slight mask</h3>
-              <p>Third text</p>
-            </CarouselCaption>
           </CarouselItem>
           <CarouselItem itemId="4">
             <div className="view hm-black-light">
               <img className="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20%28143%29.jpg" alt="Mattonit's item" />
               <div className="mask"></div>
             </div>
-            <CarouselCaption>
-              <h3 className="h3-responsive">Sopot Beach</h3>
-              <p>Taken june 21th by @mattonit</p>
-            </CarouselCaption>
           </CarouselItem>
         </CarouselInner>
         <CarouselControl direction="prev" role="button" onClick={() => { this.prev(); }} />
