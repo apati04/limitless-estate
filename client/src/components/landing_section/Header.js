@@ -2,6 +2,8 @@
 import React, { Component } from 'react';
 import { View, Mask, Button } from 'mdbreact';
 import { NavLink } from 'react-router-dom';
+import PicCarousel from '../PicCarousel';
+
 export default class HeaderSection extends Component {
   constructor(props) {
     super(props);
@@ -20,38 +22,10 @@ export default class HeaderSection extends Component {
   render() {
     return (
       <View className="hm-stylish-slight">
-        <img
-          className="img-fluid w-100"
-          src="https://scontent-ort2-1.cdninstagram.com/vp/7eab7610543caa80a5a82f3d41fc860f/5B313D26/t51.2885-15/e35/28763645_775007869372653_7749070619253145600_n.jpg"
-          alt=""
-        />
+        <PicCarousel/>
         <Mask className="d-flex full-bg-img flex-center ">
           <div className="d-flex container justify-content-around p-0 text-left white-text wow fadeInUp">
-            <div className="text-center">
-              <h2 className="mb-4">
-                Our <strong>vision</strong> at Limitless Estates is to provide A
-                class living to lower income housing by putting our residents
-                first and instilling a sense of community while inspiring others
-                to do the same.
-              </h2>
-
-              <h2 className="mt-4 text-center">
-                Our <strong>mission</strong> is to positively impact the lives
-                of the people in our local neighborhoods through{' '}
-                <NavLink
-                  style={{ color: 'bluegrey' }}
-                  to="/resources/impactinvesting"
-                >
-                  impact investing
-                </NavLink>{' '}
-                while achieving double digit returns for our investors.
-              </h2>
-              <div className="text-center">
-                <Button className="text-right" size="lg" color="primary">
-                  Make An Impact
-                </Button>
-              </div>
-            </div>
+            <h1>Hello</h1>
           </div>
         </Mask>
       </View>
@@ -67,3 +41,28 @@ https://images.pexels.com/photos/7277/sunset-water-clouds-lake.jpg?w=1260&h=750&
 
 
 */
+{/* <div className="text-center">
+  <h2 className="mb-4">
+    Our <strong>vision</strong> at Limitless Estates is to provide A
+    class living to lower income housing by putting our residents
+    first and instilling a sense of community while inspiring others
+    to do the same.
+  </h2>
+
+  <h2 className="mt-4 text-center">
+    Our <strong>mission</strong> is to positively impact the lives
+    of the people in our local neighborhoods through{' '}
+    <NavLink
+  style={{ color: 'bluegrey' }}
+  to="/resources/impactinvesting"
+    >
+  impact investing
+    </NavLink>{' '}
+    while achieving double digit returns for our investors.
+  </h2>
+  <div className="text-center">
+    <Button className="text-right" size="lg" color="primary">
+  Make An Impact
+    </Button>
+  </div>
+</div> */}
