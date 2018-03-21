@@ -8,7 +8,7 @@ class PicCarousel extends Component {
   this.prev = this.prev.bind(this);
   this.state = {
     activeItem: 1,
-    maxLength: 4
+    maxLength: 3
   };
 }
 
@@ -48,25 +48,19 @@ goToIndex(item) {
         <CarouselInner>
           <CarouselItem itemId="1">
             <div className="view hm-black-light">
-              <img className="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(68).jpg" alt="First slide" />
+              <img className="d-block w-100" src="https://i.imgur.com/ZdmIZpe.jpg" alt="First Slide" />
               <div className="mask"></div>
             </div>
           </CarouselItem>
           <CarouselItem itemId="2">
-            <div className="view hm-black-strong">
-              <img className="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(99).jpg" alt="First slide" />
+            <div className="view hm-black-slight">
+              <img className="d-block w-100" src="/img/background/sunset.jpg" alt="Second Slide" />
               <div className="mask"></div>
             </div>
           </CarouselItem>
           <CarouselItem itemId="3">
             <div className="view hm-black-slight">
-              <img className="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(17).jpg" alt="First slide" />
-              <div className="mask"></div>
-            </div>
-          </CarouselItem>
-          <CarouselItem itemId="4">
-            <div className="view hm-black-light">
-              <img className="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20%28143%29.jpg" alt="Mattonit's item" />
+              <img className="d-block w-100" src="/img/background/globe.jpg" alt="Third Slide" />
               <div className="mask"></div>
             </div>
           </CarouselItem>
