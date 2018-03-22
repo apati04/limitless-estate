@@ -36,8 +36,10 @@ class Navigation extends Component {
     return (
       <Navbar dark expand="md" fixed="top" scrolling>
         <Container>
-          <NavbarBrand href="/">
-            <strong>Limitless-Estates</strong>
+          <NavbarBrand>
+            <NavLink to="/">
+              <strong>Limitless-Estates</strong>
+            </NavLink>
           </NavbarBrand>
           {!this.state.isWideEnough && (
             <NavbarToggler onClick={this.onClick.bind(this)} />
@@ -46,14 +48,10 @@ class Navigation extends Component {
           <Collapse isOpen={this.state.collapse} navbar>
             <NavbarNav>
               <NavItem>
-                <NavLink className="nav-link" to="/">
-                  Home
-                </NavLink>
+                <NavLink to="/">Home</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink className="nav-link" to="/markets">
-                  Markets
-                </NavLink>
+                <NavLink to="/markets">Markets</NavLink>
               </NavItem>
               <NavItem>
                 <Dropdown
