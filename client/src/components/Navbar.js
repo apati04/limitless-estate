@@ -14,7 +14,8 @@ import {
   DropdownToggle,
   DropdownMenu,
   DropdownItem,
-  Container
+  Container,
+  SideNavNav
 } from 'mdbreact';
 
 class Navigation extends Component {
@@ -33,13 +34,12 @@ class Navigation extends Component {
   }
 
   render() {
+    console.log('sidenavnav ', SideNavNav);
     return (
       <Navbar dark expand="md" fixed="top" scrolling>
         <Container>
-          <NavbarBrand>
-            <NavLink to="/">
-              <strong>Limitless-Estates</strong>
-            </NavLink>
+          <NavbarBrand to="/">
+            <strong>Limitless-Estates</strong>
           </NavbarBrand>
           {!this.state.isWideEnough && (
             <NavbarToggler onClick={this.onClick.bind(this)} />
