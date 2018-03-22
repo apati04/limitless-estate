@@ -19,10 +19,13 @@ input[type='radio'] {
 
 .carousel-item {
   height: 444px;
+
+  transition: none !important;
 }
 .fas {
   font-size: 55px;
 }
+
 .fab {
   font-size: 40px;
 }

@@ -17,7 +17,8 @@ import Faq from '../pages/Faq';
 import SupportCo from '../pages/SupportCo';
 import Overview from '../pages/articles/Overview';
 import ImpactInvesting from '../pages/articles/ImpactInvesting';
-import InvestingRisks from '../pages/articles/InvestingRisks';
+import Risks_PageOne from '../pages/articles/investing_risks/page_1';
+import Risks_PageTwo from '../pages/articles/investing_risks/page_2';
 const Construction = () => {
   return (
     <div style={{ height: '100vh' }} className="container-fluid bg-dark">
@@ -70,8 +71,12 @@ class App extends Component {
               <Navbar />
               <Route exact path="/resources" component={Overview} />
               <Route
-                path="/resources/investingrisks"
-                component={InvestingRisks}
+                path="/resources/investingrisks/1"
+                component={Risks_PageOne}
+              />
+              <Route
+                path="/resources/investingrisks/2"
+                component={Risks_PageTwo}
               />
               <Route
                 path="/resources/impactinvesting"
