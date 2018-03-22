@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import Article from '../../components/templates/Article';
-const postData = {
-  title: 'post title',
-  text: [<div>asdfasdfasdf</div>, <h1>asdfasdfasdfasdf</h1>],
-  image: 'https://i.imgur.com/2A3IGvX.jpg'
-};
+import data from '../data/impact_investing';
+
 export default class ImpactInvesting extends Component {
+  renderData = ({body}) => {
+    return data.map(element, i =>);
+  };
   render() {
     return (
       <div>
@@ -13,6 +13,8 @@ export default class ImpactInvesting extends Component {
           headerImage="https://i.imgur.com/YXieUK4.jpg"
           overlayColor="hm-purple-slight"
           post={postData}
+          title="What is Impact Investing?"
+          body={[]}
         />
       </div>
     );
