@@ -1,9 +1,5 @@
 module.exports = [
   {
-    title:
-      'Often called a “double bottom line” investment, impact investing enables investors to put their money to good use in meaningful, intelligent ventures that provide both a financial AND a social return on their investment.'
-  },
-  {
     body:
       'Impact Investing is simply investing with a purpose. Often called a “double bottom line” investment, impact investing enables investors to put their money to good use in meaningful, intelligent ventures that provide both a financial AND a social return on their investment. This sector of investing has never been more important than it is now.  The good news is that those who believe in the value and purpose of impact investing can still obtain solid, financial returns in the process.'
   },
