@@ -12,8 +12,8 @@ import PageHeader from '../components/PageHeader';
 
 const Questionnaire = () => {
   return (
-    <div>
-      <div className="container d-flex justify-content-center align-items-center">
+    <div className="row">
+      <div className="col container d-flex justify-content-center align-items-center">
         <Card style={{ margin: '50px' }} className="container" cascade wide>
           <CardImage tag="div">
             <div className="view gradient-card-header blue-gradient">

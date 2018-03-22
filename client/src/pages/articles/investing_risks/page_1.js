@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Article from '../../../components/templates/Article';
+import { NavLink } from 'react-router-dom';
 class RisksWithInvesting extends Component {
   state = {
     numPages: null,
@@ -13,7 +14,7 @@ class RisksWithInvesting extends Component {
   };
   render() {
     return (
-      <div>
+      <div className="rgba-blue-grey-slight">
         <Article
           headerImage="https://i.imgur.com/zneMI2U.jpg"
           pattern=""
@@ -139,8 +140,16 @@ class RisksWithInvesting extends Component {
               in litigation or other forms of legal proceedings.
             </p>
           ]}
-          pageNumber="1"
-          numPages="2"
+          pageFooter={
+            <div classname="container row">
+              <div className="col-auto d-flex flex-center">
+                <p className="text-center align-self-center">Page 1 of 2</p>
+                <NavLink className="ml-2" to={`/resources/investingrisks/2`}>
+                  <i className="material-icons">arrow_forward</i>
+                </NavLink>
+              </div>
+            </div>
+          }
         />
       </div>
     );
