@@ -1,11 +1,11 @@
-import React, { Component } from "react";
-import { withFormik, Form, Field } from "formik";
-import { Input, Button } from "mdbreact";
-import axios from "axios";
-import Yup from "yup";
+import React, { Component } from 'react';
+import { withFormik, Form, Field } from 'formik';
+import { Input, Button } from 'mdbreact';
+import axios from 'axios';
+import Yup from 'yup';
 const style = {
   radioButton: {
-    marginLeft: "1em"
+    marginLeft: '1em'
   }
 };
 class QuestionnaireForm extends Component {
@@ -33,38 +33,30 @@ class QuestionnaireForm extends Component {
             </label>
           </div>
         </div>
-        <div className="form-group">
-          <div className="row">
-            <div className="col-md-6">
-              <Input
-                className="form-control"
-                label="Firstname"
-                type="text"
-                name="firstname"
-                id="firstname"
-              />
-              {touched.firstname &&
-                errors.firstname && (
-                  <small className="ml-2 font-italic text-danger">
-                    {errors.firstname}
-                  </small>
-                )}
-            </div>
-            <div className="col-md-6">
-              <Input
-                className="form-control"
-                id="lastname"
-                label="Lastname"
-                type="text"
-                name="user"
-              />
-              {touched.lastname &&
-                errors.lastname && (
-                  <small className="font-italic form-text text-danger">
-                    {errors.lastname}
-                  </small>
-                )}
-            </div>
+        <div className="row">
+          <div className="col col-md-6 form-group">
+            <label htmlFor="firstname" className="p-0">
+              First Name
+            </label>
+            <Field className="form-control p-0" type="text" name="firstname" />
+            {touched.firstname &&
+              errors.firstname && (
+                <small className="ml-2 font-italic text-danger">
+                  {errors.firstname}
+                </small>
+              )}
+          </div>
+          <div className="col col-md-6 form-group">
+            <label htmlFor="lastname" className="p-0">
+              Last Name
+            </label>
+            <Field className="form-control p-0" type="text" name="lastname" />
+            {touched.lastname &&
+              errors.lastname && (
+                <small className="font-italic form-text text-danger">
+                  {errors.lastname}
+                </small>
+              )}
           </div>
         </div>
 
@@ -105,7 +97,7 @@ class QuestionnaireForm extends Component {
         <div className="form-group">
           <div className="form-row">
             <div className="col">
-              <ol style={{ padding: 0, listStylePosition: "inside" }}>
+              <ol style={{ padding: 0, listStylePosition: 'inside' }}>
                 <li>
                   <label className="col-form-label" htmlFor="q1">
                     Why are you interested in investing in Real Estate?
@@ -226,8 +218,8 @@ class QuestionnaireForm extends Component {
                       <Input
                         className="form-control"
                         gap
-                        onClick={() => this.setState({ accredited: "yes" })}
-                        checked={this.state.accredited === "yes"}
+                        onClick={() => this.setState({ accredited: 'yes' })}
+                        checked={this.state.accredited === 'yes'}
                         name="q7a"
                         type="radio"
                         id="q7a"
@@ -236,8 +228,8 @@ class QuestionnaireForm extends Component {
                       <Input
                         className="form-control"
                         gap
-                        onClick={() => this.setState({ accredited: "no" })}
-                        checked={this.state.accredited === "no"}
+                        onClick={() => this.setState({ accredited: 'no' })}
+                        checked={this.state.accredited === 'no'}
                         name="q7b"
                         type="radio"
                         id="q7b"
@@ -254,8 +246,8 @@ class QuestionnaireForm extends Component {
                     <Input
                       className="form-control"
                       gap
-                      onClick={() => this.setState({ proofOfFunds: "yes" })}
-                      checked={this.state.proofOfFunds === "yes"}
+                      onClick={() => this.setState({ proofOfFunds: 'yes' })}
+                      checked={this.state.proofOfFunds === 'yes'}
                       type="radio"
                       name="q8a"
                       label="Yes"
@@ -264,8 +256,8 @@ class QuestionnaireForm extends Component {
                       className="form-control"
                       gap
                       type="radio"
-                      onClick={() => this.setState({ proofOfFunds: "no" })}
-                      checked={this.state.proofOfFunds === "no"}
+                      onClick={() => this.setState({ proofOfFunds: 'no' })}
+                      checked={this.state.proofOfFunds === 'no'}
                       name="q8b"
                       id="q8b"
                       label="No"
@@ -283,10 +275,10 @@ class QuestionnaireForm extends Component {
                         gap
                         onClick={() =>
                           this.setState({
-                            riskTolerance: "low"
+                            riskTolerance: 'low'
                           })
                         }
-                        checked={riskTolerance === "low" ? true : false}
+                        checked={riskTolerance === 'low' ? true : false}
                         className="form-control"
                         name="q9"
                         type="radio"
@@ -297,17 +289,17 @@ class QuestionnaireForm extends Component {
                         gap
                         className="form-control"
                         onClick={() =>
-                          this.setState({ riskTolerance: "moderate" })
+                          this.setState({ riskTolerance: 'moderate' })
                         }
-                        checked={riskTolerance === "moderate" ? true : false}
+                        checked={riskTolerance === 'moderate' ? true : false}
                         name="q9"
                         type="radio"
                         label="Moderate"
                       />
                       <Input
                         gap
-                        onClick={() => this.setState({ riskTolerance: "high" })}
-                        checked={riskTolerance === "high" ? true : false}
+                        onClick={() => this.setState({ riskTolerance: 'high' })}
+                        checked={riskTolerance === 'high' ? true : false}
                         className="form-control"
                         name="q9"
                         label="High"
@@ -398,7 +390,13 @@ class QuestionnaireForm extends Component {
         </div>
 
         <div className="text-center">
-          <Button disabled={isSubmitting} size="lg" rounded gradient="blue">
+          <Button
+            type="submit"
+            disabled={isSubmitting}
+            size="lg"
+            rounded
+            gradient="blue"
+          >
             Submit <i className="ml-1 far fa-paper-plane" />
           </Button>
         </div>
@@ -409,25 +407,25 @@ class QuestionnaireForm extends Component {
 
 export default withFormik({
   mapPropsToValues({
-    firstname = "",
-    lastname = "",
-    email = "",
-    question1 = "",
-    question2 = "",
-    question3 = "",
-    question4a = "",
-    question4b = "",
-    question4c = "",
-    question5 = "",
-    question6 = "",
-    question7 = "",
-    question8 = "",
-    question9 = "",
-    question10 = "",
-    question11 = "",
-    question12 = "",
-    question13 = "",
-    question14 = ""
+    firstname = '',
+    lastname = '',
+    email = '',
+    question1 = '',
+    question2 = '',
+    question3 = '',
+    question4a = '',
+    question4b = '',
+    question4c = '',
+    question5 = '',
+    question6 = '',
+    question7 = '',
+    question8 = '',
+    question9 = '',
+    question10 = '',
+    question11 = '',
+    question12 = '',
+    question13 = '',
+    question14 = ''
   }) {
     return {
       firstname,
@@ -451,32 +449,36 @@ export default withFormik({
       question14
     };
   },
-  validationSchema: Yup.object().shape({
-    firstname: Yup.string().required("Field is required"),
-    lastname: Yup.string().required("Field is required"),
-    email: Yup.string()
-      .email("Email is not valid")
-      .required("Field is required"),
-    question1: Yup.mixed().required("Field is required"),
-    question2: Yup.mixed().required("Field is required"),
-    question3: Yup.mixed().required("Field is required"),
-    question4a: Yup.mixed().required("Field is required"),
-    question4b: Yup.mixed().required("Field is required"),
-    question4c: Yup.mixed().required("Field is required"),
-    question5: Yup.mixed().required("Field is required"),
-    question6: Yup.mixed().required("Field is required"),
-    question7: Yup.mixed().required("Field is required"),
-    question8: Yup.mixed().required("Field is required"),
-    question9: Yup.mixed().required("Field is required"),
-    question10: Yup.mixed().required("Field is required"),
-    question11: Yup.mixed().required("Field is required"),
-    question12: Yup.mixed().required("Field is required"),
-    question13: Yup.mixed().required("Field is required"),
-    question14: Yup.mixed().required("Field is required")
-  }),
-  handleSubmit(values, { resetForm, setErrors, setSubmitting }) {
+  async handleSubmit(values, { resetForm, setErrors, setSubmitting }) {
     console.log(values);
     resetForm();
     setSubmitting(false);
   }
 })(QuestionnaireForm);
+/*
+
+  validationSchema: Yup.object().shape({
+    firstname: Yup.string().required('Field is required'),
+    lastname: Yup.string().required('Field is required'),
+    email: Yup.string()
+      .email('Email is not valid')
+      .required('Field is required'),
+    question1: Yup.mixed().required('Field is required'),
+    question2: Yup.mixed().required('Field is required'),
+    question3: Yup.mixed().required('Field is required'),
+    question4a: Yup.mixed().required('Field is required'),
+    question4b: Yup.mixed().required('Field is required'),
+    question4c: Yup.mixed().required('Field is required'),
+    question5: Yup.mixed().required('Field is required'),
+    question6: Yup.mixed().required('Field is required'),
+    question7: Yup.mixed().required('Field is required'),
+    question8: Yup.mixed().required('Field is required'),
+    question9: Yup.mixed().required('Field is required'),
+    question10: Yup.mixed().required('Field is required'),
+    question11: Yup.mixed().required('Field is required'),
+    question12: Yup.mixed().required('Field is required'),
+    question13: Yup.mixed().required('Field is required'),
+    question14: Yup.mixed().required('Field is required')
+  })
+
+*/

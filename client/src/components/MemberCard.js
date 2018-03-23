@@ -17,14 +17,6 @@ const style = {
 export default ({ name, title = '', photo, type, content, children }) => {
   return (
     <div style={style.card} className="align-items-center">
-      <img
-        style={{ border: '2px solid lightgrey' }}
-        className="mr-2 mb-1 rounded-circle"
-        src={photo.url}
-        alt="Generic placeholder"
-        width={photo.size}
-        height={photo.size}
-      />
       {children}
     </div>
   );

@@ -14,7 +14,8 @@ import {
   DropdownToggle,
   DropdownMenu,
   DropdownItem,
-  Container
+  Container,
+  SideNavNav
 } from 'mdbreact';
 
 class Navigation extends Component {
@@ -33,10 +34,11 @@ class Navigation extends Component {
   }
 
   render() {
+    console.log('sidenavnav ', SideNavNav);
     return (
       <Navbar dark expand="md" fixed="top" scrolling>
         <Container>
-          <NavbarBrand href="/">
+          <NavbarBrand to="/">
             <strong>Limitless-Estates</strong>
           </NavbarBrand>
           {!this.state.isWideEnough && (
@@ -46,14 +48,10 @@ class Navigation extends Component {
           <Collapse isOpen={this.state.collapse} navbar>
             <NavbarNav>
               <NavItem>
-                <NavLink className="nav-link" to="/">
-                  Home
-                </NavLink>
+                <NavLink to="/">Home</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink className="nav-link" to="/markets">
-                  Markets
-                </NavLink>
+                <NavLink to="/markets">Markets</NavLink>
               </NavItem>
               <NavItem>
                 <Dropdown
