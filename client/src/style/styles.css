@@ -11,6 +11,13 @@ body {
 p {
   font-size: 1rem;
 }
+.Ripple-parent {
+  transition: none !important;
+}
+.Ripple.is-reppling {
+  animation: none !important;
+  transition: none !important;
+}
 /* navbar styles */
 
 input[type='radio'] {
@@ -57,7 +64,7 @@ input[type='radio'] {
 }
 #landingParallax {
   position: relative;
-  min-height: 252px;
+  min-height: 30em;
   background: url('/img/lobby.jpg') center;
   background-attachment: fixed;
   background-size: cover;
@@ -81,7 +88,7 @@ input[type='radio'] {
 }
 .dark-overlay {
   position: absolute;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.5);
   top: 0;
   left: 0;
   width: 100%;
@@ -213,13 +220,7 @@ a.info-popover:hover {
   .navbar {
     background-color: #4285f4;
   }
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  .blog-post-meta {
+  body {
     text-align: center;
   }
   .icon-title {

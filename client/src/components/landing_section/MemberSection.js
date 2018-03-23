@@ -3,43 +3,61 @@ import Advisors from '../../api/advisors';
 import Advisors2 from '../../api/advisors2';
 import Team from '../../api/team';
 import MemberCard from '../MemberCard';
-import { Button } from 'mdbreact';
+import { Button, Popover, PopoverBody, PopoverHeader, Fa } from 'mdbreact';
 class MemberSection extends Component {
   renderCards = items => {
-    return items.map(llcProps => {
-      const { name, type } = llcProps;
-      const content = llcProps.content || llcProps.resume;
+    return items.map(person => {
+      const content = person.content || person.resume;
+      console.log(person.photo);
       return (
-        <MemberCard key={name} {...llcProps}>
-          {type === 'Team' ? (
+        <MemberCard key={person.name} {...person}>
+          {person.type === 'Team' ? (
             <div className="mt-2">
-              <h3 className="p-0">{name}</h3>
-              <p className="p-0 font-weight-bold">{llcProps.title}</p>
+              <img
+                style={{ border: '2px solid lightgrey' }}
+                className="mr-2 mb-1 rounded-circle"
+                src={person.photo.url}
+                alt="Generic placeholder"
+                width={person.photo.size}
+                height={person.photo.size}
+              />
+              <h3 className="p-0">{person.name}</h3>
+              <p className="p-0 font-weight-bold">{person.title}</p>
 
-              <a style={{ color: '#f7f7f7' }} target="_blank" href={content}>
+              <a
+                style={{ color: '#f7f7f7' }}
+                target="_blank"
+                href={person.content}
+              >
                 <Button color="indigo">View Bio >></Button>
               </a>
             </div>
           ) : (
-            <div className="d-flex justify-content-center mt-2">
-              <h5>{name}</h5>
-              <a
-                tabIndex="0"
-                className="poppy popover-dismiss ml-2 info-popover"
-                data-toggle="popover"
-                data-trigger="focus"
-                title={`${name}, ${type}`}
-                data-content={`${content}`}
-              >
-                <i
-                  style={{
-                    fontSize: '24px',
-                    color: '#f7f7f7',
-                    opacity: '0.92'
-                  }}
-                  className="fas fa-info-circle"
+            <div className="d-flex container justify-content-start align-items-center mt-2">
+              <div className="align-self-center">
+                <img
+                  style={{ border: '2px solid lightgrey' }}
+                  className="mr-2 mb-1 rounded-circle"
+                  src={person.photo.url}
+                  alt="Generic placeholder"
+                  width={person.photo.size}
+                  height={person.photo.size}
                 />
-              </a>
+                <div className="d-flex justify-content-center">
+                  <h3 className="align-self-center">{person.name}</h3>
+                  <Popover
+                    component="button"
+                    placement="bottom"
+                    popoverBody={<Fa icon="info" />}
+                    className="h-20 w-20 align-self-end btn blue btn-floating btm-sm"
+                  >
+                    <PopoverHeader className="primary-color-dark text-center">
+                      {person.name}, {person.type}
+                    </PopoverHeader>
+                    <PopoverBody>{person.content}</PopoverBody>
+                  </Popover>
+                </div>
+              </div>
             </div>
           )}
         </MemberCard>
