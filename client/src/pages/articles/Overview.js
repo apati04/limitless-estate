@@ -21,10 +21,10 @@ export default class Overview extends Component {
     const finance = '/img/background/financial.jpg';
     return (
       <section id="overview">
-        <View className="hm-indigo-light">
+        <View className="hm-black-slight">
           <img
-            className="img-fluid"
-            src="https://millerjohnson.com/wp-content/uploads/2018/01/Uncapping-1.jpg"
+            className="img-fluid w-100"
+            src="https://i.imgur.com/f4FJAIJ.jpg"
             alt=""
           />
           <Mask className="d-flex flex-center align-items-center " />
