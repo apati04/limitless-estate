@@ -35,7 +35,9 @@ class QuestionnaireForm extends Component {
         </div>
         <div className="row">
           <div className="col col-md-6 form-group">
-            <label htmlFor="firstname">First Name</label>
+            <label htmlFor="firstname" className="p-0">
+              First Name
+            </label>
             <Field className="form-control p-0" type="text" name="firstname" />
             {touched.firstname &&
               errors.firstname && (
@@ -44,18 +46,18 @@ class QuestionnaireForm extends Component {
                 </small>
               )}
           </div>
-          <div className="form-group col col-md-6">
+          <div className="col col-md-6 form-group">
             <label htmlFor="lastname" className="p-0">
               Last Name
             </label>
             <Field className="form-control p-0" type="text" name="lastname" />
+            {touched.lastname &&
+              errors.lastname && (
+                <small className="font-italic form-text text-danger">
+                  {errors.lastname}
+                </small>
+              )}
           </div>
-          {touched.lastname &&
-            errors.lastname && (
-              <small className="font-italic form-text text-danger">
-                {errors.lastname}
-              </small>
-            )}
         </div>
 
         <div className="mt-2 form-group">
