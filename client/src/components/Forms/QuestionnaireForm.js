@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { withFormik, Form, Field } from 'formik';
-import { Button, Input as input } from 'mdbreact';
+import { Button } from 'mdbreact';
 import axios from 'axios';
 import Yup from 'yup';
 const style = {
@@ -114,12 +114,6 @@ class QuestionnaireForm extends Component {
                 <option value="text" label="Text Message" />
               </Field>
             </div>
-            {touched.contactPref &&
-              errors.contactPref && (
-                <small className="font-italic form-text text-danger">
-                  {errors.contactPref}
-                </small>
-              )}
           </div>
         </div>
         <div className="mb-4 form-group row">
@@ -170,62 +164,52 @@ class QuestionnaireForm extends Component {
               <label className="col-form-label" htmlFor="q3">
                 Do you want to invest in multifamily, value-add projects?
               </label>
-              <div className="form-group">
-                <Field className="form-control p-1" name="qyes" label="yes" />
-                {touched.q3 &&
-                  errors.q3 && (
-                    <small className="ml-2 font-italic text-danger">
-                      {errors.q3}
-                    </small>
-                  )}
+              {this.handleErrors('q3')}
+              <div className="col-md-12">
+                <Field className="form-control p-1" name="q3" type="text" />
               </div>
             </li>
             <li>
-              <label htmlFor="q4">What are your return expectations?</label>
-              <div className="form-group">
-                <div className="col-md-4">
-                  <Field
-                    name="q4a"
-                    className="col-form-label"
-                    hint="Annual Return Percentage (%)"
-                    type="text"
-                  />
-                </div>
-                <div className="col-md-4">
-                  <Field
-                    name="q4b"
-                    type="text"
-                    hint="Internal rate of return (IRR) (%)"
-                  />
-                </div>
-                <div className="col-md-4">
-                  <Field
-                    className="col-form-label"
-                    name="q4c"
-                    type="text"
-                    hint="Cash On Cash Return ($)"
-                  />
-                </div>
+              <label className="col-form-label" htmlFor="q4">
+                What are your return expectations?
+              </label>
+              <div className="col-md-4">
+                <Field
+                  name="q4AAR"
+                  className="form-control"
+                  placeholder="Annual Return Percentage (%)"
+                  type="text"
+                />
+                <Field
+                  className="form-control"
+                  name="q4IRR"
+                  type="text"
+                  placeholder="Internal rate of return (IRR) (%)"
+                />
+                <Field
+                  className="form-control"
+                  name="q4CoC"
+                  type="text"
+                  placeholder="Cash On Cash Return ($)"
+                />
               </div>
             </li>
             <li>
               <label className="col-form-label" htmlFor="q5">
                 What is your investment minimum and maximum hold time?
               </label>
-
-              <div className="col-md-3">
+              <div className="col-md-4">
                 <Field
                   className="form-control"
                   name="q5a"
-                  hint="Investment Minimum"
+                  placeholder="Investment Minimum"
                   type="text"
                 />
-              </div>
-              <div className="col-md-3">
+
                 <Field
-                  className="form-control"
+                  className="form-control p-0"
                   name="q5b"
-                  hint="Maximum Hold Time"
+                  placeholder="Maximum Hold Time"
                   type="text"
                 />
               </div>

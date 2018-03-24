@@ -13,8 +13,8 @@ import PageHeader from '../components/PageHeader';
 const Questionnaire = () => {
   return (
     <div className="row">
-      <div className="col container d-flex justify-content-center align-items-center">
-        <Card style={{ margin: '50px' }} className="container" cascade wide>
+      <div className="col-md-12 d-flex justify-content-around align-items-center">
+        <Card style={{ margin: '50px' }} cascade>
           <CardImage tag="div">
             <div className="view gradient-card-header blue-gradient">
               <h2 className="h2-responsive">
