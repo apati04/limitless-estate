@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { withFormik, Form, Field } from 'formik';
-import { Button } from 'mdbreact';
+import { Button, Input } from 'mdbreact';
 import axios from 'axios';
 import Yup from 'yup';
 const style = {
@@ -258,14 +258,24 @@ class QuestionnaireForm extends Component {
               <label className="col-form-label" htmlFor="q8">
                 Can you show proof of funds ?
               </label>
-              <div className="form-group">
+              <div className="d-flex">
                 <Field
-                  className="form-control"
-                  onClick={() => this.setState({ proofOfFunds: 'yes' })}
-                  checked={this.state.proofOfFunds === 'yes'}
-                  type="radio"
+                  render={({ ...args }) => (
+                    <Input
+                      {...args}
+                      gap
+                      onChange={handleChange}
+                      onClick={() => {
+                        values.proofOfFunds = 'yes';
+                      }}
+                      checked={values.proofOfFunds === 'yes'}
+                      label="Option 1"
+                      type="radio"
+                      id="q8a"
+                      name="q8a"
+                    />
+                  )}
                   name="q8a"
-                  label="Yes"
                 />
                 <Field
                   className="form-control"
@@ -284,7 +294,7 @@ class QuestionnaireForm extends Component {
                 How would you rate your risk tolerance?
               </label>
               <div className="row d-flex-justify-space-around">
-                <div className="col-md-12">
+                <div className="d-flex col-md-12">
                   <Field
                     onClick={() =>
                       this.setState({
