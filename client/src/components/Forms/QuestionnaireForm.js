@@ -56,6 +56,13 @@ class QuestionnaireForm extends Component {
               className="form-control-lg mt-1 p-0"
               type="text"
               name="fullname"
+              component={
+                <Input
+                  value={values.name}
+                  onBlur={handleBlur}
+                  onChange={handleChange}
+                />
+              }
             />
           </div>
           <div className="col form-group">
