@@ -56,13 +56,6 @@ class QuestionnaireForm extends Component {
               className="form-control-lg mt-1 p-0"
               type="text"
               name="fullname"
-              component={
-                <Input
-                  value={values.name}
-                  onBlur={handleBlur}
-                  onChange={handleChange}
-                />
-              }
             />
           </div>
           <div className="col form-group">
@@ -141,7 +134,6 @@ class QuestionnaireForm extends Component {
             <label className="col-form-label-lg" htmlFor="q1">
               Why are you interested in investing in Real Estate?
             </label>
-
             {this.handleErrors('q1')}
             <Field
               className="form-control-lg m-0 p-1"
@@ -178,25 +170,31 @@ class QuestionnaireForm extends Component {
             <label className="col-form-label-lg" htmlFor="q4">
               What are your return expectations?
             </label>
-            <div>
+
+            <div className="d-flex flex-column">
               <Field
-                name="q4AAR"
+                name="q4ARP"
                 className="form-control-lg pl-0"
                 placeholder="Annual Return Percentage (%)"
                 type="text"
               />
+              {this.handleErrors('q4ARP')}
+
               <Field
                 className="form-control-lg pl-0"
                 name="q4IRR"
                 type="text"
                 placeholder="Internal rate of return (IRR) (%)"
               />
+              {this.handleErrors('q4IRR')}
+
               <Field
                 className="form-control-lg pl-0"
                 name="q4CoC"
                 type="text"
                 placeholder="Cash On Cash Return ($)"
               />
+              {this.handleErrors('q4CoC')}
             </div>
           </div>
           <div className="form-group mt-4">
@@ -204,13 +202,14 @@ class QuestionnaireForm extends Component {
               What is your investment minimum and maximum hold time?
             </label>
 
-            <div>
+            <div className="d-flex flex-column justify-content-between">
               <Field
                 className="form-control-lg pl-0"
                 name="q5a"
                 placeholder="Investment Minimum"
                 type="text"
               />
+              {this.handleErrors('q5a')}
 
               <Field
                 className="form-control-lg pl-0"
@@ -218,6 +217,7 @@ class QuestionnaireForm extends Component {
                 placeholder="Maximum Hold Time"
                 type="text"
               />
+              {this.handleErrors('q5b')}
             </div>
           </div>
           <div className="form-group mt-4">
@@ -478,17 +478,67 @@ export default withFormik({
     q1 = '',
     q2 = '',
     q3 = '',
-    q4 = ''
+    q4IRR = '',
+    q4ARP = '',
+    q4CoC = '',
+    q5a = '',
+    q5b = '',
+    q6 = '',
+    q7 = '',
+    q8 = '',
+    q9 = '',
+    q10 = '',
+    q11 = '',
+    q12 = '',
+    q13 = '',
+    q14 = ''
   }) => ({
     fullname,
     email,
     tel,
     company,
-    contactPref
+    contactPref,
+    q1,
+    q2,
+    q3,
+    q4ARP,
+    q4IRR,
+    q4CoC,
+    q5a,
+    q5b,
+    q6,
+    q7,
+    q8,
+    q9,
+    q10,
+    q11,
+    q12,
+    q13,
+    q14
   }),
   validationSchema: Yup.object().shape({
     fullname: Yup.string().required('Field is required'),
-    email: Yup.string().required('Field is required')
+    email: Yup.string().required('Field is required'),
+    tel: Yup.string().required('Field is required'),
+    company: Yup.string().required('Field is required'),
+    contactPref: Yup.string().required('Field is required'),
+    q1: Yup.string().required('Field is required'),
+    q2: Yup.string().required('Field is required'),
+    q3: Yup.string().required('Field is required'),
+    q4ARP: Yup.mixed().required('Field is required'),
+    q4IRR: Yup.mixed().required('Field is required'),
+    q4CoC: Yup.mixed().required('Field is required'),
+    q5a: Yup.string().required('Field is required'),
+    q5b: Yup.string().required('Field is required'),
+    q6: Yup.string().required('Field is required'),
+    q7: Yup.string().required('Field is required'),
+    q8: Yup.string().required('Field is required'),
+    q9: Yup.string().required('Field is required'),
+    q10: Yup.string().required('Field is required'),
+    q11: Yup.string().required('Field is required'),
+    q12: Yup.string().required('Field is required'),
+    q13: Yup.string().required('Field is required'),
+    q14: Yup.string().required('Field is required')
   }),
   handleSubmit: async (values, { resetForm, setErrors, setSubmitting }) => {
     console.log('asdfasdf', values);
