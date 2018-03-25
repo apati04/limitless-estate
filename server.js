@@ -26,8 +26,9 @@ app.post('/api/sendmail', (req, res) => {
   };
   const mailOptions = {
     from: sender,
-    to: 'apax714@gmail.com',
-    subject: `contactform- ${firstname}`,
+    to: 'kmitchell@limitless-estates.com',
+    cc: 'lpatipaksiri@limitless-estates.com',
+    subject: `Contact Form- ${firstname}`,
     html: `
       <html>
       <head>
