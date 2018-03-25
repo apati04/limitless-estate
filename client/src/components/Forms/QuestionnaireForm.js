@@ -144,7 +144,7 @@ class QuestionnaireForm extends Component {
               name="q1"
             />
           </div>
-          <div className="form-group">
+          <div className="form-group mt-4">
             <label className="col-form-label-lg" htmlFor="q2">
               What is the biggest hurdle you are trying to overcome by investing
               in Real Estate?
@@ -159,7 +159,7 @@ class QuestionnaireForm extends Component {
               name="q2"
             />
           </div>
-          <div className="form-group">
+          <div className="form-group mt-4">
             <label className="col-form-label-lg" htmlFor="q3">
               Do you want to invest in multifamily, value-add projects?
             </label>
@@ -167,7 +167,7 @@ class QuestionnaireForm extends Component {
 
             <Field className="form-control-lg p-1" name="q3" type="text" />
           </div>
-          <div className="form-group">
+          <div className="form-group mt-4">
             <label className="col-form-label-lg" htmlFor="q4">
               What are your return expectations?
             </label>
@@ -192,7 +192,7 @@ class QuestionnaireForm extends Component {
               />
             </div>
           </div>
-          <div className="form-group">
+          <div className="form-group mt-4">
             <label className="col-form-label-lg" htmlFor="q5">
               What is your investment minimum and maximum hold time?
             </label>
@@ -421,20 +421,22 @@ class QuestionnaireForm extends Component {
 
             <Field
               className="form-control-lg mt-0"
-              type="textarea"
+              type="text"
+              style={{ height: 4 + 'em' }}
+              component="textarea"
               id="q13"
               name="q13"
             />
           </div>
+          <div className="form-group mt-4">
+            <label className="col-form-label-lg m-0" htmlFor="q14">
+              Is there anything else we should know about you and your
+              investment goals?
+            </label>
 
-          <label className="col-form-label-lg m-0" htmlFor="q14">
-            Is there anything else we should know about you and your investment
-            goals?
-          </label>
-          <div className="pt-0 col-md-12">
             <Field
-              className="p-1 form-control-lg"
-              style={{ height: 8 + 'em' }}
+              className="form-control-lg"
+              style={{ height: 4 + 'em' }}
               type="text"
               component="textarea"
               id="q14"
