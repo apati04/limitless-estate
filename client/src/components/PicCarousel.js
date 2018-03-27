@@ -67,60 +67,65 @@ class PicCarousel extends Component {
     );
 
     return (
-      <Carousel
-        activeItem={this.state.activeItem}
-        className="z-depth-1"
-        next={() => {
-          this.next;
-        }}
-      >
-        <CarouselInner>
-          <CarouselItem itemId="1">
-            <View style={{ opacity: 0.9 }} className="hm-black-strong">
-              <img
-                className="w-100 img-fluid"
-                src="https://i.imgur.com/WjS34vz.jpg?1"
-                alt="Second Slide"
-              />
-              <div className="container">{caption}</div>
-            </View>
-          </CarouselItem>
-          <CarouselItem itemId="2">
-            <View style={{ opacity: 0.9 }} className="hm-black-strong">
-              <img
-                className="w-100 img-fluid"
-                src="https://i.imgur.com/ZdmIZpe.jpg?2"
-                alt="First Slide"
-              />
-              <div className="container"> {caption}</div>
-            </View>
-          </CarouselItem>
-          <CarouselItem itemId="3">
-            <View style={{ opacity: 0.9 }} className="hm-black-strong">
-              <img
-                className="w-100 img-fluid"
-                src="https://i.imgur.com/gCWlQRW.jpg?2"
-                alt="Third Slide"
-              />
-              <div className="container"> {caption}</div>
-            </View>
-          </CarouselItem>
-        </CarouselInner>
-        <CarouselControl
-          direction="prev"
-          role="button"
-          onClick={() => {
-            this.prev();
+      <section>
+        <Carousel
+          activeItem={this.state.activeItem}
+          className="d-none d-md-block z-depth-1"
+          next={() => {
+            this.next;
           }}
-        />
-        <CarouselControl
-          direction="next"
-          role="button"
-          onClick={() => {
-            this.next();
-          }}
-        />
-      </Carousel>
+        >
+          <CarouselInner>
+            <CarouselItem itemId="1">
+              <View style={{ opacity: 0.9 }} className="hm-black-strong">
+                <img
+                  className="w-100 img-fluid"
+                  src="https://i.imgur.com/WjS34vz.jpg?1"
+                  alt="Second Slide"
+                />
+                <div className="container">{caption}</div>
+              </View>
+            </CarouselItem>
+            <CarouselItem itemId="2">
+              <View style={{ opacity: 0.9 }} className="hm-black-strong">
+                <img
+                  className="w-100 img-fluid"
+                  height="720px"
+                  src="https://i.imgur.com/BI90AZ5.jpg?1"
+                  alt="First Slide"
+                />
+                <div className="container"> {caption}</div>
+              </View>
+            </CarouselItem>
+            <CarouselItem itemId="3">
+              <View style={{ opacity: 0.9 }} className="hm-black-strong">
+                <img
+                  height="720px"
+                  className="w-100 img-fluid"
+                  src="https://i.imgur.com/gCWlQRW.jpg?2"
+                  alt="Third Slide"
+                />
+                <div className="container"> {caption}</div>
+              </View>
+            </CarouselItem>
+          </CarouselInner>
+          <CarouselControl
+            direction="prev"
+            role="button"
+            onClick={() => {
+              this.prev();
+            }}
+          />
+          <CarouselControl
+            direction="next"
+            role="button"
+            onClick={() => {
+              this.next();
+            }}
+          />
+        </Carousel>
+        <div />
+      </section>
     );
   }
 }

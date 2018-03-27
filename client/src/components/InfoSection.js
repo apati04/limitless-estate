@@ -20,7 +20,7 @@ const InfoSection = () => {
         <div className="col-lg-4">
           <img
             src="https://i.imgur.com/vUNgWTJ.jpg"
-            className="wow fadeInup d-none d-lg-block img-fluid w-100"
+            className="d-none d-lg-block img-fluid w-100"
             alt=""
           />
           <div style={{ visibility: 'hidden' }} className="d-none d-lg-block">
