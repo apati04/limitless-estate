@@ -34,31 +34,33 @@ class PicCarousel extends Component {
   };
   render() {
     const caption = (
-      <Mask className="d-flex align-items-center">
-        <div className="row d-flex flex-column flex-wrap justify-content-center align-items-center">
-          <div className="col-md-8">
-            <h3
-              style={{ lineHeight: 1.4 }}
-              className="h2-responsive carousel-text text-white text-center"
-            >
-              <strong>Our vision</strong> at Limitless Estates is to provide
-              A-class living to lower income housing by putting our residents
-              first and instilling a sense of community while inspiring others
-              to do the same.
-            </h3>
-          </div>
-          <div className="col-md-8 mt-2">
-            <h3
-              style={{ lineHeight: 1.4 }}
-              className="h2-responsive carousel-text text-white text-center"
-            >
-              <strong>Our mission</strong> is to positively impact the lives of
-              the people in our local neighborhoods through{' '}
-              <NavLink to="/resources/impactinvesting">
-                impact investing
-              </NavLink>{' '}
-              while achieving double digit returns for our investors.
-            </h3>
+      <Mask className="d-flex justify-content-between align-items-center">
+        <div className="container">
+          <div className="row d-flex flex-column flex-wrap justify-content-center align-items-center">
+            <div className="col-md-10">
+              <h3
+                style={{ lineHeight: 1.5 }}
+                className="h2-responsive carousel-text text-white text-justify"
+              >
+                <strong>Our vision</strong> at Limitless Estates is to provide
+                A-class living to lower income housing by putting our residents
+                first and instilling a sense of community while inspiring others
+                to do the same.
+              </h3>
+            </div>
+            <div className="col-md-10 mt-2">
+              <h3
+                style={{ lineHeight: 1.5 }}
+                className="h2-responsive carousel-text text-white text-justify"
+              >
+                <strong>Our mission</strong> is to positively impact the lives
+                of the people in our local neighborhoods through{' '}
+                <NavLink to="/resources/impactinvesting">
+                  impact investing
+                </NavLink>{' '}
+                while achieving double digit returns for our investors.
+              </h3>
+            </div>
           </div>
         </div>
       </Mask>
@@ -74,9 +76,9 @@ class PicCarousel extends Component {
       >
         <CarouselInner>
           <CarouselItem itemId="1">
-            <View style={{ opacity: 0.88 }} className="hm-black-strong">
+            <View style={{ opacity: 0.9 }} className="hm-black-strong">
               <img
-                className="w-100 img-fluid d-block"
+                className="w-100 img-fluid"
                 src="https://i.imgur.com/WjS34vz.jpg?1"
                 alt="Second Slide"
               />
@@ -84,23 +86,23 @@ class PicCarousel extends Component {
             </View>
           </CarouselItem>
           <CarouselItem itemId="2">
-            <View style={{ opacity: 0.88 }} className="hm-black-strong">
+            <View style={{ opacity: 0.9 }} className="hm-black-strong">
               <img
-                className="w-100 h-100 img-fluid d-block"
+                className="w-100 img-fluid"
                 src="https://i.imgur.com/ZdmIZpe.jpg?2"
                 alt="First Slide"
               />
-              {caption}
+              <div className="container"> {caption}</div>
             </View>
           </CarouselItem>
           <CarouselItem itemId="3">
-            <View style={{ opacity: 0.88 }} className="hm-black-strong">
+            <View style={{ opacity: 0.9 }} className="hm-black-strong">
               <img
                 className="w-100 img-fluid"
                 src="https://i.imgur.com/gCWlQRW.jpg?2"
                 alt="Third Slide"
               />
-              {caption}
+              <div className="container"> {caption}</div>
             </View>
           </CarouselItem>
         </CarouselInner>
