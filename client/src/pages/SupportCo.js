@@ -19,7 +19,7 @@ export default class SupportCo extends Component {
   renderInfo(company) {
     const { name, phone, address, email, website, misc, logo } = company;
     return (
-      <div className="col-md-6">
+      <div className="mb-4 col-md-6">
         <Card className="wow fadeIn h-100 w-100" narrow>
           <a target="_blank" href={website}>
             <CardImage
@@ -30,7 +30,7 @@ export default class SupportCo extends Component {
             />
           </a>
 
-          <CardBody className="p-5">
+          <CardBody>
             <div className="d-flex flex-column text-left justify-content-center align-items-center">
               <CardTitle className="m-2 col-md-12 h2">{name}</CardTitle>
               {[
@@ -116,18 +116,20 @@ export default class SupportCo extends Component {
   render() {
     const { name } = nuView;
     return (
-      <section className="p-5">
-        <header className="text-center">
-          <h1 className="display-4">Did you know...</h1>
-          <h2>You can invest with your 401k/IRA?</h2>
-          <p className="lead">Find out more below</p>
-          <Fa
-            className="align-bottom"
-            style={{ fontSize: 2 + 'em' }}
-            icon="chevron-down"
-          />
-        </header>
-        <div className="mt-2 p-4 container mb-5">
+      <section className="container-fluid p-4">
+        <div className="d-flex flex-column justify-content-center align-items-center">
+          <header className="text-center">
+            <h1 className="h1-responsive">Did you know...</h1>
+            <h2 className="h2-responsive">
+              You can invest with your 401k/IRA?
+            </h2>
+            <p className="lead">Find out more below</p>
+            <Fa
+              className="align-bottom"
+              style={{ fontSize: 2 + 'em' }}
+              icon="chevron-down"
+            />
+          </header>
           <div className="row">
             {this.renderInfo(nuView)}
             {this.renderInfo(uDirect)}

@@ -43,10 +43,22 @@ class Navigation extends Component {
   render() {
     console.log('sidenavnav ', SideNavNav);
     return (
-      <Navbar dark expand="md" fixed="top" scrolling>
+      <Navbar
+        dark
+        color="stylish"
+        expand="md"
+        fixed="top"
+        style={{ position: 'sticky', borderRadius: 0 }}
+        scrolling
+      >
         <Container>
           <NavbarBrand to="/">
-            <strong>Limitless-Estates</strong>
+            <img
+              height="30"
+              src="https://i.imgur.com/6X1IDYi.png"
+              className="d-inline-block align-top"
+              alt=""
+            />
           </NavbarBrand>
           {!this.state.isWideEnough && (
             <NavbarToggler onClick={this.onClick.bind(this)} />
