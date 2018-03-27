@@ -14,17 +14,25 @@ const InfoSection = () => {
     <section
       style={{ height: 50 + 'em' }}
       id="info"
-      className="rgba-white-slight d-flex container align-items-center"
+      className="rgba-white-slight container d-flex justify-content-between align-items-center"
     >
-      <div className="row w-100 justify-content-around">
-        <div className="col">
+      <div className="row d-flex justify-content-end align-items-end">
+        <div className="col-lg-4">
           <img
             src="https://i.imgur.com/vUNgWTJ.jpg"
-            className="d-none d-lg-block img-fluid"
+            className="wow fadeInup d-none d-lg-block img-fluid w-100"
             alt=""
           />
+          <div style={{ visibility: 'hidden' }} className="d-none d-lg-block">
+            <button
+              size="lg"
+              className="d-none d-lg-block btn btn-block btn-outline-danger mt-4"
+            >
+              Learn More
+            </button>
+          </div>
         </div>
-        <div className="col">
+        <div className="col-lg-4 col-md-6 align-bottom w-100 h-100">
           <ListGroup>
             <ListGroupItem className="lead">
               More Control Over Returns
@@ -35,7 +43,15 @@ const InfoSection = () => {
             </ListGroupItem>
             <ListGroupItem className="lead">Tax Benefits</ListGroupItem>
             <ListGroupItem className="lead">Leveraging Debt</ListGroupItem>
-
+          </ListGroup>
+          <div style={{ visibility: 'hidden' }}>
+            <button size="lg" className="btn btn-block btn-outline-danger mt-4">
+              Learn More
+            </button>
+          </div>
+        </div>
+        <div className="col-lg-4 col-md-6 align-bottom w-100 h-100">
+          <ListGroup>
             <ListGroupItem className="lead">
               Inflation Induced Debt Destruction
             </ListGroupItem>
@@ -52,14 +68,13 @@ const InfoSection = () => {
               National Housing Shortage of 3.9 million units
             </ListGroupItem>
           </ListGroup>
-
-          <div className="text-center">
+          <div>
             <Link to="/resources">
               <button
                 size="lg"
-                className="align-self-bottom btn btn-outline-danger mt-4"
+                className="btn btn-block btn-outline-danger mt-4"
               >
-                Learn More >>
+                Learn More
               </button>
             </Link>
           </div>

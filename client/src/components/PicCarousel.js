@@ -15,7 +15,6 @@ class PicCarousel extends Component {
     activeItem: 1,
     maxLength: 3
   };
-
   next = () => {
     const nextItem = this.state.activeItem + 1;
     if (nextItem > this.state.maxLength) {
@@ -33,34 +32,33 @@ class PicCarousel extends Component {
       this.setState({ activeItem: prevItem });
     }
   };
-
-  goToIndex = item => {
-    if (this.state.activeItem !== item) {
-      this.setState({
-        activeItem: item
-      });
-    }
-  };
-
   render() {
     const caption = (
-      <Mask>
-        <div className="container d-flex justify-content-center flex-center align-items-center flex-column text-white text-center">
-          <h2 className="p-2 display-3 border-bottom">Vision Mission Values</h2>
-          <div className="p-5">
-            <h2>
-              Our vision at Limitless Estates is to provide A class living to
-              lower income housing by putting our residents first and instilling
-              a sense of community while inspiring others to do the same.
-            </h2>
-            <h2 className="mt-2">
-              Our mission is to positively impact the lives of the people in our
-              local neighborhoods through{' '}
+      <Mask className="d-flex align-items-center">
+        <div className="row d-flex flex-column flex-wrap justify-content-center align-items-center">
+          <div className="col-md-8">
+            <h3
+              style={{ lineHeight: 1.4 }}
+              className="h2-responsive carousel-text text-white text-center"
+            >
+              <strong>Our vision</strong> at Limitless Estates is to provide
+              A-class living to lower income housing by putting our residents
+              first and instilling a sense of community while inspiring others
+              to do the same.
+            </h3>
+          </div>
+          <div className="col-md-8 mt-2">
+            <h3
+              style={{ lineHeight: 1.4 }}
+              className="h2-responsive carousel-text text-white text-center"
+            >
+              <strong>Our mission</strong> is to positively impact the lives of
+              the people in our local neighborhoods through{' '}
               <NavLink to="/resources/impactinvesting">
                 impact investing
               </NavLink>{' '}
               while achieving double digit returns for our investors.
-            </h2>
+            </h3>
           </div>
         </div>
       </Mask>
@@ -69,15 +67,16 @@ class PicCarousel extends Component {
     return (
       <Carousel
         activeItem={this.state.activeItem}
-        next={this.next}
         className="z-depth-1"
+        next={() => {
+          this.next;
+        }}
       >
         <CarouselInner>
           <CarouselItem itemId="1">
-            <View className="hm-black-light">
+            <View style={{ opacity: 0.88 }} className="hm-black-strong">
               <img
-                style={{ opacity: '0.9' }}
-                className="w-100 d-block"
+                className="w-100 img-fluid d-block"
                 src="https://i.imgur.com/WjS34vz.jpg?1"
                 alt="Second Slide"
               />
@@ -85,10 +84,9 @@ class PicCarousel extends Component {
             </View>
           </CarouselItem>
           <CarouselItem itemId="2">
-            <View className="hm-black-light">
+            <View style={{ opacity: 0.88 }} className="hm-black-strong">
               <img
-                style={{ opacity: '0.9' }}
-                className="w-100 d-block"
+                className="w-100 h-100 img-fluid d-block"
                 src="https://i.imgur.com/ZdmIZpe.jpg?2"
                 alt="First Slide"
               />
@@ -96,9 +94,8 @@ class PicCarousel extends Component {
             </View>
           </CarouselItem>
           <CarouselItem itemId="3">
-            <View>
+            <View style={{ opacity: 0.88 }} className="hm-black-strong">
               <img
-                style={{ opacity: '0.9' }}
                 className="w-100 img-fluid"
                 src="https://i.imgur.com/gCWlQRW.jpg?2"
                 alt="Third Slide"

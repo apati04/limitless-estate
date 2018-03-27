@@ -1,5 +1,5 @@
-import React from "react";
-
+import React from 'react';
+import { Fa } from 'mdbreact';
 // const styles = {
 //   pageHeader: {
 //     height,
@@ -18,26 +18,22 @@ import React from "react";
 // };
 const PageHeader = ({
   title,
-  bgPos = "0px -360px",
-  bgRepeat = "repeat",
-  description
+  bgPos = '0px -360px',
+  bgRepeat = 'repeat',
+  description,
+  subtitle
 }) => {
   return (
     <header id="pageHeader">
-      <div
-        style={{ top: 56, minHeight: "252px" }}
-        className="border-bottom border-secondary jumbotron-fluid stylish-color-dark text-white"
-      >
-        <div className="container">
-          <div className="row">
-            <div className="col-12 m-auto text-center">
-              <h1 style={{ marginTop: "2em" }} className="display-4">
-                {title}
-              </h1>
-              <p>{description}</p>
-            </div>
-          </div>
-        </div>
+      <div className="d-flex p-4 flex-column justify-content-between m-auto text-center border-bottom border-secondary jumbotron-fluid stylish-color-dark text-white">
+        <h1 className="display-4">{title}</h1>
+        <h2>{subtitle}</h2>
+        <p className="lead">{description}</p>
+        <Fa
+          className="align-bottom"
+          style={{ fontSize: 2 + 'em' }}
+          icon="chevron-down"
+        />
       </div>
     </header>
   );

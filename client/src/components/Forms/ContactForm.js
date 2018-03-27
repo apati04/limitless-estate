@@ -83,7 +83,7 @@ class ContactForm extends Component {
               )}
             <div className="form-group">
               <Field
-                className="form-control"
+                className="form-control p-0"
                 component="textarea"
                 type="text"
                 name="message"

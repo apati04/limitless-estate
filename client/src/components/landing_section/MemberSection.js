@@ -12,7 +12,7 @@ class MemberSection extends Component {
       return (
         <MemberCard key={person.name} {...person}>
           {person.type === 'Team' ? (
-            <div className="mt-2">
+            <div className="col-md-12 mt-2">
               <img
                 style={{ border: '2px solid lightgrey' }}
                 className="mr-2 mb-1 rounded-circle"
@@ -33,30 +33,28 @@ class MemberSection extends Component {
               </a>
             </div>
           ) : (
-            <div className="d-flex container justify-content-start align-items-center mt-2">
-              <div className="align-self-center">
-                <img
-                  style={{ border: '2px solid lightgrey' }}
-                  className="mr-2 mb-1 rounded-circle"
-                  src={person.photo.url}
-                  alt="Generic placeholder"
-                  width={person.photo.size}
-                  height={person.photo.size}
-                />
-                <div className="d-flex justify-content-center">
-                  <h3 className="align-self-center">{person.name}</h3>
-                  <Popover
-                    component="button"
-                    placement="bottom"
-                    popoverBody={<Fa icon="info" />}
-                    className="h-20 w-20 align-self-end btn blue btn-floating btm-sm"
-                  >
-                    <PopoverHeader className="primary-color-dark text-center">
-                      {person.name}, {person.type}
-                    </PopoverHeader>
-                    <PopoverBody>{person.content}</PopoverBody>
-                  </Popover>
-                </div>
+            <div className="col-md-12 mt-2">
+              <img
+                style={{ border: '2px solid lightgrey' }}
+                className="mr-2 mb-1 rounded-circle"
+                src={person.photo.url}
+                alt="Generic placeholder"
+                width={person.photo.size}
+                height={person.photo.size}
+              />
+              <div className="d-flex justify-content-center">
+                <h3 className="align-self-center">{person.name}</h3>
+                <Popover
+                  component="button"
+                  placement="left"
+                  popoverBody={<Fa icon="info" />}
+                  className="h-20 w-20 align-self-end btn blue btn-floating btm-sm"
+                >
+                  <PopoverHeader className="primary-color-dark text-center">
+                    {person.name}, {person.type}
+                  </PopoverHeader>
+                  <PopoverBody>{person.content}</PopoverBody>
+                </Popover>
               </div>
             </div>
           )}
@@ -67,24 +65,24 @@ class MemberSection extends Component {
   render() {
     return (
       <section className="py-3 pt-4 text-center text-white stylish-color">
-        <div style={{ color: '#f7f7f7' }} className="container">
+        <div style={{ color: '#f7f7f7' }} className="p-5 container">
           <h1 className="display-4 font-weight-500 font-italic ">
             Meet the Team
           </h1>
           <hr />
-          <div className="container pt-4 d-flex justify-content-between flex-wrap">
+          <div className="row d-flex justify-content-around align-items-baseline flex-wrap">
             {this.renderCards(Team)}
           </div>
         </div>
-        <div style={{ color: '#f7f7f7' }} className="mt-4 container">
+        <div style={{ color: '#f7f7f7' }} className="mt-2 mb-5 p-5 container">
           <h1 className="display-4 font-weight-500 font-italic ">
             Our Advisors
           </h1>
           <hr />
-          <div className="container pt-4 d-flex justify-content-between">
+          <div className="container d-flex justify-content-around flex-wrap">
             {this.renderCards(Advisors)}
           </div>
-          <div className="container pt-4 d-flex justify-content-between">
+          <div className="container d-flex justify-content-around flex-wrap">
             {this.renderCards(Advisors2)}
           </div>
         </div>
