@@ -38,71 +38,57 @@ class QuestionnaireForm extends Component {
     } = this.props;
     const { riskTolerance } = this.state;
     return (
-      <Form className="p-4 container">
-        <div className="form-group row">
-          <div className="col">
-            <label className="display-4 mb-2 col-form-label-lg">
-              Basic Information
-            </label>
-          </div>
-        </div>
+      <Form className="p-5 d-flex justify-content-around flex-column">
         <div className="row">
-          <div className="col form-group">
-            <label htmlFor="fullname" className="col-form-label-lg">
+          <div className="col-md-6 form-group">
+            <label htmlFor="fullname" className="col-form-label">
               Full Name
             </label>
-            {this.handleErrors('fullname')}
             <Field
-              className="form-control-lg mt-1 p-0"
+              className="form-control mt-1 p-0"
               type="text"
               name="fullname"
             />
+            {this.handleErrors('fullname')}
           </div>
-          <div className="col form-group">
-            <label htmlFor="email" className="col-form-label-lg">
+          <div className="col-md-6 form-group">
+            <label htmlFor="email" className="col-form-label">
               Email Address
             </label>
-            {this.handleErrors('email')}
             <Field
-              className="form-control-lg mt-1 p-0"
+              className="form-control mt-1 p-0"
               name="email"
               type="email"
             />
+            {this.handleErrors('email')}
           </div>
         </div>
         <div className="row">
-          <div className="col form-group">
-            <label htmlFor="company" className="col-form-label-lg">
+          <div className="col-md-6 form-group">
+            <label htmlFor="company" className="col-form-label">
               Company Name
             </label>
-            {this.handleErrors('company')}
             <Field
-              className="form-control-lg mt-1 p-0"
+              className="form-control mt-1 p-0"
               type="text"
               name="company"
             />
+            {this.handleErrors('company')}
           </div>
-          <div className="col form-group">
-            {this.handleErrors('tel')}
-            <label htmlFor="tel" className="col-form-label-lg">
+          <div className="col-md-6 form-group">
+            <label htmlFor="tel" className="col-form-label">
               Phone Number
             </label>
-            <Field
-              className="form-control-lg mt-1 p-0"
-              name="tel"
-              type="text"
-            />
+            <Field className="form-control mt-1 p-0" name="tel" type="text" />
+            {this.handleErrors('tel')}
           </div>
         </div>
         <div className="row">
-          <div className="col-6">
-            <label className="col-form-label-lg">
-              Preferred form of contact
-            </label>
-            {this.handleErrors('contactPref')}
+          <div className="col-md-8">
+            <label className="col-form-label">Preferred form of contact</label>
             <div className="form-group">
               <Field
-                className="form-control-lg select-wrapper select-dropdown d-block"
+                className="form-control select-wrapper select-dropdown d-block"
                 name="contactPref"
                 component="select"
                 value={values.contactPref}
@@ -119,109 +105,104 @@ class QuestionnaireForm extends Component {
                 <option value="phone" label="Phone call" />
                 <option value="text" label="Text Message" />
               </Field>
+              {this.handleErrors('contactPref')}
             </div>
           </div>
         </div>
-        <div className="mb-4 form-group row">
-          <div className="col">
-            <label className="display-4 mb-2 col-form-label-lg">
-              Investor Information
-            </label>
-          </div>
-        </div>
-        <div className="d-flex flex-column justify-content-between align-items-start">
+        <div className="d-flex flex-column justify-content-between">
           <div className="form-group">
-            <label className="col-form-label-lg" htmlFor="q1">
+            <label className="col-form-label" htmlFor="q1">
               Why are you interested in investing in Real Estate?
             </label>
-
-            {this.handleErrors('q1')}
             <Field
-              className="form-control-lg m-0 p-1"
+              className="form-control m-0 p-1"
               type="text"
-              component="textarea"
               id="q1"
               name="q1"
             />
+            {this.handleErrors('q1')}
           </div>
-          <div className="form-group">
-            <label className="col-form-label-lg" htmlFor="q2">
+          <div className="form-group mt-4">
+            <label className="col-form-label" htmlFor="q2">
               What is the biggest hurdle you are trying to overcome by investing
               in Real Estate?
             </label>
 
+            <Field className="p-1 form-control" type="text" name="q2" />
             {this.handleErrors('q2')}
-
-            <Field
-              className="p-1 form-control-lg"
-              type="text"
-              component="textarea"
-              name="q2"
-            />
           </div>
-          <div className="form-group">
-            <label className="col-form-label-lg" htmlFor="q3">
+          <div className="form-group mt-4">
+            <label className="col-form-label" htmlFor="q3">
               Do you want to invest in multifamily, value-add projects?
             </label>
-            {this.handleErrors('q3')}
 
-            <Field className="form-control-lg p-1" name="q3" type="text" />
+            <Field className="form-control p-1" name="q3" type="text" />
+            {this.handleErrors('q3')}
           </div>
-          <div className="form-group">
-            <label className="col-form-label-lg" htmlFor="q4">
+          <div className="form-group mt-4">
+            <label className="col-form-label" htmlFor="q4">
               What are your return expectations?
             </label>
-            <div>
+
+            <div className="d-flex flex-column">
               <Field
-                name="q4AAR"
-                className="form-control-lg pl-0"
+                name="q4ARP"
+                className="form-control pl-0"
                 placeholder="Annual Return Percentage (%)"
                 type="text"
               />
+
+              {this.handleErrors('q4ARP')}
               <Field
-                className="form-control-lg pl-0"
+                className="form-control pl-0"
                 name="q4IRR"
                 type="text"
                 placeholder="Internal rate of return (IRR) (%)"
               />
+              {this.handleErrors('q4IRR')}
+
               <Field
-                className="form-control-lg pl-0"
+                className="form-control pl-0"
                 name="q4CoC"
                 type="text"
                 placeholder="Cash On Cash Return ($)"
               />
+              {this.handleErrors('q4CoC')}
             </div>
           </div>
-          <div className="form-group">
-            <label className="col-form-label-lg" htmlFor="q5">
+          <div className="form-group mt-4">
+            <label className="col-form-label" htmlFor="q5">
               What is your investment minimum and maximum hold time?
             </label>
 
-            <div>
+            <div className="d-flex flex-column justify-content-between">
               <Field
-                className="form-control-lg pl-0"
+                className="form-control pl-0"
                 name="q5a"
                 placeholder="Investment Minimum"
                 type="text"
               />
+              {this.handleErrors('q5a')}
 
               <Field
-                className="form-control-lg pl-0"
+                className="form-control pl-0"
                 name="q5b"
                 placeholder="Maximum Hold Time"
                 type="text"
               />
+              {this.handleErrors('q5b')}
             </div>
           </div>
           <div className="form-group mt-4">
-            <label className="col-form-label-lg m-0" htmlFor="q6">
+            <label className="col-form-label" htmlFor="q6">
               What is the minimum dollar amount you are willing to invest?
             </label>
 
-            <Field name="q6" type="text" className="form-control-lg pl-0" />
+            <Field name="q6" type="text" className="form-control pl-0" />
+            {this.handleErrors('q6')}
           </div>
           <div className="form-group mt-4">
-            <label className="col-form-label-lg" htmlFor="q7">
+            <label className="col-form-label" htmlFor="q7">
               Are you an accredited investor?
             </label>
             <small className="form-text text-muted">
@@ -229,11 +210,12 @@ class QuestionnaireForm extends Component {
               so in this current year or have a net worth of $1M excluding your
               primary residence)
             </small>
-
+            {this.handleErrors('q7')}
             <Field
               className="p-0"
-              render={({ ...args }) => (
+              render={({ field, form, ...args }) => (
                 <Input
+                  {...field}
                   {...args}
                   gap
                   className="p-0"
@@ -243,17 +225,17 @@ class QuestionnaireForm extends Component {
                   checked={values.accreditedInvestor === 'yes'}
                   label="Yes"
                   type="radio"
-                  id="radio-q7a"
-                  name="radio-q7a"
+                  id="q7a"
                   value="yes"
                   onChange={handleChange}
                 />
               )}
-              name="radio-q7a"
+              name="q7"
             />
             <Field
-              render={({ ...args }) => (
+              render={({ field, form, ...args }) => (
                 <Input
+                  {...field}
                   {...args}
                   gap
                   onClick={() => {
@@ -262,23 +244,23 @@ class QuestionnaireForm extends Component {
                   checked={values.accreditedInvestor === 'no'}
                   label="No"
                   type="radio"
-                  id="radio-q7b"
-                  name="radio-q7b"
+                  id="q7b"
                   value="no"
                   onChange={handleChange}
                 />
               )}
-              name="radio-q7b"
+              name="q7"
             />
 
-            <label className="col-form-label-lg" htmlFor="q8">
+            <label className="col-form-label" htmlFor="q8">
               Can you show proof of funds ?
             </label>
-
+            {this.handleErrors('q8')}
             <Field
-              render={({ ...args }) => (
+              render={({ field, form, ...args }) => (
                 <Input
                   {...args}
+                  {...field}
                   gap
                   onClick={() => {
                     values.proofOfFunds = 'yes';
@@ -288,17 +270,17 @@ class QuestionnaireForm extends Component {
                   label="Yes"
                   type="radio"
                   id="radio-q8a"
-                  name="radio-q8a"
                   value="yes"
                   onChange={handleChange}
                 />
               )}
-              name="radio-q8a"
+              name="q8"
             />
             <Field
-              render={({ ...args }) => (
+              render={({ field, form, ...args }) => (
                 <Input
                   {...args}
+                  {...field}
                   gap
                   onClick={() => {
                     values.proofOfFunds = 'no';
@@ -308,21 +290,22 @@ class QuestionnaireForm extends Component {
                   label="No"
                   type="radio"
                   id="radio-q8b"
-                  name="radio-q8b"
                   value="no"
                   onChange={handleChange}
                 />
               )}
-              name="radio-q8b"
+              name="q8"
             />
 
-            <label className="col-form-label-lg" htmlFor="q9">
+            <label className="col-form-label" htmlFor="q9">
               How would you rate your risk tolerance?
             </label>
+            {this.handleErrors('q9')}
             <div className="d-flex justify-content-start">
               <Field
-                render={({ ...args }) => (
+                render={({ field, form, ...args }) => (
                   <Input
+                    {...field}
                     {...args}
                     gap
                     className="p-0"
@@ -333,16 +316,16 @@ class QuestionnaireForm extends Component {
                     label="Low"
                     type="radio"
                     id="radio-q9a"
-                    name="radio-q9a"
                     value="low"
                     onChange={handleChange}
                   />
                 )}
-                name="radio-q9a"
+                name="q9"
               />
               <Field
-                render={({ ...args }) => (
+                render={({ field, form, ...args }) => (
                   <Input
+                    {...field}
                     {...args}
                     gap
                     className="p-0"
@@ -353,16 +336,16 @@ class QuestionnaireForm extends Component {
                     label="Medium"
                     type="radio"
                     id="radio-q9b"
-                    name="radio-q9b"
                     value="medium"
                     onChange={handleChange}
                   />
                 )}
-                name="radio-q9b"
+                name="q9"
               />
               <Field
-                render={({ ...args }) => (
+                render={({ field, form, ...args }) => (
                   <Input
+                    {...field}
                     {...args}
                     gap
                     className="p-0"
@@ -373,34 +356,34 @@ class QuestionnaireForm extends Component {
                     label="High"
                     type="radio"
                     id="radio-q9c"
-                    name="radio-q9c"
                     value="High"
                     onChange={handleChange}
                   />
                 )}
-                name="radio-q9c"
+                name="q9"
               />
             </div>
           </div>
 
           <div className="form-group mt-4">
-            <label className="col-form-label-lg" htmlFor="q10">
+            <label className="col-form-label" htmlFor="q10">
               If you are out of the country, have you invested in the US real
               estate market in the past?
             </label>
-
-            <Field className="form-control-lg pl-0" type="text" name="q10" />
+            <Field className="form-control pl-0" type="text" name="q10" />
+            {this.handleErrors('q10')}
           </div>
           <div className="form-group mt-4">
-            <label htmlFor="q11" className="col-form-label-lg">
+            <label htmlFor="q11" className="col-form-label">
               Have you invested as a limited partner (LP) on a syndication deal
               in the past?
             </label>
 
-            <Field className="form-control-lg p-0" type="text" name="q11" />
+            <Field className="form-control p-0" type="text" name="q11" />
+            {this.handleErrors('q11')}
           </div>
           <div className="form-group mt-4">
-            <label htmlFor="q12" className="col-form-label-lg">
+            <label htmlFor="q12" className="col-form-label">
               Are you comfortable investing with other LPs or would you require
               to be the only LP in this investment?
             </label>
@@ -411,44 +394,49 @@ class QuestionnaireForm extends Component {
               create an alignment of interest to close.)
             </small>
 
-            <Field className="form-control-lg m-2 p-0" type="text" name="q12" />
+            <Field className="form-control m-2 p-0" type="text" name="q12" />
+            {this.handleErrors('q12')}
           </div>
           <div className="form-group mt-4">
-            <label htmlFor="q13" className="col-form-label-lg">
+            <label htmlFor="q13" className="col-form-label m-0">
               In a short paragraph please provide us with your investing
               experience.
             </label>
 
             <Field
-              className="form-control-lg mt-0"
-              type="textarea"
+              className="form-control mt-4"
+              type="text"
+              style={{ height: 4 + 'em' }}
+              component="textarea"
               id="q13"
               name="q13"
             />
+            {this.handleErrors('q13')}
           </div>
+          <div className="d-flex flex-column align-content-center justify-content-center mt-4">
+            <label className="col-form-label m-0" htmlFor="q14">
+              Is there anything else we should know about you and your
+              investment goals?
+            </label>
 
-          <label className="col-form-label-lg m-0" htmlFor="q14">
-            Is there anything else we should know about you and your investment
-            goals?
-          </label>
-          <div className="pt-0 col-md-12">
             <Field
-              className="p-1 form-control-lg"
-              style={{ height: 8 + 'em' }}
+              className="form-control"
+              style={{ height: 4 + 'em' }}
               type="text"
               component="textarea"
               id="q14"
               name="q14"
             />
+            {this.handleErrors('q14')}
           </div>
         </div>
 
-        <div className="text-center">
+        <div className="text-center mt-5">
           <Button
             type="submit"
             disabled={isSubmitting}
             size="lg"
-            rounded
+            className="col-md-4"
             gradient="blue"
           >
             Submit <i className="ml-1 far fa-paper-plane" />
@@ -469,17 +457,67 @@ export default withFormik({
     q1 = '',
     q2 = '',
     q3 = '',
-    q4 = ''
+    q4IRR = '',
+    q4ARP = '',
+    q4CoC = '',
+    q5a = '',
+    q5b = '',
+    q6 = '',
+    q7 = '',
+    q8 = '',
+    q9 = '',
+    q10 = '',
+    q11 = '',
+    q12 = '',
+    q13 = '',
+    q14 = ''
   }) => ({
     fullname,
     email,
     tel,
     company,
-    contactPref
+    contactPref,
+    q1,
+    q2,
+    q3,
+    q4ARP,
+    q4IRR,
+    q4CoC,
+    q5a,
+    q5b,
+    q6,
+    q7,
+    q8,
+    q9,
+    q10,
+    q11,
+    q12,
+    q13,
+    q14
   }),
   validationSchema: Yup.object().shape({
     fullname: Yup.string().required('Field is required'),
-    email: Yup.string().required('Field is required')
+    email: Yup.string().required('Field is required'),
+    tel: Yup.string().required('Field is required'),
+    company: Yup.string().required('Field is required'),
+    contactPref: Yup.string().required('Field is required'),
+    q1: Yup.string().required('Field is required'),
+    q2: Yup.string().required('Field is required'),
+    q3: Yup.string().required('Field is required'),
+    q4ARP: Yup.mixed().required('Field is required'),
+    q4IRR: Yup.mixed().required('Field is required'),
+    q4CoC: Yup.mixed().required('Field is required'),
+    q5a: Yup.string().required('Field is required'),
+    q5b: Yup.string().required('Field is required'),
+    q6: Yup.string().required('Field is required'),
+    q7: Yup.string().required('Field is required'),
+    q8: Yup.string().required('Field is required'),
+    q9: Yup.string().required('Field is required'),
+    q10: Yup.string().required('Field is required'),
+    q11: Yup.string().required('Field is required'),
+    q12: Yup.string().required('Field is required'),
+    q13: Yup.string().required('Field is required'),
+    q14: Yup.string().required('Field is required')
   }),
   handleSubmit: async (values, { resetForm, setErrors, setSubmitting }) => {
     console.log('asdfasdf', values);

@@ -1,11 +1,105 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400');
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,400i,500');
 html {
   height: 100%;
   font-size: 100%;
 }
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 100%;
+}
+/* stylelint-disable selector-list-comma-newline-after */
+
+.blog-header {
+  line-height: 1;
+  border-bottom: 1px solid #e5e5e5;
+  font-size: 1rem;
+}
+
+.blog-header-logo {
+  font-family: 'Raleway', sans-serif, 'Times New Roman', serif;
+  font-size: 2.25rem;
+}
+
+.blog-header-logo:hover {
+  text-decoration: none;
+}
+
+/* h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+} */
+
+.flex-auto {
+  -ms-flex: 0 0 auto;
+  -webkit-box-flex: 0;
+  flex: 0 0 auto;
+}
+
+.h-250 {
+  height: 250px;
+}
+@media (min-width: 768px) {
+  .h-md-250 {
+    height: 250px;
+  }
+}
+
+.border-top {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.05);
+}
+
+/*
+ * Blog name and description
+ */
+.blog-title {
+  margin-bottom: 0;
+  font-size: 2rem;
+  font-weight: 400;
+}
+.blog-description {
+  font-size: 1.1rem;
+  color: #999;
+}
+
+@media (min-width: 40em) {
+  .blog-title {
+    font-size: 3.5rem;
+  }
+}
+
+/* Pagination */
+.blog-pagination {
+  margin-bottom: 4rem;
+}
+.blog-pagination > .btn {
+  border-radius: 2rem;
+}
+
+/*
+ * Blog posts
+ */
+.blog-post {
+  margin-bottom: 4rem;
+}
+.blog-post-title {
+  margin-bottom: 0.25rem;
+  font-size: 2.5rem;
+}
+.blog-post-meta {
+  margin-bottom: 1.25rem;
+  color: #999;
 }
 
 p {
@@ -55,7 +149,9 @@ input[type='radio'] {
   background: url('/img/imageLA.jpg') no-repeat center 26%;
   background-size: cover;
 }
-
+.carousel-text {
+  font-family: 'Raleway', sans-serif;
+}
 /* #myCarousel {
   position: relative;
 } */
@@ -202,6 +298,13 @@ footer {
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) { ... } */
 
+@media only screen and (max-width: 576px) {
+  .carousel-text {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1rem;
+  }
+}
+
 .display-4 {
   font-size: 2.5em;
 }
@@ -222,6 +325,7 @@ a.info-popover:hover {
   }
   body {
     text-align: center;
+    font-size: 100%;
   }
   .icon-title {
     font-size: 1.5rem;

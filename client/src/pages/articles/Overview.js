@@ -1,4 +1,3 @@
-import '../../style/blog.css';
 import React, { Component } from 'react';
 import PageHeader from '../../components/PageHeader';
 import RegisterModal from '../../components/RegisterModal';

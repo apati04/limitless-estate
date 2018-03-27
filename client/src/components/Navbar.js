@@ -18,6 +18,13 @@ import {
   SideNavNav
 } from 'mdbreact';
 
+const styles = {
+  activeNav: {
+    color: 'midnightblue',
+    fontWeight: 'bold'
+  }
+};
+
 class Navigation extends Component {
   state = {
     collapse: false,
@@ -51,7 +58,9 @@ class Navigation extends Component {
                 <NavLink to="/">Home</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink to="/markets">Markets</NavLink>
+                <NavLink activeStyle={styles.activeNav} to="/markets">
+                  Markets
+                </NavLink>
               </NavItem>
               <NavItem>
                 <Dropdown
@@ -84,7 +93,15 @@ class Navigation extends Component {
                 </Dropdown>
               </NavItem>
               <NavItem>
-                <NavLink className="nav-link" to="/info/questionnaire">
+                <NavLink
+                  exact
+                  activeStyle={{
+                    color: 'midnightblue',
+                    fontWeight: 'bold'
+                  }}
+                  className="nav-link"
+                  to="/info/questionnaire"
+                >
                   Make an impact
                 </NavLink>
               </NavItem>

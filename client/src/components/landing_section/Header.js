@@ -1,4 +1,3 @@
-// import '../../style/blog.css';
 import React, { Component } from 'react';
 import { View, Mask, Button } from 'mdbreact';
 import { NavLink } from 'react-router-dom';
@@ -22,7 +21,7 @@ export default class HeaderSection extends Component {
   render() {
     return (
       <View className="hm-stylish-slight">
-        <PicCarousel/>
+        <PicCarousel />
         <Mask className="d-flex full-bg-img flex-center ">
           <div className="d-flex container justify-content-around p-0 text-left white-text wow fadeInUp">
             <div className="text-center">

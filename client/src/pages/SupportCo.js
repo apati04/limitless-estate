@@ -1,5 +1,6 @@
-import React, { Component } from "react";
-import PageHeader from "../components/PageHeader";
+import React, { Component } from 'react';
+import { NavLink } from 'react-router-dom';
+import PageHeader from '../components/PageHeader';
 import {
   Button,
   Card,
@@ -7,85 +8,127 @@ import {
   CardImage,
   CardTitle,
   CardText,
-  Container
-} from "mdbreact";
-import { nuView, uDirect } from "../api/nuView";
-
+  Container,
+  Fa
+} from 'mdbreact';
+import { nuView, uDirect } from '../api/nuView';
+const style = {
+  '.mask': { cursor: 'pointer' }
+};
 export default class SupportCo extends Component {
   renderInfo(company) {
     const { name, phone, address, email, website, misc, logo } = company;
     return (
-      <Card narrow>
-        <a target="_blank" href={website}>
-          <CardImage
-            style={{ cursor: "pointer" }}
-            className="container p-5 img-fluid"
-            src={logo}
-            alt=""
-          />
-        </a>
-        <CardBody className="container m-5">
-          <CardTitle className="h2">{name}</CardTitle>
-          <CardText>
-            {[
-              <div className="d-flex p-0 align-items-center">
-                <i className="material-icons">phone</i>
-                <h3 style={{ fontFamily: "Roboto" }} className="ml-2">
-                  {phone}
-                </h3>
-              </div>,
-              <div className="d-flex align-items-center">
-                <i className="material-icons">email</i>
-                <h3 style={{ fontFamily: "Roboto" }} className="ml-2 align-top">
-                  {email}
-                </h3>
-              </div>,
-              <div className="d-flex align-items-top">
-                <i className="material-icons">location_on</i>
-                <ul className="ml-2 list-unstyled align-top">
-                  <li className="align-items-center">
-                    <h3 style={{ fontFamily: "Roboto" }} className="align-top">
+      <div className="col-md-6">
+        <Card className="wow fadeIn h-100 w-100" narrow>
+          <a target="_blank" href={website}>
+            <CardImage
+              style={{ opacity: '1' }}
+              className="container p-5 img-fluid"
+              src={logo}
+              alt=""
+            />
+          </a>
+
+          <CardBody className="p-5">
+            <div className="d-flex flex-column text-left justify-content-center align-items-center">
+              <CardTitle className="m-2 col-md-12 h2">{name}</CardTitle>
+              {[
+                <span className="m-2 col-md-12">
+                  <h5 className="lead">
+                    <Fa
+                      style={{ color: 'blue' }}
+                      size="lg"
+                      icon="phone"
+                      className="mr-2"
+                    />{' '}
+                    {phone}
+                  </h5>
+                </span>,
+                <span className="m-2 col-md-12">
+                  <h5 className="lead">
+                    <Fa
+                      style={{ color: 'blue' }}
+                      size="lg"
+                      icon="envelope"
+                      className="mr-2"
+                    />
+                    {email}
+                  </h5>
+                </span>,
+
+                <ul className="m-2 col-md-12 list-unstyled">
+                  <li>
+                    <h5 className="lead ml-1">
+                      <Fa
+                        style={{ color: 'blue' }}
+                        size="lg"
+                        icon="location-arrow"
+                        className="mr-2"
+                      />
+
                       {address.street}
-                    </h3>
-                    <h3 style={{ fontFamily: "Roboto", marginTop: "-10px" }}>
+                    </h5>
+                    <h5
+                      className="lead ml-1"
+                      style={{ marginTop: -0.5 + 'em' }}
+                    >
+                      <Fa
+                        style={{ color: 'blue' }}
+                        size="lg"
+                        style={{ visibility: 'hidden' }}
+                        icon="location-arrow"
+                        className="mr-2"
+                      />
                       {address.city}, {address.state} {address.zipcode}
-                    </h3>
+                    </h5>
                   </li>
-                </ul>
-              </div>,
-              <div
-                style={{ marginTop: "-20px" }}
-                className="d-flex align-items-center"
-              >
-                <i className="material-icons">web</i>
-                <h3 style={{ fontFamily: "Roboto" }} className="ml-2 align-top">
-                  {website}
-                </h3>
-              </div>,
-              <div className="mt-4">
-                <a
-                  style={{ textDecoration: "none", color: "white" }}
-                  target="_blank"
-                  href={misc}
-                >
-                  <Button color="indigo" size="lg" className="text-white">
-                    Learn More
-                  </Button>
-                </a>
-              </div>
-            ]}
-          </CardText>
-        </CardBody>
-      </Card>
+                </ul>,
+                <span className="m-2 col-md-12">
+                  <h5 className="lead">
+                    <Fa
+                      style={{ color: 'blue' }}
+                      size="lg"
+                      icon="external-link"
+                      className="mr-2"
+                    />
+                    <NavLink to={website}>{website}</NavLink>
+                  </h5>
+                </span>,
+                <span className="col-md-12">
+                  <a
+                    style={{ textDecoration: 'none', color: 'white' }}
+                    target="_blank"
+                    href={misc}
+                  >
+                    <Button color="indigo" size="lg" className="text-white">
+                      Learn More
+                    </Button>
+                  </a>
+                </span>
+              ]}
+            </div>
+          </CardBody>
+        </Card>
+      </div>
     );
   }
   render() {
     const { name } = nuView;
     return (
-      <section style={{ width: "100hv" }}>
-        <PageHeader title="Invest with your 401k/IRA" subtitle="" />
-        <div className="mt-5 container mb-5">
-          <div className="card-deck d-flex justify-content-between">
+      <section className="p-5">
+        <header className="text-center">
+          <h1 className="display-4">Did you know...</h1>
+          <h2>You can invest with your 401k/IRA?</h2>
+          <p className="lead">Find out more below</p>
+          <Fa
+            className="align-bottom"
+            style={{ fontSize: 2 + 'em' }}
+            icon="chevron-down"
+          />
+        </header>
+        <div className="mt-2 p-4 container mb-5">
+          <div className="row">
             {this.renderInfo(nuView)}
             {this.renderInfo(uDirect)}
           </div>
