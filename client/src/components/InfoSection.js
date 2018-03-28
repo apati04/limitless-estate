@@ -45,7 +45,8 @@ const InfoSection = () => {
             <Link to="/resources">
               <button
                 size="lg"
-                className="btn btn-block btn-outline-danger p-2 mt-4">
+                className="btn btn-block btn-outline-danger p-2 mt-4"
+              >
                 Learn More
               </button>
             </Link>

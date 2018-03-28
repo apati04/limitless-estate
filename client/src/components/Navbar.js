@@ -40,7 +40,7 @@ class Navigation extends Component {
           <NavbarBrand to="/">
             <img
               height="30"
-              src="https://i.imgur.com/6X1IDYi.png"
+              src="https://i.imgur.com/6TpCmWV.png"
               className="d-inline-block align-top"
               alt=""
             />

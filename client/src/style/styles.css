@@ -158,12 +158,10 @@ input[type='radio'] {
   position: relative;
 }
 #landingParallax {
-  position: relative;
   background-attachment: fixed;
   background-image: url('/img/lobby.jpg');
-  background-position: center center;
+  background-position: center;
   background-size: cover;
-  min-height: 14em;
   background-repeat: no-repeat;
 }
 #ira {
