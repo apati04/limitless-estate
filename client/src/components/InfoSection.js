@@ -39,7 +39,7 @@ const InfoSection = () => {
           <div className="col-12 col-md-6">
             <img
               src="https://i.imgur.com/vUNgWTJ.jpg"
-              className="img-fluid d-none d-lg-block w-100"
+              className="img-fluid d-none d-md-block w-100"
               alt=""
             />
             <Link to="/resources">

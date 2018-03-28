@@ -26,9 +26,9 @@ export default class SupportCo extends Component {
           </a>
 
           <CardBody>
-            <div className="container px-5">
+            <div className="container px-3">
               <CardTitle className="h2-responsive">{name}</CardTitle>
-              <div className="row flex-column text-left align-items-start justify-content-start">
+              <div className="row flex-column no-gutters flex-nowrap text-left align-items-stretch justify-content-around">
                 <div className="col-auto">
                   <h5 className="h5-responsive">
                     <Fa
@@ -40,13 +40,13 @@ export default class SupportCo extends Component {
                     {phone}
                   </h5>
                 </div>
-                <div className="col-auto">
+                <div className="col-auto pr-0 mr-0">
                   <h5 className="h5-responsive">
                     <Fa
                       style={{ color: 'blue' }}
                       size="lg"
                       icon="envelope"
-                      className="mr-2"
+                      className="mr-2 d-inline"
                     />
                     {email}
                   </h5>
@@ -72,14 +72,14 @@ export default class SupportCo extends Component {
                     </li>
                   </ul>
                 </div>
-                <div className="col-auto">
+                <div className="col-auto d-flex">
+                  <Fa
+                    style={{ color: 'blue' }}
+                    size="lg"
+                    icon="external-link"
+                    className="mr-2"
+                  />
                   <h5 className="h5-responsive">
-                    <Fa
-                      style={{ color: 'blue' }}
-                      size="lg"
-                      icon="external-link"
-                      className="mr-2"
-                    />
                     <NavLink to={website}>{website}</NavLink>
                   </h5>
                 </div>
@@ -107,7 +107,7 @@ export default class SupportCo extends Component {
     const { name } = nuView;
     return (
       <section>
-        <div className="container py-4">
+        <div className="container-fluid py-4">
           <div className="row  mb-5 justify-content-center align-items-center">
             <div className="col">
               <header className="text-center">

@@ -53,7 +53,7 @@ class PicCarousel extends Component {
               </NavLink>{' '}
               while achieving double digit returns for our investors.
             </h3>
-            <div className="mt-4 text-center">
+            <div className="d-none d-lg-block mt-4 text-center">
               <Button>Make an impact</Button>
             </div>
           </div>
@@ -65,7 +65,7 @@ class PicCarousel extends Component {
       <section>
         <Carousel
           activeItem={this.state.activeItem}
-          className="d-none d-sm-block z-depth-1"
+          className="d-none d-md-block z-depth-1"
           next={() => {
             this.next;
           }}>
@@ -118,7 +118,7 @@ class PicCarousel extends Component {
             }}
           />
         </Carousel>
-        <div className="d-block d-sm-none">
+        <div className="d-block d-md-none">
           <View className="hm-purple-slight">
             <img
               className="w-100 img-fluid"
@@ -130,8 +130,8 @@ class PicCarousel extends Component {
                 <div className="row">
                   <div className="p-4">
                     <h3
-                      style={{ lineHeight: 1.5 }}
-                      className="h1-responsive font-weight-bold carousel-text text-white text-justify">
+                      style={{ lineHeight: 1 }}
+                      className="h3-responsive font-weight-bold carousel-text text-white text-left">
                       <strong>Our vision</strong> at Limitless Estates is to
                       provide A-class living to lower income housing by putting
                       our residents first and instilling a sense of community
