@@ -2,11 +2,12 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:400,400i,500');
 html {
   height: 100%;
-  font-size: 100%;
 }
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 100%;
+  word-wrap: break-word;
+  word-break: break-word;
 }
 /* stylelint-disable selector-list-comma-newline-after */
 
@@ -33,12 +34,6 @@ h5,
 h6 {
   font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
 } */
-
-.flex-auto {
-  -ms-flex: 0 0 auto;
-  -webkit-box-flex: 0;
-  flex: 0 0 auto;
-}
 
 .h-250 {
   height: 250px;
@@ -105,13 +100,13 @@ h6 {
 p {
   font-size: 1rem;
 }
-.Ripple-parent {
+/* .Ripple-parent {
   transition: none !important;
 }
 .Ripple.is-reppling {
   animation: none !important;
   transition: none !important;
-}
+} */
 /* navbar styles */
 
 input[type='radio'] {
@@ -160,12 +155,13 @@ input[type='radio'] {
 }
 #landingParallax {
   position: relative;
-  min-height: 30em;
-  background: url('/img/lobby.jpg') center;
   background-attachment: fixed;
+  background: url('/img/lobby.jpg');
+  min-height: 14rem;
+  background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
-  text-align: center;
+
   color: #fff;
 }
 
@@ -184,7 +180,7 @@ input[type='radio'] {
 }
 .dark-overlay {
   position: absolute;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.7);
   top: 0;
   left: 0;
   width: 100%;
@@ -234,10 +230,6 @@ footer {
 #myFooter a:focus {
   text-decoration: none;
   color: white;
-}
-
-#myFooter .myCols {
-  text-align: center;
 }
 
 #myFooter .social-networks {

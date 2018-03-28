@@ -5,13 +5,13 @@ const Footer = () => {
   return (
     <footer
       style={{ borderBottom: '2px solid black' }}
-      className="footer"
+      className="footer p-2"
       id="myFooter"
     >
       <div className="container">
-        <div className="row">
-          <div className="col col-sm-3 myCols">
-            <h5>Get started</h5>
+        <div className="row flex-column flex-sm-row flex-sm-nowrap justify-content-sm-around text-align-center">
+          <div className="col-auto">
+            <h5 className="h5-responsive">Get started</h5>
             <ul>
               <li key="fHome">
                 <Link to="/">Home</Link>
@@ -24,8 +24,8 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="col col-sm-3 myCols">
-            <h5>About us</h5>
+          <div className="col-auto">
+            <h5 className="h5-responsive">About us</h5>
             <ul>
               <li key="fCi">
                 <Link to="/about">Company Information</Link>
@@ -35,8 +35,8 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="col col-sm-3 myCols">
-            <h5>Support</h5>
+          <div className="col-auto">
+            <h5 className="h5-responsive">Support</h5>
             <ul>
               <li>
                 <Link to="/faq">FAQ</Link>
@@ -46,8 +46,8 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="col col-sm-3 myCols">
-            <h5>Legal</h5>
+          <div className="col-auto">
+            <h5 className="h5-responsive">Legal</h5>
             <ul>
               <li key="lTOS">
                 <Link to="/legal">Terms of Service</Link>
@@ -62,18 +62,8 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="social-networks">
-        <a className="twitter">
-          <i className="fab fa-twitter" />
-        </a>
-        <a className="facebook">
-          <i className="fab fa-facebook" />
-        </a>
-        <a className="google">
-          <i className="fab fa-google-plus-g" />
-        </a>
-      </div>
-      <div className="footer-copyright">
+
+      <div className="mt-5 footer-copyright">
         <p>© 2018 Limitless Estates, LLC</p>
       </div>
     </footer>

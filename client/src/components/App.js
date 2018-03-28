@@ -69,6 +69,7 @@ class App extends Component {
           <Switch>
             <ScrollToTop>
               <Navbar />
+
               <Route exact path="/resources" component={Overview} />
               <Route
                 path="/resources/investingrisks/1"

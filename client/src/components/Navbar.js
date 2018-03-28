@@ -1,6 +1,6 @@
 import '../style/navStyle.css';
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Link, NavLink } from 'react-router-dom';
 import MenuItem from './navMenuItem';
 import {
   Navbar,
@@ -9,7 +9,6 @@ import {
   NavbarToggler,
   Collapse,
   NavItem,
-  NavLink,
   Dropdown,
   DropdownToggle,
   DropdownMenu,
@@ -17,13 +16,6 @@ import {
   Container,
   SideNavNav
 } from 'mdbreact';
-
-const styles = {
-  activeNav: {
-    color: 'midnightblue',
-    fontWeight: 'bold'
-  }
-};
 
 class Navigation extends Component {
   state = {
@@ -46,7 +38,12 @@ class Navigation extends Component {
       <Navbar dark expand="md" fixed="top" scrolling>
         <Container>
           <NavbarBrand to="/">
-            <strong>Limitless-Estates</strong>
+            <img
+              height="30"
+              src="https://i.imgur.com/6X1IDYi.png"
+              className="d-inline-block align-top"
+              alt=""
+            />
           </NavbarBrand>
           {!this.state.isWideEnough && (
             <NavbarToggler onClick={this.onClick.bind(this)} />
@@ -55,10 +52,12 @@ class Navigation extends Component {
           <Collapse isOpen={this.state.collapse} navbar>
             <NavbarNav>
               <NavItem>
-                <NavLink to="/">Home</NavLink>
+                <NavLink className="nav-link" exact to="/">
+                  Home
+                </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink activeStyle={styles.activeNav} to="/markets">
+                <NavLink className="nav-link" to="/markets">
                   Markets
                 </NavLink>
               </NavItem>

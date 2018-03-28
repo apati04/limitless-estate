@@ -40,7 +40,7 @@ class PicCarousel extends Component {
             <div className="col-md-10">
               <h3
                 style={{ lineHeight: 1.5 }}
-                className="h2-responsive carousel-text text-white text-justify"
+                className="h1-responsive carousel-text text-white text-justify"
               >
                 <strong>Our vision</strong> at Limitless Estates is to provide
                 A-class living to lower income housing by putting our residents
@@ -51,7 +51,7 @@ class PicCarousel extends Component {
             <div className="col-md-10 mt-2">
               <h3
                 style={{ lineHeight: 1.5 }}
-                className="h2-responsive carousel-text text-white text-justify"
+                className="h1-responsive carousel-text text-white text-justify"
               >
                 <strong>Our mission</strong> is to positively impact the lives
                 of the people in our local neighborhoods through{' '}
@@ -67,60 +67,103 @@ class PicCarousel extends Component {
     );
 
     return (
-      <Carousel
-        activeItem={this.state.activeItem}
-        className="z-depth-1"
-        next={() => {
-          this.next;
-        }}
-      >
-        <CarouselInner>
-          <CarouselItem itemId="1">
-            <View style={{ opacity: 0.9 }} className="hm-black-strong">
-              <img
-                className="w-100 img-fluid"
-                src="https://i.imgur.com/WjS34vz.jpg?1"
-                alt="Second Slide"
-              />
-              <div className="container">{caption}</div>
-            </View>
-          </CarouselItem>
-          <CarouselItem itemId="2">
-            <View style={{ opacity: 0.9 }} className="hm-black-strong">
-              <img
-                className="w-100 img-fluid"
-                src="https://i.imgur.com/ZdmIZpe.jpg?2"
-                alt="First Slide"
-              />
-              <div className="container"> {caption}</div>
-            </View>
-          </CarouselItem>
-          <CarouselItem itemId="3">
-            <View style={{ opacity: 0.9 }} className="hm-black-strong">
-              <img
-                className="w-100 img-fluid"
-                src="https://i.imgur.com/gCWlQRW.jpg?2"
-                alt="Third Slide"
-              />
-              <div className="container"> {caption}</div>
-            </View>
-          </CarouselItem>
-        </CarouselInner>
-        <CarouselControl
-          direction="prev"
-          role="button"
-          onClick={() => {
-            this.prev();
+      <section>
+        <Carousel
+          activeItem={this.state.activeItem}
+          className="d-none d-sm-block z-depth-1"
+          next={() => {
+            this.next;
           }}
-        />
-        <CarouselControl
-          direction="next"
-          role="button"
-          onClick={() => {
-            this.next();
-          }}
-        />
-      </Carousel>
+        >
+          <CarouselInner>
+            <CarouselItem itemId="1">
+              <View style={{ opacity: 0.9 }} className="hm-black-strong">
+                <img
+                  className="w-100 img-fluid"
+                  src="https://i.imgur.com/WjS34vz.jpg?1"
+                  alt="Second Slide"
+                />
+                <div className="container">{caption}</div>
+              </View>
+            </CarouselItem>
+            <CarouselItem itemId="2">
+              <View style={{ opacity: 0.9 }} className="hm-black-strong">
+                <img
+                  className="w-100 img-fluid"
+                  height="720px"
+                  src="https://i.imgur.com/BI90AZ5.jpg?1"
+                  alt="First Slide"
+                />
+                <div className="container"> {caption}</div>
+              </View>
+            </CarouselItem>
+            <CarouselItem itemId="3">
+              <View style={{ opacity: 0.9 }} className="hm-black-strong">
+                <img
+                  height="720px"
+                  className="w-100 img-fluid"
+                  src="https://i.imgur.com/gCWlQRW.jpg?2"
+                  alt="Third Slide"
+                />
+                <div className="container"> {caption}</div>
+              </View>
+            </CarouselItem>
+          </CarouselInner>
+          <CarouselControl
+            direction="prev"
+            role="button"
+            onClick={() => {
+              this.prev();
+            }}
+          />
+          <CarouselControl
+            direction="next"
+            role="button"
+            onClick={() => {
+              this.next();
+            }}
+          />
+        </Carousel>
+        <div className="d-block d-sm-none">
+          <View className="hm-purple-slight">
+            <img
+              className="w-100 img-fluid"
+              src="https://i.imgur.com/IA6UVRI.jpg?1"
+              alt="Second Slide"
+            />
+            <Mask className="d-flex justify-content-between align-items-end">
+              <div className="container">
+                <div className="row">
+                  <div className="p-4">
+                    <h3
+                      style={{ lineHeight: 1.5 }}
+                      className="h1-responsive font-weight-bold carousel-text text-white text-justify"
+                    >
+                      <strong>Our vision</strong> at Limitless Estates is to
+                      provide A-class living to lower income housing by putting
+                      our residents first and instilling a sense of community
+                      while inspiring others to do the same.
+                    </h3>
+                  </div>
+                </div>
+              </div>
+            </Mask>
+          </View>
+          <div className="p-4 rgba-bluegrey-slight">
+            <h3
+              style={{ lineHeight: 1.5 }}
+              className="h1-responsive carousel-text text-justify"
+            >
+              <strong>Our mission</strong> is to positively impact the lives of
+              the people in our local neighborhoods through{' '}
+              <NavLink to="/resources/impactinvesting">
+                impact investing
+              </NavLink>{' '}
+              while achieving double digit returns for our investors.
+            </h3>
+          </div>
+        </div>
+      </section>
     );
   }
 }

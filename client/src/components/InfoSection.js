@@ -14,65 +14,42 @@ const InfoSection = () => {
     <section
       style={{ height: 50 + 'em' }}
       id="info"
-      className="rgba-white-slight container d-flex justify-content-between align-items-center"
+      className="rgba-white-slight"
     >
-      <div className="row d-flex justify-content-end align-items-end">
-        <div className="col-lg-4">
-          <img
-            src="https://i.imgur.com/vUNgWTJ.jpg"
-            className="wow fadeInup d-none d-lg-block img-fluid w-100"
-            alt=""
-          />
-          <div style={{ visibility: 'hidden' }} className="d-none d-lg-block">
-            <button
-              size="lg"
-              className="d-none d-lg-block btn btn-block btn-outline-danger mt-4"
-            >
-              Learn More
-            </button>
+      <div className="container">
+        <div className="row align-items-center">
+          <div className="col-12 col-md-6">
+            <ul className="p-0 list-group-flush">
+              <li className="list-group-item">More Control Over Returns</li>
+              <li className="list-group-item">Cash Flow</li>
+              <li className="list-group-item">
+                Accelerated Depreciation &amp; Cost Segregation
+              </li>
+              <li className="list-group-item">Tax Benefits</li>
+              <li className="list-group-item">Leveraging Debt</li>
+              <li className="list-group-item">
+                Inflation Induced Debt Destruction
+              </li>
+              <li className="list-group-item">
+                Less Volatile than the Stock Market
+              </li>
+              <li className="list-group-item">Tenants Pay Down the Debt</li>
+              <li className="list-group-item">Everyone Needs Housing</li>
+              <li className="list-group-item">
+                National Housing Shortage of 3.9 million units
+              </li>
+            </ul>
           </div>
-        </div>
-        <div className="col-lg-4 col-md-6 align-bottom w-100 h-100">
-          <ListGroup>
-            <ListGroupItem className="lead">
-              More Control Over Returns
-            </ListGroupItem>
-            <ListGroupItem className="lead">Cash Flow</ListGroupItem>
-            <ListGroupItem className="lead">
-              Accelerated Depreciation &amp; Cost Segregation
-            </ListGroupItem>
-            <ListGroupItem className="lead">Tax Benefits</ListGroupItem>
-            <ListGroupItem className="lead">Leveraging Debt</ListGroupItem>
-          </ListGroup>
-          <div style={{ visibility: 'hidden' }}>
-            <button size="lg" className="btn btn-block btn-outline-danger mt-4">
-              Learn More
-            </button>
-          </div>
-        </div>
-        <div className="col-lg-4 col-md-6 align-bottom w-100 h-100">
-          <ListGroup>
-            <ListGroupItem className="lead">
-              Inflation Induced Debt Destruction
-            </ListGroupItem>
-            <ListGroupItem className="lead">
-              Less Volatile than the Stock Market
-            </ListGroupItem>
-            <ListGroupItem className="lead">
-              Tenants Pay Down the Debt
-            </ListGroupItem>
-            <ListGroupItem className="lead">
-              Everyone Needs Housing
-            </ListGroupItem>
-            <ListGroupItem className="lead">
-              National Housing Shortage of 3.9 million units
-            </ListGroupItem>
-          </ListGroup>
-          <div>
+          <div className="col-12 col-md-6">
+            <img
+              src="https://i.imgur.com/vUNgWTJ.jpg"
+              className="img-fluid d-none d-lg-block w-100"
+              alt=""
+            />
             <Link to="/resources">
               <button
                 size="lg"
-                className="btn btn-block btn-outline-danger mt-4"
+                className="btn btn-block btn-outline-danger p-2 mt-4"
               >
                 Learn More
               </button>

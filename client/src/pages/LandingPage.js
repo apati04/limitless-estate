@@ -7,7 +7,7 @@ import MemberSection from '../components/landing_section/MemberSection';
 import SupportCo from './SupportCo';
 import Header from '../components/landing_section/Header';
 import Carosuel from '../components/PicCarousel';
-import ImpactInvesting from './landing/Impact_info';
+import ImpactInfo from './landing/Impact_info';
 
 class LandingPage extends Component {
   componentWillReceiveProps(nextProps) {
@@ -22,7 +22,7 @@ class LandingPage extends Component {
 
         <InfoSection />
 
-        <ImpactInvesting />
+        <ImpactInfo />
         <SupportCo />
         <MemberSection />
       </div>

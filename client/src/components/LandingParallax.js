@@ -9,7 +9,9 @@ const LandingParallax = () => {
         className="p-5"
       >
         <div className="dark-overlay d-flex justify-content-center align-items-center">
-          <h1 className="display-4 text-white">Why Invest In Multifamily?</h1>
+          <h1 className="h1-responsive text-white">
+            Reasons to invest in multifamily...
+          </h1>
         </div>
       </section>
     </div>
