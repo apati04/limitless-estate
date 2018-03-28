@@ -160,15 +160,21 @@ input[type='radio'] {
 #landingParallax {
   position: relative;
   background-attachment: fixed;
-  background: url('/img/lobby.jpg');
+  background-image: url('/img/lobby.jpg');
+  background-position: center center;
+  background-size: cover;
+  min-height: 14em;
+  background-repeat: no-repeat;
+}
+#ira {
+  position: relative;
+  background-attachment: fixed;
+  background-image: url('https://i.imgur.com/kC8zbBM.jpg');
   min-height: 14rem;
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
-
-  color: #fff;
 }
-
 #ldVid {
   position: relative;
   min-height: 200px;
