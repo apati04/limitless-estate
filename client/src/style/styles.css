@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400');
-@import url('https://fonts.googleapis.com/css?family=Raleway:400,400i,500');
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,400i,500');
 html {
   height: 100%;
 }
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 100%;
   word-wrap: break-word;
   word-break: break-word;
@@ -18,7 +18,7 @@ body {
 }
 
 .blog-header-logo {
-  font-family: 'Raleway', sans-serif, 'Times New Roman', serif;
+  font-family: 'Open Sans', sans-serif, 'Times New Roman', serif;
   font-size: 2.25rem;
 }
 
@@ -127,12 +127,19 @@ input[type='radio'] {
 }
 
 .carousel-image-1 {
-  background: url('/img/floor.jpg') no-repeat center;
+  background-image: url('https://i.imgur.com/WjS34vz.jpg?1');
+  background-repeat: no-repeat;
   background-size: cover;
 }
 
 .carousel-image-2 {
-  background: url('/img/urban.jpg') no-repeat center 15%;
+  background-image: url('https://i.imgur.com/BI90AZ5.jpg?1');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.carousel-image-3 {
+  background-image: url('https://i.imgur.com/gCWlQRW.jpg?2');
+  background-repeat: no-repeat;
   background-size: cover;
 }
 .mobileBackground {
@@ -140,12 +147,9 @@ input[type='radio'] {
   background: url('/img/urban.jpg') no-repeat center 15%;
   background-size: cover;
 }
-.carousel-image-3 {
-  background: url('/img/imageLA.jpg') no-repeat center 26%;
-  background-size: cover;
-}
+
 .carousel-text {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 /* #myCarousel {
   position: relative;
@@ -292,7 +296,7 @@ footer {
 
 @media only screen and (max-width: 576px) {
   .carousel-text {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 1rem;
   }
 }

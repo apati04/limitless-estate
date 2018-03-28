@@ -11,13 +11,9 @@ Leveraging Debt
 */
 const InfoSection = () => {
   return (
-    <section
-      style={{ height: 50 + 'em' }}
-      id="info"
-      className="rgba-white-slight"
-    >
+    <section id="info" className="p-5 rgba-white-slight">
       <div className="container">
-        <div className="row align-items-center">
+        <div className="row align-items-center justify-content-center text-left">
           <div className="col-12 col-md-6">
             <ul className="p-0 list-group-flush">
               <li className="list-group-item">More Control Over Returns</li>
@@ -49,8 +45,7 @@ const InfoSection = () => {
             <Link to="/resources">
               <button
                 size="lg"
-                className="btn btn-block btn-outline-danger p-2 mt-4"
-              >
+                className="btn btn-block btn-outline-danger p-2 mt-4">
                 Learn More
               </button>
             </Link>
