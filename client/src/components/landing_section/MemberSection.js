@@ -21,7 +21,7 @@ class MemberSection extends Component {
                 width={person.photo.size}
                 height={person.photo.size}
               />
-              <h3 className="p-0">{person.name}</h3>
+              <h3 className="h3-responsive p-0">{person.name}</h3>
               <p className="p-0 font-weight-bold">{person.title}</p>
 
               <a
@@ -33,28 +33,30 @@ class MemberSection extends Component {
               </a>
             </div>
           ) : (
-            <div className="col-md-12 mt-2">
-              <img
-                style={{ border: '2px solid lightgrey' }}
-                className="mr-2 mb-1 rounded-circle"
-                src={person.photo.url}
-                alt="Generic placeholder"
-                width={person.photo.size}
-                height={person.photo.size}
-              />
-              <div className="d-flex justify-content-center">
-                <h3 className="align-self-center">{person.name}</h3>
-                <Popover
-                  component="button"
-                  placement="left"
-                  popoverBody={<Fa icon="info" />}
-                  className="h-20 w-20 align-self-end btn blue btn-floating btm-sm"
-                >
-                  <PopoverHeader className="primary-color-dark text-center">
-                    {person.name}, {person.type}
-                  </PopoverHeader>
-                  <PopoverBody>{person.content}</PopoverBody>
-                </Popover>
+            <div className="row">
+              <div className="col-md-12 justify-content-start mt-2">
+                <img
+                  style={{ border: '2px solid lightgrey' }}
+                  className="mr-2 mb-1 align-self-start rounded-circle"
+                  src={person.photo.url}
+                  alt="Generic placeholder"
+                  width={person.photo.size}
+                  height={person.photo.size}
+                />
+                <div className="d-flex align-items-center justify-content-end">
+                  <h3 className="h4-responsive">{person.name}</h3>
+                  <Popover
+                    component="button"
+                    placement="left"
+                    popoverBody={<Fa icon="info" />}
+                    className="btn blue btn-floating btm-sm"
+                  >
+                    <PopoverHeader className="primary-color-dark text-center">
+                      {person.name}, {person.type}
+                    </PopoverHeader>
+                    <PopoverBody>{person.content}</PopoverBody>
+                  </Popover>
+                </div>
               </div>
             </div>
           )}

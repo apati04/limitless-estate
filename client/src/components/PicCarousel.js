@@ -70,7 +70,7 @@ class PicCarousel extends Component {
       <section>
         <Carousel
           activeItem={this.state.activeItem}
-          className="d-none d-md-block z-depth-1"
+          className="d-none d-sm-block z-depth-1"
           next={() => {
             this.next;
           }}

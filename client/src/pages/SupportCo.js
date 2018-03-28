@@ -20,14 +20,9 @@ export default class SupportCo extends Component {
     const { name, phone, address, email, website, misc, logo } = company;
     return (
       <div className="mb-4 col-md-6">
-        <Card className="wow fadeIn h-100 w-100" narrow>
+        <Card narrow>
           <a target="_blank" href={website}>
-            <CardImage
-              style={{ opacity: '1' }}
-              className="container p-5 img-fluid"
-              src={logo}
-              alt=""
-            />
+            <CardImage className="p-4 card-img-top" src={logo} alt="" />
           </a>
 
           <CardBody>
