@@ -34,28 +34,36 @@ class PicCarousel extends Component {
   };
   render() {
     const caption = (
-      <Mask className="rgba-amber-light d-flex flex-column justify-content-center align-items-center">
-        <div className="row w-50 align-items-center justify-content-center">
+      <Mask className="rgba-black-light d-flex flex-column justify-content-center align-items-center">
+        <div className="row w-75 align-items-center justify-content-center">
           <div className="col">
-            <h3 className="h3-responsive carousel-text mb-4 white-text">
-              <strong>Our vision</strong> at Limitless Estates is to provide
+            <h3
+              style={{ fontWeight: 500 }}
+              className="h2-responsive carousel-text mb-4 text-center white-text"
+            >
+              Our <strong>vision</strong> at Limitless Estates is to provide
               A-class living to lower income housing by putting our residents
               first and instilling a sense of community while inspiring others
               to do the same.
             </h3>
-            <h3 className="h3-responsive carousel-text mb-4 white-text">
-              <strong>Our mission</strong> is to positively impact the lives of
+            <h3
+              style={{ fontWeight: 400 }}
+              className="h2-responsive carousel-text mb-4 text-center white-text"
+            >
+              Our <strong>mission</strong> is to positively impact the lives of
               the people in our local neighborhoods through{' '}
-              <NavLink
+              <a
                 style={{ fontWeight: 'bold', color: 'cyan' }}
-                to="/resources/impactinvesting"
+                href="/resources/impactinvesting"
               >
                 impact investing
-              </NavLink>{' '}
+              </a>{' '}
               while achieving double digit returns for our investors.
             </h3>
             <div className="d-none d-lg-block mt-4 text-center">
-              <Button>Make an impact</Button>
+              <a href="info/questionnaire">
+                <Button>Make an impact</Button>
+              </a>
             </div>
           </div>
         </div>
@@ -132,7 +140,7 @@ class PicCarousel extends Component {
           <div className="p-4 rgba-bluegrey-slight">
             <h3
               style={{ lineHeight: 1.5 }}
-              className="h1-responsive carousel-text "
+              className="h1-responsive carousel-text"
             >
               <strong>Our vision</strong> at Limitless Estates is to provide
               A-class living to lower income housing by putting our residents

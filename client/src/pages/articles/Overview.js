@@ -98,26 +98,6 @@ export default class Overview extends Component {
                         here
                       </a>
                     </p>
-                    <p>
-                      Here are even more reasons to invest in Multifamily Real
-                      Estate:
-                    </p>
-                    <ul className="text-left">
-                      <li key="mccr">More Control over Returns</li>
-                      <li key="cashFl">Cash Flow</li>
-                      <li key="adcs">
-                        Accelerated Depreciation &amp; Cost Segregation
-                      </li>
-                      <li key="taxbenefits">Tax Benefits</li>
-                      <li key="levdebt">Leveraging Debt</li>
-                      <li key="iidd">Inflation Induced Debt Destruction</li>
-                      <li key="lbsm">Less Volatile than the Stock Market</li>
-                      <li key="tpdd">Tenants Pay Down the Debt</li>
-                      <li key="enh">Everyone Needs Housing</li>
-                      <li key="nhs">
-                        National Housing Shortage of 3.9 million units
-                      </li>
-                    </ul>
                   </div>
                 </div>
               </div>

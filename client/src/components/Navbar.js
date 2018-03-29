@@ -21,7 +21,8 @@ class Navigation extends Component {
   state = {
     collapse: false,
     isWideEnough: false,
-    dropdownOpen: false
+    dropdownOpen: false,
+    dropdownOpen2: false
   };
   onClick() {
     this.setState({
@@ -31,7 +32,9 @@ class Navigation extends Component {
   toggle() {
     this.setState({ dropdownOpen: !this.state.dropdownOpen });
   }
-
+  toggle2() {
+    this.setState({ dropdownOpen2: !this.state.dropdownOpen2 });
+  }
   render() {
     console.log('sidenavnav ', SideNavNav);
     return (
@@ -39,7 +42,7 @@ class Navigation extends Component {
         <Container>
           <NavbarBrand to="/">
             <img
-              height="30"
+              height="55"
               src="https://i.imgur.com/6TpCmWV.png"
               className="d-inline-block align-top"
               alt=""
@@ -57,9 +60,24 @@ class Navigation extends Component {
                 </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink className="nav-link" to="/markets">
-                  Markets
-                </NavLink>
+                <Dropdown
+                  isOpen={this.state.dropdownOpen2}
+                  toggle={() => {
+                    this.toggle2();
+                  }}
+                >
+                  <DropdownToggle nav caret>
+                    Markets
+                  </DropdownToggle>
+                  <DropdownMenu>
+                    <DropdownItem>
+                      <NavLink to="/markets/columbus">Columnus, OH</NavLink>
+                    </DropdownItem>
+                    <DropdownItem>
+                      <NavLink to="/markets/detriot">Detroit, MI</NavLink>
+                    </DropdownItem>
+                  </DropdownMenu>
+                </Dropdown>
               </NavItem>
               <NavItem>
                 <Dropdown
