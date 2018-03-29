@@ -4,9 +4,6 @@ html {
 }
 body {
   font-family: 'Roboto', sans-serif;
-  font-size: 100%;
-  word-wrap: break-word;
-  word-break: break-word;
 }
 /* stylelint-disable selector-list-comma-newline-after */
 

@@ -7,9 +7,9 @@ class Detroit extends Component {
   renderContent = () => {
     const main = summary[0].body;
     return main.map((e, i) => (
-      <p className="h4-responsive" key={i}>
+      <div className="texttext-letter-spacing" key={i}>
         {e}
-      </p>
+      </div>
     ));
   };
   renderList = () => {
@@ -20,8 +20,12 @@ class Detroit extends Component {
   render() {
     return (
       <div>
-        <View className="rgba-blue-strong" style={{ height: 25 + 'em' }}>
-          <Mask className="flex-center">Detroit Summary</Mask>
+        <View className="unique-color white-text" style={{ height: 25 + 'em' }}>
+          <Mask className="flex-center">
+            <h1 className="h1-responsive font-weight-medium">
+              Detroit Summary
+            </h1>
+          </Mask>
         </View>
         <div className="container">
           <div className="row justify-content-center">
@@ -31,7 +35,7 @@ class Detroit extends Component {
                 <ul>{this.renderList()}</ul>
               </div>
               <div className="col-12">
-                <Button size="lg" coloe="blue">
+                <Button size="lg" color="blue">
                   <NavLink to="/markets/detroit/sdp">
                     Sample Deal Package
                   </NavLink>

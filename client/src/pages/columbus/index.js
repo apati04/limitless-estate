@@ -7,7 +7,7 @@ class Columbus extends Component {
   renderContent = () => {
     const main = summary[0].body;
     return main.map((e, i) => (
-      <p className="h4-responsive" key={i}>
+      <p className="" key={i}>
         {e}
       </p>
     ));
@@ -15,18 +15,25 @@ class Columbus extends Component {
   render() {
     return (
       <div>
-        <View className="rgba-blue-strong" style={{ height: 25 + 'em' }}>
-          <Mask className="flex-center">Detroit Summary</Mask>
+        <View className="bg-mdb-color" style={{ height: 22 + 'em' }}>
+          <Mask className="flex-column flex-center">
+            <h1 className="text-white font-bold">Columbus, Ohio</h1>
+            <h2 className="mt-4 h4-responsive text-light text-white">
+              Overview and SDP
+            </h2>
+          </Mask>
         </View>
-        <div className="container">
+        <div style={{ minHeight: '100vh' }} className="container-fluid my-5">
           <div className="row justify-content-center">
-            <div className="col-10">{this.renderContent()}</div>
-            <div className="col-12">
-              <Button size="lg" coloe="blue">
+            <div className="col-12 col-md-8">
+              {this.renderContent()}
+              <div className="text-right">
                 <NavLink to="/markets/columbus/sdp">
-                  Sample Deal Package
+                  <Button className="text-right" size="lg" color="blue">
+                    Sample Deal Package
+                  </Button>
                 </NavLink>
-              </Button>
+              </div>
             </div>
           </div>
         </div>

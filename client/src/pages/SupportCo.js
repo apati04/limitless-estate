@@ -101,13 +101,13 @@ export default class SupportCo extends Component {
     const { name } = nuView;
     return (
       <section>
-        <div className="container">
+        <div className="stylish-color-dark">
           <div
             style={{ height: 30 + 'em' }}
             className="row animated fadeIn  mb-5 justify-content-center align-items-center"
           >
-            <div className="col">
-              <header className="text-center">
+            <div className="col-12">
+              <header className="text-center text-white">
                 <h1 className="h1-responsive">401K/IRA</h1>
               </header>
             </div>

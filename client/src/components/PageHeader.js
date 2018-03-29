@@ -18,7 +18,7 @@ import { Fa } from 'mdbreact';
 // };
 const PageHeader = ({ title, description, subtitle }) => {
   return (
-    <header style={{ height: 25 + 'em' }} className="bg-mdb-color">
+    <header style={{ height: 22 + 'em' }} className="bg-mdb-color">
       <div className="d-flex flex-center flex-column jumbotron-fluid bg-mdb-color text-white">
         <h1 className="display-4 font-bold">{title}</h1>
         <h2>{subtitle}</h2>

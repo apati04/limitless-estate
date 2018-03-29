@@ -22,7 +22,7 @@ export default class Overview extends Component {
       <section data-wow-delay="1s" className="animated fadeIn" id="overview">
         <View className="hm-black-slight">
           <img
-            className="img-fluid w-100"
+            className="img-fluid h-100 w-100"
             src="https://i.imgur.com/f4FJAIJ.jpg"
             alt=""
           />

@@ -15,7 +15,7 @@ class LandingPage extends Component {
   }
   render() {
     return (
-      <div data-wow-delay="1s" className="animated fadeIn">
+      <div>
         <Carosuel />
         <IconSection />
         <LandingParallax />
