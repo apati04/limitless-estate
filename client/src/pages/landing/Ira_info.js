@@ -6,7 +6,7 @@ class Ira_info extends Component {
     const { link } = this.props;
     return (
       <section style={{ height: 22 + 'em' }}>
-        <div className="row no-gutters justify-content-center text-center p-5  flex-center">
+        <div className="row bg-no-gutters justify-content-center text-center p-5  flex-center">
           <div className="col-12 ">
             <h1 className="h1-responsive font-weight-bold">Did you know...</h1>
           </div>

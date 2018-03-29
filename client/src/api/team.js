@@ -20,8 +20,7 @@ module.exports = [
       url: `https://i.imgur.com/Lok4G0b.jpg?1`,
       size: '220px'
     },
-    resume:
-      'https://drive.google.com/file/d/1oDWKQPmAYxKjJMULoS-Rg1bOEbM6YJR8/view?usp=sharing'
+    resume: 'https://drive.google.com/open?id=1ewP7ET59BbCna0f79IIQH-qdyv4MtcjN'
   },
   {
     name: 'Luis Cruz',
