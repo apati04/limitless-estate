@@ -125,7 +125,7 @@ export default class Overview extends Component {
             <div className="col-lg-4">
               <img
                 style={{ marginTop: '-50px' }}
-                src={finance}
+                src="https://i.imgur.com/OIQQWsn.jpg?1"
                 width="320px"
                 height="320px"
                 alt="LimitLess"
