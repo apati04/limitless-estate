@@ -74,7 +74,7 @@ class Navigation extends Component {
                       <NavLink to="/markets/columbus">Columnus, OH</NavLink>
                     </DropdownItem>
                     <DropdownItem>
-                      <NavLink to="/markets/detriot">Detroit, MI</NavLink>
+                      <NavLink to="/markets/detroit">Detroit, MI</NavLink>
                     </DropdownItem>
                   </DropdownMenu>
                 </Dropdown>
