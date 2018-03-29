@@ -7,7 +7,7 @@ module.exports = [
     name: 'Michael Blank',
     type: 'Advisor',
     photo: {
-      url: `${img_path}/michael-blank.jpg`,
+      url: `https://i.imgur.com/ALOD2r9.jpg`,
       size: '186px'
     },
     content:
@@ -17,7 +17,7 @@ module.exports = [
     name: 'Drew Kniffin',
     type: 'Advisor',
     photo: {
-      url: `${img_path}/drew-kniffin.jpg`,
+      url: `https://i.imgur.com/B3yp6xF.jpg?1`,
       size: '186px'
     },
     content:
@@ -27,7 +27,7 @@ module.exports = [
     name: 'Jamie Douraghy',
     type: 'Advisor',
     photo: {
-      url: `${img_path}/jamie.jpg`,
+      url: `https://i.imgur.com/ieyNFUU.jpg?1`,
       size: '186px'
     },
     content:

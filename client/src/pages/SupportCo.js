@@ -101,7 +101,6 @@ export default class SupportCo extends Component {
     const { name } = nuView;
     return (
       <section>
-        <div className="view" id="ira" />
         <div className="container-fluid py-4">
           <div className="row  mb-5 justify-content-center align-items-center">
             <div className="col">

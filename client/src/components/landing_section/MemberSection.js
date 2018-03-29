@@ -24,11 +24,7 @@ class MemberSection extends Component {
               <h3 className="h3-responsive p-0">{person.name}</h3>
               <p className="p-0 font-weight-bold">{person.title}</p>
 
-              <a
-                style={{ color: '#f7f7f7' }}
-                target="_blank"
-                href={person.content}
-              >
+              <a style={{ color: '#f7f7f7' }} target="_blank" href={content}>
                 <Button color="indigo">View Bio >></Button>
               </a>
             </div>
@@ -66,20 +62,16 @@ class MemberSection extends Component {
   };
   render() {
     return (
-      <section className="py-3 pt-4 text-center text-white stylish-color">
+      <section className="py-2 text-center text-white stylish-color">
         <div style={{ color: '#f7f7f7' }} className="p-5 container">
-          <h1 className="display-4 font-weight-500 font-italic ">
-            Meet the Team
-          </h1>
+          <h1 className="display-4 team-header ">Meet the Team</h1>
           <hr />
           <div className="row d-flex justify-content-around align-items-baseline flex-wrap">
             {this.renderCards(Team)}
           </div>
         </div>
-        <div style={{ color: '#f7f7f7' }} className="mt-2 mb-5 p-5 container">
-          <h1 className="display-4 font-weight-500 font-italic ">
-            Our Advisors
-          </h1>
+        <div style={{ color: '#f7f7f7' }} className="mb-5 p-5 container">
+          <h1 className="display-4 team-header">Our Advisors</h1>
           <hr />
           <div className="container d-flex justify-content-around flex-wrap">
             {this.renderCards(Advisors)}

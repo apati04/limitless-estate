@@ -48,7 +48,8 @@ class PicCarousel extends Component {
               the people in our local neighborhoods through{' '}
               <NavLink
                 style={{ fontWeight: 'bold', color: 'cyan' }}
-                to="/resources/impactinvesting">
+                to="/resources/impactinvesting"
+              >
                 impact investing
               </NavLink>{' '}
               while achieving double digit returns for our investors.
@@ -68,10 +69,11 @@ class PicCarousel extends Component {
           className="d-none d-md-block z-depth-1"
           next={() => {
             this.next;
-          }}>
+          }}
+        >
           <CarouselInner>
-            <CarouselItem itemId="1">
-              <View className="hm-black-slight">
+            <CarouselItem itemId="2">
+              <View className="hm-black-light">
                 <img
                   className="w-100 img-fluid"
                   src="https://i.imgur.com/WjS34vz.jpg?1"
@@ -80,7 +82,7 @@ class PicCarousel extends Component {
                 {caption}
               </View>
             </CarouselItem>
-            <CarouselItem itemId="2">
+            <CarouselItem itemId="1">
               <View className="hm-black-light">
                 <img
                   className="w-100 img-fluid"
@@ -119,33 +121,30 @@ class PicCarousel extends Component {
           />
         </Carousel>
         <div className="d-block d-md-none">
-          <View className="hm-purple-slight">
+          <View className="hm-black-light">
             <img
               className="w-100 img-fluid"
-              src="https://i.imgur.com/IA6UVRI.jpg?1"
-              alt="Second Slide"
+              height="720px"
+              src="https://i.imgur.com/BI90AZ5.jpg?1"
+              alt="First Slide"
             />
-            <Mask className="d-flex justify-content-between align-items-end">
-              <div className="container">
-                <div className="row">
-                  <div className="p-4">
-                    <h3
-                      style={{ lineHeight: 1 }}
-                      className="h3-responsive font-weight-bold carousel-text text-white text-left">
-                      <strong>Our vision</strong> at Limitless Estates is to
-                      provide A-class living to lower income housing by putting
-                      our residents first and instilling a sense of community
-                      while inspiring others to do the same.
-                    </h3>
-                  </div>
-                </div>
-              </div>
-            </Mask>
           </View>
           <div className="p-4 rgba-bluegrey-slight">
             <h3
               style={{ lineHeight: 1.5 }}
-              className="h1-responsive carousel-text text-justify">
+              className="h1-responsive carousel-text "
+            >
+              <strong>Our vision</strong> at Limitless Estates is to provide
+              A-class living to lower income housing by putting our residents
+              first and instilling a sense of community while inspiring others
+              to do the same.
+            </h3>
+          </div>
+          <div className="p-4 rgba-grey-slight">
+            <h3
+              style={{ lineHeight: 1.5 }}
+              className="h1-responsive carousel-text"
+            >
               <strong>Our mission</strong> is to positively impact the lives of
               the people in our local neighborhoods through{' '}
               <NavLink to="/resources/impactinvesting">
