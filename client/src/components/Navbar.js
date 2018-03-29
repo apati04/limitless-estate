@@ -39,97 +39,121 @@ class Navigation extends Component {
     console.log('sidenavnav ', SideNavNav);
     return (
       <Navbar dark expand="md" fixed="top" scrolling>
-        <Container>
-          <NavbarBrand to="/">
-            <img
-              height="55"
-              src="https://i.imgur.com/6TpCmWV.png"
-              className="d-inline-block align-top"
-              alt=""
-            />
-          </NavbarBrand>
-          {!this.state.isWideEnough && (
-            <NavbarToggler onClick={this.onClick.bind(this)} />
-          )}
+        <NavbarBrand to="/">
+          <img
+            height="55"
+            src="https://i.imgur.com/6TpCmWV.png"
+            className="d-inline-block align-top"
+            alt=""
+          />
+        </NavbarBrand>
+        {!this.state.isWideEnough && (
+          <NavbarToggler onClick={this.onClick.bind(this)} />
+        )}
 
-          <Collapse isOpen={this.state.collapse} navbar>
-            <NavbarNav>
-              <NavItem>
-                <NavLink className="nav-link" exact to="/">
-                  Home
-                </NavLink>
-              </NavItem>
-              <NavItem>
-                <Dropdown
-                  isOpen={this.state.dropdownOpen2}
-                  toggle={() => {
-                    this.toggle2();
-                  }}
-                >
-                  <DropdownToggle nav caret>
-                    Markets
-                  </DropdownToggle>
-                  <DropdownMenu>
-                    <DropdownItem>
-                      <NavLink to="/markets/columbus">Columnus, OH</NavLink>
-                    </DropdownItem>
-                    <DropdownItem>
-                      <NavLink to="/markets/detroit">Detroit, MI</NavLink>
-                    </DropdownItem>
-                  </DropdownMenu>
-                </Dropdown>
-              </NavItem>
-              <NavItem>
-                <Dropdown
-                  isOpen={this.state.dropdownOpen}
-                  toggle={() => {
-                    this.toggle();
-                  }}
-                >
-                  <DropdownToggle nav caret>
-                    Resources
-                  </DropdownToggle>
-                  <DropdownMenu>
-                    <DropdownItem>
-                      <NavLink to="/resources">
-                        Why Invest in Multifamily
-                      </NavLink>
-                    </DropdownItem>
-                    <DropdownItem>
-                      <NavLink to="/resources/impactinvesting">
-                        Impact Investing
-                      </NavLink>
-                    </DropdownItem>
-                    <DropdownItem>
-                      <NavLink to="/resources/investingrisks/1">Risks</NavLink>
-                    </DropdownItem>
-                    <DropdownItem>
-                      <NavLink to="/resources/faq">FAQ</NavLink>
-                    </DropdownItem>
-                  </DropdownMenu>
-                </Dropdown>
-              </NavItem>
-              <NavItem>
-                <NavLink
-                  exact
-                  activeStyle={{
-                    color: 'midnightblue',
-                    fontWeight: 'bold'
-                  }}
-                  className="nav-link"
-                  to="/info/questionnaire"
-                >
-                  Make an impact
-                </NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink className="nav-link" to="/info/contact">
-                  Contact
-                </NavLink>
-              </NavItem>
-            </NavbarNav>
-          </Collapse>
-        </Container>
+        <Collapse isOpen={this.state.collapse} navbar>
+          <div className="container">
+            <div className="row">
+              <div className="col">
+                <NavbarNav className="mx-auto ml-auto">
+                  <NavLink className="h4-responsive nav-link" exact to="/">
+                    <NavItem>Home</NavItem>
+                  </NavLink>
+
+                  <NavItem>
+                    <Dropdown
+                      isOpen={this.state.dropdownOpen2}
+                      toggle={() => {
+                        this.toggle2();
+                      }}
+                    >
+                      <DropdownToggle className="h4-responsive" nav caret>
+                        Markets
+                      </DropdownToggle>
+                      <DropdownMenu>
+                        <NavLink
+                          className="w-100"
+                          activeStyle={{ borderBottom: '1px white solid' }}
+                          to="/markets/columbus/summary"
+                        >
+                          <DropdownItem>Columnus, OH</DropdownItem>
+                        </NavLink>
+                        <NavLink
+                          activeStyle={{ borderBottom: '1px white solid' }}
+                          to="/markets/detroit/summary"
+                        >
+                          <DropdownItem>Detroit, MI</DropdownItem>
+                        </NavLink>
+                      </DropdownMenu>
+                    </Dropdown>
+                  </NavItem>
+                  <NavItem>
+                    <Dropdown
+                      isOpen={this.state.dropdownOpen}
+                      toggle={() => {
+                        this.toggle();
+                      }}
+                    >
+                      <DropdownToggle className="h5-responsive" nav caret>
+                        Resources
+                      </DropdownToggle>
+                      <DropdownMenu>
+                        <NavLink
+                          activeStyle={{ borderBottom: '1px white solid' }}
+                          to="/resources"
+                        >
+                          <DropdownItem className="h5-responsive">
+                            Why Invest in Multifamily
+                          </DropdownItem>
+                        </NavLink>
+                        <NavLink
+                          activeStyle={{ borderBottom: '1px white solid' }}
+                          className="h5-responsive"
+                          to="/resources/impactinvesting"
+                        >
+                          <DropdownItem>Impact Investing</DropdownItem>
+                        </NavLink>
+                        <NavLink
+                          activeStyle={{ borderBottom: '1px white solid' }}
+                          className="h5-responsive"
+                          to="/resources/investingrisks/1"
+                        >
+                          <DropdownItem>Risks</DropdownItem>
+                        </NavLink>
+                        <NavLink
+                          activeStyle={{ borderBottom: '1px white solid' }}
+                          className="h5-responsive"
+                          to="/resources/faq"
+                        >
+                          <DropdownItem>FAQ</DropdownItem>
+                        </NavLink>
+                      </DropdownMenu>
+                    </Dropdown>
+                  </NavItem>
+                  <NavItem>
+                    <NavLink
+                      exact
+                      activeStyle={{ borderBottom: '1px white solid' }}
+                      className="h4-responsive nav-link"
+                      to="/info/questionnaire"
+                    >
+                      Make an impact
+                    </NavLink>
+                  </NavItem>
+                  <NavItem>
+                    <NavLink
+                      activeStyle={{ borderBottom: '1px white solid' }}
+                      className="h5-responsive nav-link"
+                      to="/info/contact"
+                    >
+                      Contact
+                    </NavLink>
+                  </NavItem>
+                </NavbarNav>
+              </div>
+            </div>
+          </div>
+        </Collapse>
       </Navbar>
     );
   }

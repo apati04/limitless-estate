@@ -15,7 +15,7 @@ export default ({
     <section>
       <View
         style={{
-          height: '400px',
+          height: 40 + 'em',
           backgroundImage: `url(${headerImage})`,
           backgroundSize: 'cover',
           backgroundRepeat: 'no-repeat',

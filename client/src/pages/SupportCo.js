@@ -101,29 +101,21 @@ export default class SupportCo extends Component {
     const { name } = nuView;
     return (
       <section>
-        <div className="container-fluid py-4">
-          <div className="row  mb-5 justify-content-center align-items-center">
+        <div className="container">
+          <div
+            style={{ height: 30 + 'em' }}
+            className="row animated fadeIn  mb-5 justify-content-center align-items-center"
+          >
             <div className="col">
               <header className="text-center">
-                <h1 style={{ color: 'cyan' }} className="h1-responsive">
-                  Did you know...
-                </h1>
-                <h2 className="text-grey h5-responsive">
-                  You can invest with your 401k/IRA?
-                </h2>
-                <p className="h5-responsive">Find out more below</p>
-                <Fa
-                  className="align-bottom"
-                  style={{ fontSize: 2 + 'em' }}
-                  icon="chevron-down"
-                />
+                <h1 className="h1-responsive">401K/IRA</h1>
               </header>
             </div>
           </div>
-          <div className="row">
-            <div className="col-12 col-sm-6">{this.renderInfo(nuView)}</div>
-            <div className="col-12 col-sm-6">{this.renderInfo(uDirect)}</div>
-          </div>
+        </div>
+        <div className="row">
+          <div className="col-12 col-sm-6">{this.renderInfo(nuView)}</div>
+          <div className="col-12 col-sm-6">{this.renderInfo(uDirect)}</div>
         </div>
       </section>
     );

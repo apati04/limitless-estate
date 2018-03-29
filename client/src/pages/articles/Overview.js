@@ -19,7 +19,7 @@ export default class Overview extends Component {
   render() {
     const finance = '/img/background/financial.jpg';
     return (
-      <section id="overview">
+      <section data-wow-delay="1s" className="animated fadeIn" id="overview">
         <View className="hm-black-slight">
           <img
             className="img-fluid w-100"

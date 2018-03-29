@@ -11,6 +11,8 @@ import Columbus from '../pages/markets/Columbus';
 import Ecorse from '../pages/markets/Ecorse';
 import Resources from '../pages/Resources';
 import Legal from '../pages/Legal';
+import ColSum from '../pages/columbus';
+import DetSum from '../pages/detroit';
 import ContactForm from '../components/Forms/ContactForm';
 import Questionnaire from '../pages/Questionnaire';
 import Faq from '../pages/Faq';
@@ -83,18 +85,28 @@ class App extends Component {
                 path="/resources/impactinvesting"
                 component={ImpactInvesting}
               />
+
               <Route path="/resources/faq" component={Faq} />
               <Route exact path="/legal" component={Legal} />
-              <Route exact path="/markets" component={Markets} />
-              <Route path="/markets/riverparkjefferson" component={Ecorse} />
-              <Route path="/markets/arlingtonheights" component={Columbus} />
+              <Route
+                exact
+                path="/markets/columbus/summary"
+                component={ColSum}
+              />
+              <Route exact path="/markets/detroit/summary" component={DetSum} />
+              <Route path="/markets/detroit/sdp" component={Ecorse} />
+              <Route path="/markets/Columbus/sdp" component={Columbus} />
               <Route exact path="/info/contact" component={Contact} />
               <Route
                 exact
                 path="/info/questionnaire"
                 component={Questionnaire}
               />
-              <Route exact path="/info" component={SupportCo} />
+              <Route
+                exact
+                path="/info/investing/ira401k"
+                component={SupportCo}
+              />
               <Route exact path="/" component={LandingPage} />
             </ScrollToTop>
           </Switch>
