@@ -40,7 +40,8 @@ class Navigation extends Component {
       <div>
         <Navbar
           expand="md"
-          style={{ borderRadius: 0, position: 'sticky' }}
+          style={{ borderRadius: 0 }}
+          sticky="top"
           className="blue d-flex align-content-center m-0"
         >
           <Container>
@@ -76,6 +77,7 @@ class Navigation extends Component {
                   >
                     <DropdownToggle
                       className="h5-responsive nav-item p-0"
+                      style={{ color: 'white' }}
                       nav
                       caret
                     >
@@ -114,6 +116,7 @@ class Navigation extends Component {
                   >
                     <DropdownToggle
                       className="h5-responsive nav-item p-0"
+                      style={{ color: 'white' }}
                       nav
                       caret
                     >
