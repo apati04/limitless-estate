@@ -17,11 +17,11 @@ const Questionnaire = () => {
     <div
       style={{
         height: '100%',
-
         background: `url(${bgimage}) no-repeat center center`,
         backgroundSize: 'cover'
       }}
-      className="hm-black-light"
+      data-wow-delay="1s"
+      className="animated fadeIn hm-black-light"
     >
       <div className="full-bg-img">
         <div className="d-flex container flex-center">

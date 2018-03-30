@@ -18,7 +18,7 @@ const styles = {
 class Contact extends Component {
   render() {
     return (
-      <div style={styles.formStyle} className="unique-color">
+      <div style={styles.formStyle} className="animated fadeIn unique-color">
         <div className="d-flex justify-content-center align-items-center full-bg-img p-5">
           <div className="row p-5 m-5">
             <div className="col-md-12 ">

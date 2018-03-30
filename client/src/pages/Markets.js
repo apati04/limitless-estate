@@ -21,7 +21,7 @@ class Markets extends Component {
     const imgURL = '/img/pageheader.jpg';
     const title = 'Sample Deal Packages';
     return (
-      <div>
+      <div data-wow-delay="1s" className="animated fadeIn">
         <PageHeader title={title} bgRepeat="no-repeat" img={imgURL} />
         <div style={style.marketStyle} className="py-5">
           <main role="main" className="container">

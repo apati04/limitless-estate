@@ -15,11 +15,14 @@ export default class Faq extends Component {
   }
   render() {
     return (
-      <div className="rgba-blue-grey-slight">
+      <div
+        data-wow-delay="1s"
+        className="animated fadeIn rgba-blue-grey-slight"
+      >
         <Article
           headerImage="https://i.imgur.com/3aGoqpx.jpg"
-          title="F.A.Q"
-          overlayText="F.A.Q"
+          title="F.A.Q."
+          overlayText="F.A.Q."
           circleImage="https://i.imgur.com/Icq2otI.jpg?1"
           body={this.renderFaq()}
         />

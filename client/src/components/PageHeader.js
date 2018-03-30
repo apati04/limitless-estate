@@ -16,24 +16,13 @@ import { Fa } from 'mdbreact';
 //     marginTop: '4px',
 //   },
 // };
-const PageHeader = ({
-  title,
-  bgPos = '0px -360px',
-  bgRepeat = 'repeat',
-  description,
-  subtitle
-}) => {
+const PageHeader = ({ title, description, subtitle }) => {
   return (
-    <header id="pageHeader">
-      <div className="d-flex p-4 flex-column justify-content-between m-auto text-center border-bottom border-secondary jumbotron-fluid stylish-color-dark text-white">
-        <h1 className="display-4">{title}</h1>
+    <header style={{ height: 22 + 'em' }} className="bg-mdb-color">
+      <div className="d-flex flex-center flex-column jumbotron-fluid bg-mdb-color text-white">
+        <h1 className="display-4 font-bold">{title}</h1>
         <h2>{subtitle}</h2>
         <p className="lead">{description}</p>
-        <Fa
-          className="align-bottom"
-          style={{ fontSize: 2 + 'em' }}
-          icon="chevron-down"
-        />
       </div>
     </header>
   );

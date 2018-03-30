@@ -1,13 +1,9 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400');
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,400i,500');
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,400i,500,700');
 html {
   height: 100%;
 }
 body {
   font-family: 'Roboto', sans-serif;
-  font-size: 100%;
-  word-wrap: break-word;
-  word-break: break-word;
 }
 /* stylelint-disable selector-list-comma-newline-after */
 
@@ -18,7 +14,6 @@ body {
 }
 
 .blog-header-logo {
-  font-family: 'Open Sans', sans-serif, 'Times New Roman', serif;
   font-size: 2.25rem;
 }
 
@@ -26,6 +21,9 @@ body {
   text-decoration: none;
 }
 
+.team-header {
+  font-weight: 500;
+}
 /* h1,
 h2,
 h3,
@@ -100,24 +98,18 @@ h6 {
 p {
   font-size: 1rem;
 }
-/* .Ripple-parent {
+.Ripple-parent {
   transition: none !important;
 }
 .Ripple.is-reppling {
   animation: none !important;
   transition: none !important;
-} */
-/* navbar styles */
+}
 
 input[type='radio'] {
   margin-left: 1em;
 }
 
-.carousel-item {
-  height: 444px;
-
-  transition: none !important;
-}
 .fas {
   font-size: 55px;
 }
@@ -158,17 +150,21 @@ input[type='radio'] {
   position: relative;
 }
 #landingParallax {
+  background-attachment: fixed;
+  background-image: url('/img/lobby.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#ira {
   position: relative;
   background-attachment: fixed;
-  background: url('/img/lobby.jpg');
+  background-image: url('https://i.imgur.com/kC8zbBM.jpg');
   min-height: 14rem;
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
-
-  color: #fff;
 }
-
 #ldVid {
   position: relative;
   min-height: 200px;
@@ -320,7 +316,6 @@ a.info-popover:hover {
     background-color: #4285f4;
   }
   body {
-    text-align: center;
     font-size: 100%;
   }
   .icon-title {

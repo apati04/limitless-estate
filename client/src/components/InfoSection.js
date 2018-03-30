@@ -16,6 +16,7 @@ const InfoSection = () => {
         <div className="row align-items-center justify-content-center text-left">
           <div className="col-12 col-md-6">
             <ul className="p-0 list-group-flush">
+              <li className="list-group-item">Appreciation</li>
               <li className="list-group-item">More Control Over Returns</li>
               <li className="list-group-item">Cash Flow</li>
               <li className="list-group-item">
@@ -39,13 +40,14 @@ const InfoSection = () => {
           <div className="col-12 col-md-6">
             <img
               src="https://i.imgur.com/vUNgWTJ.jpg"
-              className="img-fluid d-none d-lg-block w-100"
+              className="img-fluid d-none d-md-block w-100"
               alt=""
             />
             <Link to="/resources">
               <button
                 size="lg"
-                className="btn btn-block btn-outline-danger p-2 mt-4">
+                className="btn btn-block btn-outline-danger p-2 mt-4"
+              >
                 Learn More
               </button>
             </Link>

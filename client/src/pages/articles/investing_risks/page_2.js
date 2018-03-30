@@ -15,7 +15,7 @@ export default class RisksTwoe extends Component {
   }
   render() {
     return (
-      <div className="animated fadeIn  rgba-blue-grey-slight">
+      <div className="animated fadeIn rgba-blue-grey-slight">
         <Article
           headerImage="https://i.imgur.com/zneMI2U.jpg"
           pattern=""

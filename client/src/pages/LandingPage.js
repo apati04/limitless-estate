@@ -8,22 +8,20 @@ import SupportCo from './SupportCo';
 import Header from '../components/landing_section/Header';
 import Carosuel from '../components/PicCarousel';
 import ImpactInfo from './landing/Impact_info';
-
+import IraInfo from './landing/Ira_info';
 class LandingPage extends Component {
   componentWillReceiveProps(nextProps) {
     console.log('nextProps: ', nextProps);
   }
   render() {
     return (
-      <div data-wow-delay="1s" className="animated fadeIn">
+      <div>
         <Carosuel />
         <IconSection />
         <LandingParallax />
-
         <InfoSection />
-
         <ImpactInfo />
-        <SupportCo />
+        <IraInfo link="/info/investing/ira401k" />
         <MemberSection />
       </div>
     );

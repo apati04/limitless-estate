@@ -5,7 +5,7 @@ module.exports = [
     name: 'Huasha Liu',
     type: 'Advisor',
     photo: {
-      url: `${img_path}/huasha-liu.jpeg`,
+      url: `https://i.imgur.com/RtpPdUi.jpg?1`,
       size: '186px'
     },
     content:
@@ -15,7 +15,7 @@ module.exports = [
     name: 'Old Capital Lending',
     type: 'Mortgage Broker & Advisor',
     photo: {
-      url: `${img_path}/OldCapital4.jpg`,
+      url: `https://i.imgur.com/wiM5gdr.jpg`,
       size: '186px'
     },
     content:
@@ -25,7 +25,7 @@ module.exports = [
     name: 'Steven Rinaldi',
     type: 'SEC Attorney',
     photo: {
-      url: `${img_path}/steve-rinaldi.png`,
+      url: `https://i.imgur.com/jrGjEHC.png`,
       size: '186px'
     },
     content: 'Mr. Rinaldi handles all legal matters related to SEC compliance.'

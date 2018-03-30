@@ -21,134 +21,180 @@ class Navigation extends Component {
   state = {
     collapse: false,
     isWideEnough: false,
-    dropdownOpen: false
+    dropdownOpen: false,
+    dropdownOpen2: false
   };
-  onClick() {
+  onClick = () => {
     this.setState({
       collapse: !this.state.collapse
     });
-  }
-  toggle() {
+  };
+  toggle = () => {
     this.setState({ dropdownOpen: !this.state.dropdownOpen });
-  }
-
+  };
+  toggle2 = () => {
+    this.setState({ dropdownOpen2: !this.state.dropdownOpen2 });
+  };
   render() {
-    console.log('sidenavnav ', SideNavNav);
     return (
-      <Navbar dark expand="md" fixed="top" scrolling>
-        <Container>
-          <NavbarBrand to="/">
-            <img
-              height="30"
-              src="https://i.imgur.com/6X1IDYi.png"
-              className="d-inline-block align-top"
-              alt=""
-            />
-          </NavbarBrand>
-          {!this.state.isWideEnough && (
-            <NavbarToggler onClick={this.onClick.bind(this)} />
-          )}
+      <div>
+        <Navbar
+          expand="md"
+          style={{ borderRadius: 0, position: 'sticky' }}
+          className="blue d-flex align-content-center m-0"
+        >
+          <Container>
+            <NavbarBrand to="/">
+              <img
+                height="55"
+                src="https://i.imgur.com/6TpCmWV.png"
+                className="d-inline-block ml-auto"
+                alt=""
+              />
+            </NavbarBrand>
+            {!this.state.isWideEnough && (
+              <NavbarToggler onClick={this.onClick} />
+            )}
 
-          <Collapse isOpen={this.state.collapse} navbar>
-            <NavbarNav>
-              <NavItem>
-                <NavLink className="nav-link" exact to="/">
-                  Home
-                </NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink className="nav-link" to="/markets">
-                  Markets
-                </NavLink>
-              </NavItem>
-              <NavItem>
-                <Dropdown
-                  isOpen={this.state.dropdownOpen}
-                  toggle={() => {
-                    this.toggle();
-                  }}
-                >
-                  <DropdownToggle nav caret>
-                    Resources
-                  </DropdownToggle>
-                  <DropdownMenu>
-                    <DropdownItem>
-                      <NavLink to="/resources">
-                        Why Invest in Multifamily
-                      </NavLink>
-                    </DropdownItem>
-                    <DropdownItem>
-                      <NavLink to="/resources/impactinvesting">
-                        Impact Investing
-                      </NavLink>
-                    </DropdownItem>
-                    <DropdownItem>
-                      <NavLink to="/resources/investingrisks/1">Risks</NavLink>
-                    </DropdownItem>
-                    <DropdownItem>
-                      <NavLink to="/resources/faq">FAQ</NavLink>
-                    </DropdownItem>
-                  </DropdownMenu>
-                </Dropdown>
-              </NavItem>
-              <NavItem>
-                <NavLink
-                  exact
-                  activeStyle={{
-                    color: 'midnightblue',
-                    fontWeight: 'bold'
-                  }}
-                  className="nav-link"
-                  to="/info/questionnaire"
-                >
-                  Make an impact
-                </NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink className="nav-link" to="/info/contact">
-                  Contact
-                </NavLink>
-              </NavItem>
-            </NavbarNav>
-          </Collapse>
-        </Container>
-      </Navbar>
+            <Collapse isOpen={this.state.collapse} navbar>
+              <NavbarNav className="mx-auto ml-auto">
+                <NavItem className="m-1">
+                  <NavLink
+                    exact
+                    style={{ color: 'white' }}
+                    activeStyle={{ fontWeight: 500 }}
+                    className="h5-responsive"
+                    to="/"
+                  >
+                    Home
+                  </NavLink>
+                </NavItem>
+                <NavItem className="m-1">
+                  <Dropdown
+                    isOpen={this.state.dropdownOpen2}
+                    toggle={this.toggle2}
+                  >
+                    <DropdownToggle
+                      className="h5-responsive nav-item p-0"
+                      nav
+                      caret
+                    >
+                      Markets
+                    </DropdownToggle>
+                    <DropdownMenu>
+                      <DropdownItem>
+                        <NavLink
+                          exact
+                          style={{ color: 'white' }}
+                          activeStyle={{ fontWeight: 500 }}
+                          className="h5-responsive"
+                          to="/markets/columbus/summary"
+                        >
+                          Columbus, OH
+                        </NavLink>
+                      </DropdownItem>
+                      <DropdownItem>
+                        <NavLink
+                          exact
+                          style={{ color: 'white' }}
+                          activeStyle={{ fontWeight: 500 }}
+                          className="h5-responsive"
+                          to="/markets/detroit/summary"
+                        >
+                          Detroit, MI
+                        </NavLink>
+                      </DropdownItem>
+                    </DropdownMenu>
+                  </Dropdown>
+                </NavItem>
+                <NavItem className="m-1">
+                  <Dropdown
+                    isOpen={this.state.dropdownOpen}
+                    toggle={this.toggle}
+                  >
+                    <DropdownToggle
+                      className="h5-responsive nav-item p-0"
+                      nav
+                      caret
+                    >
+                      Resources
+                    </DropdownToggle>
+                    <DropdownMenu>
+                      <DropdownItem>
+                        <NavLink
+                          exact
+                          style={{ color: 'white' }}
+                          activeStyle={{ fontWeight: 500 }}
+                          className="h5-responsive"
+                          to="/resources"
+                        >
+                          Why Invest in Multifamily
+                        </NavLink>
+                      </DropdownItem>
+                      <DropdownItem>
+                        <NavLink
+                          exact
+                          style={{ color: 'white' }}
+                          activeStyle={{ fontWeight: 500 }}
+                          className="h5-responsive"
+                          to="/resources/impactinvesting"
+                        >
+                          Impact Investing
+                        </NavLink>
+                      </DropdownItem>
+                      <DropdownItem>
+                        <NavLink
+                          exact
+                          style={{ color: 'white' }}
+                          activeStyle={{ fontWeight: 500 }}
+                          className="h5-responsive"
+                          to="/resources/investingrisks/1"
+                        >
+                          Risks
+                        </NavLink>
+                      </DropdownItem>
+                      <DropdownItem>
+                        <NavLink
+                          exact
+                          style={{ color: 'white' }}
+                          activeStyle={{ fontWeight: 500 }}
+                          className="h5-responsive"
+                          to="/resources/faq"
+                        >
+                          FAQ
+                        </NavLink>
+                      </DropdownItem>
+                    </DropdownMenu>
+                  </Dropdown>
+                </NavItem>
+                <NavItem className="m-1">
+                  <NavLink
+                    exact
+                    style={{ color: 'white' }}
+                    activeStyle={{ fontWeight: 500 }}
+                    className="h5-responsive"
+                    to="/info/questionnaire"
+                  >
+                    Make an impact
+                  </NavLink>
+                </NavItem>
+                <NavItem className="m-1">
+                  <NavLink
+                    exact
+                    style={{ color: 'white' }}
+                    activeStyle={{ fontWeight: 500 }}
+                    className="h5-responsive"
+                    to="/info/contact"
+                  >
+                    Contact
+                  </NavLink>
+                </NavItem>
+              </NavbarNav>
+            </Collapse>
+          </Container>
+        </Navbar>
+      </div>
     );
   }
 }
-
 export default Navigation;
-
-/*
-      <nav
-        style={{ borderBottom: "#008ed6 2px solid" }}
-        className="navbar navbar-toggleble-sm navbar-expand-sm navbar-dark bg-dark"
-      >
-        <div className="container">
-          <Link to="/" className="navbar-brand">
-            Limitless Estates, LLC
-          </Link>
-          {/* <a href="#" className="p-0 navbar-brand">
-            <img src="/img/logo.png" width="60" height="60" alt="" />
-          </a> *}
-          <button
-            className="navbar-toggler"
-            data-toggle="collapse"
-            data-target="#nbNav"
-          >
-            <span className="navbar-toggler-icon" />
-          </button>
-
-          <div className="collapse navbar-collapse" id="nbNav">
-            <ul className="navbar-nav ml-auto">
-              <li key="asd" className="nav-item">
-                <Link to="/" className="nav-link">
-                  HOME
-                </Link>
-              </li>
-              {this.renderMenu()}
-            </ul>
-          </div>
-        </div>
-      </nav>
-*/
