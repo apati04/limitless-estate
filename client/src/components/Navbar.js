@@ -34,7 +34,13 @@ class Navigation extends Component {
   };
   render() {
     return (
-      <Navbar expand="md" sticky="top" className="blue">
+      <Navbar
+        dark
+        expand="md"
+        sticky="top"
+        style={{ borderRadius: 0 }}
+        className="blue"
+      >
         <Container>
           <NavbarBrand to="/">
             <img
