@@ -1,6 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Button, Card, CardBody, CardImage } from 'mdbreact';
 
 const style = {
   card: {

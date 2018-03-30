@@ -2,14 +2,9 @@ import React from 'react';
 import {
   Card,
   CardImage,
-  CardBody,
-  CardTitle,
-  CardText,
-  Button,
-  View
+  CardBody
 } from 'mdbreact';
 import QuestionnaireForm from '../components/Forms/QuestionnaireForm';
-import PageHeader from '../components/PageHeader';
 const bgimage =
   'https://images.pexels.com/photos/681368/pexels-photo-681368.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260';
 const Questionnaire = () => {

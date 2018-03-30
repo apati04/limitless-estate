@@ -1,5 +1,3 @@
-const img_path = '/img/advisors';
-
 module.exports = [
   {
     name: 'Huasha Liu',

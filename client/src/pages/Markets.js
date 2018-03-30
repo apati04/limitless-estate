@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import PageHeader from '../components/PageHeader';
 import PropertyCard from '../components/PropertyCard';
 const arlington = '/img/columbus/arlingtonHeights.jpg';

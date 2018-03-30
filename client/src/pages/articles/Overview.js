@@ -1,23 +1,13 @@
 import React, { Component } from 'react';
-import PageHeader from '../../components/PageHeader';
-import RegisterModal from '../../components/RegisterModal';
-import { browserHistory, Link } from 'react-router-dom';
 /** api array of objects*/
 
 import {
-  Button,
-  Card,
-  CardBody,
-  CardImage,
-  CardText,
-  CardTitle,
   View,
   Mask
 } from 'mdbreact';
 
 export default class Overview extends Component {
   render() {
-    const finance = '/img/background/financial.jpg';
     return (
       <section data-wow-delay="1s" className="animated fadeIn" id="overview">
         <View className="hm-black-slight">

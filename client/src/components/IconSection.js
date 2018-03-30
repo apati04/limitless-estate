@@ -1,6 +1,5 @@
 import React from 'react';
 import IconTemplate from './IconTemplate';
-import { Col, Row, Container } from 'mdbreact';
 
 const IconSection = () => {
   return (

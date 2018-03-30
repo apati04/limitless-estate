@@ -1,7 +1,6 @@
 import '../style/navStyle.css';
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Link, NavLink } from 'react-router-dom';
-import MenuItem from './navMenuItem';
+import { NavLink } from 'react-router-dom';
 import {
   Navbar,
   NavbarBrand,
@@ -13,8 +12,7 @@ import {
   DropdownToggle,
   DropdownMenu,
   DropdownItem,
-  Container,
-  SideNavNav
+  Container
 } from 'mdbreact';
 
 class Navigation extends Component {

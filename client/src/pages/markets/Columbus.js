@@ -2,12 +2,8 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import FadeIn from '../../components/FadeIn';
 import MapBox from '../../components/MapBox';
-import Content from '../../components/Content';
 import StickyBox from 'react-sticky-box';
 import PageHeader from '../../components/PageHeader';
-import RegisterModal from '../../components/RegisterModal';
-const property_img = '/img/columbus/image1.png';
-const map_img = '/img/columbus/image2.png';
 
 const imgURL = '/img/pageheader.jpg';
 const description = 'Sample Deal Package';

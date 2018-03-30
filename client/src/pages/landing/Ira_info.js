@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Fa, Button, Mask, View } from 'mdbreact';
 import { NavLink } from 'react-router-dom';
 class Ira_info extends Component {
   render() {
