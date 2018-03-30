@@ -68,6 +68,7 @@ class App extends Component {
               <Route exact path="/" component={LandingPage} />
             </ScrollToTop>
           </Switch>
+
           <Footer />
         </div>
       </BrowserRouter>
