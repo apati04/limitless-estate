@@ -1,5 +1,4 @@
 import React from 'react';
-
 // const styles = {
 //   pageHeader: {
 //     height,
@@ -16,23 +15,13 @@ import React from 'react';
 //     marginTop: '4px',
 //   },
 // };
-const PageHeader = ({ title, bgPos = '0px -360px', bgRepeat = 'repeat', description }) => {
+const PageHeader = ({ title, description, subtitle }) => {
   return (
-    <header id="pageHeader">
-      <div
-        style={{ top: 56, minHeight: '252px' }}
-        className="border-bottom border-secondary jumbotron-fluid bg-dark text-white"
-      >
-        <div className="container">
-          <div className="row">
-            <div className="col-12 m-auto text-center">
-              <h1 style={{ marginTop: '2em' }} className="display-4">
-                {title}
-              </h1>
-              <p>{description}</p>
-            </div>
-          </div>
-        </div>
+    <header style={{ height: 22 + 'em' }} className="bg-mdb-color">
+      <div className="d-flex flex-center flex-column jumbotron-fluid bg-mdb-color text-white">
+        <h1 className="display-4 font-bold">{title}</h1>
+        <h2>{subtitle}</h2>
+        <p className="lead">{description}</p>
       </div>
     </header>
   );

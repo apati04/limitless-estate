@@ -1,17 +1,18 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import PageHeader from '../components/PageHeader';
 import PropertyCard from '../components/PropertyCard';
 const arlington = '/img/columbus/arlingtonHeights.jpg';
 const ecorse = '/img/ecorse/rjmanor.jpg';
 
-const SDP_Columbus = 'https://drive.google.com/file/d/1teIUZKadttGDSCj7Tg26rivLIODfr7ma/view?usp=sharing';
+const SDP_Columbus =
+  'https://drive.google.com/file/d/1teIUZKadttGDSCj7Tg26rivLIODfr7ma/view?usp=sharing';
 
-const SDP_Detroit = 'https://drive.google.com/file/d/1z0czV_7QrojZY1YHKazDI1XRtVy0cU2f/view?usp=sharing';
+const SDP_Detroit =
+  'https://drive.google.com/file/d/1z0czV_7QrojZY1YHKazDI1XRtVy0cU2f/view?usp=sharing';
 const style = {
   marketStyle: {
-    backgroundImage: 'linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%)',
-  },
+    backgroundImage: 'linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%)'
+  }
 };
 /*bgPos='800px -430px'*/
 class Markets extends Component {
@@ -19,7 +20,7 @@ class Markets extends Component {
     const imgURL = '/img/pageheader.jpg';
     const title = 'Sample Deal Packages';
     return (
-      <div>
+      <div data-wow-delay="1s" className="animated fadeIn">
         <PageHeader title={title} bgRepeat="no-repeat" img={imgURL} />
         <div style={style.marketStyle} className="py-5">
           <main role="main" className="container">

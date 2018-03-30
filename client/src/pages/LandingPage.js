@@ -1,19 +1,25 @@
 import React, { Component } from 'react';
-import SlideShow from '../components/SlideShow';
 import IconSection from '../components/IconSection';
 import LandingParallax from '../components/LandingParallax';
 import InfoSection from '../components/InfoSection';
-import NewsLetter from '../components/NewsLetter';
-
+import MemberSection from '../components/landing_section/MemberSection';
+import Carosuel from '../components/PicCarousel';
+import ImpactInfo from './landing/Impact_info';
+import IraInfo from './landing/Ira_info';
 class LandingPage extends Component {
+  componentWillReceiveProps(nextProps) {
+    console.log('nextProps: ', nextProps);
+  }
   render() {
     return (
       <div>
-        <SlideShow />
+        <Carosuel />
         <IconSection />
         <LandingParallax />
         <InfoSection />
-        <NewsLetter />
+        <ImpactInfo />
+        <IraInfo link="/info/investing/ira401k" />
+        <MemberSection />
       </div>
     );
   }

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const navMenuItem = ({ field }) => {
   return (
-    <Link to={'/' + field.toLowerCase()} className=" nav-link">
+    <Link to={'/' + field.toLowerCase()} className="nav-link">
       {field.toUpperCase()}
     </Link>
   );

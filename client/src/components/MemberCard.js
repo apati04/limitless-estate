@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 const style = {
   card: {
@@ -15,15 +14,10 @@ const style = {
 
 export default ({ name, title = '', photo, type, content, children }) => {
   return (
-    <div style={style.card} className="align-items-center">
-      <img
-        style={{ border: '2px solid lightgrey' }}
-        className="mr-2 mb-1 rounded-circle"
-        src={photo.url}
-        alt="Generic placeholder"
-        width={photo.size}
-        height={photo.size}
-      />
+    <div
+      style={style.card}
+      className="d-flex justify-content-center align-items-center"
+    >
       {children}
     </div>
   );

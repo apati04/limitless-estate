@@ -3,14 +3,39 @@ import IconTemplate from './IconTemplate';
 
 const IconSection = () => {
   return (
-    <section style={{ minHeight: '300px' }} id="landingIcons" className="py-5">
-      <div className="container">
-        <div style={{ marginTop: '5%' }} className="row">
-          <IconTemplate icon="users" title="Community" fontSize="60px" />
-          <IconTemplate icon="tasks" title="Honesty" fontSize="60px" />
-          <IconTemplate icon="chart-line" title="Integrity" fontSize="60px" />
-        </div>
-      </div>
+    <section
+      style={{ minHeight: 20 + 'em' }}
+      id="landingIcons"
+      className="p-5 d-flex container flex-column flex-md-row justify-content-between align-items-center"
+    >
+      <IconTemplate
+        icon="fas fa-child"
+        title="Impacting Lives"
+        fontSize={3 + 'em'}
+      />
+
+      <IconTemplate
+        icon="fas fa-users"
+        title="Community Development"
+        fontSize={3 + 'em'}
+      />
+      <IconTemplate
+        icon="fas fa-chart-line"
+        title="Breeding Culture"
+        fontSize={3 + 'em'}
+      />
+
+      <IconTemplate
+        icon="fab fa-medapps"
+        title="Inspiring Others"
+        fontSize={3 + 'em'}
+      />
+
+      <IconTemplate
+        icon="fas fa-trophy"
+        title="Create win win win scenarios"
+        fontSize={3 + 'em'}
+      />
     </section>
   );
 };

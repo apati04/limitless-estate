@@ -3,7 +3,7 @@ const path = require('path');
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
 const keys = require('./config/keys');
-
+const request = require('request');
 const app = express();
 // Send every request to the React app
 // Define any API routes before this runs
@@ -17,17 +17,18 @@ app.post('/api/sendmail', (req, res) => {
     service: 'gmail',
     auth: {
       user: keys.userGmail,
-      pass: keys.passGmail,
-    },
+      pass: keys.passGmail
+    }
   });
   const sender = {
     name: `New Message- ${firstname} ${lastname}`,
-    address: email,
+    address: email
   };
   const mailOptions = {
     from: sender,
-    to: 'apax714@gmail.com',
-    subject: `contactform- ${firstname}`,
+    to: 'kmitchell@limitless-estates.com',
+    cc: 'lpatipaksiri@limitless-estates.com',
+    subject: `Contact Form- ${firstname}`,
     html: `
       <html>
       <head>
@@ -43,12 +44,20 @@ app.post('/api/sendmail', (req, res) => {
         <p style="margin-top: 10px">${message}</p>
       </body>
       </html>
-    `,
+    `
   };
   transporter.sendMail(mailOptions);
   res.send('complete');
 });
 
+app.get('/api/pdf', (req, res) => {
+  request.get(
+    'https://drive.google.com/file/d/1GQnUvNoLIHX-Dg7dr2Use7eyB7CO5dxE/view?usp=sharing',
+    function(err, response, body) {
+      res.send(response);
+    }
+  );
+});
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.resolve(__dirname, 'client', 'build')));
