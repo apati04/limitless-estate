@@ -1,13 +1,7 @@
 import React, { Component } from 'react';
 import { withFormik, Form, Field } from 'formik';
 import { Button, Input } from 'mdbreact';
-import axios from 'axios';
 import Yup from 'yup';
-const style = {
-  radioButton: {
-    marginLeft: '1em'
-  }
-};
 
 class QuestionnaireForm extends Component {
   state = {
@@ -20,7 +14,7 @@ class QuestionnaireForm extends Component {
     if (this.props.touched[val] && this.props.errors[val])
       return (
         <small className="ml-2 font-italic text-danger">
-          {this.props.errors[val]}!
+          {this.props.errors[val]}
         </small>
       );
     else return <div />;
@@ -29,14 +23,10 @@ class QuestionnaireForm extends Component {
   render() {
     const {
       values,
-      errors,
-      touched,
       isSubmitting,
       handleChange,
       handleBlur,
-      handleSubmit
     } = this.props;
-    const { riskTolerance } = this.state;
     return (
       <Form className="p-5 d-flex justify-content-around flex-column">
         <div className="row">
@@ -371,7 +361,6 @@ class QuestionnaireForm extends Component {
               estate market in the past?
             </label>
             <Field className="form-control pl-0" type="text" name="q10" />
-            {this.handleErrors('q10')}
           </div>
           <div className="form-group mt-4">
             <label htmlFor="q11" className="col-form-label">
@@ -496,28 +485,25 @@ export default withFormik({
     q14
   }),
   validationSchema: Yup.object().shape({
-    fullname: Yup.string().required('Field is required'),
-    email: Yup.string().required('Field is required'),
-    tel: Yup.string().required('Field is required'),
-    company: Yup.string().required('Field is required'),
-    contactPref: Yup.string().required('Field is required'),
-    q1: Yup.string().required('Field is required'),
-    q2: Yup.string().required('Field is required'),
-    q3: Yup.string().required('Field is required'),
-    q4ARP: Yup.mixed().required('Field is required'),
-    q4IRR: Yup.mixed().required('Field is required'),
-    q4CoC: Yup.mixed().required('Field is required'),
-    q5a: Yup.string().required('Field is required'),
-    q5b: Yup.string().required('Field is required'),
-    q6: Yup.string().required('Field is required'),
-    q7: Yup.string().required('Field is required'),
-    q8: Yup.string().required('Field is required'),
-    q9: Yup.string().required('Field is required'),
-    q10: Yup.string().required('Field is required'),
-    q11: Yup.string().required('Field is required'),
-    q12: Yup.string().required('Field is required'),
-    q13: Yup.string().required('Field is required'),
-    q14: Yup.string().required('Field is required')
+    fullname: Yup.string().required('Field Required'),
+    email: Yup.string().required('Field Required'),
+    tel: Yup.string().required('Field Required'),
+    company: Yup.string().required('Field Required'),
+    contactPref: Yup.string().required('Field Required'),
+    q1: Yup.string().required('Field Required'),
+    q2: Yup.string().required('Field Required'),
+    q3: Yup.string().required('Field Required'),
+    q4ARP: Yup.mixed().required('Field Required'),
+    q5a: Yup.string().required('Field Required'),
+    q5b: Yup.string().required('Field Required'),
+    q6: Yup.string().required('Field Required'),
+    q7: Yup.string().required('Field Required'),
+    q8: Yup.string().required('Field Required'),
+    q9: Yup.string().required('Field Required'),
+    q11: Yup.string().required('Field Required'),
+    q12: Yup.string().required('Field Required'),
+    q13: Yup.string().required('Field Required'),
+    q14: Yup.string().required('Field Required')
   }),
   handleSubmit: async (values, { resetForm, setErrors, setSubmitting }) => {
     console.log('asdfasdf', values);
@@ -528,27 +514,27 @@ export default withFormik({
 /*
 
   validationSchema: Yup.object().shape({
-    firstname: Yup.string().required('Field is required'),
-    lastname: Yup.string().required('Field is required'),
+    firstname: Yup.string().required('Field Required'),
+    lastname: Yup.string().required('Field Required'),
     email: Yup.string()
       .email('Email is not valid')
-      .required('Field is required'),
-    question1: Yup.mixed().required('Field is required'),
-    question2: Yup.mixed().required('Field is required'),
-    question3: Yup.mixed().required('Field is required'),
-    question4a: Yup.mixed().required('Field is required'),
-    question4b: Yup.mixed().required('Field is required'),
-    question4c: Yup.mixed().required('Field is required'),
-    question5: Yup.mixed().required('Field is required'),
-    question6: Yup.mixed().required('Field is required'),
-    question7: Yup.mixed().required('Field is required'),
-    question8: Yup.mixed().required('Field is required'),
-    question9: Yup.mixed().required('Field is required'),
-    question10: Yup.mixed().required('Field is required'),
-    question11: Yup.mixed().required('Field is required'),
-    question12: Yup.mixed().required('Field is required'),
-    question13: Yup.mixed().required('Field is required'),
-    question14: Yup.mixed().required('Field is required')
+      .required('Field Required'),
+    question1: Yup.mixed().required('Field Required'),
+    question2: Yup.mixed().required('Field Required'),
+    question3: Yup.mixed().required('Field Required'),
+    question4a: Yup.mixed().required('Field Required'),
+    question4b: Yup.mixed().required('Field Required'),
+    question4c: Yup.mixed().required('Field Required'),
+    question5: Yup.mixed().required('Field Required'),
+    question6: Yup.mixed().required('Field Required'),
+    question7: Yup.mixed().required('Field Required'),
+    question8: Yup.mixed().required('Field Required'),
+    question9: Yup.mixed().required('Field Required'),
+    question10: Yup.mixed().required('Field Required'),
+    question11: Yup.mixed().required('Field Required'),
+    question12: Yup.mixed().required('Field Required'),
+    question13: Yup.mixed().required('Field Required'),
+    question14: Yup.mixed().required('Field Required')
   })
     email = '',
     question1 = '',
