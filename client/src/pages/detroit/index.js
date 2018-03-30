@@ -23,10 +23,10 @@ class Detroit extends Component {
         <View className="bg-mdb-color" style={{ height: 22 + 'em' }}>
           <Mask className="flex-column flex-center">
             <h1 className="display-4 font-bold text-white">Detroit, MI</h1>
-            <h2 className="mt-4 h4-responsive">
+            <h2 className="mt-4 h4-responsive text-white">
               Overview and{' '}
               <NavLink className="text-white" to="/markets/detroit/sdp">
-                Sample Deal Package
+                <strong>Sample Deal Package</strong>
               </NavLink>
             </h2>
           </Mask>
@@ -39,11 +39,11 @@ class Detroit extends Component {
                 <ul>{this.renderList()}</ul>
               </div>
               <div className="col-12">
-                <Button size="lg" color="blue">
-                  <NavLink to="/markets/detroit/sdp">
+                <NavLink to="/markets/detroit/sdp">
+                  <Button size="lg" color="blue">
                     Sample Deal Package
-                  </NavLink>
-                </Button>
+                  </Button>
+                </NavLink>
               </div>
             </div>
           </div>

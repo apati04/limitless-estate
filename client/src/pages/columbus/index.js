@@ -24,8 +24,11 @@ class Columbus extends Component {
             <h1 className="h1-responsive text-white font-bold">
               Columbus, Ohio
             </h1>
-            <h2 className="mt-4 h4-responsive text-light text-white">
-              Overview and SDP
+            <h2 className="mt-4 h4-responsive text-white">
+              Overview and{' '}
+              <NavLink className="text-white" to="/markets/columbus/sdp">
+                <strong>Sample Deal Package</strong>
+              </NavLink>
             </h2>
           </Mask>
         </View>
