@@ -80,6 +80,10 @@ h6 {
   border-radius: 2rem;
 }
 
+.carousel-fade {
+  animation: none !important;
+  transition: none !important;
+}
 /*
  * Blog posts
  */
@@ -94,7 +98,9 @@ h6 {
   margin-bottom: 1.25rem;
   color: #999;
 }
-
+.carousel-item {
+  transition: none !important;
+}
 p {
   font-size: 1rem;
 }
