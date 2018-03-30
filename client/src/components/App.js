@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import Navbar from './Navbar';
+import Header from './Navbar';
 import Footer from './Footer';
 import ScrollToTop from './ScrollToTop';
 /* Pages */
@@ -70,7 +70,7 @@ class App extends Component {
         <div>
           <Switch>
             <ScrollToTop>
-              <Navbar />
+              <Header />
 
               <Route exact path="/resources" component={Overview} />
               <Route
@@ -94,6 +94,7 @@ class App extends Component {
                 component={ColSum}
               />
               <Route exact path="/markets/detroit/summary" component={DetSum} />
+              <Route exact path="/markets" component={Markets} />
               <Route path="/markets/detroit/sdp" component={Ecorse} />
               <Route path="/markets/Columbus/sdp" component={Columbus} />
               <Route exact path="/info/contact" component={Contact} />

@@ -12,27 +12,38 @@ class Columbus extends Component {
       </p>
     ));
   };
+  renderList = () => {
+    const { list } = summary[1];
+    return list.map((e, i) => <li key={i}>{e}</li>);
+  };
   render() {
     return (
       <div>
         <View className="bg-mdb-color" style={{ height: 22 + 'em' }}>
           <Mask className="flex-column flex-center">
-            <h1 className="text-white font-bold">Columbus, Ohio</h1>
+            <h1 className="h1-responsive text-white font-bold">
+              Columbus, Ohio
+            </h1>
             <h2 className="mt-4 h4-responsive text-light text-white">
               Overview and SDP
             </h2>
           </Mask>
         </View>
-        <div style={{ minHeight: '100vh' }} className="container-fluid my-5">
+        <div style={{ minHeight: '100vh' }} className="container my-5">
           <div className="row justify-content-center">
             <div className="col-12 col-md-8">
               {this.renderContent()}
-              <div className="text-right">
-                <NavLink to="/markets/columbus/sdp">
-                  <Button className="text-right" size="lg" color="blue">
-                    Sample Deal Package
-                  </Button>
-                </NavLink>
+              <div>
+                <ul>{this.renderList()}</ul>
+              </div>
+              <div className="col-12">
+                <div className="text-right">
+                  <NavLink to="/markets/columbus/sdp">
+                    <Button className="text-right" size="lg" color="blue">
+                      Sample Deal Package
+                    </Button>
+                  </NavLink>
+                </div>
               </div>
             </div>
           </div>

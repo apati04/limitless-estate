@@ -16,6 +16,7 @@ const InfoSection = () => {
         <div className="row align-items-center justify-content-center text-left">
           <div className="col-12 col-md-6">
             <ul className="p-0 list-group-flush">
+              <li className="list-group-item">Appreciation</li>
               <li className="list-group-item">More Control Over Returns</li>
               <li className="list-group-item">Cash Flow</li>
               <li className="list-group-item">

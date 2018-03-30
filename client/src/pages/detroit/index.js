@@ -20,16 +20,20 @@ class Detroit extends Component {
   render() {
     return (
       <div>
-        <View className="unique-color white-text" style={{ height: 25 + 'em' }}>
-          <Mask className="flex-center">
-            <h1 className="h1-responsive font-weight-medium">
-              Detroit Summary
-            </h1>
+        <View className="bg-mdb-color" style={{ height: 22 + 'em' }}>
+          <Mask className="flex-column flex-center">
+            <h1 className="display-4 font-bold text-white">Detroit, MI</h1>
+            <h2 className="mt-4 h4-responsive">
+              Overview and{' '}
+              <NavLink className="text-white" to="/markets/detroit/sdp">
+                Sample Deal Package
+              </NavLink>
+            </h2>
           </Mask>
         </View>
-        <div className="container">
+        <div style={{ minHeight: '100vh' }} className="container my-5">
           <div className="row justify-content-center">
-            <div className="col-10">
+            <div className="col-12col-md-8">
               <div>{this.renderContent()}</div>
               <div>
                 <ul>{this.renderList()}</ul>
