@@ -39,10 +39,10 @@ const Footer = () => {
             <h5 className="h5-responsive">Support</h5>
             <ul>
               <li>
-                <Link to="/faq">FAQ</Link>
+                <Link to="/resources/faq">FAQ</Link>
               </li>
               <li key="nuvu">
-                <Link to="/info">NuView</Link>
+                <Link to="/info/investing/ira401k">NuView</Link>
               </li>
             </ul>
           </div>

@@ -7,9 +7,9 @@ class Detroit extends Component {
   renderContent = () => {
     const main = summary[0].body;
     return main.map((e, i) => (
-      <div className="texttext-letter-spacing" key={i}>
+      <p className="" key={i}>
         {e}
-      </div>
+      </p>
     ));
   };
   renderList = () => {

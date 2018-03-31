@@ -27,7 +27,7 @@ export default class Overview extends Component {
                 </h3>
                 <div className="border-top">
                   <div className="mt-4">
-                    <h6>
+                    <p>
                       Have you heard stats such as “80% of millionaires
                       attribute their wealth to real estate”? Or heard stories
                       of living the good life off passive cash flow from rental
@@ -38,9 +38,9 @@ export default class Overview extends Component {
                       Tired of blindly following the crowd of 401K stuffers,
                       many have started looking at why so many wealthy people
                       own real estate.
-                    </h6>
+                    </p>
 
-                    <p className="h5-responsive">
+                    <p>
                       When it comes to real estate investments, we focus
                       in multifamily apartment complexes because of the control
                       it provides in determining the investments results. Some
@@ -53,7 +53,7 @@ export default class Overview extends Component {
                       us!
                     </p>
 
-                    <p className="h5-responsive">
+                    <p>
                       In multifamily (5+ units) or other commercial investment
                       real estate, the value of the property is based on the
                       income the property produces. This is exactly why the
@@ -72,7 +72,7 @@ export default class Overview extends Component {
                       your property.
                     </p>
 
-                    <p className="h5-responsive">
+                    <p>
                       An article for more tips on ways to increase rents (some
                       may not apply to all of our investments) that our team
                       will implement to drive the value of our properties{' '}

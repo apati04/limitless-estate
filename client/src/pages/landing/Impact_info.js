@@ -26,7 +26,7 @@ export default () => {
               AND a social return on their investment.
             </h3>
             <NavLink to="/resources/impactinvesting">
-              <Button color="cyan" size="md">
+              <Button color="cyan">
                 Learn More
               </Button>
             </NavLink>
