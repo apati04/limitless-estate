@@ -1,20 +1,15 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
-import PageHeader from '../components/PageHeader';
 import {
   Button,
   Card,
   CardBody,
   CardImage,
   CardTitle,
-  CardText,
-  Container,
   Fa
 } from 'mdbreact';
 import { nuView, uDirect } from '../api/nuView';
-const style = {
-  '.mask': { cursor: 'pointer' }
-};
+
 export default class SupportCo extends Component {
   renderInfo(company) {
     const { name, phone, address, email, website, misc, logo } = company;
@@ -98,7 +93,6 @@ export default class SupportCo extends Component {
     );
   }
   render() {
-    const { name } = nuView;
     return (
       <section>
         <div className="stylish-color-dark">

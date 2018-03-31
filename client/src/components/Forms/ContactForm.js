@@ -1,19 +1,13 @@
 import React, { Component } from 'react';
 import { Input } from 'mdbreact';
 import { withFormik, Form, Field } from 'formik';
-import axios from 'axios';
 import Yup from 'yup';
 
 class ContactForm extends Component {
   render() {
     const {
-      handleBlur,
-      handleChange,
-      handleFocus,
-      values,
       errors,
       touched,
-      handleReset,
       isSubmitting
     } = this.props;
     return (

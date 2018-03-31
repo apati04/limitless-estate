@@ -1,5 +1,3 @@
-const img_path = '/img/team';
-
 module.exports = [
   {
     name: 'Kyle Mitchell',

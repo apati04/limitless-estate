@@ -1,5 +1,4 @@
 import React from 'react';
-import { Fa } from 'mdbreact';
 // const styles = {
 //   pageHeader: {
 //     height,

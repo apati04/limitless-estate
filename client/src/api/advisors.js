@@ -1,7 +1,6 @@
 /** Listing keys here to check for duplicates. will need to refactor later
  * Keys: MB, DK, JD, HL, OC
  */
-const img_path = '/img/advisors';
 module.exports = [
   {
     name: 'Michael Blank',

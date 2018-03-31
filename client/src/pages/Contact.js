@@ -1,14 +1,10 @@
 import React, { Component } from 'react';
-import PageHeader from '../components/PageHeader';
 import ContactForm from '../components/Forms/ContactForm';
 import {
   Card,
   CardImage,
   CardBody,
-  CardTitle,
-  CardText,
-  Button,
-  View
+  CardTitle
 } from 'mdbreact';
 const styles = {
   formStyle: {
