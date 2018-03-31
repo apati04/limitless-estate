@@ -33,13 +33,13 @@ class Detroit extends Component {
         </View>
         <div style={{ minHeight: '100vh' }} className="container my-5">
           <div className="row justify-content-center">
-            <div className="col-12col-md-8">
+            <div className="col-8">
               <div>{this.renderContent()}</div>
               <div>
                 <ul>{this.renderList()}</ul>
               </div>
-              <div className="col-12">
-                <NavLink to="/markets/detroit/sdp">
+              <div className="col-12 text-center">
+                <NavLink className="text-center" to="/markets/detroit/sdp">
                   <Button size="lg" color="blue">
                     Sample Deal Package
                   </Button>

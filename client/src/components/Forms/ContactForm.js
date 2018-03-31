@@ -5,11 +5,7 @@ import Yup from 'yup';
 
 class ContactForm extends Component {
   render() {
-    const {
-      errors,
-      touched,
-      isSubmitting
-    } = this.props;
+    const { errors, touched, isSubmitting } = this.props;
     return (
       <Form>
         <div className="row m-2">
@@ -24,12 +20,7 @@ class ContactForm extends Component {
             <div className="form-group">
               <Field
                 className="d-block form-control"
-                render={({ field, form }) => {
-                  console.log('theform: ', form);
-                  console.log('thefield: ', field);
-                  return <Input {...field} id="firstname" name="firstname" />;
-                }}
-                label="hey"
+                type="text"
                 name="firstname"
               />
             </div>

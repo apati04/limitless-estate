@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { withFormik, Form, Field } from 'formik';
-import { Button, Input } from 'mdbreact';
+import { Button, Input, Select } from 'mdbreact';
 import Yup from 'yup';
 
 class QuestionnaireForm extends Component {
@@ -21,12 +21,7 @@ class QuestionnaireForm extends Component {
   };
 
   render() {
-    const {
-      values,
-      isSubmitting,
-      handleChange,
-      handleBlur,
-    } = this.props;
+    const { values, isSubmitting, handleChange, handleBlur } = this.props;
     return (
       <Form className="p-5 d-flex justify-content-around flex-column">
         <div className="row">

@@ -6,7 +6,7 @@ const IconSection = () => {
     <section
       style={{ minHeight: 20 + 'em' }}
       id="landingIcons"
-      className="p-5 d-flex container flex-column flex-md-row justify-content-between align-items-center"
+      className="p-4 d-flex container flex-column flex-md-row justify-content-between align-items-center"
     >
       <IconTemplate
         icon="fas fa-child"

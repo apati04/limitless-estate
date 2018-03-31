@@ -24,7 +24,7 @@ class App extends Component {
   render() {
     return (
       <BrowserRouter>
-        <div>
+        <div id="page">
           <Switch>
             <ScrollToTop>
               <Header />

@@ -7,7 +7,9 @@ const IconTemplate = ({ icon, title, fontSize }) => {
         className={`icon-landing ${icon} mb-2`}
         style={{ fontSize: `${fontSize}` }}
       />
-      <h6 className="h5-responsive mt-2">{title}</h6>
+      <div>
+        <h5 className="h5-responsive mt-2">{title}</h5>
+      </div>
     </div>
   );
 };

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { View, Mask, Button } from 'mdbreact';
 import summary from './summary_data';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 class Columbus extends Component {
   renderContent = () => {
@@ -26,9 +26,9 @@ class Columbus extends Component {
             </h1>
             <h2 className="mt-4 h4-responsive text-white">
               Overview and{' '}
-              <NavLink className="text-white" to="/markets/columbus/sdp">
+              <Link className="text-white" to="/markets/columbus/sdp">
                 <strong>Sample Deal Package</strong>
-              </NavLink>
+              </Link>
             </h2>
           </Mask>
         </View>
@@ -39,14 +39,12 @@ class Columbus extends Component {
               <div>
                 <ul>{this.renderList()}</ul>
               </div>
-              <div className="col-12">
-                <div className="text-right">
-                  <NavLink to="/markets/columbus/sdp">
-                    <Button className="text-right" size="lg" color="blue">
-                      Sample Deal Package
-                    </Button>
-                  </NavLink>
-                </div>
+              <div className="col-12 text-center">
+                <Link to="/markets/columbus/sdp">
+                  <Button size="lg" color="blue">
+                    Sample Deal Package
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>

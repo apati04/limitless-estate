@@ -5,31 +5,36 @@ import MapBox from '../../components/MapBox';
 import StickyBox from 'react-sticky-box';
 import PageHeader from '../../components/PageHeader';
 
-const imgURL = '/img/pageheader.jpg';
 const description = 'Sample Deal Package';
 const title = 'Arlington Heights';
 /**
  * Finacial Statements
  */
-const FINANCE = '/img/columbus/financials';
-const acquisitionSummary = `${FINANCE}/acq_sum.jpg`;
-const rentRoll = `${FINANCE}/rentRoll.png`;
-const incomeActual = `${FINANCE}/incomeActual.jpg`;
-const PLFiveYears = `${FINANCE}/PLFiveYears.jpg`;
-const equityReturn = `${FINANCE}/equityReturn.jpg`;
-const projectedCashFlows = `${FINANCE}/projectedCashFlows.jpg`;
+
 const pdfFile =
-  'https://drive.google.com/open?id=19YL-vDPDwsR0GR7L1mLoUWOvCqX3Xb8E';
+  'https://drive.google.com/file/d/1ZEywS1ClTgyRkVqfwGcISMzyPMhwDwgF/view';
 class Columbus extends Component {
   render() {
     return (
       <div data-wow-delay="1s" className="animated fadeIn">
-        <PageHeader title={title} description={description} img={imgURL} />
-        <section style={{ height: 100 + 'em' }} className="py-3">
+        <PageHeader title={title} description={description} />
+        <section className="py-3">
           <div className="container">
             <div className="row justify-content-between">
               <div className="col-12 col-lg-8 mt-4">
                 {/* building stats */}
+                <div
+                  style={{ height: 100 + 'em' }}
+                  className="embed-responsive embed-responsive-1by1"
+                >
+                  <iframe
+                    src={pdfFile}
+                    width="640"
+                    height="480"
+                    allowFullScreen
+                    title="sdpcol"
+                  />
+                </div>
 
                 <hr />
                 <h5 className="mb-4">
@@ -46,7 +51,7 @@ class Columbus extends Component {
                     </a>
                   </div>
                   <div>
-                    <Link to="/markets">Back to Markets</Link>
+                    <Link to="/">Back to Home</Link>
                   </div>
                 </form>
               </div>

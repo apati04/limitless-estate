@@ -5,7 +5,7 @@ module.exports = [
     type: 'Team',
     photo: {
       url: `https://i.imgur.com/qC2iaYa.jpg?1`,
-      size: '220px'
+      size: '300px'
     },
     resume:
       'https://drive.google.com/file/d/1AkzYG9obV9Lsa6JTWlitH9bgDC_SL3I7/view?usp=sharing'
@@ -16,19 +16,8 @@ module.exports = [
     type: 'Team',
     photo: {
       url: `https://i.imgur.com/Lok4G0b.jpg?1`,
-      size: '220px'
+      size: '300px'
     },
     resume: 'https://drive.google.com/open?id=1ewP7ET59BbCna0f79IIQH-qdyv4MtcjN'
-  },
-  {
-    name: 'Luis Cruz',
-    title: 'Vice President',
-    type: 'Team',
-    photo: {
-      url: `https://i.imgur.com/EifNUG3.jpg`,
-      size: '220px'
-    },
-    resume:
-      'https://drive.google.com/file/d/1BUbxz73jLFnzi0vb1ks3o-gb8Gx0mRpb/view?usp=sharing'
   }
 ];

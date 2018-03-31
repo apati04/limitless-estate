@@ -3,17 +3,14 @@ import IconSection from '../components/IconSection';
 import LandingParallax from '../components/LandingParallax';
 import InfoSection from '../components/InfoSection';
 import MemberSection from '../components/landing_section/MemberSection';
-import Carosuel from '../components/PicCarousel';
+import PicCarousel from '../components/PicCarousel';
 import ImpactInfo from './landing/Impact_info';
 import IraInfo from './landing/Ira_info';
 class LandingPage extends Component {
-  componentWillReceiveProps(nextProps) {
-    console.log('nextProps: ', nextProps);
-  }
   render() {
     return (
       <div>
-        <Carosuel />
+        <PicCarousel />
         <IconSection />
         <LandingParallax />
         <InfoSection />
