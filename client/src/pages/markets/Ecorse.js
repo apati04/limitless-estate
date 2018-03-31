@@ -51,7 +51,7 @@ class Ecorse extends Component {
                   <iframe
                     className="embed-responsive-item"
                     src="https://drive.google.com/file/d/19YL-vDPDwsR0GR7L1mLoUWOvCqX3Xb8E/preview"
-                    allowfullscreen
+                    allowFullScreen
                   />
                 </div>
 

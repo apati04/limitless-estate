@@ -1,36 +1,33 @@
 import React, { Component } from 'react';
 /** api array of objects*/
 
-import {
-  View,
-  Mask
-} from 'mdbreact';
-
+import { View, Mask, Jumbotron } from 'mdbreact';
+const styles = {
+  header: {
+    padding: '0, 0, 0, 0',
+    background: 'url(https://i.imgur.com/f4FJAIJ.jpg?1) center no-repeat',
+    backgroundSize: 'cover',
+    height: 25 + 'em'
+  }
+};
 export default class Overview extends Component {
   render() {
+    const imgUrl = 'https://i.imgur.com/f4FJAIJ.jpg?1';
     return (
-      <section data-wow-delay="1s" className="animated fadeIn" id="overview">
-        <View className="hm-black-slight">
-          <img
-            className="img-fluid h-100 w-100"
-            src="https://i.imgur.com/f4FJAIJ.jpg"
-            alt=""
-          />
-          <Mask className="d-flex flex-center align-items-center " />
-        </View>
-        <div className="container ">
+      <section id="overview">
+        <div style={styles.header} />
+
+        <div className="container">
           <div className="row justify-content-around py-3">
             <div className="col-12 col-lg-8 col-md-12">
-              <h2 className="pb-2 h2-responsive font-italic border-bottom">
-                Overview
-              </h2>
-              <div className="blog-post">
-                <h3 className="h3-responsive p-2 mb-2">
+              <h2 className="pb-2 h2-responsive border-bottom">Overview</h2>
+              <div>
+                <h3 className=" h5-responsive p-2 mb-2">
                   Why Invest In Multifamily?
                 </h3>
                 <div className="border-top">
-                  <div className="mt-4 text-left text-letter-spacing">
-                    <p className="h6-responsive ">
+                  <div className="mt-4">
+                    <h6>
                       Have you heard stats such as “80% of millionaires
                       attribute their wealth to real estate”? Or heard stories
                       of living the good life off passive cash flow from rental
@@ -41,9 +38,9 @@ export default class Overview extends Component {
                       Tired of blindly following the crowd of 401K stuffers,
                       many have started looking at why so many wealthy people
                       own real estate.
-                    </p>
+                    </h6>
 
-                    <p>
+                    <p className="h5-responsive">
                       When it comes to real estate investments, we focus
                       in multifamily apartment complexes because of the control
                       it provides in determining the investments results. Some
@@ -56,7 +53,7 @@ export default class Overview extends Component {
                       us!
                     </p>
 
-                    <p>
+                    <p className="h5-responsive">
                       In multifamily (5+ units) or other commercial investment
                       real estate, the value of the property is based on the
                       income the property produces. This is exactly why the
@@ -75,7 +72,7 @@ export default class Overview extends Component {
                       your property.
                     </p>
 
-                    <p>
+                    <p className="h5-responsive">
                       An article for more tips on ways to increase rents (some
                       may not apply to all of our investments) that our team
                       will implement to drive the value of our properties{' '}

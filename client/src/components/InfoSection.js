@@ -15,23 +15,29 @@ const InfoSection = () => {
         <div className="row align-items-center justify-content-center text-left">
           <div className="col-12 col-md-6">
             <ul className="p-0 list-group-flush">
-              <li className="list-group-item">Appreciation</li>
-              <li className="list-group-item">More Control Over Returns</li>
-              <li className="list-group-item">Cash Flow</li>
-              <li className="list-group-item">
+              <li className="list-group-item h5-responsive">Appreciation</li>
+              <li className="list-group-item h5-responsive">
+                More Control Over Returns
+              </li>
+              <li className="list-group-item h5-responsive">Cash Flow</li>
+              <li className="list-group-item h5-responsive">
                 Accelerated Depreciation &amp; Cost Segregation
               </li>
-              <li className="list-group-item">Tax Benefits</li>
-              <li className="list-group-item">Leveraging Debt</li>
-              <li className="list-group-item">
+              <li className="list-group-item h5-responsive">Tax Benefits</li>
+              <li className="list-group-item h5-responsive">Leveraging Debt</li>
+              <li className="list-group-item h5-responsive">
                 Inflation Induced Debt Destruction
               </li>
-              <li className="list-group-item">
+              <li className="list-group-item h5-responsive">
                 Less Volatile than the Stock Market
               </li>
-              <li className="list-group-item">Tenants Pay Down the Debt</li>
-              <li className="list-group-item">Everyone Needs Housing</li>
-              <li className="list-group-item">
+              <li className="list-group-item h5-responsive">
+                Tenants Pay Down the Debt
+              </li>
+              <li className="list-group-item h5-responsive">
+                Everyone Needs Housing
+              </li>
+              <li className="list-group-item h5-responsive">
                 National Housing Shortage of 3.9 million units
               </li>
             </ul>
@@ -45,7 +51,7 @@ const InfoSection = () => {
             <Link to="/resources">
               <button
                 size="lg"
-                className="btn btn-block btn-outline-danger p-2 mt-4"
+                className="h5-responsive btn btn-block btn-outline-danger p-2 mt-4"
               >
                 Learn More
               </button>
