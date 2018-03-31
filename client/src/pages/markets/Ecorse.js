@@ -70,7 +70,7 @@ class Ecorse extends Component {
                     </a>
                   </div>
                   <div>
-                    <Link to="/markets">Back To Markets</Link>
+                    <Link to="/">Back To Home</Link>
                   </div>
                 </form>
               </div>

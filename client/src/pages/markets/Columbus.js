@@ -25,11 +25,20 @@ class Columbus extends Component {
     return (
       <div data-wow-delay="1s" className="animated fadeIn">
         <PageHeader title={title} description={description} img={imgURL} />
-        <section style={{ height: 100 + 'em' }} className="py-3">
+        <section className="py-3">
           <div className="container">
             <div className="row justify-content-between">
               <div className="col-12 col-lg-8 mt-4">
                 {/* building stats */}
+                <div
+                  style={{ height: 100 + 'em' }}
+                  className="embed-responsive embed-responsive-16by9"
+                >
+                  <iframe
+                    src="https://drive.google.com/file/d/1MiUi-BOB0YI7dGlsvuuTp3SaXk9c52eu/preview"
+                    allowfullscreen
+                  />
+                </div>
 
                 <hr />
                 <h5 className="mb-4">
@@ -46,7 +55,7 @@ class Columbus extends Component {
                     </a>
                   </div>
                   <div>
-                    <Link to="/markets">Back to Markets</Link>
+                    <Link to="/">Back to Home</Link>
                   </div>
                 </form>
               </div>
