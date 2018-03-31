@@ -14,6 +14,9 @@ import {
   Container
 } from 'mdbreact';
 
+const styles = {
+  hoverDropdown: {}
+};
 class Navigation extends Component {
   state = {
     collapse: false,
@@ -39,12 +42,12 @@ class Navigation extends Component {
         expand="md"
         sticky="top"
         style={{ borderRadius: 0 }}
-        className="blue"
+        className="blue p-2 m-0"
       >
         <Container>
           <NavbarBrand to="/">
             <img
-              height="55"
+              height="50"
               src="https://i.imgur.com/6TpCmWV.png"
               className="d-inline-block ml-auto"
               alt=""
@@ -53,7 +56,7 @@ class Navigation extends Component {
           {!this.state.isWideEnough && <NavbarToggler onClick={this.onClick} />}
 
           <Collapse isOpen={this.state.collapse} navbar>
-            <NavbarNav className="mx-auto ml-auto">
+            <NavbarNav className="d-flex align-items-center mx-auto ml-auto">
               <NavItem className="m-1">
                 <NavLink
                   exact
@@ -65,49 +68,47 @@ class Navigation extends Component {
                   Home
                 </NavLink>
               </NavItem>
-              <NavItem className="m-1">
-                <Dropdown
-                  isOpen={this.state.dropdownOpen2}
-                  toggle={this.toggle2}
+              <NavItem className="nav-item dropdown m-1">
+                <a
+                  className="h5-responsive text-white nav-link dropdown-toggle"
+                  id="navbarDropdownMenuLink"
+                  aria-haspopup="true"
+                  aria-expanded="false"
                 >
-                  <DropdownToggle
-                    className="h5-responsive nav-item p-0"
-                    style={{ color: 'white' }}
-                    nav
-                    caret
-                  >
-                    Markets
-                  </DropdownToggle>
-                  <DropdownMenu>
-                    <DropdownItem>
-                      <NavLink
-                        exact
-                        style={{ color: 'white' }}
-                        activeStyle={{ fontWeight: 500 }}
-                        className="h5-responsive"
-                        to="/markets/columbus/summary"
-                      >
-                        Columbus, OH
-                      </NavLink>
-                    </DropdownItem>
-                    <DropdownItem>
-                      <NavLink
-                        exact
-                        style={{ color: 'white' }}
-                        activeStyle={{ fontWeight: 500 }}
-                        className="h5-responsive"
-                        to="/markets/detroit/summary"
-                      >
-                        Detroit, MI
-                      </NavLink>
-                    </DropdownItem>
-                  </DropdownMenu>
-                </Dropdown>
+                  Markets
+                </a>
+                <div
+                  aria-labelledby="navbarDropdownMenuLink"
+                  className="dropdown-menu"
+                >
+                  <DropdownItem>
+                    <NavLink
+                      exact
+                      style={{ color: 'white' }}
+                      activeStyle={{ fontWeight: 500 }}
+                      className="h5-responsive"
+                      to="/markets/columbus/summary"
+                    >
+                      Columbus, OH
+                    </NavLink>
+                  </DropdownItem>
+                  <DropdownItem>
+                    <NavLink
+                      exact
+                      style={{ color: 'white' }}
+                      activeStyle={{ fontWeight: 500 }}
+                      className="h5-responsive"
+                      to="/markets/detroit/summary"
+                    >
+                      Detroit, MI
+                    </NavLink>
+                  </DropdownItem>
+                </div>
               </NavItem>
               <NavItem className="m-1">
                 <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
                   <DropdownToggle
-                    className="h5-responsive nav-item p-0"
+                    className="h5-responsive nav-item"
                     style={{ color: 'white' }}
                     nav
                     caret
