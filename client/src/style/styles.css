@@ -27,6 +27,16 @@ h6 {
   font-size-adjust: 0.5;
 }
 
+.dropdown:hover > .dropdown-menu {
+  display: block !important;
+  margin: -0.125rem 0 0 !important;
+  color: 'red';
+}
+.dropdown > .dropdown-toggle:active {
+  /* pointer-events: none !important; */
+  color: 'black' !important;
+}
+
 #page {
   font-size: 1em;
   /* equivalent to 16px */
