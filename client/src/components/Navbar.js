@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import {
   Navbar,
   NavbarBrand,
@@ -45,13 +45,15 @@ class Navigation extends Component {
         className="blue p-2 m-0"
       >
         <Container>
-          <NavbarBrand to="/">
-            <img
-              height="50"
-              src="https://i.imgur.com/6TpCmWV.png"
-              className="d-inline-block ml-auto"
-              alt=""
-            />
+          <NavbarBrand>
+            <Link to="/">
+              <img
+                height="50"
+                src="https://i.imgur.com/6TpCmWV.png"
+                className="d-inline-block ml-auto"
+                alt=""
+              />
+            </Link>
           </NavbarBrand>
           {!this.state.isWideEnough && <NavbarToggler onClick={this.onClick} />}
 
@@ -158,6 +160,17 @@ class Navigation extends Component {
                         to="/resources/faq"
                       >
                         FAQ
+                      </NavLink>
+                    </DropdownItem>
+                    <DropdownItem>
+                      <NavLink
+                        exact
+                        style={{ color: 'white' }}
+                        activeStyle={{ fontWeight: 500 }}
+                        className="h5-responsive"
+                        to="/info/investing/ira401k"
+                      >
+                        401K/IRA
                       </NavLink>
                     </DropdownItem>
                   </DropdownMenu>

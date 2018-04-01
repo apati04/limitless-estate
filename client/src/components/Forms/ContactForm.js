@@ -111,5 +111,6 @@ export default withFormik({
     console.log(payload);
     resetForm();
     setSubmitting(false);
+    alert("Thank you, one of our team members will contact you soon.");
   }
 })(ContactForm);

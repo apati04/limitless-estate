@@ -24,7 +24,7 @@ class Contact extends Component {
               >
                 <Card className="align-center animated fadeIn z-depth-4" narrow>
                   <CardImage tag="div">
-                    <div className="view gradient card-header text-align-center peach-gradient">
+                    <div className="view gradient-card-header blue-gradient text-align-center peach-gradient">
                       <CardTitle className=" h2-responsive text-center">
                         Contact Us
                       </CardTitle>
