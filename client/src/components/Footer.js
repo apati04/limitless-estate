@@ -27,9 +27,6 @@ const Footer = () => {
           <div className="col-auto">
             <h5 className="h5-responsive">About us</h5>
             <ul>
-              <li key="fCi">
-                <Link to="/about">Company Information</Link>
-              </li>
               <li key="fcon">
                 <Link to="/info/contact">Contact us</Link>
               </li>
