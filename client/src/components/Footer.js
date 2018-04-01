@@ -16,30 +16,8 @@ const Footer = () => {
               <li key="fHome">
                 <Link to="/">Home</Link>
               </li>
-              <li key="fDl">
-                <Link to="/resources">Downloads</Link>
-              </li>
               <li key="fDl3">
                 <Link to="/info/questionnaire">Questionnaire</Link>
-              </li>
-            </ul>
-          </div>
-          <div className="col-auto">
-            <h5 className="h5-responsive">About us</h5>
-            <ul>
-              <li key="fcon">
-                <Link to="/info/contact">Contact us</Link>
-              </li>
-            </ul>
-          </div>
-          <div className="col-auto">
-            <h5 className="h5-responsive">Support</h5>
-            <ul>
-              <li>
-                <Link to="/resources/faq">FAQ</Link>
-              </li>
-              <li key="nuvu">
-                <Link to="/info/investing/ira401k">NuView</Link>
               </li>
             </ul>
           </div>
