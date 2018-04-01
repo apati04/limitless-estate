@@ -62,7 +62,7 @@ class MemberSection extends Component {
   };
   render() {
     return (
-      <section className="py-2 text-center text-white stylish-color">
+      <section className="py-2 text-center text-white mdb-color">
         <div style={{ color: '#f7f7f7' }} className="p-5 container">
           <h1 className="display-4 team-header ">Meet the Team</h1>
           <hr />
