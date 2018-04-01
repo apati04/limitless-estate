@@ -97,7 +97,7 @@ export default class SupportCo extends Component {
       <section>
         <div className="stylish-color-dark">
           <div
-            style={{ height: 30 + 'em' }}
+            style={{ height: 25 + 'em' }}
             className="row animated fadeIn  mb-5 justify-content-center align-items-center"
           >
             <div className="col-12">
@@ -107,9 +107,11 @@ export default class SupportCo extends Component {
             </div>
           </div>
         </div>
-        <div className="row">
-          <div className="col-12 col-sm-6">{this.renderInfo(nuView)}</div>
-          <div className="col-12 col-sm-6">{this.renderInfo(uDirect)}</div>
+        <div className="container my-5">
+          <div className="row">
+            <div className="col-12 col-sm-6">{this.renderInfo(nuView)}</div>
+            <div className="col-12 col-sm-6">{this.renderInfo(uDirect)}</div>
+          </div>
         </div>
       </section>
     );
