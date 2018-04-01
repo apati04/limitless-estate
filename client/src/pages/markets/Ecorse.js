@@ -27,8 +27,7 @@ const projectedCashFlows = `${FINANCE}/projectedCashFlows.jpg`;
 class Ecorse extends Component {
   render() {
     const imgURL = '/img/ecorse/ec2.jpg';
-    const description = 'Sample Deal Package';
-    const title = 'River Park & Jefferson Manor';
+    const title = 'Sample Deal Package';
 
     return (
       <div>
@@ -36,7 +35,6 @@ class Ecorse extends Component {
           height="320px"
           title={title}
           bgPos="800px -430px"
-          description={description}
           img={imgURL}
         />
         <section className="animated fadeIn py-3">

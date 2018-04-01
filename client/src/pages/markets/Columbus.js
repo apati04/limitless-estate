@@ -5,8 +5,7 @@ import MapBox from '../../components/MapBox';
 import StickyBox from 'react-sticky-box';
 import PageHeader from '../../components/PageHeader';
 
-const description = 'Sample Deal Package';
-const title = 'Arlington Heights';
+const title = 'Sample Deal Package';
 /**
  * Finacial Statements
  */
@@ -17,7 +16,7 @@ class Columbus extends Component {
   render() {
     return (
       <div data-wow-delay="1s" className="animated fadeIn">
-        <PageHeader title={title} description={description} />
+        <PageHeader title={title} />
         <section className="py-3">
           <div className="container">
             <div className="row justify-content-between">
