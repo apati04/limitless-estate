@@ -7,7 +7,7 @@ class Columbus extends Component {
   renderContent = () => {
     const main = summary[0].body;
     return main.map((e, i) => (
-      <p className="" key={i}>
+      <p className="text-left" key={i}>
         {e}
       </p>
     ));
@@ -32,20 +32,21 @@ class Columbus extends Component {
             </h2>
           </Mask>
         </View>
-        <div style={{ minHeight: '100vh' }} className="container my-5">
-          <div className="row justify-content-center">
+        <div className="container-fluid my-5">
+          <div className="row no-gutters justify-content-center">
             <div className="col-12 col-md-8">
               {this.renderContent()}
-              <div>
-                <ul>{this.renderList()}</ul>
-              </div>
-              <div className="col-12 text-center">
-                <Link to="/markets/columbus/sdp">
-                  <Button size="lg" color="blue">
-                    Sample Deal Package
-                  </Button>
-                </Link>
-              </div>
+
+              <ul style={{ listStyle: 'inside' }} className="p-0">
+                {this.renderList()}
+              </ul>
+            </div>
+            <div className="col-12 text-center">
+              <Link to="/markets/columbus/sdp">
+                <Button className="h5" size="lg" color="blue">
+                  View Sample Deal Package
+                </Button>
+              </Link>
             </div>
           </div>
         </div>

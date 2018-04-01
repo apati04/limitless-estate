@@ -12,27 +12,27 @@ const title = 'Arlington Heights';
  */
 
 const pdfFile =
-  'https://drive.google.com/file/d/1ZEywS1ClTgyRkVqfwGcISMzyPMhwDwgF/view';
+  'https://drive.google.com/file/d/1ZEywS1ClTgyRkVqfwGcISMzyPMhwDwgF/view?usp=sharing';
 class Columbus extends Component {
   render() {
     return (
       <div data-wow-delay="1s" className="animated fadeIn">
         <PageHeader title={title} description={description} />
-        <section className="py-3">
+        <section>
           <div className="container">
             <div className="row justify-content-between">
               <div className="col-12 col-lg-8 mt-4">
                 {/* building stats */}
                 <div
                   style={{ height: 100 + 'em' }}
-                  className="embed-responsive embed-responsive-1by1"
+                  className="embed-responsive embed-responsive-16by9"
                 >
                   <iframe
-                    src={pdfFile}
+                    className="embed-responsive-item"
+                    src="https://drive.google.com/file/d/1ZEywS1ClTgyRkVqfwGcISMzyPMhwDwgF/preview"
                     width="640"
                     height="480"
                     allowFullScreen
-                    title="sdpcol"
                   />
                 </div>
 

@@ -12,29 +12,26 @@ export default ({
   pageFooter
 }) => {
   return (
-    <section>
+    <section className="h-100">
       <View
         style={{
-          height: 40 + 'em',
+          height: 25 + 'em',
           backgroundImage: `url(${headerImage})`,
           backgroundSize: 'cover',
           backgroundRepeat: 'no-repeat',
-          backgroundPosition: '50% 50%'
+          backgroundPosition: 'center'
         }}
         className={overlayColor}
       >
         <Mask className={`flex-center ${pattern}`} />
       </View>
-      <div className="container d-flex justify-content-between py-3">
-        <div className="p-1 col-lg-8 col-md-12">
-          <div className="blog-post">
-            <h2 className="blog-post-title mb-2">{title}</h2>
-            <p className="blog-post-meta font-italic font-weight-bold">
-              {subTitle}
-            </p>
+      <div className="container">
+        <div className="row justify-content-around py-3">
+          <div className="col-12 col-lg-8 col-md-12 text-align-left">
+            <h2 className="h3-responsive mb-2">{title}</h2>
             <div className="border-bottom" />
             <div className="mt-4">{body}</div>
-
+            <p>{subTitle}</p>
             {pageFooter}
           </div>
         </div>
