@@ -2,23 +2,42 @@ import React, { Component } from 'react';
 import { View, Mask, Button } from 'mdbreact';
 import summary from './summary_data';
 import { Link } from 'react-router-dom';
-
+import Article from '../../components/templates/Article';
 class Columbus extends Component {
   renderContent = () => {
     const main = summary[0].body;
-    return main.map((e, i) => (
-      <p className="text-left" key={i}>
-        {e}
-      </p>
-    ));
-  };
-  renderList = () => {
     const { list } = summary[1];
-    return list.map((e, i) => <li key={i}>{e}</li>);
+    const body = main.map((e, i) => <p key={i}>{e}</p>);
+    const listItems = list.map((e, i) => <li key={i}>{e}</li>);
+    return (
+      <div>
+        {body}
+        <ul>{listItems}</ul>
+      </div>
+    );
   };
+  renderList = () => {};
   render() {
     return (
       <div>
+        <div className="animated fadeIn rgba-blue-grey-slight">
+          <Article
+            headerImage="https://i.imgur.com/YXieUK4.jpg"
+            overlayColor="hm-purple-slight"
+            title="What is Impact Investing?"
+            subTitle="Often called a “double bottom line” investment, impact investing enables investors to put their money to good use in meaningful, intelligent ventures that provide both a financial AND a social return on their investment."
+            circleImage="https://i.imgur.com/2A3IGvX.jpg?1"
+            body={this.renderContent()}
+          />
+        </div>
+      </div>
+    );
+  }
+}
+
+export default Columbus;
+/*
+   <div>
         <View className="bg-mdb-color" style={{ height: 22 + 'em' }}>
           <Mask className="flex-column flex-center">
             <h1 className="h1-responsive text-white font-bold">
@@ -51,8 +70,4 @@ class Columbus extends Component {
           </div>
         </div>
       </div>
-    );
-  }
-}
-
-export default Columbus;
+*/

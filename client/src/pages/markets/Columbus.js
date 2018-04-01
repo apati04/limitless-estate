@@ -4,7 +4,6 @@ import FadeIn from '../../components/FadeIn';
 import MapBox from '../../components/MapBox';
 import StickyBox from 'react-sticky-box';
 import PageHeader from '../../components/PageHeader';
-
 const title = 'Sample Deal Package';
 /**
  * Finacial Statements
@@ -34,7 +33,6 @@ class Columbus extends Component {
                     allowFullScreen
                   />
                 </div>
-
                 <hr />
                 <h5 className="mb-4">
                   Sound like the right investment for you?
@@ -54,50 +52,11 @@ class Columbus extends Component {
                   </div>
                 </form>
               </div>
-
               <div className="col-12 col-lg-4 mt-4 d-none d-lg-block">
                 <StickyBox style={{ marginTop: '-100px', paddingTop: '100px' }}>
                   <MapBox address="2201 Riverside Drive, Columbus, OH" />
                 </StickyBox>
               </div>
-
-              {/* Each modal must be registered below */}
-              {/* <RegisterModal
-                id="acquisition"
-                title="Acquisition Summary"
-                body={
-                  <div>
-                <img src={acq_sum} className="img-fluid" />
-                <hr />
-                <small>
-                Closing costs includes origination fees, appraisal, property inspection, legal fees, recording
-                fees, and transfer taxes. The acquisition fee is payable to Limitless Estates, LLC at closing.
-                Repair escrows are kept in the operating account until needed.
-                </small>
-                  </div>
-                }
-                />
-                <RegisterModal
-                id="incomeSummary"
-                title="Income Expenses"
-                size="modal-lg"
-                body={
-                  <div>
-                <img src={income_expenses_img} />
-                  </div>
-                }
-                />
-                <RegisterModal
-                id="rentroll"
-                title="Rent Roll"
-                size="modal-xl"
-                body={
-                  <div>
-                    <img src="/img/columbus/rentroll1.jpg" className="img-fluid" />
-                    <img src="/img/columbus/rentroll.jpg" className="img-fluid" />
-                  </div>
-                }
-              /> */}
             </div>
           </div>
         </section>
