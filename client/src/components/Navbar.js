@@ -46,17 +46,15 @@ class Navigation extends Component {
       >
         <Container>
           <Link to="/">
-            <NavbarBrand>
-              <img
-                height="50"
-                src="https://i.imgur.com/6TpCmWV.png"
-                className="d-inline-block ml-auto"
-                alt=""
-              />
-            </NavbarBrand>
+            >
+            <img
+              height="50"
+              src="https://i.imgur.com/6TpCmWV.png"
+              className="d-inline-block ml-auto"
+              alt=""
+            />
           </Link>
           {!this.state.isWideEnough && <NavbarToggler onClick={this.onClick} />}
-
           <Collapse isOpen={this.state.collapse} navbar>
             <NavbarNav className="d-flex align-items-center mx-auto ml-auto">
               <NavItem className="m-1">

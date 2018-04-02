@@ -62,22 +62,31 @@ class MemberSection extends Component {
   };
   render() {
     return (
-      <section className="py-2 text-center text-white mdb-color">
-        <div style={{ color: '#f7f7f7' }} className="p-5 container">
-          <h1 className="display-4 team-header ">Meet the Team</h1>
-          <hr />
-          <div className="row d-flex justify-content-around align-items-baseline flex-wrap">
-            {this.renderCards(Team)}
+      <section className="py-2 text-center ">
+        <div className="mdb-color lighten-1">
+          <div
+            style={{ color: '#f7f7f7' }}
+            className="p-5 container  text-white"
+          >
+            <h1 className="display-4 team-header ">Meet the Team</h1>
+            <hr />
+            <div className="row d-flex justify-content-around align-items-baseline flex-wrap">
+              {this.renderCards(Team)}
+            </div>
           </div>
         </div>
-        <div style={{ color: '#f7f7f7' }} className="mb-5 p-5 container">
-          <h1 className="display-4 team-header">Our Advisors</h1>
-          <hr />
-          <div className="container d-flex justify-content-around flex-wrap">
-            {this.renderCards(Advisors)}
-          </div>
-          <div className="container d-flex justify-content-around flex-wrap">
-            {this.renderCards(Advisors2)}
+        <div>
+          <div className="h-100 rgba-white-light">
+            <div className="mb-5 p-5 container text-black">
+              <h1 className="display-4 team-header">Our Advisors</h1>
+              <hr />
+              <div className="container d-flex justify-content-around flex-wrap">
+                {this.renderCards(Advisors)}
+              </div>
+              <div className="container d-flex justify-content-around flex-wrap">
+                {this.renderCards(Advisors2)}
+              </div>
+            </div>
           </div>
         </div>
       </section>

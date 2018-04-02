@@ -24,7 +24,7 @@ class App extends Component {
   render() {
     return (
       <BrowserRouter>
-        <div id="page">
+        <div>
           <Switch>
             <ScrollToTop>
               <Header />
@@ -66,10 +66,9 @@ class App extends Component {
                 component={SupportCo}
               />
               <Route exact path="/" component={LandingPage} />
+              <Footer />
             </ScrollToTop>
           </Switch>
-
-          <Footer />
         </div>
       </BrowserRouter>
     );

@@ -15,28 +15,11 @@ const Questionnaire = () => {
       className="animated fadeIn hm-black-light"
     >
       <div className="full-bg-img">
-        <div className="container">
-          <div className="row no-gutters">
-            <Card className="animated fadeInUp z-depth-4" narrow>
-              <CardImage tag="div">
-                <div className="view gradient-card-header blue-gradient">
-                  <h2 className="h2-responsive">
-                    Investor Qualifier Questionnaire
-                  </h2>
-                  <p>
-                    Please fill out the questions below to let us know more
-                    about you!
-                  </p>
-                  <p style={{ padding: 0 }} className="m-0 p-0">
-                    One of our team members will contact you soon to let you
-                    know how you can make an impact!
-                  </p>
-                </div>
-              </CardImage>
-              <CardBody>
-                <QuestionnaireForm />
-              </CardBody>
-            </Card>
+        <div className="container-fluid">
+          <div className="row flex-center no-gutters">
+            <div className="col-12 col-xl-10">
+              <QuestionnaireForm />
+            </div>
           </div>
         </div>
       </div>

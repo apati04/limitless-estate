@@ -55,12 +55,12 @@ class PicCarousel extends Component {
       <Mask className="d-flex flex-column justify-content-center align-items-center">
         <div className="row w-75 align-items-center justify-content-center">
           <div className="col">
-            <h3 className="h3-responsive mb-4 text-center white-text">
+            <h3 className="h5-responsive mb-4 text-center white-text">
               Our vision at Limitless Estates is to provide A-class living to
               lower income housing by putting our residents first and instilling
               a sense of community while inspiring others to do the same.
             </h3>
-            <h3 className="h3-responsive mb-4 text-center white-text">
+            <h3 className="h5-responsive mb-4 text-center white-text">
               Our mission is to positively impact the lives of the people in our
               local neighborhoods through{' '}
               <a style={{ color: 'cyan' }} href="/resources/impactinvesting">
