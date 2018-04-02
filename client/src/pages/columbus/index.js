@@ -1,9 +1,24 @@
 import React, { Component } from 'react';
-import { View, Mask, Button, Card, CardImage } from 'mdbreact';
+import {
+  Button,
+  Card,
+  CardImage,
+  CardBody,
+  CardText,
+  CardTitle,
+  Container,
+  View
+} from 'mdbreact';
 import summary from './summary_data';
 import { NavLink, Link } from 'react-router-dom';
 import Article from '../../components/templates/Article';
-
+const styles = {
+  header: {
+    background: `url(${'https://i.imgur.com/BZOlfik.jpg?1'})center center no-repeat`,
+    backgroundSize: 'cover',
+    height: 27 + 'em'
+  }
+};
 class Columbus extends Component {
   renderContent = () => {
     const main = summary[0].body;
@@ -13,7 +28,7 @@ class Columbus extends Component {
     return (
       <div>
         {body}
-        <ul style={{ listStyle: 'inside' }} className="p-0">
+        <ul style={{ padding: 0, listStyle: 'inside' }} className="p-0">
           {listItems}
         </ul>
       </div>
@@ -23,13 +38,28 @@ class Columbus extends Component {
   render() {
     return (
       <Card>
-        <div className="container my-5">
-          <div className="row justify-content-center">
-            <div className="col-8">
-              <h1 className="display-4 font-bold text-white">Columbus, OH</h1>
-              <div>{this.renderContent()}</div>
-              <div />
-              <div className="col-12 text-center">
+        <CardImage tag="div">
+          <div style={styles.header} />
+        </CardImage>
+
+        <div className="view hm-black-light">
+          <CardImage
+            style={{ height: 27 + 'em' }}
+            src="https://i.imgur.com/3qqAILY.jpg?1"
+            className="d-sm-none d-block im-fluid"
+          />
+        </div>
+        <CardBody>
+          <Container>
+            <div className="row justify-content-around text-left">
+              <div className="col-12 col-md-8">
+                <h2 className="h4-responsive">Columnbus, Oh Information</h2>
+                <NavLink to="/markets/columbus/sdp">
+                  <strong>Sample Deal Package</strong>
+                </NavLink>
+                {this.renderContent()}
+              </div>
+              <div className="col-12 col-md-8">
                 <NavLink className="white-text" to="/markets/columbus/sdp">
                   <Button size="lg" color="blue">
                     Sample Deal Package
@@ -37,8 +67,8 @@ class Columbus extends Component {
                 </NavLink>
               </div>
             </div>
-          </div>
-        </div>
+          </Container>
+        </CardBody>
       </Card>
     );
   }
