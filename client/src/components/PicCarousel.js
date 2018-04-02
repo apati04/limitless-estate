@@ -33,12 +33,10 @@ class PicCarousel extends Component {
     const prevItem = this.state.activeItem - 1;
     if (prevItem < 1) {
       this.setState(function(prevState, props) {
-        console.log('props: ', props);
         return { activeItem: prevState.maxLength };
       });
     } else {
       this.setState(function(prevState, props) {
-        console.log('props 37: ', props);
         const newItem = prevState.activeItem - 1;
         return {
           activeItem: newItem
@@ -77,7 +75,7 @@ class PicCarousel extends Component {
         </div>
       </Mask>
     );
-    console.log(this.newRef);
+
     return (
       <section>
         <Carousel
@@ -86,7 +84,7 @@ class PicCarousel extends Component {
           next={this.next}
           ref={this.newRef}
         >
-          <CarouselInner ref={this.newRef} className="carousel-fade">
+          <CarouselInner className="carousel-fade">
             <CarouselItem itemId="2">
               <View className="hm-black-light">
                 <img

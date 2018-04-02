@@ -20,7 +20,7 @@ class Contact extends Component {
                   marginTop: 5 + 'em',
                   marginBottom: 10 + 'em'
                 }}
-                className="col-12 col-md-8"
+                className="col-12 col-md-6"
               >
                 <Card className="align-center animated fadeIn z-depth-4" narrow>
                   <CardImage tag="div">

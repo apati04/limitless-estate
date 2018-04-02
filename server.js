@@ -47,7 +47,7 @@ app.post('/api/sendmail', (req, res) => {
     `
   };
   transporter.sendMail(mailOptions);
-  res.send('complete');
+  res.redirect('/');
 });
 
 app.get('/api/pdf', (req, res) => {

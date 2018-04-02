@@ -8,7 +8,7 @@ const Questionnaire = () => {
     <div
       style={{
         height: '100%',
-        background: `url(${bgimage}) no-repeat center center`,
+        background: `url(${bgimage})center no-repeat`,
         backgroundSize: 'cover'
       }}
       data-wow-delay="1s"
@@ -16,9 +16,36 @@ const Questionnaire = () => {
     >
       <div className="full-bg-img">
         <div className="container-fluid">
-          <div className="row flex-center no-gutters">
-            <div className="col-12 col-xl-10">
-              <QuestionnaireForm />
+          <div className="row no-gutters align-items-center justify-content-center">
+            <div
+              style={{
+                minHeight: 10 + 'em',
+                height: '100%',
+                marginTop: 5 + 'em',
+                marginBottom: 10 + 'em'
+              }}
+              className="col-12 col-md-8 col-lg-6"
+            >
+              <Card className="animated fadeInUp z-depth-4" narrow>
+                <div className="view gradient-card-header blue-gradient text-white">
+                  <h2 className="h2-responsive">
+                    Investor Qualifier Questionnaire
+                  </h2>
+                  <p>
+                    Please fill out the questions below to let us know more
+                    about you!
+                  </p>
+                  <p style={{ padding: 0 }} className="m-0 p-0">
+                    One of our team members will contact you soon to let you
+                    know how you can make an impact!
+                  </p>
+                </div>
+                <CardBody>
+                  <div className="container">
+                    <QuestionnaireForm />
+                  </div>
+                </CardBody>
+              </Card>
             </div>
           </div>
         </div>
