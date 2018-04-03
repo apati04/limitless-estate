@@ -1,13 +1,6 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
-import {
-  Button,
-  Card,
-  CardBody,
-  CardImage,
-  CardTitle,
-  Fa
-} from 'mdbreact';
+import { Button, Card, CardBody, CardImage, CardTitle, Fa } from 'mdbreact';
 import { nuView, uDirect } from '../api/nuView';
 
 export default class SupportCo extends Component {
@@ -68,7 +61,9 @@ export default class SupportCo extends Component {
                   className="mr-2"
                 />
                 <h5 className="h5-responsive">
-                  <NavLink to={website}>{website}</NavLink>
+                  <a target="_blank" href={website}>
+                    {website}
+                  </a>
                 </h5>
               </div>
             </div>
@@ -107,10 +102,10 @@ export default class SupportCo extends Component {
             </div>
           </div>
         </div>
-        <div className="container my-5">
+        <div className="container p-5 my-5">
           <div className="row">
-            <div className="col-12 col-sm-6">{this.renderInfo(nuView)}</div>
-            <div className="col-12 col-sm-6">{this.renderInfo(uDirect)}</div>
+            <div className="col-10 col-sm-6">{this.renderInfo(nuView)}</div>
+            <div className="col-10 col-sm-6">{this.renderInfo(uDirect)}</div>
           </div>
         </div>
       </section>
