@@ -19,7 +19,6 @@ import Overview from '../pages/articles/Overview';
 import ImpactInvesting from '../pages/articles/impact_investing/page_1';
 import Risks_PageOne from '../pages/articles/investing_risks/page_1';
 import Risks_PageTwo from '../pages/articles/investing_risks/page_2';
-
 class App extends Component {
   render() {
     return (
@@ -66,6 +65,7 @@ class App extends Component {
                 component={SupportCo}
               />
               <Route exact path="/" component={LandingPage} />
+
               <Footer />
             </ScrollToTop>
           </Switch>

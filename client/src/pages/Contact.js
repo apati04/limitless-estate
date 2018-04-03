@@ -13,15 +13,7 @@ class Contact extends Component {
         <div className="full-bg-img">
           <div className="container">
             <div className="row no-gutters align-items-center justify-content-center">
-              <div
-                style={{
-                  minHeight: 10 + 'em',
-                  height: '100%',
-                  marginTop: 5 + 'em',
-                  marginBottom: 10 + 'em'
-                }}
-                className="col-12 col-md-6"
-              >
+              <div className="col-12 col-md-6">
                 <Card className="align-center animated fadeIn z-depth-4" narrow>
                   <CardImage tag="div">
                     <div className="view gradient-card-header blue-gradient text-align-center peach-gradient">
