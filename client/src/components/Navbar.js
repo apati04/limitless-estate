@@ -42,7 +42,7 @@ class Navigation extends Component {
         expand="md"
         sticky="top"
         style={{ borderRadius: 0 }}
-        className="blue p-2 m-0"
+        className="primary-color pb-3 m-0"
       >
         <Container>
           <Link to="/">
@@ -153,9 +153,9 @@ class Navigation extends Component {
                       style={{ color: 'white' }}
                       activeStyle={{ fontWeight: 500 }}
                       className="h5-responsive"
-                      to="/resources/faq"
+                      to="/info/investing/ira401k"
                     >
-                      FAQ
+                      401K/IRA
                     </NavLink>
                   </div>
                   <div className="dropdown-item">
@@ -164,9 +164,9 @@ class Navigation extends Component {
                       style={{ color: 'white' }}
                       activeStyle={{ fontWeight: 500 }}
                       className="h5-responsive"
-                      to="/info/investing/ira401k"
+                      to="/resources/faq"
                     >
-                      401K/IRA
+                      FAQ
                     </NavLink>
                   </div>
                 </div>
@@ -179,7 +179,7 @@ class Navigation extends Component {
                   className="h5-responsive"
                   to="/info/questionnaire"
                 >
-                  Make an impact
+                  Make an Impact
                 </NavLink>
               </NavItem>
               <NavItem className="m-1">

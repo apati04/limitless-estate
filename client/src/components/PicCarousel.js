@@ -53,22 +53,25 @@ class PicCarousel extends Component {
       <Mask className="d-flex flex-column justify-content-center align-items-center">
         <div className="row w-75 align-items-center justify-content-center">
           <div className="col">
-            <h3 className="h5-responsive mb-4 text-center white-text">
+            <h3 className="h3-responsive mb-4 text-center white-text">
               Our vision at Limitless Estates is to provide A-class living to
               lower income housing by putting our residents first and instilling
               a sense of community while inspiring others to do the same.
             </h3>
-            <h3 className="h5-responsive mb-4 text-center white-text">
+            <h3 className="h3-responsive mb-4 text-center white-text">
               Our mission is to positively impact the lives of the people in our
               local neighborhoods through{' '}
-              <a style={{ color: 'cyan' }} href="/resources/impactinvesting">
+              <a
+                className=" text-success font-italic font-weight-bold"
+                href="/resources/impactinvesting"
+              >
                 impact investing
               </a>{' '}
               while achieving double digit returns for our investors.
             </h3>
             <div className="d-none d-lg-block mt-4 text-center">
               <a href="info/questionnaire">
-                <Button>Make an impact</Button>
+                <Button color="primary">Make an impact</Button>
               </a>
             </div>
           </div>

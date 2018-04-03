@@ -31,7 +31,7 @@ class Detroit extends Component {
 
   render() {
     return (
-      <Card>
+      <Card className="h-100 z-depth-0">
         <div>
           <CardImage
             src="https://i.imgur.com/c5f5NOc.jpg"
@@ -48,12 +48,9 @@ class Detroit extends Component {
 
         <CardBody>
           <Container>
-            <div className="row justify-content-around text-left">
+            <div className="row align-items-stretch justify-content-around text-left">
               <div className="col-12 col-md-8">
-                <h2 className="h4-responsive">Detroit, MI Information</h2>
-                <NavLink to="/markets/detroit/sdp">
-                  <strong>Sample Deal Package</strong>
-                </NavLink>
+                <h2 className="h4-responsive">Detroit, MI</h2>
 
                 {this.renderContent()}
               </div>

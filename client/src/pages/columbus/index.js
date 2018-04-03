@@ -37,7 +37,7 @@ class Columbus extends Component {
 
   render() {
     return (
-      <Card>
+      <Card className="z-depth-0">
         <CardImage tag="div">
           <div style={styles.header} />
         </CardImage>
@@ -51,12 +51,9 @@ class Columbus extends Component {
         </div>
         <CardBody>
           <Container>
-            <div className="row justify-content-around text-left">
+            <div className="row p-4 justify-content-around text-left">
               <div className="col-12 col-md-8">
-                <h2 className="h4-responsive">Columnbus, Oh Information</h2>
-                <NavLink to="/markets/columbus/sdp">
-                  <strong>Sample Deal Package</strong>
-                </NavLink>
+                <h2 className="h4-responsive">Columbus, OH</h2>
                 {this.renderContent()}
               </div>
               <div className="col-12 col-md-8">

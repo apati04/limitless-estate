@@ -1,7 +1,7 @@
 module.exports = [
   {
     name: 'Kyle Mitchell',
-    title: 'CEO, President',
+    title: 'President',
     type: 'Team',
     photo: {
       url: `https://i.imgur.com/qC2iaYa.jpg?1`,

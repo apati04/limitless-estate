@@ -25,7 +25,7 @@ class MemberSection extends Component {
               <p className="p-0 font-weight-bold">{person.title}</p>
 
               <a style={{ color: '#f7f7f7' }} target="_blank" href={content}>
-                <Button color="indigo">View Bio >></Button>
+                <Button color="primary">View Bio >></Button>
               </a>
             </div>
           ) : (
@@ -62,12 +62,9 @@ class MemberSection extends Component {
   };
   render() {
     return (
-      <section className="py-2 text-center ">
-        <div className="mdb-color lighten-1">
-          <div
-            style={{ color: '#f7f7f7' }}
-            className="p-5 container  text-white"
-          >
+      <section className="text-center">
+        <div className="rgba-white-light">
+          <div className="p-5 container rgba-white-strong">
             <h1 className="display-4 team-header ">Meet the Team</h1>
             <hr />
             <div className="row d-flex justify-content-around align-items-baseline flex-wrap">
@@ -76,8 +73,8 @@ class MemberSection extends Component {
           </div>
         </div>
         <div>
-          <div className="h-100 rgba-white-light">
-            <div className="mb-5 p-5 container text-black">
+          <div className="h-100 mdb-color lighten-1">
+            <div className="mb-5 p-5 container text-white">
               <h1 className="display-4 team-header">Our Advisors</h1>
               <hr />
               <div className="container d-flex justify-content-around flex-wrap">

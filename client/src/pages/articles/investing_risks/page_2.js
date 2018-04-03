@@ -8,7 +8,8 @@ export default class RisksTwoe extends Component {
     return data.map(({ title, body }, i) => {
       return (
         <p key={i}>
-          <strong className="font-italic">{title}</strong> {body}
+          <strong className="font-italic">{title}</strong>
+          {body}
         </p>
       );
     });

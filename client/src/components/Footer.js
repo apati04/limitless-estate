@@ -1,28 +1,30 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Footer } from 'mdbreact';
+import { NavLink } from 'react-router-dom';
+import { Footer, Container } from 'mdbreact';
 const style = {
   footerStyle: {
     position: 'absolute',
     bottom: 0,
     width: '100%',
-    height: '258px',
-    borderBottom: '2px solid black'
+    height: '80px'
   }
 };
 const NavFooter = () => {
   return (
-    <Footer style={style.footerStyle} className="footer" id="myFooter">
-      <div className="container">
+    <Footer
+      style={style.footerStyle}
+      className="d-flex align-items-center flex-center"
+    >
+      {/* <div className="container">
         <div className="row flex-column flex-sm-row flex-sm-nowrap justify-content-sm-around text-align-center">
           <div className="col-auto">
             <h5 className="h5-responsive">Get started</h5>
             <ul>
               <li key="fHome">
-                <Link to="/">Home</Link>
+                <NavLink to="/">Home</NavLink>
               </li>
               <li key="fDl3">
-                <Link to="/info/questionnaire">Questionnaire</Link>
+                <NavLink to="/info/questionnaire">Questionnaire</NavLink>
               </li>
             </ul>
           </div>
@@ -30,24 +32,21 @@ const NavFooter = () => {
             <h5 className="h5-responsive">Legal</h5>
             <ul>
               <li key="lTOS">
-                <Link to="/legal">Disclaimer</Link>
+                <NavLink to="/legal">Disclaimer</NavLink>
               </li>
             </ul>
           </div>
         </div>
-      </div>
-      <div className="container">
-        <div className="row">
-          <div className="col d-flex justify-content-center align-items-center">
-            <small className="text-center">
-              *None of the information provided should not be seen as tax or
-              legal advice or services, please consult a licensed professional.
-            </small>
-          </div>
+      </div> */}
+
+      <div className="row">
+        <div className="col-12 pb-4 d-flex flex-center">
+          <p className="white-text">© 2018 Limitless Estates, LLC</p>
+          <p className="mx-2 white-text">|</p>
+          <NavLink className="white-text" to="/legal">
+            Disclaimer
+          </NavLink>
         </div>
-      </div>
-      <div className="mt-2 d-flex flex-column footer-copyright">
-        <p>© 2018 Limitless Estates, LLC</p>
       </div>
     </Footer>
   );

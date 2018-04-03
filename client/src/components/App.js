@@ -27,7 +27,7 @@ class App extends Component {
           <Switch>
             <ScrollToTop>
               <Header />
-              <div style={{ paddingBottom: '258px' }}>
+              <div style={{ paddingBottom: '80px' }}>
                 <Route exact path="/resources" component={Overview} />
                 <Route
                   path="/resources/investingrisks/1"
