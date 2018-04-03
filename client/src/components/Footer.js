@@ -1,13 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
-const Footer = () => {
+import { Footer } from 'mdbreact';
+const style = {
+  footerStyle: {
+    position: 'absolute',
+    bottom: 0,
+    width: '100%',
+    height: '258px',
+    borderBottom: '2px solid black'
+  }
+};
+const NavFooter = () => {
   return (
-    <footer
-      style={{ borderBottom: '2px solid black' }}
-      className="footer p-2"
-      id="myFooter"
-    >
+    <Footer style={style.footerStyle} className="footer p-2" id="myFooter">
       <div className="container">
         <div className="row flex-column flex-sm-row flex-sm-nowrap justify-content-sm-around text-align-center">
           <div className="col-auto">
@@ -41,7 +46,7 @@ const Footer = () => {
       <div className="mt-5 footer-copyright">
         <p>© 2018 Limitless Estates, LLC</p>
       </div>
-    </footer>
+    </Footer>
   );
 };
-export default Footer;
+export default NavFooter;

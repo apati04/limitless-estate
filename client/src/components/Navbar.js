@@ -46,7 +46,6 @@ class Navigation extends Component {
       >
         <Container>
           <Link to="/">
-            >
             <img
               height="50"
               src="https://i.imgur.com/6TpCmWV.png"
