@@ -23,7 +23,12 @@ class App extends Component {
   render() {
     return (
       <BrowserRouter>
-        <div>
+        <div
+          style={{
+            minHeight: '100%',
+            position: 'relative'
+          }}
+        >
           <Switch>
             <ScrollToTop>
               <Header />
