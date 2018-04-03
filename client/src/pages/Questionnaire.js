@@ -13,7 +13,7 @@ const Questionnaire = () => {
       data-wow-delay="1s"
       className="animated fadeIn hm-black-light"
     >
-      <div style={{ height: '100vh' }} className="view full-bg-img">
+      <div style={{ height: '100%' }} className="view full-bg-img">
         <div className="container">
           <div className="row my-5 flex-center">
             <div className="col-12 col-lg-7">

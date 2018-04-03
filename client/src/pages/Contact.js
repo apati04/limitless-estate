@@ -3,7 +3,7 @@ import ContactForm from '../components/Forms/ContactForm';
 import { Card, CardImage, CardBody, CardTitle } from 'mdbreact';
 const styles = {
   formStyle: {
-    height: '100vh'
+    height: '100%'
   }
 };
 class Contact extends Component {

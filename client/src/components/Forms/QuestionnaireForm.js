@@ -176,56 +176,60 @@ class QuestionnaireForm extends Component {
             <Field name="q6" type="text" className="form-control pl-0" />
             {this.handleErrors('q6')}
           </div>
-          <div className="col-12 form-group mt-4">
-            <label className="col-form-label" htmlFor="q7">
-              Are you an accredited investor?
-            </label>
-            <small className="form-text text-muted">
-              (Makes more than $200k annually for the past 2 years and will do
-              so in this current year or have a net worth of $1M excluding your
-              primary residence)
-            </small>
-            {this.handleErrors('q7')}
-            <Field
-              className="p-0"
-              render={({ field, form, ...args }) => (
-                <Input
-                  {...field}
-                  {...args}
-                  gap
+          <div className="col-12  my-4">
+            <div className="form-group">
+              <label className="label" htmlFor="q7">
+                Are you an accredited investor?
+              </label>
+              <div className="md-form">
+                <small className="form-text text-muted">
+                  (Makes more than $200k annually for the past 2 years and will
+                  do so in this current year or have a net worth of $1M
+                  excluding your primary residence)
+                </small>
+
+                <Field
                   className="p-0"
-                  onClick={() => {
-                    values.accreditedInvestor = 'yes';
-                  }}
-                  checked={values.accreditedInvestor === 'yes'}
-                  label="Yes"
-                  type="radio"
-                  id="q7a"
-                  value="yes"
-                  onChange={handleChange}
+                  render={({ field, form, ...args }) => (
+                    <Input
+                      {...field}
+                      {...args}
+                      gap
+                      className="p-0"
+                      onClick={() => {
+                        values.accreditedInvestor = 'yes';
+                      }}
+                      checked={values.accreditedInvestor === 'yes'}
+                      label="Yes"
+                      type="radio"
+                      id="q7a"
+                      value="yes"
+                      onChange={handleChange}
+                    />
+                  )}
+                  name="q7"
                 />
-              )}
-              name="q7"
-            />
-            <Field
-              render={({ field, form, ...args }) => (
-                <Input
-                  {...field}
-                  {...args}
-                  gap
-                  onClick={() => {
-                    values.accreditedInvestor = 'no';
-                  }}
-                  checked={values.accreditedInvestor === 'no'}
-                  label="No"
-                  type="radio"
-                  id="q7b"
-                  value="no"
-                  onChange={handleChange}
+                <Field
+                  render={({ field, form, ...args }) => (
+                    <Input
+                      {...field}
+                      {...args}
+                      gap
+                      onClick={() => {
+                        values.accreditedInvestor = 'no';
+                      }}
+                      checked={values.accreditedInvestor === 'no'}
+                      label="No"
+                      type="radio"
+                      id="q7b"
+                      value="no"
+                      onChange={handleChange}
+                    />
+                  )}
+                  name="q7"
                 />
-              )}
-              name="q7"
-            />
+              </div>
+            </div>
 
             <label className="col-form-label" htmlFor="q8">
               Can you show proof of funds ?
