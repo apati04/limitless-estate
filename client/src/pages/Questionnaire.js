@@ -7,6 +7,7 @@ const Questionnaire = () => {
   return (
     <div
       style={{
+        height: 80 + 'em',
         background: `url(${bgimage})center center no-repeat`,
         backgroundSize: 'cover'
       }}

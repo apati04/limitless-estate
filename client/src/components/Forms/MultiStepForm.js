@@ -1,5 +1,6 @@
 import React from 'react';
 import { Formik, Field } from 'formik';
+import { Link } from 'react-router-dom';
 import {
   Card,
   CardBody,
@@ -10,6 +11,7 @@ import {
   ModalFooter,
   Input
 } from 'mdbreact';
+import axios from 'axios';
 const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
 
 const required = value => (value ? undefined : 'Required');
@@ -64,8 +66,6 @@ class Wizard extends React.Component {
     const { page } = this.state;
     const isLastPage = page === React.Children.count(children) - 1;
     if (isLastPage) {
-      console.log('values: ', values);
-
       return onSubmit(values);
     } else {
       this.next(values);
@@ -84,7 +84,7 @@ class Wizard extends React.Component {
     const activePage = React.Children.toArray(children)[page];
     const isLastPage = page === React.Children.count(children) - 1;
     return (
-      <div>
+      <div className="h-100">
         <Formik
           initialValues={values}
           enableReinitialize={false}
@@ -120,7 +120,7 @@ class Wizard extends React.Component {
                   Submit
                 </button>
               )}
-              <pre>{JSON.stringify(values, null, 2)}</pre>
+
               <div className="d-flex flex-center">
                 <Modal
                   className="modal-dialog modal-dialog-centered"
@@ -135,9 +135,9 @@ class Wizard extends React.Component {
                     know how you can make an impact!
                   </ModalBody>
                   <ModalFooter>
-                    <Button color="secondary" onClick={this.toggle}>
-                      Close
-                    </Button>{' '}
+                    <Link to="/">
+                      <Button color="secondary">Back To Home</Button>
+                    </Link>
                   </ModalFooter>
                 </Modal>
               </div>
@@ -156,12 +156,12 @@ export default () => (
       <p>Please fill out the questions below to let us know more about you!</p>
     </div>
     <CardBody>
-      <div className="container">
+      <div className="container-fluid">
         <Wizard
           initialValues={{
             fullname: '',
             email: '',
-            q7_accreditedInvestor: '',
+            accreditedInvestor: '',
             phone: '',
             q1: '',
             q2: '',
@@ -179,15 +179,12 @@ export default () => (
             q12: '',
             q13: '',
             q14: '',
-            q8_proofOfFunds: '',
+            proofOfFunds: '',
             contactPreference: ''
           }}
           onSubmit={async (values, actions) => {
-            sleep(300).then(response => {
-              window.alert(JSON.stringify(values, null, 2));
-              console.log(response);
-            });
-            console.log(actions);
+            const payload = await axios.post('/api/questionnaire', values);
+            console.log('payload: ', payload);
           }}
         >
           <Wizard.Page>
@@ -421,10 +418,10 @@ export default () => (
                       {...field}
                       gap
                       onClick={() => {
-                        form.values.q8_proofOfFunds = 'yes';
+                        form.values.proofOfFunds = 'yes';
                       }}
                       className="p-0"
-                      checked={form.values.q8_proofOfFunds === 'yes'}
+                      checked={form.values.proofOfFunds === 'yes'}
                       label="Yes"
                       type="radio"
                       id="radio-q8a"
@@ -441,10 +438,10 @@ export default () => (
                       {...field}
                       gap
                       onClick={() => {
-                        form.values.q8_proofOfFunds = 'no';
+                        form.values.proofOfFunds = 'no';
                       }}
                       className="p-0"
-                      checked={form.values.q8_proofOfFunds === 'no'}
+                      checked={form.values.proofOfFunds === 'no'}
                       label="No"
                       type="radio"
                       id="radio-q8b"

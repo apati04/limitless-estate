@@ -8,6 +8,9 @@
     },
     "/api/sendmail": {
       "target": "http://localhost:3001"
+    },
+    "/api/questionnaire": {
+      "target": "http://localhost:3001"
     }
   },
   "dependencies": {
@@ -19,7 +22,8 @@
     "jquery": "^3.3.1",
     "lodash.range": "^3.2.0",
     "mapbox-gl": "^0.44.1",
-    "mdbreact": "git+https://github.com/mdbootstrap/React-Bootstrap-with-Material-Design.git",
+    "mdbreact":
+      "git+https://github.com/mdbootstrap/React-Bootstrap-with-Material-Design.git",
     "popper.js": "^1.14.1",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
