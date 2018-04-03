@@ -7,7 +7,8 @@ import {
   Modal,
   ModalBody,
   ModalHeader,
-  ModalFooter
+  ModalFooter,
+  TextArea
 } from 'mdbreact';
 const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
 
@@ -16,8 +17,13 @@ const required = value => (value ? undefined : 'Required');
 const Error = ({ name }) => (
   <Field
     name={name}
+    className="pt-0"
     render={({ form: { touched, errors } }) =>
-      touched[name] && errors[name] ? <span>{errors[name]}</span> : null
+      touched[name] && errors[name] ? (
+        <span className="pt-0 text-danger error error_message">
+          {errors[name]}
+        </span>
+      ) : null
     }
   />
 );
@@ -109,7 +115,11 @@ class Wizard extends React.Component {
               )}
               <pre>{JSON.stringify(values, null, 2)}</pre>
               <div className="d-flex flex-center">
-                <Modal isOpen={this.state.modal} toggle={this.toggle}>
+                <Modal
+                  className="modal-dialog modal-dialog-centered"
+                  isOpen={this.state.modal}
+                  toggle={this.toggle}
+                >
                   <ModalHeader toggle={this.toggle}>
                     Thank you {this.state.values.fullname}
                   </ModalHeader>
@@ -121,9 +131,6 @@ class Wizard extends React.Component {
                     <Button color="secondary" onClick={this.toggle}>
                       Close
                     </Button>{' '}
-                    <Button color="primary" onClick={this.toggle}>
-                      Save changes
-                    </Button>
                   </ModalFooter>
                 </Modal>
               </div>
@@ -180,70 +187,104 @@ export default () => (
           }}
         >
           <Wizard.Page>
-            <div>
-              <Field
-                name="fullname"
-                component="input"
-                type="text"
-                placeholder="Name"
-                validate={required}
-              />
-              <Error name="fullname" />
-            </div>
-            <div>
-              <Field
-                name="email"
-                component="input"
-                type="email"
-                placeholder="Email"
-                validate={required}
-              />
-              <Error name="email" />
-            </div>
-            <div>
-              <Field
-                name="phone"
-                component="input"
-                type="text"
-                placeholder="Phone Number"
-                validate={required}
-              />
-              <Error name="phone" />
-            </div>
-            <div className="form-group">
-              <Field
-                className="form-control select-wrapper select-dropdown d-block"
-                name="contactPreference"
-                component="select"
-                validate={required}
-              >
-                <option label="Please choose one..." />
-                <option value="email" label="Email" />
-                <option value="phone" label="Phone call" />
-                <option value="text" label="Text Message" />
-              </Field>
-              <Error name="contactPreference" />
+            <div className="col-12 my-4">
+              <div className="md-form">
+                <Field
+                  name="fullname"
+                  component="input"
+                  className="form-control my-0 "
+                  type="text"
+                  placeholder="Name"
+                  validate={required}
+                />
+                <Error name="fullname" />
+              </div>
             </div>
 
-            <div className="col-12 form-group">
-              <label className="col-form-label" htmlFor="q2">
-                What is the biggest hurdle you are trying to overcome by
-                investing in Real Estate?
-              </label>
-
-              <Field className="p-1 form-control" type="text" name="q2" />
+            <div className="col-12 my-4">
+              <div className="md-form">
+                <Field
+                  name="email"
+                  className="my-0 form-control"
+                  component="input"
+                  type="email"
+                  placeholder="Email"
+                  validate={required}
+                />
+                <Error name="email" />
+              </div>
             </div>
-            <div className="col-12 form-group">
-              <label className="col-form-label" htmlFor="q1">
-                Why are you interested in investing in Real Estate?
-              </label>
-              <Field
-                className="form-control m-0 p-1"
-                type="text"
-                id="q1"
-                component="input"
-                name="q1"
-              />
+
+            <div className="col-12 my-4">
+              <div className="md-form">
+                <Field
+                  name="phone"
+                  className="form-control my-0"
+                  component="input"
+                  type="text"
+                  placeholder="Phone Number"
+                  validate={required}
+                  error="phone"
+                />
+                <Error name="phone" />
+              </div>
+            </div>
+
+            <div className="col-6 my-4">
+              <div className="form-group">
+                <label className="label" htmlFor="contactPreference">
+                  Best form of contact:
+                </label>
+                <div className="md-form">
+                  <Field
+                    className="form-control my-0 select-wrapper select-dropdown d-block"
+                    name="contactPreference"
+                    component="select"
+                    validate={required}
+                  >
+                    <option label="Please choose one..." />
+                    <option value="email" label="Email" />
+                    <option value="phone" label="Phone call" />
+                    <option value="text" label="Text Message" />
+                  </Field>
+                  <Error name="contactPreference" />
+                </div>
+              </div>
+            </div>
+
+            <div className="col-12 my-4">
+              <div className="form-group">
+                <label className="label" htmlFor="q1">
+                  Why are you interested in investing in Real Estate?
+                </label>
+                <div className="md-form">
+                  <Field
+                    type="text"
+                    id="q1"
+                    className="py-2 form-control md-form md-textarea"
+                    component="textarea"
+                    placeholder="Your answer here..."
+                    name="q1"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div className="col-12 my-4">
+              <div className="form-group">
+                <label className="m-0 label" htmlFor="q2">
+                  What is the biggest hurdle you are trying to overcome by
+                  investing in Real Estate?
+                </label>
+                <div className="md-form" />
+                <Field
+                  className="py-2 form-control md-textarea"
+                  type="text"
+                  component="textarea"
+                  placeholder="Your answer here..."
+                  name="q2"
+                />
+              </div>
             </div>
           </Wizard.Page>
           <Wizard.Page>
