@@ -15,10 +15,7 @@ export default class Faq extends Component {
   }
   render() {
     return (
-      <div
-        data-wow-delay="1s"
-        className="animated fadeIn rgba-blue-grey-slight"
-      >
+      <div data-wow-delay="1s" className="rgba-blue-grey-slight">
         <Article
           headerImage="https://i.imgur.com/3aGoqpx.jpg"
           title="F.A.Q."

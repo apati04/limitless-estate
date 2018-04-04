@@ -2,8 +2,19 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import FadeIn from '../../components/FadeIn';
 import MapBox from '../../components/MapBox';
-import PageHeader from '../../components/PageHeader';
+
 import StickyBox from 'react-sticky-box';
+import {
+  Button,
+  Card,
+  CardImage,
+  CardBody,
+  CardText,
+  CardTitle,
+  Container,
+  View,
+  Mask
+} from 'mdbreact';
 // const property_img = '/img/ecorse/image1.png';
 // const map_img = '/img/ecorse/image2.png';
 // const acquisition_img = '/img/ecorse/image3.png';
@@ -16,13 +27,6 @@ import StickyBox from 'react-sticky-box';
 /**
  * Finacial Statements
  */
-const FINANCE = '/img/ecorse/financials';
-const acquisitionSummary = `${FINANCE}/acq_sum.jpg`;
-const rentRoll = `${FINANCE}/rentRoll.jpg`;
-const incomeActual = `${FINANCE}/incomeActual.jpg`;
-const fiveYearPL = `${FINANCE}/fiveYearPL.jpg`;
-const equityReturn = `${FINANCE}/equityReturn.jpg`;
-const projectedCashFlows = `${FINANCE}/projectedCashFlows.jpg`;
 
 class Ecorse extends Component {
   render() {
@@ -30,25 +34,40 @@ class Ecorse extends Component {
     const title = 'Sample Deal Package';
 
     return (
-      <div>
-        <PageHeader
-          height="320px"
-          title={title}
-          bgPos="800px -430px"
-          img={imgURL}
-        />
-        <section className="animated fadeIn py-3">
+      <Card>
+        <div className="view">
+          <CardImage
+            src="https://i.imgur.com/c5f5NOc.jpg"
+            className="w-100 h-100 d-none d-sm-block"
+          />
+          <Mask
+            style={{ color: 'white' }}
+            className="flex-center pb-5 h2-responsive"
+          >
+            Sample Deal Package
+          </Mask>
+        </div>
+
+        <div className="view hm-black-light">
+          <CardImage
+            src="https://i.imgur.com/3qqAILY.jpg?1"
+            className="w-100  d-sm-none"
+          />
+        </div>
+        <CardBody className="animated fadeInRightBig pb-4">
           <div className="container">
-            <div className="row justify-content-between">
+            <div className="row flex-center">
               {/* main body section */}
-              <div className="col-12 col-lg-8">
+              <div className="col-10">
                 <div
-                  style={{ height: 70 + 'em' }}
+                  style={{ height: 65 + 'em' }}
                   className="embed-responsive embed-responsive-16by9"
                 >
                   <iframe
-                    className="embed-responsive-item"
-                    src="https://drive.google.com/file/d/19YL-vDPDwsR0GR7L1mLoUWOvCqX3Xb8E/preview"
+                    className="embed-responsive-item embed-responsive"
+                    src="https://drive.google.com/file/d/1TE53jhqppDVlpe_MZa6lQrIl5zusxBxF/preview?#zoom=100"
+                    height="500"
+                    width="100%"
                     allowFullScreen
                   />
                 </div>
@@ -57,33 +76,18 @@ class Ecorse extends Component {
                 <h5 className="mb-4">
                   Sound like the right investment for you?
                 </h5>
-                <form className="d-flex justify-content-between align-items-center">
-                  <div>
-                    <a
-                      role="button"
-                      href="mailto:kmitchell@limitless-estates.com"
-                      className="btn btn-success"
-                    >
-                      Contact Us
-                    </a>
-                  </div>
-                  <div>
-                    <Link to="/">Back To Home</Link>
-                  </div>
-                </form>
+                <div className="d-flex justify-content-between align-items-center">
+                  <Link to="/info/contact">
+                    <button className="btn btn-primary">Contact Us</button>
+                  </Link>
+
+                  <Link to="/markets/detroit/summary">Back To Overview</Link>
+                </div>
               </div>
-              {/* SideBar */}
-              <div className="col-12 col-lg-4 mt-4 d-none d-lg-block">
-                <StickyBox style={{ marginTop: '-100px', paddingTop: '100px' }}>
-                  {/* Financial Data */}
-                  <MapBox address="4471 & 4581 High Street, Ecorse, MI" />
-                </StickyBox>
-              </div>
-              {/* Modal Registration Below */}
             </div>
           </div>
-        </section>
-      </div>
+        </CardBody>
+      </Card>
     );
   }
 }

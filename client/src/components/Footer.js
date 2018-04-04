@@ -1,23 +1,30 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-
-const Footer = () => {
+import { NavLink } from 'react-router-dom';
+import { Footer, Container } from 'mdbreact';
+const style = {
+  footerStyle: {
+    position: 'absolute',
+    bottom: 0,
+    width: '100%',
+    height: '60px'
+  }
+};
+const NavFooter = () => {
   return (
-    <footer
-      style={{ borderBottom: '2px solid black' }}
-      className="footer p-2"
-      id="myFooter"
+    <Footer
+      style={style.footerStyle}
+      className="d-flex align-items-center flex-center"
     >
-      <div className="container">
+      {/* <div className="container">
         <div className="row flex-column flex-sm-row flex-sm-nowrap justify-content-sm-around text-align-center">
           <div className="col-auto">
             <h5 className="h5-responsive">Get started</h5>
             <ul>
               <li key="fHome">
-                <Link to="/">Home</Link>
+                <NavLink to="/">Home</NavLink>
               </li>
               <li key="fDl3">
-                <Link to="/info/questionnaire">Questionnaire</Link>
+                <NavLink to="/info/questionnaire">Questionnaire</NavLink>
               </li>
             </ul>
           </div>
@@ -25,23 +32,23 @@ const Footer = () => {
             <h5 className="h5-responsive">Legal</h5>
             <ul>
               <li key="lTOS">
-                <Link to="/legal">Terms of Service</Link>
-              </li>
-              <li key="ltou">
-                <Link to="/legal">Terms of Use</Link>
-              </li>
-              <li key="lpp">
-                <Link to="/legal">Privacy Policy</Link>
+                <NavLink to="/legal">Disclaimer</NavLink>
               </li>
             </ul>
           </div>
         </div>
-      </div>
+      </div> */}
 
-      <div className="mt-5 footer-copyright">
-        <p>© 2018 Limitless Estates, LLC</p>
+      <div className="row">
+        <div className="col-12 pb-4 d-flex flex-center">
+          <p className="white-text">© 2018 Limitless Estates, LLC</p>
+          <p className="mx-2 white-text">|</p>
+          <NavLink className="white-text" to="/legal">
+            Disclaimer
+          </NavLink>
+        </div>
       </div>
-    </footer>
+    </Footer>
   );
 };
-export default Footer;
+export default NavFooter;

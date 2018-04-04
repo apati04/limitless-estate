@@ -11,11 +11,15 @@ import {
 } from 'mdbreact';
 import classNames from 'classnames';
 class PicCarousel extends Component {
-  state = {
-    activeItem: 1,
-    maxLength: 3
-  };
-  newRef = React.createRef();
+  constructor(props) {
+    super(props);
+    this.state = {
+      activeItem: 1,
+      maxLength: 3
+    };
+    this.newRef = React.createRef();
+  }
+
   next = () => {
     const nextItem = this.state.activeItem + 1;
     if (nextItem > this.state.maxLength) {
@@ -33,12 +37,10 @@ class PicCarousel extends Component {
     const prevItem = this.state.activeItem - 1;
     if (prevItem < 1) {
       this.setState(function(prevState, props) {
-        console.log('props: ', props);
         return { activeItem: prevState.maxLength };
       });
     } else {
       this.setState(function(prevState, props) {
-        console.log('props 37: ', props);
         const newItem = prevState.activeItem - 1;
         return {
           activeItem: newItem
@@ -63,21 +65,24 @@ class PicCarousel extends Component {
             <h3 className="h3-responsive mb-4 text-center white-text">
               Our mission is to positively impact the lives of the people in our
               local neighborhoods through{' '}
-              <a style={{ color: 'cyan' }} href="/resources/impactinvesting">
+              <a
+                className=" text-success font-italic font-weight-bold"
+                href="/resources/impactinvesting"
+              >
                 impact investing
               </a>{' '}
               while achieving double digit returns for our investors.
             </h3>
             <div className="d-none d-lg-block mt-4 text-center">
               <a href="info/questionnaire">
-                <Button>Make an impact</Button>
+                <Button color="primary">Make an impact</Button>
               </a>
             </div>
           </div>
         </div>
       </Mask>
     );
-    console.log(this.newRef);
+
     return (
       <section>
         <Carousel
@@ -86,7 +91,7 @@ class PicCarousel extends Component {
           next={this.next}
           ref={this.newRef}
         >
-          <CarouselInner ref={this.newRef} className="carousel-fade">
+          <CarouselInner className="carousel-fade">
             <CarouselItem itemId="2">
               <View className="hm-black-light">
                 <img
@@ -119,6 +124,7 @@ class PicCarousel extends Component {
             </CarouselItem>
           </CarouselInner>
           <CarouselControl
+            className="invisible"
             direction="prev"
             role="button"
             onClick={() => {
@@ -126,6 +132,7 @@ class PicCarousel extends Component {
             }}
           />
           <CarouselControl
+            className="invisible"
             direction="next"
             role="button"
             onClick={() => {

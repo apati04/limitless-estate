@@ -15,7 +15,7 @@ export default ({
     <section className="h-100">
       <View
         style={{
-          height: 25 + 'em',
+          height: 27 + 'em',
           backgroundImage: `url(${headerImage})`,
           backgroundSize: 'cover',
           backgroundRepeat: 'no-repeat',
@@ -34,16 +34,16 @@ export default ({
             <p>{subTitle}</p>
             {pageFooter}
           </div>
-        </div>
-        <div className="col col-lg-4">
-          <img
-            style={{ marginTop: '-50px' }}
-            src={circleImage}
-            width="320px"
-            height="320px"
-            alt="LimitLess"
-            className="border about-img img-fluid rounded-circle d-none d-lg-block"
-          />
+          <div className="col-12 col-lg-4">
+            <img
+              style={{ marginTop: '-50px' }}
+              src={circleImage}
+              width="320px"
+              height="320px"
+              alt="LimitLess"
+              className="border about-img img-fluid rounded-circle d-none d-lg-block"
+            />
+          </div>
         </div>
       </div>
     </section>

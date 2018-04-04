@@ -1,56 +1,71 @@
 import React, { Component } from 'react';
-import { View, Mask, Button } from 'mdbreact';
+import MapBox from '../../components/MapBox';
+import StickyBox from 'react-sticky-box';
+import {
+  Button,
+  Card,
+  CardImage,
+  CardBody,
+  CardText,
+  CardTitle,
+  Container,
+  View
+} from 'mdbreact';
 import summary from './summary_data';
-import { Link } from 'react-router-dom';
-
+import { NavLink, Link } from 'react-router-dom';
+import Article from '../../components/templates/Article';
+const styles = {
+  header: {
+    background: `url(${'https://i.imgur.com/BZOlfik.jpg?1'})center center no-repeat`,
+    backgroundSize: 'cover',
+    height: 22 + 'em'
+  }
+};
 class Columbus extends Component {
   renderContent = () => {
     const main = summary[0].body;
-    return main.map((e, i) => (
-      <p className="text-left" key={i}>
-        {e}
-      </p>
-    ));
-  };
-  renderList = () => {
     const { list } = summary[1];
-    return list.map((e, i) => <li key={i}>{e}</li>);
-  };
-  render() {
+    const body = main.map((e, i) => <p key={i}>{e}</p>);
+    const listItems = list.map((e, i) => <li key={i}>{e}</li>);
     return (
       <div>
-        <View className="bg-mdb-color" style={{ height: 22 + 'em' }}>
-          <Mask className="flex-column flex-center">
-            <h1 className="h1-responsive text-white font-bold">
-              Columbus, Ohio
-            </h1>
-            <h2 className="mt-4 h4-responsive text-white">
-              Overview and{' '}
-              <Link className="text-white" to="/markets/columbus/sdp">
-                <strong>Sample Deal Package</strong>
-              </Link>
-            </h2>
-          </Mask>
-        </View>
-        <div className="container-fluid my-5">
-          <div className="row no-gutters justify-content-center">
-            <div className="col-12 col-md-8">
-              {this.renderContent()}
-
-              <ul style={{ listStyle: 'inside' }} className="p-0">
-                {this.renderList()}
-              </ul>
-            </div>
-            <div className="col-12 text-center">
-              <Link to="/markets/columbus/sdp">
-                <Button className="h5" size="lg" color="blue">
-                  View Sample Deal Package
-                </Button>
-              </Link>
-            </div>
-          </div>
-        </div>
+        {body}
+        <ul style={{ padding: 0, listStyle: 'inside' }} className="p-0">
+          {listItems}
+        </ul>
       </div>
+    );
+  };
+
+  render() {
+    return (
+      <Card className="z-depth-0">
+        <CardImage tag="div">
+          <div style={styles.header} />
+        </CardImage>
+
+        <CardBody className="m-5 px-2">
+          <Container>
+            <div className="row no-gutters align-items-start justify-content-center text-left">
+              <div className="col-12 col-md-8">
+                <h2 className="h2-responsive">Columbus, OH</h2>
+                {this.renderContent()}
+
+                <NavLink className="white-text" to="/markets/columbus/sdp">
+                  <Button size="lg" color="blue">
+                    Sample Deal Package
+                  </Button>
+                </NavLink>
+              </div>
+              <div className="ml-auto p-0 m-0 col-12 col-lg-4  d-none d-lg-block">
+                <StickyBox className="m-0 p-0">
+                  <MapBox address="2201 Riverside Drive, Columbus, OH" />
+                </StickyBox>
+              </div>
+            </div>
+          </Container>
+        </CardBody>
+      </Card>
     );
   }
 }

@@ -1,38 +1,51 @@
 import React from 'react';
+import { Button, Modal, ModalBody, ModalHeader, ModalFooter } from 'mdbreact';
 
-const RegisterModal = ({ id, title, bio, body, size = null }) => {
-  return (
-    <div
-      className="modal fade"
-      id={id}
-      tabIndex="-1"
-      role="dialog"
-      aria-labelledby="exampleModalCenterTitle"
-      aria-hidden="true"
-    >
-      <div className={`modal-dialog modal-dialog-centered h-100 ${size}`} role="document">
-        <div className="modal-content">
-          <div className="modal-header">
-            <h5 className="modal-title text-center" id="exampleModalLongTitle">
-              {title}
-            </h5>
-            <button type="button" className="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div className="modal-body">{body}</div>
-          <div className="modal-footer">
-            <button type="button" className="btn btn-secondary" data-dismiss="modal">
+class ModalPage extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      modal: false
+    };
+
+    this.toggle = this.toggle.bind(this);
+  }
+
+  toggle() {
+    this.setState({
+      modal: !this.state.modal
+    });
+  }
+
+  render() {
+    return (
+      <div>
+        <Button color="primary" onClick={this.toggle}>
+          Launch demo modal
+        </Button>
+        <Modal isOpen={this.state.modal} toggle={this.toggle}>
+          <ModalHeader toggle={this.toggle}>Modal title</ModalHeader>
+          <ModalBody>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
+          </ModalBody>
+          <ModalFooter>
+            <Button color="secondary" onClick={this.toggle}>
               Close
-            </button>
-            <a type="button" hfref={bio} className="btn btn-primary">
-              Download
-            </a>
-          </div>
-        </div>
+            </Button>{' '}
+            <Button color="primary" onClick={this.toggle}>
+              Save changes
+            </Button>
+          </ModalFooter>
+        </Modal>
       </div>
-    </div>
-  );
-};
+    );
+  }
+}
 
-export default RegisterModal;
+export default ModalPage;

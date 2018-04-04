@@ -208,9 +208,6 @@ input[type='radio'] {
   height: 100%;
 }
 
-footer {
-  bottom: 0;
-}
 #myFooter {
   background-color: rgba(0, 0, 0, 0.945);
   color: white;

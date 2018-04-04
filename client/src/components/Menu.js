@@ -45,7 +45,6 @@ export default class Menu extends Component {
   };
   toggle = () => {
     this.setState({ dropdownOpen: !this.state.dropdownOpen });
-    console.log('clicked, ', this);
   };
   render() {
     return (

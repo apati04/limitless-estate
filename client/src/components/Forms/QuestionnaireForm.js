@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { withFormik, Form, Field } from 'formik';
-import { Button, Input, Select } from 'mdbreact';
+import { Button, Input, Select, Card, CardBody, CardImage } from 'mdbreact';
 import Yup from 'yup';
 
 class QuestionnaireForm extends Component {
@@ -23,20 +23,16 @@ class QuestionnaireForm extends Component {
   render() {
     const { values, isSubmitting, handleChange, handleBlur } = this.props;
     return (
-      <Form className="p-5 d-flex justify-content-around flex-column">
-        <div className="row">
-          <div className="col-md-6 form-group">
+      <Form>
+        <div className="row justify-content-between flex-column no-gutters">
+          <div className="col-12 form-group">
             <label htmlFor="fullname" className="col-form-label">
               Full Name
             </label>
-            <Field
-              className="form-control mt-1 p-0"
-              type="text"
-              name="fullname"
-            />
+            <Field type="text" name="fullname" />
             {this.handleErrors('fullname')}
           </div>
-          <div className="col-md-6 form-group">
+          <div className="col-12 form-group">
             <label htmlFor="email" className="col-form-label">
               Email Address
             </label>
@@ -47,29 +43,21 @@ class QuestionnaireForm extends Component {
             />
             {this.handleErrors('email')}
           </div>
-        </div>
-        <div className="row">
-          <div className="col-md-6 form-group">
-            <label htmlFor="company" className="col-form-label">
-              Company Name
-            </label>
-            <Field
-              className="form-control mt-1 p-0"
-              type="text"
-              name="company"
-            />
-            {this.handleErrors('company')}
-          </div>
-          <div className="col-md-6 form-group">
+
+          <div className="col-12 form-group">
             <label htmlFor="tel" className="col-form-label">
               Phone Number
             </label>
-            <Field className="form-control mt-1 p-0" name="tel" type="text" />
+            <Field
+              className="form-control mt-1 p-0"
+              name="tel"
+              component="input"
+              type="text"
+            />
             {this.handleErrors('tel')}
           </div>
-        </div>
-        <div className="row">
-          <div className="col-md-8">
+
+          <div className="col-12 form-group">
             <label className="col-form-label">Preferred form of contact</label>
             <div className="form-group">
               <Field
@@ -93,9 +81,8 @@ class QuestionnaireForm extends Component {
               {this.handleErrors('contactPref')}
             </div>
           </div>
-        </div>
-        <div className="d-flex flex-column justify-content-between">
-          <div className="form-group">
+
+          <div className="col-12 form-group">
             <label className="col-form-label" htmlFor="q1">
               Why are you interested in investing in Real Estate?
             </label>
@@ -103,11 +90,12 @@ class QuestionnaireForm extends Component {
               className="form-control m-0 p-1"
               type="text"
               id="q1"
+              component="input"
               name="q1"
             />
             {this.handleErrors('q1')}
           </div>
-          <div className="form-group mt-4">
+          <div className="col-12 form-group">
             <label className="col-form-label" htmlFor="q2">
               What is the biggest hurdle you are trying to overcome by investing
               in Real Estate?
@@ -116,7 +104,8 @@ class QuestionnaireForm extends Component {
             <Field className="p-1 form-control" type="text" name="q2" />
             {this.handleErrors('q2')}
           </div>
-          <div className="form-group mt-4">
+
+          <div className="col-12 form-group mt-4">
             <label className="col-form-label" htmlFor="q3">
               Do you want to invest in multifamily, value-add projects?
             </label>
@@ -124,7 +113,8 @@ class QuestionnaireForm extends Component {
             <Field className="form-control p-1" name="q3" type="text" />
             {this.handleErrors('q3')}
           </div>
-          <div className="form-group mt-4">
+
+          <div className="col-12 form-group mt-4">
             <label className="col-form-label" htmlFor="q4">
               What are your return expectations?
             </label>
@@ -155,7 +145,7 @@ class QuestionnaireForm extends Component {
               {this.handleErrors('q4CoC')}
             </div>
           </div>
-          <div className="form-group mt-4">
+          <div className="col-12 form-group mt-4">
             <label className="col-form-label" htmlFor="q5">
               What is your investment minimum and maximum hold time?
             </label>
@@ -178,7 +168,7 @@ class QuestionnaireForm extends Component {
               {this.handleErrors('q5b')}
             </div>
           </div>
-          <div className="form-group mt-4">
+          <div className="col-12 form-group mt-4">
             <label className="col-form-label" htmlFor="q6">
               What is the minimum dollar amount you are willing to invest?
             </label>
@@ -186,56 +176,60 @@ class QuestionnaireForm extends Component {
             <Field name="q6" type="text" className="form-control pl-0" />
             {this.handleErrors('q6')}
           </div>
-          <div className="form-group mt-4">
-            <label className="col-form-label" htmlFor="q7">
-              Are you an accredited investor?
-            </label>
-            <small className="form-text text-muted">
-              (Makes more than $200k annually for the past 2 years and will do
-              so in this current year or have a net worth of $1M excluding your
-              primary residence)
-            </small>
-            {this.handleErrors('q7')}
-            <Field
-              className="p-0"
-              render={({ field, form, ...args }) => (
-                <Input
-                  {...field}
-                  {...args}
-                  gap
+          <div className="col-12  my-4">
+            <div className="form-group">
+              <label className="label" htmlFor="q7">
+                Are you an accredited investor?
+              </label>
+              <div className="md-form">
+                <small className="form-text text-muted">
+                  (Makes more than $200k annually for the past 2 years and will
+                  do so in this current year or have a net worth of $1M
+                  excluding your primary residence)
+                </small>
+
+                <Field
                   className="p-0"
-                  onClick={() => {
-                    values.accreditedInvestor = 'yes';
-                  }}
-                  checked={values.accreditedInvestor === 'yes'}
-                  label="Yes"
-                  type="radio"
-                  id="q7a"
-                  value="yes"
-                  onChange={handleChange}
+                  render={({ field, form, ...args }) => (
+                    <Input
+                      {...field}
+                      {...args}
+                      gap
+                      className="p-0"
+                      onClick={() => {
+                        values.accreditedInvestor = 'yes';
+                      }}
+                      checked={values.accreditedInvestor === 'yes'}
+                      label="Yes"
+                      type="radio"
+                      id="q7a"
+                      value="yes"
+                      onChange={handleChange}
+                    />
+                  )}
+                  name="q7"
                 />
-              )}
-              name="q7"
-            />
-            <Field
-              render={({ field, form, ...args }) => (
-                <Input
-                  {...field}
-                  {...args}
-                  gap
-                  onClick={() => {
-                    values.accreditedInvestor = 'no';
-                  }}
-                  checked={values.accreditedInvestor === 'no'}
-                  label="No"
-                  type="radio"
-                  id="q7b"
-                  value="no"
-                  onChange={handleChange}
+                <Field
+                  render={({ field, form, ...args }) => (
+                    <Input
+                      {...field}
+                      {...args}
+                      gap
+                      onClick={() => {
+                        values.accreditedInvestor = 'no';
+                      }}
+                      checked={values.accreditedInvestor === 'no'}
+                      label="No"
+                      type="radio"
+                      id="q7b"
+                      value="no"
+                      onChange={handleChange}
+                    />
+                  )}
+                  name="q7"
                 />
-              )}
-              name="q7"
-            />
+              </div>
+            </div>
 
             <label className="col-form-label" htmlFor="q8">
               Can you show proof of funds ?
@@ -350,14 +344,14 @@ class QuestionnaireForm extends Component {
             </div>
           </div>
 
-          <div className="form-group mt-4">
+          <div className="col-12 form-group mt-4">
             <label className="col-form-label" htmlFor="q10">
               If you are out of the country, have you invested in the US real
               estate market in the past?
             </label>
             <Field className="form-control pl-0" type="text" name="q10" />
           </div>
-          <div className="form-group mt-4">
+          <div className="col-12 form-group mt-4">
             <label htmlFor="q11" className="col-form-label">
               Have you invested as a limited partner (LP) on a syndication deal
               in the past?
@@ -366,7 +360,7 @@ class QuestionnaireForm extends Component {
             <Field className="form-control p-0" type="text" name="q11" />
             {this.handleErrors('q11')}
           </div>
-          <div className="form-group mt-4">
+          <div className="col-12 form-group mt-4">
             <label htmlFor="q12" className="col-form-label">
               Are you comfortable investing with other LPs or would you require
               to be the only LP in this investment?
@@ -381,7 +375,7 @@ class QuestionnaireForm extends Component {
             <Field className="form-control m-2 p-0" type="text" name="q12" />
             {this.handleErrors('q12')}
           </div>
-          <div className="form-group mt-4">
+          <div className="col-12 form-group mt-4">
             <label htmlFor="q13" className="col-form-label m-0">
               In a short paragraph please provide us with your investing
               experience.
@@ -397,7 +391,7 @@ class QuestionnaireForm extends Component {
             />
             {this.handleErrors('q13')}
           </div>
-          <div className="d-flex flex-column align-content-center justify-content-center mt-4">
+          <div className="col-12 d-flex flex-column align-content-center justify-content-center mt-4">
             <label className="col-form-label m-0" htmlFor="q14">
               Is there anything else we should know about you and your
               investment goals?
@@ -501,54 +495,8 @@ export default withFormik({
     q14: Yup.string().required('Field Required')
   }),
   handleSubmit: async (values, { resetForm, setErrors, setSubmitting }) => {
-    console.log('asdfasdf', values);
     resetForm();
     setSubmitting(false);
-    alert("Thank you, one of our team members will contact you soon.");
+    alert('Thank you, one of our team members will contact you soon.');
   }
 })(QuestionnaireForm);
-/*
-
-  validationSchema: Yup.object().shape({
-    firstname: Yup.string().required('Field Required'),
-    lastname: Yup.string().required('Field Required'),
-    email: Yup.string()
-      .email('Email is not valid')
-      .required('Field Required'),
-    question1: Yup.mixed().required('Field Required'),
-    question2: Yup.mixed().required('Field Required'),
-    question3: Yup.mixed().required('Field Required'),
-    question4a: Yup.mixed().required('Field Required'),
-    question4b: Yup.mixed().required('Field Required'),
-    question4c: Yup.mixed().required('Field Required'),
-    question5: Yup.mixed().required('Field Required'),
-    question6: Yup.mixed().required('Field Required'),
-    question7: Yup.mixed().required('Field Required'),
-    question8: Yup.mixed().required('Field Required'),
-    question9: Yup.mixed().required('Field Required'),
-    question10: Yup.mixed().required('Field Required'),
-    question11: Yup.mixed().required('Field Required'),
-    question12: Yup.mixed().required('Field Required'),
-    question13: Yup.mixed().required('Field Required'),
-    question14: Yup.mixed().required('Field Required')
-  })
-    email = '',
-    question1 = '',
-    question2 = '',
-    question3 = '',
-    question4a = '',
-    question4b = '',
-    question4c = '',
-    question5 = '',
-    question6 = '',
-    question7 = '',
-    question8 = '',
-    question9 = '',
-    question10 = '',
-    question11 = '',
-    question12 = '',
-    question13 = '',
-    question14 = ''
-  }) {
-
-*/
