@@ -6,12 +6,7 @@ class RisksWithInvesting extends Component {
     numPages: null,
     pageNumber: 1
   };
-  onDocumentLoad = ({ numPages }) => {
-    this.setState({ numPages });
-  };
-  renderPost = risk => {
-    console.log(risk);
-  };
+
   render() {
     return (
       <div className="rgba-blue-grey-slight">
@@ -144,12 +139,17 @@ class RisksWithInvesting extends Component {
               </p>
             ]}
             pageFooter={
-              <div className="container row">
-                <div className="col-auto d-flex flex-center">
-                  <p className="text-center align-self-center">Page 1 of 2</p>
-                  <NavLink className="ml-2" to={`/resources/investingrisks/2`}>
-                    <i className="material-icons">arrow_forward</i>
-                  </NavLink>
+              <div className="container">
+                <div className="row flex-center">
+                  <div className="col-12 d-flex flex-center">
+                    <p className="text-center align-self-center">Page 1 of 2</p>
+                    <NavLink
+                      className="ml-2"
+                      to={`/resources/investingrisks/2`}
+                    >
+                      <i className="material-icons">arrow_forward</i>
+                    </NavLink>
+                  </div>
                 </div>
               </div>
             }

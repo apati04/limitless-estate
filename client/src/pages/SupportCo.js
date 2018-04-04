@@ -12,7 +12,7 @@ export default class SupportCo extends Component {
           <CardImage className="p-4 card-img-top" src={logo} alt="" />
         </a>
 
-        <CardBody>
+        <CardBody className="h-100 w-100">
           <div className="container">
             <CardTitle className="h2-responsive">{name}</CardTitle>
             <div className="row flex-column no-gutters flex-nowrap text-left align-items-start justify-content-around">
@@ -67,7 +67,7 @@ export default class SupportCo extends Component {
                 </h5>
               </div>
             </div>
-            <div className="row align-items-end">
+            <div className="row h-100 w-100 justify-content-center align-items-baseline">
               <div className="col-12">
                 <div className="mt-2 text-center">
                   <a
@@ -80,7 +80,7 @@ export default class SupportCo extends Component {
                       size="lg"
                       className="btn btn-block text-white"
                     >
-                      Learn More
+                      View Details
                     </Button>
                   </a>
                 </div>
@@ -118,10 +118,10 @@ export default class SupportCo extends Component {
         <div className="container p-5 my-5">
           <div className="row  animated fadeIn">
             <div className="col-12 col-md-6">
-              <div className="h-100 m-2">{this.renderInfo(nuView)}</div>
+              <div className="h-100 p-3">{this.renderInfo(nuView)}</div>
             </div>
             <div className="col-12 col-md-6">
-              <div className="h-100 m-2">{this.renderInfo(uDirect)}</div>
+              <div className="h-100 p-3">{this.renderInfo(uDirect)}</div>
             </div>
           </div>
         </div>

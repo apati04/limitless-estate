@@ -7,7 +7,7 @@ class MemberSection extends Component {
   renderCards = items => {
     return items.map(person => {
       const content = person.content || person.resume;
-      console.log(person.photo);
+
       return (
         <MemberCard key={person.name} {...person}>
           {person.type === 'Team' ? (

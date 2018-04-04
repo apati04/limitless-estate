@@ -1,11 +1,29 @@
 import React, { Component } from 'react';
-import { Input, Button } from 'mdbreact';
+import {
+  Input,
+  Button,
+  Modal,
+  ModalHeader,
+  ModalBody,
+  ModalFooter
+} from 'mdbreact';
 import { withFormik, Form, Field } from 'formik';
 import Yup from 'yup';
+import { Link } from 'react-router-dom';
+import axios from 'axios';
 
 class ContactForm extends Component {
+  state = {
+    modal: false
+  };
+
+  toggle = e => {
+    this.setState({
+      modal: !this.state.modal
+    });
+  };
   render() {
-    const { errors, touched, isSubmitting } = this.props;
+    const { values, errors, touched, isSubmitting } = this.props;
 
     return (
       <Form>
@@ -59,15 +77,36 @@ class ContactForm extends Component {
                 </small>
               )}
             <Field
-              className="form-control p-0"
+              className="md-textarea form-control m-0 p-0"
               component="textarea"
               type="text"
               name="message"
             />
           </div>
+
+          <div className="d-flex flex-center">
+            <Modal
+              className="modal-dialog modal-dialog-centered"
+              isOpen={this.state.modal}
+              toggle={this.toggle}
+            >
+              <ModalHeader toggle={this.toggle}>
+                Thank you for the message
+              </ModalHeader>
+              <ModalBody>
+                One of our team members will contact you soon.
+              </ModalBody>
+              <ModalFooter>
+                <Link to="/">
+                  <Button color="secondary">Back To Home</Button>
+                </Link>
+              </ModalFooter>
+            </Modal>
+          </div>
           <div className="col-12 text-center">
             <button
               type="submit"
+              onClick={this.toggle}
               className="btn btn-outline primary-color"
               disabled={isSubmitting}
             >
@@ -95,18 +134,13 @@ export default withFormik({
     lastname: Yup.string().required('required'),
     email: Yup.string()
       .email('Email is not valid')
-      .required('Field is required'),
+      .required('required'),
     message: Yup.string().required('required')
   }),
   async handleSubmit(values, { resetForm, setErrors, setSubmitting }) {
-    // const payload = await axios.post('/api/sendmail', values);
-    // console.log('payload: ', payload);
-    const payload = values;
-    console.log(payload);
+    const payload = await axios.post('/api/sendmail', values);
+
     resetForm();
     setSubmitting(false);
-    alert('Thank you, one of our team members will contact you soon.');
-    console.log(this);
-    window.location = '/';
   }
 })(ContactForm);

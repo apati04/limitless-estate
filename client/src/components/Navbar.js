@@ -42,14 +42,14 @@ class Navigation extends Component {
         expand="md"
         sticky="top"
         style={{ borderRadius: 0 }}
-        className="primary-color pb-3 m-0"
+        className="primary-color py-2 m-0"
       >
         <Container>
           <Link to="/">
             <img
-              height="50"
+              height="48"
               src="https://i.imgur.com/6TpCmWV.png"
-              className="d-inline-block ml-auto"
+              className="d-inline-block align-center pb-1 ml-auto"
               alt=""
             />
           </Link>
@@ -80,28 +80,23 @@ class Navigation extends Component {
                   aria-labelledby="navbarDropdownMenuLink"
                   className="dropdown-menu"
                 >
-                  <div className="dropdown-item">
-                    <NavLink
-                      exact
-                      style={{ color: 'white' }}
-                      activeStyle={{ fontWeight: 500 }}
-                      className="h5-responsive"
-                      to="/markets/columbus/summary"
-                    >
-                      Columbus, OH
-                    </NavLink>
-                  </div>
-                  <div className="dropdown-item">
-                    <NavLink
-                      exact
-                      style={{ color: 'white' }}
-                      activeStyle={{ fontWeight: 500 }}
-                      className="h5-responsive"
-                      to="/markets/detroit/summary"
-                    >
-                      Detroit, MI
-                    </NavLink>
-                  </div>
+                  <NavLink
+                    exact
+                    activeStyle={{ fontWeight: 400 }}
+                    className="px-3 h4-responsive dropdown-item"
+                    to="/markets/columbus/summary"
+                  >
+                    Columbus, OH
+                  </NavLink>
+
+                  <NavLink
+                    exact
+                    activeStyle={{ fontWeight: 400 }}
+                    className="px-3 h4-responsive dropdown-item"
+                    to="/markets/detroit/summary"
+                  >
+                    Detroit, MI
+                  </NavLink>
                 </div>
               </div>
               <div className="nav-item dropdown m-1">
@@ -114,61 +109,53 @@ class Navigation extends Component {
                   Resources
                 </a>
                 <div className="dropdown-menu" aria-labelledby="navRes">
-                  <div className="dropdown-item">
-                    <NavLink
-                      exact
-                      style={{ color: 'white' }}
-                      activeStyle={{ fontWeight: 500 }}
-                      className="h5-responsive"
-                      to="/resources"
-                    >
-                      Why Invest in Multifamily
-                    </NavLink>
-                  </div>
-                  <div className="dropdown-item">
-                    <NavLink
-                      exact
-                      style={{ color: 'white' }}
-                      activeStyle={{ fontWeight: 500 }}
-                      className="h5-responsive"
-                      to="/resources/impactinvesting"
-                    >
-                      Impact Investing
-                    </NavLink>
-                  </div>
-                  <div className="dropdown-item">
-                    <NavLink
-                      exact
-                      style={{ color: 'white' }}
-                      activeStyle={{ fontWeight: 500 }}
-                      className="h5-responsive"
-                      to="/resources/investingrisks/1"
-                    >
-                      Risks
-                    </NavLink>
-                  </div>
-                  <div className="dropdown-item">
-                    <NavLink
-                      exact
-                      style={{ color: 'white' }}
-                      activeStyle={{ fontWeight: 500 }}
-                      className="h5-responsive"
-                      to="/info/investing/ira401k"
-                    >
-                      401K/IRA
-                    </NavLink>
-                  </div>
-                  <div className="dropdown-item">
-                    <NavLink
-                      exact
-                      style={{ color: 'white' }}
-                      activeStyle={{ fontWeight: 500 }}
-                      className="h5-responsive"
-                      to="/resources/faq"
-                    >
-                      FAQ
-                    </NavLink>
-                  </div>
+                  <NavLink
+                    exact
+                    activeStyle={{ fontWeight: 400 }}
+                    className="px-3 h4-responsive dropdown-item"
+                    to="/resources"
+                  >
+                    Why Invest in Multifamily
+                  </NavLink>
+
+                  <NavLink
+                    exact
+                    activeStyle={{
+                      fontWeight: 400
+                    }}
+                    className="px-3 h4-responsive dropdown-item"
+                    to="/resources/impactinvesting"
+                  >
+                    Impact Investing
+                  </NavLink>
+
+                  <NavLink
+                    exact
+                    activeStyle={{ fontWeight: 400 }}
+                    className="px-3 h4-responsive dropdown-item"
+                    to="/info/investing/ira401k"
+                  >
+                    401K/IRA
+                  </NavLink>
+
+                  <NavLink
+                    exact
+                    style={{ color: 'white' }}
+                    activeStyle={{ fontWeight: 400 }}
+                    className="px-3 h4-responsive dropdown-item"
+                    to="/resources/investingrisks/1"
+                  >
+                    Risks
+                  </NavLink>
+
+                  <NavLink
+                    exact
+                    activeStyle={{ fontWeight: 400 }}
+                    className="px-3 h4-responsive dropdown-item"
+                    to="/resources/faq"
+                  >
+                    FAQ
+                  </NavLink>
                 </div>
               </div>
               <NavItem className="m-1">

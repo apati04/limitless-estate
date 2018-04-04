@@ -120,6 +120,7 @@ class PicCarousel extends Component {
             </CarouselItem>
           </CarouselInner>
           <CarouselControl
+            className="invisible"
             direction="prev"
             role="button"
             onClick={() => {
@@ -127,6 +128,7 @@ class PicCarousel extends Component {
             }}
           />
           <CarouselControl
+            className="invisible"
             direction="next"
             role="button"
             onClick={() => {

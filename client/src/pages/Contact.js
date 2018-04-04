@@ -1,19 +1,25 @@
 import React, { Component } from 'react';
 import ContactForm from '../components/Forms/ContactForm';
 import { Card, CardImage, CardBody, CardTitle } from 'mdbreact';
-const styles = {
-  formStyle: {
-    height: '100%'
-  }
-};
+const bgimage =
+  'https://images.pexels.com/photos/681368/pexels-photo-681368.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260';
+
 class Contact extends Component {
   render() {
     return (
-      <div className="animated fadeIn unique-color">
-        <div className="full-bg-img">
+      <div
+        style={{
+          height: 80 + 'em',
+          background: `url(${bgimage})center center no-repeat`,
+          backgroundSize: 'cover'
+        }}
+        data-wow-delay="1s"
+        className="animated fadeIn hm-black-light"
+      >
+        <div style={{ height: '100%' }} className="view full-bg-img">
           <div className="container">
-            <div className="row no-gutters align-items-center justify-content-center">
-              <div className="col-12 col-md-6">
+            <div className="row my-5 flex-center">
+              <div className="col-12 col-lg-7">
                 <Card className="align-center animated fadeIn z-depth-4" narrow>
                   <CardImage tag="div">
                     <div className="view gradient-card-header blue-gradient text-align-center peach-gradient">
@@ -22,7 +28,7 @@ class Contact extends Component {
                       </CardTitle>
                     </div>
                   </CardImage>
-                  <CardBody>
+                  <CardBody className="p-5">
                     <ContactForm />
                   </CardBody>
                 </Card>

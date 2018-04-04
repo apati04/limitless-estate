@@ -495,7 +495,6 @@ export default withFormik({
     q14: Yup.string().required('Field Required')
   }),
   handleSubmit: async (values, { resetForm, setErrors, setSubmitting }) => {
-    console.log('asdfasdf', values);
     resetForm();
     setSubmitting(false);
     alert('Thank you, one of our team members will contact you soon.');

@@ -43,16 +43,20 @@ class Wizard extends React.Component {
     this.toggle = this.toggle.bind(this);
   }
 
-  next = values =>
+  next = values => {
+    window.scrollTo(0, 0);
     this.setState(state => ({
       page: Math.min(state.page + 1, this.props.children.length - 1),
       values
     }));
+  };
 
-  previous = () =>
+  previous = () => {
+    window.scrollTo(0, 0);
     this.setState(state => ({
       page: Math.max(state.page - 1, 0)
     }));
+  };
 
   validate = values => {
     const activePage = React.Children.toArray(this.props.children)[
@@ -73,7 +77,6 @@ class Wizard extends React.Component {
     }
   };
   toggle = e => {
-    console.log('asdfasdf: ', e);
     this.setState({
       modal: !this.state.modal
     });
@@ -84,7 +87,7 @@ class Wizard extends React.Component {
     const activePage = React.Children.toArray(children)[page];
     const isLastPage = page === React.Children.count(children) - 1;
     return (
-      <div className="h-100">
+      <div>
         <Formik
           initialValues={values}
           enableReinitialize={false}
@@ -99,28 +102,33 @@ class Wizard extends React.Component {
           }) => (
             <form onSubmit={handleSubmit}>
               {activePage}
+              <div className="text-center">
+                {page > 0 && (
+                  <Button
+                    type="button"
+                    className="btn btn-secondary mr-2"
+                    onClick={this.previous}
+                  >
+                    « Previous
+                  </Button>
+                )}
 
-              {page > 0 && (
-                <button
-                  type="button"
-                  className="secondary"
-                  onClick={this.previous}
-                >
-                  « Previous
-                </button>
-              )}
-
-              {!isLastPage && <button type="submit">Next »</button>}
-              {isLastPage && (
-                <button
-                  type="submit"
-                  onClick={this.toggle}
-                  disabled={isSubmitting}
-                >
-                  Submit
-                </button>
-              )}
-
+                {!isLastPage && (
+                  <Button color="primary" type="submit">
+                    Next »
+                  </Button>
+                )}
+                {isLastPage && (
+                  <button
+                    type="submit"
+                    className="btn btn-primary"
+                    onClick={this.toggle}
+                    disabled={isSubmitting}
+                  >
+                    Submit
+                  </button>
+                )}
+              </div>
               <div className="d-flex flex-center">
                 <Modal
                   className="modal-dialog modal-dialog-centered"
@@ -184,7 +192,6 @@ export default () => (
           }}
           onSubmit={async (values, actions) => {
             const payload = await axios.post('/api/questionnaire', values);
-            console.log('payload: ', payload);
           }}
         >
           <Wizard.Page>

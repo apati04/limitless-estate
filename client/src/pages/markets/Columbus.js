@@ -16,7 +16,7 @@ const styles = {
   header: {
     background: `url(${'https://i.imgur.com/BZOlfik.jpg?1'})center center no-repeat`,
     backgroundSize: 'cover',
-    height: 27 + 'em'
+    height: 22 + 'em'
   }
 };
 class Columbus extends Component {
@@ -27,14 +27,14 @@ class Columbus extends Component {
           <div style={styles.header} />
         </CardImage>
         {/* <PageHeader title={title} /> */}
-        <CardBody data-wow-delay="1s" className="animated fadeInRightBig py-3">
+        <CardBody data-wow-delay="1s" className="animated fadeInRightBig pb-4">
           <div className="container">
             <div className="row flex-center">
               <div className="col-8">
                 {/* building stats */}
                 <div
-                  style={{ height: 100 + 'em' }}
-                  className="animate fadeInLeftBig embed-responsive embed-responsive-16by9"
+                  style={{ height: 65 + 'em' }}
+                  className="embed-responsive embed-responsive-16by9"
                 >
                   <iframe
                     className=" embed-responsive-item"
@@ -55,15 +55,10 @@ class Columbus extends Component {
                     </Link>
                   </div>
                   <div>
-                    <Link to="/">Back to Home</Link>
+                    <Link to="/markets/columbus/summary">Back to Overview</Link>
                   </div>
                 </form>
               </div>
-              {/* <div className="col-12 col-lg-4 mt-4 d-none d-lg-block">
-                <StickyBox style={{ marginTop: '-100px', paddingTop: '100px' }}>
-                  <MapBox address="2201 Riverside Drive, Columbus, OH" />
-                </StickyBox>
-              </div> */}
             </div>
           </div>
         </CardBody>
