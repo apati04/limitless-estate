@@ -33,7 +33,7 @@ const IconSection = () => {
 
       <IconTemplate
         icon="fas fa-trophy"
-        title="Create Win Wn Win Scenarios"
+        title="Create Win Win Win Scenarios"
         fontSize={3 + 'em'}
       />
     </section>
