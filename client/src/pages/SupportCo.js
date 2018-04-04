@@ -8,7 +8,7 @@ export default class SupportCo extends Component {
     const { name, phone, address, email, website, misc, logo } = company;
     return (
       <Card className="h-100 w-100" narrow>
-        <a target="_blank" href={website}>
+        <a target="_blank" rel="noopener" href={website}>
           <CardImage className="p-4 card-img-top" src={logo} alt="" />
         </a>
 
@@ -61,7 +61,7 @@ export default class SupportCo extends Component {
                   className="mr-2"
                 />
                 <h5 className="h5-responsive">
-                  <a target="_blank" href={website}>
+                  <a target="_blank" rel="noopener" href={website}>
                     {website}
                   </a>
                 </h5>
@@ -73,6 +73,7 @@ export default class SupportCo extends Component {
                   <a
                     style={{ textDecoration: 'none', color: 'white' }}
                     target="_blank"
+                    rel="noopener"
                     href={misc}
                   >
                     <Button
