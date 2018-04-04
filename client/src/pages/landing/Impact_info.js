@@ -25,10 +25,11 @@ export default () => {
               in meaningful, intelligent ventures that provide both a financial
               AND a social return on their investment.
             </h3>
-            <NavLink to="/resources/impactinvesting">
-              <Button className="h5-responsive" color="primary">
-                Learn More
-              </Button>
+            <NavLink
+              className="btn btn-primary"
+              to="/resources/impactinvesting"
+            >
+              Learn More
             </NavLink>
           </div>
           <div className="white-text text-justify text-md-center w-75">

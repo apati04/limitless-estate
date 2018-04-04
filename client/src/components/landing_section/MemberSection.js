@@ -24,12 +24,14 @@ class MemberSection extends Component {
               <p className="p-0 font-weight-bold">{person.title}</p>
 
               <a
+                role="button"
+                className="btn btn-primary"
                 style={{ color: '#f7f7f7' }}
                 target="_blank"
                 rel="noopener"
                 href={content}
               >
-                <Button color="primary">View Bio >></Button>
+                View Bio >>
               </a>
             </div>
           ) : (
