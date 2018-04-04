@@ -11,11 +11,15 @@ import {
 } from 'mdbreact';
 import classNames from 'classnames';
 class PicCarousel extends Component {
-  state = {
-    activeItem: 1,
-    maxLength: 3
-  };
-  newRef = React.createRef();
+  constructor(props) {
+    super(props);
+    this.state = {
+      activeItem: 1,
+      maxLength: 3
+    };
+    this.newRef = React.createRef();
+  }
+
   next = () => {
     const nextItem = this.state.activeItem + 1;
     if (nextItem > this.state.maxLength) {
