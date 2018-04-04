@@ -44,16 +44,9 @@ class Columbus extends Component {
           <div style={styles.header} />
         </CardImage>
 
-        <div className="view hm-black-light">
-          <CardImage
-            style={{ height: 27 + 'em' }}
-            src="https://i.imgur.com/3qqAILY.jpg?1"
-            className="d-sm-none d-block im-fluid"
-          />
-        </div>
         <CardBody className="m-5 px-2">
           <Container>
-            <div className="row no-gutters align-items-start justify-content-end text-left">
+            <div className="row no-gutters align-items-start justify-content-center text-left">
               <div className="col-12 col-md-8">
                 <h2 className="h2-responsive">Columbus, OH</h2>
                 {this.renderContent()}

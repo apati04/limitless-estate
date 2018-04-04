@@ -50,7 +50,7 @@ class Detroit extends Component {
 
         <CardBody className="m-5 px-2">
           <div className="container">
-            <div className="row no-gutters align-items-start justify-content-end text-left">
+            <div className="row no-gutters align-items-start justify-content-center text-left">
               <div className="col-12 col-md-8 col-lg-8">
                 <h2 className="h2-responsive">Detroit, MI</h2>
 
