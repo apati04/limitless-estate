@@ -28,7 +28,7 @@ class Columbus extends Component {
     const body = main.map((e, i) => <p key={i}>{e}</p>);
     const listItems = list.map((e, i) => <li key={i}>{e}</li>);
     return (
-      <div>
+      <div style={{ fontWeight: 300 }}>
         {body}
         <ul style={{ padding: 0, listStyle: 'inside' }} className="p-0">
           {listItems}
@@ -44,18 +44,19 @@ class Columbus extends Component {
           <div style={styles.header} />
         </CardImage>
 
-        <CardBody className="m-5 px-2">
+        <CardBody>
           <Container>
-            <div className="row no-gutters align-items-start justify-content-center text-left">
-              <div className="col-12 col-md-8">
+            <div className="row no-gutters align-items-start justify-content-between text-left">
+              <div className="col-12 col-lg-8">
                 <h2 className="h2-responsive">Columbus, OH</h2>
-                {this.renderContent()}
-
-                <NavLink className="white-text" to="/markets/columbus/sdp">
-                  <Button size="lg" color="blue">
-                    Sample Deal Package
-                  </Button>
-                </NavLink>
+                <div>{this.renderContent()}</div>
+                <div className="text-center text-sm-left">
+                  <button className="btn btn-lg btn-primary">
+                    <NavLink className=" white-text" to="/markets/columbus/sdp">
+                      Sample Deal Package
+                    </NavLink>
+                  </button>
+                </div>
               </div>
               <div className="ml-auto p-0 m-0 col-12 col-lg-4  d-none d-lg-block">
                 <StickyBox className="m-0 p-0">
