@@ -14,9 +14,6 @@ import {
   Container
 } from 'mdbreact';
 
-const styles = {
-  hoverDropdown: {}
-};
 class Navigation extends Component {
   state = {
     collapse: false,
