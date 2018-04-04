@@ -23,7 +23,12 @@ class MemberSection extends Component {
               <h3 className="h3-responsive p-0">{person.name}</h3>
               <p className="p-0 font-weight-bold">{person.title}</p>
 
-              <a style={{ color: '#f7f7f7' }} target="_blank" href={content}>
+              <a
+                style={{ color: '#f7f7f7' }}
+                target="_blank"
+                rel="noopener"
+                href={content}
+              >
                 <Button color="primary">View Bio >></Button>
               </a>
             </div>

@@ -29,7 +29,7 @@ class Markets extends Component {
                 <h2 className="pb-3 mb-4  border-bottom">
                   Columbus, Ohio{' '}
                   <span className="lead ml-2 font-italic">
-                    (<a target="_blank" href={SDP_Columbus}>
+                    (<a target="_blank" rel="noopener" href={SDP_Columbus}>
                       View PDF
                     </a>)
                   </span>
@@ -61,7 +61,7 @@ class Markets extends Component {
                 <h2 className="pb-3 mb-4  border-bottom">
                   Detroit, MI{' '}
                   <span className="lead ml-2 font-italic">
-                    (<a target="_blank" href={SDP_Detroit}>
+                    (<a target="_blank" rel="noopener" href={SDP_Detroit}>
                       View PDF
                     </a>)
                   </span>
