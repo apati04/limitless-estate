@@ -27,7 +27,7 @@ app.post('/api/sendmail', (req, res) => {
   const mailOptions = {
     from: sender,
     to: 'kmitchell@limitless-estates.com',
-    cc: 'lpatipaksiri@limitless-estates.com',
+    cc: ['lpatipaksiri@limitless-estates.com', 'aitech9188@gmail.com'],
     subject: `Contact Form- ${firstname}`,
     html: `
       <html>
@@ -47,7 +47,7 @@ app.post('/api/sendmail', (req, res) => {
     `
   };
   transporter.sendMail(mailOptions);
-  res.redirect('/');
+  res.send('complete');
 });
 
 app.post('/api/questionnaire', (req, res) => {
@@ -94,7 +94,8 @@ q9 : risk {riskTolerance}
   };
   const mailOptions = {
     from: sender,
-    to: 'apax714@gmail.com',
+    to: 'kmitchell@limitless-estates.com',
+    cc: ['lpatipaksiri@limitless-estates.com', 'aitech9188@gmail.com'],
     subject: `Investor Questionnaire - ${fullname}`,
     html: `
       <html>
