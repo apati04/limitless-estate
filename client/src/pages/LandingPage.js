@@ -10,13 +10,10 @@ class LandingPage extends Component {
     return (
       <div>
         <PicCarousel />
-
         <IconSection />
-
         <LandingParallax />
         <InfoSection />
         <ImpactInfo />
-
         <MemberSection />
       </div>
     );
