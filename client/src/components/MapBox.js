@@ -26,19 +26,19 @@ class MapBox extends Component {
       container: 'mapbox',
       style: 'mapbox://styles/mapbox/streets-v10',
       center: [lng, lat],
-      zoom: 12,
-      pitch: 6
+      zoom: 10
     });
   };
 
   render() {
     return (
       <div
-        className="ml-auto mb-3 z-depth-1 rounded-circle"
+        className="mb-3 mr-0 pr-0 z-depth-2 rounded-circle"
         id="mapbox"
         style={{
-          height: 20 + 'em',
-          width: 20 + 'em'
+          height: 25 + 'em',
+          width: 25 + 'em',
+          marginTop: -5 + 'em'
         }}
       />
     );
