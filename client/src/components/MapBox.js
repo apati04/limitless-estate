@@ -22,7 +22,7 @@ class MapBox extends Component {
       container: 'mapbox',
       style: 'mapbox://styles/mapbox/outdoors-v10',
       center: [lng, lat],
-      zoom: 11.7,
+      zoom: 8.5,
     });
     new mapboxgl.Marker().setLngLat([lng, lat]).addTo(map);
   };
