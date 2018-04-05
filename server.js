@@ -36,7 +36,7 @@ app.post('/api/sendmail', (req, res) => {
       <body style="text-align: left;">
         <div style="border-bottom": 1px solid black;">
         <h4>First and Last Name:  ${firstname} ${lastname}</h4>
-     
+
         <h4>Company (optional): ${company}</h4>
         <h4>Email: ${email}</h4>
         <h4>Message:</h4>
@@ -111,7 +111,7 @@ q9 : risk {riskTolerance}
         font-size: 100%;
         font-family: 'Roboto', sans-serif;
       }
-      
+
       body,
       caption,
       th,
@@ -128,10 +128,10 @@ q9 : risk {riskTolerance}
       h4,
       h5,
       h6 {
-        
+
         font-size-adjust: 0.5;
       }
-      
+
       </style>
       </head>
       <body style="text-align: left; font-size: 1em;">
@@ -141,22 +141,23 @@ q9 : risk {riskTolerance}
           <h4>Phone Number: ${phone}</h4>
           <h4>Preferred Form of Contact: <span>${contactPreference}</span></h4>
           </div>
-        <p style="margin-top: 10px">1. <span>${q1}</span></p>
-        <p>2. <span>${q2}</span></p>
-        <p>3. <span>${q3}</span></p>
-        <p>4a. Annual return: <span>${q4IRR}</span></p>
-        <p>4b. Internal rate of return (IRR): <span>${q4ARP}</span></p>
-        <p>4c. Cash on cash return: <span>${q4CoC}</span></p>
-        <p>5. <span>${q5}</span></p>
-        <p>6. <span>${q6}</span></p>
+        <p style="margin-top: 10px">1. <span>Why are you interested in investing in Real Estate?: ${q1}</span></p>
+        <p>2. <span>What is the biggest hurdle you are trying to overcome by investing in Real Estate?: ${q2}</span></p>
+        <p>3. <span>Do you want to invest in multifamily, value-add projects?: ${q3}</span></p>
+        <p>4. What are your return expectations?
+        <p>- a. Annual return: <span>${q4IRR}</span></p>
+        <p>- b. Internal rate of return (IRR): <span>${q4ARP}</span></p>
+        <p>- c. Cash on cash return: <span>${q4CoC}</span></p>
+        <p>5. <span>What is your investment minimum and maximum hold time?: ${q5}</span></p>
+        <p>6. <span>What is the minimum dollar amount you are willing to invest?: ${q6}</span></p>
         <p>7. Accredited Investor: ${accreditedInvestor}</p>
         <p>8. Show proof of funds: ${proofOfFunds}</p>
         <p>9. Risk Tolerance Rating: <span>${riskTolerance}</span></p>
-        <p>10. <span>${q10}</span></p>
-        <p>11. <span>${q11}</span> </p>
-        <p>12.  <span>${q12}</span></p>
-        <p>13. <span> ${q13}</span></p>
-        <p>14.  <span>${q14}</span></p>
+        <p>10. <span>If you are based outside of the US, have you invested in the US real estate market in the past?: ${q10}</span></p>
+        <p>11. <span>Have you invested as a limited partner (LP) on a syndication deal in the past?: ${q11}</span> </p>
+        <p>12. <span>Are you comfortable investing with other LPs or would you require to be the only LP in this investment?: ${q12}</span></p>
+        <p>13. <span>In a short paragraph please provide us with your investing experience. ${q13}</span></p>
+        <p>14. <span>Is there anything else we should know about you and your investment goals?: ${q14}</span></p>
       </body>
       </html>
     `
