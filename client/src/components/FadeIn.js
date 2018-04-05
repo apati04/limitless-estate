@@ -1,12 +1,12 @@
-import React, { Component } from "react";
-import { FadeIn as Animation } from "react-lazyload-fadein";
+import React, { Component } from 'react';
+import { FadeIn as Animation } from 'react-lazyload-fadein';
 
 class FadeIn extends Component {
   render() {
     return (
       <Animation height={600}>
         {onload => (
-          <div onLoad={onload}>
+          <div onLoad={onload} className="animate bounceIn">
             {this.props.children}
           </div>
         )}

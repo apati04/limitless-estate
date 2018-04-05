@@ -10,10 +10,10 @@ class MemberSection extends Component {
       const content = person.content || person.resume;
 
       return (
-        <FadeIn>
-          <MemberCard key={person.name} {...person}>
-            {person.type === 'Team' ? (
-              <div className="col-md-12 mt-2">
+        <MemberCard key={person.name} {...person}>
+          {person.type === 'Team' ? (
+            <div className="col-md-12 mt-2">
+              <FadeIn>
                 <img
                   style={{ border: '2px solid lightgrey' }}
                   className="mr-2 mb-1 rounded-circle"
@@ -33,9 +33,11 @@ class MemberSection extends Component {
                 >
                   <Button color="primary">View Bio >></Button>
                 </a>
-              </div>
-            ) : (
-              <div className="col-12 d-flex flex-column flex-center mt-2">
+              </FadeIn>
+            </div>
+          ) : (
+            <div className="col-12 d-flex flex-column flex-center mt-2">
+              <FadeIn>
                 <img
                   style={{ border: '2px solid lightgrey' }}
                   className="mb-1 rounded-circle"
@@ -44,24 +46,24 @@ class MemberSection extends Component {
                   width={person.photo.size}
                   height={person.photo.size}
                 />
-                <div className="d-inline-flex justify-content-end align-items-center flex-nowrap text-nowrap ml-auto">
-                  <h3 className="h5-responsive m-0">{person.name}</h3>
-                  <Popover
-                    component="button"
-                    placement="right"
-                    popoverBody={<Fa icon="info" />}
-                    className="btn btn-floating primary-color pr-0 btn-small"
-                  >
-                    <PopoverHeader className="primary-color-dark text-center">
-                      {person.name}, {person.type}
-                    </PopoverHeader>
-                    <PopoverBody>{person.content}</PopoverBody>
-                  </Popover>
-                </div>
-              </div>
-            )}
-          </MemberCard>
-        </FadeIn>
+                <h3 className="h5-responsive m-0">{person.name}</h3>
+                <Popover
+                  component="button"
+                  placement="right"
+                  popoverBody={
+                    <Fa style={{ fontSize: 1 + 'em' }} icon="info" />
+                  }
+                  className="btn btn-floating primary-color btn-small"
+                >
+                  <PopoverHeader className="primary-color-dark text-center">
+                    {person.name}, {person.type}
+                  </PopoverHeader>
+                  <PopoverBody>{person.content}</PopoverBody>
+                </Popover>
+              </FadeIn>
+            </div>
+          )}
+        </MemberCard>
       );
     });
   };
