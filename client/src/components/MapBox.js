@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import mapboxgl from 'mapbox-gl';
-
+import 'mapbox-gl/dist/mapbox-gl.css';
+import 'mapbox-gl/dist/mapbox-gl';
 class MapBox extends Component {
   componentDidMount() {
     this.renderMap();
@@ -9,8 +10,11 @@ class MapBox extends Component {
 
   renderMap = async () => {
     const mapboxUrl = 'https://api.mapbox.com/geocoding/v5/mapbox.places';
-    const mapboxToken = 'pk.eyJ1IjoiYXBhdGkwNCIsImEiOiJjamFraWtwOWUyamdpMndvMmc1bWNvMnowIn0.QUnCBEj6objBvZoWPa0UTQ';
-    const request = await axios.get(`${mapboxUrl}/${this.props.address}.json?access_token=${mapboxToken}`);
+    const mapboxToken =
+      'pk.eyJ1IjoiYXBhdGkwNCIsImEiOiJjamFraWtwOWUyamdpMndvMmc1bWNvMnowIn0.QUnCBEj6objBvZoWPa0UTQ';
+    const request = await axios.get(
+      `${mapboxUrl}/${this.props.address}.json?access_token=${mapboxToken}`
+    );
     const { data } = request;
 
     const lng = data.features[0].center[0];
@@ -20,23 +24,21 @@ class MapBox extends Component {
       'pk.eyJ1IjoiaXNhYWMxMTA0IiwiYSI6ImNqZDgwYjJ5MTI1dXUycWw5M3E5bnpldDcifQ.tRpvJ9X5wq7ke4t9KGd4yg';
     const map = new mapboxgl.Map({
       container: 'mapbox',
-      style: 'mapbox://styles/mapbox/outdoors-v10',
+      style: 'mapbox://styles/mapbox/streets-v10',
       center: [lng, lat],
-      zoom: 8.5,
+      zoom: 12,
+      pitch: 6
     });
-    new mapboxgl.Marker().setLngLat([lng, lat]).addTo(map);
   };
 
   render() {
     return (
       <div
-        className="mb-3 rounded-circle"
+        className="ml-auto mb-3 z-depth-1 rounded-circle"
         id="mapbox"
         style={{
-          height: '300px',
-          width: '300px',
-          border: '1px outset #f8f9fa',
-          boxShadow: ' 0 1px 2px rgba(0,0,0,0.24)',
+          height: 20 + 'em',
+          width: 20 + 'em'
         }}
       />
     );

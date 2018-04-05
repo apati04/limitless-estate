@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import MapBox from '../../components/MapBox';
-import StickyBox from 'react-sticky-box';
+
 import {
   Button,
   Card,
@@ -70,10 +70,8 @@ class Detroit extends Component {
                 </div>
               </div>
               <div className="ml-auto p-0 m-0 col-12 col-lg-4  d-none d-lg-block">
-                <StickyBox className="m-0 p-0">
-                  {/* Financial Data */}
-                  <MapBox address="4581 High Street, Ecorse, MI" />
-                </StickyBox>
+                {/* Financial Data */}
+                <MapBox address="Ecorse, MI" />
               </div>
             </div>
           </div>
