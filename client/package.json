@@ -22,7 +22,8 @@
     "jquery": "^3.3.1",
     "lodash.range": "^3.2.0",
     "mapbox-gl": "^0.44.1",
-    "mdbreact": "git+https://github.com/mdbootstrap/React-Bootstrap-with-Material-Design.git",
+    "mdbreact":
+      "git+https://github.com/mdbootstrap/React-Bootstrap-with-Material-Design.git",
     "popper.js": "^1.14.1",
     "react": "^16.3.1",
     "react-dom": "^16.3.1",
@@ -30,7 +31,7 @@
     "react-lazyload-fadein": "^1.0.1",
     "react-redux": "^5.0.7",
     "react-router-dom": "^4.2.2",
-    "react-scripts": "1.0.14",
+    "react-scripts": "1.1.4",
     "react-sticky-box": "^0.6.1",
     "redux": "^3.7.2",
     "redux-thunk": "^2.2.0",

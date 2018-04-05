@@ -37,33 +37,37 @@ class Detroit extends Component {
         <div>
           <CardImage
             src="https://i.imgur.com/c5f5NOc.jpg"
-            className="w-100 h-100 d-none d-sm-block"
+            className="w-100 h-100 d-none d-md-block"
           />
         </div>
 
         <div className="view hm-black-light">
           <CardImage
+            style={{ height: 22 + 'em' }}
             src="https://i.imgur.com/3qqAILY.jpg?1"
-            className="w-100  d-sm-none"
+            className="w-100 h-75 d-md-none img-fluid"
           />
         </div>
 
-        <CardBody className="m-5 px-2">
+        <CardBody>
           <div className="container">
-            <div className="row no-gutters align-items-start justify-content-center text-left">
-              <div className="col-12 col-md-8 col-lg-8">
+            <div className="row no-gutters align-items-start justify-content-between text-left">
+              <div className="col-12 col-lg-8">
                 <h2 className="h2-responsive">Detroit, MI</h2>
+                <div style={{ fontWeight: 300 }}>
+                  {this.renderContent()}
 
-                {this.renderContent()}
-
-                <ul style={{ padding: 0, listStyle: 'inside' }}>
-                  {this.renderList()}
-                </ul>
-                <NavLink className="white-text" to="/markets/detroit/sdp">
-                  <Button size="lg" color="blue">
-                    Sample Deal Package
-                  </Button>
-                </NavLink>
+                  <ul style={{ padding: 0, listStyle: 'inside' }}>
+                    {this.renderList()}
+                  </ul>
+                </div>
+                <div className="text-center text-sm-left">
+                  <button className="btn btn-lg btn-primary">
+                    <NavLink className="white-text" to="/markets/detroit/sdp">
+                      Sample Deal Package
+                    </NavLink>
+                  </button>
+                </div>
               </div>
               <div className="ml-auto p-0 m-0 col-12 col-lg-4  d-none d-lg-block">
                 <StickyBox className="m-0 p-0">
