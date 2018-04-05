@@ -141,7 +141,7 @@ q9 : risk {riskTolerance}
           <h4>Phone Number: ${phone}</h4>
           <h4>Preferred Form of Contact: <span>${contactPreference}</span></h4>
           </div>
-        <p style="margin-top: 10px">Why are you interested in investing in Real Estate?: 1. <span>${q1}</span></p>
+        <p style="margin-top: 10px">1. <span>Why are you interested in investing in Real Estate?: ${q1}</span></p>
         <p>2. <span>What is the biggest hurdle you are trying to overcome by investing in Real Estate?: ${q2}</span></p>
         <p>3. <span>Do you want to invest in multifamily, value-add projects?: ${q3}</span></p>
         <p>4. What are your return expectations?
