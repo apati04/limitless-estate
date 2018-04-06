@@ -37,7 +37,7 @@ h6 {
   color: 'black' !important;
 }
 
-#page {
+#root {
   font-size: 1em;
   /* equivalent to 16px */
   line-height: 1.25;
@@ -308,7 +308,7 @@ input[type='radio'] {
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) { ... } */
 @media (min-width: 43.75em) {
-  #page {
+  #root {
     font-size: 1em;
     /* equivalent to 16px */
     line-height: 1.375;
