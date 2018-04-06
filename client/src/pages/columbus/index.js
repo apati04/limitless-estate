@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import MapBox from '../../components/MapBox';
-import StickyBox from 'react-sticky-box';
+
 import {
   Button,
   Card,
@@ -40,14 +40,19 @@ class Columbus extends Component {
   render() {
     return (
       <Card className="z-depth-0">
-        <CardImage tag="div">
-          <div style={styles.header} />
+        <CardImage className="view" tag="div">
+          <div>
+            <img
+              className="img-fluid w-100 "
+              src="https://i.imgur.com/BZOlfik.jpg?2"
+              alt=""
+            />
+          </div>
         </CardImage>
-
         <CardBody>
-          <Container>
-            <div className="row no-gutters align-items-start justify-content-between text-left">
-              <div className="col-12 col-lg-8">
+          <div className="container">
+            <div className="row align-items-start justify-content-center justify-content-lg-end text-left mr-0">
+              <div style={{ fontWeight: 300 }} className="col-md-9 text-left">
                 <h2 className="h2-responsive">Columbus, OH</h2>
                 <div>{this.renderContent()}</div>
                 <div className="text-center text-sm-left">
@@ -58,13 +63,11 @@ class Columbus extends Component {
                   </button>
                 </div>
               </div>
-              <div className="ml-auto p-0 m-0 col-12 col-lg-4  d-none d-lg-block">
-                <StickyBox className="m-0 p-0">
-                  <MapBox address="2201 Riverside Drive, Columbus, OH" />
-                </StickyBox>
+              <div className="pr-0 col-md-3 d-none d-md-block">
+                <MapBox address="Columbus, OH" />
               </div>
             </div>
-          </Container>
+          </div>
         </CardBody>
       </Card>
     );

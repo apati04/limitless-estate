@@ -20,14 +20,8 @@ const IconSection = () => {
         fontSize={3 + 'em'}
       />
       <IconTemplate
-        icon="fas fa-chart-line"
-        title="Breeding Culture"
-        fontSize={3 + 'em'}
-      />
-
-      <IconTemplate
         icon="fab fa-medapps"
-        title="Inspiring Others"
+        title="Inspire Others"
         fontSize={3 + 'em'}
       />
 

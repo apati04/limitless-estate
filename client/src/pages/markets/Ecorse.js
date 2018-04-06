@@ -58,20 +58,19 @@ class Ecorse extends Component {
           <div className="container">
             <div className="row flex-center">
               {/* main body section */}
-              <div className="col-10">
+              <div className="col-12">
                 <div
-                  style={{ height: 65 + 'em' }}
-                  className="embed-responsive embed-responsive-16by9"
+                  style={{ height: 80 + 'em' }}
+                  className="z-depth-2 embed-responsive embed-responsive-16by9"
                 >
                   <iframe
-                    className="embed-responsive-item embed-responsive"
-                    src="https://drive.google.com/file/d/1TE53jhqppDVlpe_MZa6lQrIl5zusxBxF/preview?#zoom=100"
-                    height="500"
+                    className="embed-responsive-item"
+                    src="/docs/detroitSDP.pdf#zoom=100"
                     width="100%"
+                    height="100%"
                     allowFullScreen
                   />
                 </div>
-
                 <hr />
                 <h5 className="mb-4">
                   Sound like the right investment for you?

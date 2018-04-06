@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import MapBox from '../../components/MapBox';
-import StickyBox from 'react-sticky-box';
+
 import {
   Button,
   Card,
@@ -28,52 +28,47 @@ class Detroit extends Component {
   };
   renderList = () => {
     const { list } = summary[1];
-    return list.map((e, i) => <li key={i}>{e}</li>);
+    return list.map((e, i) => (
+      <li className="list-item text-wrap" key={i}>
+        {e}
+      </li>
+    ));
   };
 
   render() {
     return (
       <Card className="z-depth-0">
-        <div>
-          <CardImage
-            src="https://i.imgur.com/c5f5NOc.jpg"
-            className="w-100 h-100 d-none d-md-block"
-          />
-        </div>
-
-        <div className="view hm-black-light">
-          <CardImage
-            style={{ height: 22 + 'em' }}
-            src="https://i.imgur.com/3qqAILY.jpg?1"
-            className="w-100 h-75 d-md-none img-fluid"
-          />
-        </div>
+        <CardImage tag="div">
+          <div className="view">
+            <img
+              className="img-fluid w-100"
+              src="https://i.imgur.com/5beXJXj.jpg"
+              alt=""
+            />
+          </div>
+        </CardImage>
 
         <CardBody>
           <div className="container">
-            <div className="row no-gutters align-items-start justify-content-between text-left">
-              <div className="col-12 col-lg-8">
+            <div className="row align-items-start justify-content-center justify-content-lg-end text-left mr-0">
+              <div style={{ fontWeight: 300 }} className="col-md-9 text-left">
                 <h2 className="h2-responsive">Detroit, MI</h2>
-                <div style={{ fontWeight: 300 }}>
-                  {this.renderContent()}
 
-                  <ul style={{ padding: 0, listStyle: 'inside' }}>
-                    {this.renderList()}
-                  </ul>
-                </div>
+                {this.renderContent()}
+
+                <ul className="m-0 pl-3">{this.renderList()}</ul>
+
                 <div className="text-center text-sm-left">
                   <button className="btn btn-lg btn-primary">
-                    <NavLink className="white-text" to="/markets/detroit/sdp">
+                    <NavLink className=" white-text" to="/markets/columbus/sdp">
                       Sample Deal Package
                     </NavLink>
                   </button>
                 </div>
               </div>
-              <div className="ml-auto p-0 m-0 col-12 col-lg-4  d-none d-lg-block">
-                <StickyBox className="m-0 p-0">
-                  {/* Financial Data */}
-                  <MapBox address="4581 High Street, Ecorse, MI" />
-                </StickyBox>
+              <div className="pr-0 col-md-3 d-none d-md-block">
+                {/* Financial Data */}
+                <MapBox address="Detroit, MI" />
               </div>
             </div>
           </div>

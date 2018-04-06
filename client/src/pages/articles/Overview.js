@@ -18,8 +18,8 @@ export default class Overview extends Component {
         <div style={styles.header} />
 
         <div className="container">
-          <div className="row justify-content-around py-3">
-            <div className="col-12 col-lg-8 col-md-12 text-align-left">
+          <div className="row justify-content-center py-3">
+            <div className="col-12 text-left text-align-left">
               <div>
                 <h3 className="h3-responsive mb-2">
                   Why Invest In Multifamily?
@@ -84,16 +84,6 @@ export default class Overview extends Component {
                   </p>
                 </div>
               </div>
-            </div>
-            <div className="col-12 col-lg-4">
-              <img
-                style={{ marginTop: '-50px' }}
-                src="https://i.imgur.com/OIQQWsn.jpg?1"
-                width="320px"
-                height="320px"
-                alt="LimitLess"
-                className="border border-bottom-0 border-secondary p-0 about-img img-fluid rounded-circle d-none d-lg-block"
-              />
             </div>
           </div>
         </div>

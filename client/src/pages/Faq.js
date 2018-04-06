@@ -20,7 +20,6 @@ export default class Faq extends Component {
           headerImage="https://i.imgur.com/3aGoqpx.jpg"
           title="F.A.Q."
           overlayText="F.A.Q."
-          circleImage="https://i.imgur.com/Icq2otI.jpg?1"
           body={this.renderFaq()}
         />
       </div>
