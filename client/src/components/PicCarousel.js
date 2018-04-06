@@ -57,12 +57,12 @@ class PicCarousel extends Component {
       <Mask className="d-flex flex-column justify-content-center align-items-center">
         <div className="row w-75 align-items-center justify-content-center">
           <div className="col">
-            <h3 className="h3-responsive mb-4 text-center white-text">
+            <div className="h3-responsive mb-4 text-center white-text">
               Our vision at Limitless Estates is to provide A-class living to
               lower income housing by putting our residents first and instilling
               a sense of community while inspiring others to do the same.
-            </h3>
-            <h3 className="h3-responsive mb-4 text-center white-text">
+            </div>
+            <div className="h3-responsive mb-4 text-center white-text">
               Our mission is to positively impact the lives of the people in our
               local neighborhoods through{' '}
               <a
@@ -72,7 +72,7 @@ class PicCarousel extends Component {
                 impact investing
               </a>{' '}
               while achieving double digit returns for our investors.
-            </h3>
+            </div>
             <div className="d-none d-lg-block mt-4 text-center">
               <a href="info/questionnaire">
                 <Button color="primary">Make an impact</Button>
@@ -149,21 +149,21 @@ class PicCarousel extends Component {
             />
           </View>
           <div className="p-2 rgba-bluegrey-slight">
-            <h3 className="m-2 h5-responsive text-center">
+            <div className="m-2 h5-responsive text-center">
               Our vision at Limitless Estates is to provide A-class living to
               lower income housing by putting our residents first and instilling
               a sense of community while inspiring others to do the same.
-            </h3>
+            </div>
           </div>
           <div className="p-2 rgba-grey-slight">
-            <h6 className="m-2 text-center h5-responsive">
+            <div className="m-2 text-center h5-responsive">
               Our mission is to positively impact the lives of the people in our
               local neighborhoods through{' '}
               <NavLink to="/resources/impactinvesting">
                 impact investing
               </NavLink>{' '}
               while achieving double digit returns for our investors.
-            </h6>
+            </div>
           </div>
         </div>
       </section>

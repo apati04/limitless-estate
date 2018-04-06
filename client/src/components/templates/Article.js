@@ -15,7 +15,7 @@ export default ({
     <section className="h-100">
       <View
         style={{
-          height: 27 + 'em',
+          height: 25 + 'em',
           backgroundImage: `url(${headerImage})`,
           backgroundSize: 'cover',
           backgroundRepeat: 'no-repeat',
@@ -27,7 +27,7 @@ export default ({
       </View>
       <div className="container">
         <div className="row justify-content-center text-left py-3">
-          <div className="col-12 text-align-left text-left">
+          <div className="col-8 text-align-left text-left">
             <h2 className="h3-responsive mb-2">{title}</h2>
             <div className="border-bottom" />
             <div className="text-left mt-4">{body}</div>

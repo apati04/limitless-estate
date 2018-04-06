@@ -8,7 +8,7 @@ const IconTemplate = ({ icon, title, fontSize }) => {
         style={{ fontSize: `${fontSize}` }}
       />
       <div>
-        <h5 className="h5-responsive mt-2">{title}</h5>
+        <div className="h5-responsive mt-2">{title}</div>
       </div>
     </div>
   );

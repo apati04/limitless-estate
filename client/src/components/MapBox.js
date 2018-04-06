@@ -36,8 +36,8 @@ class MapBox extends Component {
         className="mb-3 mr-0 pr-0 z-depth-2 rounded-circle"
         id="mapbox"
         style={{
-          height: 25 + 'em',
-          width: 25 + 'em',
+          height: 22 + 'em',
+          width: 22 + 'em',
           marginTop: -5 + 'em'
         }}
       />
