@@ -58,13 +58,12 @@ class Detroit extends Component {
 
                 <ul className="m-0 pl-3">{this.renderList()}</ul>
 
-                <div className="m-5 p-0 text-center text-sm-ccenter">
-                  <NavLink
-                    className=" btn btn-lg btn-primary white-text"
-                    to="/markets/detroit/sdp"
-                  >
-                    Sample Deal Package
-                  </NavLink>
+                <div className="text-center text-sm-left">
+                  <button className="btn btn-lg btn-primary">
+                    <NavLink className=" white-text" to="/markets/columbus/sdp">
+                      Sample Deal Package
+                    </NavLink>
+                  </button>
                 </div>
               </div>
               <div className="pr-0 col-md-3 d-none d-md-block">

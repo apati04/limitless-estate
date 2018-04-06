@@ -21,7 +21,6 @@ export default class RisksTwoe extends Component {
           headerImage="https://i.imgur.com/zneMI2U.jpg"
           pattern=""
           overlayText=""
-          circleImage="https://i.imgur.com/uDTyJkf.jpg"
           body={this.renderPage()}
           pageFooter={
             <div classname="container row">

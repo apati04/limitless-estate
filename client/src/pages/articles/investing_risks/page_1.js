@@ -16,7 +16,6 @@ class RisksWithInvesting extends Component {
             pattern=""
             overlayText=""
             title="Risks with Investing in Real Estate"
-            circleImage="https://i.imgur.com/uDTyJkf.jpg"
             body={[
               <p key="1">
                 Investing in real estate along with any type of investing

@@ -23,28 +23,35 @@ class Columbus extends Component {
   render() {
     return (
       <Card className="z-depth-0">
-        <CardImage tag="div">
-          <div style={styles.header} />
+        <CardImage className="view" tag="div">
+          <div>
+            <img
+              className="img-fluid w-100 "
+              src="https://i.imgur.com/BZOlfik.jpg?2"
+              alt=""
+            />
+          </div>
         </CardImage>
-        {/* <PageHeader title={title} /> */}
+
         <CardBody data-wow-delay="1s" className="animated fadeInRightBig pb-4">
           <div className="container">
             <div className="row flex-center">
-              <div className="col-8">
+              <div className="col-12">
                 {/* building stats */}
+
                 <div
-                  style={{ height: 65 + 'em' }}
-                  className="embed-responsive embed-responsive-16by9"
+                  style={{ height: 80 + 'em' }}
+                  className="z-depth-2 embed-responsive embed-responsive-16by9"
                 >
                   <iframe
-                    className=" embed-responsive-item"
-                    src="https://drive.google.com/file/d/1LjcORGxJIbLN4gid_q8aax7J0RsTjItM/preview"
-                    width="640"
-                    height="480"
+                    className="embed-responsive-item"
+                    src="/docs/columbusSDP.pdf#zoom=100"
+                    width="100%"
+                    height="100%"
                     allowFullScreen
                   />
                 </div>
-                <hr />
+                <hr className="w-100" />
                 <h5 className="mb-4">
                   Sound like the right investment for you?
                 </h5>
