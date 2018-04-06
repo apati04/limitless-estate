@@ -60,7 +60,7 @@ class Detroit extends Component {
 
                 <div className="text-center text-sm-left">
                   <button className="btn btn-lg btn-primary">
-                    <NavLink className=" white-text" to="/markets/columbus/sdp">
+                    <NavLink className=" white-text" to="/markets/detroit/sdp">
                       Sample Deal Package
                     </NavLink>
                   </button>
