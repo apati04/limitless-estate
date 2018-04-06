@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import FadeIn from '../FadeIn';
+
 import Advisors from '../../api/advisors';
 import Team from '../../api/team';
 import MemberCard from '../MemberCard';
@@ -10,57 +10,51 @@ class MemberSection extends Component {
       const content = person.content || person.resume;
 
       return (
-        <MemberCard key={person.name} {...person}>
+        <MemberCard {...person}>
           {person.type === 'Team' ? (
             <div className="col-md-12 mt-2">
-              <FadeIn>
-                <img
-                  style={{ border: '2px solid lightgrey' }}
-                  className="mr-2 mb-1 rounded-circle"
-                  src={person.photo.url}
-                  alt="Generic placeholder"
-                  width={person.photo.size}
-                  height={person.photo.size}
-                />
-                <h3 className="h3-responsive p-0">{person.name}</h3>
-                <p className="p-0 font-weight-bold">{person.title}</p>
+              <img
+                style={{ border: '2px solid lightgrey' }}
+                className="mr-2 mb-1 rounded-circle"
+                src={person.photo.url}
+                alt="Generic placeholder"
+                width={person.photo.size}
+                height={person.photo.size}
+              />
+              <h3 className="h3-responsive p-0">{person.name}</h3>
+              <p className="p-0 font-weight-bold">{person.title}</p>
 
-                <a
-                  style={{ color: '#f7f7f7' }}
-                  target="_blank"
-                  rel="noopener"
-                  href={content}
-                >
-                  <Button color="primary">View Bio >></Button>
-                </a>
-              </FadeIn>
+              <a
+                style={{ color: '#f7f7f7' }}
+                target="_blank"
+                rel="noopener"
+                href={content}
+              >
+                <Button color="primary">View Bio >></Button>
+              </a>
             </div>
           ) : (
             <div className="col-12 d-flex flex-column flex-center mt-2">
-              <FadeIn>
-                <img
-                  style={{ border: '2px solid lightgrey' }}
-                  className="mb-1 rounded-circle"
-                  src={person.photo.url}
-                  alt="Generic placeholder"
-                  width={person.photo.size}
-                  height={person.photo.size}
-                />
-                <h3 className="h5-responsive m-0">{person.name}</h3>
-                <Popover
-                  component="button"
-                  placement="right"
-                  popoverBody={
-                    <Fa style={{ fontSize: 1 + 'em' }} icon="info" />
-                  }
-                  className="btn btn-floating primary-color btn-small"
-                >
-                  <PopoverHeader className="primary-color-dark text-center">
-                    {person.name}, {person.type}
-                  </PopoverHeader>
-                  <PopoverBody>{person.content}</PopoverBody>
-                </Popover>
-              </FadeIn>
+              <img
+                style={{ border: '2px solid lightgrey' }}
+                className="mb-1 rounded-circle"
+                src={person.photo.url}
+                alt="Generic placeholder"
+                width={person.photo.size}
+                height={person.photo.size}
+              />
+              <h3 className="h5-responsive m-0">{person.name}</h3>
+              <Popover
+                component="button"
+                placement="right"
+                popoverBody={<Fa style={{ fontSize: 1 + 'em' }} icon="info" />}
+                className="btn btn-floating primary-color btn-small"
+              >
+                <PopoverHeader className="primary-color-dark text-center">
+                  {person.name}, {person.type}
+                </PopoverHeader>
+                <PopoverBody>{person.content}</PopoverBody>
+              </Popover>
             </div>
           )}
         </MemberCard>

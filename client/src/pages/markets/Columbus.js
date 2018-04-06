@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import FadeIn from '../../components/FadeIn';
+
 import MapBox from '../../components/MapBox';
 import StickyBox from 'react-sticky-box';
 import { Card, CardBody, CardImage, Button } from 'mdbreact';
