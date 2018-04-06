@@ -34,25 +34,16 @@ class Ecorse extends Component {
     const title = 'Sample Deal Package';
 
     return (
-      <Card>
-        <div className="view">
-          <CardImage
-            src="https://i.imgur.com/c5f5NOc.jpg"
-            className="w-100 h-100 d-none d-sm-block"
-          />
-          <Mask
-            style={{ color: 'white' }}
-            className="flex-center pb-5 h2-responsive"
-          >
-          </Mask>
-        </div>
-
-        <div className="view hm-black-light">
-          <CardImage
-            src="https://i.imgur.com/3qqAILY.jpg?1"
-            className="w-100  d-sm-none"
-          />
-        </div>
+      <Card className="z-depth-0">
+        <CardImage tag="div">
+          <div className="view">
+            <img
+              className="img-fluid w-100"
+              src="https://i.imgur.com/5beXJXj.jpg"
+              alt=""
+            />
+          </div>
+        </CardImage>
         <CardBody className="animated fadeInRightBig pb-4">
           <div className="container">
             <div className="row flex-center">
