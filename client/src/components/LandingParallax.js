@@ -17,9 +17,9 @@ const LandingParallax = () => {
       <section style={{ height: 20 + 'em' }}>
         <View style={styles.bgImage} className="hm-bluegrey-strong">
           <Mask className="flex-center">
-            <p className="h1-responsive font-weight-bold  white-text">
+            <div className="h1-responsive font-weight-bold  white-text">
               Reasons to invest in multifamily...
-            </p>
+            </div>
           </Mask>
         </View>
       </section>

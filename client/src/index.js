@@ -5,7 +5,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'mdbreact/docs/css/mdb.min.css';
 import './style/styles.css';
 
-import './style/font.css';
 import App from './components/App';
 import { unregister } from './registerServiceWorker';
 

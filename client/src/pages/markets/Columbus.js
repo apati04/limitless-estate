@@ -1,51 +1,37 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 import MapBox from '../../components/MapBox';
-import StickyBox from 'react-sticky-box';
-import { Card, CardBody, CardImage, Button } from 'mdbreact';
-// import PageHeader from '../../components/PageHeader';
-const title = 'Sample Deal Package';
-/**
- * Finacial Statements
- */
 
-const pdfFile =
-  'https://drive.google.com/file/d/1ZEywS1ClTgyRkVqfwGcISMzyPMhwDwgF/view?usp=sharing';
+import { Card, CardBody, CardImage, Button } from 'mdbreact';
 const styles = {
   header: {
-    background: `url(${'https://i.imgur.com/BZOlfik.jpg?1'})center center no-repeat`,
+    padding: '0',
+    background: 'url(https://i.imgur.com/BZOlfik.jpg?1) center no-repeat',
     backgroundSize: 'cover',
-    height: 22 + 'em'
+    height: 25 + 'em'
   }
 };
 class Columbus extends Component {
   render() {
     return (
       <Card className="z-depth-0">
-        <CardImage className="view" tag="div">
-          <div>
-            <img
-              className="img-fluid w-100 "
-              src="https://i.imgur.com/BZOlfik.jpg?2"
-              alt=""
-            />
-          </div>
+        <CardImage tag="div">
+          <div style={styles.header} />
         </CardImage>
-
-        <CardBody data-wow-delay="1s" className="animated fadeInRightBig pb-4">
+        <CardBody data-wow-delay="1s" className="animated fadeInRightBig">
           <div className="container">
             <div className="row flex-center">
-              <div className="col-12">
+              <div className="col-10">
                 {/* building stats */}
 
                 <div
-                  style={{ height: 80 + 'em' }}
-                  className="z-depth-2 embed-responsive embed-responsive-16by9"
+                  style={{ height: 70 + 'em' }}
+                  className="z-depth-3 embed-responsive embed-responsive-16by9"
                 >
                   <iframe
                     className="embed-responsive-item"
-                    src="/docs/columbusSDP.pdf#zoom=100"
+                    src="/docs/SDP-Columbus.pdf#view=FitH"
                     width="100%"
                     height="100%"
                     allowFullScreen
@@ -55,16 +41,16 @@ class Columbus extends Component {
                 <h5 className="mb-4">
                   Sound like the right investment for you?
                 </h5>
-                <form className="d-flex justify-content-between align-items-center">
+                <div className="d-flex justify-content-between align-items-center">
                   <div>
-                    <Link to="/info/contact">
-                      <button className="btn btn-primary">Contact Us</button>
+                    <Link className="btn btn-primary" to="/info/contact">
+                      Contact Us
                     </Link>
                   </div>
                   <div>
                     <Link to="/markets/columbus/summary">Back to Overview</Link>
                   </div>
-                </form>
+                </div>
               </div>
             </div>
           </div>

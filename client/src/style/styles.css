@@ -26,7 +26,14 @@ h5,
 h6 {
   font-size-adjust: 0.5;
 }
-
+.h1-responsive,
+.h2-responsive,
+.h3-responsive,
+.h4-responsive,
+.h5-responsive,
+.h6-responsive {
+  font-size-adjust: 0.5;
+}
 .dropdown:hover > .dropdown-menu {
   display: block !important;
   margin: -0.125rem 0 0 !important;

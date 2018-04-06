@@ -15,30 +15,44 @@ const InfoSection = () => {
         <div className="row align-items-center justify-content-center text-left">
           <div className="col-12 col-md-6">
             <ul className="p-0 list-group-flush">
-              <li className="list-group-item h5-responsive">Appreciation</li>
-              <li className="list-group-item h5-responsive">
-                More Control Over Returns
+              <li className="list-group-item">
+                <div className="h5-responsive">Appreciation</div>
               </li>
-              <li className="list-group-item h5-responsive">Cash Flow</li>
-              <li className="list-group-item h5-responsive">
-                Accelerated Depreciation &amp; Cost Segregation
+              <li className="list-group-item">
+                <div className="h5-responsive">More Control Over Returns</div>
               </li>
-              <li className="list-group-item h5-responsive">Tax Benefits</li>
+              <li className="list-group-item">
+                <div className="h5-responsive"> Cash Flow</div>
+              </li>
+              <li className="list-group-item">
+                <div className="h5-responsive">
+                  Accelerated Depreciation &amp; Cost Segregation
+                </div>
+              </li>
+              <li className="list-group-item">
+                <div className="h5-responsive">Tax Benefits</div>
+              </li>
               <li className="list-group-item h5-responsive">Leveraging Debt</li>
-              <li className="list-group-item h5-responsive">
-                Inflation Induced Debt Destruction
+              <li className="list-group-item">
+                <div className="h5-responsive">
+                  Inflation Induced Debt Destruction
+                </div>
               </li>
-              <li className="list-group-item h5-responsive">
-                Less Volatile than the Stock Market
+              <li className="list-group-item">
+                <div className="h5-responsive">
+                  Less Volatile than the Stock Market
+                </div>
               </li>
-              <li className="list-group-item h5-responsive">
-                Tenants Pay Down the Debt
+              <li className="list-group-item">
+                <div className="h5-responsive">Tenants Pay Down the Debt </div>
               </li>
-              <li className="list-group-item h5-responsive">
-                Everyone Needs Housing
+              <li className="list-group-item">
+                <div className="h5-responsive">Everyone Needs Housing </div>
               </li>
-              <li className="list-group-item h5-responsive">
-                National Housing Shortage of 3.9 million units
+              <li className="list-group-item">
+                <div className="h5-responsive">
+                  National Housing Shortage of 3.9 million units
+                </div>
               </li>
             </ul>
           </div>

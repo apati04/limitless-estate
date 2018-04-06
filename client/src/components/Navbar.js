@@ -36,7 +36,7 @@ class Navigation extends Component {
     return (
       <Navbar
         dark
-        expand="md"
+        expand="lg"
         sticky="top"
         style={{ borderRadius: 0 }}
         className="primary-color py-2 m-0"
