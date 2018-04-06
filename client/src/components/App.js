@@ -4,6 +4,7 @@ import Header from './Navbar';
 import Footer from './Footer';
 import ScrollToTop from './ScrollToTop';
 /* Pages */
+import AboutUs from '../pages/AboutUs';
 import LandingPage from '../pages/LandingPage';
 import Markets from '../pages/Markets';
 import Contact from '../pages/Contact';
@@ -28,6 +29,7 @@ class App extends Component {
             <ScrollToTop>
               <Header />
               <div style={{ paddingBottom: '60px' }}>
+                <Route exact path='/about' component={AboutUs}/> 
                 <Route exact path="/resources" component={Overview} />
                 <Route
                   path="/resources/investingrisks/1"
