@@ -44,7 +44,6 @@ class Ecorse extends Component {
             style={{ color: 'white' }}
             className="flex-center pb-5 h2-responsive"
           >
-            Sample Deal Package
           </Mask>
         </div>
 
