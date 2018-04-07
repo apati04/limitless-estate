@@ -40,27 +40,27 @@ class Navigation extends Component {
         expand="lg"
         sticky="top"
         style={{ borderRadius: 0 }}
-        className="primary-color m-0"
+        className="primary-color m-"
       >
         <Container>
           <Link to="/">
             <img
-              height="48"
+              height="44"
               src="https://i.imgur.com/6TpCmWV.png"
-              className="d-inline-block align-center  ml-auto"
+              className="d-inline-block  mx-auto"
               alt=""
             />
           </Link>
           {!this.state.isWideEnough && <NavbarToggler onClick={this.onClick} />}
-          <div className="col-10 text-right align-right">
+          <div className="col-10">
             <Collapse isOpen={this.state.collapse} navbar>
-              <NavbarNav className="px-auto mx-auto d-flex justify-content-center align-items-center m-0 ">
+              <NavbarNav className="list-group  flex-center mt-0">
                 <NavItem>
                   <NavLink
                     exact
                     style={{ color: 'white' }}
                     activeStyle={{ fontWeight: 400 }}
-                    className="h5-responsive"
+                    className="h6-responsive"
                     to="/"
                   >
                     Home
@@ -71,7 +71,7 @@ class Navigation extends Component {
                     exact
                     style={{ color: 'white' }}
                     activeStyle={{ fontWeight: 400 }}
-                    className="h5-responsive"
+                    className="h6-responsive"
                     to="/members/about/"
                   >
                     About Us
@@ -79,7 +79,7 @@ class Navigation extends Component {
                 </NavItem>
                 <div className="nav-item dropdown">
                   <a
-                    className="h5-responsive text-white nav-link dropdown-toggle"
+                    className="h6-responsive text-white nav-link dropdown-toggle"
                     id="navbarDropdownMenuLink"
                     aria-haspopup="true"
                     aria-expanded="false"
@@ -111,7 +111,7 @@ class Navigation extends Component {
                 </div>
                 <div className="nav-item dropdown">
                   <a
-                    className="h5-responsive text-white nav-link dropdown-toggle"
+                    className="h6-responsive text-white nav-link dropdown-toggle"
                     id="navRes"
                     aria-haspopup="true"
                     aria-expanded="false"
@@ -173,7 +173,7 @@ class Navigation extends Component {
                     exact
                     style={{ color: 'white' }}
                     activeStyle={{ fontWeight: 400 }}
-                    className="h5-responsive"
+                    className="h6-responsive"
                     to="/info/questionnaire"
                   >
                     Make an Impact
@@ -184,7 +184,7 @@ class Navigation extends Component {
                     exact
                     style={{ color: 'white' }}
                     activeStyle={{ fontWeight: 400 }}
-                    className="h5-responsive"
+                    className="h6-responsive"
                     to="/info/contact"
                   >
                     Contact

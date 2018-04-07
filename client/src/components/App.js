@@ -21,7 +21,6 @@ import Overview from '../pages/articles/Overview';
 import ImpactInvesting from '../pages/articles/impact_investing/page_1';
 import Risks_PageOne from '../pages/articles/investing_risks/page_1';
 import Risks_PageTwo from '../pages/articles/investing_risks/page_2';
-import Scroll from '../pages/AboutUs/scroll';
 class App extends Component {
   render() {
     return (
@@ -31,7 +30,7 @@ class App extends Component {
             <Header />
             <div style={{ paddingBottom: '60px' }}>
               <Switch>
-                <Route exact path="/about" component={AboutUs} />
+                <Route path="/members/about/" component={AboutUs} />
                 <Route exact path="/resources" component={Overview} />
                 <Route
                   exact
