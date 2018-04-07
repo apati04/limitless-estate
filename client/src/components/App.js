@@ -48,8 +48,8 @@ class App extends Component {
                 <Route exact path="/" component={LandingPage} />
                 <Route component={PageNotFound}/>
               </Switch>
-              </div>
-              <Footer />
+            </div>
+            <Footer />
           </ScrollToTop>
         </div>
       </BrowserRouter>
