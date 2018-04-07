@@ -13,7 +13,7 @@ class AboutUs extends Component {
       <div className="container">
         <h3 className="text-center h3-responsive">About Us</h3>
         <div className="row flex-wrap justify-content-between text-left">
-          <div className="col-6 border">
+          <div className="col-md-6 border">
             <div className="no-flex testimonial-carousel">
               <div className="testimonial">
                 <div className="avatar mx-auto">
@@ -93,7 +93,7 @@ class AboutUs extends Component {
             </p>
           </div>
 
-          <div className="col-6 border ">
+          <div className="col-md-6 border ">
             <div className="no-flex testimonial-carousel">
               <div className="testimonial">
                 <div className="avatar mx-auto">
