@@ -11,7 +11,7 @@ const style = {
 };
 const NavFooter = () => {
   return (
-    <Footer style={style.footerStyle} className="w-100 mh-100">
+    <footer style={style.footerStyle} className="primary-color w-100">
       {/* <div className="container">
         <div className="row flex-column flex-sm-row flex-sm-nowrap justify-content-sm-around text-align-center">
           <div className="col-auto">
@@ -45,7 +45,7 @@ const NavFooter = () => {
           </NavLink>
         </div>
       </div>
-    </Footer>
+    </footer>
   );
 };
 export default NavFooter;
