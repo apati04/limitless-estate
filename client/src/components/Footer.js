@@ -5,16 +5,13 @@ const style = {
   footerStyle: {
     position: 'absolute',
     bottom: 0,
-    width: '100%',
+    left: 0,
     height: '60px'
   }
 };
 const NavFooter = () => {
   return (
-    <Footer
-      style={style.footerStyle}
-      className="d-flex align-items-center flex-center"
-    >
+    <Footer style={style.footerStyle} className="w-100 mh-100">
       {/* <div className="container">
         <div className="row flex-column flex-sm-row flex-sm-nowrap justify-content-sm-around text-align-center">
           <div className="col-auto">
