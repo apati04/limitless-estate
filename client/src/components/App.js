@@ -4,8 +4,12 @@ import Header from './Navbar';
 import Footer from './Footer';
 import ScrollToTop from './ScrollToTop';
 /* Pages */
+<<<<<<< HEAD
 import AboutUs from '../pages/AboutUs';
 import PageNotFound from '../pages/PageNotFound';
+=======
+import AboutUs from '../pages/AboutUs/AboutUs';
+>>>>>>> about/new
 import LandingPage from '../pages/LandingPage';
 import Markets from '../pages/Markets';
 import Contact from '../pages/Contact';
@@ -21,6 +25,7 @@ import Overview from '../pages/articles/Overview';
 import ImpactInvesting from '../pages/articles/impact_investing/page_1';
 import Risks_PageOne from '../pages/articles/investing_risks/page_1';
 import Risks_PageTwo from '../pages/articles/investing_risks/page_2';
+import Scroll from '../pages/AboutUs/scroll';
 class App extends Component {
   render() {
     return (

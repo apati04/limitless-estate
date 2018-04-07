@@ -3,14 +3,15 @@ import React, { Component } from 'react';
 import Advisors from '../../api/advisors';
 import Team from '../../api/team';
 import MemberCard from '../MemberCard';
+import { NavLink, Link } from 'react-router-dom';
 import { Button, Popover, PopoverBody, PopoverHeader, Fa } from 'mdbreact';
 class MemberSection extends Component {
   renderCards = items => {
-    return items.map(person => {
+    return items.map((person, i) => {
       const content = person.content || person.resume;
-
+      const firstname = person.name.split(' ')[0].toLowerCase();
       return (
-        <MemberCard {...person}>
+        <MemberCard key={person + i} {...person}>
           {person.type === 'Team' ? (
             <div className="col-md-12 mt-2">
               <img
@@ -24,14 +25,12 @@ class MemberSection extends Component {
               <h3 className="h3-responsive p-0">{person.name}</h3>
               <p className="p-0 font-weight-bold">{person.title}</p>
 
-              <a
-                style={{ color: '#f7f7f7' }}
-                target="_blank"
-                rel="noopener"
-                href={content}
+              <NavLink
+                className="btn btn-primary"
+                to={`/members/about/${firstname}`}
               >
-                <Button color="primary">View Bio >></Button>
-              </a>
+                Meet {firstname}
+              </NavLink>
             </div>
           ) : (
             <div className="col-12 d-flex flex-column flex-center mt-2">
@@ -50,7 +49,7 @@ class MemberSection extends Component {
                 popoverBody={<Fa style={{ fontSize: 1 + 'em' }} icon="info" />}
                 className="btn btn-floating primary-color btn-small"
               >
-                <PopoverHeader className="primary-color-dark text-center">
+                <PopoverHeader className="h6-responsive m-0 primary-color-dark text-center">
                   {person.name}, {person.type}
                 </PopoverHeader>
                 <PopoverBody>{person.content}</PopoverBody>
@@ -64,9 +63,9 @@ class MemberSection extends Component {
   render() {
     return (
       <section className="text-center">
-        <div className="rgba-white-light">
-          <div className="p-5 container rgba-white-strong">
-            <h1 className="display-4 team-header ">Meet the Team</h1>
+        <div className="rgba-white-light p-2">
+          <div className="container rgba-white-strong">
+            <h1 className="h1-responsive team-header ">Meet the Team</h1>
             <hr />
             <div className="row d-flex justify-content-around align-items-baseline flex-wrap">
               {this.renderCards(Team)}
@@ -74,9 +73,9 @@ class MemberSection extends Component {
           </div>
         </div>
         <div>
-          <div className="h-100 mdb-color lighten-1">
-            <div className="mb-5 p-5 container text-white">
-              <h1 className="display-4 team-header">Our Advisors</h1>
+          <div className="h-100 p-2 mdb-color lighten-1">
+            <div className="mb-5 container text-white">
+              <h1 className="h1-responsive team-header">Our Advisors</h1>
               <hr />
               <div className="d-flex flex-column flex-md-row justify-content-between align-items-center">
                 {this.renderCards(Advisors)}
