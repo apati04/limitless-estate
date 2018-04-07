@@ -20,6 +20,9 @@ import Overview from '../pages/articles/Overview';
 import ImpactInvesting from '../pages/articles/impact_investing/page_1';
 import Risks_PageOne from '../pages/articles/investing_risks/page_1';
 import Risks_PageTwo from '../pages/articles/investing_risks/page_2';
+
+const Kyle = () => <div>keyle</div>;
+const Lalita = () => <div>lalita</div>;
 class App extends Component {
   render() {
     return (
@@ -29,7 +32,17 @@ class App extends Component {
             <ScrollToTop>
               <Header />
               <div style={{ paddingBottom: '60px' }}>
-                <Route exact path="/about" component={AboutUs} />
+                <Route exact path="/member/about" component={AboutUs} />
+                <Route
+                  exact
+                  path="/member/about/profile/lalita"
+                  component={Lalita}
+                />
+                <Route
+                  exact
+                  path="/member/about/profile/kyle"
+                  component={Kyle}
+                />
                 <Route exact path="/resources" component={Overview} />
                 <Route
                   path="/resources/investingrisks/1"

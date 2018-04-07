@@ -6,11 +6,11 @@ import MemberCard from '../MemberCard';
 import { Button, Popover, PopoverBody, PopoverHeader, Fa } from 'mdbreact';
 class MemberSection extends Component {
   renderCards = items => {
-    return items.map(person => {
+    return items.map((person, i) => {
       const content = person.content || person.resume;
 
       return (
-        <MemberCard {...person}>
+        <MemberCard key={person + i} {...person}>
           {person.type === 'Team' ? (
             <div className="col-md-12 mt-2">
               <img
