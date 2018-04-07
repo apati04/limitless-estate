@@ -4,21 +4,20 @@ class AboutUs extends Component {
   render() {
     return (
       <div className="container">
-        <div className="row d-flex flex-column flex-center">
-          <h1>About Us</h1>
-          <div className="no-flex testimonial-carousel">
-            <div className="testimonial">
-              <div className="avatar mx-auto">
-                <img
-                  src="https://i.imgur.com/qC2iaYa.jpg?2"
-                  class="rounded-circle img-fluid"
-                  alt="img"
-                />
+        <h1>About Us</h1>
+        <div className="row flex-wrapjustify-content-between">
+          <div className="col-6">
+            <div className="no-flex testimonial-carousel">
+              <div className="testimonial">
+                <div className="avatar mx-auto">
+                  <img
+                    src="https://i.imgur.com/qC2iaYa.jpg?2"
+                    class="rounded-circle img-fluid"
+                    alt="img"
+                  />
+                </div>
               </div>
             </div>
-          </div>
-
-          <div className="row flex-center text-center">
             <h3>Kyle Mitchell</h3>
             <p>
               My passion is in helping others reach their goals in all areas of
@@ -82,7 +81,8 @@ class AboutUs extends Component {
               by day and taking massive action.
             </p>
           </div>
-          <div>
+
+          <div className="col-6">
             <div className="no-flex testimonial-carousel">
               <div className="testimonial">
                 <div className="avatar mx-auto">
