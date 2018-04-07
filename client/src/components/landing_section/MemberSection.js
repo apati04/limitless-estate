@@ -78,7 +78,7 @@ class MemberSection extends Component {
             <div className="mb-5 p-5 container text-white">
               <h1 className="display-4 team-header">Our Advisors</h1>
               <hr />
-              <div className="row flex-lg-nowrap justify-content-center">
+              <div className="d-flex flex-column flex-md-row justify-content-between align-items-center">
                 {this.renderCards(Advisors)}
               </div>
             </div>
