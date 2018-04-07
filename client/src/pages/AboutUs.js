@@ -10,7 +10,7 @@ const styles = {
 class AboutUs extends Component {
   render() {
     return (
-      <div className="container-fluid">
+      <div className="container">
         <h3 className="text-center h3-responsive">About Us</h3>
         <div className="row flex-wrap justify-content-between text-left">
           <div className="col-6 border">
@@ -106,7 +106,7 @@ class AboutUs extends Component {
               </div>
             </div>
             <h3 className="text-center h3-responsive">Lalita Patipaksiri</h3>
-            <h6 className="text-center">President</h6>
+            <h6 className="text-center">Vice President</h6>
 
             <p className="mt-1">
               My passion is in helping others and making a difference in any way
