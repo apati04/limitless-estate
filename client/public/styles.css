@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  height: 100%;
+}
+.dropdown:hover > .dropdown-menu {
+  display: block !important;
+  margin: -0.125rem 0 0 !important;
+  color: 'red';
+}
+.dropdown > .dropdown-toggle:active {
+  /* pointer-events: none !important; */
+  color: 'black' !important;
+}
+
+.box-shadow {
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.05);
+}
+
+.carousel-fade {
+  animation: none !important;
+  transition: none !important;
+}
+.carousel-item {
+  transition: none !important;
+}
+.Ripple-parent {
+  transition: none !important;
+}
+.Ripple.is-reppling {
+  animation: none !important;
+  transition: none !important;
+}
+
+input[type='radio'] {
+  margin-left: 1em;
+}
+
+.fas {
+  font-size: 55px;
+}
+
+.fab {
+  font-size: 40px;
+}
+.dark-overlay {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.7);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+*:focus {
+  outline: 0;
+}
