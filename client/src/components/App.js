@@ -4,12 +4,8 @@ import Header from './Navbar';
 import Footer from './Footer';
 import ScrollToTop from './ScrollToTop';
 /* Pages */
-<<<<<<< HEAD
-import AboutUs from '../pages/AboutUs';
-import PageNotFound from '../pages/PageNotFound';
-=======
 import AboutUs from '../pages/AboutUs/AboutUs';
->>>>>>> about/new
+import PageNotFound from '../pages/PageNotFound';
 import LandingPage from '../pages/LandingPage';
 import Markets from '../pages/Markets';
 import Contact from '../pages/Contact';
