@@ -40,21 +40,21 @@ class Navigation extends Component {
         expand="lg"
         sticky="top"
         style={{ borderRadius: 0 }}
-        className="primary-color py-2 m-0"
+        className="primary-color m-0"
       >
         <Container>
           <Link to="/">
             <img
               height="48"
               src="https://i.imgur.com/6TpCmWV.png"
-              className="d-inline-block align-center pb-1 ml-auto"
+              className="d-inline-block align-center  ml-auto"
               alt=""
             />
           </Link>
           {!this.state.isWideEnough && <NavbarToggler onClick={this.onClick} />}
           <Collapse isOpen={this.state.collapse} navbar>
-            <NavbarNav className="d-flex align-items-center mx-auto ml-auto">
-              <NavItem className="m-1">
+            <NavbarNav className="d-flex flex-center m-0 ">
+              <NavItem>
                 <NavLink
                   exact
                   style={{ color: 'white' }}
@@ -65,7 +65,7 @@ class Navigation extends Component {
                   Home
                 </NavLink>
               </NavItem>
-              <div className="nav-item dropdown m-1">
+              <div className="nav-item dropdown">
                 <a
                   className="h5-responsive text-white nav-link dropdown-toggle"
                   id="navbarDropdownMenuLink"
@@ -97,7 +97,7 @@ class Navigation extends Component {
                   </NavLink>
                 </div>
               </div>
-              <div className="nav-item dropdown m-1">
+              <div className="nav-item dropdown">
                 <a
                   className="h5-responsive text-white nav-link dropdown-toggle"
                   id="navRes"
@@ -156,7 +156,7 @@ class Navigation extends Component {
                   </NavLink>
                 </div>
               </div>
-              <NavItem className="m-1">
+              <NavItem>
                 <NavLink
                   exact
                   style={{ color: 'white' }}
@@ -167,7 +167,7 @@ class Navigation extends Component {
                   Make an Impact
                 </NavLink>
               </NavItem>
-              <NavItem className="m-1">
+              <NavItem>
                 <NavLink
                   exact
                   style={{ color: 'white' }}
