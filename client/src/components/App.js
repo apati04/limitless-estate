@@ -26,10 +26,10 @@ class App extends Component {
     return (
       <BrowserRouter>
         <div>
-          <Switch>
-            <ScrollToTop>
-              <Header />
-              <div style={{ paddingBottom: '60px' }}>
+          <ScrollToTop>
+            <Header />
+            <div style={{ paddingBottom: '60px' }}>
+              <Switch>
                 <Route exact path='/about' component={AboutUs} />
                 <Route exact path="/resources" component={Overview} />
                 <Route exact path="/resources/investingrisks/1" component={Risks_PageOne} />
@@ -47,10 +47,10 @@ class App extends Component {
                 <Route exact path="/info/investing/ira401k" component={SupportCo} />
                 <Route exact path="/" component={LandingPage} />
                 <Route component={PageNotFound}/>
+              </Switch>
               </div>
               <Footer />
-            </ScrollToTop>
-          </Switch>
+          </ScrollToTop>
         </div>
       </BrowserRouter>
     );
