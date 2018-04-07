@@ -36,13 +36,14 @@ const NavFooter = () => {
         </div>
       </div> */}
 
-      <div className="row">
-        <div className="col-12 pb-4 d-flex flex-center">
-          <p className="white-text">© 2018 Limitless Estates, LLC</p>
-          <p className="mx-2 white-text">|</p>
-          <NavLink className="white-text" to="/legal">
-            Disclaimer
-          </NavLink>
+      <div className="row flex-center">
+        <div className="col-12 d-flex flex-center">
+          <p className="white-text">
+            © 2018 Limitless Estates, LLC |{' '}
+            <NavLink className="white-text" to="/legal">
+              Disclaimer
+            </NavLink>
+          </p>
         </div>
       </div>
     </footer>

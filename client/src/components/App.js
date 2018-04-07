@@ -29,7 +29,7 @@ class App extends Component {
             <ScrollToTop>
               <Header />
               <div style={{ paddingBottom: '60px' }}>
-                <Route exact path='/about' component={AboutUs}/> 
+                <Route exact path="/about" component={AboutUs} />
                 <Route exact path="/resources" component={Overview} />
                 <Route
                   path="/resources/investingrisks/1"

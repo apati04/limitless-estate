@@ -21,6 +21,7 @@ class Navigation extends Component {
     dropdownOpen: false,
     dropdownOpen2: false
   };
+
   onClick = () => {
     this.setState({
       collapse: !this.state.collapse
