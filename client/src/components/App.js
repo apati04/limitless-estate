@@ -4,7 +4,7 @@ import Header from './Navbar';
 import Footer from './Footer';
 import ScrollToTop from './ScrollToTop';
 /* Pages */
-import AboutUs from '../pages/AboutUs';
+import AboutUs from '../pages/AboutUs/AboutUs';
 import LandingPage from '../pages/LandingPage';
 import Markets from '../pages/Markets';
 import Contact from '../pages/Contact';
@@ -20,9 +20,7 @@ import Overview from '../pages/articles/Overview';
 import ImpactInvesting from '../pages/articles/impact_investing/page_1';
 import Risks_PageOne from '../pages/articles/investing_risks/page_1';
 import Risks_PageTwo from '../pages/articles/investing_risks/page_2';
-
-const Kyle = () => <div>keyle</div>;
-const Lalita = () => <div>lalita</div>;
+import Scroll from '../pages/AboutUs/scroll';
 class App extends Component {
   render() {
     return (
@@ -32,17 +30,7 @@ class App extends Component {
             <ScrollToTop>
               <Header />
               <div style={{ paddingBottom: '60px' }}>
-                <Route exact path="/member/about" component={AboutUs} />
-                <Route
-                  exact
-                  path="/member/about/profile/lalita"
-                  component={Lalita}
-                />
-                <Route
-                  exact
-                  path="/member/about/profile/kyle"
-                  component={Kyle}
-                />
+                <Route path="/members/about/" component={AboutUs} />
                 <Route exact path="/resources" component={Overview} />
                 <Route
                   path="/resources/investingrisks/1"
