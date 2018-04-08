@@ -14,11 +14,13 @@ import {
 import summary from './summary_data';
 import { NavLink, Link } from 'react-router-dom';
 import Article from '../../components/templates/Article';
+
 const styles = {
   header: {
-    background: `url(${'https://i.imgur.com/BZOlfik.jpg?1'})center center no-repeat`,
+    padding: '0',
+    background: 'url(https://i.imgur.com/BZOlfik.jpg?1) center no-repeat',
     backgroundSize: 'cover',
-    height: 22 + 'em'
+    height: 25 + 'em'
   }
 };
 class Columbus extends Component {
@@ -40,30 +42,28 @@ class Columbus extends Component {
   render() {
     return (
       <Card className="z-depth-0">
-        <CardImage className="view" tag="div">
-          <div>
-            <img
-              className="img-fluid w-100 "
-              src="https://i.imgur.com/BZOlfik.jpg?2"
-              alt=""
-            />
-          </div>
+        <CardImage tag="div">
+          <div style={styles.header} />
         </CardImage>
         <CardBody>
-          <div className="container">
+          <div className="container mr-3">
             <div className="row align-items-start justify-content-center justify-content-lg-end text-left mr-0">
-              <div style={{ fontWeight: 300 }} className="col-md-9 text-left">
-                <h2 className="h2-responsive">Columbus, OH</h2>
+              <div
+                style={{ fontWeight: 300 }}
+                className="col-8 col-md-8 text-left"
+              >
+                <p className="h3-responsive">Columbus, OH</p>
                 <div>{this.renderContent()}</div>
                 <div className="text-center text-sm-left">
-                  <button className="btn btn-lg btn-primary">
-                    <NavLink className=" white-text" to="/markets/columbus/sdp">
-                      Sample Deal Package
-                    </NavLink>
-                  </button>
+                  <NavLink
+                    className="btn btn-lg btn-primary white-text"
+                    to="/markets/columbus/sdp"
+                  >
+                    Sample Deal Package
+                  </NavLink>
                 </div>
               </div>
-              <div className="pr-0 col-md-3 d-none d-md-block">
+              <div className="pr-0 col-md-4 d-none d-md-block">
                 <MapBox address="Columbus, OH" />
               </div>
             </div>

@@ -14,11 +14,13 @@ import {
 import summary from './summary_data';
 import { NavLink } from 'react-router-dom';
 //  src="https://i.imgur.com/ycNbBgG.jpg?1"
+
 const styles = {
   header: {
-    background: `url(${'https://i.imgur.com/3qqAILY.jpg?1'})center center no-repeat`,
+    padding: '0',
+    background: 'url(https://i.imgur.com/5beXJXj.jpg?2) bottom no-repeat',
     backgroundSize: 'cover',
-    height: 27 + 'em'
+    height: 25 + 'em'
   }
 };
 class Detroit extends Component {
@@ -37,43 +39,36 @@ class Detroit extends Component {
 
   render() {
     return (
-      <Card className="z-depth-0">
-        <CardImage tag="div">
-          <div className="view">
-            <img
-              className="img-fluid w-100"
-              src="https://i.imgur.com/5beXJXj.jpg"
-              alt=""
-            />
-          </div>
-        </CardImage>
+      <section id="overview">
+        <div style={styles.header} />
 
-        <CardBody>
-          <div className="container">
-            <div className="row align-items-start justify-content-center justify-content-lg-end text-left mr-0">
-              <div style={{ fontWeight: 300 }} className="col-md-9 text-left">
-                <h2 className="h2-responsive">Detroit, MI</h2>
+        <div className="container mr-3">
+          <div className="row justify-content-center py-3">
+            <div className="col-8 col-md-8 text-left text-align-left">
+              <div>
+                <h2 className="h3-responsive">Detroit, MI</h2>
 
                 {this.renderContent()}
 
-                <ul className="m-0 pl-3">{this.renderList()}</ul>
+                <ul className="pl-3">{this.renderList()}</ul>
 
                 <div className="text-center text-sm-left">
-                  <button className="btn btn-lg btn-primary">
-                    <NavLink className=" white-text" to="/markets/detroit/sdp">
-                      Sample Deal Package
-                    </NavLink>
-                  </button>
+                  <NavLink
+                    className="btn btn-lg btn-primary white-text"
+                    to="/markets/detroit/sdp"
+                  >
+                    Sample Deal Package
+                  </NavLink>
                 </div>
               </div>
-              <div className="pr-0 col-md-3 d-none d-md-block">
-                {/* Financial Data */}
-                <MapBox address="Detroit, MI" />
-              </div>
+            </div>
+            <div className="pr-0 col-md-4 d-none d-md-block">
+              {/* Financial Data */}
+              <MapBox address="Detroit, MI" />
             </div>
           </div>
-        </CardBody>
-      </Card>
+        </div>
+      </section>
     );
   }
 }

@@ -19,7 +19,7 @@ export default class Overview extends Component {
 
         <div className="container">
           <div className="row justify-content-center py-3">
-            <div className="col-12 text-left text-align-left">
+            <div className="col-8 text-left text-align-left">
               <div>
                 <h3 className="h3-responsive mb-2">
                   Why Invest In Multifamily?

@@ -5,16 +5,13 @@ const style = {
   footerStyle: {
     position: 'absolute',
     bottom: 0,
-    width: '100%',
+    left: 0,
     height: '60px'
   }
 };
 const NavFooter = () => {
   return (
-    <Footer
-      style={style.footerStyle}
-      className="d-flex align-items-center flex-center"
-    >
+    <footer style={style.footerStyle} className="primary-color w-100">
       {/* <div className="container">
         <div className="row flex-column flex-sm-row flex-sm-nowrap justify-content-sm-around text-align-center">
           <div className="col-auto">
@@ -39,16 +36,17 @@ const NavFooter = () => {
         </div>
       </div> */}
 
-      <div className="row">
-        <div className="col-12 pb-4 d-flex flex-center">
-          <p className="white-text">© 2018 Limitless Estates, LLC</p>
-          <p className="mx-2 white-text">|</p>
-          <NavLink className="white-text" to="/legal">
-            Disclaimer
-          </NavLink>
+      <div className="row flex-center">
+        <div className="col-12 d-flex flex-center">
+          <p className="white-text">
+            © 2018 Limitless Estates, LLC |{' '}
+            <NavLink className="white-text" to="/legal">
+              Disclaimer
+            </NavLink>
+          </p>
         </div>
       </div>
-    </Footer>
+    </footer>
   );
 };
 export default NavFooter;

@@ -27,50 +27,41 @@ import {
 /**
  * Finacial Statements
  */
-
+const styles = {
+  header: {
+    padding: '0',
+    background: 'url(https://i.imgur.com/5beXJXj.jpg?2) bottom no-repeat',
+    backgroundSize: 'cover',
+    height: 25 + 'em'
+  }
+};
 class Ecorse extends Component {
   render() {
     const imgURL = '/img/ecorse/ec2.jpg';
     const title = 'Sample Deal Package';
 
     return (
-      <Card>
-        <div className="view">
-          <CardImage
-            src="https://i.imgur.com/c5f5NOc.jpg"
-            className="w-100 h-100 d-none d-sm-block"
-          />
-          <Mask
-            style={{ color: 'white' }}
-            className="flex-center pb-5 h2-responsive"
-          >
-          </Mask>
-        </div>
-
-        <div className="view hm-black-light">
-          <CardImage
-            src="https://i.imgur.com/3qqAILY.jpg?1"
-            className="w-100  d-sm-none"
-          />
-        </div>
+      <Card className="z-depth-0">
+        <CardImage tag="div">
+          <div style={styles.header} />
+        </CardImage>
         <CardBody className="animated fadeInRightBig pb-4">
           <div className="container">
             <div className="row flex-center">
-              {/* main body section */}
-              <div className="col-12">
+              <div className="col-10">
                 <div
-                  style={{ height: 80 + 'em' }}
-                  className="z-depth-2 embed-responsive embed-responsive-16by9"
+                  style={{ height: 70 + 'em' }}
+                  className="z-depth-3 embed-responsive embed-responsive-16by9"
                 >
                   <iframe
                     className="embed-responsive-item"
-                    src="/docs/detroitSDP.pdf#zoom=100"
+                    src="/docs/SDP-Detroit.pdf#view=FitH"
                     width="100%"
                     height="100%"
                     allowFullScreen
                   />
                 </div>
-                <hr />
+                <hr className="w-100" />
                 <h5 className="mb-4">
                   Sound like the right investment for you?
                 </h5>
