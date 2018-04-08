@@ -39,7 +39,7 @@ class Columbus extends Component {
 
   render() {
     return (
-      <div className="z-depth-0">
+      <div className="animated fadeIn z-depth-0">
         <div style={styles.header} />
 
         <div className="container">

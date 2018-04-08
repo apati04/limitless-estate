@@ -35,7 +35,7 @@ class Detroit extends Component {
 
   render() {
     return (
-      <section className="z-depth-0" id="overview">
+      <section className="animated fadeIn z-depth-0" id="overview">
         <div style={styles.header} />
 
         <div className="container">

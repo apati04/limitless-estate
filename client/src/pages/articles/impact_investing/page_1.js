@@ -8,7 +8,7 @@ export default class ImpactInvesting extends Component {
   };
   render() {
     return (
-      <div data-wow-delay="1s">
+      <div>
         <div className="animated fadeIn rgba-blue-grey-slight">
           <Article
             headerImage="https://i.imgur.com/YXieUK4.jpg"
