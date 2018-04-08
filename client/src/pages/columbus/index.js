@@ -27,14 +27,16 @@ class Columbus extends Component {
   renderContent = () => {
     const main = summary[0].body;
     const { list } = summary[1];
-    const body = main.map((e, i) => <p key={i}>{e}</p>);
-    const listItems = list.map((e, i) => <li key={i}>{e}</li>);
+    const body = main.map((e, i) => <CardText key={i}>{e}</CardText>);
+    const listItems = list.map((e, i) => (
+      <CardText key={i}>
+        <li>{e}</li>
+      </CardText>
+    ));
     return (
-      <div style={{ fontWeight: 300 }}>
+      <div className="mt-4">
         {body}
-        <ul style={{ padding: 0, listStyle: 'inside' }} className="p-0">
-          {listItems}
-        </ul>
+        <ul>{listItems}</ul>
       </div>
     );
   };
@@ -46,21 +48,25 @@ class Columbus extends Component {
           <div style={styles.header} />
         </CardImage>
         <CardBody>
-          <div className="container mr-3">
-            <div className="row align-items-start justify-content-center justify-content-lg-end text-left mr-0">
-              <div
-                style={{ fontWeight: 300 }}
-                className="col-8 col-md-8 text-left"
-              >
-                <p className="h3-responsive">Columbus, OH</p>
-                <div>{this.renderContent()}</div>
-                <div className="text-center text-sm-left">
-                  <NavLink
-                    className="btn btn-lg btn-primary white-text"
-                    to="/markets/columbus/sdp"
-                  >
-                    Sample Deal Package
-                  </NavLink>
+          <div className="container">
+            <div className="row no-gutters justify-content-around py-3">
+              <div className="col-12 col-md-8 text-align-left">
+                <div>
+                  <CardTitle>Columbus, OH</CardTitle>
+                  <div className="border-bottom" />
+                  {this.renderContent()}
+
+                  <div className=" text-center text-sm-left">
+                    <CardText>
+                      Check out the sample deal package below:
+                    </CardText>
+                    <NavLink
+                      className="ml-0 btn btn-lg btn-primary white-text text-center"
+                      to="/markets/columbus/sdp"
+                    >
+                      Sample Deal Package
+                    </NavLink>
+                  </div>
                 </div>
               </div>
               <div className="pr-0 col-md-4 d-none d-md-block">

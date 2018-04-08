@@ -23,8 +23,6 @@ class Columbus extends Component {
           <div className="container">
             <div className="row flex-center">
               <div className="col-10">
-                {/* building stats */}
-
                 <div
                   style={{ height: 70 + 'em' }}
                   className="z-depth-3 embed-responsive embed-responsive-16by9"

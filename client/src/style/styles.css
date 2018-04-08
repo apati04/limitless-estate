@@ -107,7 +107,21 @@ h6 {
 .blog-pagination > .btn {
   border-radius: 2rem;
 } */
+canvas.mapboxgl-map {
+  display: inline-block;
+  -webkit-border-radius: 132px;
+  -moz-border-radius: 132px;
+  border-radius: 132px/132px;
+  -khtml-border-radius: 132px;
+}
 
+canvas {
+  -webkit-border-radius: 132px;
+  -moz-border-radius: 132px;
+  border-radius: 132px/132px !important;
+  -khtml-border-radius: 132px;
+  vertical-align: middle;
+}
 .carousel-fade {
   animation: none !important;
   transition: none !important;
@@ -280,4 +294,9 @@ input[type='radio'] {
 }
 *:focus {
   outline: 0;
+}
+@media print {
+  .container {
+    width: auto;
+  }
 }

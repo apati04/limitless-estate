@@ -32,15 +32,17 @@ class MapBox extends Component {
 
   render() {
     return (
-      <div
-        className="mb-3 mr-0 pr-0 z-depth-2 rounded-circle"
-        id="mapbox"
-        style={{
-          height: 22 + 'em',
-          width: 22 + 'em',
-          marginTop: -5 + 'em'
-        }}
-      />
+      <div>
+        <div
+          className="z-depth-2 rounded-circle"
+          id="mapbox"
+          style={{
+            height: 22 + 'em',
+            width: 22 + 'em',
+            marginTop: -5 + 'em'
+          }}
+        />
+      </div>
     );
   }
 }

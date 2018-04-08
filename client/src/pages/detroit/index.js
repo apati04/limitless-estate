@@ -50,11 +50,11 @@ class Detroit extends Component {
 
                 {this.renderContent()}
 
-                <ul className="pl-3">{this.renderList()}</ul>
-
+                <ul>{this.renderList()}</ul>
+                <p>Check out the sample deal package below:</p>
                 <div className="text-center text-sm-left">
                   <NavLink
-                    className="btn btn-lg btn-primary white-text"
+                    className="ml-0 text-center btn btn-lg btn-primary white-text"
                     to="/markets/detroit/sdp"
                   >
                     Sample Deal Package
