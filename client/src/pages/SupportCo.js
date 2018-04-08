@@ -7,62 +7,67 @@ export default class SupportCo extends Component {
   renderInfo(company) {
     const { name, phone, address, email, website, misc, logo } = company;
     return (
-      <Card className="" narrow>
+      <Card className="h-100 w-100" narrow>
         <a target="_blank" rel="noopener" href={website}>
           <CardImage className="p-4 card-img-top" src={logo} alt="" />
         </a>
-        <CardTitle className="h2-responsive">{name}</CardTitle>
-        <CardBody>
+
+        <CardBody className="h-100 w-100">
           <div className="container">
-            <div className="row">
-              <div className="col-12">
-                <span>
-                  <Fa style={{ color: 'blue' }} size="md" icon="phone" />
-                </span>{' '}
-                <h5 style={{ display: 'inline' }} className="h5-responsive">
-                  {phone}
-                </h5>
-              </div>
-              <div className="col-12">
-                <span>
-                  <Fa style={{ color: 'blue' }} size="md" icon="envelope" />
-                </span>{' '}
-                <h5 style={{ display: 'inline' }} className="h5-responsive">
-                  {email}
-                </h5>
-              </div>
-              <span>
+            <CardTitle className="h2-responsive">{name}</CardTitle>
+            <div className="row flex-column no-gutters flex-nowrap text-left align-items-start justify-content-around">
+              <div className="col-12 col-md-6 pr-0 m-0 d-flex flex-row">
                 <Fa
                   style={{ color: 'blue' }}
-                  size="md"
-                  icon="location-arrow"
-                  className=""
+                  size="lg"
+                  icon="phone"
+                  className="mr-2"
+                />{' '}
+                <h5 className="h5-responsive">{phone}</h5>
+              </div>
+              <div className="col-12 col-md-6 d-flex flex-row pr-0 mr-0">
+                <Fa
+                  style={{ color: 'blue' }}
+                  size="lg"
+                  icon="envelope"
+                  className="mr-2 d-inline"
                 />
-              </span>
-              <h5 style={{ display: 'inline' }} className="h5-responsive">
-                {address.street}
-              </h5>
+                <h5 className="h5-responsive">{email}</h5>
+              </div>
 
-              <h5 className="m-0">
-                {`${address.city}, ${address.state}  ${address.zipcode}`}
-              </h5>
-
-              <span>
+              <div className="col-auto d-flex flex-row">
+                <Fa
+                  style={{ color: 'blue' }}
+                  size="lg"
+                  icon="location-arrow"
+                  className="mr-2"
+                />
+                <ul className="no-margins no-gutters list-unstyled pl-1">
+                  <li>
+                    <h5 className="h5-responsive">{address.street}</h5>
+                  </li>
+                  <li className="my-0">
+                    <h5 className="h5-responsive">
+                      {`${address.city}, ${address.state}  ${address.zipcode}`}
+                    </h5>
+                  </li>
+                </ul>
+              </div>
+              <div className="col-12 d-flex">
                 <Fa
                   style={{ color: 'blue' }}
                   size="lg"
                   icon="external-link"
                   className="mr-2"
                 />
-              </span>
-
-              <h5 style={{ display: 'inline' }} className="h5-responsive">
-                <a target="_blank" rel="noopener" href={website}>
-                  {website}
-                </a>
-              </h5>
+                <h5 className="h5-responsive">
+                  <a target="_blank" rel="noopener" href={website}>
+                    {website}
+                  </a>
+                </h5>
+              </div>
             </div>
-            <div className="row  align-items-baseline">
+            <div className="row h-100 w-100 justify-content-center align-items-baseline">
               <div className="col-12">
                 <div className="mt-2 text-center">
                   <a
@@ -114,10 +119,10 @@ export default class SupportCo extends Component {
         <div className="container p-5 my-5">
           <div className="row  animated fadeIn">
             <div className="col-12 col-md-6">
-              <div className="h-100 p-3">{this.renderInfo(nuView)}</div>
+              <div className="h-100">{this.renderInfo(nuView)}</div>
             </div>
             <div className="col-12 col-md-6">
-              <div className="h-100 p-3">{this.renderInfo(uDirect)}</div>
+              <div className="h-100">{this.renderInfo(uDirect)}</div>
             </div>
           </div>
         </div>
