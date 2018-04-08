@@ -16,9 +16,9 @@ class Contact extends Component {
         className="animated fadeIn hm-black-light"
       >
         <div style={{ height: '100%' }} className="view full-bg-img">
-          <div className="container">
-            <div className="row my-5 flex-center">
-              <div className="col-12 col-lg-7">
+          <div className="container mt-5">
+            <div className="row flex-center">
+              <div className="m-5 col-12 col-lg-7">
                 <Card className="align-center animated fadeIn z-depth-4" narrow>
                   <CardImage tag="div">
                     <div className="view gradient-card-header blue-gradient text-align-center peach-gradient">

@@ -13,17 +13,15 @@ const styles = {
 };
 const LandingParallax = () => {
   return (
-    <div>
-      <section style={{ height: 20 + 'em' }}>
-        <View style={styles.bgImage} className="hm-bluegrey-strong">
-          <Mask className="flex-center">
-            <div className="h1-responsive font-weight-bold  white-text">
-              Reasons to invest in multifamily...
-            </div>
+    <section style={{ height: 20 + 'em' }}>
+      <View style={styles.bgImage}>
+        <div className="dark-overlay">
+          <Mask className="flex-center h1-responsive font-weight-bold  white-text">
+            Reasons to invest in multifamily...
           </Mask>
-        </View>
-      </section>
-    </div>
+        </div>
+      </View>
+    </section>
   );
 };
 export default LandingParallax;
