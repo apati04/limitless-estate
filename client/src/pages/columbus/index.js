@@ -30,30 +30,27 @@ class Columbus extends Component {
     const body = main.map((e, i) => <p key={i}>{e}</p>);
     const listItems = list.map((e, i) => <li key={i}>{e}</li>);
     return (
-      <div style={{ fontWeight: 300 }}>
+      <div className="mt-4">
         {body}
-        <ul style={{ padding: 0, listStyle: 'inside' }} className="p-0">
-          {listItems}
-        </ul>
+        <ul>{listItems}</ul>
       </div>
     );
   };
 
   render() {
     return (
-      <Card className="z-depth-0">
-        <CardImage tag="div">
-          <div style={styles.header} />
-        </CardImage>
-        <CardBody>
-          <div className="container mr-3">
-            <div className="row align-items-start justify-content-center justify-content-lg-end text-left mr-0">
-              <div
-                style={{ fontWeight: 300 }}
-                className="col-8 col-md-8 text-left"
-              >
-                <p className="h3-responsive">Columbus, OH</p>
-                <div>{this.renderContent()}</div>
+      <div className="z-depth-0">
+        <div style={styles.header} />
+
+        <div className="container">
+          <div className="row justify-content-around my-4">
+            <div className="col-12 col-md-8 text-left text-justify">
+              <div>
+                <h3 className="h3-responsive text-center text-md-left mb-4">
+                  Columbus, OH
+                </h3>
+                <div className="border-bottom" />
+                {this.renderContent()}
                 <div className="text-center text-sm-left">
                   <NavLink
                     className="btn btn-lg btn-primary white-text"
@@ -63,13 +60,14 @@ class Columbus extends Component {
                   </NavLink>
                 </div>
               </div>
-              <div className="pr-0 col-md-4 d-none d-md-block">
-                <MapBox address="Columbus, OH" />
-              </div>
+            </div>
+
+            <div className="pr-0 col-md-4 d-none d-md-block">
+              <MapBox address="Columbus, OH" />
             </div>
           </div>
-        </CardBody>
-      </Card>
+        </div>
+      </div>
     );
   }
 }
