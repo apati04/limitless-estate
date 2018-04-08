@@ -30,27 +30,26 @@ class Detroit extends Component {
   };
   renderList = () => {
     const { list } = summary[1];
-    return list.map((e, i) => (
-      <li className="list-item text-wrap" key={i}>
-        {e}
-      </li>
-    ));
+    return list.map((e, i) => <li key={i}>{e}</li>);
   };
 
   render() {
     return (
-      <section id="overview">
+      <section className="z-depth-0" id="overview">
         <div style={styles.header} />
 
-        <div className="container mr-3">
-          <div className="row justify-content-center py-3">
-            <div className="col-8 col-md-8 text-left text-align-left">
+        <div className="container">
+          <div className="row justify-content-around my-4">
+            <div className="col-12 col-md-8 text-left text-justify">
               <div>
-                <h2 className="h3-responsive">Detroit, MI</h2>
-
-                {this.renderContent()}
-
-                <ul className="pl-3">{this.renderList()}</ul>
+                <h3 className="h3-responsive text-center text-md-left mb-4">
+                  Detroit, MI
+                </h3>
+                <div className="border-bottom" />
+                <div className="mt-4">
+                  {this.renderContent()}
+                  <ul>{this.renderList()}</ul>
+                </div>
 
                 <div className="text-center text-sm-left">
                   <NavLink
@@ -62,7 +61,10 @@ class Detroit extends Component {
                 </div>
               </div>
             </div>
-            <div className="pr-0 col-md-4 d-none d-md-block">
+            <div
+              style={{ marginRight: -1 + 'em' }}
+              className="pr-0 col-md-4 d-none d-md-block"
+            >
               {/* Financial Data */}
               <MapBox address="Detroit, MI" />
             </div>

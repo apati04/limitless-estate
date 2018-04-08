@@ -62,7 +62,10 @@ class Columbus extends Component {
               </div>
             </div>
 
-            <div className="pr-0 col-md-4 d-none d-md-block">
+            <div
+              style={{ marginRight: -1 + 'em' }}
+              className="pr-0 col-md-4 d-none d-md-block"
+            >
               <MapBox address="Columbus, OH" />
             </div>
           </div>
