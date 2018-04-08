@@ -1,10 +1,9 @@
 import React from 'react';
 import { Formik, Field } from 'formik';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import {
   Card,
   CardBody,
-  Button,
   Modal,
   ModalBody,
   ModalHeader,
@@ -104,19 +103,18 @@ class Wizard extends React.Component {
               {activePage}
               <div className="text-center">
                 {page > 0 && (
-                  <Button
-                    type="button"
+                  <button
                     className="btn btn-secondary mr-2"
                     onClick={this.previous}
                   >
                     « Previous
-                  </Button>
+                  </button>
                 )}
 
                 {!isLastPage && (
-                  <Button color="primary" type="submit">
+                  <button className="btn btn-primary" type="submit">
                     Next »
-                  </Button>
+                  </button>
                 )}
                 {isLastPage && (
                   <button
@@ -143,9 +141,9 @@ class Wizard extends React.Component {
                     know how you can make an impact!
                   </ModalBody>
                   <ModalFooter>
-                    <Link to="/">
-                      <Button color="secondary">Back To Home</Button>
-                    </Link>
+                    <NavLink className="btn btn-secondary" to="/">
+                      Back To Home
+                    </NavLink>
                   </ModalFooter>
                 </Modal>
               </div>

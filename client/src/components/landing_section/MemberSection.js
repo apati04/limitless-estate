@@ -11,7 +11,7 @@ class MemberSection extends Component {
       const content = person.content || person.resume;
       const firstname = person.name.split(' ')[0].toLowerCase();
       return (
-        <MemberCard key={person + i} {...person}>
+        <MemberCard className="mx-2" key={person + i} {...person}>
           {person.type === 'Team' ? (
             <div className="col-md-12 mt-2">
               <img
@@ -45,11 +45,11 @@ class MemberSection extends Component {
               <h3 className="h5-responsive m-0">{person.name}</h3>
               <Popover
                 component="button"
-                placement="right"
+                placement="auto"
                 popoverBody={<Fa style={{ fontSize: 1 + 'em' }} icon="info" />}
                 className="btn btn-floating primary-color btn-small"
               >
-                <PopoverHeader className="h6-responsive m-0 primary-color-dark text-center">
+                <PopoverHeader className="my-auto h6-responsive primary-color text-left">
                   {person.name}, {person.type}
                 </PopoverHeader>
                 <PopoverBody>{person.content}</PopoverBody>
@@ -65,9 +65,9 @@ class MemberSection extends Component {
       <section className="text-center">
         <div className="rgba-white-light p-2">
           <div className="container rgba-white-strong">
-            <h1 className="h1-responsive team-header ">Meet the Team</h1>
+            <h1 className="h1-responsive pt-2 team-header ">Meet the Team</h1>
             <hr />
-            <div className="row d-flex justify-content-around align-items-baseline flex-wrap">
+            <div className="row d-flex justify-content-center align-items-center flex-wrap">
               {this.renderCards(Team)}
             </div>
           </div>
@@ -75,9 +75,9 @@ class MemberSection extends Component {
         <div>
           <div className="h-100 p-2 mdb-color lighten-1">
             <div className="mb-5 container text-white">
-              <h1 className="h1-responsive team-header">Our Advisors</h1>
+              <h1 className="pt-2 h1-responsive team-header">Our Advisors</h1>
               <hr />
-              <div className="d-flex flex-column flex-md-row justify-content-between align-items-center">
+              <div className="d-flex flex-column flex-md-row justify-content-center align-items-center">
                 {this.renderCards(Advisors)}
               </div>
             </div>

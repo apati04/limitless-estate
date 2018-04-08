@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { NavLink, Link } from 'react-router-dom';
+import '../style/styles.css';
+
 import {
   Navbar,
   NavbarBrand,
@@ -40,7 +42,7 @@ class Navigation extends Component {
         expand="lg"
         sticky="top"
         style={{ borderRadius: 0 }}
-        className="primary-color m-"
+        className="primary-color"
       >
         <Container>
           <Link to="/">

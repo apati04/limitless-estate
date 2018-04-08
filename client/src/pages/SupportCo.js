@@ -53,7 +53,7 @@ export default class SupportCo extends Component {
                   </li>
                 </ul>
               </div>
-              <div className="col-auto d-flex">
+              <div className="col-12 d-flex">
                 <Fa
                   style={{ color: 'blue' }}
                   size="lg"
@@ -119,10 +119,10 @@ export default class SupportCo extends Component {
         <div className="container p-5 my-5">
           <div className="row  animated fadeIn">
             <div className="col-12 col-md-6">
-              <div className="h-100 p-3">{this.renderInfo(nuView)}</div>
+              <div className="h-100">{this.renderInfo(nuView)}</div>
             </div>
             <div className="col-12 col-md-6">
-              <div className="h-100 p-3">{this.renderInfo(uDirect)}</div>
+              <div className="h-100">{this.renderInfo(uDirect)}</div>
             </div>
           </div>
         </div>
