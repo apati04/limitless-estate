@@ -5,8 +5,8 @@ class Kyle extends Component {
     return (
       <div>
         <div className="container my-5">
-          <div className="row justify-content-center">
-            <div className="col-8">
+          <div className="row justify-content-around">
+            <div className="col-12 col-md-8">
               <div className="no-flex testimonial-carousel">
                 <div className="testimonial">
                   <div className="avatar mx-auto">

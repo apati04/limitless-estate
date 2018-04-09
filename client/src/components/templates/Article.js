@@ -26,13 +26,17 @@ export default ({
         <Mask className={`flex-center ${pattern}`} />
       </View>
       <div className="container">
-        <div className="row justify-content-center text-left py-3">
-          <div className="col-8 text-align-left text-left">
-            <h2 className="h3-responsive mb-2">{title}</h2>
-            <div className="border-bottom" />
-            <div className="text-left mt-4">{body}</div>
-            <p>{subTitle}</p>
-            {pageFooter}
+        <div className="row justify-content-around my-4">
+          <div className="col-12 col-md-8 text-left text-justify">
+            <div>
+              <h3 className="h3-responsive text-center text-md-left mb-4">
+                {title}
+              </h3>
+              <div className="border-bottom" />
+              <div className="mt-4">{body}</div>
+              <p>{subTitle}</p>
+              {pageFooter}
+            </div>
           </div>
         </div>
       </div>

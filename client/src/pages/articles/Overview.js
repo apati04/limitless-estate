@@ -18,10 +18,10 @@ export default class Overview extends Component {
         <div style={styles.header} />
 
         <div className="container">
-          <div className="row justify-content-center py-3">
-            <div className="col-8 text-left text-align-left">
+          <div className="row justify-content-around my-4">
+            <div className="col-12 col-md-8 text-left text-justify">
               <div>
-                <h3 className="h3-responsive mb-2">
+                <h3 className="h3-responsive text-center text-md-left mb-4">
                   Why Invest In Multifamily?
                 </h3>
                 <div className="border-bottom" />

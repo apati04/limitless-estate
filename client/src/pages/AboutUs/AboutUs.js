@@ -35,11 +35,8 @@ class AboutUs extends Component {
         <View>
           <div style={styles.header} />
         </View>
-        <div className="container">
-          <div className="row flex-wrap justify-content-between text-left">
-            {this.renderProfile()}
-          </div>
-        </div>
+
+        {this.renderProfile()}
       </div>
     );
   }
