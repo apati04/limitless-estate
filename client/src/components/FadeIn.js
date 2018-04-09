@@ -7,7 +7,6 @@ class FadeIn extends Component {
       <Animation
         height={600}
         render={onload => {
-          console.log(onload);
           return (
             <div onLoad={onload} style={{ height: '100%' }}>
               {this.props.children}
