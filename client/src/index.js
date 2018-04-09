@@ -8,5 +8,5 @@ import './style/styles.css';
 import App from './components/App';
 import { unregister } from './registerServiceWorker';
 
-ReactDOM.render(<App />, document.querySelector('#root'));
+ReactDOM.render(<App />, document.getElementById('root'));
 unregister();

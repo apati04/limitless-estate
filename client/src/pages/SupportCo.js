@@ -1,38 +1,42 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
-import { Button, Card, CardBody, CardText, CardImage, CardTitle, Fa } from 'mdbreact';
+import {
+  Button,
+  Card,
+  CardBody,
+  CardText,
+  CardImage,
+  CardTitle,
+  Fa
+} from 'mdbreact';
 import { nuView, uDirect } from '../api/nuView';
 
 export default class SupportCo extends Component {
   renderInfo(company) {
     const { name, phone, address, email, website, misc, logo } = company;
     return (
-      <Card narrow>
+      <Card wide>
         <a target="_blank" rel="noopener" className="w-100" href={website}>
-          <CardImage style={{height: 10 + 'em'}} className="mw-100 mx-auto p-4 d-block img-fluid" src={logo} alt="logo" />
+          <CardImage
+            style={{ height: 10 + 'em' }}
+            className="mw-100 mx-auto p-4 d-block img-fluid"
+            src={logo}
+            alt="logo"
+          />
         </a>
-     
+
         <CardBody>
           <div className="container">
-           
             <div className="row flex-column flex-nowrap text-left align-items-start justify-content-around">
-              <div className="col-12 my-1 col-md-6 pr-0 m-0 d-flex flex-row">
-                <Fa
-                  size="md"
-                  icon="phone"
-                  className="mr-2 d-inline"
-                />{' '}
-                <CardText>{phone}</CardText>
+              <div className="col-12 my-2 col-md-6 pr-0 m-0 d-flex flex-row">
+                <Fa size="md" icon="phone" className="mr-2 d-inline" />
+                <CardText className="pl-1">{phone}</CardText>
               </div>
-              <div className="col-12 my-1 col-md-6 d-flex flex-row pr-0 mr-0">
-                <Fa
-                  size="md"
-                  icon="envelope"
-                  className="mr-2 d-inline"
-                />
+              <div className="col-12 my-2 col-md-6 d-flex flex-row pr-0 mr-0">
+                <Fa size="md" icon="envelope" className="mr-2 d-inline" />
                 <CardText>{email}</CardText>
               </div>
-              <div className="my-1  col-12 d-flex">
+              <div className=" col-12 my-2 d-flex">
                 <Fa
                   style={{ color: 'blue' }}
                   size="md"
@@ -45,15 +49,15 @@ export default class SupportCo extends Component {
                   </a>
                 </CardText>
               </div>
-              <div className="col-12 my-1 d-flex">
+              <div className="col-12 my-2 d-flex">
                 <Fa
                   style={{ color: 'blue' }}
                   size="md"
                   icon="location-arrow"
                   className="mr-2"
                 />
-                <ul className="no-margins no-gutters list-unstyled pl-1">
-                  <li>
+                <ul className="text-left no-margins no-gutters list-unstyled pl-1">
+                  <li className="my-0">
                     <CardText>{address.street}</CardText>
                   </li>
                   <li className="my-0">
@@ -63,24 +67,19 @@ export default class SupportCo extends Component {
                   </li>
                 </ul>
               </div>
-
             </div>
             <div className="row h-100 w-100 justify-content-center align-items-baseline">
               <div className="col-12">
                 <div className="mt-2 text-center">
                   <a
+                    role="button"
                     style={{ textDecoration: 'none', color: 'white' }}
                     target="_blank"
+                    className="btn btn-primary btn-block text-white"
                     rel="noopener"
                     href={misc}
                   >
-                    <Button
-                      color="primary"
-                      size="lg"
-                      className="btn btn-block text-white"
-                    >
-                      View Details
-                    </Button>
+                    View Details
                   </a>
                 </div>
               </div>
@@ -103,27 +102,29 @@ export default class SupportCo extends Component {
     return (
       <section>
         <div style={styles.header}>
-          <div
-            style={{ height: 25 + 'em' }}
-            className="row mb-5 justify-content-center align-items-center"
-          >
-            <div className="col-8 text-left">
-              <header className=" text-align-center-left text-white">
-                <h1 className="h1-responsive">401K/IRA</h1>
-              </header>
+          <div className="rgba-black-slight">
+            <div
+              style={{ height: 25 + 'em' }}
+              className="row mb-5 justify-content-center align-items-center"
+            >
+              <div className="col-8 text-left">
+                <header className=" text-align-center-left text-white">
+                  <h1 className="h1-responsive">401K/IRA</h1>
+                </header>
+              </div>
             </div>
           </div>
         </div>
- 
-          <div className="row m-5 animated fadeIn">
-            <div className="col-12 col-md-6 px-2 mh-100">
+        <div className="container my-5">
+          <div className="row flex-center animated fadeIn">
+            <div className="col-12 col-md-6">
               <div>{this.renderInfo(nuView)}</div>
             </div>
-            <div className="col-12 col-md-6 px-2 mh-100">
+            <div className="col-12 col-md-6">
               <div>{this.renderInfo(uDirect)}</div>
             </div>
           </div>
-
+        </div>
       </section>
     );
   }
