@@ -1,23 +1,39 @@
 import React from 'react';
-import { Card, CardImage, CardBody } from 'mdbreact';
-import QuestionnaireForm from '../components/Forms/MultiStepForm';
+import { Card, CardImage, CardBody, View, Mask } from 'mdbreact';
+import QuestionnaireForm from '../components/Forms/QuestionnaireForm';
 const bgimage = 'https://i.imgur.com/RH9g1cH.jpg';
 const Questionnaire = () => {
   return (
-    <div
-      style={{
-        height: 80 + 'em',
-        background: `url(${bgimage})center center no-repeat`,
-        backgroundSize: 'cover'
-      }}
-      data-wow-delay="1s"
-      className="animated fadeIn hm-black-light"
-    >
-      <div style={{ height: '100%' }} className="view full-bg-img">
-        <div className="container">
-          <div className="row my-5 flex-center">
-            <div className="col-12 col-lg-7">
-              <QuestionnaireForm />
+    <div>
+      <div
+        style={{
+          background: `url(${bgimage})center center no-repeat`,
+          backgroundAttachment: 'fixed'
+        }}
+        data-wow-delay="1s"
+        className="unique-color  animated fadeIn hm-black-light full-bg-img"
+      >
+        <div className="container-fluid">
+          <div className="row justify-content-center py-5">
+            <div className="col-12 col-md-10 col-lg-8">
+              <Card className="animated fadeInUp z-depth-4" narrow>
+                <div className="view gradient-card-header blue-gradient text-white">
+                  <h2 className="h2-responsive">
+                    Investor Qualifier Questionnaire
+                  </h2>
+                  <p>
+                    Please fill out the questions below to let us know more
+                    about you!
+                  </p>
+                </div>
+                <CardBody>
+                  <div className="row justify-content-md-center justify-content-between">
+                    <div className="col-11">
+                      <QuestionnaireForm />
+                    </div>
+                  </div>
+                </CardBody>
+              </Card>
             </div>
           </div>
         </div>

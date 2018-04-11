@@ -26,8 +26,7 @@ app.post('/api/sendmail', (req, res) => {
   };
   const mailOptions = {
     from: sender,
-    to: 'kmitchell@limitless-estates.com',
-    cc: ['lpatipaksiri@limitless-estates.com', 'aitech9188@gmail.com'],
+    to: 'andrew.patipak@gmail.com',
     subject: `Contact Form- ${firstname}`,
     html: `
       <html>
@@ -94,8 +93,7 @@ q9 : risk {riskTolerance}
   };
   const mailOptions = {
     from: sender,
-    to: 'kmitchell@limitless-estates.com',
-    cc: ['lpatipaksiri@limitless-estates.com', 'aitech9188@gmail.com'],
+    to: 'andrew.patipak@gmail.com',
     subject: `Investor Questionnaire - ${fullname}`,
     html: `
       <html>

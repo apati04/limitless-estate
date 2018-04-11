@@ -67,7 +67,7 @@ class MemberSection extends Component {
           <div className="container rgba-white-strong">
             <h1 className="h1-responsive pt-2 team-header ">Meet the Team</h1>
             <hr />
-            <div className="row d-flex justify-content-center align-items-center flex-wrap">
+            <div className="row d-flex justify-content-around align-items-center flex-wrap">
               {this.renderCards(Team)}
             </div>
           </div>
