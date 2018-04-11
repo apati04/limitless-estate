@@ -8,6 +8,7 @@ const Questionnaire = () => {
       <div
         style={{
           background: `url(${bgimage})center center no-repeat`,
+          backgroundSize: 'cover',
           backgroundAttachment: 'fixed'
         }}
         data-wow-delay="1s"

@@ -281,3 +281,9 @@ input[type='radio'] {
 *:focus {
   outline: 0;
 }
+
+@media print {
+  .container {
+    width: auto;
+  }
+}

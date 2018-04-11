@@ -26,11 +26,45 @@ app.post('/api/sendmail', (req, res) => {
   };
   const mailOptions = {
     from: sender,
-    to: 'andrew.patipak@gmail.com',
+    to: 'kmitchell@limitless-estates.com',
+    cc: ['lpatipaksiri@limitless-estates.com', 'andrew.patipak@gmail.com'],
     subject: `Contact Form- ${firstname}`,
     html: `
       <html>
       <head>
+      <style>
+      html {
+        margin:0;
+        padding:0;
+        height: 100%;
+      }
+      /* source: http://typecast.com/images/uploads/modernscale.css */
+      body {
+        font-size: 100%;
+        font-family: 'Roboto', sans-serif;
+      }
+
+      body,
+      caption,
+      th,
+      td,
+      input,
+      textarea,
+      select,
+      option,
+      legend,
+      fieldset,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+
+        font-size-adjust: 0.5;
+      }
+
+      </style>
       </head>
       <body style="text-align: left;">
         <div style="border-bottom": 1px solid black;">
@@ -93,7 +127,8 @@ q9 : risk {riskTolerance}
   };
   const mailOptions = {
     from: sender,
-    to: 'andrew.patipak@gmail.com',
+    to: 'kmitchell@limitless-estates.com',
+    cc: ['lpatipaksiri@limitless-estates.com', 'andrew.patipak@gmail.com'],
     subject: `Investor Questionnaire - ${fullname}`,
     html: `
       <html>

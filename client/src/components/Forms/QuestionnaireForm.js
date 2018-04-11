@@ -100,7 +100,7 @@ class QuestionnaireForm extends Component {
             </label>
             <div className="md-form mt-0">
               <Field
-                className="form-control select-wrapper select-dropdown d-block"
+                className="select-wrapper select-dropdown d-block"
                 name="contactPreference"
                 component="select"
               >
@@ -494,8 +494,7 @@ class QuestionnaireForm extends Component {
           >
             <ModalHeader>Thank you {values.fullname}</ModalHeader>
             <ModalBody>
-              One of our team members will contact you soon to let you know how
-              you can make an impact!
+              One of our team members will contact you soon!
             </ModalBody>
             <ModalFooter>
               <NavLink className="btn btn-secondary" to="/">
