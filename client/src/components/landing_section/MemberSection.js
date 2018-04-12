@@ -74,10 +74,10 @@ class MemberSection extends Component {
         </div>
         <div>
           <div className="h-100 p-2 mdb-color lighten-1">
-            <div className="mb-5 container text-white">
+            <div className="mb-5 text-white">
               <h1 className="pt-2 h1-responsive team-header">Our Advisors</h1>
               <hr />
-              <div className="d-flex flex-column flex-md-row justify-content-center align-items-center">
+              <div className="row flex-column flex-md-row justify-content-center align-items-center">
                 {this.renderCards(Advisors)}
               </div>
             </div>
