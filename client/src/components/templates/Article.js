@@ -27,7 +27,7 @@ export default ({
       </View>
       <div className="container">
         <div className="row justify-content-around my-4">
-          <div className="col-12 col-md-8 text-left text-justify">
+          <div className="col-12 col-md-9 text-left">
             <div>
               <h3 className="h3-responsive text-center text-md-left mb-4">
                 {title}

@@ -25,18 +25,18 @@ export default class SupportCo extends Component {
           />
         </a>
 
-        <CardBody>
+        <CardBody style={{ minHeight: 20 + 'em' }}>
           <div className="container">
-            <div className="row flex-column flex-nowrap text-left align-items-start justify-content-around">
-              <div className="col-12 my-2 col-md-6 pr-0 m-0 d-flex flex-row">
-                <Fa size="md" icon="phone" className="mr-2 d-inline" />
-                <CardText className="pl-1">{phone}</CardText>
+            <div className="h-100 row flex-center">
+              <div className="col-12 my-2 pr-0 m-0">
+                <Fa size="md" icon="phone" className="mr-2" />
+                <CardText className="pl-1 d-inline">{phone}</CardText>
               </div>
-              <div className="col-12 my-2 col-md-6 d-flex flex-row pr-0 mr-0">
-                <Fa size="md" icon="envelope" className="mr-2 d-inline" />
-                <CardText>{email}</CardText>
+              <div className="col-12 my-2 pr-0 mr-0">
+                <Fa size="md" icon="envelope" className="mr-2" />
+                <CardText className="pl-1 d-inline">{email}</CardText>
               </div>
-              <div className=" col-12 my-2 d-flex">
+              <div className="col-12 my-2 d-flex">
                 <Fa
                   style={{ color: 'blue' }}
                   size="md"
