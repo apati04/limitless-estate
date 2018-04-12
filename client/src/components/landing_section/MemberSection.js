@@ -46,7 +46,8 @@ class MemberSection extends Component {
               <Popover
                 component="button"
                 placement="auto"
-                className="btn btn-floating fa-info primary-color btn-small"
+                popoverBody={<Fa style={{ fontSize: 1 + 'em' }} icon="info" />}
+                className="btn btn-floating primary-color btn-small"
               >
                 <PopoverHeader className="my-auto h6-responsive primary-color text-left">
                   {person.name}, {person.type}
