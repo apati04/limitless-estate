@@ -33,7 +33,7 @@ class MemberSection extends Component {
               </NavLink>
             </div>
           ) : (
-            <div className="col-12 d-flex flex-column flex-center mt-2">
+            <div className="col-12 mt-2">
               <img
                 style={{ border: '2px solid lightgrey' }}
                 className="mb-1 rounded-circle"
@@ -46,8 +46,7 @@ class MemberSection extends Component {
               <Popover
                 component="button"
                 placement="auto"
-                popoverBody={<Fa style={{ fontSize: 1 + 'em' }} icon="info" />}
-                className="btn btn-floating primary-color btn-small"
+                className="btn btn-floating fa-info primary-color btn-small"
               >
                 <PopoverHeader className="my-auto h6-responsive primary-color text-left">
                   {person.name}, {person.type}
@@ -67,7 +66,7 @@ class MemberSection extends Component {
           <div className="container rgba-white-strong">
             <h1 className="h1-responsive pt-2 team-header ">Meet the Team</h1>
             <hr />
-            <div className="row d-flex justify-content-around align-items-center flex-wrap">
+            <div className="row justify-content-around align-items-center flex-wrap">
               {this.renderCards(Team)}
             </div>
           </div>
@@ -77,7 +76,7 @@ class MemberSection extends Component {
             <div className="mb-5 text-white">
               <h1 className="pt-2 h1-responsive team-header">Our Advisors</h1>
               <hr />
-              <div className="row flex-column flex-md-row justify-content-center align-items-center">
+              <div className="row flex-center">
                 {this.renderCards(Advisors)}
               </div>
             </div>
