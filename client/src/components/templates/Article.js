@@ -12,7 +12,7 @@ export default ({
   pageFooter
 }) => {
   return (
-    <section className="h-100">
+    <section style={{ height: '100%' }} className="h-100">
       <View
         style={{
           height: 25 + 'em',
@@ -34,7 +34,6 @@ export default ({
               </h3>
               <div className="border-bottom" />
               <div className="mt-4">{body}</div>
-              <p>{subTitle}</p>
               {pageFooter}
             </div>
           </div>
