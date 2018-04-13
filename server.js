@@ -1,20 +1,20 @@
-const express = require("express");
-const path = require("path");
-const bodyParser = require("body-parser");
-const nodemailer = require("nodemailer");
-const keys = require("./config/keys");
-const request = require("request");
+const express = require('express');
+const path = require('path');
+const bodyParser = require('body-parser');
+const nodemailer = require('nodemailer');
+const keys = require('./config/keys');
+const request = require('request');
 const app = express();
 // Send every request to the React app
 // Define any API routes before this runs
 app.use(bodyParser.json());
 
-app.post("/api/sendmail", (req, res) => {
+app.post('/api/sendmail', (req, res) => {
   const { firstname, lastname, email, company, message } = req.body;
   const transporter = nodemailer.createTransport({
-    host: "smtp.gmail.com",
+    host: 'smtp.gmail.com',
     secure: true,
-    service: "gmail",
+    service: 'gmail',
     auth: {
       user: keys.userGmail,
       pass: keys.passGmail
@@ -30,7 +30,7 @@ app.post("/api/sendmail", (req, res) => {
   */
   const mailOptions = {
     from: sender,
-    to: "andrew.patipak@gmail.com",
+    to: 'andrew.patipak@gmail.com',
     subject: `Contact Form- ${firstname}`,
     html: `
       <html>
@@ -81,10 +81,10 @@ app.post("/api/sendmail", (req, res) => {
     `
   };
   transporter.sendMail(mailOptions);
-  res.send("complete");
+  res.send('complete');
 });
 
-app.post("/api/questionnaire", async (req, res) => {
+app.post('/api/questionnaire', async (req, res) => {
   const {
     fullname,
     email,
@@ -108,9 +108,9 @@ app.post("/api/questionnaire", async (req, res) => {
     riskTolerance
   } = req.body;
   const transporter = await nodemailer.createTransport({
-    host: "smtp.gmail.com",
+    host: 'smtp.gmail.com',
     secure: true,
-    service: "gmail",
+    service: 'gmail',
     auth: {
       user: keys.userGmail,
       pass: keys.passGmail
@@ -128,7 +128,7 @@ q9 : risk {riskTolerance}
   };
   const mailOptions = {
     from: sender,
-    to: "andrew.patipak@gmail.com",
+    to: 'andrew.patipak@gmail.com',
     subject: `Investor Questionnaire - ${fullname}`,
     html: `
       <html>
@@ -273,18 +273,18 @@ this investment?
   console.log(payload);
   res.send(payload);
 });
+
+// app.get('*', function(req, res) {
+//   app.use(express.static('client/public'));
+//   res.sendFile(path.resolve(__dirname, 'client', 'public', 'index.html'));
+// });
 // Serve up static assets (usually on heroku)
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static(path.resolve(__dirname, "client", "build")));
-  app.get("*", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static(path.resolve(__dirname, 'client', 'build')));
+  app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
   });
 }
-app.use(express.static("client/public"));
-app.get("*", function(req, res) {
-  res.sendFile(path.resolve(__dirname, "client", "public", "index.html"));
-});
-
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, function() {
   console.log(`🌎 ==> Server now on port ${PORT}!`);
