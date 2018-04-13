@@ -30,6 +30,8 @@ class App extends Component {
             <Header />
 
             <Switch>
+              <Route exact path="/" component={LandingPage} />
+
               <Route path="/members/about/" component={AboutUs} />
               <Route exact path="/resources" component={Overview} />
               <Route
@@ -69,7 +71,6 @@ class App extends Component {
                 path="/info/investing/ira401k"
                 component={SupportCo}
               />
-              <Route exact path="/" component={LandingPage} />
               <Route component={PageNotFound} />
             </Switch>
 

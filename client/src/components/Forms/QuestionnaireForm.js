@@ -322,7 +322,7 @@ class QuestionnaireForm extends Component {
             How would you rate your risk tolerance?
           </label>
           <div className="form-row m-0 p-0">
-            <div className="d-flex justify-content-start">
+            <div className="d-flex justify-content-start flex-wrap">
               <Field
                 render={({ field, form, ...args }) => (
                   <Input
