@@ -74,9 +74,9 @@ class PicCarousel extends Component {
               while achieving double digit returns for our investors.
             </div>
             <div className="d-none d-lg-block mt-4 text-center">
-              <a href="info/questionnaire">
-                <Button color="primary">Make an impact</Button>
-              </a>
+              <NavLink className="btn btn-primary" to="info/questionnaire">
+                Make an Impact
+              </NavLink>
             </div>
           </div>
         </div>

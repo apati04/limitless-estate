@@ -178,7 +178,7 @@ class Navigation extends Component {
                   className="h6-responsive"
                   to="/info/questionnaire"
                 >
-                  Make an Impact
+                  Investor Questionnaire
                 </NavLink>
               </NavItem>
               <NavItem>

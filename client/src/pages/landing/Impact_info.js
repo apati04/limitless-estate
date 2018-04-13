@@ -29,7 +29,7 @@ export default () => {
               className="btn btn-primary"
               to="/resources/impactinvesting"
             >
-              Learn More
+              Impact Investing
             </NavLink>
           </div>
           <div className="w-75 mt-4 text-center text-justify-center text-md-center white-text">
@@ -46,7 +46,7 @@ export default () => {
               to="/info/investing/ira401k"
               size="md"
             >
-              Find Out More
+              Invest With your 401k/IRA
             </NavLink>
           </div>
         </Mask>
