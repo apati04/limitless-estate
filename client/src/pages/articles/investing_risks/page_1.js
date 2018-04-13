@@ -9,7 +9,7 @@ class RisksWithInvesting extends Component {
 
   render() {
     return (
-      <div className="rgba-blue-grey-slight">
+      <div style={{ height: '100%' }}>
         <div data-wow-delay="1s" className="animated fadeIn">
           <Article
             headerImage="https://i.imgur.com/zneMI2U.jpg"
@@ -27,43 +27,38 @@ class RisksWithInvesting extends Component {
                 at play when doing so.
               </p>,
               <p key="2">
-                <strong className="font-italic">Speculative Nature:</strong> Time
-                has shown that the real estate market goes down without warning,
-                sometimes resulting in significant losses. Some of the risks of
-                investing in real estate include changing laws, including
-                environmental laws; floods, fires, and other Acts of God, some
-                of which can be uninsurable; changes in national or local
-                economic conditions; changes in government policies, including
-                changes in interest rates established by the Federal Reserve;
-                and international crises. You should invest in real estate in
-                general, only if you can afford to lose your investment and are
-                willing to live with the ups and downs of the real estate
-                industry.
+                <strong>Speculative Nature:</strong> Time has shown that the
+                real estate market goes down without warning, sometimes
+                resulting in significant losses. Some of the risks of investing
+                in real estate include changing laws, including environmental
+                laws; floods, fires, and other Acts of God, some of which can be
+                uninsurable; changes in national or local economic conditions;
+                changes in government policies, including changes in interest
+                rates established by the Federal Reserve; and international
+                crises. You should invest in real estate in general, only if you
+                can afford to lose your investment and are willing to live with
+                the ups and downs of the real estate industry.
               </p>,
               <p key="3">
-                <strong className="font-italic">
-                  Illiquidity of Real Estate:
-                </strong>{' '}
-                Real estate is generally illiquid, meaning that it is not
-                typically capable of being readily sold for cash at fair market
-                value. Thus, the investment might not be able to sell properties
-                as quickly or on the terms that it would like. We might be
-                required to expend significant amounts of money to correct
-                defects or make improvements before a property can be sold.
-                Moreover, the overall economic conditions that might cause the
-                Fund to want to sell properties are generally the same as those
-                in which it would be most difficult to sell.
+                <strong>Illiquidity of Real Estate:</strong> Real estate is
+                generally illiquid, meaning that it is not typically capable of
+                being readily sold for cash at fair market value. Thus, the
+                investment might not be able to sell properties as quickly or on
+                the terms that it would like. We might be required to expend
+                significant amounts of money to correct defects or make
+                improvements before a property can be sold. Moreover, the
+                overall economic conditions that might cause the Fund to want to
+                sell properties are generally the same as those in which it
+                would be most difficult to sell.
               </p>,
               <p key="4">
-                <strong className="font-italic">
-                  No Guarantee of Distributions:{' '}
-                </strong>{' '}
-                The ability to make the distributions you expect, and ultimately
-                to give you your money back, depends on a number of factors,
-                including some beyond its control.
+                <strong>No Guarantee of Distributions: </strong> The ability to
+                make the distributions you expect, and ultimately to give you
+                your money back, depends on a number of factors, including some
+                beyond its control.
               </p>,
               <p key="5">
-                <strong className="font-italic">
+                <strong>
                   Inability to Participate in the Management of the investment:
                 </strong>{' '}
                 As an Investor, you will not have a right to vote or otherwise
@@ -73,25 +68,20 @@ class RisksWithInvesting extends Component {
                 the Manager only in very limited circumstances.
               </p>,
               <p key="6">
-                <strong className="font-italic">
-                  Property Values Could Decrease:
-                </strong>{' '}
-                Factors that could cause the value of our property to decline
-                include, but are not limited to: Changes in interest rates;
-                Competition from existing properties and new construction;
-                Changes in national or local economic conditions; Changes in
-                zoning; Environmental contamination or liabilities; Changes in
-                local market conditions; Fires, floods, and other casualties;
-                Uninsured losses; Undisclosed defects in property.
+                <strong>Property Values Could Decrease:</strong> Factors that
+                could cause the value of our property to decline include, but
+                are not limited to: Changes in interest rates; Competition from
+                existing properties and new construction; Changes in national or
+                local economic conditions; Changes in zoning; Environmental
+                contamination or liabilities; Changes in local market
+                conditions; Fires, floods, and other casualties; Uninsured
+                losses; Undisclosed defects in property.
               </p>,
               <div key="7">
                 <p>
-                  <strong className="font-italic">
-                    Ability to Attract and/or Retain Tenants:
-                  </strong>{' '}
-                  Our success depends on our ability to attract and retain
-                  tenants in our properties. The risks we face include the
-                  following:
+                  <strong>Ability to Attract and/or Retain Tenants:</strong> Our
+                  success depends on our ability to attract and retain tenants
+                  in our properties. The risks we face include the following:
                 </p>
                 <ul>
                   <li key="7a">
@@ -118,17 +108,14 @@ class RisksWithInvesting extends Component {
                 </ul>
               </div>,
               <p key="8">
-                <strong className="font-italic">Operating Expenses:</strong> The
-                costs of operating real estate – including taxes, insurance,
-                utilities, and maintenance – tend to move up over time. We have
-                limited control over some of our operating costs, and if our
-                costs increase it may reduce the amount available for
-                distribution to investors.
+                <strong>Operating Expenses:</strong> The costs of operating real
+                estate – including taxes, insurance, utilities, and maintenance
+                – tend to move up over time. We have limited control over some
+                of our operating costs, and if our costs increase it may reduce
+                the amount available for distribution to investors.
               </p>,
               <p key="9">
-                <strong className="font-italic">
-                  Reliance on Third Parties:{' '}
-                </strong>
+                <strong>Reliance on Third Parties: </strong>
                 If a third party on-site property management and construction
                 performs poorly or becomes unable to fulfill its obligations,
                 the business could be severely disrupted and our financial
@@ -146,7 +133,10 @@ class RisksWithInvesting extends Component {
                       className="ml-2"
                       to={`/resources/investingrisks/2`}
                     >
-                      <i className="material-icons">arrow_forward</i>
+                      <i
+                        style={{ fontSize: 1 + 'em' }}
+                        className="fas fa-arrow-right"
+                      />
                     </NavLink>
                   </div>
                 </div>

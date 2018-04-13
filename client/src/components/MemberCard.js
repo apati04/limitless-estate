@@ -13,12 +13,5 @@ const style = {
 };
 
 export default ({ name, title = '', photo, type, content, children }) => {
-  return (
-    <div
-      style={style.card}
-      className="d-flex justify-content-center align-items-center"
-    >
-      {children}
-    </div>
-  );
+  return <div style={style.card}>{children}</div>;
 };

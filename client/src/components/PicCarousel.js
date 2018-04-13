@@ -54,8 +54,8 @@ class PicCarousel extends Component {
 
   render() {
     const caption = (
-      <Mask className="d-flex flex-column justify-content-center align-items-center">
-        <div className="row w-75 align-items-center justify-content-center">
+      <Mask className="rgba-black-slight flex-center">
+        <div className="row w-75">
           <div className="col">
             <div className="h3-responsive mb-4 text-center white-text">
               Our vision at Limitless Estates is to provide A-class living to
@@ -93,7 +93,7 @@ class PicCarousel extends Component {
         >
           <CarouselInner className="carousel-fade">
             <CarouselItem itemId="2">
-              <View className="hm-black-light">
+              <View>
                 <img
                   className="w-100 d-block"
                   src="https://i.imgur.com/MEac1d0.jpg?1"
@@ -103,7 +103,7 @@ class PicCarousel extends Component {
               </View>
             </CarouselItem>
             <CarouselItem itemId="1">
-              <View className="hm-black-light">
+              <View>
                 <img
                   className="w-100 d-block"
                   src="https://i.imgur.com/BI90AZ5.jpg?2"
@@ -113,7 +113,7 @@ class PicCarousel extends Component {
               </View>
             </CarouselItem>
             <CarouselItem itemId="3">
-              <View className="hm-black-light">
+              <View className="rgba-black-light">
                 <img
                   className="w-100 d-block"
                   src="https://i.imgur.com/jZscfQg.jpg?2"
@@ -141,7 +141,7 @@ class PicCarousel extends Component {
           />
         </Carousel>
         <div className="d-block d-md-none">
-          <View className="hm-black-light">
+          <View className="rgba-black-light">
             <img
               className="w-100 img-fluid"
               src="https://i.imgur.com/BI90AZ5.jpg?1"

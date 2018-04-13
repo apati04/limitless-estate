@@ -12,9 +12,6 @@ const styles = {
   }
 };
 class AboutUs extends Component {
-  componentDidMount() {
-    console.log(this.props);
-  }
   renderProfile() {
     if (this.props.location.pathname === '/members/about/kyle') {
       return <Kyle />;

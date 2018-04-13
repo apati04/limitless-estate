@@ -8,7 +8,7 @@ export default class RisksTwoe extends Component {
     return data.map(({ title, body }, i) => {
       return (
         <p key={i}>
-          <strong className="font-italic">{title}</strong>
+          <strong>{title}</strong>
           {body}
         </p>
       );
@@ -16,7 +16,7 @@ export default class RisksTwoe extends Component {
   }
   render() {
     return (
-      <div className="animated fadeIn rgba-blue-grey-slight">
+      <div style={{ height: '100%' }} className="animated fadeIn">
         <Article
           headerImage="https://i.imgur.com/zneMI2U.jpg"
           pattern=""
@@ -24,9 +24,12 @@ export default class RisksTwoe extends Component {
           body={this.renderPage()}
           pageFooter={
             <div classname="container row">
-              <div className="col-auto d-flex flex-center">
+              <div className="col-12 d-flex flex-center">
                 <NavLink className="mr-2" to={`/resources/investingrisks/1`}>
-                  <i className="material-icons">arrow_back</i>
+                  <i
+                    style={{ fontSize: 1 + 'em' }}
+                    className="fas fa-arrow-left"
+                  />
                 </NavLink>{' '}
                 <p className="text-center">Page 2 of 2</p>
               </div>

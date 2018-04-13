@@ -25,62 +25,54 @@ class App extends Component {
   render() {
     return (
       <BrowserRouter>
-        <div>
+        <div style={{ paddingBottom: '60px' }}>
           <ScrollToTop>
             <Header />
-            <div style={{ paddingBottom: '60px' }}>
-              <Switch>
-                <Route path="/members/about/" component={AboutUs} />
-                <Route exact path="/resources" component={Overview} />
-                <Route
-                  exact
-                  path="/resources/investingrisks/1"
-                  component={Risks_PageOne}
-                />
-                <Route
-                  exact
-                  path="/resources/investingrisks/2"
-                  component={Risks_PageTwo}
-                />
-                <Route
-                  exact
-                  path="/resources/impactinvesting"
-                  component={ImpactInvesting}
-                />
-                <Route exact path="/resources/faq" component={Faq} />
-                <Route exact path="/legal" component={Legal} />
-                <Route
-                  exact
-                  path="/markets/columbus/summary"
-                  component={ColSum}
-                />
-                <Route
-                  exact
-                  path="/markets/detroit/summary"
-                  component={DetSum}
-                />
-                <Route exact path="/markets" component={Markets} />
-                <Route exact path="/markets/detroit/sdp" component={Ecorse} />
-                <Route
-                  exact
-                  path="/markets/Columbus/sdp"
-                  component={Columbus}
-                />
-                <Route exact path="/info/contact" component={Contact} />
-                <Route
-                  exact
-                  path="/info/questionnaire"
-                  component={Questionnaire}
-                />
-                <Route
-                  exact
-                  path="/info/investing/ira401k"
-                  component={SupportCo}
-                />
-                <Route exact path="/" component={LandingPage} />
-                <Route component={PageNotFound} />
-              </Switch>
-            </div>
+
+            <Switch>
+              <Route path="/members/about/" component={AboutUs} />
+              <Route exact path="/resources" component={Overview} />
+              <Route
+                exact
+                path="/resources/investingrisks/1"
+                component={Risks_PageOne}
+              />
+              <Route
+                exact
+                path="/resources/investingrisks/2"
+                component={Risks_PageTwo}
+              />
+              <Route
+                exact
+                path="/resources/impactinvesting"
+                component={ImpactInvesting}
+              />
+              <Route exact path="/resources/faq" component={Faq} />
+              <Route exact path="/legal" component={Legal} />
+              <Route
+                exact
+                path="/markets/columbus/summary"
+                component={ColSum}
+              />
+              <Route exact path="/markets/detroit/summary" component={DetSum} />
+              <Route exact path="/markets" component={Markets} />
+              <Route exact path="/markets/detroit/sdp" component={Ecorse} />
+              <Route exact path="/markets/Columbus/sdp" component={Columbus} />
+              <Route exact path="/info/contact" component={Contact} />
+              <Route
+                exact
+                path="/info/questionnaire"
+                component={Questionnaire}
+              />
+              <Route
+                exact
+                path="/info/investing/ira401k"
+                component={SupportCo}
+              />
+              <Route exact path="/" component={LandingPage} />
+              <Route component={PageNotFound} />
+            </Switch>
+
             <Footer />
           </ScrollToTop>
         </div>

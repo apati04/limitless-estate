@@ -54,147 +54,146 @@ class Navigation extends Component {
             />
           </Link>
           {!this.state.isWideEnough && <NavbarToggler onClick={this.onClick} />}
-          <div className="col-10">
-            <Collapse isOpen={this.state.collapse} navbar>
-              <NavbarNav className="list-group  flex-center mt-0">
-                <NavItem>
-                  <NavLink
-                    exact
-                    style={{ color: 'white' }}
-                    activeStyle={{ fontWeight: 400 }}
-                    className="h6-responsive"
-                    to="/"
-                  >
-                    Home
-                  </NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink
-                    exact
-                    style={{ color: 'white' }}
-                    activeStyle={{ fontWeight: 400 }}
-                    className="h6-responsive"
-                    to="/members/about/"
-                  >
-                    About Us
-                  </NavLink>
-                </NavItem>
-                <div className="nav-item dropdown">
-                  <a
-                    className="h6-responsive text-white nav-link dropdown-toggle"
-                    id="navbarDropdownMenuLink"
-                    aria-haspopup="true"
-                    aria-expanded="false"
-                  >
-                    Markets
-                  </a>
-                  <div
-                    aria-labelledby="navbarDropdownMenuLink"
-                    className="dropdown-menu"
-                  >
-                    <NavLink
-                      exact
-                      activeStyle={{ fontWeight: 400 }}
-                      className="px-3 h4-responsive dropdown-item"
-                      to="/markets/columbus/summary"
-                    >
-                      Columbus, OH
-                    </NavLink>
 
-                    <NavLink
-                      exact
-                      activeStyle={{ fontWeight: 400 }}
-                      className="px-3 h4-responsive dropdown-item"
-                      to="/markets/detroit/summary"
-                    >
-                      Detroit, MI
-                    </NavLink>
-                  </div>
+          <Collapse isOpen={this.state.collapse} navbar>
+            <NavbarNav className="list-group  flex-center mt-0">
+              <NavItem>
+                <NavLink
+                  exact
+                  style={{ color: 'white' }}
+                  activeStyle={{ fontWeight: 400 }}
+                  className="h6-responsive"
+                  to="/"
+                >
+                  Home
+                </NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink
+                  exact
+                  style={{ color: 'white' }}
+                  activeStyle={{ fontWeight: 400 }}
+                  className="h6-responsive"
+                  to="/members/about/"
+                >
+                  About Us
+                </NavLink>
+              </NavItem>
+              <div className="nav-item dropdown">
+                <a
+                  className="h6-responsive text-white nav-link dropdown-toggle"
+                  id="navbarDropdownMenuLink"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  Markets
+                </a>
+                <div
+                  aria-labelledby="navbarDropdownMenuLink"
+                  className="dropdown-menu"
+                >
+                  <NavLink
+                    exact
+                    activeStyle={{ fontWeight: 400 }}
+                    className="px-3 h4-responsive dropdown-item"
+                    to="/markets/columbus/summary"
+                  >
+                    Columbus, OH
+                  </NavLink>
+
+                  <NavLink
+                    exact
+                    activeStyle={{ fontWeight: 400 }}
+                    className="px-3 h4-responsive dropdown-item"
+                    to="/markets/detroit/summary"
+                  >
+                    Detroit, MI
+                  </NavLink>
                 </div>
-                <div className="nav-item dropdown">
-                  <a
-                    className="h6-responsive text-white nav-link dropdown-toggle"
-                    id="navRes"
-                    aria-haspopup="true"
-                    aria-expanded="false"
+              </div>
+              <div className="nav-item dropdown">
+                <a
+                  className="h6-responsive text-white nav-link dropdown-toggle"
+                  id="navRes"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  Resources
+                </a>
+                <div className="dropdown-menu" aria-labelledby="navRes">
+                  <NavLink
+                    exact
+                    activeStyle={{ fontWeight: 400 }}
+                    className="px-3 h4-responsive dropdown-item"
+                    to="/resources"
                   >
-                    Resources
-                  </a>
-                  <div className="dropdown-menu" aria-labelledby="navRes">
-                    <NavLink
-                      exact
-                      activeStyle={{ fontWeight: 400 }}
-                      className="px-3 h4-responsive dropdown-item"
-                      to="/resources"
-                    >
-                      Why Invest in Multifamily
-                    </NavLink>
+                    Why Invest in Multifamily
+                  </NavLink>
 
-                    <NavLink
-                      exact
-                      activeStyle={{
-                        fontWeight: 400
-                      }}
-                      className="px-3 h4-responsive dropdown-item"
-                      to="/resources/impactinvesting"
-                    >
-                      Impact Investing
-                    </NavLink>
+                  <NavLink
+                    exact
+                    activeStyle={{
+                      fontWeight: 400
+                    }}
+                    className="px-3 h4-responsive dropdown-item"
+                    to="/resources/impactinvesting"
+                  >
+                    Impact Investing
+                  </NavLink>
 
-                    <NavLink
-                      exact
-                      activeStyle={{ fontWeight: 400 }}
-                      className="px-3 h4-responsive dropdown-item"
-                      to="/info/investing/ira401k"
-                    >
-                      401K/IRA
-                    </NavLink>
+                  <NavLink
+                    exact
+                    activeStyle={{ fontWeight: 400 }}
+                    className="px-3 h4-responsive dropdown-item"
+                    to="/info/investing/ira401k"
+                  >
+                    401K/IRA
+                  </NavLink>
 
-                    <NavLink
-                      exact
-                      style={{ color: 'white' }}
-                      activeStyle={{ fontWeight: 400 }}
-                      className="px-3 h4-responsive dropdown-item"
-                      to="/resources/investingrisks/1"
-                    >
-                      Risks
-                    </NavLink>
+                  <NavLink
+                    exact
+                    style={{ color: 'white' }}
+                    activeStyle={{ fontWeight: 400 }}
+                    className="px-3 h4-responsive dropdown-item"
+                    to="/resources/investingrisks/1"
+                  >
+                    Risks
+                  </NavLink>
 
-                    <NavLink
-                      exact
-                      activeStyle={{ fontWeight: 400 }}
-                      className="px-3 h4-responsive dropdown-item"
-                      to="/resources/faq"
-                    >
-                      FAQ
-                    </NavLink>
-                  </div>
+                  <NavLink
+                    exact
+                    activeStyle={{ fontWeight: 400 }}
+                    className="px-3 h4-responsive dropdown-item"
+                    to="/resources/faq"
+                  >
+                    FAQ
+                  </NavLink>
                 </div>
-                <NavItem>
-                  <NavLink
-                    exact
-                    style={{ color: 'white' }}
-                    activeStyle={{ fontWeight: 400 }}
-                    className="h6-responsive"
-                    to="/info/questionnaire"
-                  >
-                    Make an Impact
-                  </NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink
-                    exact
-                    style={{ color: 'white' }}
-                    activeStyle={{ fontWeight: 400 }}
-                    className="h6-responsive"
-                    to="/info/contact"
-                  >
-                    Contact
-                  </NavLink>
-                </NavItem>
-              </NavbarNav>
-            </Collapse>
-          </div>
+              </div>
+              <NavItem>
+                <NavLink
+                  exact
+                  style={{ color: 'white' }}
+                  activeStyle={{ fontWeight: 400 }}
+                  className="h6-responsive"
+                  to="/info/questionnaire"
+                >
+                  Make an Impact
+                </NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink
+                  exact
+                  style={{ color: 'white' }}
+                  activeStyle={{ fontWeight: 400 }}
+                  className="h6-responsive"
+                  to="/info/contact"
+                >
+                  Contact
+                </NavLink>
+              </NavItem>
+            </NavbarNav>
+          </Collapse>
         </Container>
       </Navbar>
     );

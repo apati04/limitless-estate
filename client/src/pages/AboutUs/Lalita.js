@@ -4,7 +4,7 @@ export default props => {
     <div>
       <div className="container my-5">
         <div className="row justify-content-around">
-          <div className="col-12 col-md-8">
+          <div className="col-12 col-lg-9">
             <div className="no-flex testimonial-carousel">
               <div className="testimonial">
                 <div className="avatar mx-auto">

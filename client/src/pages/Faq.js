@@ -15,7 +15,7 @@ export default class Faq extends Component {
   }
   render() {
     return (
-      <div data-wow-delay="1s" className="rgba-blue-grey-slight">
+      <div style={{ height: '100%' }} data-wow-delay="1s">
         <Article
           headerImage="https://i.imgur.com/3aGoqpx.jpg"
           title="F.A.Q."

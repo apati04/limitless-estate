@@ -33,7 +33,7 @@ class MemberSection extends Component {
               </NavLink>
             </div>
           ) : (
-            <div className="col-12 d-flex flex-column flex-center mt-2">
+            <div className="col-12 mt-2">
               <img
                 style={{ border: '2px solid lightgrey' }}
                 className="mb-1 rounded-circle"
@@ -67,17 +67,17 @@ class MemberSection extends Component {
           <div className="container rgba-white-strong">
             <h1 className="h1-responsive pt-2 team-header ">Meet the Team</h1>
             <hr />
-            <div className="row d-flex justify-content-center align-items-center flex-wrap">
+            <div className="row justify-content-around align-items-center flex-wrap">
               {this.renderCards(Team)}
             </div>
           </div>
         </div>
         <div>
           <div className="h-100 p-2 mdb-color lighten-1">
-            <div className="mb-5 container text-white">
+            <div className="mb-5 text-white">
               <h1 className="pt-2 h1-responsive team-header">Our Advisors</h1>
               <hr />
-              <div className="d-flex flex-column flex-md-row justify-content-center align-items-center">
+              <div className="row flex-center">
                 {this.renderCards(Advisors)}
               </div>
             </div>
