@@ -25,8 +25,8 @@ class App extends Component {
   render() {
     return (
       <BrowserRouter>
-        <div style={{ paddingBottom: '60px' }}>
-          <ScrollToTop>
+        <ScrollToTop>
+          <div style={{ paddingBottom: '60px' }}>
             <Header />
 
             <Switch>
@@ -73,10 +73,9 @@ class App extends Component {
               />
               <Route component={PageNotFound} />
             </Switch>
-
             <Footer />
-          </ScrollToTop>
-        </div>
+          </div>
+        </ScrollToTop>
       </BrowserRouter>
     );
   }

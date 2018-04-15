@@ -67,7 +67,7 @@ const InfoSection = () => {
                 size="lg"
                 className="h5-responsive btn btn-block btn-outline-danger p-2 mt-4"
               >
-                Learn More
+                Learn More on Why to invest in multifamily
               </button>
             </Link>
           </div>
