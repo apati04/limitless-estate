@@ -5,7 +5,7 @@ export default props => {
       <div className="container my-5">
         <div className="row justify-content-around">
           <div className="col-12 col-lg-9">
-            <div className="no-flex testimonial-carousel text-center">
+            <div className="no-flex testimonial-carousel text-align-center ">
               <div className="testimonial">
                 <div className="avatar mx-auto">
                   <img
@@ -17,8 +17,8 @@ export default props => {
               </div>
               <h3 className="text-center h3-responsive">Lalita Patipaksiri</h3>
               <h5 className="mt-2 h5-responsive text-center">Vice President</h5>
-              <p className="mt-2 text-center">
-                Entrepreneur | Athlete | Operator
+              <p className="mx-auto mt-2 text-center">
+                Entrepreneur | Investor | Athlete | Operator
               </p>
             </div>
 
