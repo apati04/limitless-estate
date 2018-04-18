@@ -76,6 +76,7 @@ export default class Overview extends Component {
                     <strong>can be found</strong>
                     <a
                       target="_blank"
+                      rel="noopener"
                       href="https://www.biggerpockets.com/renewsblog/13-ways-increase-rent-add-rental-property/"
                     >
                       {' '}

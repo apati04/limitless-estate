@@ -30,6 +30,7 @@ class Columbus extends Component {
                   className="z-depth-3 embed-responsive embed-responsive-16by9"
                 >
                   <iframe
+                    title="columbuspdf"
                     className="embed-responsive-item"
                     src="/docs/SDP-Columbus.pdf#view=FitH"
                     width="100%"

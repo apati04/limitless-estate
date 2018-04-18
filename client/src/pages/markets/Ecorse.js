@@ -54,8 +54,9 @@ class Ecorse extends Component {
                   className="z-depth-3 embed-responsive embed-responsive-16by9"
                 >
                   <iframe
+                    target="detroitSDP"
                     className="embed-responsive-item"
-                    src="/docs/SDP-Detroit.pdf#view=FitH"
+                    src="./docs/SDP-Detroit.pdf#view=FitH"
                     width="100%"
                     height="100%"
                     allowFullScreen

@@ -7,7 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './style/dist/css/mdb.min.css';
 import './style/styles.css';
 import App from './components/App';
-import registerServiceWorker from './registerServiceWorker';
+import { unregister } from './registerServiceWorker';
 
 ReactDOM.render(<App />, document.querySelector('#root'));
-registerServiceWorker();
+unregister();
