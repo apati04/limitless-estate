@@ -47,31 +47,38 @@ class Ecorse extends Component {
         </CardImage>
         <CardBody className="animated fadeInRightBig pb-4">
           <div className="container">
-            <div className="row flex-center">
-              <div className="col-10">
+            <div className="row justify-content-around">
+              <div className="col-12 col-lg-10">
+                {/* building stats */}
                 <div
-                  style={{ height: 70 + 'em' }}
-                  className="z-depth-3 embed-responsive embed-responsive-16by9"
+                  style={{
+                    width: '1px',
+                    minWidth: '100%',
+                    minHeight: '100%'
+                  }}
                 >
-                  <iframe
-                    target="detroitSDP"
-                    className="embed-responsive-item"
-                    src="./docs/SDP-Detroit.pdf#view=FitH"
-                    width="100%"
-                    height="100%"
-                    allowFullScreen
-                  />
-                </div>
-                <hr className="w-100" />
-                <h5 className="mb-4">
-                  Sound like the right investment for you?
-                </h5>
-                <div className="d-flex justify-content-between align-items-center">
-                  <Link to="/info/contact">
-                    <button className="btn btn-primary">Contact Us</button>
-                  </Link>
+                  <div
+                    style={{ height: 52 + 'em' }}
+                    className="embed-responsive embed-responsive-16by9"
+                  >
+                    <iframe
+                      title="columbuspdf"
+                      className="embed-responsive-item"
+                      src="https://docs.google.com/viewer?srcid=1lUc9DltmD8o1LiDu-OVwrvsdvEk-lkcE&pid=explorer&efh=false&a=v&chrome=false&embedded=true"
+                      allowFullScreen
+                    />
+                  </div>
+                  <hr className="w-100" />
+                  <h5 className="mb-4">
+                    Sound like the right investment for you?
+                  </h5>
+                  <div className="d-flex justify-content-between align-items-center">
+                    <Link to="/info/contact">
+                      <button className="btn btn-primary">Contact Us</button>
+                    </Link>
 
-                  <Link to="/markets/detroit/summary">Back To Overview</Link>
+                    <Link to="/markets/detroit/summary">Back To Overview</Link>
+                  </div>
                 </div>
               </div>
             </div>
