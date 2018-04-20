@@ -218,9 +218,9 @@ class QuestionnaireForm extends Component {
             </label>
             <div className="md-form p-0 m-0">
               <small className="form-text text-muted">
-                (earned income that exceeded $200,000 (or $300,000 together with
-                a spouse) for the past 2 years and will do so in this current
-                year OR have a net worth of $1M excluding your primary
+                (earned income that exceeded $200,000 (or $300,000 if married
+                filing jointly) for the past 2 years and will do so in this
+                current year OR have a net worth of $1M excluding your primary
                 residence)
               </small>
             </div>
