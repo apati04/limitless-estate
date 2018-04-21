@@ -18,7 +18,7 @@ export default props => {
               <h3 className="text-center h3-responsive">Lalita Patipaksiri</h3>
               <h5 className="mt-2 h5-responsive text-center">Vice President</h5>
               <p className="mx-auto mt-2 text-center">
-                Entrepreneur | Investor | Athlete | Operator
+                Investor | Entrepreneur | Athlete | Operator
               </p>
             </div>
 
