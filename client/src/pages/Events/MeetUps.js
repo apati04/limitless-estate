@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import FormatDate from '../../components/FormatDate/FormatDate';
+import Moment from 'react-moment';
 import axios from 'axios';
 class MeetUps extends Component {
   state = { meetups: null };
@@ -28,15 +29,24 @@ class MeetUps extends Component {
     return <div>Loading...</div>;
   };
   render() {
-    let meetupName;
+    let meetupName = '';
+    let meetupTime = '';
     if (this.state.meetups) {
       meetupName = this.state.meetups[0].name;
+      meetupTime = (
+        <div>
+          <Moment format="h:mm a">{this.state.meetups[0].time}</Moment> to{' '}
+          <Moment add={{ hours: 2 }} format="h:mm a">
+            {this.state.meetups[0].time}
+          </Moment>
+        </div>
+      );
     }
     return (
       <div>
-        <h2>{meetupName || ''}</h2>
-
+        <h2>{meetupName}</h2>
         {this.renderMeetups()}
+        {meetupTime}
       </div>
     );
   }
