@@ -21,6 +21,8 @@ import Overview from '../pages/articles/Overview';
 import ImpactInvesting from '../pages/articles/impact_investing/page_1';
 import Risks_PageOne from '../pages/articles/investing_risks/page_1';
 import Risks_PageTwo from '../pages/articles/investing_risks/page_2';
+import MeetUps from '../pages/Events/MeetUps';
+
 class App extends Component {
   render() {
     return (
@@ -31,7 +33,7 @@ class App extends Component {
 
             <Switch>
               <Route exact path="/" component={LandingPage} />
-
+              <Route path="/events/meetups" component={MeetUps} />
               <Route path="/members/about/" component={AboutUs} />
               <Route exact path="/resources" component={Overview} />
               <Route

@@ -4,11 +4,20 @@ const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
 const keys = require('./config/keys');
 const request = require('request');
+const axios = require('axios');
 const app = express();
 // Send every request to the React app
 // Define any API routes before this runs
 app.use(bodyParser.json());
 
+app.get('/api/events/meetups', async (req, res) => {
+  const apiKey = keys.meetupApiKey;
+  const url = `https://api.meetup.com/self/events?sign=true&key=${apiKey}&status=upcoming&page=5&photo-host=public&omit=group`;
+  const response = await axios.get(url);
+  if (response.data[0]) {
+    res.status(200).send(response.data);
+  }
+});
 app.post('/api/sendmail', (req, res) => {
   const { firstname, lastname, email, company, message } = req.body;
   const transporter = nodemailer.createTransport({

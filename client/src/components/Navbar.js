@@ -132,9 +132,7 @@ class Navigation extends Component {
 
                   <NavLink
                     exact
-                    activeStyle={{
-                      fontWeight: 400
-                    }}
+                    activeStyle={{ fontWeight: 400 }}
                     className="px-3 h4-responsive dropdown-item"
                     to="/resources/impactinvesting"
                   >
@@ -190,6 +188,17 @@ class Navigation extends Component {
                   to="/info/contact"
                 >
                   Contact
+                </NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink
+                  exact
+                  style={{ color: 'white' }}
+                  activeStyle={{ fontWeight: 400 }}
+                  className="h6-responsive"
+                  to="/events/meetups"
+                >
+                  Events
                 </NavLink>
               </NavItem>
             </NavbarNav>

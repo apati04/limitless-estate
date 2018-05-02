@@ -11,6 +11,9 @@
     },
     "/api/questionnaire": {
       "target": "http://localhost:3001"
+    },
+    "/api/events/*": {
+      "target": "http://localhost:3001"
     }
   },
   "dependencies": {
@@ -23,11 +26,13 @@
     "lodash.range": "^3.2.0",
     "mapbox-gl": "^0.44.1",
     "mdbreact": "git+https://github.com/mdbootstrap/React-Bootstrap-with-Material-Design.git",
+    "moment": "^2.22.1",
     "popper.js": "^1.14.1",
     "react": "^16.3.1",
     "react-dom": "^16.3.1",
     "react-error-overlay": "^4.0.0",
     "react-lazyload-fadein": "^1.0.1",
+    "react-moment": "^0.7.0",
     "react-redux": "^5.0.7",
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.1.4",
