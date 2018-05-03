@@ -21,7 +21,7 @@ import Overview from '../pages/articles/Overview';
 import ImpactInvesting from '../pages/articles/impact_investing/page_1';
 import Risks_PageOne from '../pages/articles/investing_risks/page_1';
 import Risks_PageTwo from '../pages/articles/investing_risks/page_2';
-import MeetUps from '../pages/Events/MeetUps';
+import MeetUps from '../pages/MeetUps/MeetUps';
 
 class App extends Component {
   render() {

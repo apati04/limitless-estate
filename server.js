@@ -12,10 +12,17 @@ app.use(bodyParser.json());
 
 app.get('/api/events/meetups', async (req, res) => {
   const apiKey = keys.meetupApiKey;
-  const url = `https://api.meetup.com/self/events?sign=true&key=${apiKey}&status=upcoming&page=5&photo-host=public&omit=group`;
+  const url = `https://api.meetup.com/Out-of-State-Multifamily-Apartment-Investors-Meetup/events?sign=true&key=${apiKey}&status=upcoming&page=20&photo-host=public`;
   const response = await axios.get(url);
+
   if (response.data[0]) {
-    res.status(200).send(response.data);
+    const filterData = response.data.filter(({ name, fee }) => {
+      return (
+        name ===
+        'Out of State Apartment Investing Mastermind - Long Beach Chapter'
+      );
+    });
+    res.status(200).send(filterData);
   }
 });
 app.post('/api/sendmail', (req, res) => {

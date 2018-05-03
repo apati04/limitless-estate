@@ -66,7 +66,15 @@ class Detroit extends Component {
               className="pr-0 col-md-4 d-none d-md-block"
             >
               {/* Financial Data */}
-              <MapBox address="Detroit, MI" />
+              <MapBox
+                roundedCi
+                mapStyle={{
+                  height: 22 + 'em',
+                  width: 22 + 'em',
+                  marginTop: -5 + 'em'
+                }}
+                address="Detroit, MI"
+              />
             </div>
           </div>
         </div>

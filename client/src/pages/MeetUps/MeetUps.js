@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Events from '../../components/Events/Events';
+import EventMap from '../../components/Events/EventMap';
 import FormatDate from '../../components/FormatDate/FormatDate';
 import Moment from 'react-moment';
 import axios from 'axios';
@@ -6,47 +8,49 @@ class MeetUps extends Component {
   state = { meetups: null };
   componentDidMount() {
     axios.get('/api/events/meetups').then(({ data }) => {
-      const filterData = data
-        .filter(({ name, fee }) => {
-          return (
-            name ===
-            'Out of State Apartment Investing Mastermind - Long Beach Chapter'
-          );
-        })
-        .slice(0, 3);
-      this.setState({ meetups: filterData });
+      this.setState({ meetups: data });
     });
   }
-  renderMeetups = () => {
-    const { meetups, max } = this.state;
-    if (Array.isArray(meetups)) {
-      return meetups.map((el, index) => (
-        <div key={index}>
-          <FormatDate meetupTimeStamp={el.time} />
-        </div>
-      ));
-    }
-    return <div>Loading...</div>;
-  };
+
   render() {
-    let meetupName = '';
-    let meetupTime = '';
+    let meetupName, meetupTime, meetupMap, meetupDescription, atVenueLocation;
+
     if (this.state.meetups) {
-      meetupName = this.state.meetups[0].name;
+      const {
+        time,
+        description,
+        venue,
+        name,
+        how_to_find_us
+      } = this.state.meetups[0];
+      atVenueLocation = how_to_find_us;
+      meetupDescription = description;
+      meetupMap = <EventMap meetupLocation={venue} />;
+      meetupName = name;
       meetupTime = (
         <div>
-          <Moment format="h:mm a">{this.state.meetups[0].time}</Moment> to{' '}
+          <Moment format="h:mm a">{time}</Moment> to{' '}
           <Moment add={{ hours: 2 }} format="h:mm a">
-            {this.state.meetups[0].time}
+            {time}
           </Moment>
+          <h6>Every 2nd Tuesday of the Month</h6>
         </div>
       );
     }
     return (
-      <div>
-        <h2>{meetupName}</h2>
-        {this.renderMeetups()}
-        {meetupTime}
+      <div className="container">
+        <div className="row">
+          <div className="col-8">
+            <Events
+              title={meetupName}
+              description={meetupDescription}
+              time={meetupTime}
+              howToFindUs={atVenueLocation}
+              meetupArray={this.state.meetups}
+            />
+          </div>
+          <div className="col-4">{meetupMap}</div>
+        </div>
       </div>
     );
   }
