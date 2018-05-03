@@ -13,12 +13,15 @@ const EventListItem = props => {
           <FormatDate meetupTimeStamp={props.time} />
         </h5>
       </div>
-
-      <div>Spots Left: {props.rsvpLimit - props.yesRsvp}</div>
-      <div>Going: {props.yesRsvp}</div>
+      <div>Attending: {props.yesRsvp}</div>
       <div>
-        <a rel="noopener noreferrer" target="_blank" href={props.link}>
-          Sign up
+        <a
+          className="btn btn-sm btn-primary"
+          rel="noopener noreferrer"
+          target="_blank"
+          href={props.link}
+        >
+          Join
         </a>
       </div>
     </ListGroupItem>

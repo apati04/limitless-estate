@@ -49,7 +49,17 @@ class MeetUps extends Component {
               meetupArray={this.state.meetups}
             />
           </div>
-          <div className="col-4">{meetupMap}</div>
+          <div className="col-4">
+            {meetupMap}
+            <div style={{ border: '1px dotted green', margin: '10px' }}>
+              Time:
+              <h5>{meetupTime}</h5>
+            </div>
+            <div style={{ border: '1px dotted green', margin: '10px' }}>
+              How To Find Us:
+              <p>{atVenueLocation}</p>
+            </div>
+          </div>
         </div>
       </div>
     );
