@@ -1,5 +1,4 @@
 import React from 'react';
-import { ListGroup } from 'mdbreact';
 import EventListItem from './eventListItem';
 //
 const EventList = ({ eventDetails, meetupTime }) => {
@@ -16,11 +15,7 @@ const EventList = ({ eventDetails, meetupTime }) => {
       />
     )
   );
-  return (
-    <ListGroup>
-      <div className="row justify-content-around">{eventDetailList}</div>
-    </ListGroup>
-  );
+  return <div className="row no-gutters m-5">{eventDetailList}</div>;
 };
 
 export default EventList;

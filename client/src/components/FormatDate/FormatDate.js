@@ -5,7 +5,7 @@ export default ({ meetupTimeStamp }) => {
   const meetupDate = new Date(meetupTimeStamp);
   return (
     <Fragment>
-      <Moment format="MMMM Do">{meetupDate}</Moment>
+      <Moment format="MMM Do">{meetupDate}</Moment>
     </Fragment>
   );
 };
