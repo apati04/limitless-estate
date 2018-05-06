@@ -28,19 +28,19 @@ class MeetUps extends Component {
       meetupMap = <EventMap meetupLocation={venue} />;
       meetupName = name;
       meetupTime = (
-        <div>
-          <Moment format="h:mm a">{time}</Moment> to{' '}
-          <Moment add={{ hours: 2 }} format="h:mm a">
+        <div className="align-items-center">
+          <i className="mr-1 far fa-clock" />
+          <Moment format="h:mma">{time}</Moment> -{' '}
+          <Moment add={{ hours: 2 }} format="h:mma">
             {time}
           </Moment>
-          <h6>Every 2nd Tuesday of the Month</h6>
         </div>
       );
     }
     return (
       <div className="container">
         <div className="row">
-          <div className="col-8">
+          <div className="col-md-8">
             <Events
               title={meetupName}
               description={meetupDescription}
@@ -49,13 +49,14 @@ class MeetUps extends Component {
               meetupArray={this.state.meetups}
             />
           </div>
-          <div className="col-4">
+          <div className="col-md-4">
             {meetupMap}
-            <div style={{ border: '1px dotted green', margin: '10px' }}>
+            <div>
               Time:
               <h5>{meetupTime}</h5>
+              <h6>Every 2nd Tuesday of the Month</h6>
             </div>
-            <div style={{ border: '1px dotted green', margin: '10px' }}>
+            <div>
               How To Find Us:
               <p>{atVenueLocation}</p>
             </div>

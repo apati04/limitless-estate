@@ -8,15 +8,13 @@ class Events extends Component {
     const { title, time, description, meetupArray, howToFindUs } = this.props;
     let eventList;
     if (Array.isArray(meetupArray)) {
-      eventList = <EventList eventDetails={meetupArray} />;
+      eventList = <EventList meetupTime={time} eventDetails={meetupArray} />;
     }
 
     return (
       <div>
-        <h5>{title}</h5>
-        <div style={{ border: '1px dotted green', margin: '10px' }}>
-          Upcoming Events: {eventList}
-        </div>
+        <h3 className="text-center h3-responsive">{title}</h3>
+        <div>{eventList}</div>
       </div>
     );
   }

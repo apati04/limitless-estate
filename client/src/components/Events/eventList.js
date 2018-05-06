@@ -2,7 +2,7 @@ import React from 'react';
 import { ListGroup } from 'mdbreact';
 import EventListItem from './eventListItem';
 //
-const EventList = ({ eventDetails }) => {
+const EventList = ({ eventDetails, meetupTime }) => {
   console.log(eventDetails);
   let eventDetailList = eventDetails.map(
     ({ rsvp_limit, yes_rsvp_count, id, time, link }) => (
@@ -12,11 +12,14 @@ const EventList = ({ eventDetails }) => {
         key={id}
         link={link}
         time={time}
+        meetupTime={meetupTime}
       />
     )
   );
   return (
-    <ListGroup style={{ border: '2px solid red' }}>{eventDetailList}</ListGroup>
+    <ListGroup>
+      <div className="row justify-content-around">{eventDetailList}</div>
+    </ListGroup>
   );
 };
 
