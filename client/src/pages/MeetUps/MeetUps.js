@@ -64,38 +64,29 @@ class MeetUps extends Component {
       <section
         style={{
           backgroundColor: 'rgb(246, 247, 248)',
-          paddingBottom: '60px'
+          paddingTop: '40px',
+          paddingBottom: '100px'
         }}
       >
-        <div className="jumbotron">
-          <div className="container">
-            {meetupName}
-            <p style={styles.listItem} className="lead">
-              Hosted by{' '}
-              <a
-                href="https://www.meetup.com/Out-of-State-Multifamily-Apartment-Investors-Meetup/events/gblcppyxhblb/attendees/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Kyle Mitchell and Lalita Patipaksiri
-              </a>
-            </p>
-            <p>
-              From{' '}
-              <a
-                href="https://www.meetup.com/Out-of-State-Multifamily-Apartment-Investors-Meetup/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Out-Of-State Multifamily Apartment Investors Meetup
-              </a>
-            </p>
-          </div>
-        </div>
         <div className="container">
+          <div className="jumbotron z-depth-1-half">
+            <div className="container-fluid">
+              {meetupName}
+              <p style={styles.listItem} className="text-muted">
+                Hosted by{' '}
+                <a
+                  href="https://www.meetup.com/Out-of-State-Multifamily-Apartment-Investors-Meetup/events/gblcppyxhblb/attendees/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Kyle Mitchell and Lalita Patipaksiri
+                </a>
+              </p>
+            </div>
+          </div>
           <div className="row justify-content-between">
             <div className="col-12 col-lg-8">
-              <h3 className="h3-responsive text-center text-md-left my-4 pb-4 border-bottom">
+              <h3 className="h3-responsive text-center text-md-left mb-4 pb-2 border-bottom">
                 Upcoming Meetups
               </h3>
               <div />
@@ -107,11 +98,12 @@ class MeetUps extends Component {
               />
             </div>
             <div className="col-12 col-lg-4">
-              <h3 className="h3-responsive text-center text-md-left my-4 pb-4 border-bottom invisible">
+              <h3 className="h3-responsive text-center text-md-left mb-2 pb-2 border-bottom invisible">
                 Details
               </h3>
               <div className="pt-2 ml-2 my-4">
                 <div className="p-0 m-0">{meetupMap}</div>
+
                 <ListGroup className="z-depth-1 rounded m-0 p-0">
                   <ListGroupItem>
                     <div className="d-flex w-100 align-items-baseline justify-content-start">
@@ -150,8 +142,7 @@ class MeetUps extends Component {
                         className="far fa-compass"
                       />
                       <div className="ml-3">
-                        <p style={styles.listItem}>How To Find Us</p>
-                        <p style={styles.listItem} className="text-muted">
+                        <p style={styles.listItem} className="">
                           {atVenueLocation}
                         </p>
                       </div>

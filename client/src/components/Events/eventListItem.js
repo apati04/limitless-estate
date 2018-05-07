@@ -4,22 +4,25 @@ import CalendarDay from '../../components/Events/calendarDay';
 const EventListItem = props => {
   return (
     <div className="col-lg-6 pl-0">
-      <div className="card my-2 bg-blue text-center">
+      <div style={{ opacity: '1' }} className="card my-1 rgba-stylish-slight">
         <div className="card-body">
           <div className="row align-items-stretch justify-content-start">
             <div className="col">
-              <CalendarDay dateTime={props.time} />
+              <div>
+                <CalendarDay dateTime={props.time} />
+              </div>
             </div>
             <div className="col text-right">
               <h4 className="h4-responsive mb-1">
-                <FormatDate meetupTimeStamp={props.time} />
+                <div className="">
+                  <FormatDate meetupTimeStamp={props.time} />
+                </div>
               </h4>
               <div>
-                <small className="text-muted">
-                  <span>
-                    <i className="far fa-user mr-1" />
-                  </span>Attending: {props.yesRsvp}
-                </small>
+                <p style={{ margin: 0, padding: 0 }}>
+                  {/* <i className="far fa-user mr-1" /> */} Attending:{' '}
+                  {props.yesRsvp}
+                </p>
               </div>
               <a
                 role="button"
