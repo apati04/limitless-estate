@@ -14,11 +14,6 @@ class EventMap extends Component {
     console.log(this.props.meetupLocation);
     return (
       <div>
-        <h4>{name}</h4>
-        <h5>{address_1}</h5>
-        <h5>
-          {city}, {state}
-        </h5>
         <div>
           <div>
             <MapBox

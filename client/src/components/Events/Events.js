@@ -11,12 +11,7 @@ class Events extends Component {
       eventList = <EventList meetupTime={time} eventDetails={meetupArray} />;
     }
 
-    return (
-      <div>
-        <h3 className="text-center h3-responsive">{title}</h3>
-        <div>{eventList}</div>
-      </div>
-    );
+    return <div>{eventList}</div>;
   }
 }
 

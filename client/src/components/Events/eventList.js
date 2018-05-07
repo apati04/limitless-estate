@@ -2,7 +2,6 @@ import React from 'react';
 import EventListItem from './eventListItem';
 //
 const EventList = ({ eventDetails, meetupTime }) => {
-  console.log(eventDetails);
   let eventDetailList = eventDetails.map(
     ({ rsvp_limit, yes_rsvp_count, id, time, link }) => (
       <EventListItem
@@ -15,7 +14,7 @@ const EventList = ({ eventDetails, meetupTime }) => {
       />
     )
   );
-  return <div className="row no-gutters m-5">{eventDetailList}</div>;
+  return <div className="row w-100">{eventDetailList}</div>;
 };
 
 export default EventList;

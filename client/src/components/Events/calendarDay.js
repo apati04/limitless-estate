@@ -3,17 +3,25 @@ import { CalendarIcon } from 'react-calendar-icon';
 import { ThemeProvider } from 'styled-components';
 
 const theme = {
-  calendarIcon: {}
+  calendarIcon: {
+    display: 'flex !important',
+    alignItems: 'center !important',
+    justifyContent: 'space-around !important'
+  }
 };
 
 {
-  /* <ThemeProvider theme={theme}>
-</ThemeProvider> */
+  /*  */
 }
 class CalendarDay extends Component {
   render() {
     const { dateTime } = this.props;
-    return <CalendarIcon date={new Date(dateTime)} />;
+
+    return (
+      <ThemeProvider theme={theme}>
+        <CalendarIcon date={new Date(dateTime)} />
+      </ThemeProvider>
+    );
   }
 }
 
