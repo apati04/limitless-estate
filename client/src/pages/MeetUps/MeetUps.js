@@ -3,6 +3,7 @@ import Events from '../../components/Events/Events';
 import EventMap from '../../components/Events/EventMap';
 import FormatDate from '../../components/FormatDate/FormatDate';
 import { ListGroup, ListGroupItem } from 'mdbreact';
+import MeetupDescription from './meetupDescription';
 import Moment from 'react-moment';
 import axios from 'axios';
 class MeetUps extends Component {
@@ -69,11 +70,11 @@ class MeetUps extends Component {
         }}
       >
         <div className="container">
-          <div className="jumbotron z-depth-1-half">
-            <div className="container-fluid">
+          <div style={{ borderRadius: '4px' }} className="jumbotron z-depth-1">
+            <div className="container-fluid ">
               {meetupName}
-              <p style={styles.listItem} className="text-muted">
-                Hosted by{' '}
+              <p>
+                Hosted By:{' '}
                 <a
                   href="https://www.meetup.com/Out-of-State-Multifamily-Apartment-Investors-Meetup/events/gblcppyxhblb/attendees/"
                   target="_blank"
@@ -82,6 +83,9 @@ class MeetUps extends Component {
                   Kyle Mitchell and Lalita Patipaksiri
                 </a>
               </p>
+              <div className="text-justify">
+                <MeetupDescription />
+              </div>
             </div>
           </div>
           <div className="row justify-content-between">
