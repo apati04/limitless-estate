@@ -14,13 +14,22 @@ class MeetUps extends Component {
   }
 
   render() {
+    const styles = {
+      markerStyle: {
+        fontSize: 1.22 + 'em',
+        color: 'rgba(46,62,72,.9)'
+      },
+      listItem: {
+        margin: 0,
+        padding: 0
+      }
+    };
     let meetupName,
       meetupTime,
       meetupMap,
       meetupDescription,
       atVenueLocation,
       meetupVenue = '';
-    console.log(meetupVenue);
     if (this.state.meetups) {
       const {
         time,
@@ -34,14 +43,17 @@ class MeetUps extends Component {
       meetupDescription = description;
       meetupMap = <EventMap meetupLocation={venue} />;
       meetupName = name.split('-').map((el, index) => (
-        <h1 key={index + 'namestr'} className="h1-responsive">
+        <h1
+          style={{ opacity: '0.9' }}
+          key={index + 'namestr'}
+          className="h1-responsive"
+        >
           {el}
         </h1>
       ));
       meetupTime = (
         <div className="align-items-center">
-          <i className="mr-1 far fa-clock" />
-          <Moment format="h:mma">{time}</Moment> -{' '}
+          <Moment format="h:mma">{time}</Moment> to{' '}
           <Moment add={{ hours: 2 }} format="h:mma">
             {time}
           </Moment>
@@ -49,26 +61,44 @@ class MeetUps extends Component {
       );
     }
     return (
-      <section>
+      <section
+        style={{
+          backgroundColor: 'rgb(246, 247, 248)',
+          paddingBottom: '60px'
+        }}
+      >
         <div className="jumbotron">
           <div className="container">
             {meetupName}
-            <p>
-              This is a template for a simple marketing or informational
-              website. It includes a large callout called a jumbotron and three
-              supporting pieces of content. Use it as a starting point to create
-              something more unique.
+            <p style={styles.listItem} className="lead">
+              Hosted by{' '}
+              <a
+                href="https://www.meetup.com/Out-of-State-Multifamily-Apartment-Investors-Meetup/events/gblcppyxhblb/attendees/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Kyle Mitchell and Lalita Patipaksiri
+              </a>
             </p>
             <p>
-              <a className="btn btn-primary btn-lg" href="#" role="button">
-                Learn more &raquo;
+              From{' '}
+              <a
+                href="https://www.meetup.com/Out-of-State-Multifamily-Apartment-Investors-Meetup/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Out-Of-State Multifamily Apartment Investors Meetup
               </a>
             </p>
           </div>
         </div>
         <div className="container">
-          <div className="row justify-content-between no-gutters">
-            <div className="col col-md-8">
+          <div className="row justify-content-between">
+            <div className="col-12 col-lg-8">
+              <h3 className="h3-responsive text-center text-md-left my-4 pb-4 border-bottom">
+                Upcoming Meetups
+              </h3>
+              <div />
               <Events
                 description={meetupDescription}
                 time={meetupTime}
@@ -76,32 +106,59 @@ class MeetUps extends Component {
                 meetupArray={this.state.meetups}
               />
             </div>
-            <div className="col col-md-4 px-2 w-100">
-              <ListGroup>
-                <ListGroupItem>
-                  <div>
-                    Time:
-                    <h5>{meetupTime}</h5>
-                    <h6>Every 2nd Tuesday of the Month</h6>
-                  </div>
-                </ListGroupItem>
-                <ListGroupItem>
-                  <div>
-                    <h4>{meetupVenue.name}</h4>
-                    <h5>{meetupVenue.address_1}</h5>
-                    <h5>
-                      {meetupVenue.city}, {meetupVenue.state}
-                    </h5>
-                  </div>
-                </ListGroupItem>
-                <ListGroupItem>
-                  <div>
-                    How To Find Us:
-                    <p>{atVenueLocation}</p>
-                  </div>
-                </ListGroupItem>
-                <ListGroupItem>{meetupMap}</ListGroupItem>
-              </ListGroup>
+            <div className="col-12 col-lg-4">
+              <h3 className="h3-responsive text-center text-md-left my-4 pb-4 border-bottom invisible">
+                Details
+              </h3>
+              <div className="pt-2 ml-2 my-4">
+                <div className="p-0 m-0">{meetupMap}</div>
+                <ListGroup className="z-depth-1 rounded m-0 p-0">
+                  <ListGroupItem>
+                    <div className="d-flex w-100 align-items-baseline justify-content-start">
+                      <i
+                        style={styles.markerStyle}
+                        className="mr-1 far fa-clock"
+                      />
+                      <div className="ml-3">
+                        <p>
+                          {meetupTime}{' '}
+                          <span className="text-muted ">
+                            Every 2nd Tuesday of the month
+                          </span>
+                        </p>
+                      </div>
+                    </div>
+                  </ListGroupItem>
+                  <ListGroupItem>
+                    <div className="d-flex w-100 align-items-baseline justify-content-start">
+                      <i style={styles.markerStyle} className="far fa-map" />
+                      <div className="ml-3">
+                        <p style={styles.listItem}>{meetupVenue.name}</p>
+                        <p style={styles.listItem} className="text-muted">
+                          {meetupVenue.address_1}
+                        </p>
+                        <p style={styles.listItem} className="text-muted">
+                          {meetupVenue.city}, {meetupVenue.state} 90804
+                        </p>
+                      </div>
+                    </div>
+                  </ListGroupItem>
+                  <ListGroupItem>
+                    <div className="d-flex w-100 align-items-baseline justify-content-start">
+                      <i
+                        style={styles.markerStyle}
+                        className="far fa-compass"
+                      />
+                      <div className="ml-3">
+                        <p style={styles.listItem}>How To Find Us</p>
+                        <p style={styles.listItem} className="text-muted">
+                          {atVenueLocation}
+                        </p>
+                      </div>
+                    </div>
+                  </ListGroupItem>
+                </ListGroup>
+              </div>
             </div>
           </div>
         </div>

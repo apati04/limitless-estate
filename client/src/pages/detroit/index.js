@@ -74,6 +74,7 @@ class Detroit extends Component {
                   marginTop: -5 + 'em'
                 }}
                 address="Detroit, MI"
+                zoomLevel={10}
               />
             </div>
           </div>

@@ -14,7 +14,7 @@ const EventList = ({ eventDetails, meetupTime }) => {
       />
     )
   );
-  return <div className="row w-100">{eventDetailList}</div>;
+  return <div className="row w-100 m-0 p-0">{eventDetailList}</div>;
 };
 
 export default EventList;

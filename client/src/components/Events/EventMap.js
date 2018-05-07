@@ -13,18 +13,17 @@ class EventMap extends Component {
     } = this.props.meetupLocation;
     console.log(this.props.meetupLocation);
     return (
-      <div>
-        <div>
-          <div>
-            <MapBox
-              mapStyle={{ height: 22 + 'em', width: 22 + 'em' }}
-              lat={lat}
-              lng={lon}
-              mapMarker
-            />
-          </div>
-        </div>
-      </div>
+      <MapBox
+        mapStyle={{
+          height: 22 + 'em',
+          width: '100%',
+          maxHeight: '100%'
+        }}
+        lat={lat}
+        lng={lon}
+        mapMarker
+        zoomLevel={13}
+      />
     );
   }
 }

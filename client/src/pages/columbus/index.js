@@ -74,6 +74,7 @@ class Columbus extends Component {
                   marginTop: -5 + 'em'
                 }}
                 address="Columbus, OH"
+                zoomLevel={10}
               />
             </div>
           </div>

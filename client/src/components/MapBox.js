@@ -33,7 +33,7 @@ class MapBox extends Component {
       container: 'mapbox',
       style: 'mapbox://styles/mapbox/streets-v10',
       center: [lng, lat],
-      zoom: 10
+      zoom: this.props.zoomLevel
     });
     if (this.props.mapMarker) {
       new mapboxgl.Marker().setLngLat([lng, lat]).addTo(map);
@@ -47,7 +47,7 @@ class MapBox extends Component {
     }
     return (
       <div
-        className={`mb-3 mr-0 pr-0 z-depth-2 ${roundedCircle}`}
+        className={`mb-3 mr-0 pr-0 z-depth-1 ${roundedCircle}`}
         id="mapbox"
         style={this.props.mapStyle}
       />

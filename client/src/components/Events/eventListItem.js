@@ -3,8 +3,8 @@ import FormatDate from '../FormatDate/FormatDate';
 import CalendarDay from '../../components/Events/calendarDay';
 const EventListItem = props => {
   return (
-    <div className="col-md-6 p-1">
-      <div className="card bg-blue text-center">
+    <div className="col-lg-6 pl-0">
+      <div className="card my-2 bg-blue text-center">
         <div className="card-body">
           <div className="row align-items-stretch justify-content-start">
             <div className="col">
