@@ -109,6 +109,14 @@ class Navigation extends Component {
                   >
                     Detroit, MI
                   </NavLink>
+                  <NavLink
+                    exact
+                    activeStyle={{ fontWeight: 400 }}
+                    className="px-3 h4-responsive dropdown-item"
+                    to="/markets/phoenix/summary"
+                  >
+                    Phoenix, AZ
+                  </NavLink>
                 </div>
               </div>
               <div className="nav-item dropdown">

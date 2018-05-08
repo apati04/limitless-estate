@@ -15,8 +15,6 @@ const styles = {
 class Columbus extends Component {
   render() {
     const pdfCol = '/docs/SDP-Columbus.pdf';
-
-    //https://drive.google.com/file/d/1zPPDZuutwMX2kvGR5z5TqWeHsBHruYQN/view?embedded=true&usp=sharing
     return (
       <Card className="z-depth-0">
         <CardImage tag="div">
@@ -50,7 +48,10 @@ class Columbus extends Component {
                   <h5 className="mb-4">
                     Sound like the right investment for you?
                   </h5>
-                  <div className="d-flex justify-content-between align-items-center">
+                  <div
+                    style={{ display: 'flex' }}
+                    className="d-flex justify-content-between align-items-center"
+                  >
                     <div>
                       <Link className="btn btn-primary" to="/info/contact">
                         Contact Us
