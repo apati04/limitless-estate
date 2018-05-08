@@ -25,9 +25,12 @@ const styles = {
 };
 class Phoenix extends Component {
   render() {
+    const pdfId = '1h49lgYWehZqI1KPG28i8k1tESsCZkeLd';
     return (
       <Card className="z-depth-0">
-        <CardImage tag="div" />
+        <CardImage tag="div">
+          <div style={styles.header} />
+        </CardImage>
         <CardBody className="animated fadeInRightBig pb-4">
           <div className="container">
             <div className="row justify-content-around">
@@ -35,7 +38,17 @@ class Phoenix extends Component {
                 <div
                   style={{ width: '1px', minWidth: '100%', minHeight: '100%' }}
                 >
-                  <div>...</div>
+                  <div
+                    style={{ height: 52 + 'em' }}
+                    className="embed-responsive embed-responsive-16by9"
+                  >
+                    <iframe
+                      title="phoenixpdf"
+                      className="embed-responsive-item"
+                      src={`https://docs.google.com/viewer?srcid=${pdfId}&pid=explorer&efh=false&a=v&chrome=false&embedded=true`}
+                      allowFullScreen
+                    />
+                  </div>
                   <hr className="w-100" />
                   <h5 className="mb-4">
                     Sound like the right investment for you?

@@ -35,7 +35,6 @@ class Ecorse extends Component {
           <div className="container">
             <div className="row justify-content-around">
               <div className="col-12 col-lg-10">
-                {/* building stats */}
                 <div
                   style={{
                     width: '1px',
