@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import { View, Mask, Button } from 'mdbreact';
 const styles = {
   bgImage: {
-    backgroundImage: `url("https://i.imgur.com/kC8zbBM.jpg")`,
+    backgroundImage: `url(${'https://i.imgur.com/kC8zbBM.jpg'})`,
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center',
