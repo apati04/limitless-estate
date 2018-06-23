@@ -1,10 +1,10 @@
 import React from 'react';
 import { View, Mask } from 'mdbreact';
 
-const img = '/img/vnCJr0J.jpg';
+const img = 'https://i.imgur.com/vnCJr0J.jpg';
 const styles = {
   bgImage: {
-    backgroundImage: `url(${'https://i.imgur.com/vnCJr0J.jpg'})`,
+    backgroundImage: `url(${img})`,
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center',

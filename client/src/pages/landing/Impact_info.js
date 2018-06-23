@@ -1,9 +1,10 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { View, Mask, Button } from 'mdbreact';
-const styles = {
+let impactImg = 'https://i.imgur.com/kC8zbBM.jpg';
+const ImpactStyles = {
   bgImage: {
-    backgroundImage: `url(${'https://i.imgur.com/kC8zbBM.jpg'})`,
+    backgroundImage: `url(${impactImg})`,
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center',
@@ -13,7 +14,7 @@ const styles = {
 export default () => {
   return (
     <section style={{ height: 42 + 'em' }}>
-      <View style={styles.bgImage} className="hm-black-light">
+      <View style={ImpactStyles.bgImage} className="hm-black-light">
         <Mask className="dark-overlay flex-column flex-center">
           <div className="w-75 text-center text-justify-center text-md-center">
             <h1 className="h1-responsive font-weight-bold text-white mb-3">
