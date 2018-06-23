@@ -25,30 +25,27 @@ app.get('/api/events/meetups', async (req, res) => {
     res.status(200).send(filterData);
   }
 });
-app.post(
-  'https://infinite-eyrie-98442.herokuapp.com/api/sendmail',
-  (req, res) => {
-    const { firstname, lastname, email, company, message } = req.body;
-    const transporter = nodemailer.createTransport({
-      host: 'smtp.gmail.com',
-      secure: true,
-      service: 'gmail',
-      auth: {
-        user: keys.userGmail,
-        pass: keys.passGmail
-      }
-    });
-    const sender = {
-      name: `New Message- ${firstname} ${lastname}`,
-      address: email
-    };
+app.post('/api/sendmail', (req, res) => {
+  const { firstname, lastname, email, company, message } = req.body;
+  const transporter = nodemailer.createTransport({
+    host: 'smtp.gmail.com',
+    service: 'gmail',
+    auth: {
+      user: keys.userGmail,
+      pass: keys.passGmail
+    }
+  });
+  const sender = {
+    name: `New Message- ${firstname} ${lastname}`,
+    address: email
+  };
 
-    const mailOptions = {
-      from: sender,
-      to: 'kmitchell@limitless-estates.com',
-      cc: ['lpatipaksiri@limitless-estates.com', 'andrew.patipak@gmail.com'],
-      subject: `Contact Form- ${firstname}`,
-      html: `
+  const mailOptions = {
+    from: sender,
+    to: 'kmitchell@limitless-estates.com',
+    cc: ['lpatipaksiri@limitless-estates.com', 'andrew.patipak@gmail.com'],
+    subject: `Contact Form- ${firstname}`,
+    html: `
       <html>
       <head>
       <style>
@@ -95,62 +92,58 @@ app.post(
       </body>
       </html>
     `
-    };
-    transporter.sendMail(mailOptions);
-    res.send('complete');
-  }
-);
+  };
+  transporter.sendMail(mailOptions);
+  res.send('complete');
+});
 
-app.post(
-  'https://infinite-eyrie-98442.herokuapp.com/api/questionnaire',
-  async (req, res) => {
-    const {
-      fullname,
-      email,
-      phone,
-      accreditedInvestor,
-      q1,
-      q2,
-      q3,
-      q4IRR,
-      q4ARP,
-      q4CoC,
-      q5,
-      q6,
-      q10,
-      q11,
-      q12,
-      q13,
-      q14,
-      proofOfFunds,
-      contactPreference,
-      riskTolerance
-    } = req.body;
-    const transporter = await nodemailer.createTransport({
-      host: 'smtp.gmail.com',
-      secure: true,
-      service: 'gmail',
-      auth: {
-        user: keys.userGmail,
-        pass: keys.passGmail
-      }
-    });
-    /*
+app.post('/api/questionnaire', async (req, res) => {
+  const {
+    fullname,
+    email,
+    phone,
+    accreditedInvestor,
+    q1,
+    q2,
+    q3,
+    q4IRR,
+    q4ARP,
+    q4CoC,
+    q5,
+    q6,
+    q10,
+    q11,
+    q12,
+    q13,
+    q14,
+    proofOfFunds,
+    contactPreference,
+    riskTolerance
+  } = req.body;
+  const transporter = await nodemailer.createTransport({
+    host: 'smtp.gmail.com',
+    service: 'gmail',
+    auth: {
+      user: keys.userGmail,
+      pass: keys.passGmail
+    }
+  });
+  /*
 preferedFormof Contact: {contactPreference}
 q7 : {accreditedInvestor}
 q8 : {proofOfFunds}
 q9 : risk {riskTolerance}
 */
-    const sender = {
-      name: `Investor Qualifier- ${fullname}`,
-      address: email
-    };
-    const mailOptions = {
-      from: sender,
-      to: 'kmitchell@limitless-estates.com',
-      cc: ['lpatipaksiri@limitless-estates.com', 'andrew.patipak@gmail.com'],
-      subject: `Investor Questionnaire - ${fullname}`,
-      html: `
+  const sender = {
+    name: `Investor Qualifier- ${fullname}`,
+    address: email
+  };
+  const mailOptions = {
+    from: sender,
+    to: 'kmitchell@limitless-estates.com',
+    cc: ['lpatipaksiri@limitless-estates.com', 'andrew.patipak@gmail.com'],
+    subject: `Investor Questionnaire - ${fullname}`,
+    html: `
       <html>
       <head>
       <style>
@@ -287,13 +280,12 @@ this investment?
       </body>
       </html>
     `
-    };
+  };
 
-    const payload = await transporter.sendMail(mailOptions);
+  const payload = await transporter.sendMail(mailOptions);
 
-    res.send('complete');
-  }
-);
+  res.send(payload);
+});
 
 // app.get('*', function(req, res) {
 //   app.use(express.static('client/public'));
