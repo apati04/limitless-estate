@@ -29,8 +29,8 @@ app.post('/api/sendmail', (req, res) => {
   const { firstname, lastname, email, company, message } = req.body;
   const transporter = nodemailer.createTransport({
     host: 'smtp.gmail.com',
-    port: 587,
     service: 'gmail',
+    secure: true,
     auth: {
       user: keys.userGmail,
       pass: keys.passGmail
@@ -128,9 +128,13 @@ app.post('/api/questionnaire', async (req, res) => {
   const transporter = await nodemailer.createTransport({
     host: 'smtp.gmail.com',
     service: 'gmail',
+    secure: true,
     auth: {
       user: keys.userGmail,
       pass: keys.passGmail
+    },
+    tls: {
+      rejectUnauthorized: true
     }
   });
   /*
@@ -142,7 +146,7 @@ q9 : risk {riskTolerance}
   // "Jim" <${config.mail.testAccount}>//
   const sender = {
     name: `Investor Qualifier- ${fullname}`,
-    address: `<${email}>`
+    address: email
   };
   const mailOptions = {
     from: sender,
