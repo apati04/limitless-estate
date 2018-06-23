@@ -40,13 +40,11 @@ app.post('/api/sendmail', (req, res) => {
     name: `New Message- ${firstname} ${lastname}`,
     address: email
   };
-  /* 
-   to: 'kmitchell@limitless-estates.com',
-    cc: ['lpatipaksiri@limitless-estates.com', 'andrew.patipak@gmail.com'],
-  */
+
   const mailOptions = {
     from: sender,
-    to: 'andrew.patipak@gmail.com',
+    to: 'kmitchell@limitless-estates.com',
+    cc: ['lpatipaksiri@limitless-estates.com', 'andrew.patipak@gmail.com'],
     subject: `Contact Form- ${firstname}`,
     html: `
       <html>
@@ -144,7 +142,8 @@ q9 : risk {riskTolerance}
   };
   const mailOptions = {
     from: sender,
-    to: 'andrew.patipak@gmail.com',
+    to: 'kmitchell@limitless-estates.com',
+    cc: ['lpatipaksiri@limitless-estates.com', 'andrew.patipak@gmail.com'],
     subject: `Investor Questionnaire - ${fullname}`,
     html: `
       <html>
@@ -286,8 +285,8 @@ this investment?
   };
 
   const payload = await transporter.sendMail(mailOptions);
-  console.log(payload);
-  res.send(payload);
+
+  res.send('complete');
 });
 
 // app.get('*', function(req, res) {
