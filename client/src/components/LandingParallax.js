@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Mask } from 'mdbreact';
 
-const img = 'https://i.imgur.com/vnCJr0J.jpg';
+const img = '/img/vnCJr0J.jpg';
 const styles = {
   bgImage: {
     backgroundImage: `url(${img})`,
