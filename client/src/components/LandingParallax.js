@@ -4,7 +4,7 @@ import { View, Mask } from 'mdbreact';
 const img = '/img/vnCJr0J.jpg';
 const styles = {
   bgImage: {
-    backgroundImage: `url(${img})`,
+    backgroundImage: `url("https://i.imgur.com/vnCJr0J.jpg")`,
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center',

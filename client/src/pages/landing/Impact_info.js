@@ -1,10 +1,9 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { View, Mask, Button } from 'mdbreact';
-const img2 = '/img/kC8zbBM.jpg';
 const styles = {
   bgImage: {
-    backgroundImage: `url(${img2})`,
+    backgroundImage: `url("https://i.imgur.com/kC8zbBM.jpg")`,
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center',
