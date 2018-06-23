@@ -29,19 +29,24 @@ app.post('/api/sendmail', (req, res) => {
   const { firstname, lastname, email, company, message } = req.body;
   const transporter = nodemailer.createTransport({
     host: 'smtp.gmail.com',
+    port: 587,
     service: 'gmail',
     auth: {
       user: keys.userGmail,
       pass: keys.passGmail
+    },
+    tls: {
+      rejectUnauthorized: true
     }
   });
   const sender = {
     name: `New Message- ${firstname} ${lastname}`,
     address: email
   };
+  const fullname = firstname + ' ' + lastname;
 
   const mailOptions = {
-    from: sender,
+    from: `"${fullname}" <${email}>`,
     to: 'kmitchell@limitless-estates.com',
     cc: ['lpatipaksiri@limitless-estates.com', 'andrew.patipak@gmail.com'],
     subject: `Contact Form- ${firstname}`,
@@ -134,9 +139,10 @@ q7 : {accreditedInvestor}
 q8 : {proofOfFunds}
 q9 : risk {riskTolerance}
 */
+  // "Jim" <${config.mail.testAccount}>//
   const sender = {
     name: `Investor Qualifier- ${fullname}`,
-    address: email
+    address: `<${email}>`
   };
   const mailOptions = {
     from: sender,
