@@ -1,26 +1,26 @@
 import React from 'react';
 import { View, Mask } from 'mdbreact';
 
-const img = 'https://i.imgur.com/vnCJr0J.jpg';
-const styles = {
-  bgImage: {
-    backgroundImage: `url(${img})`,
-    backgroundSize: 'cover',
-    backgroundRepeat: 'no-repeat',
-    backgroundPosition: 'center',
-    height: '100%'
-  }
-};
 const LandingParallax = () => {
+  const imgpara = 'https://i.imgur.com/vnCJr0J.jpg';
   return (
     <section style={{ height: 20 + 'em' }}>
-      <View style={styles.bgImage}>
+      <div
+        className="view"
+        style={{
+          backgroundImage: `url(${imgpara})`,
+          backgroundSize: 'cover',
+          backgroundRepeat: 'no-repeat',
+          backgroundPosition: 'center',
+          height: '100%'
+        }}
+      >
         <div className="dark-overlay">
           <Mask className="flex-center h1-responsive font-weight-bold  white-text">
             Reasons to invest in multifamily...
           </Mask>
         </div>
-      </View>
+      </div>
     </section>
   );
 };
