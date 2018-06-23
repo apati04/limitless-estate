@@ -93,14 +93,14 @@ class PicCarousel extends Component {
         >
           <CarouselInner className="carousel-fade">
             <CarouselItem itemId="2">
-              <View>
+              <div className="view">
                 <img
                   className="w-100 d-block"
                   src="https://i.imgur.com/MEac1d0.jpg?1"
                   alt="Second Slide"
                 />
-                {caption}
-              </View>
+                <div className="dark-overlay">{caption}</div>
+              </div>
             </CarouselItem>
             <CarouselItem itemId="1">
               <View>
@@ -109,7 +109,7 @@ class PicCarousel extends Component {
                   src="https://i.imgur.com/BI90AZ5.jpg?2"
                   alt="First Slide"
                 />
-                {caption}
+                <div className="dark-overlay">{caption}</div>
               </View>
             </CarouselItem>
             <CarouselItem itemId="3">
@@ -119,7 +119,7 @@ class PicCarousel extends Component {
                   src="https://i.imgur.com/jZscfQg.jpg?2"
                   alt="Third Slide"
                 />
-                {caption}
+                <div className="dark-overlay">{caption}</div>
               </View>
             </CarouselItem>
           </CarouselInner>
