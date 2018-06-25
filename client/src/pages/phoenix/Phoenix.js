@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import MapBox from '../../components/MapBox';
+import GoogleMap from '../../components/GoogleMap/GoogleMap';
 import {
   Button,
   Card,
@@ -34,6 +34,8 @@ class Phoenix extends Component {
     });
   };
   render() {
+    const [lat, lng] = [33.4476487, -112.0743701];
+
     return (
       <section className="animated fadeIn z-depth-0">
         <div style={styles.header} />
@@ -60,10 +62,19 @@ class Phoenix extends Component {
               </div>
             </div>
             <div
-              style={{ marginRight: -1 + 'em' }}
+              style={{
+                marginRight: -1 + 'em',
+                height: '300px',
+                width: '100%'
+              }}
               className="pr-0 col-md-4 d-none d-md-block"
             >
-              <MapBox roundedCi mapStyle={{height: 22 + 'em', width: 22+ 'em', marginTop: -5 + 'em' }} address="Phoenix, AZ" zoomLevel={10} />
+              <GoogleMap
+                centerMap={{ lat, lng }}
+                mapLng={lng}
+                mapLat={lat}
+                zoomLevel={13}
+              />
             </div>
           </div>
         </div>

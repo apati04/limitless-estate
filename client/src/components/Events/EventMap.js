@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import MapBox from '../MapBox';
+import GoogleMap from '../GoogleMap/GoogleMap';
 class EventMap extends Component {
   render() {
+    let mapkey = 'AIzaSyAzFLuNuk1zRYOPag2-dNnVqw8I-R2qnjE';
     const {
       id,
       lat,
@@ -11,19 +12,19 @@ class EventMap extends Component {
       city,
       state
     } = this.props.meetupLocation;
-    console.log(this.props.meetupLocation);
     return (
-      <MapBox
-        mapStyle={{
-          height: 22 + 'em',
-          width: '100%',
-          maxHeight: '100%'
-        }}
-        lat={lat}
-        lng={lon}
-        mapMarker
-        zoomLevel={13}
-      />
+      <div
+        style={{ width: '100%', height: '300px' }}
+        className="mb-2 border border-light"
+      >
+        <GoogleMap
+          centerMap={{ lat, lng: lon }}
+          mapLng={lon}
+          mapLat={lat}
+          renderMapMarker
+          zoomLevel={15}
+        />
+      </div>
     );
   }
 }

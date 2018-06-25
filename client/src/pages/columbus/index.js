@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import MapBox from '../../components/MapBox';
-
 import {
   Button,
   Card,
@@ -14,7 +12,7 @@ import {
 import summary from './summary_data';
 import { NavLink, Link } from 'react-router-dom';
 import Article from '../../components/templates/Article';
-
+import GoogleMap from '../../components/GoogleMap/GoogleMap';
 const styles = {
   header: {
     padding: '0',
@@ -38,6 +36,7 @@ class Columbus extends Component {
   };
 
   render() {
+    const [lat, lng] = [39.9512919, -82.9901501];
     return (
       <div className="animated fadeIn z-depth-0">
         <div style={styles.header} />
@@ -63,17 +62,17 @@ class Columbus extends Component {
             </div>
 
             <div
-              style={{ marginRight: -1 + 'em' }}
+              style={{
+                marginRight: -1 + 'em',
+                height: '300px',
+                width: '100%'
+              }}
               className="pr-0 col-md-4 d-none d-md-block"
             >
-              <MapBox
-                roundedCi
-                mapStyle={{
-                  height: 22 + 'em',
-                  width: 22 + 'em',
-                  marginTop: -5 + 'em'
-                }}
-                address="Columbus, OH"
+              <GoogleMap
+                centerMap={{ lat, lng }}
+                mapLng={lng}
+                mapLat={lat}
                 zoomLevel={10}
               />
             </div>
