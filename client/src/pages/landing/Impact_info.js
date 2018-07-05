@@ -27,6 +27,7 @@ export default () => {
                 financial AND a social return on their investment.
               </p>
               <NavLink
+                style={{ borderRadius: '99px' }}
                 className="btn btn-primary"
                 to="/resources/impactinvesting"
               >
@@ -43,6 +44,7 @@ export default () => {
               </p>
 
               <NavLink
+                style={{ borderRadius: '99px' }}
                 className="btn btn-primary"
                 to="/info/investing/ira401k"
                 size="md"

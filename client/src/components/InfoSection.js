@@ -65,6 +65,7 @@ const InfoSection = () => {
             <Link to="/resources">
               <button
                 size="lg"
+                style={{ borderRadius: '99px' }}
                 className="h5-responsive btn btn-block btn-outline-danger p-2 mt-4"
               >
                 Learn More on Why to invest in multifamily

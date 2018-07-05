@@ -26,6 +26,7 @@ class MemberSection extends Component {
               <p className="p-0 font-weight-bold">{person.title}</p>
 
               <NavLink
+                style={{ borderRadius: '99px' }}
                 className="btn btn-primary"
                 to={`/members/about/${firstname}`}
               >

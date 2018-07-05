@@ -74,7 +74,11 @@ class PicCarousel extends Component {
               while achieving double digit returns for our investors.
             </div>
             <div className="d-none d-lg-block mt-4 text-center">
-              <NavLink className="btn btn-primary" to="info/questionnaire">
+              <NavLink
+                style={{ borderRadius: '99px' }}
+                className="btn btn-primary"
+                to="info/questionnaire"
+              >
                 Make an Impact
               </NavLink>
             </div>
