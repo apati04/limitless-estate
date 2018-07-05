@@ -99,7 +99,7 @@ class PicCarousel extends Component {
                   src="https://i.imgur.com/MEac1d0.jpg?1"
                   alt="Second Slide"
                 />
-                <div className="dark-overlay">{caption}</div>
+                <div>{caption}</div>
               </div>
             </CarouselItem>
             <CarouselItem itemId="1">
@@ -109,7 +109,7 @@ class PicCarousel extends Component {
                   src="https://i.imgur.com/BI90AZ5.jpg?2"
                   alt="First Slide"
                 />
-                <div className="dark-overlay">{caption}</div>
+                <div>{caption}</div>
               </View>
             </CarouselItem>
             <CarouselItem itemId="3">
@@ -119,7 +119,7 @@ class PicCarousel extends Component {
                   src="https://i.imgur.com/jZscfQg.jpg?2"
                   alt="Third Slide"
                 />
-                <div className="dark-overlay">{caption}</div>
+                <div>{caption}</div>
               </View>
             </CarouselItem>
           </CarouselInner>
