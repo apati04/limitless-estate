@@ -13,7 +13,8 @@ import {
   DropdownToggle,
   DropdownMenu,
   DropdownItem,
-  Container
+  Container,
+  Button
 } from 'mdbreact';
 
 class Navigation extends Component {
@@ -36,52 +37,70 @@ class Navigation extends Component {
     this.setState({ dropdownOpen2: !this.state.dropdownOpen2 });
   };
   render() {
+    if (this.state.isWideEnough) {
+      console.log('yes');
+    }
     return (
       <Navbar
         dark
         expand="lg"
         sticky="top"
         style={{ borderRadius: 0 }}
-        className="primary-color"
+        className="primary-color-dark"
       >
-        <Container>
+        <Container className="mx-0 mw-100">
           <Link to="/">
             <img
               height="44"
               src="https://i.imgur.com/6TpCmWV.png"
-              className="d-inline-block  mx-auto"
+              className="d-inline-block m-2"
               alt=""
             />
           </Link>
           {!this.state.isWideEnough && <NavbarToggler onClick={this.onClick} />}
-
           <Collapse isOpen={this.state.collapse} navbar>
-            <NavbarNav className="list-group  flex-center mt-0">
-              <NavItem>
+            <NavbarNav
+              right
+              style={{
+                display: 'flex',
+                justifyContent: 'end',
+                alignItems: 'center',
+                textTransform: 'uppercase',
+                fontSize: '14px',
+                flexWrap: 'no-wrap',
+                whiteSpace: 'nowrap'
+              }}
+            >
+              <NavItem className="p-2">
                 <NavLink
                   exact
-                  style={{ color: 'white' }}
-                  activeStyle={{ fontWeight: 400 }}
-                  className="h6-responsive"
+                  style={{ color: 'white', letterSpacing: '0.5px' }}
+                  activeStyle={{
+                    borderBottom: '2px white solid',
+                    outline: 0
+                  }}
                   to="/"
                 >
                   Home
                 </NavLink>
               </NavItem>
-              <NavItem>
+              <NavItem className="p-2">
                 <NavLink
                   exact
-                  style={{ color: 'white' }}
-                  activeStyle={{ fontWeight: 400 }}
-                  className="h6-responsive"
+                  style={{ color: 'white', letterSpacing: '0.5px' }}
+                  activeStyle={{
+                    borderBottom: '2px white solid',
+                    outline: 0
+                  }}
                   to="/members/about/"
                 >
-                  About Us
+                  About
                 </NavLink>
               </NavItem>
               <div className="nav-item dropdown">
                 <a
-                  className="h6-responsive text-white nav-link dropdown-toggle"
+                  style={{ outline: 0, letterSpacing: '0.5px' }}
+                  className="text-white nav-link dropdown-toggle"
                   id="navbarDropdownMenuLink"
                   aria-haspopup="true"
                   aria-expanded="false"
@@ -100,7 +119,6 @@ class Navigation extends Component {
                   >
                     Columbus, OH
                   </NavLink>
-
                   <NavLink
                     exact
                     activeStyle={{ fontWeight: 400 }}
@@ -121,14 +139,15 @@ class Navigation extends Component {
               </div>
               <div className="nav-item dropdown">
                 <a
-                  className="h6-responsive text-white nav-link dropdown-toggle"
+                  style={{ outline: 0, letterSpacing: '0.5px' }}
+                  className="text-white nav-link dropdown-toggle"
                   id="navRes"
                   aria-haspopup="true"
                   aria-expanded="false"
                 >
                   Resources
                 </a>
-                <div className="dropdown-menu" aria-labelledby="navRes">
+                <div className="dropdown-menu p-1" aria-labelledby="navRes">
                   <NavLink
                     exact
                     activeStyle={{ fontWeight: 400 }}
@@ -137,7 +156,6 @@ class Navigation extends Component {
                   >
                     Why Invest in Multifamily
                   </NavLink>
-
                   <NavLink
                     exact
                     activeStyle={{ fontWeight: 400 }}
@@ -146,7 +164,6 @@ class Navigation extends Component {
                   >
                     Impact Investing
                   </NavLink>
-
                   <NavLink
                     exact
                     activeStyle={{ fontWeight: 400 }}
@@ -165,7 +182,6 @@ class Navigation extends Component {
                   >
                     Risks
                   </NavLink>
-
                   <NavLink
                     exact
                     activeStyle={{ fontWeight: 400 }}
@@ -176,39 +192,66 @@ class Navigation extends Component {
                   </NavLink>
                 </div>
               </div>
-              <NavItem>
+              <NavItem className="p-2">
                 <NavLink
                   exact
-                  style={{ color: 'white' }}
-                  activeStyle={{ fontWeight: 400 }}
-                  className="h6-responsive"
+                  style={{ color: 'white', letterSpacing: '0.5px' }}
+                  activeStyle={{
+                    borderBottom: '2px white solid',
+                    outline: 0
+                  }}
                   to="/info/questionnaire"
                 >
-                  Investor Questionnaire
+                  Questionnaire
                 </NavLink>
               </NavItem>
-              <NavItem>
+
+              <NavItem className="p-2">
                 <NavLink
                   exact
-                  style={{ color: 'white' }}
-                  activeStyle={{ fontWeight: 400 }}
-                  className="h6-responsive"
-                  to="/info/contact"
-                >
-                  Contact
-                </NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink
-                  exact
-                  style={{ color: 'white' }}
-                  activeStyle={{ fontWeight: 400 }}
-                  className="h6-responsive"
+                  style={{ color: 'white', letterSpacing: '0.5px' }}
+                  activeStyle={{
+                    borderBottom: '2px white solid',
+                    outline: 0
+                  }}
                   to="/events/meetups"
                 >
                   Events
                 </NavLink>
               </NavItem>
+              <NavItem className="p-2">
+                <NavLink
+                  exact
+                  style={{ color: 'white', letterSpacing: '0.5px' }}
+                  activeStyle={{
+                    borderBottom: '2px white solid',
+                    outline: 0
+                  }}
+                  to="/info/contact"
+                >
+                  Contact
+                </NavLink>
+              </NavItem>
+              <div className="p-2">
+                <a
+                  href="https://10to8.com/book/ehypauluugknktzawdwva-free/493041"
+                  rel="nofollow"
+                  target="_blank"
+                  style={{ whiteSpace: 'nowrap', fontSize: '14px' }}
+                  className="btn btn-sm btn-primary btn-rounded align-content-center"
+                >
+                  Schedule an appointment
+                  <i
+                    className="fa fa-phone"
+                    aria-hidden="true"
+                    style={{
+                      fontSize: '16px',
+                      marginTop: '2px',
+                      paddingLeft: '8px'
+                    }}
+                  />
+                </a>
+              </div>
             </NavbarNav>
           </Collapse>
         </Container>

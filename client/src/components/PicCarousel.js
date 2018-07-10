@@ -151,14 +151,41 @@ class PicCarousel extends Component {
               src="https://i.imgur.com/BI90AZ5.jpg?1"
               alt="First Slide"
             />
+            <Mask className="rgba-black-slight flex-center">
+              <div className="container">
+                <div className="row">
+                  <div className="col">
+                    <div className="m-2 h5-responsive text-center text-white">
+                      Our vision at Limitless Estates is to provide A-class
+                      living to lower income housing by putting our residents
+                      first and instilling a sense of community while inspiring
+                      others to do the same.
+                    </div>
+                    <div className="p-2 text-center">
+                      <a
+                        href="https://10to8.com/book/ehypauluugknktzawdwva-free/493041"
+                        rel="nofollow"
+                        target="_blank"
+                        style={{ whiteSpace: 'nowrap', fontSize: '14px' }}
+                        className="btn btn-sm btn-primary btn-rounded align-content-center"
+                      >
+                        Schedule an appointment
+                        <i
+                          className="fa fa-phone"
+                          aria-hidden="true"
+                          style={{
+                            fontSize: '16px',
+                            marginTop: '2px',
+                            paddingLeft: '8px'
+                          }}
+                        />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Mask>
           </View>
-          <div className="p-2 rgba-bluegrey-slight">
-            <div className="m-2 h5-responsive text-center">
-              Our vision at Limitless Estates is to provide A-class living to
-              lower income housing by putting our residents first and instilling
-              a sense of community while inspiring others to do the same.
-            </div>
-          </div>
           <div className="p-2 rgba-grey-slight">
             <div className="m-2 text-center h5-responsive">
               Our mission is to positively impact the lives of the people in our
