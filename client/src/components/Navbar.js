@@ -235,18 +235,18 @@ class Navigation extends Component {
               <div className="p-2">
                 <a
                   href="https://10to8.com/book/ehypauluugknktzawdwva-free/493041"
-                  rel="nofollow"
+                  rel="noopener noreferrer"
                   target="_blank"
                   style={{ whiteSpace: 'nowrap', fontSize: '14px' }}
-                  className="btn btn-sm btn-primary btn-rounded align-content-center"
+                  className="btn btn-sm btn-success btn-rounded"
                 >
-                  Schedule an appointment
+                  Schedule an appointment{' '}
                   <i
-                    className="fa fa-phone"
+                    className="fa fa-volume-control-phone"
                     aria-hidden="true"
                     style={{
                       fontSize: '16px',
-                      marginTop: '2px',
+                      paddingTop: '2px',
                       paddingLeft: '8px'
                     }}
                   />

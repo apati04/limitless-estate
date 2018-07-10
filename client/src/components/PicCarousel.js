@@ -73,7 +73,7 @@ class PicCarousel extends Component {
               </a>{' '}
               while achieving double digit returns for our investors.
             </div>
-            <div className="d-none d-lg-block mt-4 text-center">
+            <div className="d-none d-md-block mt-4 text-center">
               <NavLink
                 style={{ borderRadius: '99px' }}
                 className="btn btn-primary"
@@ -147,15 +147,15 @@ class PicCarousel extends Component {
         <div className="d-block d-md-none">
           <View className="rgba-black-light">
             <img
-              className="w-100 img-fluid"
+              className="d-block w-100"
               src="https://i.imgur.com/BI90AZ5.jpg?1"
               alt="First Slide"
             />
-            <Mask className="rgba-black-slight flex-center">
-              <div className="container">
-                <div className="row">
+            <div>
+              <Mask className="rgba-black-slight">
+                <div className="row flex-center">
                   <div className="col">
-                    <div className="m-2 h5-responsive text-center text-white">
+                    <div className="p-2 text-center text-white">
                       Our vision at Limitless Estates is to provide A-class
                       living to lower income housing by putting our residents
                       first and instilling a sense of community while inspiring
@@ -164,18 +164,18 @@ class PicCarousel extends Component {
                     <div className="p-2 text-center">
                       <a
                         href="https://10to8.com/book/ehypauluugknktzawdwva-free/493041"
-                        rel="nofollow"
+                        rel="noopener noreferrer"
                         target="_blank"
-                        style={{ whiteSpace: 'nowrap', fontSize: '14px' }}
-                        className="btn btn-sm btn-primary btn-rounded align-content-center"
+                        style={{ whiteSpace: 'nowrap' }}
+                        className="btn btn-sm btn-success btn-rounded align-items-center"
                       >
-                        Schedule an appointment
+                        Schedule an appointment{' '}
                         <i
-                          className="fa fa-phone"
+                          className="fa fa-volume-control-phone"
                           aria-hidden="true"
                           style={{
-                            fontSize: '16px',
-                            marginTop: '2px',
+                            fontSize: '13px',
+                            paddingTop: '2px',
                             paddingLeft: '8px'
                           }}
                         />
@@ -183,11 +183,11 @@ class PicCarousel extends Component {
                     </div>
                   </div>
                 </div>
-              </div>
-            </Mask>
+              </Mask>
+            </div>
           </View>
           <div className="p-2 rgba-grey-slight">
-            <div className="m-2 text-center h5-responsive">
+            <div className="m-2 text-center">
               Our mission is to positively impact the lives of the people in our
               local neighborhoods through{' '}
               <NavLink to="/resources/impactinvesting">
