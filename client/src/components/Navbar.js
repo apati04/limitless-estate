@@ -234,7 +234,7 @@ class Navigation extends Component {
               </NavItem>
               <div className="p-2">
                 <a
-                  href="https://10to8.com/book/ehypauluugknktzawdwva-free/493041"
+                  href="https://ehypauluugknktzawdwva-free.10to8.com/"
                   rel="noopener noreferrer"
                   target="_blank"
                   style={{ whiteSpace: 'nowrap', fontSize: '14px' }}
