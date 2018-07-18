@@ -37,7 +37,7 @@ class PicCarousel extends Component {
     const prevItem = this.state.activeItem - 1;
     if (prevItem < 1) {
       this.setState(function(prevState, props) {
-        return { activeItem: prevState.maxLength };
+        return { activeItem: 1 };
       });
     } else {
       this.setState(function(prevState, props) {
