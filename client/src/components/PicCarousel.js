@@ -86,7 +86,7 @@ class PicCarousel extends Component {
         </div>
       </Mask>
     );
-
+    console.log(this.state.activeItem);
     return (
       <section>
         <Carousel
@@ -96,7 +96,7 @@ class PicCarousel extends Component {
           ref={this.newRef}
         >
           <CarouselInner className="carousel-fade">
-            <CarouselItem itemId="2">
+            <CarouselItem itemId={2}>
               <div className="view">
                 <img
                   className="w-100 d-block"
@@ -106,7 +106,7 @@ class PicCarousel extends Component {
                 <div>{caption}</div>
               </div>
             </CarouselItem>
-            <CarouselItem itemId="1">
+            <CarouselItem itemId={1}>
               <View>
                 <img
                   className="w-100 d-block"
@@ -116,7 +116,7 @@ class PicCarousel extends Component {
                 <div>{caption}</div>
               </View>
             </CarouselItem>
-            <CarouselItem itemId="3">
+            <CarouselItem itemId={3}>
               <View className="rgba-black-light">
                 <img
                   className="w-100 d-block"
