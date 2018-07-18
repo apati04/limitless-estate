@@ -48,9 +48,9 @@ class PicCarousel extends Component {
       });
     }
   };
-  componentWillUnmount() {
-    clearInterval(this.newRef.current.cycleInterval);
-  }
+  // componentWillUnmount() {
+  //   clearInterval(this.newRef.current.cycleInterval);
+  // }
 
   render() {
     const caption = (
