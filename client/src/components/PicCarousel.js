@@ -9,13 +9,19 @@ class PicCarousel extends Component {
         <Mask>
           <div style={{ padding: '50px', marginTop: 4 + '%' }} className="row">
             <div className="col">
-              <h2 className="text-center h2-responsive white-text">
+              <h2
+                style={{ color: 'white', marginBottom: 2 + '%' }}
+                className="text-center"
+              >
                 Our vision at Limitless Estates is to provide A-class living to
                 lower income housing by putting our residents first and
                 instilling a sense of community while inspiring others to do the
                 same.
               </h2>
-              <h2 className="text-center h2-responsive white-text">
+              <h2
+                style={{ color: 'white', marginBottom: 2 + '%' }}
+                className="text-center"
+              >
                 Our mission is to positively impact the lives of the people in
                 our local neighborhoods through{' '}
                 <a
