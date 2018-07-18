@@ -66,7 +66,9 @@ class Navigation extends Component {
                 justifyContent: 'end',
                 alignItems: 'center',
                 textTransform: 'uppercase',
-                fontSize: '14px',
+                fontSize: '13px',
+                fontWeight: 400,
+                lineHeight: '20px',
                 flexWrap: 'no-wrap',
                 whiteSpace: 'nowrap'
               }}
@@ -114,7 +116,7 @@ class Navigation extends Component {
                   <NavLink
                     exact
                     activeStyle={{ fontWeight: 400 }}
-                    className="px-3 h4-responsive dropdown-item"
+                    className="px-3 dropdown-item"
                     to="/markets/columbus/summary"
                   >
                     Columbus, OH
@@ -122,18 +124,26 @@ class Navigation extends Component {
                   <NavLink
                     exact
                     activeStyle={{ fontWeight: 400 }}
-                    className="px-3 h4-responsive dropdown-item"
+                    className="px-3 dropdown-item"
                     to="/markets/detroit/summary"
                   >
                     Detroit, MI
                   </NavLink>
                   <NavLink
                     exact
-                    activeStyle={{ fontWeight: 400 }}
-                    className="px-3 h4-responsive dropdown-item"
+                    activeStyle={{ fontWeight: 400, color: 'white' }}
+                    className="px-3 dropdown-item"
                     to="/markets/phoenix/summary"
                   >
                     Phoenix, AZ
+                  </NavLink>
+                  <NavLink
+                    exact
+                    activeStyle={{ fontWeight: 400 }}
+                    className="px-3 dropdown-item"
+                    to="/markets/tucson/summary"
+                  >
+                    Tucson, AZ
                   </NavLink>
                 </div>
               </div>
@@ -159,7 +169,7 @@ class Navigation extends Component {
                   <NavLink
                     exact
                     activeStyle={{ fontWeight: 400 }}
-                    className="px-3 h4-responsive dropdown-item"
+                    className="px-3 dropdown-item"
                     to="/resources/impactinvesting"
                   >
                     Impact Investing
@@ -167,7 +177,7 @@ class Navigation extends Component {
                   <NavLink
                     exact
                     activeStyle={{ fontWeight: 400 }}
-                    className="px-3 h4-responsive dropdown-item"
+                    className="px-3 dropdown-item"
                     to="/info/investing/ira401k"
                   >
                     401K/IRA
@@ -177,7 +187,7 @@ class Navigation extends Component {
                     exact
                     style={{ color: 'white' }}
                     activeStyle={{ fontWeight: 400 }}
-                    className="px-3 h4-responsive dropdown-item"
+                    className="px-3 dropdown-item"
                     to="/resources/investingrisks/1"
                   >
                     Risks
@@ -185,7 +195,7 @@ class Navigation extends Component {
                   <NavLink
                     exact
                     activeStyle={{ fontWeight: 400 }}
-                    className="px-3 h4-responsive dropdown-item"
+                    className="px-3 dropdown-item"
                     to="/resources/faq"
                   >
                     FAQ

@@ -25,7 +25,11 @@ class Columbus extends Component {
   renderContent = () => {
     const main = summary[0].body;
     const { list } = summary[1];
-    const body = main.map((e, i) => <p key={i}>{e}</p>);
+    const body = main.map((e, i) => (
+      <p className="textblockclass" key={i}>
+        {e}
+      </p>
+    ));
     const listItems = list.map((e, i) => <li key={i}>{e}</li>);
     return (
       <div className="mt-4">

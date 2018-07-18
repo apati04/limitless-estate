@@ -15,6 +15,7 @@ import Phoenix from '../pages/markets/Phoenix';
 import Legal from '../pages/Legal';
 import ColSum from '../pages/columbus';
 import DetSum from '../pages/detroit';
+import Tucson from '../pages/tucson/Tucson';
 import PhoenixSum from '../pages/phoenix/Phoenix';
 import Questionnaire from '../pages/Questionnaire';
 import Faq from '../pages/Faq';
@@ -69,6 +70,7 @@ class App extends Component {
                 path="/markets/columbus/summary"
                 component={ColSum}
               />
+              <Route exact path="/markets/tucson/summary" component={Tucson} />
               <Route exact path="/markets/detroit/summary" component={DetSum} />
               <Route exact path="/markets/detroit/sdp" component={Ecorse} />
               <Route

@@ -25,7 +25,11 @@ const styles = {
 class Phoenix extends Component {
   renderContent = () => {
     return summary[0].body.map((item, index) => {
-      return <p key={'phx' + index}>{item}</p>;
+      return (
+        <p className="textblockclass" key={'phx' + index}>
+          {item}
+        </p>
+      );
     });
   };
   renderList = () => {

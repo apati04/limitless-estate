@@ -16,7 +16,13 @@ h5,
 h6 {
   font-size-adjust: 0.5;
 } */
-
+.textblockclass {
+  text-align: justify;
+}
+.dropdown .dropdown-menu .dropdown-item {
+  font-size: 13px !important;
+  line-height: 20px !important;
+}
 .dropdown:hover > .dropdown-menu {
   display: block !important;
   margin: -0.125rem 0 0 !important;
