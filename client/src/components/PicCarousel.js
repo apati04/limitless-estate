@@ -86,7 +86,6 @@ class PicCarousel extends Component {
         </div>
       </Mask>
     );
-    console.log(this.state.activeItem);
     return (
       <section>
         <Carousel
