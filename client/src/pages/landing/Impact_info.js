@@ -17,7 +17,10 @@ export default () => {
       >
         <div className="dark-overlay">
           <Mask className="flex-column flex-center">
-            <div className="w-75 text-center text-justify-center text-md-center">
+            <div
+              style={{ color: 'white' }}
+              className="w-75 text-center text-justify-center text-md-center"
+            >
               <h1 className="h1-responsive font-weight-bold text-white mb-3">
                 Impact Investing
               </h1>
@@ -34,7 +37,10 @@ export default () => {
                 Impact Investing
               </NavLink>
             </div>
-            <div className="w-75 mt-4 text-center text-justify-center text-md-center white-text">
+            <div
+              style={{ color: 'white' }}
+              className="w-75 mt-4 text-center text-justify-center text-md-center white-text"
+            >
               <h1 className="h1-responsive font-weight-bold text-white mb-3">
                 Did you know...
               </h1>
