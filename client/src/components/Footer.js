@@ -13,30 +13,6 @@ const style = {
 const NavFooter = () => {
   return (
     <footer style={style.footerStyle} className="primary-color-dark w-100">
-      {/* <div className="container">
-        <div className="row flex-column flex-sm-row flex-sm-nowrap justify-content-sm-around text-align-center">
-          <div className="col-auto">
-            <h5 className="h5-responsive">Get started</h5>
-            <ul>
-              <li key="fHome">
-                <NavLink to="/">Home</NavLink>
-              </li>
-              <li key="fDl3">
-                <NavLink to="/info/questionnaire">Questionnaire</NavLink>
-              </li>
-            </ul>
-          </div>
-          <div className="col-auto">
-            <h5 className="h5-responsive">Legal</h5>
-            <ul>
-              <li key="lTOS">
-                <NavLink to="/legal">Disclaimer</NavLink>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div> */}
-
       <div className="row flex-center">
         <div className="col-12 d-flex flex-center">
           <p className="white-text">
