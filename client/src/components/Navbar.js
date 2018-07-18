@@ -252,11 +252,10 @@ class Navigation extends Component {
                 >
                   Schedule an appointment{' '}
                   <i
-                    className="fa fa-volume-control-phone"
-                    aria-hidden="true"
+                    className="fa fa-phone"
                     style={{
-                      fontSize: '16px',
-                      paddingTop: '2px',
+                      fontSize: '14px',
+                      paddingTop: '4px',
                       paddingLeft: '8px'
                     }}
                   />

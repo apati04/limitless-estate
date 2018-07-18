@@ -22,7 +22,7 @@ export default props => {
               </p>
             </div>
 
-            <div className="mt-4">
+            <div style={{ textAlign: 'justify' }} className="mt-4">
               <p className="mt-1">
                 My passion is in helping others and making a difference in any
                 way I can. I find gratitude in helping others find solutions and

@@ -23,7 +23,7 @@ class Kyle extends Component {
                   Investor | Entrepreneur | Business Owner | Operator
                 </p>
               </div>
-              <div className="mt-4">
+              <div style={{ textAlign: 'justify' }} className="mt-4">
                 <p className="mt-1">
                   My passion is in helping others reach their goals in all areas
                   of life by doing things the right way and creating long
