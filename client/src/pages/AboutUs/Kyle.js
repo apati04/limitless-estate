@@ -9,15 +9,22 @@ class Kyle extends Component {
             <div className="col-12 col-lg-9">
               <div className="no-flex text-align-center testimonial-carousel">
                 <div className="testimonial">
-                  <div className="avatar mx-auto">
+                  <div style={{ textAlign: 'center' }}>
                     <img
+                      style={{
+                        maxWidth: '200px',
+                        boxShadow:
+                          '0 5px 11px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(0,0,0,.15)'
+                      }}
                       src="https://i.imgur.com/qC2iaYa.jpg?2"
                       className="rounded-circle img-fluid"
                       alt="img"
                     />
                   </div>
                 </div>
-                <h3 className="h3-responsive text-center">Kyle Mitchell</h3>
+                <h3 className="h3-responsive text-center mt-4">
+                  Kyle Mitchell
+                </h3>
                 <h5 className="mt-2 h5-responsive text-center">President</h5>
                 <p className="mt-2 text-center">
                   Investor | Entrepreneur | Business Owner | Operator

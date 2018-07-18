@@ -7,15 +7,22 @@ export default props => {
           <div className="col-12 col-lg-9">
             <div className="no-flex testimonial-carousel text-align-center ">
               <div className="testimonial">
-                <div className="avatar mx-auto">
+                <div style={{ textAlign: 'center' }}>
                   <img
+                    style={{
+                      maxWidth: '200px',
+                      boxShadow:
+                        '0 5px 11px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(0,0,0,.15)'
+                    }}
                     src="https://i.imgur.com/Lok4G0b.jpg?1"
                     className="rounded-circle img-fluid"
                     alt="img2"
                   />
                 </div>
               </div>
-              <h3 className="text-center h3-responsive">Lalita Patipaksiri</h3>
+              <h3 className="text-center h3-responsive mt-4">
+                Lalita Patipaksiri
+              </h3>
               <h5 className="mt-2 h5-responsive text-center">Vice President</h5>
               <p className="mx-auto mt-2 text-center">
                 Investor | Entrepreneur | Athlete | Operator

@@ -15,7 +15,7 @@ export default class SupportCo extends Component {
   renderInfo(company) {
     const { name, phone, address, email, website, misc, logo } = company;
     return (
-      <Card wide>
+      <Card className="my-4">
         <a target="_blank" rel="noopener" className="w-100" href={website}>
           <CardImage
             style={{ height: 10 + 'em' }}
@@ -102,14 +102,14 @@ export default class SupportCo extends Component {
     return (
       <section>
         <div style={styles.header}>
-          <div className="rgba-black-slight">
+          <div className="light-overlay">
             <div
               style={{ height: 25 + 'em' }}
               className="row mb-5 justify-content-center align-items-center"
             >
               <div className="col-8 text-left">
                 <header className=" text-align-center-left text-white">
-                  <h1 className="h1-responsive">401K/IRA</h1>
+                  <h1>401K/IRA</h1>
                 </header>
               </div>
             </div>
