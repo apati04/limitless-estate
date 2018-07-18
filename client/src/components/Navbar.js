@@ -51,9 +51,9 @@ class Navigation extends Component {
         <Container className="mx-0 mw-100">
           <Link to="/">
             <img
-              height="44"
+              height="42"
               src="https://i.imgur.com/6TpCmWV.png"
-              className="d-inline-block m-2"
+              className="d-inline-block"
               alt=""
             />
           </Link>
@@ -70,10 +70,11 @@ class Navigation extends Component {
                 fontWeight: 400,
                 lineHeight: '20px',
                 flexWrap: 'no-wrap',
-                whiteSpace: 'nowrap'
+                whiteSpace: 'nowrap',
+                marginTop: 0
               }}
             >
-              <NavItem className="p-2">
+              <NavItem className="px-2">
                 <NavLink
                   exact
                   style={{ color: 'white', letterSpacing: '0.5px' }}
@@ -86,7 +87,7 @@ class Navigation extends Component {
                   Home
                 </NavLink>
               </NavItem>
-              <NavItem className="p-2">
+              <NavItem className="px-2">
                 <NavLink
                   exact
                   style={{ color: 'white', letterSpacing: '0.5px' }}
@@ -202,7 +203,7 @@ class Navigation extends Component {
                   </NavLink>
                 </div>
               </div>
-              <NavItem className="p-2">
+              <NavItem className="px-2">
                 <NavLink
                   exact
                   style={{ color: 'white', letterSpacing: '0.5px' }}
@@ -216,7 +217,7 @@ class Navigation extends Component {
                 </NavLink>
               </NavItem>
 
-              <NavItem className="p-2">
+              <NavItem className="px-2">
                 <NavLink
                   exact
                   style={{ color: 'white', letterSpacing: '0.5px' }}
@@ -229,7 +230,7 @@ class Navigation extends Component {
                   Events
                 </NavLink>
               </NavItem>
-              <NavItem className="p-2">
+              <NavItem className="px-2">
                 <NavLink
                   exact
                   style={{ color: 'white', letterSpacing: '0.5px' }}
@@ -242,7 +243,7 @@ class Navigation extends Component {
                   Contact
                 </NavLink>
               </NavItem>
-              <div className="p-2">
+              <div>
                 <a
                   href="https://ehypauluugknktzawdwva-free.10to8.com/"
                   rel="noopener noreferrer"
