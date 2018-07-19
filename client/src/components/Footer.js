@@ -138,7 +138,7 @@ class NavFooter extends Component {
                 <NavLink to="/events/meetups">Events</NavLink>
               </p>
               <p>
-                <NavLink to="/contact/">Contact Us</NavLink>
+                <NavLink to="/info/contact/">Contact Us</NavLink>
               </p>
             </Col>
           </Row>
