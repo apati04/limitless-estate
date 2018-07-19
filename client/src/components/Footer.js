@@ -16,8 +16,19 @@ const NavFooter = () => {
       <div className="row flex-center">
         <div className="col-12 d-flex flex-center">
           <p className="white-text">
-            © 2018 Limitless Estates, LLC |{' '}
-            <NavLink className="white-text" to="/legal">
+            © 2018 Limitless Estates, LLC | Powered by:{' '}
+            <a
+              style={{ color: 'white', fontWeight: 'bold' }}
+              href="mailto:apax714@email.com"
+            >
+              AiTech
+            </a>{' '}
+            |{' '}
+            <NavLink
+              style={{ color: 'white', fontWeight: 'bold' }}
+              className="white-text"
+              to="/legal"
+            >
               Disclaimer
             </NavLink>
           </p>
