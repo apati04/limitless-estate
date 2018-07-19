@@ -28,7 +28,7 @@ class Contact extends Component {
                       </CardTitle>
                     </div>
                   </CardImage>
-                  <CardBody className="p-5">
+                  <CardBody className="p-2">
                     <ContactForm />
                   </CardBody>
                 </Card>
