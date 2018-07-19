@@ -39,7 +39,7 @@ class App extends Component {
     return (
       <BrowserRouter>
         <ScrollToTop>
-          <div style={{ paddingBottom: '60px' }}>
+          <div>
             <Header />
 
             <Switch>

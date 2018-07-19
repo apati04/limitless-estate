@@ -22,13 +22,15 @@ class Contact extends Component {
                 <Card className="align-center animated fadeIn z-depth-4" narrow>
                   <CardImage tag="div">
                     <div className="view gradient-card-header blue-gradient text-align-center peach-gradient">
-                      <CardTitle className="text-white text-center p-5">
-                        <h2>Contact Us</h2>
-                        <p className="small">We'd love to hear from you!</p>
+                      <CardTitle className="text-white text-center pb-2">
+                        <div>
+                          <h2 className="h2-responsive">Contact Us</h2>
+                          <p>We'd love to hear from you!</p>
+                        </div>
                       </CardTitle>
                     </div>
                   </CardImage>
-                  <CardBody className="p-2">
+                  <CardBody className="p-5">
                     <ContactForm />
                   </CardBody>
                 </Card>
