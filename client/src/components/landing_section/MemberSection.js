@@ -43,18 +43,20 @@ class MemberSection extends Component {
                 width={person.photo.size}
                 height={person.photo.size}
               />
-              <h3 className="h5-responsive m-0">{person.name}</h3>
-              <Popover
-                component="button"
-                placement="auto"
-                popoverBody={<Fa style={{ fontSize: 1 + 'em' }} icon="info" />}
-                className="btn btn-floating primary-color btn-small"
-              >
-                <PopoverHeader className="my-auto h6-responsive primary-color text-left">
-                  {person.name}, {person.type}
-                </PopoverHeader>
-                <PopoverBody>{person.content}</PopoverBody>
-              </Popover>
+              <div className="mt-2">
+                <h3 className="h5-responsive mb-2">{person.name}</h3>
+                <Popover
+                  component="button"
+                  placement="auto"
+                  popoverBody="MORE INFO"
+                  className="small badge-pill badge-primary  border-primary px-4 py-1 m-0"
+                >
+                  <PopoverHeader className="my-auto h6-responsive primary-color text-left">
+                    {person.name}, {person.type}
+                  </PopoverHeader>
+                  <PopoverBody>{person.content}</PopoverBody>
+                </Popover>
+              </div>
             </div>
           )}
         </MemberCard>

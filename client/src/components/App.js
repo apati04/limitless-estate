@@ -12,6 +12,7 @@ import Contact from '../pages/Contact';
 import Columbus from '../pages/markets/Columbus';
 import Ecorse from '../pages/markets/Ecorse';
 import Phoenix from '../pages/markets/Phoenix';
+import TucsonSDP from '../pages/markets/TucsonSDP';
 import Legal from '../pages/Legal';
 import ColSum from '../pages/columbus';
 import DetSum from '../pages/detroit';
@@ -65,22 +66,14 @@ class App extends Component {
               />
               <Route exact path="/resources/faq" component={Faq} />
               <Route exact path="/legal" component={Legal} />
-              <Route
-                exact
-                path="/markets/columbus/summary"
-                component={ColSum}
-              />
-              <Route exact path="/markets/tucson/summary" component={Tucson} />
-              <Route exact path="/markets/detroit/summary" component={DetSum} />
+              <Route exact path="/markets/columbus/" component={ColSum} />
+              <Route exact path="/markets/tucson/" component={Tucson} />
+              <Route exact path="/markets/detroit/" component={DetSum} />
               <Route exact path="/markets/detroit/sdp" component={Ecorse} />
-              <Route
-                exact
-                path="/markets/phoenix/summary"
-                component={PhoenixSum}
-              />
+              <Route exact path="/markets/phoenix/" component={PhoenixSum} />
               <Route exact path="/markets/phoenix/sdp" component={Phoenix} />
               <Route exact path="/markets/columbus/sdp" component={Columbus} />
-
+              <Route exact path="/markets/tucson/sdp" component={TucsonSDP} />
               <Route exact path="/markets" component={Markets} />
               <Route exact path="/info/contact" component={Contact} />
               <Route

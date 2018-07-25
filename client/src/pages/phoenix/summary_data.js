@@ -8,11 +8,9 @@ module.exports = [
   },
   {
     list: [
-      'Decreasing vacancy rate of 4.8% vs. 7.0% national average',
-      'Low unemployment rate of 4.4% vs. 5.2% national average',
-      'Current job growth of 2.1% vs. 1.6% national average',
-      '5% increase rent growth from prior year',
-      'According to the census bureau, the forecast calls for the state to add 1.8 million jobs and 3.8 million residents during the next 30 years, to reach 4.4 million jobs and 10.5 million residents'
+      'Population, job and rental rate growth all outpacing national average',
+      'Ranked 5th in U.S. for high-tech job growth and Top 10 fastest growing economies',
+      '3rd largest labor pool in the West'
     ]
   }
 ];

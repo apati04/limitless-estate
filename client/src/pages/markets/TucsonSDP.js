@@ -24,7 +24,7 @@ const styles = {
 };
 class Phoenix extends Component {
   render() {
-    const pdfId = '1h49lgYWehZqI1KPG28i8k1tESsCZkeLd';
+    const pdfId = '0B3W9M1aBbHv8dEpiTWNKQkFidEtsMU1oOU1zYnBHSVM1MG9F';
     return (
       <Card className="z-depth-0">
         <CardImage tag="div">
@@ -56,7 +56,7 @@ class Phoenix extends Component {
                     <Link to="/info/contact">
                       <button className="btn btn-primary">Contact Us</button>
                     </Link>
-                    <Link to="/markets/phoenix/">Back To Overview</Link>
+                    <Link to="/markets/tucson/">Back To Overview</Link>
                   </div>
                 </div>
               </div>

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { NavLink } from 'react-router-dom';
 import summary from './summary';
 import GoogleMap from '../../components/GoogleMap/GoogleMap';
 import {
@@ -29,6 +30,11 @@ class Tucson extends Component {
       );
     });
   };
+  renderList = () => {
+    return summary[1].list.map((listItem, index) => {
+      return <li key={'tucsonlist' + index}>{listItem}</li>;
+    });
+  };
   render() {
     const [lat, lng] = [32.2151078, -110.9765115];
     return (
@@ -42,7 +48,18 @@ class Tucson extends Component {
                   Tucson, AZ
                 </h3>
                 <div className="border-bottom" />
-                <div className="mt-4">{this.renderContent()}</div>
+                <div className="mt-4">
+                  {this.renderContent()}
+                  <ul>{this.renderList()}</ul>
+                </div>
+                <div className="text-center text-sm-left">
+                  <NavLink
+                    className="btn btn-lg btn-primary white-text"
+                    to="/markets/tucson/sdp"
+                  >
+                    Sample Deal Package
+                  </NavLink>
+                </div>
               </div>
             </div>
             <div

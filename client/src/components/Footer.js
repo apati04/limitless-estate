@@ -82,16 +82,16 @@ class NavFooter extends Component {
                 style={{ width: '60px' }}
               />
               <p>
-                <NavLink to="/markets/columbus/summary">Columbus, OH</NavLink>
+                <NavLink to="/markets/columbus/">Columbus, OH</NavLink>
               </p>
               <p>
-                <NavLink to="/markets/detroit/summary">Detroit, MI</NavLink>
+                <NavLink to="/markets/detroit/">Detroit, MI</NavLink>
               </p>
               <p>
-                <NavLink to="/markets/phoenix/summary">Phoenix, AZ</NavLink>
+                <NavLink to="/markets/phoenix/">Phoenix, AZ</NavLink>
               </p>
               <p>
-                <NavLink to="/markets/tucson/summary">Tucson, AZ</NavLink>
+                <NavLink to="/markets/tucson/">Tucson, AZ</NavLink>
               </p>
             </Col>
             <Col md="3" lg="3" xl="3" className="mb-4 pl-2">

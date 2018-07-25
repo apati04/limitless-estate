@@ -64,7 +64,7 @@ class Ecorse extends Component {
                       <button className="btn btn-primary">Contact Us</button>
                     </Link>
 
-                    <Link to="/markets/detroit/summary">Back To Overview</Link>
+                    <Link to="/markets/detroit">Back To Overview</Link>
                   </div>
                 </div>
               </div>

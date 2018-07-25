@@ -56,9 +56,7 @@ class Columbus extends Component {
                       </Link>
                     </div>
                     <div>
-                      <Link to="/markets/columbus/summary">
-                        Back to Overview
-                      </Link>
+                      <Link to="/markets/columbus/">Back to Overview</Link>
                     </div>
                   </div>
                 </div>

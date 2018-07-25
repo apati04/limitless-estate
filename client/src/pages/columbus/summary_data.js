@@ -8,11 +8,9 @@ module.exports = [
   },
   {
     list: [
-      'Decreasing vacancy rate of 4.1% vs. a 7.0% national average',
-      'Low unemployment rate of 4.2% vs. 5.2% national average',
-      'Current job growth of 1.9% vs. 1.6% national average',
-      'High rental rate growth',
-      'Future job growth over the next 10 years predicted to be 39.5%'
+      '14th most populous city in the U.S.',
+      'Future job growth over the next 10 years predicted to be 39.5%',
+      'Home of 14 Fortune 1000 headquarters and 5 fortune 500 headquarters'
     ]
   }
 ];

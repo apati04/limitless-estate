@@ -6,7 +6,7 @@ module.exports = [
     name: 'Michael Blank',
     type: 'Advisor',
     photo: {
-      url: `https://i.imgur.com/IzoAEXl.png`,
+      url: `https://i.imgur.com/kYfedZD.jpg`,
       size: '180px'
     },
     content:

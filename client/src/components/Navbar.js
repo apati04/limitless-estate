@@ -118,7 +118,7 @@ class Navigation extends Component {
                     exact
                     activeStyle={{ fontWeight: 400 }}
                     className="px-3 dropdown-item"
-                    to="/markets/columbus/summary"
+                    to="/markets/columbus/"
                   >
                     Columbus, OH
                   </NavLink>
@@ -126,7 +126,7 @@ class Navigation extends Component {
                     exact
                     activeStyle={{ fontWeight: 400 }}
                     className="px-3 dropdown-item"
-                    to="/markets/detroit/summary"
+                    to="/markets/detroit/"
                   >
                     Detroit, MI
                   </NavLink>
@@ -134,7 +134,7 @@ class Navigation extends Component {
                     exact
                     activeStyle={{ fontWeight: 400, color: 'white' }}
                     className="px-3 dropdown-item"
-                    to="/markets/phoenix/summary"
+                    to="/markets/phoenix/"
                   >
                     Phoenix, AZ
                   </NavLink>
@@ -142,7 +142,7 @@ class Navigation extends Component {
                     exact
                     activeStyle={{ fontWeight: 400 }}
                     className="px-3 dropdown-item"
-                    to="/markets/tucson/summary"
+                    to="/markets/tucson/"
                   >
                     Tucson, AZ
                   </NavLink>
