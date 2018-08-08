@@ -23,10 +23,9 @@ const meetupDescription = () => {
         We hold monthly meetups across the LA area. Locations and times include
       </p>
       <ul className="list-unstyled p-0">
-        <li>West LA: 1st week of the month</li>
-        <li>Long Beach / Lakewood: 2nd week of the month</li>
-        <li>South Bay: 3rd week of the month</li>
-        <li>Orange County: 4th week of the month</li>
+        <li key="meetup-0">West LA: 1st week of the month</li>
+        <li key="meetup-1">Long Beach / Lakewood: 2nd week of the month</li>
+        <li key="meetup-2">South Bay: 3rd week of the month</li>
       </ul>
       <p>
         Day and times vary by location. For the most up to date schedule and
