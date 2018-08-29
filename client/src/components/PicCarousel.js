@@ -7,7 +7,7 @@ class PicCarousel extends Component {
     const caption = (
       <div className="light-overlay">
         <Mask>
-          <div style={{ padding: '50px', marginTop: 4 + '%' }} className="row">
+          <div style={{ padding: '50px', marginTop: 8 + '%' }} className="row">
             <div className="col">
               <h2
                 style={{ color: 'white', marginBottom: 2 + '%' }}
@@ -72,7 +72,7 @@ class PicCarousel extends Component {
             />
             <div className="light-overlay">
               <Mask className="black-light">
-                <div className="row flex-center">
+                <div className="row justify-content-center flex-center">
                   <div className="col">
                     <div className="p-2 text-center text-white">
                       Our vision at Limitless Estates is to provide A-class
