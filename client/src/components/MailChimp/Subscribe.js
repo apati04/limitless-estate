@@ -20,34 +20,58 @@ class Subscribe extends Component {
   };
   render() {
     const { values, errors, touched, isSubmitting } = this.props;
+    console.log('line23: ', this.props);
     return (
-      <div>
-        <Form>
-          <div className="row">
-            <div className="col-md-6">
-              <Field
-                component="input"
-                className="form-control"
-                type="email"
-                name="email"
-                placeholder="Your Email Address"
-              />
-              {touched.email &&
-                errors.email && (
-                  <small className="font-italic text-danger">
-                    {errors.email}
-                  </small>
-                )}
+      <section>
+        <div className="container">
+          <Form>
+            <div className="row justify-content-around align-items-center py-4">
+              <div className="col-md-4">
+                <img
+                  src="https://i.imgur.com/k5GoGK6.png"
+                  className="img-fluid"
+                  style={{
+                    display: 'block',
+                    marginLeft: 'auto',
+                    marginRight: 'auto'
+                  }}
+                />
+              </div>
+              <div className="col-auto py-2">
+                <div>
+                  <h1 className="h1-responsive text-left">
+                    Subscribe to Our Newsletter
+                  </h1>
+                </div>
+                <div className=" md-form input-group">
+                  <Field
+                    component="input"
+                    className="form-control p-0"
+                    type="email"
+                    name="email"
+                    placeholder="Your Email Address"
+                  />
+                  {/* {touched.email &&
+                    errors.email && (
+                      <small className="font-italic text-danger">
+                        {errors.email}
+                      </small>
+                    )} */}
+
+                  <span className="input-group-btn">
+                    <button
+                      type="submit"
+                      className="btn btn-outline primary-color"
+                    >
+                      Subscribe
+                    </button>
+                  </span>
+                </div>
+              </div>
             </div>
-            <div className="col-md-6">
-              <button type="submit" className="btn btn-outline primary-color">
-                {' '}
-                Subscribe
-              </button>
-            </div>
-          </div>
-        </Form>
-      </div>
+          </Form>
+        </div>
+      </section>
     );
   }
 }
