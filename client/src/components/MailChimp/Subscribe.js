@@ -54,7 +54,6 @@ class Subscribe extends Component {
 
 export default withFormik({
   mapPropsToValues({ email = '' }) {
-    console.log('mapprops: ', email);
     return { email };
   },
   validationSchema: Yup.object().shape({
@@ -65,6 +64,6 @@ export default withFormik({
   async handleSubmit(values, { resetForm, setErrors, setSubmitting }) {
     const subscribe = await axios.post('/api/mailchimp/subscribe', values);
 
-    console.log('handlesubmit: ', values);
+    console.log('handlesubmit: ', subscribe);
   }
 })(Subscribe);
