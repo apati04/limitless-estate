@@ -28,6 +28,7 @@ import Risks_PageTwo from '../pages/articles/investing_risks/page_2';
 import MeetUps from '../pages/MeetUps/MeetUps';
 import GoogleMap from './GoogleMap/GoogleMap';
 
+import Subscribe from './MailChimp/Subscribe';
 const Mapevent = () => {
   return (
     <div style={{ width: '100%', height: '1000px' }}>
@@ -44,6 +45,7 @@ class App extends Component {
             <Header />
 
             <Switch>
+              <Route exact path="/tester" component={Subscribe} />
               <Route exact path="/mapgoog" component={Mapevent} />
               <Route exact path="/" component={LandingPage} />
               <Route path="/events/meetups" component={MeetUps} />
