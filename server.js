@@ -310,7 +310,7 @@ app.post('/api/mailchimp/subscribe', async (req, res) => {
       json: true
     }
   });
-  res.send(sub.data);
+  res.send({ results: sub.data });
 });
 // app.get('*', function(req, res) {
 //   app.use(express.static('client/public'));

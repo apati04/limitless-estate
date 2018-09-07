@@ -10,9 +10,18 @@ import {
 import { withFormik, Form, Field } from 'formik';
 import Yup from 'yup';
 import axios from 'axios';
+const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
+
 class Subscribe extends Component {
   state = {
     modal: false
+  };
+  toggle = e => {
+    const { resetForm, setSubmitting } = this.props;
+    let isValid = true;
+    resetForm();
+    setSubmitting(false);
+    this.setState({ modal: !this.state.modal });
   };
   onSubmit = e => {
     // check if email is missing
@@ -20,7 +29,6 @@ class Subscribe extends Component {
   };
   render() {
     const { values, errors, touched, isSubmitting } = this.props;
-    console.log('line23: ', this.props);
     return (
       <section>
         <div className="container">
@@ -61,7 +69,9 @@ class Subscribe extends Component {
                   <span className="input-group-btn">
                     <button
                       type="submit"
+                      onClick={this.toggle}
                       className="btn btn-outline primary-color"
+                      disabled={isSubmitting}
                     >
                       Subscribe
                     </button>
@@ -70,6 +80,21 @@ class Subscribe extends Component {
               </div>
             </div>
           </Form>
+
+          <div className="d-flex flex-center">
+            <Modal
+              className="modal-dialog modal-dialog-centered"
+              isOpen={this.state.modal}
+              toggle={this.toggle}
+            >
+              <ModalHeader>Thank you for subscribing!</ModalHeader>
+              <ModalFooter>
+                <button className="btn btn-secondary" onClick={this.toggle}>
+                  Close
+                </button>
+              </ModalFooter>
+            </Modal>
+          </div>
         </div>
       </section>
     );
@@ -86,8 +111,6 @@ export default withFormik({
       .required('Required')
   }),
   async handleSubmit(values, { resetForm, setErrors, setSubmitting }) {
-    const subscribe = await axios.post('/api/mailchimp/subscribe', values);
-
-    console.log('handlesubmit: ', subscribe);
+    const req = axios.post('/api/mailchimp/subscribe', values);
   }
 })(Subscribe);
