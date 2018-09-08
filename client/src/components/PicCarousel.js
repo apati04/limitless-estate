@@ -53,27 +53,32 @@ class PicCarousel extends Component {
         </Mask>
       </div>
     );
-
+    const styles = {
+      header: {
+        padding: '0',
+        background: 'url(https://i.imgur.com/BI90AZ5.jpg?2) center no-repeat',
+        backgroundSize: 'cover',
+        height: 40 + 'em'
+      },
+      mobileHeader: {
+        padding: '0',
+        background: 'url(https://i.imgur.com/BI90AZ5.jpg?2) center no-repeat',
+        backgroundSize: 'cover',
+        height: 25 + 'em'
+      }
+    };
     return (
       <section>
-        <div style={{ height: '100%' }} className="d-none d-md-block">
+        <div className="d-none d-md-block">
           <View>
-            <img
-              className="img-fluid w-100 d-block"
-              src="https://i.imgur.com/BI90AZ5.jpg?2"
-              alt="First Slide"
-            />
+            <div style={styles.header} />
             <div>{caption}</div>
           </View>
         </div>
 
         <div className="d-block d-md-none">
           <View>
-            <img
-              className="d-block w-100"
-              src="https://i.imgur.com/BI90AZ5.jpg?1"
-              alt="First Slide"
-            />
+            <div style={styles.mobileHeader} />
             <div className="light-overlay">
               <Mask className="black-light container">
                 <div className="row justify-content-center flex-center">
