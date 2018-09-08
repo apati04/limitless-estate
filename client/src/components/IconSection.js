@@ -3,17 +3,16 @@ import IconTemplate from './IconTemplate';
 import { View, Mask } from 'mdbreact';
 const IconSection = () => {
   return (
-    <div style={{ height: 23 + 'em', display: 'block' }}>
+    <div style={{ height: 'auto', display: 'block' }}>
       <div
         className="row 
-      flex-column flex-md-row justify-content-around flex-center p-2"
+      flex-column flex-md-row justify-content-around flex-center p-5"
       >
         <IconTemplate
           icon="fas fa-child"
           title="Impacting Lives"
           fontSize={3 + 'em'}
         />
-
         <IconTemplate
           icon="fas fa-users"
           title="Community Development"
