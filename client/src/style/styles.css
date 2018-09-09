@@ -237,3 +237,9 @@ footer.page-footer {
     width: auto;
   }
 }
+@media screen and (max-width: 768px) {
+  #youtubeVideo {
+     visibility: hidden;
+     display: none;
+  }
+}

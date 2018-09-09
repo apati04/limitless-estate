@@ -67,7 +67,7 @@ class MemberSection extends Component {
     return (
       <section className="text-center">
         <div className="rgba-white-light p-2">
-          <div className="container rgba-white-strong">
+          <div className="container rgba-white-strong py-4">
             <h1 className="h1-responsive pt-2 team-header ">Meet the Team</h1>
             <hr />
             <div className="row justify-content-around align-items-center flex-wrap">
@@ -77,7 +77,7 @@ class MemberSection extends Component {
         </div>
         <div>
           <div className=" h-100 p-2 mdb-color lighten-1">
-            <div className="container mb-5 text-white">
+            <div className="container mb-5 text-white py-4">
               <h1 className="pt-2 h1-responsive team-header">Our Advisors</h1>
               <hr />
               <div

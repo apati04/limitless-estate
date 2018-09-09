@@ -23,9 +23,9 @@ export default props => {
               <h3 className="text-center h3-responsive mt-4">
                 Lalita Patipaksiri
               </h3>
-              <h5 className="mt-2 h5-responsive text-center">Vice President</h5>
-              <p className="mx-auto mt-2 text-center">
-                Investor | Entrepreneur | Athlete | Operator
+              <h5 className="h5-responsive text-center">Vice President</h5>
+              <p className="mx-auto text-center">
+                Entrepreneur | Athlete | Operator
               </p>
             </div>
 
@@ -43,11 +43,15 @@ export default props => {
                 social media marketing.
               </p>
               <p className="mt-1">
-                <strong>Early Life: </strong>At a young age, I quickly learned
-                the meaning of discipline and dedication. I picked up the game
-                of golf when I was 10, was playing in competitive tournaments by
-                the time I was 13, and by the time I was 17, I had traveled and
-                competed in 34 of 50 states.
+              <strong>Real Estate: </strong>I am the Co-Founder and Vice President of Limitless Estates, LLC. I am involved with all aspects of the company such as research, acquisitions, management, operations, and marketing, but have a specific focus on investor relations. I have been successful at raising over $300k to fund my own sponsorship throughout the course of 3 years during my time as a professional athlete. Through experience, I can highlight the fact that the importance of a company’s sponsorship success is defined by the end result being beneficial to both parties and the importance to have an alignment of passion and goals.
+              </p>
+              <p className="mt-1">
+                <strong>Early Life: </strong>
+                At a young age, I quickly learned the meaning of discipline and
+                dedication. I picked up the game of golf when I was 10, was
+                playing in competitive tournaments by the time I was 13, and by
+                the time I was 17, I had traveled and competed in 34 of 50
+                states.
               </p>
               <p className="mt-1">
                 <strong>Education & Amateur Status: </strong>I attended UC
@@ -79,13 +83,13 @@ export default props => {
                 Altered Course Montego Bay.
               </p>
               <p className="mt-1">
-                <strong>Golf Industry: </strong>For the past 2 years, I have
-                worked for Strato Partners as a Regional Sales Director and
-                Assistant General Manager. Within this job, I have made myself
-                familiar and competent with defining what is important in
-                managing a $4 million+ business. Strato Partners make it a #1
-                priority to have each and every guest leave with a great
-                customer experience.
+                <strong>Golf Industry: </strong>
+                For the past 2 years, I have worked for Strato Partners as a
+                Regional Sales Director and Assistant General Manager. Within
+                this job, I have made myself familiar and competent with
+                defining what is important in managing a $4 million+ business.
+                Strato Partners make it a #1 priority to have each and every
+                guest leave with a great customer experience.
               </p>
               <p className="mt-1">
                 <strong>Other: </strong>I constantly set goals for myself,

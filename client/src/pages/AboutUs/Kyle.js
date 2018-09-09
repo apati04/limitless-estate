@@ -25,8 +25,8 @@ class Kyle extends Component {
                 <h3 className="h3-responsive text-center mt-4">
                   Kyle Mitchell
                 </h3>
-                <h5 className="mt-2 h5-responsive text-center">President</h5>
-                <p className="mt-2 text-center">
+                <h5 className="h5-responsive text-center">President</h5>
+                <p className="text-center">
                   Investor | Entrepreneur | Business Owner | Operator
                 </p>
               </div>

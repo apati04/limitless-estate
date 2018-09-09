@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 import { View, Mask, Button } from 'mdbreact';
 import classNames from 'classnames';
 import YoutubeVideo from './Youtube/Intro';
+import MobileYoutube from './Youtube/MobileIntro';
 class PicCarousel extends Component {
   render() {
     const caption = (
@@ -35,7 +36,7 @@ class PicCarousel extends Component {
               </h4>
               <div
                 style={{ marginTop: 4 + '%' }}
-                className="d-none d-md-block text-left h4-responsive"
+                className="d-none d-md-block text-center h4-responsive"
               >
                 <NavLink
                   style={{ borderRadius: '99px' }}
@@ -46,7 +47,7 @@ class PicCarousel extends Component {
                 </NavLink>
               </div>
             </div>
-            <div className="col-6">
+            <div  className="col-6">
               <YoutubeVideo />
             </div>
           </div>
@@ -126,7 +127,7 @@ class PicCarousel extends Component {
             </div>
           </View>
           <div className="rgba-stylish-slight p-1">
-            <YoutubeVideo />
+            <MobileYoutube />
           </div>
         </div>
       </section>

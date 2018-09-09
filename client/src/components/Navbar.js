@@ -45,10 +45,10 @@ class Navigation extends Component {
         dark
         expand="lg"
         sticky="top"
-        style={{ borderRadius: 0 }}
+        style={{ borderRadius: 0, height: '90px' }}
         className="primary-color-dark"
       >
-        <Container className="mx-0 mw-100">
+        <Container>
           <Link to="/">
             <img
               height="42"
