@@ -128,7 +128,7 @@ class PicCarousel extends Component {
             </div>
           </View>
           <div className="rgba-stylish-slight p-1">
-            <MobileYoutube />
+            <Limitless />
           </div>
         </div>
       </section>
