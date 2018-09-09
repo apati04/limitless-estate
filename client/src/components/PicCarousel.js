@@ -4,6 +4,7 @@ import { View, Mask, Button } from 'mdbreact';
 import classNames from 'classnames';
 import YoutubeVideo from './Youtube/Intro';
 import MobileYoutube from './Youtube/MobileIntro';
+import Limitless from './wistia/limitless';
 class PicCarousel extends Component {
   render() {
     const caption = (
@@ -47,8 +48,8 @@ class PicCarousel extends Component {
                 </NavLink>
               </div>
             </div>
-            <div  className="col-6">
-              <YoutubeVideo />
+            <div className="col-6">
+              <Limitless />
             </div>
           </div>
         </Mask>
