@@ -149,7 +149,7 @@ q9 : risk {riskTolerance}
     address: email
   };
   const mailOptions = {
-    from: `"${fullname}" <${email}>`,
+    from: `"Andrew Patipaksiri" <${email}>`,
     to: 'kmitchell@limitless-estates.com',
     cc: ['lpatipaksiri@limitless-estates.com', 'andrew.patipak@gmail.com'],
     subject: `Investor Questionnaire - ${fullname}`,
