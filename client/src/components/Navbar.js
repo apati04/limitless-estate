@@ -79,7 +79,7 @@ class Navigation extends Component {
                   exact
                   style={{ color: 'white', letterSpacing: '0.5px' }}
                   activeStyle={{
-                    borderBottom: '2px white solid',
+                    borderBottom: '1px white solid',
                     outline: 0
                   }}
                   to="/"
@@ -92,7 +92,7 @@ class Navigation extends Component {
                   exact
                   style={{ color: 'white', letterSpacing: '0.5px' }}
                   activeStyle={{
-                    borderBottom: '2px white solid',
+                    borderBottom: '1px white solid',
                     outline: 0
                   }}
                   to="/members/about/"
@@ -122,14 +122,14 @@ class Navigation extends Component {
                   >
                     Columbus, OH
                   </NavLink>
-                  <NavLink
+                  {/* <NavLink
                     exact
                     activeStyle={{ fontWeight: 400 }}
                     className="px-3 dropdown-item"
                     to="/markets/detroit/"
                   >
                     Detroit, MI
-                  </NavLink>
+                  </NavLink> */}
                   <NavLink
                     exact
                     activeStyle={{ fontWeight: 400, color: 'white' }}
@@ -208,7 +208,7 @@ class Navigation extends Component {
                   exact
                   style={{ color: 'white', letterSpacing: '0.5px' }}
                   activeStyle={{
-                    borderBottom: '2px white solid',
+                    borderBottom: '1px white solid',
                     outline: 0
                   }}
                   to="/info/questionnaire"
@@ -222,7 +222,7 @@ class Navigation extends Component {
                   exact
                   style={{ color: 'white', letterSpacing: '0.5px' }}
                   activeStyle={{
-                    borderBottom: '2px white solid',
+                    borderBottom: '1px white solid',
                     outline: 0
                   }}
                   to="/events/meetups"
@@ -235,7 +235,7 @@ class Navigation extends Component {
                   exact
                   style={{ color: 'white', letterSpacing: '0.5px' }}
                   activeStyle={{
-                    borderBottom: '2px white solid',
+                    borderBottom: '1px white solid',
                     outline: 0
                   }}
                   to="/info/contact"
