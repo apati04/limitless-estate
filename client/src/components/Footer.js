@@ -85,9 +85,6 @@ class NavFooter extends Component {
                 <NavLink to="/markets/columbus/">Columbus, OH</NavLink>
               </p>
               <p>
-                <NavLink to="/markets/detroit/">Detroit, MI</NavLink>
-              </p>
-              <p>
                 <NavLink to="/markets/phoenix/">Phoenix, AZ</NavLink>
               </p>
               <p>
