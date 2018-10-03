@@ -3,10 +3,11 @@ import IconTemplate from './IconTemplate';
 import { View, Mask } from 'mdbreact';
 const IconSection = () => {
   return (
-    <div style={{ height: 'auto', display: 'block' }}>
+    <div className="container p-0" style={{ height: 'auto' }}>
       <div
-        className="row 
-      flex-column flex-md-row justify-content-around flex-center p-5"
+        className="row flex-column
+      flex-sm-row justify-content-around align-items-center flex-center flex-nowrap"
+        style={{ paddingTop: '60px', paddingBottom: '50px' }}
       >
         <IconTemplate
           icon="fas fa-child"
