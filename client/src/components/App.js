@@ -29,13 +29,6 @@ import MeetUps from '../pages/MeetUps/MeetUps';
 import GoogleMap from './GoogleMap/GoogleMap';
 
 import Subscribe from './MailChimp/Subscribe';
-const Mapevent = () => {
-  return (
-    <div style={{ width: '100%', height: '1000px' }}>
-      <GoogleMap />
-    </div>
-  );
-};
 class App extends Component {
   render() {
     return (
@@ -43,10 +36,7 @@ class App extends Component {
         <ScrollToTop>
           <div>
             <Header />
-
             <Switch>
-              <Route exact path="/tester" component={Subscribe} />
-              <Route exact path="/mapgoog" component={Mapevent} />
               <Route exact path="/" component={LandingPage} />
               <Route path="/events/meetups" component={MeetUps} />
               <Route path="/members/about/" component={AboutUs} />

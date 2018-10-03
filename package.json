@@ -4,8 +4,8 @@
   "description": "Mern Demo",
   "main": "server.js",
   "engines": {
-    "node": "10.5.0",
-    "npm": "6.1.0"
+    "node": "10.11.0",
+    "npm": "6.4.1"
   },
   "scripts": {
     "server": "node server.js",

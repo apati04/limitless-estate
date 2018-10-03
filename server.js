@@ -46,7 +46,7 @@ app.post('/api/sendmail', (req, res) => {
   const fullname = firstname + ' ' + lastname;
 
   const mailOptions = {
-    from: `"${fullname}" <${email}>`,
+    from: `"Andrew Patipaksiri" <andrew.patipak@gmail.com>`,
     to: 'kmitchell@limitless-estates.com',
     cc: ['lpatipaksiri@limitless-estates.com', 'andrew.patipak@gmail.com'],
     subject: `Contact Form- ${firstname}`,
@@ -149,7 +149,7 @@ q9 : risk {riskTolerance}
     address: email
   };
   const mailOptions = {
-    from: `"Andrew Patipaksiri" <${email}>`,
+    from: `"Andrew Patipaksiri" <andrew.patipak@gmail.com>`,
     to: 'kmitchell@limitless-estates.com',
     cc: ['lpatipaksiri@limitless-estates.com', 'andrew.patipak@gmail.com'],
     subject: `Investor Questionnaire - ${fullname}`,
