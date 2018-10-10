@@ -201,7 +201,7 @@ input[type='radio'] {
 }
 .light-overlay {
   position: absolute;
-  background-color: rgba(0, 0, 0, 0.25);
+  background-color: rgba(12, 12, 12, 0.5);
   top: 0;
   left: 0;
   width: 100%;
@@ -209,7 +209,7 @@ input[type='radio'] {
 }
 .dark-overlay {
   position: absolute;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.6);
   top: 0;
   left: 0;
   width: 100%;
@@ -239,7 +239,7 @@ footer.page-footer {
 }
 @media screen and (max-width: 768px) {
   #youtubeVideo {
-     visibility: hidden;
-     display: none;
+    visibility: hidden;
+    display: none;
   }
 }
