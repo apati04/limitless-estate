@@ -45,7 +45,7 @@ class Navigation extends Component {
         dark
         expand="lg"
         sticky="top"
-        style={{ borderRadius: 0, height: '90px' }}
+        style={{ borderRadius: 0, minHeight: '90px' }}
         className="primary-color-dark"
       >
         <Container>
@@ -64,8 +64,8 @@ class Navigation extends Component {
               style={{
                 display: 'flex',
                 justifyContent: 'end',
-                alignItems: 'center',
                 textTransform: 'uppercase',
+                alignItems: 'baseline',
                 fontSize: '13px',
                 fontWeight: 400,
                 lineHeight: '20px',
@@ -74,7 +74,7 @@ class Navigation extends Component {
                 marginTop: 0
               }}
             >
-              <NavItem className="px-2">
+              <NavItem className="p-2">
                 <NavLink
                   exact
                   style={{ color: 'white', letterSpacing: '0.5px' }}
@@ -87,7 +87,7 @@ class Navigation extends Component {
                   Home
                 </NavLink>
               </NavItem>
-              <NavItem className="px-2">
+              <NavItem className="p-2">
                 <NavLink
                   exact
                   style={{ color: 'white', letterSpacing: '0.5px' }}
@@ -203,7 +203,7 @@ class Navigation extends Component {
                   </NavLink>
                 </div>
               </div>
-              <NavItem className="px-2">
+              <NavItem className="p-2">
                 <NavLink
                   exact
                   style={{ color: 'white', letterSpacing: '0.5px' }}
@@ -216,8 +216,7 @@ class Navigation extends Component {
                   Questionnaire
                 </NavLink>
               </NavItem>
-
-              <NavItem className="px-2">
+              <NavItem className="p-2">
                 <NavLink
                   exact
                   style={{ color: 'white', letterSpacing: '0.5px' }}
@@ -230,7 +229,7 @@ class Navigation extends Component {
                   Events
                 </NavLink>
               </NavItem>
-              <NavItem className="px-2">
+              <NavItem className="p-2">
                 <NavLink
                   exact
                   style={{ color: 'white', letterSpacing: '0.5px' }}
