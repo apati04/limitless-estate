@@ -121,7 +121,25 @@ class NavFooter extends Component {
         >
           <Container>
             <div className="row">
-              <div className="col-6 ml-auto">
+              <div className="col">
+                <i
+                  style={{
+                    padding: '3px 3px',
+                    backgroundColor: '#0077B5',
+                    borderRadius: '5px',
+                    color: 'white',
+                    fontSize: 1.5 + 'rem'
+                  }}
+                  className="fab fa-linkedin"
+                />
+              </div>
+              <div className="col">
+                <IconTemplate icon="fas fa-child" fontSize={1 + 'rem'} />
+              </div>
+              <div className="col">
+                <IconTemplate icon="fas fa-child" fontSize={1 + 'rem'} />
+              </div>
+              <div className="col-md-3">
                 &copy; {new Date().getFullYear()} Copyright: Limitless Estates,
                 L.L.C. | Powered by: AiTech
               </div>
