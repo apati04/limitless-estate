@@ -117,11 +117,15 @@ class NavFooter extends Component {
         </Container>
         <div
           style={{ color: 'white' }}
-          className="footer-copyright text-center p-3"
+          className="footer-copyright text-center py-3"
         >
-          <Container fluid>
-            &copy; {new Date().getFullYear()} Copyright: Limitless Estates,
-            L.L.C. | Powered by: AiTech
+          <Container>
+            <div className="row">
+              <div className="col-6 ml-auto">
+                &copy; {new Date().getFullYear()} Copyright: Limitless Estates,
+                L.L.C. | Powered by: AiTech
+              </div>
+            </div>
           </Container>
         </div>
       </Footer>
