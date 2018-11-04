@@ -43,11 +43,10 @@ class Kyle extends Component {
                 </p>
                 <p className="mt-1">
                   <strong>Real Estate Investor: </strong> I have been investing
-                  in income producing Real Estate since 2015, I currently own 10
-                  single family homes in 4 different markets (California,
-                  Illinois, Ohio & Arkansas) totaling to $1.2 million. My goal
-                  for 2018 is to own 160 apartment units and my 5-year goal is
-                  to own 1,000 apartment units.
+                  in income producing Real Estate since 2015, I currently own 9
+                  single family homes in 3 different markets (Illinois, Ohio & Arkansas) totaling to $1.2 million. My goal
+                  for 2019 is to own 400 apartment units and my 5-year goal is
+                  to own 5,000 apartment units.
                 </p>
                 <p className="mt-1">
                   <strong>Club Pilates: </strong>I am a Club Pilates franchise
@@ -72,7 +71,7 @@ class Kyle extends Component {
                   commissions back to local charities.
                 </p>
                 <p className="mt-1">
-                  <strong>American Golf: </strong>I am a Regional Manager for
+                  <strong>American Golf: </strong>Previously a Regional Manager for
                   American Golf and have 15+ years of experience in operations
                   management including overseeing more than $18 million in
                   revenue and 225+ team members. I began working for American
