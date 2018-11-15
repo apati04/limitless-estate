@@ -110,7 +110,7 @@ class PicCarousel extends Component {
                         style={{ whiteSpace: 'nowrap' }}
                         className="btn btn-sm btn-primary btn-rounded align-items-center"
                       >
-                        Schedule an appointment{' '}
+                        Schedule a Call{' '}
                         <i
                           className="fa fa-volume-control-phone"
                           aria-hidden="true"
