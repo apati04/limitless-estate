@@ -250,7 +250,7 @@ class Navigation extends Component {
                   style={{ whiteSpace: 'nowrap', fontSize: '14px' }}
                   className="btn btn-sm btn-success btn-rounded"
                 >
-                  Schedule an appointment{' '}
+                  Schedule a Call{' '}
                   <i
                     className="fa fa-phone"
                     style={{
