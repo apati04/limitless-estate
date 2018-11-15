@@ -23,7 +23,7 @@ export default props => {
               <h3 className="text-center h3-responsive mt-4">
                 Lalita Patipaksiri
               </h3>
-              <h5 className="h5-responsive text-center">Vice President</h5>
+              <h5 className="h5-responsive text-center">Managing Partner</h5>
               <p className="mx-auto text-center">
                 Entrepreneur | Athlete | Operator
               </p>
