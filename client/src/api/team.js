@@ -1,7 +1,7 @@
 module.exports = [
   {
     name: 'Kyle Mitchell',
-    title: 'President',
+    title: 'Managing Partner',
     type: 'Team',
     photo: {
       url: `https://i.imgur.com/qC2iaYa.jpg?1`,
@@ -12,7 +12,7 @@ module.exports = [
   },
   {
     name: 'Lalita Patipaksiri',
-    title: 'Vice President',
+    title: 'Managing Partner',
     type: 'Team',
     photo: {
       url: `https://i.imgur.com/Lok4G0b.jpg?1`,
