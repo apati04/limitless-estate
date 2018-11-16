@@ -32,21 +32,11 @@ class Kyle extends Component {
               </div>
               <div style={{ textAlign: 'justify' }} className="mt-4">
                 <p className="mt-1">
-                  My passion is in helping others reach their goals in all areas
-                  of life by doing things the right way and creating long
-                  lasting relationships based on trust and clarity. I have
-                  experience with operations management; staff development;
-                  revenue generation; expense management; food & beverage
-                  operations; budgeting; sales; capital improvement projects;
-                  single family homes; buying and selling real estate; and
-                  operating boutique fitness studios.
+                  My passion is in helping others reach their goals in all areas of life by doing things the right way and creating long lasting relationships based on trust and clarity.  I have experience with operations management; staff development; revenue generation; expense management; food & beverage operations; budgeting; sales; capital improvement projects; single family homes; buying and selling real estate; and operating boutique fitness studios.
                 </p>
                 <p className="mt-1">
-                  <strong>Real Estate Investor: </strong> I have been investing
-                  in income producing Real Estate since 2015, I currently own 9
-                  single family homes in 3 different markets (Illinois, Ohio & Arkansas) totaling to $1.2 million. My goal
-                  for 2019 is to own 400 apartment units and my 5-year goal is
-                  to own 5,000 apartment units.
+                  <strong>Real Estate Investor: </strong> I have been investing in income producing Real Estate since 2015, I currently own 9 single family homes in 3 different markets (Illinois, Ohio & Arkansas) totaling to $1 million.  I am Managing Partner and Co-Founder of Limitless Estates, LLC, our vision at Limitless Estates is to provide A class living to lower income housing by putting our residents first and instilling a sense of community while inspiring others to do the same. 
+My goal for 2019 is to own 400 apartment units and my 5-year goal is to own 5,000 apartment units.
                 </p>
                 <p className="mt-1">
                   <strong>Club Pilates: </strong>I am a Club Pilates franchise
