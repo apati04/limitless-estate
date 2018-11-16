@@ -43,7 +43,7 @@ export default props => {
                 social media marketing.
               </p>
               <p className="mt-1">
-              <strong>Real Estate: </strong>I am the Co-Founder and Vice President of Limitless Estates, LLC. I am involved with all aspects of the company such as research, acquisitions, management, operations, and marketing, but have a specific focus on investor relations. I have been successful at raising over $300k to fund my own sponsorship throughout the course of 3 years during my time as a professional athlete. Through experience, I can highlight the fact that the importance of a company’s sponsorship success is defined by the end result being beneficial to both parties and the importance to have an alignment of passion and goals.
+              <strong>Real Estate: </strong>I am the Co-Founder and Managing Partner of Limitless Estates, LLC. I am involved with all aspects of the company such as research, acquisitions, management, operations, and marketing, but have a specific focus on investor relations. I have been successful at raising over $300k to fund my own sponsorship throughout the course of 3 years during my time as a professional athlete. Through experience, I can highlight the fact that the importance of a company’s sponsorship success is defined by the end result being beneficial to both parties and the importance to have an alignment of passion and goals.
               </p>
               <p className="mt-1">
                 <strong>Early Life: </strong>
@@ -84,12 +84,7 @@ export default props => {
               </p>
               <p className="mt-1">
                 <strong>Golf Industry: </strong>
-                For the past 2 years, I have worked for Strato Partners as a
-                Regional Sales Director and Assistant General Manager. Within
-                this job, I have made myself familiar and competent with
-                defining what is important in managing a $4 million+ business.
-                Strato Partners make it a #1 priority to have each and every
-                guest leave with a great customer experience.
+                Since July 2016, I have worked for Strato Partners as a Regional Sales Director and Assistant General Manager. In just 2 years, I now hold the position of General Manager. Within this job, I have made myself familiar and competent with defining what is important in managing a $4 million+ business. Strato Partners make it a #1 priority to have each and every guest leave with a great customer experience.
               </p>
               <p className="mt-1">
                 <strong>Other: </strong>I constantly set goals for myself,
