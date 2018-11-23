@@ -1,34 +1,35 @@
-import React, { Component } from 'react';
-import { NavLink } from 'react-router-dom';
-import {
-  Button,
-  Card,
-  CardBody,
-  CardText,
-  CardImage,
-  CardTitle,
-  Fa
-} from 'mdbreact';
-import { nuView, uDirect } from '../api/nuView';
+import React, { Component } from "react";
+import { Card, CardBody, CardText, CardImage, Fa } from "mdbreact";
+import { nuView, uDirect } from "../api/nuView";
 
 export default class SupportCo extends Component {
   renderInfo(company) {
-    const { name, phone, address, email, website, misc, logo } = company;
+    const {
+      name,
+      contact,
+      phone,
+      address,
+      email,
+      website,
+      misc,
+      logo
+    } = company;
     return (
       <Card className="my-4">
         <a target="_blank" rel="noopener" className="w-100" href={website}>
           <CardImage
-            style={{ height: 10 + 'em' }}
+            style={{ height: 10 + "em" }}
             className="mw-100 mx-auto p-4 d-block img-fluid"
             src={logo}
             alt="logo"
           />
         </a>
 
-        <CardBody style={{ minHeight: 20 + 'em' }}>
+        <CardBody style={{ minHeight: 20 + "em" }}>
           <div className="container">
             <div className="h-100 row flex-center">
               <div className="col-12 my-2 pr-0 m-0">
+                <h2>{contact}</h2>
                 <Fa size="md" icon="phone" className="mr-2" />
                 <CardText className="pl-1 d-inline">{phone}</CardText>
               </div>
@@ -38,7 +39,7 @@ export default class SupportCo extends Component {
               </div>
               <div className="col-12 my-2 d-flex">
                 <Fa
-                  style={{ color: 'blue' }}
+                  style={{ color: "blue" }}
                   size="md"
                   icon="external-link"
                   className="mr-2"
@@ -51,7 +52,7 @@ export default class SupportCo extends Component {
               </div>
               <div className="col-12 my-2 d-flex">
                 <Fa
-                  style={{ color: 'blue' }}
+                  style={{ color: "blue" }}
                   size="md"
                   icon="location-arrow"
                   className="mr-2"
@@ -73,7 +74,7 @@ export default class SupportCo extends Component {
                 <div className="mt-2 text-center">
                   <a
                     role="button"
-                    style={{ textDecoration: 'none', color: 'white' }}
+                    style={{ textDecoration: "none", color: "white" }}
                     target="_blank"
                     className="btn btn-primary btn-block text-white"
                     rel="noopener"
@@ -92,11 +93,11 @@ export default class SupportCo extends Component {
   render() {
     const styles = {
       header: {
-        padding: '0',
+        padding: "0",
         background:
-          'url(https://i.imgur.com/1z653Y0.jpg?1) center center no-repeat',
-        backgroundSize: 'cover',
-        height: 25 + 'em'
+          "url(https://i.imgur.com/1z653Y0.jpg?1) center center no-repeat",
+        backgroundSize: "cover",
+        height: 25 + "em"
       }
     };
     return (
@@ -104,7 +105,7 @@ export default class SupportCo extends Component {
         <div style={styles.header}>
           <div className="light-overlay">
             <div
-              style={{ height: 25 + 'em' }}
+              style={{ height: 25 + "em" }}
               className="row mb-5 justify-content-center align-items-center"
             >
               <div className="col-8 text-left">

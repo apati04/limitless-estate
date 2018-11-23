@@ -1,5 +1,5 @@
-import React, { Component, Fragment } from 'react';
-import Moment from 'react-moment';
+import React, { Fragment } from "react";
+import Moment from "react-moment";
 
 export default ({ meetupTimeStamp }) => {
   const meetupDate = new Date(meetupTimeStamp);

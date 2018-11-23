@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 /*
 -More Control over Returns
 -Cash Flow
@@ -13,27 +13,18 @@ const InfoSection = () => {
     <section id="info" className="rgba-white-slight">
       <div
         className="container"
-        style={{ paddingTop: '30px', paddingBottom: '60px' }}
+        style={{ paddingTop: "30px", paddingBottom: "60px" }}
       >
         <div className="row align-items-center justify-content-center text-left">
           <div className="col-12 col-md-6">
-            <ul className="p-0 list-group-flush" style={{ fontSize: '18px' }}>
+            <ul className="p-0 list-group-flush" style={{ fontSize: "18px" }}>
               <li className="list-group-item">Appreciation</li>
-              <li className="list-group-item">More Control Over Returns</li>
               <li className="list-group-item">Cash Flow</li>
-              <li className="list-group-item">
-                Accelerated Depreciation &amp; Cost Segregation
-              </li>
               <li className="list-group-item">Tax Benefits</li>
               <li className="list-group-item">Leveraging Debt</li>
-              <li className="list-group-item">
-                Inflation Induced Debt Destruction
-              </li>
-              <li className="list-group-item">
-                Less Volatile than the Stock Market
-              </li>
+              <li className="list-group-item">Business Backed by Hard Asset</li>
               <li className="list-group-item">Tenants Pay Down the Debt</li>
-              <li className="list-group-item">Everyone Needs Housing</li>
+              <li className="list-group-item">Housing is a necessity</li>
               <li className="list-group-item">
                 National Housing Shortage of 3.9 million units
               </li>
@@ -49,7 +40,7 @@ const InfoSection = () => {
               <Link to="/resources">
                 <button
                   size="lg"
-                  style={{ borderRadius: '99px' }}
+                  style={{ borderRadius: "99px" }}
                   className="h5-responsive btn btn-block btn-outline-danger p-2 mt-4"
                 >
                   Learn More on Why to invest in multifamily

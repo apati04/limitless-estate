@@ -1,20 +1,9 @@
-import React, { Component } from 'react';
-import { withFormik, Form, Field } from 'formik';
-import { NavLink } from 'react-router-dom';
-import {
-  Button,
-  Input,
-  Select,
-  Card,
-  CardBody,
-  Modal,
-  ModalBody,
-  ModalHeader,
-  ModalFooter,
-  CardImage
-} from 'mdbreact';
-import Yup from 'yup';
-import axios from 'axios';
+import React, { Component } from "react";
+import { withFormik, Field } from "formik";
+import { NavLink } from "react-router-dom";
+import { Input, Modal, ModalBody, ModalHeader, ModalFooter } from "mdbreact";
+import Yup from "yup";
+import axios from "axios";
 const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
 class QuestionnaireForm extends Component {
   state = {
@@ -27,7 +16,7 @@ class QuestionnaireForm extends Component {
     let isValid = true;
     sleep(500).then(() => {
       let check = Object.values(this.props.errors);
-      if (check.includes('Required')) {
+      if (check.includes("Required")) {
         return;
       } else {
         this.setState({ modal: !this.state.modal });
@@ -62,7 +51,7 @@ class QuestionnaireForm extends Component {
               placeholder="Name"
               id="fullname"
             />
-            {this.handleErrors('fullname')}
+            {this.handleErrors("fullname")}
           </div>
         </div>
 
@@ -76,7 +65,7 @@ class QuestionnaireForm extends Component {
               placeholder="Email"
               id="email"
             />
-            {this.handleErrors('email')}
+            {this.handleErrors("email")}
           </div>
         </div>
 
@@ -89,7 +78,7 @@ class QuestionnaireForm extends Component {
               type="text"
               placeholder="Phone Number"
             />
-            {this.handleErrors('phone')}
+            {this.handleErrors("phone")}
           </div>
         </div>
 
@@ -110,7 +99,7 @@ class QuestionnaireForm extends Component {
                 <option value="text">Text Message</option>
               </Field>
             </div>
-            {this.handleErrors('contactPreference')}
+            {this.handleErrors("contactPreference")}
           </div>
         </div>
 
@@ -127,7 +116,7 @@ class QuestionnaireForm extends Component {
                 component="textarea"
                 name="q1"
               />
-              {this.handleErrors('q1')}
+              {this.handleErrors("q1")}
             </div>
           </div>
         </div>
@@ -145,7 +134,7 @@ class QuestionnaireForm extends Component {
                 component="textarea"
                 name="q2"
               />
-              {this.handleErrors('q2')}
+              {this.handleErrors("q2")}
             </div>
           </div>
         </div>
@@ -157,7 +146,7 @@ class QuestionnaireForm extends Component {
             </label>
             <div className="md-form m-0">
               <Field className="form-control my-0" name="q3" type="text" />
-              {this.handleErrors('q3')}
+              {this.handleErrors("q3")}
             </div>
           </div>
         </div>
@@ -196,7 +185,7 @@ class QuestionnaireForm extends Component {
             </label>
             <div className="md-form m-0">
               <Field className="form-control pt-0" name="q5" type="text" />
-              {this.handleErrors('q5')}
+              {this.handleErrors("q5")}
             </div>
           </div>
         </div>
@@ -207,7 +196,7 @@ class QuestionnaireForm extends Component {
             </label>
             <div className="md-form m-0">
               <Field name="q6" type="text" className="form-control p" />
-              {this.handleErrors('q6')}
+              {this.handleErrors("q6")}
             </div>
           </div>
         </div>
@@ -233,9 +222,9 @@ class QuestionnaireForm extends Component {
                     gap
                     className="p-0"
                     onClick={() => {
-                      form.values.accreditedInvestor = 'yes';
+                      form.values.accreditedInvestor = "yes";
                     }}
-                    checked={form.values.accreditedInvestor === 'yes'}
+                    checked={form.values.accreditedInvestor === "yes"}
                     label="Yes"
                     type="radio"
                     id="q7a"
@@ -252,9 +241,9 @@ class QuestionnaireForm extends Component {
                     {...args}
                     gap
                     onClick={() => {
-                      form.values.accreditedInvestor = 'no';
+                      form.values.accreditedInvestor = "no";
                     }}
-                    checked={form.values.accreditedInvestor === 'no'}
+                    checked={form.values.accreditedInvestor === "no"}
                     label="No"
                     type="radio"
                     id="q7b"
@@ -264,7 +253,7 @@ class QuestionnaireForm extends Component {
                 )}
                 name="q7"
               />
-              {this.handleErrors('q7')}
+              {this.handleErrors("q7")}
             </div>
           </div>
         </div>
@@ -281,10 +270,10 @@ class QuestionnaireForm extends Component {
                   {...field}
                   gap
                   onClick={() => {
-                    form.values.proofOfFunds = 'yes';
+                    form.values.proofOfFunds = "yes";
                   }}
                   className="p-0"
-                  checked={form.values.proofOfFunds === 'yes'}
+                  checked={form.values.proofOfFunds === "yes"}
                   label="Yes"
                   type="radio"
                   id="radio-q8a"
@@ -301,10 +290,10 @@ class QuestionnaireForm extends Component {
                   {...field}
                   gap
                   onClick={() => {
-                    form.values.proofOfFunds = 'no';
+                    form.values.proofOfFunds = "no";
                   }}
                   className="p-0"
-                  checked={form.values.proofOfFunds === 'no'}
+                  checked={form.values.proofOfFunds === "no"}
                   label="No"
                   type="radio"
                   id="radio-q8b"
@@ -314,7 +303,7 @@ class QuestionnaireForm extends Component {
               )}
               name="q8"
             />
-            {this.handleErrors('q8')}
+            {this.handleErrors("q8")}
           </div>
         </div>
         <div className="col-12 py-3">
@@ -331,9 +320,9 @@ class QuestionnaireForm extends Component {
                     gap
                     className="p-0"
                     onClick={() => {
-                      form.values.riskTolerance = 'low';
+                      form.values.riskTolerance = "low";
                     }}
-                    checked={form.values.riskTolerance === 'low'}
+                    checked={form.values.riskTolerance === "low"}
                     label="Low"
                     type="radio"
                     id="radio-q9a"
@@ -351,9 +340,9 @@ class QuestionnaireForm extends Component {
                     gap
                     className="p-0"
                     onClick={() => {
-                      form.values.riskTolerance = 'medium';
+                      form.values.riskTolerance = "medium";
                     }}
-                    checked={form.values.riskTolerance === 'medium'}
+                    checked={form.values.riskTolerance === "medium"}
                     label="Medium"
                     type="radio"
                     id="radio-q9b"
@@ -371,9 +360,9 @@ class QuestionnaireForm extends Component {
                     gap
                     className="p-0"
                     onClick={() => {
-                      form.values.riskTolerance = 'High';
+                      form.values.riskTolerance = "High";
                     }}
-                    checked={form.values.riskTolerance === 'High'}
+                    checked={form.values.riskTolerance === "High"}
                     label="High"
                     type="radio"
                     id="radio-q9c"
@@ -383,7 +372,7 @@ class QuestionnaireForm extends Component {
                 )}
                 name="q9"
               />
-              {this.handleErrors('q9')}
+              {this.handleErrors("q9")}
             </div>
           </div>
         </div>
@@ -416,7 +405,7 @@ class QuestionnaireForm extends Component {
             </label>
             <div className="md-form m-0">
               <Field className="form-control p-0" type="text" name="q11" />
-              {this.handleErrors('q11')}
+              {this.handleErrors("q11")}
             </div>
           </div>
         </div>
@@ -437,7 +426,7 @@ class QuestionnaireForm extends Component {
 
             <div className="md-form m-0">
               <Field className="form-control py-2" type="text" name="q12" />
-              {this.handleErrors('q12')}
+              {this.handleErrors("q12")}
             </div>
           </div>
         </div>
@@ -455,7 +444,7 @@ class QuestionnaireForm extends Component {
                 id="q13"
                 name="q13"
               />
-              {this.handleErrors('q13')}
+              {this.handleErrors("q13")}
             </div>
           </div>
         </div>
@@ -472,7 +461,7 @@ class QuestionnaireForm extends Component {
                 component="textarea"
                 name="q14"
               />
-              {this.handleErrors('q14')}
+              {this.handleErrors("q14")}
             </div>
           </div>
         </div>
@@ -511,29 +500,29 @@ class QuestionnaireForm extends Component {
 
 export default withFormik({
   mapPropsToValues: ({
-    fullname = '',
-    email = '',
-    accreditedInvestor = '',
-    phone = '',
-    q1 = '',
-    q2 = '',
-    q3 = '',
-    q4IRR = '',
-    q4ARP = '',
-    q4CoC = '',
-    q4 = '',
-    q5 = '',
-    q6 = '',
-    q7 = '',
-    q8 = '',
-    q9 = '',
-    q10 = '',
-    q11 = '',
-    q12 = '',
-    q13 = '',
-    q14 = '',
-    proofOfFunds = '',
-    contactPreference = ''
+    fullname = "",
+    email = "",
+    accreditedInvestor = "",
+    phone = "",
+    q1 = "",
+    q2 = "",
+    q3 = "",
+    q4IRR = "",
+    q4ARP = "",
+    q4CoC = "",
+    q4 = "",
+    q5 = "",
+    q6 = "",
+    q7 = "",
+    q8 = "",
+    q9 = "",
+    q10 = "",
+    q11 = "",
+    q12 = "",
+    q13 = "",
+    q14 = "",
+    proofOfFunds = "",
+    contactPreference = ""
   }) => ({
     fullname,
     email,
@@ -559,29 +548,29 @@ export default withFormik({
     contactPreference
   }),
   validationSchema: Yup.object().shape({
-    fullname: Yup.string().required('Required'),
-    email: Yup.string().required('Required'),
-    phone: Yup.string().required('Required'),
-    contactPreference: Yup.string().required('Required'),
-    q1: Yup.string().required('Required'),
-    q2: Yup.string().required('Required'),
-    q3: Yup.string().required('Required'),
+    fullname: Yup.string().required("Required"),
+    email: Yup.string().required("Required"),
+    phone: Yup.string().required("Required"),
+    contactPreference: Yup.string().required("Required"),
+    q1: Yup.string().required("Required"),
+    q2: Yup.string().required("Required"),
+    q3: Yup.string().required("Required"),
     q4IRR: Yup.string().notRequired(),
     q4ARP: Yup.string().notRequired(),
     q4CoC: Yup.string().notRequired(),
-    q5: Yup.string().required('Required'),
-    q6: Yup.string().required('Required'),
-    q7: Yup.string().required('Required'),
-    q8: Yup.string().required('Required'),
-    q9: Yup.string().required('Required'),
+    q5: Yup.string().required("Required"),
+    q6: Yup.string().required("Required"),
+    q7: Yup.string().required("Required"),
+    q8: Yup.string().required("Required"),
+    q9: Yup.string().required("Required"),
     q10: Yup.string().notRequired(),
-    q11: Yup.string().required('Required'),
-    q12: Yup.string().required('Required'),
-    q13: Yup.string().required('Required'),
-    q14: Yup.string().required('Required')
+    q11: Yup.string().required("Required"),
+    q12: Yup.string().required("Required"),
+    q13: Yup.string().required("Required"),
+    q14: Yup.string().required("Required")
   }),
   async handleSubmit(values, { resetForm, setErrors, setSubmitting }) {
-    const payload = await axios.post('/api/questionnaire', values);
+    const payload = await axios.post("/api/questionnaire", values);
     resetForm();
 
     setSubmitting(false);

@@ -1,7 +1,6 @@
-import React, { PropTypes, Component } from 'react';
-
-import GoogleMapReact from 'google-map-react';
-import MyGreatPlace from './my_great_place.jsx';
+import React, { Component } from "react";
+import GoogleMapReact from "google-map-react";
+import MyGreatPlace from "./my_great_place.jsx";
 
 export default class SimpleMapPage extends Component {
   static defaultProps = {
@@ -15,7 +14,7 @@ export default class SimpleMapPage extends Component {
     greatPlaceCoords: { lat: 59.724465, lng: 30.080121 }
   };
   render() {
-    const key = 'AIzaSyAzFLuNuk1zRYOPag2-dNnVqw8I-R2qnjE';
+    const key = "AIzaSyAzFLuNuk1zRYOPag2-dNnVqw8I-R2qnjE";
     return (
       <GoogleMapReact
         defaultCenter={this.props.center}
