@@ -65,8 +65,8 @@ class PicCarousel extends Component {
                 to find out more.
               </h4>
               <h4 className="text-left h4-responsive mt-2">
-                Click the link below to connect with our perferred partners and
-                setup your 401K/IRA.
+                Click the link below to connect with our preferred partners and
+                setup your self-directed IRA
               </h4>
               <NavLink
                 className="btn btn-primary"

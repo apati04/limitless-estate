@@ -103,14 +103,16 @@ export default class SupportCo extends Component {
     return (
       <section>
         <div style={styles.header}>
-          <div className="light-overlay">
+          <div className="lightO">
             <div
               style={{ height: 25 + "em" }}
               className="row mb-5 justify-content-center align-items-center"
             >
               <div className="col-8 text-left">
                 <header className=" text-align-center-left text-white">
-                  <h1>401K/IRA</h1>
+                  <h1 className="font-weight-bold">
+                    Self-direct your 401k/IRA
+                  </h1>
                 </header>
               </div>
             </div>
