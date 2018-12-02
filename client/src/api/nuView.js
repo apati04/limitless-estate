@@ -18,6 +18,7 @@ module.exports = {
     name: "uDirect IRA Services, LLC",
     phone: "(866) 447-6598",
     email: "info@uDirectIRA.com",
+    contact: "Jeff Dixon",
     address: {
       street: "8 Corporate Park Ste 210",
       city: "Irvine",

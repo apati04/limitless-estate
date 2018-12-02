@@ -41,7 +41,7 @@ class PicCarousel extends Component {
                   className="btn"
                   to="info/questionnaire"
                 >
-                  Invest With Us
+                  Get Started Here
                 </NavLink>
               </div>
             </div>
