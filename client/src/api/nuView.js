@@ -10,7 +10,7 @@ module.exports = {
       zipcode: "32750"
     },
     logo: "https://i.imgur.com/iWlJS7e.jpg?1",
-    email: "info@nuviewtrust.com",
+    email: "thood@nuviewira.com",
     website: "https://www.nuviewtrust.com",
     misc: "https://www.nuviewtrust.com/individual-investors/real-estate/"
   },
