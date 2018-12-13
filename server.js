@@ -109,16 +109,12 @@ app.post('/api/questionnaire', async (req, res) => {
     phone,
     accreditedInvestor,
     q1,
-    q2,
     q3,
-    q4IRR,
-    q4ARP,
-    q4CoC,
+    q4,
     q5,
     q6,
     q10,
     q11,
-    q12,
     q13,
     q14,
     proofOfFunds,
@@ -205,12 +201,6 @@ q9 : risk {riskTolerance}
               </ul>
             </li>
             <li>
-              What is the biggest hurdle you are trying to overcome by investing in Real Estate?
-              <ul>
-                <li>${q2}</li>
-              </ul>
-            </li>
-            <li>
               Do you want to invest in multifamily, value-add projects?
               <ul>
                 <li>${q3}</li>
@@ -219,13 +209,11 @@ q9 : risk {riskTolerance}
             <li>
               What are your return expectations?
               <ul>
-                <li>Annual Return Percentage: ${q4ARP}</li>
-                <li>Internal Rate of Return: ${q4IRR}</li>
-                <li>Cash on Cash: ${q4CoC}</li>
+                <li>Annual Return Percentage: ${q4}
               </ul>
             </li>
             <li>
-            What is your investment minimum and maximum hold time?
+            What time horizon (3-10 years) would be most desirable for a passive investment?
               <ul>
                 <li>${q5}</li>
               </ul>
@@ -263,17 +251,11 @@ q9 : risk {riskTolerance}
             <li>
             Have you invested as a limited partner (LP) on a syndication deal in the past?
               <ul>
-              
+
                 <li>${q11}</li>
               </ul>
             </li>
-            <li>
-            Are you comfortable investing with other LPs or would you require to be the only LP in
-this investment?
-              <ul>
-                <li>${q12}</li>
-              </ul>
-            </li>
+
             <li>
             In a short paragraph please provide us with your investing experience.
               <ul>
@@ -281,7 +263,7 @@ this investment?
               </ul>
             </li>
             <li>
-            Is there anything else we should know about you and your investment goals?
+            What are your investment objectives?
               <ul>
                 <li>${q14}</li>
               </ul>
