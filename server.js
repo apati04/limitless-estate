@@ -158,7 +158,6 @@ q9 : risk {riskTolerance}
         padding:0;
         height: 100%;
       }
-      /* source: http://typecast.com/images/uploads/modernscale.css */
       body {
         font-size: 100%;
         font-family: 'Roboto', sans-serif;

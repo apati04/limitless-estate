@@ -33,15 +33,6 @@ module.exports = [
       'Mr. Douraghy is an executive coach and a team facilitator.  He is a Gallups Strengths Finder, Why certified coach and Founder of several successful companies.'
   },
   {
-    name: 'Steven Rinaldi',
-    type: 'SEC Attorney',
-    photo: {
-      url: `https://i.imgur.com/jrGjEHC.png`,
-      size: '180px'
-    },
-    content: 'Mr. Rinaldi handles all legal matters related to SEC compliance.'
-  },
-  {
     name: 'Old Capital Lending',
     type: 'Mortgage Broker & Advisor',
     photo: {
