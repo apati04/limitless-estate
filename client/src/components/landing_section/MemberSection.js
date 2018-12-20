@@ -5,6 +5,7 @@ import Team from '../../api/team';
 import MemberCard from '../MemberCard';
 import { NavLink, Link } from 'react-router-dom';
 import { Button, Popover, PopoverBody, PopoverHeader, Fa } from 'mdbreact';
+
 class MemberSection extends Component {
   renderCards = items => {
     return items.map((person, i) => {
@@ -35,7 +36,7 @@ class MemberSection extends Component {
             </div>
           ) : (
             <div className='col-12 mt-2'>
-              <a href={person.photo.url}>
+              <a href={person.website}>
                 <img
                   style={{ border: '2px solid lightgrey' }}
                   className='mb-1 rounded-circle'
