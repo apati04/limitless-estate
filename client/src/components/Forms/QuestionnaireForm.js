@@ -94,9 +94,9 @@ class QuestionnaireForm extends Component {
                 component='select'
               >
                 <option disabled label='Please Choose One...' />
-                <option value='email'>Email</option>
-                <option value='phone'>Phone Call</option>
-                <option value='text'>Text Message</option>
+                <option value='Email'>Email</option>
+                <option value='Phone Call'>Phone Call</option>
+                <option value='Text Message (SMS)'>Text Message</option>
               </Field>
             </div>
             {this.handleErrors('contactPreference')}
@@ -112,7 +112,7 @@ class QuestionnaireForm extends Component {
               <Field
                 type='text'
                 id='q1'
-                className='pt-0 form-control md-textarea'
+                className='pt-2 form-control md-textarea'
                 component='textarea'
                 name='q1'
               />
@@ -141,8 +141,7 @@ class QuestionnaireForm extends Component {
               <Field
                 type='text'
                 id='q4'
-                className='pt-0 form-control md-textarea'
-                component='textarea'
+                className='pt-0 form-control'
                 name='q4'
               />
             </div>
@@ -191,11 +190,28 @@ class QuestionnaireForm extends Component {
         <div className='col-12 py-3'>
           <div className='form-group'>
             <label className='label' htmlFor='q6'>
-              What is the minimum dollar amount you are willing to invest?
+              What liquidity needs do you have from the funds you may passively
+              invest?
             </label>
             <div className='md-form m-0'>
               <Field name='q6' type='text' className='form-control p' />
               {this.handleErrors('q6')}
+            </div>
+          </div>
+        </div>
+        <div className='col-12 py-3'>
+          <div className='form-group'>
+            <label className='label m-0' htmlFor='q2'>
+              What is the minimum dollar amount you are willing to invest?
+            </label>
+            <div className='md-form m-0'>
+              <Field
+                type='text'
+                id='q2'
+                className='pt-0 form-control'
+                name='q2'
+              />
+              {this.handleErrors('q2')}
             </div>
           </div>
         </div>
@@ -221,13 +237,13 @@ class QuestionnaireForm extends Component {
                     gap
                     className='p-0'
                     onClick={() => {
-                      form.values.accreditedInvestor = 'yes';
+                      form.values.accreditedInvestor = 'Yes';
                     }}
-                    checked={form.values.accreditedInvestor === 'yes'}
+                    checked={form.values.accreditedInvestor === 'Yes'}
                     label='Yes'
                     type='radio'
                     id='q7a'
-                    value='yes'
+                    value='Yes'
                     onChange={form.handleChange}
                   />
                 )}
@@ -240,13 +256,13 @@ class QuestionnaireForm extends Component {
                     {...args}
                     gap
                     onClick={() => {
-                      form.values.accreditedInvestor = 'no';
+                      form.values.accreditedInvestor = 'No';
                     }}
-                    checked={form.values.accreditedInvestor === 'no'}
+                    checked={form.values.accreditedInvestor === 'No'}
                     label='No'
                     type='radio'
                     id='q7b'
-                    value='no'
+                    value='No'
                     onChange={form.handleChange}
                   />
                 )}
@@ -269,14 +285,14 @@ class QuestionnaireForm extends Component {
                   {...field}
                   gap
                   onClick={() => {
-                    form.values.proofOfFunds = 'yes';
+                    form.values.proofOfFunds = 'Yes';
                   }}
                   className='p-0'
-                  checked={form.values.proofOfFunds === 'yes'}
+                  checked={form.values.proofOfFunds === 'Yes'}
                   label='Yes'
                   type='radio'
                   id='radio-q8a'
-                  value='yes'
+                  value='Yes'
                   onChange={form.handleChange}
                 />
               )}
@@ -289,14 +305,14 @@ class QuestionnaireForm extends Component {
                   {...field}
                   gap
                   onClick={() => {
-                    form.values.proofOfFunds = 'no';
+                    form.values.proofOfFunds = 'No';
                   }}
                   className='p-0'
-                  checked={form.values.proofOfFunds === 'no'}
+                  checked={form.values.proofOfFunds === 'No'}
                   label='No'
                   type='radio'
                   id='radio-q8b'
-                  value='no'
+                  value='No'
                   onChange={form.handleChange}
                 />
               )}
@@ -319,13 +335,13 @@ class QuestionnaireForm extends Component {
                     gap
                     className='p-0'
                     onClick={() => {
-                      form.values.riskTolerance = 'low';
+                      form.values.riskTolerance = 'Low';
                     }}
-                    checked={form.values.riskTolerance === 'low'}
+                    checked={form.values.riskTolerance === 'Low'}
                     label='Low'
                     type='radio'
                     id='radio-q9a'
-                    value='low'
+                    value='Low'
                     onChange={form.handleChange}
                   />
                 )}
@@ -339,13 +355,13 @@ class QuestionnaireForm extends Component {
                     gap
                     className='p-0'
                     onClick={() => {
-                      form.values.riskTolerance = 'medium';
+                      form.values.riskTolerance = 'Medium';
                     }}
-                    checked={form.values.riskTolerance === 'medium'}
+                    checked={form.values.riskTolerance === 'Medium'}
                     label='Medium'
                     type='radio'
                     id='radio-q9b'
-                    value='medium'
+                    value='Medium'
                     onChange={form.handleChange}
                   />
                 )}
@@ -483,6 +499,7 @@ export default withFormik({
     accreditedInvestor = '',
     phone = '',
     q1 = '',
+    q2 = '',
     q3 = '',
     q4 = '',
     q5 = '',
@@ -502,6 +519,7 @@ export default withFormik({
     accreditedInvestor,
     phone,
     q1,
+    q2,
     q3,
     q4,
     q5,
@@ -522,6 +540,7 @@ export default withFormik({
     phone: Yup.string().required('Required'),
     contactPreference: Yup.string().required('Required'),
     q1: Yup.string().required('Required'),
+    q2: Yup.string().required('Required'),
     q3: Yup.string().required('Required'),
     q4: Yup.string().notRequired(),
     q5: Yup.string().required('Required'),
@@ -535,9 +554,8 @@ export default withFormik({
     q14: Yup.string().required('Required')
   }),
   async handleSubmit(values, { resetForm, setErrors, setSubmitting }) {
-    const payload = await axios.post('/api/questionnaire', values);
+    const payload = await axios.post('/api/mailchimp/survey', values);
     resetForm();
-
     setSubmitting(false);
   }
 })(QuestionnaireForm);

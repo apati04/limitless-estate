@@ -293,6 +293,65 @@ app.post('/api/mailchimp/subscribe', async (req, res) => {
   });
   res.send({ results: sub.data });
 });
+app.post('/api/mailchimp/survey', async (req, res) => {
+  const {
+    fullname,
+    email,
+    phone,
+    q1,
+    q2,
+    q3,
+    q4,
+    q5,
+    q6,
+    q7,
+    q8,
+    q9,
+    q10,
+    q11,
+    q13,
+    q14,
+    contactPreference
+  } = req.body;
+  const region = keys.mailChimpApiKey.split('-')[1];
+  const rootURL = `https://us19.api.mailchimp.com/3.0/lists/9bf9546e64/members/`;
+  const data = {
+    email_address: email,
+    status: 'subscribed',
+    merge_fields: {
+      FULLNAME: fullname,
+      PHONE: phone,
+      MMERGE3: contactPreference,
+      MMERGE2: q1,
+      MMERGE5: q3,
+      MMERGE10: q2,
+      MMERGE11: q5,
+      MMERGE7: q6,
+      MMERGE12: q7,
+      MMERGE13: q9,
+      MMERGE14: q8,
+      MMERGE15: q10,
+      MMERGE16: q11,
+      MMERGE18: q13,
+      MMERGE19: q14
+    }
+  };
+  try {
+    const survey = await axios.post(rootURL, data, {
+      headers: {
+        Accept: 'application/json',
+        Authorization: `Basic ${Buffer.from(
+          `apikey:${keys.mailChimpApiKey}`
+        ).toString('base64')}`,
+        json: true
+      }
+    });
+    res.send({ results: survey.data });
+  } catch (err) {
+    console.log('error: ', err);
+    res.send({ error: err });
+  }
+});
 // app.get('*', function(req, res) {
 //   app.use(express.static('client/public'));
 //   res.sendFile(path.resolve(__dirname, 'client', 'public', 'index.html'));
