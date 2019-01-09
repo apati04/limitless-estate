@@ -10,7 +10,7 @@ class QuestionnaireForm extends Component {
     accredited: false,
     proofOfFunds: false,
     riskTolerance: false,
-    modal: true
+    modal: false
   };
   toggle = e => {
     let isValid = true;
