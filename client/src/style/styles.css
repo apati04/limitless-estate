@@ -16,6 +16,10 @@ h5,
 h6 {
   font-size-adjust: 0.5;
 } */
+.modal-content {
+  align-self: flex-end;
+  bottom: 30rem;
+}
 .textblockclass {
   text-align: justify;
 }
@@ -26,11 +30,11 @@ h6 {
 .dropdown:hover > .dropdown-menu {
   display: block !important;
   margin: -0.125rem 0 0 !important;
-  color: "red";
+  color: 'red';
 }
 .dropdown > .dropdown-toggle:active {
   /* pointer-events: none !important; */
-  color: "black" !important;
+  color: 'black' !important;
 }
 .sc-bdVaJa {
   height: auto !important;
@@ -152,7 +156,7 @@ h6 {
   transition: none !important;
 }
 
-input[type="radio"] {
+input[type='radio'] {
   margin-left: 1em;
 }
 
@@ -172,7 +176,7 @@ input[type="radio"] {
 }
 #landingParallax {
   background-attachment: fixed;
-  background-image: url("/img/lobby.jpg");
+  background-image: url('/img/lobby.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -180,7 +184,7 @@ input[type="radio"] {
 #ira {
   position: relative;
   background-attachment: fixed;
-  background-image: url("https://i.imgur.com/kC8zbBM.jpg");
+  background-image: url('https://i.imgur.com/kC8zbBM.jpg');
   min-height: 14rem;
   background-position: center center;
   background-size: cover;
@@ -189,7 +193,7 @@ input[type="radio"] {
 #ldVid {
   position: relative;
   min-height: 200px;
-  background: url("/img/network.jpg");
+  background: url('/img/network.jpg');
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: 0 -300px;
