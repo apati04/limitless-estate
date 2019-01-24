@@ -1,21 +1,15 @@
-import React, { Component } from "react";
-import { NavLink, Link } from "react-router-dom";
-import "../style/styles.css";
+import React, { Component } from 'react';
+import { NavLink, Link } from 'react-router-dom';
+import '../style/styles.css';
 
 import {
   Navbar,
-  NavbarBrand,
   NavbarNav,
   NavbarToggler,
   Collapse,
   NavItem,
-  Dropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-  Container,
-  Button
-} from "mdbreact";
+  Container
+} from 'mdbreact';
 
 class Navigation extends Component {
   state = {
@@ -38,22 +32,22 @@ class Navigation extends Component {
   };
   render() {
     if (this.state.isWideEnough) {
-      console.log("yes");
+      console.log('yes');
     }
     return (
       <Navbar
         dark
         expand="lg"
         sticky="top"
-        style={{ borderRadius: 0, minHeight: "90px" }}
+        style={{ borderRadius: 0 }}
         className="primary-color-dark"
       >
-        <Container>
+        <Container fluid>
           <Link to="/">
             <img
               height="42"
               src="https://i.imgur.com/6TpCmWV.png"
-              className="d-inline-block"
+              className="d-inline-block img-fluid"
               alt=""
             />
           </Link>
@@ -62,24 +56,24 @@ class Navigation extends Component {
             <NavbarNav
               right
               style={{
-                display: "flex",
-                justifyContent: "end",
-                textTransform: "uppercase",
-                alignItems: "baseline",
-                fontSize: "13px",
+                display: 'flex',
+                justifyContent: 'end',
+                textTransform: 'uppercase',
+                alignItems: 'center',
+                fontSize: '13px',
                 fontWeight: 400,
-                lineHeight: "20px",
-                flexWrap: "no-wrap",
-                whiteSpace: "nowrap",
+                lineHeight: '20px',
+                flexWrap: 'no-wrap',
+                whiteSpace: 'nowrap',
                 marginTop: 0
               }}
             >
               <NavItem className="p-2">
                 <NavLink
                   exact
-                  style={{ color: "white", letterSpacing: "0.5px" }}
+                  style={{ color: 'white', letterSpacing: '0.5px' }}
                   activeStyle={{
-                    borderBottom: "1px white solid",
+                    borderBottom: '1px white solid',
                     outline: 0
                   }}
                   to="/"
@@ -90,9 +84,9 @@ class Navigation extends Component {
               <NavItem className="p-2">
                 <NavLink
                   exact
-                  style={{ color: "white", letterSpacing: "0.5px" }}
+                  style={{ color: 'white', letterSpacing: '0.5px' }}
                   activeStyle={{
-                    borderBottom: "1px white solid",
+                    borderBottom: '1px white solid',
                     outline: 0
                   }}
                   to="/members/about/"
@@ -102,7 +96,7 @@ class Navigation extends Component {
               </NavItem>
               <div className="nav-item dropdown">
                 <a
-                  style={{ outline: 0, letterSpacing: "0.5px" }}
+                  style={{ outline: 0, letterSpacing: '0.5px' }}
                   className="text-white nav-link dropdown-toggle"
                   id="navbarDropdownMenuLink"
                   aria-haspopup="true"
@@ -124,7 +118,7 @@ class Navigation extends Component {
                   </NavLink>
                   <NavLink
                     exact
-                    activeStyle={{ fontWeight: 400, color: "white" }}
+                    activeStyle={{ fontWeight: 400, color: 'white' }}
                     className="px-3 dropdown-item"
                     to="/markets/phoenix/"
                   >
@@ -143,7 +137,7 @@ class Navigation extends Component {
               </div>
               <div className="nav-item dropdown">
                 <a
-                  style={{ outline: 0, letterSpacing: "0.5px" }}
+                  style={{ outline: 0, letterSpacing: '0.5px' }}
                   className="text-white nav-link dropdown-toggle"
                   id="navRes"
                   aria-haspopup="true"
@@ -179,7 +173,7 @@ class Navigation extends Component {
 
                   <NavLink
                     exact
-                    style={{ color: "white" }}
+                    style={{ color: 'white' }}
                     activeStyle={{ fontWeight: 400 }}
                     className="px-3 dropdown-item"
                     to="/resources/investingrisks/1"
@@ -199,9 +193,9 @@ class Navigation extends Component {
               <NavItem className="p-2">
                 <NavLink
                   exact
-                  style={{ color: "white", letterSpacing: "0.5px" }}
+                  style={{ color: 'white', letterSpacing: '0.5px' }}
                   activeStyle={{
-                    borderBottom: "1px white solid",
+                    borderBottom: '1px white solid',
                     outline: 0
                   }}
                   to="/info/questionnaire"
@@ -212,9 +206,9 @@ class Navigation extends Component {
               <NavItem className="p-2">
                 <NavLink
                   exact
-                  style={{ color: "white", letterSpacing: "0.5px" }}
+                  style={{ color: 'white', letterSpacing: '0.5px' }}
                   activeStyle={{
-                    borderBottom: "1px white solid",
+                    borderBottom: '1px white solid',
                     outline: 0
                   }}
                   to="/events/meetups"
@@ -225,9 +219,22 @@ class Navigation extends Component {
               <NavItem className="p-2">
                 <NavLink
                   exact
-                  style={{ color: "white", letterSpacing: "0.5px" }}
+                  style={{ color: 'white', letterSpacing: '0.5px' }}
                   activeStyle={{
-                    borderBottom: "1px white solid",
+                    borderBottom: '1px white solid',
+                    outline: 0
+                  }}
+                  to="/media/podcast"
+                >
+                  Podcast
+                </NavLink>
+              </NavItem>
+              <NavItem className="p-2">
+                <NavLink
+                  exact
+                  style={{ color: 'white', letterSpacing: '0.5px' }}
+                  activeStyle={{
+                    borderBottom: '1px white solid',
                     outline: 0
                   }}
                   to="/info/contact"
@@ -240,16 +247,16 @@ class Navigation extends Component {
                   href="https://ehypauluugknktzawdwva-free.10to8.com/"
                   rel="noopener noreferrer"
                   target="_blank"
-                  style={{ whiteSpace: "nowrap", fontSize: "14px" }}
+                  style={{ whiteSpace: 'nowrap', fontSize: '14px' }}
                   className="btn btn-sm btn-success btn-rounded"
                 >
-                  Schedule a Call{" "}
+                  Schedule a Call{' '}
                   <i
                     className="fa fa-phone"
                     style={{
-                      fontSize: "14px",
-                      paddingTop: "4px",
-                      paddingLeft: "8px"
+                      fontSize: '14px',
+                      paddingTop: '4px',
+                      paddingLeft: '8px'
                     }}
                   />
                 </a>

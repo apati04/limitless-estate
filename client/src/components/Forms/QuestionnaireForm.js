@@ -13,7 +13,6 @@ class QuestionnaireForm extends Component {
     modal: false
   };
   toggle = e => {
-    let isValid = true;
     sleep(500).then(() => {
       let check = Object.values(this.props.errors);
       if (check.includes('Required')) {
@@ -32,13 +31,7 @@ class QuestionnaireForm extends Component {
   };
 
   render() {
-    const {
-      values,
-      handleSubmit,
-      isSubmitting,
-      handleChange,
-      handleBlur
-    } = this.props;
+    const { values, handleSubmit, isSubmitting } = this.props;
     return (
       <form onSubmit={handleSubmit}>
         <div className="col-12">
@@ -550,7 +543,7 @@ export default withFormik({
     q14: Yup.string().required('Required')
   }),
   async handleSubmit(values, { resetForm, setErrors, setSubmitting }) {
-    const payload = await axios.post('/api/mailchimp/survey', values);
+    await axios.post('/api/mailchimp/survey', values);
     resetForm();
     setSubmitting(false);
   }
