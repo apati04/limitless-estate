@@ -102,181 +102,41 @@ app.post('/api/sendmail', (req, res) => {
   res.send('complete');
 });
 
-app.post('/api/questionnaire', async (req, res) => {
-  const {
-    fullname,
-    email,
-    phone,
-    accreditedInvestor,
-    q1,
-    q3,
-    q4,
-    q5,
-    q6,
-    q10,
-    q11,
-    q13,
-    q14,
-    proofOfFunds,
-    contactPreference,
-    riskTolerance
-  } = req.body;
-  const transporter = await nodemailer.createTransport({
-    host: 'smtp.gmail.com',
-    service: 'gmail',
-    secure: true,
-    auth: {
-      user: keys.userGmail,
-      pass: keys.passGmail
-    },
-    tls: {
-      rejectUnauthorized: true
+app.post('/api/mailchimp/contactus', async (req, res) => {
+  const { firstname, lastname, email, message } = req.body;
+  const data = {
+    email_address: email,
+    status: 'subscribed',
+    merge_fields: {
+      FNAME: firstname,
+      LNAME: lastname,
+      MMERGE3: message
     }
-  });
-  /*
-preferedFormof Contact: {contactPreference}
-q7 : {accreditedInvestor}
-q8 : {proofOfFunds}
-q9 : risk {riskTolerance}
-*/
-  // "Jim" <${config.mail.testAccount}>//
-  const sender = {
-    name: `Investor Qualifier- ${fullname}`,
-    address: email
   };
-  const mailOptions = {
-    from: `"Andrew Patipaksiri" <andrew.patipak@gmail.com>`,
-    to: 'kmitchell@limitless-estates.com',
-    cc: ['lpatipaksiri@limitless-estates.com', 'andrew.patipak@gmail.com'],
-    subject: `Investor Questionnaire - ${fullname}`,
-    html: `
-      <html>
-      <head>
-      <style>
-      html {
-        margin:0;
-        padding:0;
-        height: 100%;
+  const rootURL =
+    'https://us19.api.mailchimp.com/3.0/lists/6f72e55724/members/';
+  try {
+    const survey = await axios.post(rootURL, data, {
+      headers: {
+        Accept: 'application/json',
+        Authorization: `Basic ${Buffer.from(
+          `apikey:${keys.mailChimpApiKey}`
+        ).toString('base64')}`,
+        json: true
       }
-      body {
-        font-size: 100%;
-        font-family: 'Roboto', sans-serif;
-      }
-
-      body,
-      caption,
-      th,
-      td,
-      input,
-      textarea,
-      select,
-      option,
-      legend,
-      fieldset,
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6 {
-
-        font-size-adjust: 0.5;
-      }
-
-      </style>
-      </head>
-      <body style="text-align: left; font-size: 1em;">
-        <div style="border-bottom": 1px solid black;">
-          <h4>Name: ${fullname}</h4>
-          <h4>Email Address: ${email}</h4>
-          <h4>Phone Number: ${phone}</h4>
-          <h4>Preferred Form of Contact: <span>${contactPreference}</span></h4>
-          </div>
-          <ol>
-            <li>
-              Why are you interested in investing in Real Estate?
-              <ul>
-                <li>${q1}</li>
-              </ul>
-            </li>
-            <li>
-              Do you want to invest in multifamily, value-add projects?
-              <ul>
-                <li>${q3}</li>
-              </ul>
-            </li>
-            <li>
-              What are your return expectations?
-              <ul>
-                <li>Annual Return Percentage: ${q4}
-              </ul>
-            </li>
-            <li>
-            What time horizon (3-10 years) would be most desirable for a passive investment?
-              <ul>
-                <li>${q5}</li>
-              </ul>
-            </li>
-            <li>
-            What is the minimum dollar amount you are willing to invest?
-              <ul>
-                <li>${q6}</li>
-              </ul>
-            </li>
-            <li>
-            Are you an accredited investor?
-              <ul>
-                <li>${accreditedInvestor}</li>
-              </ul>
-            </li>
-            <li>
-            Can you show proof of funds?
-              <ul>
-                <li>${proofOfFunds}</li>
-              </ul>
-            </li>
-            <li>
-            How would you rate your risk tolerance
-              <ul>
-                <li>${riskTolerance}</li>
-              </ul>
-            </li>
-            <li>
-            If you are out of the country, have you invested in the US real estate market in the past?
-              <ul>
-                <li>${q10}</li>
-              </ul>
-            </li>
-            <li>
-            Have you invested as a limited partner (LP) on a syndication deal in the past?
-              <ul>
-
-                <li>${q11}</li>
-              </ul>
-            </li>
-
-            <li>
-            In a short paragraph please provide us with your investing experience.
-              <ul>
-                <li>${q13}</li>
-              </ul>
-            </li>
-            <li>
-            What are your investment objectives?
-              <ul>
-                <li>${q14}</li>
-              </ul>
-            </li>
-          </ol>
-      </body>
-      </html>
-    `
-  };
-
-  const payload = await transporter.sendMail(mailOptions);
-
-  res.send(payload);
+    });
+    res.send({ results: survey.data });
+  } catch (err) {
+    console.log('error: ', err);
+    res.send({ error: err });
+  }
 });
+/* 
+message : MMERGE3
+lastname: LNAME
+FNAME
+EMIL
+*/
 
 app.post('/api/mailchimp/subscribe', async (req, res) => {
   const region = keys.mailChimpApiKey.split('-')[1];
