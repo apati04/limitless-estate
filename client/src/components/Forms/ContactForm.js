@@ -46,12 +46,11 @@ class ContactForm extends Component {
                 id="firstname"
               />
 
-              {touched.firstname &&
-                errors.firstname && (
-                  <small className="p-0 m-0 font-italic text-danger">
-                    {errors.firstname}
-                  </small>
-                )}
+              {touched.firstname && errors.firstname && (
+                <small className="p-0 m-0 font-italic text-danger">
+                  {errors.firstname}
+                </small>
+              )}
             </div>
           </div>
 
@@ -66,12 +65,11 @@ class ContactForm extends Component {
                 id="lastname"
               />
 
-              {touched.lastname &&
-                errors.lastname && (
-                  <small className=" p-0 m-0 font-italic text-danger">
-                    {errors.lastname}
-                  </small>
-                )}
+              {touched.lastname && errors.lastname && (
+                <small className=" p-0 m-0 font-italic text-danger">
+                  {errors.lastname}
+                </small>
+              )}
             </div>
           </div>
         </div>
@@ -87,12 +85,11 @@ class ContactForm extends Component {
                 placeholder="Email Address"
               />
 
-              {touched.email &&
-                errors.email && (
-                  <small className=" p-0 m-0 font-italic text-danger">
-                    {errors.email}
-                  </small>
-                )}
+              {touched.email && errors.email && (
+                <small className=" p-0 m-0 font-italic text-danger">
+                  {errors.email}
+                </small>
+              )}
             </div>
           </div>
         </div>
@@ -107,12 +104,11 @@ class ContactForm extends Component {
                 id="message"
                 placeholder="Your message here"
               />
-              {touched.message &&
-                errors.message && (
-                  <small className=" p-0 m-0 font-italic text-danger">
-                    {errors.message}
-                  </small>
-                )}
+              {touched.message && errors.message && (
+                <small className=" p-0 m-0 font-italic text-danger">
+                  {errors.message}
+                </small>
+              )}
             </div>
           </div>
         </div>
@@ -168,7 +164,7 @@ export default withFormik({
     message: Yup.string().required('Required')
   }),
   async handleSubmit(values, { resetForm, setErrors, setSubmitting }) {
-    const payload = await axios.post('/api/sendmail', values);
+    const payload = await axios.post('/api/mailchimp/contactus', values);
     resetForm();
     setSubmitting(false);
   }
