@@ -1,13 +1,13 @@
-import React, { Component } from "react";
-import { NavLink } from "react-router-dom";
-import { Col, Container, Row, Footer } from "mdbreact";
+import React, { Component } from 'react';
+import { NavLink } from 'react-router-dom';
+import { Col, Container, Row, Footer } from 'mdbreact';
 const style = {
   footerStyle: {
-    position: "absolute",
+    position: 'absolute',
     bottom: 0,
     left: 0,
-    height: "60px",
-    color: "white"
+    height: '60px',
+    color: 'white'
   }
 };
 // const NavFooter = () => {
@@ -42,7 +42,7 @@ class NavFooter extends Component {
   render() {
     return (
       <Footer
-        style={{ marginTop: 0 + "!important" }}
+        style={{ marginTop: 0 + '!important' }}
         color="primary-color-dark"
         className="pt-4"
       >
@@ -50,14 +50,14 @@ class NavFooter extends Component {
           <Row className="mt-3 pl-4 no-gutters">
             <Col md="3" lg="3" xl="3" className="mb-4 pl-2">
               <h5
-                style={{ letterSpacing: "0.25px" }}
+                style={{ letterSpacing: '0.25px' }}
                 className="text-uppercase font-weight-bold"
               >
                 <strong>Limitless Estates L.L.C</strong>
               </h5>
               <hr
                 className="yellow accent-2 mb-4 mt-0 d-inline-block mx-auto"
-                style={{ width: "60px" }}
+                style={{ width: '60px' }}
               />
               <p>
                 <NavLink to="/members/about/">About Us</NavLink>
@@ -72,14 +72,14 @@ class NavFooter extends Component {
             </Col>
             <Col md="3" lg="3" xl="3" className="mb-4 pl-2">
               <h5
-                style={{ letterSpacing: "0.25px" }}
+                style={{ letterSpacing: '0.25px' }}
                 className="text-uppercase font-weight-bold"
               >
                 <strong>Markets</strong>
               </h5>
               <hr
                 className="yellow accent-2 mb-4 mt-0 d-inline-block mx-auto"
-                style={{ width: "60px" }}
+                style={{ width: '60px' }}
               />
               <p>
                 <NavLink to="/markets/tucson/">Tucson, AZ</NavLink>
@@ -93,14 +93,14 @@ class NavFooter extends Component {
             </Col>
             <Col md="3" lg="3" xl="3" className="mb-4 pl-2">
               <h5
-                style={{ letterSpacing: "0.25px" }}
+                style={{ letterSpacing: '0.25px' }}
                 className="text-uppercase font-weight-bold"
               >
                 <strong>Resources</strong>
               </h5>
               <hr
                 className="yellow accent-2 mb-4 mt-0 d-inline-block mx-auto"
-                style={{ width: "60px" }}
+                style={{ width: '60px' }}
               />
 
               <p>
@@ -122,14 +122,14 @@ class NavFooter extends Component {
             </Col>
             <Col md="3" lg="3" xl="3" className="mb-4 pl-2">
               <h5
-                style={{ letterSpacing: "0.25px" }}
+                style={{ letterSpacing: '0.25px' }}
                 className="text-uppercase font-weight-bold"
               >
                 <strong>Company Information</strong>
               </h5>
               <hr
                 className="yellow accent-2 mb-4 mt-0 d-inline-block mx-auto"
-                style={{ width: "60px" }}
+                style={{ width: '60px' }}
               />
               <p>
                 <NavLink to="/events/meetups">Events</NavLink>
@@ -141,7 +141,7 @@ class NavFooter extends Component {
           </Row>
         </Container>
         <div
-          style={{ color: "white" }}
+          style={{ color: 'white' }}
           className="footer-copyright text-center p-3"
         >
           <Container fluid>
