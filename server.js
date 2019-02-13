@@ -146,6 +146,7 @@ app.post('/api/mailchimp/subscribe', async (req, res) => {
     status: 'subscribed',
     tags: ['Drip Campaign']
   };
+
   const sub = await axios.post(rootURL, data, {
     headers: {
       Accept: 'application/json',

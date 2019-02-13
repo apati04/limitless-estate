@@ -19,13 +19,16 @@ class Subscribe extends Component {
   toggle = e => {
     const { resetForm, setSubmitting } = this.props;
     let isValid = true;
-    resetForm();
-    setSubmitting(false);
-    this.setState({ modal: !this.state.modal });
+    if (Object.values(this.props.errors).includes('Required')) {
+      return;
+    } else {
+      this.setState({ modal: !this.state.modal });
+    }
   };
   onSubmit = e => {
     // check if email is missing
     // if exists, call method to sub
+    console.log(e);
   };
   render() {
     const { values, errors, touched, isSubmitting } = this.props;
@@ -105,6 +108,8 @@ export default withFormik({
       .required('Required')
   }),
   async handleSubmit(values, { resetForm, setErrors, setSubmitting }) {
-    const req = axios.post('/api/mailchimp/subscribe', values);
+    const req = await axios.post('/api/mailchimp/subscribe', values);
+    resetForm();
+    setSubmitting(false);
   }
 })(Subscribe);
