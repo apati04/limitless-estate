@@ -141,7 +141,11 @@ EMIL
 app.post('/api/mailchimp/subscribe', async (req, res) => {
   const region = keys.mailChimpApiKey.split('-')[1];
   const rootURL = `https://${region}.api.mailchimp.com/3.0/lists/3c16a06b45/members/`;
-  const data = { email_address: req.body.email, status: 'subscribed' };
+  const data = {
+    email_address: req.body.email,
+    status: 'subscribed',
+    tags: ['Drip Campaign']
+  };
   const sub = await axios.post(rootURL, data, {
     headers: {
       Accept: 'application/json',
