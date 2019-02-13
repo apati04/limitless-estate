@@ -48,7 +48,7 @@ class Subscribe extends Component {
               <div className="col-auto py-2">
                 <div>
                   <h1 className="h1-responsive text-left">
-                    Subscribe to Our Newsletter
+                    Sign up to get your free passive investors guide!
                   </h1>
                 </div>
                 <div className=" md-form input-group">
@@ -59,12 +59,6 @@ class Subscribe extends Component {
                     name="email"
                     placeholder="Your Email Address"
                   />
-                  {/* {touched.email &&
-                    errors.email && (
-                      <small className="font-italic text-danger">
-                        {errors.email}
-                      </small>
-                    )} */}
 
                   <span className="input-group-btn">
                     <button
