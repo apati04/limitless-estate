@@ -143,8 +143,7 @@ app.post('/api/mailchimp/subscribe', async (req, res) => {
   const rootURL = `https://${region}.api.mailchimp.com/3.0/lists/3c16a06b45/members/`;
   const data = {
     email_address: req.body.email,
-    status: 'subscribed',
-    tags: ['Drip Campaign']
+    status: 'subscribed'
   };
 
   const sub = await axios.post(rootURL, data, {
