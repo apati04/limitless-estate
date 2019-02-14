@@ -50,11 +50,15 @@ class Subscribe extends Component {
               </div>
               <div className="col-auto py-2">
                 <div>
-                  <h1 className="h1-responsive text-left">
-                    Sign up to get your free passive investors guide!
-                  </h1>
+                  <h2 className="h1-responsive text-left">
+                    Sign up to get your{' '}
+                    <strong>FREE Passive Investors Guide!</strong>
+                  </h2>
                 </div>
-                <div className=" md-form input-group">
+                <div
+                  style={{ display: 'flex', alignItems: 'baseline' }}
+                  className="md-form input-group"
+                >
                   <Field
                     component="input"
                     className="form-control p-0"
@@ -70,7 +74,7 @@ class Subscribe extends Component {
                       className="btn btn-outline primary-color"
                       disabled={isSubmitting}
                     >
-                      Subscribe
+                      Sign Up
                     </button>
                   </span>
                 </div>
