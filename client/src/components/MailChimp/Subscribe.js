@@ -50,7 +50,10 @@ class Subscribe extends Component {
               </div>
               <div className="col-auto py-2">
                 <div>
-                  <h2 className="h1-responsive text-left">
+                  <h2
+                    style={{ fontFamily: 'Playfair Display' }}
+                    className="h1-responsive text-left"
+                  >
                     Sign up to get your{' '}
                     <strong>FREE Passive Investors Guide!</strong>
                   </h2>
@@ -74,7 +77,7 @@ class Subscribe extends Component {
                       className="btn btn-outline primary-color"
                       disabled={isSubmitting}
                     >
-                      Sign Up
+                      <strong>Sign Up</strong>
                     </button>
                   </span>
                 </div>
