@@ -203,19 +203,38 @@ class Navigation extends Component {
                   Questionnaire
                 </NavLink>
               </NavItem>
-              <NavItem className="p-2">
-                <NavLink
-                  exact
-                  style={{ color: 'white', letterSpacing: '0.5px' }}
-                  activeStyle={{
-                    borderBottom: '1px white solid',
-                    outline: 0
-                  }}
-                  to="/events/meetups"
+              <div className="nav-item dropdown">
+                <a
+                  style={{ outline: 0, letterSpacing: '0.5px' }}
+                  className="text-white nav-link dropdown-toggle"
+                  id="navbarDropdownMenuLink"
+                  aria-haspopup="true"
+                  aria-expanded="false"
                 >
                   Events
-                </NavLink>
-              </NavItem>
+                </a>
+                <div
+                  aria-labelledby="navbarDropdownMenuLink"
+                  className="dropdown-menu"
+                >
+                  <NavLink
+                    exact
+                    activeStyle={{ fontWeight: 400, color: 'white' }}
+                    className="px-3 dropdown-item"
+                    to="/events/meetups/"
+                  >
+                    Multifamily Apartment Investors Meetup - Long Beach
+                  </NavLink>
+                  <NavLink
+                    exact
+                    activeStyle={{ fontWeight: 400, color: 'white' }}
+                    className="px-3 dropdown-item"
+                    to="/events/meetups/cerritos"
+                  >
+                    Cerritos Multifamily Investors Roundtable
+                  </NavLink>
+                </div>
+              </div>
               <NavItem className="p-2">
                 <NavLink
                   exact

@@ -28,6 +28,7 @@ import Risks_PageTwo from '../pages/articles/investing_risks/page_2';
 import MeetUps from '../pages/MeetUps/MeetUps';
 import Podcast from '../pages/Media/Podcast';
 import Survey from './MailChimp/Survey';
+import CerritosMeetup from '../pages/MeetUps/CerritosMeetup';
 class App extends Component {
   render() {
     return (
@@ -38,7 +39,12 @@ class App extends Component {
             <Switch>
               <Route exact path="/tester" component={Survey} />
               <Route exact path="/" component={LandingPage} />
-              <Route path="/events/meetups" component={MeetUps} />
+              <Route path="/events/meetups" exact component={MeetUps} />
+              <Route
+                path="/events/meetups/cerritos"
+                exact
+                component={CerritosMeetup}
+              />
               <Route path="/members/about/" component={AboutUs} />
               <Route exact path="/resources" component={Overview} />
               <Route

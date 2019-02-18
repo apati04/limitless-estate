@@ -1,15 +1,17 @@
 import React from 'react';
 import EventListItem from './eventListItem';
 //
-const EventList = ({ eventDetails, meetupTime }) => {
+const EventList = ({ eventDetails, meetupTime, description }) => {
   let eventDetailList = eventDetails.map(
-    ({ rsvp_limit, yes_rsvp_count, id, time, link }) => (
+    ({ rsvp_limit, yes_rsvp_count, id, time, link, fee = '' }) => (
       <EventListItem
         rsvpLimit={rsvp_limit}
         yesRsvp={yes_rsvp_count}
         key={id}
         link={link}
         time={time}
+        fee={fee}
+        details={description}
         meetupTime={meetupTime}
       />
     )

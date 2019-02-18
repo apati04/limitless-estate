@@ -9,22 +9,7 @@ const app = express();
 // Send every request to the React app
 // Define any API routes before this runs
 app.use(bodyParser.json());
-
-app.get('/api/events/meetups', async (req, res) => {
-  const apiKey = keys.meetupApiKey;
-  const url = `https://api.meetup.com/Out-of-State-Multifamily-Apartment-Investors-Meetup/events?sign=true&key=${apiKey}&status=upcoming&page=20&photo-host=public`;
-  const response = await axios.get(url);
-
-  if (response.data[0]) {
-    const filterData = response.data.filter(({ name, fee }) => {
-      return (
-        name ===
-        'Out of State Apartment Investing Mastermind - Long Beach Chapter'
-      );
-    });
-    res.status(200).send(filterData);
-  }
-});
+require('./routes/meetupRoutes')(app);
 app.post('/api/sendmail', (req, res) => {
   const { firstname, lastname, email, company, message } = req.body;
   const transporter = nodemailer.createTransport({

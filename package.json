@@ -9,8 +9,10 @@
   },
   "scripts": {
     "server": "node server.js",
+    "devserver": "nodemon server.js",
     "client": "cd client && npm run start",
     "start": "concurrently \"npm run server\" \"npm run client\"",
+    "dev": "concurrently \"npm run devserver\" \"npm run client\"",
     "build": "cd client && npm run build",
     "deploy": "yarn build && git add . && git commit -m \"Building for production\" && git push heroku master",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client",

@@ -1,16 +1,21 @@
-import React, { Component, Fragment } from 'react';
+import React, { Fragment, Component } from 'react';
 import Events from '../../components/Events/Events';
 import EventMap from '../../components/Events/EventMap';
+import ReactHtmlParser, {
+  processNodes,
+  convertNodeToElement,
+  htmlparser2
+} from 'react-html-parser';
 import { ListGroup, ListGroupItem } from 'mdbreact';
-import MeetupDescription from './meetupDescription';
 import Moment from 'react-moment';
 import axios from 'axios';
-class MeetUps extends Component {
+class CerritosMeetup extends Component {
   state = { meetups: null };
   componentDidMount() {
-    axios.get('/api/events/meetups').then(({ data }) => {
+    axios.get('/api/meetups/cerritos').then(({ data }) => {
       this.setState({ meetups: data });
     });
+    console.log(this.state);
   }
 
   render() {
@@ -31,6 +36,7 @@ class MeetUps extends Component {
       atVenueLocation,
       meetupVenue = '';
     if (this.state.meetups) {
+      console.log(this.state);
       const {
         time,
         description,
@@ -75,20 +81,18 @@ class MeetUps extends Component {
               <p>
                 Hosted By:{' '}
                 <a
-                  href="https://www.meetup.com/Out-of-State-Multifamily-Apartment-Investors-Meetup/"
+                  href="https://www.meetup.com/Cerritos-Multifamily-Investors-Roundtable/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Kyle Mitchell and Lalita Patipaksiri
+                  Kyle Mitchell
                 </a>
               </p>
               <div className="text-justify">
-                <MeetupDescription />
-                <p>
-                  <strong>Admission/Venue:</strong> We encourage each attendee
-                  to spend at least $10 in food/drink, however it is not
-                  required.
-                </p>
+                {ReactHtmlParser(meetupDescription)}
+                <ul className="list-unstyled p-0">
+                  <li key="meetuplb-3">Admission: $2.50</li>
+                </ul>
               </div>
             </div>
           </div>
@@ -99,8 +103,8 @@ class MeetUps extends Component {
               </h3>
               <div />
               <Events
-                description={meetupDescription}
                 time={meetupTime}
+                description={meetupDescription}
                 howToFindUs={atVenueLocation}
                 meetupArray={this.state.meetups}
               />
@@ -113,22 +117,6 @@ class MeetUps extends Component {
                 <div className="p-0 m-0">{meetupMap}</div>
 
                 <ListGroup className="z-depth-1 rounded m-0 p-0">
-                  <ListGroupItem>
-                    <div className="d-flex w-100 align-items-baseline justify-content-start">
-                      <i
-                        style={styles.markerStyle}
-                        className="mr-1 far fa-clock"
-                      />
-                      <div className="ml-3">
-                        <p>
-                          {meetupTime}{' '}
-                          <span className="text-muted ">
-                            Every 2nd Tuesday of the month
-                          </span>
-                        </p>
-                      </div>
-                    </div>
-                  </ListGroupItem>
                   <ListGroupItem>
                     <div className="d-flex w-100 align-items-baseline justify-content-start">
                       <i style={styles.markerStyle} className="far fa-map" />
@@ -166,4 +154,4 @@ class MeetUps extends Component {
   }
 }
 
-export default MeetUps;
+export default CerritosMeetup;

@@ -1,12 +1,12 @@
-import React, { Component } from "react";
-import { CalendarIcon } from "react-calendar-icon";
-import { ThemeProvider } from "styled-components";
+import React, { Component } from 'react';
+import { CalendarIcon } from 'react-calendar-icon';
+import { ThemeProvider } from 'styled-components';
 
 const theme = {
   calendarIcon: {
-    display: "flex !important",
-    alignItems: "center !important",
-    justifyContent: "space-around !important"
+    display: 'flex !important',
+    alignItems: 'center !important',
+    justifyContent: 'center !important'
   }
 };
 class CalendarDay extends Component {

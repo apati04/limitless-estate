@@ -19,17 +19,36 @@ const meetupDescription = () => {
         apartments in markets that simply make sense (or dollars!). Apartment
         investing is a team sport. So come join the best team in LA.
       </p>
-      <p>
-        We hold monthly meetups across the LA area. Locations and times include
+      <p style={{ marginBottom: '2px' }}>
+        <strong>Event Details</strong>
       </p>
       <ul className="list-unstyled p-0">
-        <li key="meetup-0">West LA: 1st week of the month</li>
-        <li key="meetup-1">Long Beach / Lakewood: 2nd week of the month</li>
-        <li key="meetup-2">South Bay: 3rd week of the month</li>
+        <li key="meetuplb-0">
+          <strong>Time: </strong> 6:30pm to 8:30pm
+        </li>
+        <li key="meetuplb-1">
+          <strong>Date: </strong> Every 2nd Tuesday of the month
+        </li>
+        <li key="meetuplb-2">
+          <strong>Location: </strong> <br /> Recreation Park 18 Golf Course
+          <br /> 5001 Deukmejian Drive Long Beach, CA 90804
+        </li>
+        <li key="meetuplb-3">
+          <strong>Admission: </strong> We encourage attendees to spend at least
+          $10 on food/beverages, however this is not a requirement to join the
+          meetup.
+        </li>
       </ul>
       <p>
         Day and times vary by location. For the most up to date schedule and
-        venue please visit this page. Hope to see you all there!
+        venue please visit{' '}
+        <a
+          href="https://www.meetup.com/Out-of-State-Multifamily-Apartment-Investors-Meetup/"
+          rel="nofollow"
+        >
+          this page
+        </a>
+        . Hope to see you all there!
       </p>
     </Fragment>
   );
