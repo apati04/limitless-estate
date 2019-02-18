@@ -36,8 +36,8 @@ class Subscribe extends Component {
       <section>
         <div className="container">
           <Form>
-            <div className="row justify-content-around align-items-center py-4">
-              <div className="col-md-4">
+            <div className="row justify-content-around align-items-start">
+              <div style={{ marginTop: '40px' }} className="col-md-6">
                 <img
                   src="https://i.imgur.com/k5GoGK6.png"
                   className="img-fluid"
@@ -48,18 +48,22 @@ class Subscribe extends Component {
                   }}
                 />
               </div>
-              <div className="col-auto py-2">
+              <div className="col-md-6 p-2">
                 <div>
-                  <h2
+                  <h3
                     style={{ fontFamily: 'Playfair Display' }}
                     className="h1-responsive text-left"
                   >
-                    Sign up to get your{' '}
+                    Sign up to get your <br />
                     <strong>FREE Passive Investors Guide!</strong>
-                  </h2>
+                  </h3>
                 </div>
                 <div
-                  style={{ display: 'flex', alignItems: 'baseline' }}
+                  style={{
+                    display: 'flex',
+                    flexWrap: 'wrap',
+                    alignItems: 'baseline'
+                  }}
                   className="md-form input-group"
                 >
                   <Field
