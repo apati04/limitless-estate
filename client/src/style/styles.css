@@ -251,6 +251,10 @@ footer.page-footer {
   }
 }
 @media screen and (max-width: 768px) {
+  .investors-guide-form {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
   #youtubeVideo {
     visibility: hidden;
     display: none;

@@ -5,7 +5,10 @@ import {
   Modal,
   ModalHeader,
   ModalBody,
-  ModalFooter
+  ModalFooter,
+  Card,
+  CardBody,
+  CardTitle
 } from 'mdbreact';
 import { withFormik, Form, Field } from 'formik';
 import Yup from 'yup';
@@ -34,57 +37,64 @@ class Subscribe extends Component {
     const { values, errors, touched, isSubmitting } = this.props;
     return (
       <section>
-        <div className="container">
+        <div
+          style={{ marginTop: '40px', marginBottom: '40px' }}
+          className="container p-4"
+        >
           <Form>
-            <div className="row justify-content-around align-items-start">
-              <div style={{ marginTop: '40px' }} className="col-md-6">
+            <div className="row justify-content-between align-items-start">
+              <div className="col-md-6 investors-guide-form mb-3">
                 <img
-                  src="https://i.imgur.com/k5GoGK6.png"
-                  className="img-fluid"
-                  style={{
-                    display: 'block',
-                    marginLeft: 'auto',
-                    marginRight: 'auto'
-                  }}
+                  src="https://i.imgur.com/D4wijRG.jpg"
+                  className="img-fluid d-block"
                 />
               </div>
-              <div className="col-md-6 p-2">
-                <div>
-                  <h3
-                    style={{ fontFamily: 'Playfair Display' }}
-                    className="h1-responsive text-left"
-                  >
-                    Sign up to get your <br />
-                    <strong>FREE Passive Investors Guide!</strong>
-                  </h3>
-                </div>
-                <div
-                  style={{
-                    display: 'flex',
-                    flexWrap: 'wrap',
-                    alignItems: 'baseline'
-                  }}
-                  className="md-form input-group"
-                >
-                  <Field
-                    component="input"
-                    className="form-control p-0"
-                    type="email"
-                    name="email"
-                    placeholder="Your Email Address"
-                  />
-
-                  <span className="input-group-btn">
-                    <button
-                      type="submit"
-                      onClick={this.toggle}
-                      className="btn btn-outline primary-color"
-                      disabled={isSubmitting}
+              <div className="col-md-6 investors-guide-form">
+                <Card>
+                  <div className="card-header view  mdb-color">
+                    <h3
+                      style={{
+                        fontFamily: 'Playfair Display',
+                        textAlign: 'center',
+                        color: '#fff',
+                        opacity: '0.98'
+                      }}
+                      className=""
                     >
-                      <strong>Sign Up</strong>
-                    </button>
-                  </span>
-                </div>
+                      Sign up to get your <br />
+                      <strong>FREE Passive Investors Guide!</strong>
+                    </h3>
+                  </div>
+                  <CardBody>
+                    <div
+                      style={{
+                        display: 'flex',
+                        flexWrap: 'wrap',
+                        alignItems: 'baseline',
+                        paddingLeft: '4px',
+                        paddingRight: '4px'
+                      }}
+                      className="md-form input-group mb-2"
+                    >
+                      <Field
+                        component="input"
+                        className="form-control p-0"
+                        type="email"
+                        name="email"
+                        placeholder="Your Email Address"
+                      />
+
+                      <button
+                        type="submit"
+                        onClick={this.toggle}
+                        className="btn  btn-block primary-color"
+                        disabled={isSubmitting}
+                      >
+                        <strong>Sign Up</strong>
+                      </button>
+                    </div>
+                  </CardBody>
+                </Card>
               </div>
             </div>
           </Form>
