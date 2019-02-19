@@ -33,11 +33,6 @@ const meetupDescription = () => {
           <strong>Location: </strong> <br /> Recreation Park 18 Golf Course
           <br /> 5001 Deukmejian Drive Long Beach, CA 90804
         </li>
-        <li key="meetuplb-3">
-          <strong>Admission: </strong> We encourage attendees to spend at least
-          $10 on food/beverages, however this is not a requirement to join the
-          meetup.
-        </li>
       </ul>
       <p>
         Day and times vary by location. For the most up to date schedule and
