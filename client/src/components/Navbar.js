@@ -243,7 +243,7 @@ class Navigation extends Component {
                     borderBottom: '1px white solid',
                     outline: 0
                   }}
-                  to="/media/podcast"
+                  to="/podcasts"
                 >
                   Podcast
                 </NavLink>

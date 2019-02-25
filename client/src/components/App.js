@@ -64,7 +64,7 @@ class App extends Component {
               />
               <Route exact path="/resources/faq" component={Faq} />
               <Route exact path="/legal" component={Legal} />
-              <Route exact path="/media/podcast" component={Podcast} />
+              <Route exact path="/podcasts" component={Podcast} />
 
               <Route exact path="/markets/columbus/" component={ColSum} />
               <Route exact path="/markets/tucson/" component={Tucson} />
