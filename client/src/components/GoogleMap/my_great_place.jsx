@@ -1,5 +1,4 @@
 import React, { Fragment, Component } from 'react';
-import { greatPlaceStyle } from './my_great_place_styles.js';
 
 export default class MyGreatPlace extends Component {
   render() {

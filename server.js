@@ -3,13 +3,13 @@ const path = require('path');
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
 const keys = require('./config/keys');
-const request = require('request');
 const axios = require('axios');
 const app = express();
 // Send every request to the React app
 // Define any API routes before this runs
 app.use(bodyParser.json());
 require('./routes/meetupRoutes')(app);
+require('./routes/podcastRoutes')(app);
 app.post('/api/sendmail', (req, res) => {
   const { firstname, lastname, email, company, message } = req.body;
   const transporter = nodemailer.createTransport({
@@ -201,10 +201,10 @@ app.post('/api/mailchimp/survey', async (req, res) => {
     res.send({ error: err });
   }
 });
-// app.get('*', function(req, res) {
-//   app.use(express.static('client/public'));
-//   res.sendFile(path.resolve(__dirname, 'client', 'public', 'index.html'));
-// });
+app.get('*', function(req, res) {
+  app.use(express.static(path.join(__dirname, 'client', 'public')));
+  res.sendFile(path.resolve(__dirname, 'client', 'public', 'index.html'));
+});
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.resolve(__dirname, 'client', 'build')));

@@ -1,15 +1,5 @@
 import React, { Component } from 'react';
-import {
-  Input,
-  Button,
-  Modal,
-  ModalHeader,
-  ModalBody,
-  ModalFooter,
-  Card,
-  CardBody,
-  CardTitle
-} from 'mdbreact';
+import { Modal, ModalHeader, ModalFooter, Card, CardBody } from 'mdbreact';
 import { withFormik, Form, Field } from 'formik';
 import Yup from 'yup';
 import axios from 'axios';

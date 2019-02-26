@@ -1,19 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import FadeIn from '../../components/FadeIn';
-
-import StickyBox from 'react-sticky-box';
-import {
-  Button,
-  Card,
-  CardImage,
-  CardBody,
-  CardText,
-  CardTitle,
-  Container,
-  View,
-  Mask
-} from 'mdbreact';
+import { Card, CardImage, CardBody } from 'mdbreact';
 const styles = {
   header: {
     padding: '0',

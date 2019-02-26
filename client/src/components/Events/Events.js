@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
-
-import { CalendarIcon } from 'react-calendar-icon';
 import EventList from './eventList';
 
 class Events extends Component {
   render() {
-    const { title, time, description, meetupArray, howToFindUs } = this.props;
+    const { time, description, meetupArray } = this.props;
     let eventList;
     if (Array.isArray(meetupArray)) {
       eventList = (

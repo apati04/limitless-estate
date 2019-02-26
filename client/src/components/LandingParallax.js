@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Mask } from 'mdbreact';
+import { Mask } from 'mdbreact';
 
 const LandingParallax = () => {
   const imgpara = 'https://i.imgur.com/vnCJr0J.jpg';

@@ -2,16 +2,6 @@ import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import summary from './summary';
 import GoogleMap from '../../components/GoogleMap/GoogleMap';
-import {
-  Button,
-  Card,
-  CardImage,
-  CardBody,
-  CardText,
-  CardTitle,
-  Container,
-  View
-} from 'mdbreact';
 const styles = {
   header: {
     padding: '0',

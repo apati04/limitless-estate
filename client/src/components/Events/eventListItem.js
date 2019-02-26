@@ -27,7 +27,7 @@ const EventListItem = props => {
               <div>
                 <p style={{ margin: 0, padding: 0 }}>{eventFee}</p>
                 <p style={{ margin: 0, padding: 0 }}>
-                  <i class="far fa-user" /> {props.yesRsvp}
+                  <i className="far fa-user" /> {props.yesRsvp}
                 </p>
               </div>
               <a

@@ -1,17 +1,6 @@
 import React, { Component } from 'react';
-import {
-  Button,
-  Card,
-  CardImage,
-  CardBody,
-  CardText,
-  CardTitle,
-  Container,
-  View
-} from 'mdbreact';
 import summary from './summary_data';
-import { NavLink, Link } from 'react-router-dom';
-import Article from '../../components/templates/Article';
+import { NavLink } from 'react-router-dom';
 import GoogleMap from '../../components/GoogleMap/GoogleMap';
 const styles = {
   header: {

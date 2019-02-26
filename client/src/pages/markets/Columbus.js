@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
-import { Card, CardBody, CardImage, Button } from 'mdbreact';
+import { Card, CardBody, CardImage } from 'mdbreact';
 const styles = {
   header: {
     padding: '0',
@@ -12,7 +12,6 @@ const styles = {
 };
 class Columbus extends Component {
   render() {
-    const pdfCol = '/docs/SDP-Columbus.pdf';
     return (
       <Card className="z-depth-0">
         <CardImage tag="div">

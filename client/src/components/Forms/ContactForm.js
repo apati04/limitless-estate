@@ -1,12 +1,5 @@
 import React, { Component } from 'react';
-import {
-  Input,
-  Button,
-  Modal,
-  ModalHeader,
-  ModalBody,
-  ModalFooter
-} from 'mdbreact';
+import { Modal, ModalHeader, ModalBody, ModalFooter } from 'mdbreact';
 import { withFormik, Form, Field } from 'formik';
 import Yup from 'yup';
 import { NavLink } from 'react-router-dom';
@@ -19,7 +12,6 @@ class ContactForm extends Component {
   };
 
   toggle = e => {
-    let isValid = true;
     sleep(500).then(() => {
       let check = Object.values(this.props.errors);
       if (check.includes('Required')) {

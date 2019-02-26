@@ -1,11 +1,7 @@
 import React, { Fragment, Component } from 'react';
 import Events from '../../components/Events/Events';
 import EventMap from '../../components/Events/EventMap';
-import ReactHtmlParser, {
-  processNodes,
-  convertNodeToElement,
-  htmlparser2
-} from 'react-html-parser';
+import ReactHtmlParser from 'react-html-parser';
 import { ListGroup, ListGroupItem } from 'mdbreact';
 import Moment from 'react-moment';
 import axios from 'axios';
@@ -15,7 +11,6 @@ class CerritosMeetup extends Component {
     axios.get('/api/meetups/cerritos').then(({ data }) => {
       this.setState({ meetups: data });
     });
-    console.log(this.state);
   }
 
   render() {
@@ -36,7 +31,6 @@ class CerritosMeetup extends Component {
       atVenueLocation,
       meetupVenue = '';
     if (this.state.meetups) {
-      console.log(this.state);
       const {
         time,
         description,

@@ -10,12 +10,12 @@ import LandingPage from '../pages/LandingPage';
 import Markets from '../pages/Markets';
 import Contact from '../pages/Contact';
 import Columbus from '../pages/markets/Columbus';
-import Ecorse from '../pages/markets/Ecorse';
+
 import Phoenix from '../pages/markets/Phoenix';
 import TucsonSDP from '../pages/markets/TucsonSDP';
 import Legal from '../pages/Legal';
 import ColSum from '../pages/columbus';
-import DetSum from '../pages/detroit';
+
 import Tucson from '../pages/tucson/Tucson';
 import PhoenixSum from '../pages/phoenix/Phoenix';
 import Questionnaire from '../pages/Questionnaire';
@@ -26,8 +26,7 @@ import ImpactInvesting from '../pages/articles/impact_investing/page_1';
 import Risks_PageOne from '../pages/articles/investing_risks/page_1';
 import Risks_PageTwo from '../pages/articles/investing_risks/page_2';
 import MeetUps from '../pages/MeetUps/MeetUps';
-import Podcast from '../pages/Media/Podcast';
-import Survey from './MailChimp/Survey';
+import Podcast from '../pages/Podcast';
 import CerritosMeetup from '../pages/MeetUps/CerritosMeetup';
 class App extends Component {
   render() {
@@ -37,7 +36,6 @@ class App extends Component {
           <div>
             <Header />
             <Switch>
-              <Route exact path="/tester" component={Survey} />
               <Route exact path="/" component={LandingPage} />
               <Route path="/events/meetups" exact component={MeetUps} />
               <Route
@@ -65,16 +63,12 @@ class App extends Component {
               <Route exact path="/resources/faq" component={Faq} />
               <Route exact path="/legal" component={Legal} />
               <Route exact path="/podcasts" component={Podcast} />
-
               <Route exact path="/markets/columbus/" component={ColSum} />
               <Route exact path="/markets/tucson/" component={Tucson} />
-              <Route exact path="/markets/detroit/" component={DetSum} />
-              <Route exact path="/markets/detroit/sdp" component={Ecorse} />
               <Route exact path="/markets/phoenix/" component={PhoenixSum} />
               <Route exact path="/markets/phoenix/sdp" component={Phoenix} />
               <Route exact path="/markets/columbus/sdp" component={Columbus} />
               <Route exact path="/markets/tucson/sdp" component={TucsonSDP} />
-              <Route exact path="/markets" component={Markets} />
               <Route exact path="/info/contact" component={Contact} />
               <Route
                 exact
