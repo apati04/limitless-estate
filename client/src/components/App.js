@@ -23,8 +23,8 @@ import Faq from '../pages/Faq';
 import SupportCo from '../pages/SupportCo';
 import Overview from '../pages/articles/Overview';
 import ImpactInvesting from '../pages/articles/impact_investing/page_1';
-import Risks_PageOne from '../pages/articles/investing_risks/page_1';
-import Risks_PageTwo from '../pages/articles/investing_risks/page_2';
+import RiskPageOne from '../pages/articles/investing_risks/page_1';
+import RiskPageTwo from '../pages/articles/investing_risks/page_2';
 import MeetUps from '../pages/MeetUps/MeetUps';
 import Podcast from '../pages/Podcast';
 import CerritosMeetup from '../pages/MeetUps/CerritosMeetup';
@@ -48,12 +48,12 @@ class App extends Component {
               <Route
                 exact
                 path="/resources/investingrisks/1"
-                component={Risks_PageOne}
+                component={RiskPageOne}
               />
               <Route
                 exact
                 path="/resources/investingrisks/2"
-                component={Risks_PageTwo}
+                component={RiskPageTwo}
               />
               <Route
                 exact

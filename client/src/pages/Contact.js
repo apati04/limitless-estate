@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ContactForm from '../components/Forms/ContactForm';
-import { Card, CardImage, CardBody, CardTitle } from 'mdbreact';
+import { Card, CardHeader, CardBody, CardTitle, CardText } from 'mdbreact';
 const bgimage = 'https://i.imgur.com/RH9g1cH.jpg';
 
 class Contact extends Component {
@@ -20,16 +20,14 @@ class Contact extends Component {
             <div className="row flex-center">
               <div className="m-5 col-12 col-lg-7">
                 <Card className="align-center animated fadeIn z-depth-4" narrow>
-                  <CardImage tag="div">
-                    <div className="view gradient-card-header blue-gradient text-align-center peach-gradient">
-                      <CardTitle className="text-white text-center pb-2">
-                        <div>
-                          <h2 className="h2-responsive">Contact Us</h2>
-                          <p>We'd love to hear from you!</p>
-                        </div>
-                      </CardTitle>
-                    </div>
-                  </CardImage>
+                  <div className="view gradient-card-header blue-gradient text-align-center peach-gradient p-4">
+                    <h1 className="h1-responsive text-white text-center">
+                      Contact Us
+                    </h1>
+                    <CardText className="text-white text-center">
+                      We'd love to hear from you!
+                    </CardText>
+                  </div>
                   <CardBody className="p-5">
                     <ContactForm />
                   </CardBody>

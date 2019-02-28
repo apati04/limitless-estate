@@ -12,24 +12,24 @@ const IconSection = () => {
         <IconTemplate
           icon="fas fa-child"
           title="Impacting Lives"
-          fontSize={3 + 'em'}
+          fontSize={3 + 'rem'}
         />
         <IconTemplate
           icon="fas fa-users"
           title="Community Development"
-          fontSize={3 + 'em'}
+          fontSize={3 + 'rem'}
         />
 
         <IconTemplate
           icon="fab fa-medapps"
           title="Inspire Others"
-          fontSize={3 + 'em'}
+          fontSize={3 + 'rem'}
         />
 
         <IconTemplate
           icon="fas fa-trophy"
           title="Create Win Win Win Scenarios"
-          fontSize={3 + 'em'}
+          fontSize={3 + 'rem'}
         />
       </div>
     </div>

@@ -16,7 +16,7 @@ export default () => {
       className="view hm-black-light"
     >
       <div className="dark-overlay">
-        <Mask className="flex-column d-flex justify-content-center align-items-center">
+        <Mask className="flex-column d-flex justify-content-center align-items-center flex-1">
           <div
             style={{ color: 'white' }}
             className="w-75 text-center text-justify-center text-md-center"
@@ -24,11 +24,11 @@ export default () => {
             <h1 className="font-weight-bold text-white mb-3">
               Impact Investing
             </h1>
-            <h3 className="mb-3 white-text">
+            <h4 className="h4-responsive mb-3 white-text">
               Impact investing enables investors to put their money to good use
               in meaningful, intelligent ventures that provide both a financial
               AND a social return on their investment.
-            </h3>
+            </h4>
             <NavLink
               style={{ borderRadius: '99px' }}
               className="btn btn-primary"
