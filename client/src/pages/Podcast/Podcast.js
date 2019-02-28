@@ -13,8 +13,8 @@ import {
   CardText,
   CardImage
 } from 'mdbreact';
+import SubButton from './SubButton';
 import ReactSVG from 'react-svg';
-// https://assets.buzzsprout.com/assets/app/directories/US_UK_Apple_Podcasts_Listen_Badge_RGB-aca2df4cadce191ac1a3971f0992dacdfe74bd91fac4be65bf44f50501fd090e.svg
 
 const styles = {
   header: {
@@ -34,6 +34,11 @@ class Podcast extends Component {
       this.setState({ episodes: result.data.data });
     });
   }
+  renderButtons = () => {
+    return api.media.map((item, idx) => {
+      return <SubButton {...item} key={idx} />;
+    });
+  };
   episodeRender = () => {
     if (this.state.episodes === null) {
       return;
@@ -63,27 +68,22 @@ class Podcast extends Component {
             <div>
               <p
                 style={{
-                  fontFamily: 'Arimo',
-                  color: '#7B8996',
-                  lineHeight: '1.5'
+                  color: 'rgba(10,10,10,1)',
+                  marginBottom: 0
                 }}
+                className=""
               >
-                Published On <Moment format="LL">{item.published_at}</Moment>
-                Duration
+                Featuring: {item.artist}
               </p>
+              <div>
+                <small>
+                  Published on <Moment format="LL">{item.published_at}</Moment>
+                </small>
+              </div>
+
               <p
-                style={{
-                  opacity: '0.90',
-                  margin: 0,
-                  lineHeight: '28px'
-                }}
-                className=" p-2 font-italic"
-              >
-                Featuring {item.artist} |{' '}
-              </p>
-              <p
-                style={{ fontSize: '18px', color: '#555555' }}
-                className=" p-2"
+                style={{ fontSize: '1em', lineHeight: '1.5rem' }}
+                className="mt-4 text-black-80"
               >
                 {item.summary}
               </p>
@@ -94,11 +94,6 @@ class Podcast extends Component {
     });
   };
   render() {
-    const corsUrl = 'https://cors-anywhere.herokuapp.com/';
-    const itunesUrl =
-      'https://itunes.apple.com/us/podcast/passive-income-through-multifamily-real-estate/id1451849159?mt=2';
-    const sticherUrl = 'https://app.stitcher.com/browse/feed/376895/details';
-
     return (
       <section style={{ background: '#dee2e6' }}>
         <div
@@ -131,35 +126,23 @@ class Podcast extends Component {
                 </div>
               </div>
             </Card>
-            <div className="row d-flex p-0 my-5 justify-content-between align-items-start">
+            <div className="row d-flex p-0 my-4 justify-content-between align-items-start">
               <div className="pl-0 col-md-3">
                 <Card>
                   <CardHeader>
-                    <CardText className="font-size-4 font-weight-light">
+                    <CardTitle
+                      style={{
+                        fontWeight: '400',
+                        fontSize: '1.1rem',
+                        marginTop: '0.75rem'
+                      }}
+                      className="ml-3"
+                    >
                       Subscribe to our Podcast
-                    </CardText>
+                    </CardTitle>
                   </CardHeader>
                   <CardBody>
-                    <CardImage
-                      src="https://i.imgur.com/BtthUlD.png"
-                      alt=""
-                      className="img-fluid mb-3"
-                    />
-                    <CardImage
-                      src="https://i.imgur.com/IAxza1Y.png"
-                      alt=""
-                      className="img-fluid mb-3"
-                    />
-                    <CardImage
-                      src="https://i.imgur.com/OEPZ0hZ.png"
-                      alt=""
-                      className="img-fluid mb-3"
-                    />
-                    <CardImage
-                      src="https://i.imgur.com/GPupl19.png"
-                      alt=""
-                      className="img-fluid mb-3"
-                    />
+                    <div className="p-2">{this.renderButtons()}</div>
                   </CardBody>
                 </Card>
               </div>
@@ -172,5 +155,5 @@ class Podcast extends Component {
     );
   }
 }
-// &amp;referrer=https://www.buzzsprout.com/255024.js?player=small
+
 export default Podcast;

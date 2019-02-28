@@ -2,26 +2,7 @@
   "name": "mern",
   "version": "0.1.0",
   "private": true,
-  "proxy": {
-    "/api/pdf": {
-      "target": "http://localhost:3001"
-    },
-    "/api/sendmail": {
-      "target": "http://localhost:3001"
-    },
-    "/api/questionnaire": {
-      "target": "http://localhost:3001"
-    },
-    "/api/events/*": {
-      "target": "http://localhost:3001"
-    },
-    "/api/podcast": {
-      "target": "http://localhost:3001"
-    },
-    "/api/*": {
-      "target": "http://localhost:3001"
-    }
-  },
+  "proxy": "http://localhost:3001",
   "dependencies": {
     "axios": "^0.18.0",
     "bootstrap": "^4.1.2",
@@ -37,9 +18,9 @@
     "moment": "^2.22.1",
     "popper.js": "^1.14.1",
     "prop-types": "^15.6.2",
-    "react": "^16.3.1",
     "react-calendar-icon": "^0.9.2",
-    "react-dom": "^16.3.1",
+    "react": "^16.8.3",
+    "react-dom": "^16.8.3",
     "react-error-overlay": "^4.0.0",
     "react-ga": "^2.5.3",
     "react-html-parser": "^2.0.2",
@@ -50,7 +31,7 @@
     "react-pure-render": "^1.0.2",
     "react-redux": "^5.0.7",
     "react-router-dom": "^4.2.2",
-    "react-scripts": "1.1.4",
+    "react-scripts": "2.1.5",
     "react-sticky-box": "^0.6.1",
     "react-svg": "^7.2.7",
     "react-truncate": "^2.4.0",
@@ -64,5 +45,11 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
-  }
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }

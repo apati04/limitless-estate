@@ -126,6 +126,15 @@ h6 {
 .blog-pagination > .btn {
   border-radius: 2rem;
 } */
+a[href],
+input[type='submit'],
+input[type='image'],
+label[for],
+select,
+button,
+.pointer {
+  cursor: pointer;
+}
 .carousel-fade {
   animation: none !important;
   transition: none !important;
@@ -232,6 +241,7 @@ footer.page-footer {
 #podcastContainer {
   padding: 0;
 }
+
 @media print {
   .container {
     width: auto;
