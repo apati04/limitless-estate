@@ -1,4 +1,6 @@
+import './podcastStyle.css';
 import React, { Component } from 'react';
+import { NavLink } from 'react-router-dom';
 import axios from 'axios';
 import api from './api';
 import Player from './Player';
@@ -11,7 +13,11 @@ import {
   MDBCardBody,
   MDBCardTitle,
   MDBCardText,
-  MDBCardImage
+  MDBCardImage,
+  MDBListGroup,
+  MDBListGroupItem,
+  MDBView,
+  MDBMask
 } from 'mdbreact';
 import SubButton from './SubButton';
 import ReactSVG from 'react-svg';
@@ -90,25 +96,46 @@ class Podcast extends Component {
               <MDBCardTitle>
                 Passive Income Through Multifamily Real Estate Podcast
               </MDBCardTitle>
-
-              <p
-                style={{
-                  color: '#212325'
-                }}
-                className="mt-4"
-              >
-                SUMMARY: <br />
-                {item.summary}
-              </p>
-              <p
-                style={{
-                  color: '#212325'
-                }}
-                className="pt-0 mt-0"
-              >
-                FEATURING: <br />
-                {item.artist}
-              </p>
+              <div className="py-1">
+                <div className="my-3">
+                  <p
+                    style={{
+                      color: '#212325',
+                      opacity: '0.8'
+                    }}
+                    className="m-0 p-0"
+                  >
+                    <strong>EPISODE SUMMARY</strong>
+                  </p>
+                  <p
+                    style={{
+                      color: '#212325'
+                    }}
+                    className="m-0 p-0"
+                  >
+                    {' '}
+                    {item.summary}
+                  </p>
+                </div>
+                <div>
+                  <p
+                    style={{
+                      color: '#212325',
+                      opacity: '0.8'
+                    }}
+                    className="mb-0"
+                  >
+                    <strong>FEATURING</strong>
+                  </p>
+                  <p
+                    style={{
+                      color: '#212325'
+                    }}
+                  >
+                    {item.artist}
+                  </p>
+                </div>
+              </div>
             </div>
           </MDBCardBody>
         </MDBCard>
@@ -119,7 +146,7 @@ class Podcast extends Component {
     const colorBg = { one: '#fafafa', two: '#eee', three: '#dee2e6' };
 
     return (
-      <section style={{ background: `${colorBg.two}` }}>
+      <section id="podcastSection" style={{ background: `${colorBg.two}` }}>
         <div
           style={{
             minHeight: '100vh'
@@ -158,20 +185,10 @@ class Podcast extends Component {
               <div className="pl-0 pr-3 col-md-3">
                 <div className="mb-4">
                   <MDBCard>
-                    {/* <MDBCardHeader>
-                    <MDBCardTitle
-                      style={{
-                        fontWeight: '400',
-                        fontSize: '1.1rem',
-                        marginTop: '0.75rem'
-                      }}
-                      className="ml-3"
-                    >
-                      Subscribe to our Podcast
-                    </MDBCardTitle>
-                  </MDBCardHeader> */}
-                    <MDBCardBody>
-                      <div className="p-2">{this.renderButtons()}</div>
+                    <MDBCardBody className="px-2">
+                      <MDBListGroup className="my-1 list-unstyled">
+                        {this.renderButtons()}
+                      </MDBListGroup>
                     </MDBCardBody>
                   </MDBCard>
                 </div>
@@ -183,52 +200,69 @@ class Podcast extends Component {
                   </div>
 
                   <div className="mb-3">
-                    <MDBCard>
-                      <MDBCardBody className="p-3">
-                        <div className="avatar d-flex justify-content-start align-items-center ">
-                          <img
-                            style={{ maxWidth: '44px' }}
-                            className="card-img rounded-circle"
-                            src="https://i.imgur.com/qC2iaYa.jpg?1"
+                    <NavLink to="/members/about/kyle">
+                      <MDBCard>
+                        <MDBView hover>
+                          <MDBCardBody className="p-3">
+                            <div className="avatar d-flex justify-content-start align-items-center">
+                              <img
+                                style={{ maxWidth: '44px' }}
+                                className="card-img rounded-circle"
+                                src="https://i.imgur.com/qC2iaYa.jpg?1"
+                              />
+                              <div className="ml-3">
+                                <p style={styles.hostName} className="p-0 m-0">
+                                  Kyle Mitchell
+                                </p>
+                                <p
+                                  style={{ fontSize: '13px' }}
+                                  className="text-black-50 p-0 m-0"
+                                >
+                                  Managing Parter
+                                </p>
+                              </div>
+                            </div>
+                          </MDBCardBody>
+
+                          <MDBMask
+                            className="flex-center"
+                            overlay="stylish-light"
                           />
-                          <div className="ml-3">
-                            <p style={styles.hostName} className="p-0 m-0">
-                              Kyle Mitchell
-                            </p>
-                            <p
-                              style={{ fontSize: '13px' }}
-                              className="text-black-50 p-0 m-0"
-                            >
-                              Managing Parter
-                            </p>
-                          </div>
-                        </div>
-                      </MDBCardBody>
-                    </MDBCard>
+                        </MDBView>
+                      </MDBCard>
+                    </NavLink>
                   </div>
-                  <div>
-                    <MDBCard>
-                      <MDBCardBody className="p-3">
-                        <div className="avatar d-flex justify-content-start align-items-center ">
-                          <img
-                            style={{ maxWidth: '44px' }}
-                            className="card-img rounded-circle"
-                            src="https://i.imgur.com/Lok4G0b.jpg?1"
+                  <div className="py-2">
+                    <NavLink to="/members/about/lalita">
+                      <MDBCard>
+                        <MDBView hover>
+                          <MDBCardBody className="p-3">
+                            <div className="avatar d-flex justify-content-start align-items-center ">
+                              <img
+                                style={{ maxWidth: '44px' }}
+                                className="card-img rounded-circle"
+                                src="https://i.imgur.com/Lok4G0b.jpg?1"
+                              />
+                              <div className="ml-3">
+                                <p style={styles.hostName} className="p-0 m-0">
+                                  Lalita Patipaksiri
+                                </p>
+                                <p
+                                  style={{ fontSize: '13px' }}
+                                  className="text-black-50 p-0 m-0"
+                                >
+                                  Managing Parter
+                                </p>
+                              </div>
+                            </div>
+                          </MDBCardBody>
+                          <MDBMask
+                            className="flex-center"
+                            overlay="stylish-light"
                           />
-                          <div className="ml-3">
-                            <p style={styles.hostName} className="p-0 m-0">
-                              Lalita Patipaksiri
-                            </p>
-                            <p
-                              style={{ fontSize: '13px' }}
-                              className="text-black-50 p-0 m-0"
-                            >
-                              Managing Parter
-                            </p>
-                          </div>
-                        </div>
-                      </MDBCardBody>
-                    </MDBCard>
+                        </MDBView>
+                      </MDBCard>
+                    </NavLink>
                   </div>
                 </div>
               </div>
@@ -243,3 +277,16 @@ class Podcast extends Component {
 }
 
 export default Podcast;
+/*
+
+<MDBView hover>
+              <img
+                src="https://mdbootstrap.com/img/Others/documentation/forest-sm-mini.jpg"
+                className="img-fluid"
+                alt=""
+              />
+              <MDBMask className="flex-center" overlay="red-light">
+                <p className="white-text">Light overlay</p>
+              </MDBMask>
+            </MDBView>
+*/

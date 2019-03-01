@@ -1,34 +1,36 @@
 import React from 'react';
-
+import { MDBListGroupItem } from 'mdbreact';
 const SubButton = ({ appLogo, podcastUrl, alt }) => {
   return (
-    <div className="view mb-4">
-      <div>
-        <a
-          className="d-flex justify-content-start align-items-center"
-          href={podcastUrl}
-          target="_blank"
-          rel="nofollow noreferrer"
+    <MDBListGroupItem
+      style={{ border: 0 }}
+      className="d-flex justify-content-start align-items-center mb-1"
+    >
+      <a
+        id="podcastlink-id"
+        href={podcastUrl}
+        target="_blank"
+        rel="nofollow noreferrer"
+      >
+        <img
+          className="img-fluid"
+          style={{ maxHeight: '40px', width: '40px' }}
+          src={appLogo}
+          alt={alt}
+        />
+        <p
+          style={{
+            color: 'rgb(33, 35, 37)',
+            fontWeight: '500',
+            display: 'inline',
+            letterSpacing: '0.6px'
+          }}
+          className="ml-3"
         >
-          <img
-            className="img-fluid mb-3"
-            style={{ maxHeight: '40px', width: '40px' }}
-            src={appLogo}
-            alt={alt}
-          />
-          <p
-            style={{
-              color: 'rgb(33, 35, 37)',
-              fontWeight: '500',
-              letterSpacing: '0.6px'
-            }}
-            className="ml-3"
-          >
-            {alt}
-          </p>
-        </a>
-      </div>
-    </div>
+          {alt}
+        </p>
+      </a>
+    </MDBListGroupItem>
   );
 };
 // ;
