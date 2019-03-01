@@ -110,10 +110,10 @@ app.post('/api/mailchimp/contactus', async (req, res) => {
         json: true
       }
     });
-    res.send({ results: survey.data });
+    res.status(200).send({ message: 'success' });
   } catch (err) {
     console.log('error: ', err);
-    res.send({ error: err });
+    res.status(400).send({ error: err });
   }
 });
 /* 
@@ -195,13 +195,11 @@ app.post('/api/mailchimp/survey', async (req, res) => {
         json: true
       }
     });
-    res.send({ results: survey.data });
+    res.status(200).send({ message: 'success' });
   } catch (err) {
-    console.log('error: ', err);
-    res.send({ error: err });
+    res.status(400).send({ error: err });
   }
 });
-
 
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === 'production') {
@@ -212,7 +210,7 @@ if (process.env.NODE_ENV === 'production') {
 } else {
   app.use(express.static(path.join(__dirname, 'client', 'public')));
 
-  app.get('*', function (req, res) {
+  app.get('*', function(req, res) {
     res.sendFile(path.resolve(__dirname, 'client', 'public', 'index.html'));
   });
 }
