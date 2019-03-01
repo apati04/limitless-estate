@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Mask } from 'mdbreact';
 
-export default ({
+const Article = ({
   overlayColor,
   headerImage,
   pattern = '',
@@ -13,7 +13,7 @@ export default ({
 }) => {
   return (
     <section style={{ height: '100%' }} className="h-100">
-      <View
+      <div
         style={{
           height: 25 + 'em',
           backgroundImage: `url(${headerImage})`,
@@ -21,10 +21,10 @@ export default ({
           backgroundRepeat: 'no-repeat',
           backgroundPosition: 'center'
         }}
-        className={overlayColor}
+        className={`${overlayColor} view`}
       >
         <Mask className={`flex-center ${pattern}`} />
-      </View>
+      </div>
       <div className="container">
         <div className="row justify-content-around my-4">
           <div className="col-12 col-lg-8 text-left">
@@ -42,3 +42,4 @@ export default ({
     </section>
   );
 };
+export default Article;

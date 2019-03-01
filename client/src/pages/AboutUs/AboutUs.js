@@ -29,9 +29,9 @@ class AboutUs extends Component {
   render() {
     return (
       <div>
-        <View>
+        <div className="view">
           <div style={styles.header} />
-        </View>
+        </div>
 
         {this.renderProfile()}
       </div>

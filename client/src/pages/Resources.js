@@ -1,6 +1,5 @@
 import React from 'react';
 import PageHeader from '../components/PageHeader';
-import IconTemplate from '../components/IconTemplate';
 import { Link } from 'react-router-dom';
 
 export default () => {

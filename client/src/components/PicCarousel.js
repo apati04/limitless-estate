@@ -1,169 +1,160 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
-import {
-  Carousel,
-  CarouselInner,
-  CarouselItem,
-  CarouselControl,
-  View,
-  Mask,
-  Button
-} from 'mdbreact';
-import classNames from 'classnames';
+import { View, Mask } from 'mdbreact';
+import Limitless from './wistia/limitless';
 class PicCarousel extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      activeItem: 1,
-      maxLength: 3
-    };
-    this.newRef = React.createRef();
-  }
-
-  next = () => {
-    const nextItem = this.state.activeItem + 1;
-    if (nextItem > this.state.maxLength) {
-      this.setState(function(prevState, props) {
-        return { activeItem: 1 };
-      });
-    } else {
-      this.setState(function(prevState, props) {
-        const nextI = prevState.activeItem + 1;
-        return { activeItem: nextI };
-      });
-    }
-  };
-  prev = () => {
-    const prevItem = this.state.activeItem - 1;
-    if (prevItem < 1) {
-      this.setState(function(prevState, props) {
-        return { activeItem: prevState.maxLength };
-      });
-    } else {
-      this.setState(function(prevState, props) {
-        const newItem = prevState.activeItem - 1;
-        return {
-          activeItem: newItem
-        };
-      });
-    }
-  };
-  componentWillUnmount() {
-    clearInterval(this.newRef.current.cycleInterval);
-  }
-
   render() {
     const caption = (
-      <Mask className="rgba-black-slight flex-center">
-        <div className="row w-75">
-          <div className="col">
-            <div className="h3-responsive mb-4 text-center white-text">
-              Our vision at Limitless Estates is to provide A-class living to
-              lower income housing by putting our residents first and instilling
-              a sense of community while inspiring others to do the same.
-            </div>
-            <div className="h3-responsive mb-4 text-center white-text">
-              Our mission is to positively impact the lives of the people in our
-              local neighborhoods through{' '}
-              <a
-                className=" text-success font-italic font-weight-bold"
-                href="/resources/impactinvesting"
+      <div className='light-overlay'>
+        <Mask style={{ paddingTop: 60 + 'px' }} className='container'>
+          <div className='row justify-content-between align-items-center'>
+            <div className='col-6'>
+              <h2
+                style={{ color: 'white', marginBottom: 2 + '%' }}
+                className='text-left h4-responsive'
               >
-                impact investing
-              </a>{' '}
-              while achieving double digit returns for our investors.
+                Our vision at Limitless Estates is to provide A-class living to
+                lower income housing by putting our residents first and
+                instilling a sense of community while inspiring others to do the
+                same.
+              </h2>
+              <h4
+                style={{ color: 'white', marginBottom: 2 + '%' }}
+                className='text-left h4-responsive'
+              >
+                Our mission is to positively impact the lives of the people in
+                our local neighborhoods through{' '}
+                <a
+                  className=' text-success font-italic font-weight-bold'
+                  href='/resources/impactinvesting'
+                >
+                  impact investing
+                </a>{' '}
+                while achieving double digit returns for our investors.
+              </h4>
+              <div
+                style={{ marginTop: 4 + '%' }}
+                className='d-none d-md-block text-center h4-responsive'
+              >
+                <NavLink
+                  style={{ borderRadius: '5px', background: '#1847A1' }}
+                  className='btn'
+                  to='info/questionnaire'
+                >
+                  Investor Questionnaire
+                </NavLink>
+              </div>
             </div>
-            <div className="d-none d-lg-block mt-4 text-center">
-              <a href="info/questionnaire">
-                <Button color="primary">Make an impact</Button>
-              </a>
+            <div className='col-6'>
+              <Limitless
+                wistiaSrc='https://fast.wistia.com/embed/medias/pueh6irs0z/swatch'
+                wistiaClass='wistia_embed wistia_async_pueh6irs0z videoFoam=true'
+              />
             </div>
           </div>
-        </div>
-      </Mask>
+          <div className='row justify-content-center align-items-center mt-4'>
+            <div style={{ color: 'white' }} className='mt-4 col-6'>
+              <Limitless
+                wistiaSrc='https://fast.wistia.com/embed/medias/mtdamm7u8i/swatch'
+                wistiaClass='wistia_embed wistia_async_mtdamm7u8i videoFoam=true'
+              />
+            </div>
+            <div className='col-6 text-center text-justify-center text-md-center white-text'>
+              <h4 className='text-left h4-responsive mt-2'>
+                Did you know you can invest with your 401k/IRA? Watch the video
+                to find out more.
+              </h4>
+              <h4 className='text-left h4-responsive mt-2'>
+                Click the link below to connect with our preferred partners and
+                setup your self-directed IRA
+              </h4>
+              <NavLink
+                className='btn btn-primary'
+                to='/info/investing/ira401k'
+                size='md'
+                style={{ borderRadius: '5px' }}
+              >
+                Preferred Partners
+              </NavLink>
+            </div>
+          </div>
+        </Mask>
+      </div>
     );
-
+    const styles = {
+      header: {
+        padding: '0',
+        background: 'url(https://i.imgur.com/BI90AZ5.jpg?2) bottom no-repeat',
+        backgroundSize: 'cover',
+        minHeight: 50 + 'em'
+      },
+      mobileHeader: {
+        padding: '0',
+        background: 'url(https://i.imgur.com/BI90AZ5.jpg?2) center no-repeat',
+        backgroundSize: 'cover',
+        height: 25 + 'em'
+      }
+    };
     return (
       <section>
-        <Carousel
-          activeItem={this.state.activeItem}
-          className="slide d-none d-md-block z-depth-1"
-          next={this.next}
-          ref={this.newRef}
-        >
-          <CarouselInner className="carousel-fade">
-            <CarouselItem itemId="2">
-              <View>
-                <img
-                  className="w-100 d-block"
-                  src="https://i.imgur.com/MEac1d0.jpg?1"
-                  alt="Second Slide"
-                />
-                {caption}
-              </View>
-            </CarouselItem>
-            <CarouselItem itemId="1">
-              <View>
-                <img
-                  className="w-100 d-block"
-                  src="https://i.imgur.com/BI90AZ5.jpg?2"
-                  alt="First Slide"
-                />
-                {caption}
-              </View>
-            </CarouselItem>
-            <CarouselItem itemId="3">
-              <View className="rgba-black-light">
-                <img
-                  className="w-100 d-block"
-                  src="https://i.imgur.com/jZscfQg.jpg?2"
-                  alt="Third Slide"
-                />
-                {caption}
-              </View>
-            </CarouselItem>
-          </CarouselInner>
-          <CarouselControl
-            className="invisible"
-            direction="prev"
-            role="button"
-            onClick={() => {
-              this.prev();
-            }}
-          />
-          <CarouselControl
-            className="invisible"
-            direction="next"
-            role="button"
-            onClick={() => {
-              this.next();
-            }}
-          />
-        </Carousel>
-        <div className="d-block d-md-none">
-          <View className="rgba-black-light">
-            <img
-              className="w-100 img-fluid"
-              src="https://i.imgur.com/BI90AZ5.jpg?1"
-              alt="First Slide"
-            />
+        <div className='d-none d-md-block'>
+          <View>
+            <div style={styles.header} />
+            <div>{caption}</div>
           </View>
-          <div className="p-2 rgba-bluegrey-slight">
-            <div className="m-2 h5-responsive text-center">
-              Our vision at Limitless Estates is to provide A-class living to
-              lower income housing by putting our residents first and instilling
-              a sense of community while inspiring others to do the same.
+        </div>
+
+        <div className='d-block d-md-none'>
+          <View>
+            <div style={styles.mobileHeader} />
+            <div className='light-overlay'>
+              <Mask className='black-light container'>
+                <div className='row justify-content-center flex-center'>
+                  <div className='col'>
+                    <div className='p-2 text-center text-white'>
+                      Our vision at Limitless Estates is to provide A-class
+                      living to lower income housing by putting our residents
+                      first and instilling a sense of community while inspiring
+                      others to do the same.
+                    </div>
+                    <div className='p-2 text-center text-white'>
+                      Our mission is to positively impact the lives of the
+                      people in our local neighborhoods through{' '}
+                      <NavLink
+                        to='/resources/impactinvesting'
+                        className=' text-success font-italic font-weight-bold'
+                      >
+                        impact investing
+                      </NavLink>{' '}
+                      while achieving double digit returns for our investors.
+                    </div>
+                    <div className='p-2 text-center'>
+                      <a
+                        href='https://ehypauluugknktzawdwva-free.10to8.com/'
+                        rel='noopener noreferrer'
+                        target='_blank'
+                        style={{ whiteSpace: 'nowrap' }}
+                        className='btn btn-sm btn-primary btn-rounded align-items-center'
+                      >
+                        Schedule a Call{' '}
+                        <i
+                          className='fa fa-volume-control-phone'
+                          aria-hidden='true'
+                          style={{
+                            fontSize: '13px',
+                            paddingTop: '2px',
+                            paddingLeft: '8px'
+                          }}
+                        />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </Mask>
             </div>
-          </div>
-          <div className="p-2 rgba-grey-slight">
-            <div className="m-2 text-center h5-responsive">
-              Our mission is to positively impact the lives of the people in our
-              local neighborhoods through{' '}
-              <NavLink to="/resources/impactinvesting">
-                impact investing
-              </NavLink>{' '}
-              while achieving double digit returns for our investors.
-            </div>
+          </View>
+          <div className='rgba-stylish-slight p-1'>
+            <Limitless />
           </div>
         </div>
       </section>

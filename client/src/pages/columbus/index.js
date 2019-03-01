@@ -1,20 +1,7 @@
 import React, { Component } from 'react';
-import MapBox from '../../components/MapBox';
-
-import {
-  Button,
-  Card,
-  CardImage,
-  CardBody,
-  CardText,
-  CardTitle,
-  Container,
-  View
-} from 'mdbreact';
 import summary from './summary_data';
-import { NavLink, Link } from 'react-router-dom';
-import Article from '../../components/templates/Article';
-
+import { NavLink } from 'react-router-dom';
+import GoogleMap from '../../components/GoogleMap/GoogleMap';
 const styles = {
   header: {
     padding: '0',
@@ -27,7 +14,11 @@ class Columbus extends Component {
   renderContent = () => {
     const main = summary[0].body;
     const { list } = summary[1];
-    const body = main.map((e, i) => <p key={i}>{e}</p>);
+    const body = main.map((e, i) => (
+      <p className="textblockclass" key={i}>
+        {e}
+      </p>
+    ));
     const listItems = list.map((e, i) => <li key={i}>{e}</li>);
     return (
       <div className="mt-4">
@@ -38,6 +29,7 @@ class Columbus extends Component {
   };
 
   render() {
+    const [lat, lng] = [39.9512919, -82.9901501];
     return (
       <div className="animated fadeIn z-depth-0">
         <div style={styles.header} />
@@ -63,10 +55,19 @@ class Columbus extends Component {
             </div>
 
             <div
-              style={{ marginRight: -1 + 'em' }}
+              style={{
+                marginRight: -1 + 'em',
+                height: '300px',
+                width: '100%'
+              }}
               className="pr-0 col-md-4 d-none d-md-block"
             >
-              <MapBox address="Columbus, OH" />
+              <GoogleMap
+                centerMap={{ lat, lng }}
+                mapLng={lng}
+                mapLat={lat}
+                zoomLevel={10}
+              />
             </div>
           </div>
         </div>

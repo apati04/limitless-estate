@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 /*
 -More Control over Returns
 -Cash Flow
@@ -10,49 +10,23 @@ Leveraging Debt
 */
 const InfoSection = () => {
   return (
-    <section id="info" className="p-5 rgba-white-slight">
-      <div className="container">
+    <section id="info" className="rgba-white-slight">
+      <div
+        className="container"
+        style={{ paddingTop: "30px", paddingBottom: "60px" }}
+      >
         <div className="row align-items-center justify-content-center text-left">
           <div className="col-12 col-md-6">
-            <ul className="p-0 list-group-flush">
+            <ul className="p-0 list-group-flush" style={{ fontSize: "18px" }}>
+              <li className="list-group-item">Appreciation</li>
+              <li className="list-group-item">Cash Flow</li>
+              <li className="list-group-item">Tax Benefits</li>
+              <li className="list-group-item">Leveraging Debt</li>
+              <li className="list-group-item">Business Backed by Hard Asset</li>
+              <li className="list-group-item">Tenants Pay Down the Debt</li>
+              <li className="list-group-item">Housing is a necessity</li>
               <li className="list-group-item">
-                <div className="h5-responsive">Appreciation</div>
-              </li>
-              <li className="list-group-item">
-                <div className="h5-responsive">More Control Over Returns</div>
-              </li>
-              <li className="list-group-item">
-                <div className="h5-responsive"> Cash Flow</div>
-              </li>
-              <li className="list-group-item">
-                <div className="h5-responsive">
-                  Accelerated Depreciation &amp; Cost Segregation
-                </div>
-              </li>
-              <li className="list-group-item">
-                <div className="h5-responsive">Tax Benefits</div>
-              </li>
-              <li className="list-group-item h5-responsive">Leveraging Debt</li>
-              <li className="list-group-item">
-                <div className="h5-responsive">
-                  Inflation Induced Debt Destruction
-                </div>
-              </li>
-              <li className="list-group-item">
-                <div className="h5-responsive">
-                  Less Volatile than the Stock Market
-                </div>
-              </li>
-              <li className="list-group-item">
-                <div className="h5-responsive">Tenants Pay Down the Debt </div>
-              </li>
-              <li className="list-group-item">
-                <div className="h5-responsive">Everyone Needs Housing </div>
-              </li>
-              <li className="list-group-item">
-                <div className="h5-responsive">
-                  National Housing Shortage of 3.9 million units
-                </div>
+                National Housing Shortage of 3.9 million units
               </li>
             </ul>
           </div>
@@ -62,14 +36,17 @@ const InfoSection = () => {
               className="img-fluid d-none d-md-block w-100"
               alt=""
             />
-            <Link to="/resources">
-              <button
-                size="lg"
-                className="h5-responsive btn btn-block btn-outline-danger p-2 mt-4"
-              >
-                Learn More
-              </button>
-            </Link>
+            <div className="px-2">
+              <Link to="/resources">
+                <button
+                  size="lg"
+                  style={{ borderRadius: "99px" }}
+                  className="h5-responsive btn btn-block btn-outline-danger p-2 mt-4"
+                >
+                  Learn More on Why to invest in multifamily
+                </button>
+              </Link>
+            </div>
           </div>
         </div>
       </div>
