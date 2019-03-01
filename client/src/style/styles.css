@@ -264,6 +264,9 @@ footer.page-footer {
   #podcastContainer {
     padding: 3rem 0;
   }
+  #podcastContainer li {
+    padding-right: 0 !important;
+  }
 }
 @media screen and (max-width: 768px) {
   .investors-guide-form {
