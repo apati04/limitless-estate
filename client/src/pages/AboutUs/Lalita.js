@@ -5,24 +5,31 @@ export default props => {
       <div className="container my-5">
         <div className="row justify-content-around">
           <div className="col-12 col-lg-9">
-            <div className="no-flex testimonial-carousel">
+            <div className="no-flex testimonial-carousel text-align-center ">
               <div className="testimonial">
-                <div className="avatar mx-auto">
+                <div style={{ textAlign: 'center' }}>
                   <img
+                    style={{
+                      maxWidth: '200px',
+                      boxShadow:
+                        '0 5px 11px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(0,0,0,.15)'
+                    }}
                     src="https://i.imgur.com/Lok4G0b.jpg?1"
                     className="rounded-circle img-fluid"
                     alt="img2"
                   />
                 </div>
               </div>
-            </div>
-            <div className="pt-0">
-              <h3 className="m-0 text-center h3-responsive">
+              <h3 className="text-center h3-responsive mt-4">
                 Lalita Patipaksiri
               </h3>
-              <h5 className="m-1 h5-responsive text-center">Vice President</h5>
+              <h5 className="h5-responsive text-center">Managing Partner</h5>
+              <p className="mx-auto text-center">
+                Entrepreneur | Athlete | Operator
+              </p>
             </div>
-            <div className="mt-4">
+
+            <div style={{ textAlign: 'justify' }} className="mt-4">
               <p className="mt-1">
                 My passion is in helping others and making a difference in any
                 way I can. I find gratitude in helping others find solutions and
@@ -36,11 +43,15 @@ export default props => {
                 social media marketing.
               </p>
               <p className="mt-1">
-                <strong>Early Life: </strong>At a young age, I quickly learned
-                the meaning of discipline and dedication. I picked up the game
-                of golf when I was 10, was playing in competitive tournaments by
-                the time I was 13, and by the time I was 17, I had traveled and
-                competed in 34 of 50 states.
+              <strong>Real Estate: </strong>I am the Co-Founder and Managing Partner of Limitless Estates, LLC. I am involved with all aspects of the company such as research, acquisitions, management, operations, and marketing, but have a specific focus on investor relations. I have been successful at raising over $300k to fund my own sponsorship throughout the course of 3 years during my time as a professional athlete. Through experience, I can highlight the fact that the importance of a company’s sponsorship success is defined by the end result being beneficial to both parties and the importance to have an alignment of passion and goals.
+              </p>
+              <p className="mt-1">
+                <strong>Early Life: </strong>
+                At a young age, I quickly learned the meaning of discipline and
+                dedication. I picked up the game of golf when I was 10, was
+                playing in competitive tournaments by the time I was 13, and by
+                the time I was 17, I had traveled and competed in 34 of 50
+                states.
               </p>
               <p className="mt-1">
                 <strong>Education & Amateur Status: </strong>I attended UC
@@ -72,13 +83,8 @@ export default props => {
                 Altered Course Montego Bay.
               </p>
               <p className="mt-1">
-                <strong>Golf Industry: </strong>For the past 2 years, I have
-                worked for Strato Partners as a Regional Sales Director and
-                Assistant General Manager. Within this job, I have made myself
-                familiar and competent with defining what is important in
-                managing a $4 million+ business. Strato Partners make it a #1
-                priority to have each and every guest leave with a great
-                customer experience.
+                <strong>Golf Industry: </strong>
+                Since July 2016, I have worked for Strato Partners as a Regional Sales Director and Assistant General Manager. In just 2 years, I now hold the position of General Manager. Within this job, I have made myself familiar and competent with defining what is important in managing a $4 million+ business. Strato Partners make it a #1 priority to have each and every guest leave with a great customer experience.
               </p>
               <p className="mt-1">
                 <strong>Other: </strong>I constantly set goals for myself,

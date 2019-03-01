@@ -20,7 +20,7 @@ export default class HeaderSection extends Component {
   }
   render() {
     return (
-      <View className="hm-stylish-slight">
+      <div className="view hm-stylish-slight">
         <PicCarousel />
         <Mask className="d-flex full-bg-img flex-center ">
           <div className="d-flex container justify-content-around p-0 text-left white-text wow fadeInUp">
@@ -51,7 +51,7 @@ export default class HeaderSection extends Component {
             </div>
           </div>
         </Mask>
-      </View>
+      </div>
     );
   }
 }

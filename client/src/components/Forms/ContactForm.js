@@ -1,16 +1,9 @@
-import React, { Component } from "react";
-import {
-  Input,
-  Button,
-  Modal,
-  ModalHeader,
-  ModalBody,
-  ModalFooter
-} from "mdbreact";
-import { withFormik, Form, Field } from "formik";
-import Yup from "yup";
-import { NavLink } from "react-router-dom";
-import axios from "axios";
+import React, { Component } from 'react';
+import { Modal, ModalHeader, ModalBody, ModalFooter } from 'mdbreact';
+import { withFormik, Form, Field } from 'formik';
+import Yup from 'yup';
+import { NavLink } from 'react-router-dom';
+import axios from 'axios';
 const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
 
 class ContactForm extends Component {
@@ -19,10 +12,9 @@ class ContactForm extends Component {
   };
 
   toggle = e => {
-    let isValid = true;
     sleep(500).then(() => {
       let check = Object.values(this.props.errors);
-      if (check.includes("Required")) {
+      if (check.includes('Required')) {
         return;
       } else {
         this.setState({ modal: !this.state.modal });
@@ -46,12 +38,11 @@ class ContactForm extends Component {
                 id="firstname"
               />
 
-              {touched.firstname &&
-                errors.firstname && (
-                  <small className=" p-0 m-0 font-italic text-danger">
-                    {errors.firstname}
-                  </small>
-                )}
+              {touched.firstname && errors.firstname && (
+                <small className="p-0 m-0 font-italic text-danger">
+                  {errors.firstname}
+                </small>
+              )}
             </div>
           </div>
 
@@ -66,12 +57,11 @@ class ContactForm extends Component {
                 id="lastname"
               />
 
-              {touched.lastname &&
-                errors.lastname && (
-                  <small className=" p-0 m-0 font-italic text-danger">
-                    {errors.lastname}
-                  </small>
-                )}
+              {touched.lastname && errors.lastname && (
+                <small className=" p-0 m-0 font-italic text-danger">
+                  {errors.lastname}
+                </small>
+              )}
             </div>
           </div>
         </div>
@@ -87,12 +77,11 @@ class ContactForm extends Component {
                 placeholder="Email Address"
               />
 
-              {touched.email &&
-                errors.email && (
-                  <small className=" p-0 m-0 font-italic text-danger">
-                    {errors.email}
-                  </small>
-                )}
+              {touched.email && errors.email && (
+                <small className=" p-0 m-0 font-italic text-danger">
+                  {errors.email}
+                </small>
+              )}
             </div>
           </div>
         </div>
@@ -107,12 +96,11 @@ class ContactForm extends Component {
                 id="message"
                 placeholder="Your message here"
               />
-              {touched.message &&
-                errors.message && (
-                  <small className=" p-0 m-0 font-italic text-danger">
-                    {errors.message}
-                  </small>
-                )}
+              {touched.message && errors.message && (
+                <small className=" p-0 m-0 font-italic text-danger">
+                  {errors.message}
+                </small>
+              )}
             </div>
           </div>
         </div>
@@ -151,24 +139,24 @@ class ContactForm extends Component {
 
 export default withFormik({
   mapPropsToValues({
-    firstname = "",
-    lastname = "",
-    company = "",
-    email = "",
-    message = ""
+    firstname = '',
+    lastname = '',
+    company = '',
+    email = '',
+    message = ''
   }) {
     return { firstname, lastname, company, email, message };
   },
   validationSchema: Yup.object().shape({
-    firstname: Yup.string().required("Required"),
-    lastname: Yup.string().required("Required"),
+    firstname: Yup.string().required('Required'),
+    lastname: Yup.string().required('Required'),
     email: Yup.string()
-      .email("Email is not valid")
-      .required("Required"),
-    message: Yup.string().required("Required")
+      .email('Email is not valid')
+      .required('Required'),
+    message: Yup.string().required('Required')
   }),
   async handleSubmit(values, { resetForm, setErrors, setSubmitting }) {
-    const payload = await axios.post("/api/sendmail", values);
+    const payload = await axios.post('/api/mailchimp/contactus', values);
     resetForm();
     setSubmitting(false);
   }

@@ -35,17 +35,18 @@ module.exports = [
   },
   {
     title: 'Is there an investment minimum?',
-    body: 'Yes. The minimum amount you can invest is $50,000. '
+    body:
+      'Yes, however that number can very deal by deal. Typically the minimum amount you can invest will be between $25,000-$50,000.'
   },
   {
     title: 'Is there a maximum investment amount for one deal?',
     body:
-      'As stated above, each share is $50,000 but theoretically if you wanted to buy all shares available for a particular property, you are more than welcome to.'
+      'As stated above, each share is $25,000 - $50,000 but theoretically if you wanted to buy all shares available for a particular property, you are more than welcome to.'
   },
   {
     title: 'Who can invest?',
     body:
-      'Anyone 18 or older can invest, although you must be an accredited investor.  For more information visit www.sec.gov'
+      'Anyone 18 or older can invest, although you must be an accredited or sophisticated investor. For more information visit www.sec.gov'
   },
   {
     title: 'How often will I receive distributions?',

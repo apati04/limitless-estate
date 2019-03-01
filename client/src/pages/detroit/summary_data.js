@@ -7,11 +7,9 @@ module.exports = [
   },
   {
     list: [
-      'Employment growth 1.9% YOY ',
-      'Vacancy Rates at 2.8% vs 7.0% national average',
-      'Rent Rates up 5.2% YOY vs 2.0% national average',
-      'Private Sector jobs have outpaced national average 4 years in a row',
-      'Cap Rate at 8% vs 7% national average'
+      'Future job growth over the next 10 years predicted to be 30.9%',
+      'Major revitalization of Downtown Detroit includes Quicken Loans founder Dan Gilbert who invested $2.2B, purchased 95 buildings and moved 15,000 employees',
+      'High cash flow market with CAP rates at 8%+'
     ]
   }
 ];

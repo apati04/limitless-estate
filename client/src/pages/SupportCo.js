@@ -1,21 +1,21 @@
 import React, { Component } from 'react';
-import { NavLink } from 'react-router-dom';
-import {
-  Button,
-  Card,
-  CardBody,
-  CardText,
-  CardImage,
-  CardTitle,
-  Fa
-} from 'mdbreact';
+import { Card, CardBody, CardText, CardImage, Fa } from 'mdbreact';
 import { nuView, uDirect } from '../api/nuView';
 
 export default class SupportCo extends Component {
   renderInfo(company) {
-    const { name, phone, address, email, website, misc, logo } = company;
+    const {
+      name,
+      contact,
+      phone,
+      address,
+      email,
+      website,
+      misc,
+      logo
+    } = company;
     return (
-      <Card wide>
+      <Card className="my-4">
         <a target="_blank" rel="noopener" className="w-100" href={website}>
           <CardImage
             style={{ height: 10 + 'em' }}
@@ -29,6 +29,7 @@ export default class SupportCo extends Component {
           <div className="container">
             <div className="h-100 row flex-center">
               <div className="col-12 my-2 pr-0 m-0">
+                <h2>{contact}</h2>
                 <Fa size="md" icon="phone" className="mr-2" />
                 <CardText className="pl-1 d-inline">{phone}</CardText>
               </div>
@@ -96,20 +97,22 @@ export default class SupportCo extends Component {
         background:
           'url(https://i.imgur.com/1z653Y0.jpg?1) center center no-repeat',
         backgroundSize: 'cover',
-        height: 25 + 'em'
+        height: 15 + 'em'
       }
     };
     return (
       <section>
         <div style={styles.header}>
-          <div className="rgba-black-slight">
+          <div className="lightO">
             <div
               style={{ height: 25 + 'em' }}
               className="row mb-5 justify-content-center align-items-center"
             >
               <div className="col-8 text-left">
                 <header className=" text-align-center-left text-white">
-                  <h1 className="h1-responsive">401K/IRA</h1>
+                  <h1 className="font-weight-bold">
+                    Self-direct your 401k/IRA
+                  </h1>
                 </header>
               </div>
             </div>

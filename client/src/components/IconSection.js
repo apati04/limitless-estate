@@ -3,33 +3,33 @@ import IconTemplate from './IconTemplate';
 import { View, Mask } from 'mdbreact';
 const IconSection = () => {
   return (
-    <div style={{ height: 23 + 'em', display: 'block' }}>
+    <div className="container p-0" style={{ height: 'auto' }}>
       <div
-        className="row 
-      flex-column flex-md-row justify-content-around flex-center p-2"
+        className="row flex-column
+      flex-sm-row justify-content-around align-items-center flex-center flex-nowrap"
+        style={{ paddingTop: '60px', paddingBottom: '50px' }}
       >
         <IconTemplate
           icon="fas fa-child"
           title="Impacting Lives"
-          fontSize={3 + 'em'}
+          fontSize={3 + 'rem'}
         />
-
         <IconTemplate
           icon="fas fa-users"
           title="Community Development"
-          fontSize={3 + 'em'}
+          fontSize={3 + 'rem'}
         />
 
         <IconTemplate
           icon="fab fa-medapps"
           title="Inspire Others"
-          fontSize={3 + 'em'}
+          fontSize={3 + 'rem'}
         />
 
         <IconTemplate
           icon="fas fa-trophy"
           title="Create Win Win Win Scenarios"
-          fontSize={3 + 'em'}
+          fontSize={3 + 'rem'}
         />
       </div>
     </div>

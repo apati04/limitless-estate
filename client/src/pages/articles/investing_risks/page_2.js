@@ -23,7 +23,7 @@ export default class RisksTwoe extends Component {
           overlayText=""
           body={this.renderPage()}
           pageFooter={
-            <div classname="container row">
+            <div className="container row">
               <div className="col-12 d-flex flex-center">
                 <NavLink className="mr-2" to={`/resources/investingrisks/1`}>
                   <i
