@@ -248,7 +248,16 @@ footer.page-footer {
     width: auto;
   }
 }
-@media (max-width: 576px) {
+
+@media screen and (max-width: 768px) {
+  .investors-guide-form {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  #youtubeVideo {
+    visibility: hidden;
+    display: none;
+  }
   #podcastContainer > div > div.card > div {
     text-align: center;
   }
@@ -259,22 +268,24 @@ footer.page-footer {
   #podcastContainer h1 {
     font-size: 2rem;
   }
+  #podcastContainer
+    > div
+    > div.row.d-flex.p-0.my-3.justify-content-between.align-items-start
+    > div.pl-0.pr-3.col-md-4 {
+    padding-right: 0 !important;
+  }
+  #podcastContainer
+    > div
+    > div.row.d-flex.p-0.my-3.justify-content-between.align-items-start
+    > div.pr-0.pl-3.col-md-8 {
+    padding-left: 0 !important;
+  }
 }
 @media screen and (min-width: 768px) {
   #podcastContainer {
-    padding: 3rem 0;
+    padding: 1rem 0;
   }
   #podcastContainer li {
     padding-right: 0 !important;
-  }
-}
-@media screen and (max-width: 768px) {
-  .investors-guide-form {
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-  #youtubeVideo {
-    visibility: hidden;
-    display: none;
   }
 }

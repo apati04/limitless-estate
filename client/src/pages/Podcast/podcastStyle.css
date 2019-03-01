@@ -1,12 +1,12 @@
 a.podcastlink-id:hover {
   background-color: #000;
 }
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   #podcastSection {
     margin-top: -1.48rem;
   }
   #podcastContainer {
-    padding: 0 1.75rem !important;
+    padding: 0 1rem 1rem 1rem !important;
   }
   #podcastContainer
     > div
@@ -19,17 +19,19 @@ a.podcastlink-id:hover {
     p {
     padding-left: 0 !important;
   }
-  #podcastContainer > div > div.card.my-4 > div > div.col-md-4.p-4 {
-    padding-left: 1rem !important;
-  }
+
   #podcastContainer .col-md-4 {
     padding: 0;
+  }
+  #podcastContainer > div > div.card.my-4 > div > div.col-md-4.p-3 {
+    text-align: left;
+    padding-left: 1.5rem !important;
   }
   #podcastContainer p,
   #podcastContainer > div > div.card.my-4 > div > div.col-md-4.p-4,
   #podcastContainer > div > div.card.my-4 > div > div.col-md-8 > h1 {
     text-align: left;
-    padding-left: 1.25rem !important;
+    padding-left: 1rem !important;
   }
 
   #podcastContainer div:nth-child(2) > div.mb-3 {

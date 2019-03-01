@@ -85,17 +85,29 @@ class Podcast extends Component {
               <Player playerUrl={s2} />
             </div>
 
-            <div>
-              <div className="mb-2 p-0">
-                <small className="text-black-50">
-                  Podcast Ep.{ep} {` // `} Published on{' '}
-                  <Moment format="LL">{item.published_at}</Moment> {` // `}{' '}
+            <div className="pt-2">
+              <MDBCardTitle className="mb-1 pb-0">
+                Passive Income Through Multifamily Real Estate Podcast
+              </MDBCardTitle>
+
+              <div className="mb-2 mt-0 p-0 d-inline-flex flex-center flex-wrap">
+                <small>Ep.{ep}</small>
+                <i
+                  style={{ fontSize: '5px' }}
+                  className="text-black-50 fas fa-circle m-1"
+                />
+                <small>
+                  Published on <Moment format="LL">{item.published_at}</Moment>
+                </small>
+                <i
+                  style={{ fontSize: '5px' }}
+                  className="text-black-50 fas fa-circle m-1"
+                />
+                <small>
+                  {' '}
                   Length <Moment format="mm:ss">{duration}</Moment>
                 </small>
               </div>
-              <MDBCardTitle>
-                Passive Income Through Multifamily Real Estate Podcast
-              </MDBCardTitle>
               <div className="py-1">
                 <div className="my-3">
                   <p
@@ -153,10 +165,10 @@ class Podcast extends Component {
           }}
           id="podcastContainer"
         >
-          <div style={{ padding: 0 }} className="container">
+          <div className="container">
             <MDBCard className="my-4">
-              <div className="stylish-color-dark row p-2 d-flex justify-content-center align-items-center flex-wrap">
-                <div style={{ borderRadius: '4px' }} className="col-md-4 p-2">
+              <div className="stylish-color-dark row p-3 d-flex justify-content-center align-items-center flex-wrap">
+                <div style={{ borderRadius: '4px' }} className="col-md-4 p-3">
                   <img
                     src="https://i.imgur.com/TxnoBIK.jpg"
                     height="260"
@@ -193,13 +205,10 @@ class Podcast extends Component {
                   </MDBCard>
                 </div>
                 <div>
-                  <div className="my-4">
+                  <div className="mb-3">
                     <p style={styles.hLine}>
                       <span style={styles.hLineSpan}>Your Hosts</span>
                     </p>
-                  </div>
-
-                  <div className="mb-3">
                     <NavLink to="/members/about/kyle">
                       <MDBCard>
                         <MDBView hover>
@@ -277,16 +286,3 @@ class Podcast extends Component {
 }
 
 export default Podcast;
-/*
-
-<MDBView hover>
-              <img
-                src="https://mdbootstrap.com/img/Others/documentation/forest-sm-mini.jpg"
-                className="img-fluid"
-                alt=""
-              />
-              <MDBMask className="flex-center" overlay="red-light">
-                <p className="white-text">Light overlay</p>
-              </MDBMask>
-            </MDBView>
-*/
