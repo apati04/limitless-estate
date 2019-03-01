@@ -95,15 +95,19 @@ class Navigation extends Component {
                 </NavLink>
               </NavItem>
               <div className="nav-item dropdown">
-                <a
-                  style={{ outline: 0, letterSpacing: '0.5px' }}
+                <div
+                  style={{
+                    outline: 0,
+                    letterSpacing: '0.5px',
+                    cursor: 'default'
+                  }}
                   className="text-white nav-link dropdown-toggle"
                   id="navbarDropdownMenuLink"
                   aria-haspopup="true"
                   aria-expanded="false"
                 >
                   Markets
-                </a>
+                </div>
                 <div
                   aria-labelledby="navbarDropdownMenuLink"
                   className="dropdown-menu"
@@ -136,15 +140,19 @@ class Navigation extends Component {
                 </div>
               </div>
               <div className="nav-item dropdown">
-                <a
-                  style={{ outline: 0, letterSpacing: '0.5px' }}
+                <div
+                  style={{
+                    outline: 0,
+                    letterSpacing: '0.5px',
+                    cursor: 'default'
+                  }}
                   className="text-white nav-link dropdown-toggle"
                   id="navRes"
                   aria-haspopup="true"
                   aria-expanded="false"
                 >
                   Resources
-                </a>
+                </div>
                 <div className="dropdown-menu p-1" aria-labelledby="navRes">
                   <NavLink
                     exact
@@ -204,15 +212,19 @@ class Navigation extends Component {
                 </NavLink>
               </NavItem>
               <div className="nav-item dropdown">
-                <a
-                  style={{ outline: 0, letterSpacing: '0.5px' }}
+                <div
+                  style={{
+                    outline: 0,
+                    letterSpacing: '0.5px',
+                    cursor: 'default'
+                  }}
                   className="text-white nav-link dropdown-toggle"
                   id="navbarDropdownMenuLink"
                   aria-haspopup="true"
                   aria-expanded="false"
                 >
                   Events
-                </a>
+                </div>
                 <div
                   aria-labelledby="navbarDropdownMenuLink"
                   className="dropdown-menu"

@@ -4,26 +4,28 @@ const data = {
   media: [
     {
       logo: 'https://i.imgur.com/BtthUlD.png',
+      appLogo: 'https://i.imgur.com/Lq1ftym.png',
       podcastUrl:
         'https://itunes.apple.com/us/podcast/passive-income-through-multifamily-real-estate/id1451849159?mt=2',
-      alt: 'apple podcasts'
+      alt: 'Apple Podcasts'
     },
     {
       logo: 'https://i.imgur.com/IAxza1Y.png',
+      appLogo: 'https://i.imgur.com/f2hbNNk.png',
       podcastUrl: 'https://app.stitcher.com/browse/feed/376895/details',
-      alt: 'stitcher'
+      alt: 'Stitcher'
     },
     {
       logo: 'https://i.imgur.com/OEPZ0hZ.png',
+      appLogo: 'https://i.imgur.com/iZoFkHU.png',
       podcastUrl:
         'https://play.google.com/music/m/Ib3gvckb2hqnru5h4bj5747wmgi?t=Passive_Income_through_Multifamily_Real_Estate',
-      alt: 'google play'
+      alt: 'Google Podcasts'
     },
     {
-      logo: 'https://i.imgur.com/GPupl19.png',
-      podcastUrl:
-        'https://open.spotify.com/show/7AwYn0IUCRTRFfnJHe4jHy?si=_C9EYexbRSK3yYhVitMAHA',
-      alt: 'spotify'
+      appLogo: 'https://i.imgur.com/awIPzsy.png',
+      alt: 'RSS Feed',
+      podcastUrl: 'https://feeds.buzzsprout.com/255024.rss'
     }
   ]
 };

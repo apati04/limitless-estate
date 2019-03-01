@@ -6,52 +6,65 @@ import Parse from 'html-react-parser';
 import Moment from 'react-moment';
 
 import {
-  CardHeader,
-  Card,
-  CardBody,
-  CardTitle,
-  CardText,
-  CardImage
+  MDBCardHeader,
+  MDBCard,
+  MDBCardBody,
+  MDBCardTitle,
+  MDBCardText,
+  MDBCardImage
 } from 'mdbreact';
 import SubButton from './SubButton';
 import ReactSVG from 'react-svg';
 
 const styles = {
-  header: {
-    padding: '0',
-    background:
-      'url(https://i.imgur.com/1z653Y0.jpg?1) center center no-repeat',
-    backgroundSize: 'cover',
-    height: 15 + 'em'
+  hList: {
+    display: 'inline',
+    textTransform: 'uppercase'
+  },
+  hLine: {
+    width: '100%',
+    textAlign: 'left',
+    borderBottom: '1px solid #000',
+    lineHeight: '0.1em',
+    fontWeight: '400',
+    margin: '40px 0 30px'
+  },
+  hLineSpan: {
+    padding: '0 10px',
+    background: '#EEEEEE'
+  },
+  hostName: {
+    color: 'rgb(33,35,37)',
+    fontWeight: 500,
+    fontSize: '15px'
   }
 };
 class Podcast extends Component {
-  state = {
-    episodes: null
-  };
-  componentDidMount() {
-    axios.get('/api/podcast').then(result => {
-      this.setState({ episodes: result.data.data });
-    });
-  }
   renderButtons = () => {
     return api.media.map((item, idx) => {
       return <SubButton {...item} key={idx} />;
     });
   };
   episodeRender = () => {
-    if (this.state.episodes === null) {
+    if (this.props.episodes === null) {
       return;
     }
-    const { episodes } = this.state;
+    const { episodes } = this.props;
     return episodes.map(item => {
       const s1 = item.audio_url.split('/');
       const s2 = s1[s1.length - 1].split('.')[0];
       const day = new Date(item.published_at).getDate();
+      const duration = item.duration * 1000;
+      let ep;
+      if (item.id === 949981) {
+        ep = 0;
+      } else {
+        ep = item.episode_number;
+      }
       return (
-        <Card key={item.id} className="mb-4">
-          <CardHeader>
-            <CardTitle
+        <MDBCard key={item.id} className="mb-4">
+          <MDBCardHeader>
+            <MDBCardTitle
               style={{
                 fontWeight: '400',
                 fontSize: '1.1rem',
@@ -59,43 +72,54 @@ class Podcast extends Component {
               }}
             >
               {item.title}
-            </CardTitle>
-          </CardHeader>
-          <CardBody className="px-4">
-            <div className="mb-3">
+            </MDBCardTitle>
+          </MDBCardHeader>
+          <MDBCardBody className="px-4">
+            <div className="mb-1">
               <Player playerUrl={s2} />
             </div>
+
             <div>
-              <p
-                style={{
-                  color: 'rgba(10,10,10,1)',
-                  marginBottom: 0
-                }}
-                className=""
-              >
-                Featuring: {item.artist}
-              </p>
-              <div>
-                <small>
-                  Published on <Moment format="LL">{item.published_at}</Moment>
+              <div className="mb-2 p-0">
+                <small className="text-black-50">
+                  Podcast Ep.{ep} {` // `} Published on{' '}
+                  <Moment format="LL">{item.published_at}</Moment> {` // `}{' '}
+                  Length <Moment format="mm:ss">{duration}</Moment>
                 </small>
               </div>
+              <MDBCardTitle>
+                Passive Income Through Multifamily Real Estate Podcast
+              </MDBCardTitle>
 
               <p
-                style={{ fontSize: '1em', lineHeight: '1.5rem' }}
-                className="mt-4 text-black-80"
+                style={{
+                  color: '#212325'
+                }}
+                className="mt-4"
               >
+                SUMMARY: <br />
                 {item.summary}
               </p>
+              <p
+                style={{
+                  color: '#212325'
+                }}
+                className="pt-0 mt-0"
+              >
+                FEATURING: <br />
+                {item.artist}
+              </p>
             </div>
-          </CardBody>
-        </Card>
+          </MDBCardBody>
+        </MDBCard>
       );
     });
   };
   render() {
+    const colorBg = { one: '#fafafa', two: '#eee', three: '#dee2e6' };
+
     return (
-      <section style={{ background: '#dee2e6' }}>
+      <section style={{ background: `${colorBg.two}` }}>
         <div
           style={{
             minHeight: '100vh'
@@ -103,7 +127,7 @@ class Podcast extends Component {
           id="podcastContainer"
         >
           <div style={{ padding: 0 }} className="container">
-            <Card>
+            <MDBCard className="my-4">
               <div className="stylish-color-dark row p-2 d-flex justify-content-center align-items-center flex-wrap">
                 <div style={{ borderRadius: '4px' }} className="col-md-3 p-4">
                   <img
@@ -118,19 +142,24 @@ class Podcast extends Component {
                     Limitless Estates Podcast
                   </h1>
                   <p
-                    style={{ opacity: '0.97', fontSize: '18px' }}
+                    style={{
+                      opacity: '0.97',
+                      color: '#616161',
+                      fontSize: '18px'
+                    }}
                     className="text-white"
                   >
                     {api.description}
                   </p>
                 </div>
               </div>
-            </Card>
-            <div className="row d-flex p-0 my-4 justify-content-between align-items-start">
-              <div className="pl-0 col-md-3">
-                <Card>
-                  <CardHeader>
-                    <CardTitle
+            </MDBCard>
+            <div className="row d-flex p-0 my-3 justify-content-between align-items-start">
+              <div className="pl-0 pr-3 col-md-3">
+                <div className="mb-4">
+                  <MDBCard>
+                    {/* <MDBCardHeader>
+                    <MDBCardTitle
                       style={{
                         fontWeight: '400',
                         fontSize: '1.1rem',
@@ -139,15 +168,72 @@ class Podcast extends Component {
                       className="ml-3"
                     >
                       Subscribe to our Podcast
-                    </CardTitle>
-                  </CardHeader>
-                  <CardBody>
-                    <div className="p-2">{this.renderButtons()}</div>
-                  </CardBody>
-                </Card>
+                    </MDBCardTitle>
+                  </MDBCardHeader> */}
+                    <MDBCardBody>
+                      <div className="p-2">{this.renderButtons()}</div>
+                    </MDBCardBody>
+                  </MDBCard>
+                </div>
+                <div>
+                  <div className="my-4">
+                    <p style={styles.hLine}>
+                      <span style={styles.hLineSpan}>Your Hosts</span>
+                    </p>
+                  </div>
+
+                  <div className="mb-3">
+                    <MDBCard>
+                      <MDBCardBody className="p-3">
+                        <div className="avatar d-flex justify-content-start align-items-center ">
+                          <img
+                            style={{ maxWidth: '44px' }}
+                            className="card-img rounded-circle"
+                            src="https://i.imgur.com/qC2iaYa.jpg?1"
+                          />
+                          <div className="ml-3">
+                            <p style={styles.hostName} className="p-0 m-0">
+                              Kyle Mitchell
+                            </p>
+                            <p
+                              style={{ fontSize: '13px' }}
+                              className="text-black-50 p-0 m-0"
+                            >
+                              Managing Parter
+                            </p>
+                          </div>
+                        </div>
+                      </MDBCardBody>
+                    </MDBCard>
+                  </div>
+                  <div>
+                    <MDBCard>
+                      <MDBCardBody className="p-3">
+                        <div className="avatar d-flex justify-content-start align-items-center ">
+                          <img
+                            style={{ maxWidth: '44px' }}
+                            className="card-img rounded-circle"
+                            src="https://i.imgur.com/Lok4G0b.jpg?1"
+                          />
+                          <div className="ml-3">
+                            <p style={styles.hostName} className="p-0 m-0">
+                              Lalita Patipaksiri
+                            </p>
+                            <p
+                              style={{ fontSize: '13px' }}
+                              className="text-black-50 p-0 m-0"
+                            >
+                              Managing Parter
+                            </p>
+                          </div>
+                        </div>
+                      </MDBCardBody>
+                    </MDBCard>
+                  </div>
+                </div>
               </div>
 
-              <div className="pr-0 col-md-9">{this.episodeRender()}</div>
+              <div className="pr-0 pl-3 col-md-9">{this.episodeRender()}</div>
             </div>
           </div>
         </div>

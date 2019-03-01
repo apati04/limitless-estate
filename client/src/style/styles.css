@@ -16,6 +16,7 @@ h5,
 h6 {
   font-size-adjust: 0.5;
 } */
+
 .navbar {
   box-shadow: unset;
 }
@@ -245,6 +246,18 @@ footer.page-footer {
 @media print {
   .container {
     width: auto;
+  }
+}
+@media (max-width: 576px) {
+  #podcastContainer > div > div.card > div {
+    text-align: center;
+  }
+  #podcastContainer p {
+    text-align: left;
+    padding: 1rem;
+  }
+  #podcastContainer h1 {
+    font-size: 2rem;
   }
 }
 @media screen and (min-width: 768px) {
