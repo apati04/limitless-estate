@@ -156,7 +156,7 @@ class Podcast extends Component {
           <div style={{ padding: 0 }} className="container">
             <MDBCard className="my-4">
               <div className="stylish-color-dark row p-2 d-flex justify-content-center align-items-center flex-wrap">
-                <div style={{ borderRadius: '4px' }} className="col-md-3 p-4">
+                <div style={{ borderRadius: '4px' }} className="col-md-4 p-2">
                   <img
                     src="https://i.imgur.com/TxnoBIK.jpg"
                     height="260"
@@ -164,7 +164,7 @@ class Podcast extends Component {
                     className="img-fluid"
                   />
                 </div>
-                <div className="col-md-9">
+                <div className="col-md-8">
                   <h1 className="font-weight-bold text-white">
                     Limitless Estates Podcast
                   </h1>
@@ -182,7 +182,7 @@ class Podcast extends Component {
               </div>
             </MDBCard>
             <div className="row d-flex p-0 my-3 justify-content-between align-items-start">
-              <div className="pl-0 pr-3 col-md-3">
+              <div className="pl-0 pr-3 col-md-4">
                 <div className="mb-4">
                   <MDBCard>
                     <MDBCardBody className="px-2">
@@ -267,7 +267,7 @@ class Podcast extends Component {
                 </div>
               </div>
 
-              <div className="pr-0 pl-3 col-md-9">{this.episodeRender()}</div>
+              <div className="pr-0 pl-3 col-md-8">{this.episodeRender()}</div>
             </div>
           </div>
         </div>

@@ -17,6 +17,7 @@ module.exports = app => {
       const currEp = data.filter(item => {
         const currentTime = new Date().getTime();
         const episodeTime = new Date(item.published_at).getTime();
+
         return currentTime >= episodeTime;
       });
       res.status(200).send({ data: currEp });

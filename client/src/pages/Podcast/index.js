@@ -1,5 +1,5 @@
 import './loader.css';
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { MDBSpinner } from 'mdbreact';
 import Podcast from './Podcast';
 import axios from 'axios';
@@ -51,7 +51,7 @@ class PodcastIndex extends Component {
     }
     let pageView;
 
-    return <div>{this.handlePageView()}</div>;
+    return <Fragment>{this.handlePageView()}</Fragment>;
   }
 }
 

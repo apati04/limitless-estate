@@ -11,7 +11,7 @@ a.podcastlink-id:hover {
   #podcastContainer
     > div
     > div.row.d-flex.p-0.my-3.justify-content-between.align-items-start
-    > div.pr-0.pl-3.col-md-9
+    > div.pr-0.pl-3.col-md-8
     > div
     > div.card-body.px-4
     > div:nth-child(2)
@@ -19,15 +19,15 @@ a.podcastlink-id:hover {
     p {
     padding-left: 0 !important;
   }
-  #podcastContainer > div > div.card.my-4 > div > div.col-md-3.p-4 {
+  #podcastContainer > div > div.card.my-4 > div > div.col-md-4.p-4 {
     padding-left: 1rem !important;
   }
-  #podcastContainer .col-md-3 {
+  #podcastContainer .col-md-4 {
     padding: 0;
   }
   #podcastContainer p,
-  #podcastContainer > div > div.card.my-4 > div > div.col-md-3.p-4,
-  #podcastContainer > div > div.card.my-4 > div > div.col-md-9 > h1 {
+  #podcastContainer > div > div.card.my-4 > div > div.col-md-4.p-4,
+  #podcastContainer > div > div.card.my-4 > div > div.col-md-8 > h1 {
     text-align: left;
     padding-left: 1.25rem !important;
   }
@@ -39,10 +39,10 @@ a.podcastlink-id:hover {
   #podcastContainer .row {
     margin-top: 0 !important;
   }
-  #podcastContainer .col-md-9 {
+  #podcastContainer .col-md-8 {
     padding-left: 0 !important;
   }
-  #podcastContainer .col-md-3 {
+  #podcastContainer .col-md-4 {
     padding-right: 0 !important;
   }
 }
