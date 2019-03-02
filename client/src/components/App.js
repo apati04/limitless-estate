@@ -51,36 +51,72 @@ class App extends Component {
               exact
               component={CerritosMeetup}
             />
-            <Route path="/members/about/" component={AboutUs} />
-            <Route exact path="/resources" component={Overview} />
+            <Route path="/members/about/" component={withTracker(AboutUs)} />
+            <Route exact path="/resources" component={withTracker(Overview)} />
             <Route
               exact
               path="/resources/investingrisks/1"
-              component={RiskPageOne}
+              component={withTracker(RiskPageOne)}
             />
             <Route
               exact
               path="/resources/investingrisks/2"
-              component={RiskPageTwo}
+              component={withTracker(RiskPageTwo)}
             />
             <Route
               exact
               path="/resources/impactinvesting"
-              component={ImpactInvesting}
+              component={withTracker(ImpactInvesting)}
             />
-            <Route exact path="/resources/faq" component={Faq} />
-            <Route exact path="/legal" component={Legal} />
+            <Route exact path="/resources/faq" component={withTracker(Faq)} />
+            <Route exact path="/legal" component={withTracker(Legal)} />
             <Route exact path="/podcasts" component={withTracker(Podcast)} />
-            <Route exact path="/markets/columbus/" component={ColSum} />
-            <Route exact path="/markets/tucson/" component={Tucson} />
-            <Route exact path="/markets/phoenix/" component={PhoenixSum} />
-            <Route exact path="/markets/phoenix/sdp" component={Phoenix} />
-            <Route exact path="/markets/columbus/sdp" component={Columbus} />
-            <Route exact path="/markets/tucson/sdp" component={TucsonSDP} />
-            <Route exact path="/info/contact" component={Contact} />
-            <Route exact path="/info/questionnaire" component={Questionnaire} />
-            <Route exact path="/info/investing/ira401k" component={SupportCo} />
-            <Route component={PageNotFound} />
+            <Route
+              exact
+              path="/markets/columbus/"
+              component={withTracker(ColSum)}
+            />
+            <Route
+              exact
+              path="/markets/tucson/"
+              component={withTracker(Tucson)}
+            />
+            <Route
+              exact
+              path="/markets/phoenix/"
+              component={withTracker(PhoenixSum)}
+            />
+            <Route
+              exact
+              path="/markets/phoenix/sdp"
+              component={withTracker(Phoenix)}
+            />
+            <Route
+              exact
+              path="/markets/columbus/sdp"
+              component={withTracker(Columbus)}
+            />
+            <Route
+              exact
+              path="/markets/tucson/sdp"
+              component={withTracker(TucsonSDP)}
+            />
+            <Route
+              exact
+              path="/info/contact"
+              component={withTracker(Contact)}
+            />
+            <Route
+              exact
+              path="/info/questionnaire"
+              component={withTracker(Questionnaire)}
+            />
+            <Route
+              exact
+              path="/info/investing/ira401k"
+              component={withTracker(SupportCo)}
+            />
+            <Route component={withTracker(PageNotFound)} />
           </Switch>
           <Footer />
         </div>
