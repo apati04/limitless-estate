@@ -1,5 +1,5 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 const PageNotFound = () => {
   return (
@@ -14,9 +14,9 @@ const PageNotFound = () => {
         The page you are looking for doesn't exist or an other error occured.
       </h3>
       <h3>
-        <a role="button" onClick={() => window.history.back()}>
+        <button role="button" onClick={() => window.history.back()}>
           Go back
-        </a>
+        </button>
         , or head over to <Link to="/">home</Link> to choose a new directory.
       </h3>
     </div>

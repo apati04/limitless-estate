@@ -1,7 +1,6 @@
 const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
-const nodemailer = require('nodemailer');
 const keys = require('./config/keys');
 const axios = require('axios');
 const app = express();
@@ -202,7 +201,6 @@ app.post('/api/mailchimp/survey', async (req, res) => {
   }
 });
 
-
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.resolve(__dirname, 'client', 'build')));
@@ -212,7 +210,7 @@ if (process.env.NODE_ENV === 'production') {
 } else {
   app.use(express.static(path.join(__dirname, 'client', 'public')));
 
-  app.get('*', function (req, res) {
+  app.get('*', function(req, res) {
     res.sendFile(path.resolve(__dirname, 'client', 'public', 'index.html'));
   });
 }
