@@ -10,7 +10,7 @@ const SubButton = ({ appLogo, podcastUrl, alt }) => {
         id="podcastlink-id"
         href={podcastUrl}
         target="_blank"
-        rel="noopener noreferrer"
+        rel="nofollow noreferrer"
       >
         <img
           className="img-fluid"
