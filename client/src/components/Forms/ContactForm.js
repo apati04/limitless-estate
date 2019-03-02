@@ -157,6 +157,7 @@ export default withFormik({
   }),
   async handleSubmit(values, { resetForm, setErrors, setSubmitting }) {
     const payload = await axios.post('/api/mailchimp/contactus', values);
+
     resetForm();
     setSubmitting(false);
   }

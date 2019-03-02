@@ -32,7 +32,17 @@ import CerritosMeetup from '../pages/MeetUps/CerritosMeetup';
 import LandingPage from '../pages/LandingPage';
 import withTracker from '../HOC/withTracker';
 
+// test
+import ExamplePage from '../HOC/example';
 class App extends Component {
+  componentDidMount() {
+    const script = document.createElement('script');
+    script.src = 'https://www.google.com/recaptcha/api.js';
+    script.async = true;
+    script.defer = true;
+    document.body.appendChild(script);
+  }
+
   render() {
     return (
       <BrowserRouter>
@@ -41,6 +51,7 @@ class App extends Component {
 
           <Switch>
             <Route exact path="/" component={withTracker(LandingPage)} />
+            <Route exact path="/testexample" component={ExamplePage} />
             <Route
               path="/events/meetups"
               exact
