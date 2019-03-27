@@ -9,15 +9,16 @@ import MailChimpSubscribe from '../components/MailChimp/Subscribe';
 
 class LandingPage extends Component {
   render() {
-    return [
-      <PicCarousel />,
-      <IconSection />,
-      <LandingParallax />,
-      <InfoSection />,
-      <ImpactInfo />,
-      <MemberSection />,
+    return 
+    <React.Fragment>
+      <PicCarousel />
+      <IconSection />
+      <LandingParallax />
+      <InfoSection />
+      <ImpactInfo />
+      <MemberSection />
       <MailChimpSubscribe />
-    ];
+    <React.Fragment>
   }
 }
 

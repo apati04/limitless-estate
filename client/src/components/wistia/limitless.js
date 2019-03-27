@@ -8,7 +8,7 @@ class Limitless extends Component {
     this.setState({ loaded: true });
   }
   render() {
-    console.log('asdf: ', this.props);
+
     return (
       <div
         className={this.props.wistiaClass}
